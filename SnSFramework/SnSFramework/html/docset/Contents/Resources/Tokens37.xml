@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSSQLiteAccessor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSSQLiteAccessor</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>
+			
+			<NodeRef refid="37"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSSQLiteAccessor/lastInsertedRowID</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly) NSInteger lastInsertedRowID</Declaration>
+			
+			
+			<Anchor>//api/name/lastInsertedRowID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/createsDatabaseIfNeeded</TokenIdentifier>
+			<Abstract>For first time launch of the application the local sqlite database
+needs to be put to the application document folder
+@result
+True if the reset was correctly processed.</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (Boolean)createsDatabaseIfNeeded</Declaration>
+			
+			
+			<Anchor>//api/name/createsDatabaseIfNeeded</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/patchDatabaseIfNeeded</TokenIdentifier>
+			<Abstract>	
+Everytime the database is changed you must update this part of the code
+	to test if a patch needs to be applied and apply it if needed
+@result
+True if the database needed to be patched</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (Boolean)patchDatabaseIfNeeded</Declaration>
+			
+			
+			<Anchor>//api/name/patchDatabaseIfNeeded</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/resetDatabase</TokenIdentifier>
+			<Abstract>	Restores original database with default settings by copying
+	the sqlite3 database located in Resources into the application directory
+@result
+True if the reset was correctly processed.</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (Boolean)resetDatabase</Declaration>
+			
+			
+			<Anchor>//api/name/resetDatabase</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/removeDatabase</TokenIdentifier>
+			<Abstract>	Removes the database from the filesystem
+@result
+True if the action was correctly processed.</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (Boolean)removeDatabase</Declaration>
+			
+			
+			<Anchor>//api/name/removeDatabase</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/databasePath</TokenIdentifier>
+			<Abstract>	Returns the exact path where the local sqlite 
+	database is stored. (This path is set once and for when the user downloads an application)</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)databasePath</Declaration>
+			
+			<ReturnValue><Abstract>A string with the corresponding path</Abstract></ReturnValue>
+			<Anchor>//api/name/databasePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/databaseName</TokenIdentifier>
+			<Abstract>	Your master accessor should override this method to set the current databasename
+	of your application. ex. "my_database.db"</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)databaseName</Declaration>
+			
+			<ReturnValue><Abstract>A string with the database name</Abstract></ReturnValue>
+			<Anchor>//api/name/databaseName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/preparationStatement</TokenIdentifier>
+			<Abstract>	Returns the statement located into SELECT or INSERT queries
+	and will vary depending on the subclass called
+@result
+An autoreleased string object</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)preparationStatement</Declaration>
+			
+			
+			<Anchor>//api/name/preparationStatement</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/preparationForInsert:</TokenIdentifier>
+			<Abstract>	Returns part of the statement that will be used for insertion
+@param iBusinessObjectClass
+	The class for the object to be inserted
+@result
+A coma separated list of strings that will be inserted</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)preparationForInsert:(Class)iBusinessObjectClass</Declaration>
+			
+			
+			<Anchor>//api/name/preparationForInsert:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/preparationForSelect:</TokenIdentifier>
+			<Abstract>	Returns part of the statement that will be used for selection
+@param iBusinessObjectClass
+	The class for the object to be selected
+@result
+A coma separated list of strings that will be selected</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)preparationForSelect:(Class)iBusinessObjectClass</Declaration>
+			
+			
+			<Anchor>//api/name/preparationForSelect:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/lastInsertRowID:</TokenIdentifier>
+			<Abstract>	Runs a SELECT lastinsertrowid() and returns the result
+Please note that running this if mutiple threads are inserting at the
+same time is useless as it can't be trusted.
+@result
+The result of the SELECT lastinsertrowid().
+0 means query insertion most likely failed.</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSInteger)lastInsertRowID:(sqlite3 *)pDatabase</Declaration>
+			
+			
+			<Anchor>//api/name/lastInsertRowID:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/arrayOfObjectsFromQuery:object:</TokenIdentifier>
+			<Abstract>	Creates the sqlite statement and does the sqlite3 call 
+to retreive elements with more than one matching element.
+@param iQuery
+The string that holding the query
+@param iClass
+The object class that will be used during the array construction
+@result
+An array built from matching objects</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)arrayOfObjectsFromQuery:(NSString *)iQuery object:(Class&lt;SQLiteReadable&gt;)iClass</Declaration>
+			
+			
+			<Anchor>//api/name/arrayOfObjectsFromQuery:object:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/businessObjectFromID:object:</TokenIdentifier>
+			<Abstract>	Creates and executes a query of type:
+	SELECT * FROM iClass WHERE mainIDColumName = iObjectID 
+@param iObjectID
+The value of the id as it should be found in the database
+@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSObject&lt;SQLiteReadable&gt; *)businessObjectFromID:(NSString *)iObjectID object:(Class&lt;SQLiteReadable&gt;)iClass</Declaration>
+			
+			
+			<Anchor>//api/name/businessObjectFromID:object:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/executeQuery:</TokenIdentifier>
+			<Abstract>	Execute the given query and returns the last statement result
+@param iQuery
+The string that holding the query (ex. select * from table)</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)executeQuery:(NSString *)iQuery</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise</Abstract></ReturnValue>
+			<Anchor>//api/name/executeQuery:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/deleteBusinessObject:</TokenIdentifier>
+			<Abstract>	Creates and executes a query of type:
+	DELETE FROM iBusinessObject.class WHERE mainIDColumName = iBusinessObject.id
+@param iBusinessObject
+The object to be deleted from database</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)deleteBusinessObject:(NSObject&lt;SQLiteReadable&gt; *)iBusinessObject</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise</Abstract></ReturnValue>
+			<Anchor>//api/name/deleteBusinessObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/deleteAllFromTable:</TokenIdentifier>
+			<Abstract>	Delete All elements from the given class
+@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)deleteAllFromTable:(Class&lt;SQLiteWritable&gt;)iClass</Declaration>
+			
+			
+			<Anchor>//api/name/deleteAllFromTable:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/save:</TokenIdentifier>
+			<Abstract>	Saves the object passed in parameter into the database.
+	Saving means 
+		1. Updating if business object is already stored
+		2. Inserting if business object is not already stored in local db
+@param iBusinessObject
+The business object to store into the database
+	This object should respond to both Writable and Readable protocol because a
+	query is made before to see if insertion is required.</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)save:(NSObject&lt;SQLiteWritable,SQLiteReadable&gt; *)iBusinessObject</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise
+@see
+	insert:
+	update:</Abstract></ReturnValue>
+			<Anchor>//api/name/save:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/save:withForeignKeys:</TokenIdentifier>
+			<Abstract>	Saves the object passed in parameter into the database.
+	Saving means 
+		1. Updating if business object is already stored
+		2. Inserting if business object is not already stored in local db
+@param iBusinessObject
+The business object to store into the database
+	This object should respond to both Writable and Readable protocol because a
+	query is made before to see if insertion is required.
+@param iFKeys
+The hash map of foreign key to refer to (Key - Value)</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)save:(NSObject&lt;SQLiteWritable,SQLiteReadable&gt; *)iBusinessObject withForeignKeys:(NSDictionary *)iFKeys</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise
+@see
+	insert:
+	update:</Abstract></ReturnValue>
+			<Anchor>//api/name/save:withForeignKeys:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/insert:</TokenIdentifier>
+			<Abstract>	The insert method only adds objects it doesn't update them.
+@param iBusinessObject
+The business object to store into the database</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)insert:(NSObject&lt;SQLiteWritable&gt; *)iBusinessObject</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise
+@see
+	save:
+	update:</Abstract></ReturnValue>
+			<Anchor>//api/name/insert:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/insert:withForeignKeys:</TokenIdentifier>
+			<Abstract>	The insert method only adds objects it doesn't update them.
+@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key - Value)</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)insert:(NSObject&lt;SQLiteWritable&gt; *)iBusinessObject withForeignKeys:(NSDictionary *)iFKeys</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise
+@see
+	insert:</Abstract></ReturnValue>
+			<Anchor>//api/name/insert:withForeignKeys:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/update:</TokenIdentifier>
+			<Abstract>	The udpate method doesn't insert any new objects it only udpates an existing one.
+@param iBusinessObject
+The business object to store into the database</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)update:(NSObject&lt;SQLiteWritable&gt; *)iBusinessObject</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise
+@see
+	save:
+	insert:</Abstract></ReturnValue>
+			<Anchor>//api/name/update:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/update:withForeignKeys:</TokenIdentifier>
+			<Abstract>	The udpate method doesn't insert any new objects it only udpates an existing one.
+@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key - Value)</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)update:(NSObject&lt;SQLiteWritable&gt; *)iBusinessObject withForeignKeys:(NSDictionary *)iFKeys</Declaration>
+			
+			<ReturnValue><Abstract>true if correctly processed. false otherwise
+@see
+	save:
+	insert:</Abstract></ReturnValue>
+			<Anchor>//api/name/update:withForeignKeys:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/didFailToExecute:parameter:</TokenIdentifier>
+			<Abstract>@method		
+queryFailed:
+@abstract	
+Treats a query that failed to execute by, for example, printing an error message.
+	TODO: Put this into a @protocol
+@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (void)didFailToExecute:(NSString *)iQuery parameter:(id)iParameter</Declaration>
+			
+			
+			<Anchor>//api/name/didFailToExecute:parameter:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/didSucceedToExecute:parameter:</TokenIdentifier>
+			<Abstract>@method		
+queryFailed:
+@abstract	
+Treats a query that was executed successfully to execute by, for example, printing an a sucess message.
+	TODO: Put this into a @protocol
+@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (void)didSucceedToExecute:(NSString *)iQuery parameter:(id)iParameter</Declaration>
+			
+			
+			<Anchor>//api/name/didSucceedToExecute:parameter:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSQLiteAccessor/sqlInformatiomFromCode:</TokenIdentifier>
+			<Abstract>@method		
+sqlInformatiomFromCode:
+@abstract	
+ex. a Query returns SQLITE_MISMATCH, the purpose of this function to give the correct
+	string useful to pop as a log.
+@param iErrorCode
+The error Code ex. SQLITE_MISMATCH
+@result
+	ex. SQLITEMISMATCH - @" SQLITEMISMATCH      (Data type mismatch)"</Abstract>
+			<DeclaredIn>SnSSQLiteAccessor.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)sqlInformatiomFromCode:(NSInteger)iErrorCode</Declaration>
+			
+			
+			<Anchor>//api/name/sqlInformatiomFromCode:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

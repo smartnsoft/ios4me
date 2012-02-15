@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnSStoreManagerDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnSStoreManagerDelegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>
+			
+			<NodeRef refid="70"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSStoreManagerDelegate/storeManager:didReceiveProductsData:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeManager:(SnSStoreManager *)storeManager didReceiveProductsData:(NSArray *)products</Declaration>
+			
+			
+			<Anchor>//api/name/storeManager:didReceiveProductsData:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSStoreManagerDelegate/storeManager:didFinishTransaction:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeManager:(SnSStoreManager *)storeManager didFinishTransaction:(SKPaymentTransaction *)transaction</Declaration>
+			
+			
+			<Anchor>//api/name/storeManager:didFinishTransaction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSStoreManagerDelegate/storeManager:didFailedTransaction:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeManager:(SnSStoreManager *)storeManager didFailedTransaction:(SKPaymentTransaction *)transaction</Declaration>
+			
+			
+			<Anchor>//api/name/storeManager:didFailedTransaction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSStoreManagerDelegate/storeManager:didFailedRestoreTransactions:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeManager:(SnSStoreManager *)storeManager didFailedRestoreTransactions:(SKPaymentQueue *)transaction</Declaration>
+			
+			
+			<Anchor>//api/name/storeManager:didFailedRestoreTransactions:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSStoreManagerDelegate/storeManager:didRestoreTransactions:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeManager:(SnSStoreManager *)storeManager didRestoreTransactions:(SKPaymentQueue *)transaction</Declaration>
+			
+			
+			<Anchor>//api/name/storeManager:didRestoreTransactions:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

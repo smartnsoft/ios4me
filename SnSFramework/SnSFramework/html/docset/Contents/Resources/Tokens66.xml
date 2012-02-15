@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SQLiteWritable.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SQLiteWritable</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>
+			
+			<NodeRef refid="66"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SQLiteWritable/sqlValuesForInsert</TokenIdentifier>
+			<Abstract>	Should return a comma separated escaped string such as quote(value1),quote(value2)...
+	This string should be the same used for insert statements only.</Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)sqlValuesForInsert</Declaration>
+			
+			
+			<Anchor>//api/name/sqlValuesForInsert</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SQLiteWritable/sqlValuesForUpdate</TokenIdentifier>
+			<Abstract>Should return a string such as column1 = 'string1', column2 = integer2
+	This string should be the same used for update statements only
+@return
+A string such as column1 = value1, column2 = value2</Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)sqlValuesForUpdate</Declaration>
+			
+			
+			<Anchor>//api/name/sqlValuesForUpdate</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

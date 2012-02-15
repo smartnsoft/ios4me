@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SQLiteStorable.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SQLiteStorable</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>
+			
+			<NodeRef refid="65"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

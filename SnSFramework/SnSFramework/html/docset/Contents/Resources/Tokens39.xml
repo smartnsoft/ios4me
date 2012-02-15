@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSStoreManager.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSStoreManager</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>
+			
+			<NodeRef refid="39"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSStoreManager/products</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *products</Declaration>
+			
+			
+			<Anchor>//api/name/products</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSStoreManager/delegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id&lt;SnSStoreManagerDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/buyProduct:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)buyProduct:(SKProduct *)iProduct</Declaration>
+			
+			
+			<Anchor>//api/name/buyProduct:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/buyProduct:quantity:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)buyProduct:(SKProduct *)iProduct quantity:(NSUInteger)iQuantity</Declaration>
+			
+			
+			<Anchor>//api/name/buyProduct:quantity:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/buyProductIdentifier:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)buyProductIdentifier:(NSString *)iStr</Declaration>
+			
+			
+			<Anchor>//api/name/buyProductIdentifier:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/buyProductIdentifier:quantity:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)buyProductIdentifier:(NSString *)iStr quantity:(NSUInteger)iQuantity</Declaration>
+			
+			
+			<Anchor>//api/name/buyProductIdentifier:quantity:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/requestProductData:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)requestProductData:(NSArray *)iProductsList</Declaration>
+			
+			
+			<Anchor>//api/name/requestProductData:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/purchasingTransaction:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)purchasingTransaction:(SKPaymentTransaction *)iTransaction</Declaration>
+			
+			
+			<Anchor>//api/name/purchasingTransaction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/completedTransaction:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)completedTransaction:(SKPaymentTransaction *)iTransaction</Declaration>
+			
+			
+			<Anchor>//api/name/completedTransaction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/failedTransaction:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.h</DeclaredIn>			
+			
+			<Declaration>- (void)failedTransaction:(SKPaymentTransaction *)iTransaction</Declaration>
+			
+			
+			<Anchor>//api/name/failedTransaction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/init</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.m</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/restoredTransaction:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.m</DeclaredIn>			
+			
+			<Declaration>- (void)restoredTransaction:(SKPaymentTransaction *)transaction</Declaration>
+			
+			
+			<Anchor>//api/name/restoredTransaction:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/restoreTranscation</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.m</DeclaredIn>			
+			
+			<Declaration>- (void)restoreTranscation</Declaration>
+			
+			
+			<Anchor>//api/name/restoreTranscation</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/paymentQueue:updatedTransactions:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.m</DeclaredIn>			
+			
+			<Declaration>- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions</Declaration>
+			
+			
+			<Anchor>//api/name/paymentQueue:updatedTransactions:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/paymentQueue:restoreCompletedTransactionsFailedWithError:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.m</DeclaredIn>			
+			
+			<Declaration>- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/paymentQueue:restoreCompletedTransactionsFailedWithError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSStoreManager/paymentQueueRestoreCompletedTransactionsFinished:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSStoreManager.m</DeclaredIn>			
+			
+			<Declaration>- (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue</Declaration>
+			
+			
+			<Anchor>//api/name/paymentQueueRestoreCompletedTransactionsFinished:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSUtils</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>
+			
+			<NodeRef refid="49"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSUtils/isPad</TokenIdentifier>
+			<Abstract>Use to detecte iPad device.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isPad</Declaration>
+			
+			
+			<Anchor>//api/name/isPad</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSUtils/emailIsValid:</TokenIdentifier>
+			<Abstract>Use to check validity of an email.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)emailIsValid:(NSString *)email</Declaration>
+			
+			
+			<Anchor>//api/name/emailIsValid:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSUtils/applicationWriteablePath</TokenIdentifier>
+			<Abstract>Returns the writeable path of the application
+It can be used either in the simulator or in the device</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)applicationWriteablePath</Declaration>
+			
+			
+			<Anchor>//api/name/applicationWriteablePath</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

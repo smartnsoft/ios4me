@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSMasterCache.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSMasterCache</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>
+			
+			<NodeRef refid="34"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSMasterCache/caches</TokenIdentifier>
+			<Abstract>	Key: a predicate format ex. "*.jpg"
+	Value: a SnSCacheSilo object</Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *caches</Declaration>
+			
+			
+			<Anchor>//api/name/caches</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/addCacheSilo:predicateString:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)addCacheSilo:(SnSCacheSilo *)iCacheSilo predicateString:(NSString *)iStrPredicate</Declaration>
+			
+			
+			<Anchor>//api/name/addCacheSilo:predicateString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/cachedItemForQuery:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>- (SnSCacheItem *)cachedItemForQuery:(id)iQuery</Declaration>
+			
+			
+			<Anchor>//api/name/cachedItemForQuery:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/storeCacheItem:forQuery:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeCacheItem:(SnSCacheItem *)iItem forQuery:(id)iQuery</Declaration>
+			
+			
+			<Anchor>//api/name/storeCacheItem:forQuery:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/cacheSiloForQuery:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>- (SnSCacheSilo *)cacheSiloForQuery:(id)iQuery</Declaration>
+			
+			
+			<Anchor>//api/name/cacheSiloForQuery:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/removeCacheSilo:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeCacheSilo:(SnSCacheSilo *)iCacheSilo</Declaration>
+			
+			
+			<Anchor>//api/name/removeCacheSilo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/removeAllCaches</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeAllCaches</Declaration>
+			
+			
+			<Anchor>//api/name/removeAllCaches</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/archive</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)archive</Declaration>
+			
+			
+			<Anchor>//api/name/archive</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSMasterCache/unarchive:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>+ (id)unarchive:(NSString *)iPath</Declaration>
+			
+			
+			<Anchor>//api/name/unarchive:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSMasterCache/cachesPath</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)cachesPath</Declaration>
+			
+			
+			<Anchor>//api/name/cachesPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSMasterCache/masterCachePath</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)masterCachePath</Declaration>
+			
+			
+			<Anchor>//api/name/masterCachePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/init</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/encodeWithCoder:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/initWithCoder:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMasterCache/reloadAllCaches</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMasterCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)reloadAllCaches</Declaration>
+			
+			
+			<Anchor>//api/name/reloadAllCaches</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

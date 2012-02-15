@@ -1,0 +1,1 @@
+../SnSViewController subclass.pbfiletemplate/class.m

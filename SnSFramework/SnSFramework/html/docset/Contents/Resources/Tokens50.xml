@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSViewController</TokenIdentifier>
+			<Abstract>An UIViewController which follows the SnSViewControllerLifeCycle life-cycle, and which is also able to
+aggregate other SnSViewControllerLifeCycle entities.</Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>
+			
+			<NodeRef refid="50"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSViewController/businessObject</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) SnSWorkItem *businessObject</Declaration>
+			
+			
+			<Anchor>//api/name/businessObject</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSViewController/context</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) SnSWorkItem *context</Declaration>
+			
+			
+			<Anchor>//api/name/context</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSViewController/responderRedirector</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) SnSResponserRedirector *responderRedirector</Declaration>
+			
+			
+			<Anchor>//api/name/responderRedirector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/waitForSynchronizedDisplayObjects</TokenIdentifier>
+			<Abstract>That method will hang the calling thread until the UIViewController::viewDidAppear: has been entered.</Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)waitForSynchronizedDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/waitForSynchronizedDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/synchronizeDisplayObjects</TokenIdentifier>
+			<Abstract>Use that method in order to synchronize the display.</Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)synchronizeDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/synchronizeDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/retrieveBusinessObjectsAndSynchronize</TokenIdentifier>
+			<Abstract>Use that method in order to reload the data and synchronize the display accordingly.</Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)retrieveBusinessObjectsAndSynchronize</Declaration>
+			
+			
+			<Anchor>//api/name/retrieveBusinessObjectsAndSynchronize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/init</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/onRetrieveAggregates</TokenIdentifier>
+			<Abstract>an array of SnSViewControllerLifeCycle objects, which indicates the entities that are handled by the current object</Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)onRetrieveAggregates</Declaration>
+			
+			<ReturnValue><Abstract>an array of SnSViewControllerLifeCycle objects, which indicates the entities that are handled by the current object</Abstract></ReturnValue>
+			<Anchor>//api/name/onRetrieveAggregates</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/onRetrieveDisplayObjects:</TokenIdentifier>
+			<Abstract>Responsible for computing the GUI objects associated to the current entity, and for adding
+it to the parent view.</Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onRetrieveDisplayObjects:(UIView *)view</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>view</Name>
+					<Abstract>the parent view the current entity should be represented on</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/onRetrieveDisplayObjects:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/onRetrieveBusinessObjects</TokenIdentifier>
+			<Abstract>In charge of retrieving the business objects that represent in memory the entity.</Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onRetrieveBusinessObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onRetrieveBusinessObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/onFulfillDisplayObjects</TokenIdentifier>
+			<Abstract>In charge of binding the business objects with their GUI representation.</Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onFulfillDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onFulfillDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/onSynchronizeDisplayObjects</TokenIdentifier>
+			<Abstract>In charge of binding the business objects with their GUI representation.</Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onSynchronizeDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onSynchronizeDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/onDiscarded</TokenIdentifier>
+			<Abstract>In charge of cleaning up the memory associated with the business objects and the GUI elements.</Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onDiscarded</Declaration>
+			
+			
+			<Anchor>//api/name/onDiscarded</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/loadView</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)loadView</Declaration>
+			
+			
+			<Anchor>//api/name/loadView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/viewDidLoad</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidLoad</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidLoad</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/viewDidUnload</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidUnload</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidUnload</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/viewWillAppear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)viewWillAppear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewWillAppear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/viewDidAppear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidAppear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidAppear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/viewWillDisappear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)viewWillDisappear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewWillDisappear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/viewDidDisappear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidDisappear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidDisappear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewController/didReceiveMemoryWarning</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)didReceiveMemoryWarning</Declaration>
+			
+			
+			<Anchor>//api/name/didReceiveMemoryWarning</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

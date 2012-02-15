@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSMemoryCache.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSMemoryCache</TokenIdentifier>
+			<Abstract>	The memory cache holds data up to a certain limit in memory.
+	That amount is set in the cache silo creation.</Abstract>
+			<DeclaredIn>SnSMemoryCache.h</DeclaredIn>
+			
+			<NodeRef refid="35"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMemoryCache/init</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMemoryCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSMemoryCache/deallloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSMemoryCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)deallloc</Declaration>
+			
+			
+			<Anchor>//api/name/deallloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

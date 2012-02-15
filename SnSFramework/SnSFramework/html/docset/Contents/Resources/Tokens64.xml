@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SQLiteReadable.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SQLiteReadable</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>
+			
+			<NodeRef refid="64"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SQLiteReadable/initWithSQLiteStatement:</TokenIdentifier>
+			<Abstract>	A class that responds to the SQLiteReadable protocol should
+	be able to initate its content from the result of an execucuted statement.
+	Note that the order of the column to build the Business object should be
+	known by the class otherwise it will result in corrupted objects
+@param
+	The statement resulting from a SELECT statement
+@result
+	A safe init value of the object</Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithSQLiteStatement:(sqlite3_stmt *)iStatement</Declaration>
+			
+			
+			<Anchor>//api/name/initWithSQLiteStatement:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

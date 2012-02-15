@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSDownloadOperation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSDownloadOperation</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>
+			
+			<NodeRef refid="22"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadOperation/initWith:timeoutInterval:andDelegate:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval andDelegate:(SnSDelegateWithObject *)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:timeoutInterval:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadOperation/initWith:timeoutInterval:andDelegate:andSelector:andObject:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval andDelegate:(id)delegate andSelector:(SEL)selector andObject:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:timeoutInterval:andDelegate:andSelector:andObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadOperation/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadOperation/main</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)main</Declaration>
+			
+			
+			<Anchor>//api/name/main</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

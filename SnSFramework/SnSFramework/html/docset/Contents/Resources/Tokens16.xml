@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSColorUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSColorUtils</TokenIdentifier>
+			<Abstract>Tool to use and define colors.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSColorUtils/colorFromWebColor:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (UIColor *)colorFromWebColor:(NSString *)color</Declaration>
+			
+			
+			<Anchor>//api/name/colorFromWebColor:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

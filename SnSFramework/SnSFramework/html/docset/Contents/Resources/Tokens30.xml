@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSImageUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSImageUtils</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSImageUtils/addImage:andOtherImage:</TokenIdentifier>
+			<Abstract>Make an image from 2 images using the size of the biggest.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)addImage:(UIImage *)firstImage andOtherImage:(UIImage *)secondImage</Declaration>
+			
+			
+			<Anchor>//api/name/addImage:andOtherImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSImageUtils/centerImage:inFrame:</TokenIdentifier>
+			<Abstract>Center an image in a specified frame.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)centerImage:(UIImage *)image inFrame:(CGRect)frame</Declaration>
+			
+			
+			<Anchor>//api/name/centerImage:inFrame:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSImageUtils/scaleAndRotateImage:andMaxSizeWidth:</TokenIdentifier>
+			<Abstract>Rotate image to have the right orientation in a scale with the maxWidth.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)scaleAndRotateImage:(UIImage *)image andMaxSizeWidth:(int)maxWidth</Declaration>
+			
+			
+			<Anchor>//api/name/scaleAndRotateImage:andMaxSizeWidth:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSImageUtils/imageNamed:</TokenIdentifier>
+			<Abstract>Obtain image from ressources with its name using optimisation according device and iOS version.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)imageNamed:(NSString *)name</Declaration>
+			
+			
+			<Anchor>//api/name/imageNamed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSImageUtils/imageNamed:withExtention:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)imageNamed:(NSString *)name withExtention:(NSString *)extention</Declaration>
+			
+			
+			<Anchor>//api/name/imageNamed:withExtention:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

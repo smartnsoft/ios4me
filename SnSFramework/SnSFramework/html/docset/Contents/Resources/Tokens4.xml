@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/LayerButton.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/LayerButton</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LayerButton/initWithText:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithText:(NSString *)text</Declaration>
+			
+			
+			<Anchor>//api/name/initWithText:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LayerButton/setFrame:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (void)setFrame:(CGRect)rect</Declaration>
+			
+			
+			<Anchor>//api/name/setFrame:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LayerButton/setHidden:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (void)setHidden:(BOOL)h</Declaration>
+			
+			
+			<Anchor>//api/name/setHidden:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

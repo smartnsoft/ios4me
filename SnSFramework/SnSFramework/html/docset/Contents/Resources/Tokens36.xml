@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSResponserRedirector.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSResponserRedirector</TokenIdentifier>
+			<Abstract>Wraps some responder calls, so that potential exception be handled.</Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>
+			
+			<NodeRef refid="36"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSResponserRedirector/initWith:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(id)theTarget</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSResponserRedirector/methodSignatureForSelector:</TokenIdentifier>
+			<Abstract>Inspired from http://ns.treehouseideas.com/document.page/265 .</Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector</Declaration>
+			
+			
+			<Anchor>//api/name/methodSignatureForSelector:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSResponserRedirector/forwardInvocation:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)forwardInvocation:(NSInvocation *)anInvocation</Declaration>
+			
+			
+			<Anchor>//api/name/forwardInvocation:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

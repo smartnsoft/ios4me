@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSWebServiceCaller.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSWebServiceCaller</TokenIdentifier>
+			<Abstract>Enables to define and standardize web service calls.</Abstract>
+			<DeclaredIn>SnSWebServiceCaller.h</DeclaredIn>
+			
+			<NodeRef refid="52"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSWebServiceCaller/computeUri:methodUriSuffix:</TokenIdentifier>
+			<Abstract>Does the same method as its counterpart with 3 arguments, by providing a codenil/code last argument.</Abstract>
+			<DeclaredIn>SnSWebServiceCaller.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)computeUri:(NSString *)methodUriPrefix methodUriSuffix:(NSString *)methodUriSuffix</Declaration>
+			
+			
+			<Anchor>//api/name/computeUri:methodUriSuffix:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSWebServiceCaller/computeUri:methodUriSuffix:uriParameters:</TokenIdentifier>
+			<Abstract>the prefix of the URI</Abstract>
+			<DeclaredIn>SnSWebServiceCaller.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)computeUri:(NSString *)methodUriPrefix methodUriSuffix:(NSString *)methodUriSuffix uriParameters:(NSDictionary *)uriParameters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>methodUriPrefix</Name>
+					<Abstract>the prefix of the URI</Abstract>
+				</Parameter><Parameter>
+					<Name>methodUriSuffix</Name>
+					<Abstract>the suffix to append to the URI prefix: a "/" will be inserted, if not null nor empty. Can be nul</Abstract>
+				</Parameter><Parameter>
+					<Name>andUriParameters</Name>
+					<Abstract>a dictionary of codeNSString */code values and keys which indicates the URI parameters</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>a computed URI based on the provided URI prefix, suffix and parameters</Abstract></ReturnValue>
+			<Anchor>//api/name/computeUri:methodUriSuffix:uriParameters:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

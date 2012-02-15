@@ -1,0 +1,5 @@
+{
+	MainTemplateFile = "class.m";
+	"CounterpartTemplateFile" = "class.h";
+	Description = "A basic Unit Test based on the GHUnit framework.";
+}

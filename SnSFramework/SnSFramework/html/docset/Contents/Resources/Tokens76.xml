@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnSViewControllerLifeCycle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnSViewControllerLifeCycle</TokenIdentifier>
+			<Abstract>Indicates the main events of a codeUIViewController/code, in order to framework its life cycle.</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>
+			
+			<NodeRef refid="76"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewControllerLifeCycle/onRetrieveDisplayObjects:</TokenIdentifier>
+			<Abstract>Responsible for computing the GUI objects associated to the current entity, and for adding
+it to the parent view.</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>			
+			
+			<Declaration>- (void)onRetrieveDisplayObjects:(UIView *)view</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>view</Name>
+					<Abstract>the parent view the current entity should be represented on</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/onRetrieveDisplayObjects:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewControllerLifeCycle/onRetrieveBusinessObjects</TokenIdentifier>
+			<Abstract>In charge of retrieving the business objects that represent in memory the entity.</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>			
+			
+			<Declaration>- (void)onRetrieveBusinessObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onRetrieveBusinessObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewControllerLifeCycle/onFulfillDisplayObjects</TokenIdentifier>
+			<Abstract>In charge of binding the business objects with their GUI representation.</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>			
+			
+			<Declaration>- (void)onFulfillDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onFulfillDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewControllerLifeCycle/onSynchronizeDisplayObjects</TokenIdentifier>
+			<Abstract>In charge of binding the business objects with their GUI representation.</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>			
+			
+			<Declaration>- (void)onSynchronizeDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onSynchronizeDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewControllerLifeCycle/onDiscarded</TokenIdentifier>
+			<Abstract>In charge of cleaning up the memory associated with the business objects and the GUI elements.</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>			
+			
+			<Declaration>- (void)onDiscarded</Declaration>
+			
+			
+			<Anchor>//api/name/onDiscarded</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewControllerLifeCycle/trackerInfos</TokenIdentifier>
+			<Abstract>Obtain extra param for analytics trackers</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)trackerInfos</Declaration>
+			
+			
+			<Anchor>//api/name/trackerInfos</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

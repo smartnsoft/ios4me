@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSURLConnection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSURLConnection</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.h</DeclaredIn>
+			
+			<NodeRef refid="48"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLConnection/connectionWithRequest:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.h</DeclaredIn>			
+			
+			<Declaration>+ (id)connectionWithRequest:(NSURLRequest *)iRequest</Declaration>
+			
+			
+			<Anchor>//api/name/connectionWithRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLConnection/initWithRequest:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithRequest:(NSURLRequest *)iRequest</Declaration>
+			
+			
+			<Anchor>//api/name/initWithRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLConnection/retreiveDataForReqest:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.h</DeclaredIn>			
+			
+			<Declaration>+ (NSData *)retreiveDataForReqest:(NSURLRequest *)iRequest</Declaration>
+			
+			
+			<Anchor>//api/name/retreiveDataForReqest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLConnection/retreiveData</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)retreiveData</Declaration>
+			
+			
+			<Anchor>//api/name/retreiveData</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLConnection/process</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.h</DeclaredIn>			
+			
+			<Declaration>- (void)process</Declaration>
+			
+			
+			<Anchor>//api/name/process</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLConnection/handleResponse:data:error:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.h</DeclaredIn>			
+			
+			<Declaration>- (void)handleResponse:(NSURLResponse *)iResponse data:(NSData *)iData error:(NSError *)iError</Declaration>
+			
+			
+			<Anchor>//api/name/handleResponse:data:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLConnection/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLConnection.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

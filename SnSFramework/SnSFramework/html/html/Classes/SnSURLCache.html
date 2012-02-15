@@ -1,0 +1,1241 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SnSURLCache Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SnSFramework </a></h1>
+				<a id="developerHome" href="../index.html">Smart&amp;Soft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SnSURLCache Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/cache">&nbsp;&nbsp;&nbsp;&nbsp;cache</option>
+	
+	<option value="//api/name/cacheDirectoryPath">&nbsp;&nbsp;&nbsp;&nbsp;cacheDirectoryPath</option>
+	
+	<option value="//api/name/diskPersistent">&nbsp;&nbsp;&nbsp;&nbsp;diskPersistent</option>
+	
+	<option value="//api/name/indexFilePath">&nbsp;&nbsp;&nbsp;&nbsp;indexFilePath</option>
+	
+	<option value="//api/name/localUriMatcher">&nbsp;&nbsp;&nbsp;&nbsp;localUriMatcher</option>
+	
+	<option value="//api/name/timeToLiveSeconds">&nbsp;&nbsp;&nbsp;&nbsp;timeToLiveSeconds</option>
+	
+	<option value="//api/name/urlRequestMatcher">&nbsp;&nbsp;&nbsp;&nbsp;urlRequestMatcher</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/instance">&nbsp;&nbsp;&nbsp;&nbsp;+ instance</option>
+	
+	<option value="//api/name/instance:">&nbsp;&nbsp;&nbsp;&nbsp;+ instance:</option>
+	
+	<option value="//api/name/isBinaryData:">&nbsp;&nbsp;&nbsp;&nbsp;+ isBinaryData:</option>
+	
+	<option value="//api/name/setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:">&nbsp;&nbsp;&nbsp;&nbsp;+ setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cachedResponseForRequest:">&nbsp;&nbsp;&nbsp;&nbsp;- cachedResponseForRequest:</option>
+	
+	<option value="//api/name/computeCacheFilePath:andFileName:">&nbsp;&nbsp;&nbsp;&nbsp;- computeCacheFilePath:andFileName:</option>
+	
+	<option value="//api/name/computeURLMatch:">&nbsp;&nbsp;&nbsp;&nbsp;- computeURLMatch:</option>
+	
+	<option value="//api/name/dataIsAvailable:withoutNetwork:withCachePolicy:">&nbsp;&nbsp;&nbsp;&nbsp;- dataIsAvailable:withoutNetwork:withCachePolicy:</option>
+	
+	<option value="//api/name/dealloc">&nbsp;&nbsp;&nbsp;&nbsp;- dealloc</option>
+	
+	<option value="//api/name/empty">&nbsp;&nbsp;&nbsp;&nbsp;- empty</option>
+	
+	<option value="//api/name/getCachedURL:">&nbsp;&nbsp;&nbsp;&nbsp;- getCachedURL:</option>
+	
+	<option value="//api/name/getFromCache:">&nbsp;&nbsp;&nbsp;&nbsp;- getFromCache:</option>
+	
+	<option value="//api/name/getFromCache:cachePolicy:timeoutInterval:">&nbsp;&nbsp;&nbsp;&nbsp;- getFromCache:cachePolicy:timeoutInterval:</option>
+	
+	<option value="//api/name/getFromCache:timeoutInterval:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- getFromCache:timeoutInterval:andDelegate:</option>
+	
+	<option value="//api/name/getFromCache:timeoutInterval:andDelegate:andSelector:andObject:">&nbsp;&nbsp;&nbsp;&nbsp;- getFromCache:timeoutInterval:andDelegate:andSelector:andObject:</option>
+	
+	<option value="//api/name/getLocalURIMatchFor:andFileName:result:">&nbsp;&nbsp;&nbsp;&nbsp;- getLocalURIMatchFor:andFileName:result:</option>
+	
+	<option value="//api/name/getURLMatchFor:result:">&nbsp;&nbsp;&nbsp;&nbsp;- getURLMatchFor:result:</option>
+	
+	<option value="//api/name/initWithMemoryCapacity:diskCapacity:diskPath:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithMemoryCapacity:diskCapacity:diskPath:</option>
+	
+	<option value="//api/name/initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:</option>
+	
+	<option value="//api/name/setLocalURIMatcher:">&nbsp;&nbsp;&nbsp;&nbsp;- setLocalURIMatcher:</option>
+	
+	<option value="//api/name/setURLRequestMatcher:">&nbsp;&nbsp;&nbsp;&nbsp;- setURLRequestMatcher:</option>
+	
+	<option value="//api/name/storeCachedResponse:forRequest:">&nbsp;&nbsp;&nbsp;&nbsp;- storeCachedResponse:forRequest:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cache">cache</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheDirectoryPath">cacheDirectoryPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/diskPersistent">diskPersistent</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indexFilePath">indexFilePath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localUriMatcher">localUriMatcher</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timeToLiveSeconds">timeToLiveSeconds</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/urlRequestMatcher">urlRequestMatcher</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/instance">instance</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/instance:">instance:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isBinaryData:">isBinaryData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:">setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cachedResponseForRequest:">cachedResponseForRequest:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/computeCacheFilePath:andFileName:">computeCacheFilePath:andFileName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/computeURLMatch:">computeURLMatch:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataIsAvailable:withoutNetwork:withCachePolicy:">dataIsAvailable:withoutNetwork:withCachePolicy:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dealloc">dealloc</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/empty">empty</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getCachedURL:">getCachedURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getFromCache:">getFromCache:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getFromCache:cachePolicy:timeoutInterval:">getFromCache:cachePolicy:timeoutInterval:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getFromCache:timeoutInterval:andDelegate:">getFromCache:timeoutInterval:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getFromCache:timeoutInterval:andDelegate:andSelector:andObject:">getFromCache:timeoutInterval:andDelegate:andSelector:andObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getLocalURIMatchFor:andFileName:result:">getLocalURIMatchFor:andFileName:result:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getURLMatchFor:result:">getURLMatchFor:result:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithMemoryCapacity:diskCapacity:diskPath:">initWithMemoryCapacity:diskCapacity:diskPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:">initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLocalURIMatcher:">setLocalURIMatcher:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setURLRequestMatcher:">setURLRequestMatcher:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/storeCachedResponse:forRequest:">storeCachedResponse:forRequest:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SnSURLCache Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SnSURLCache Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSURLCache</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SnSURLCache.h<br />SnSURLCache.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Proposes a simple persistent <a href="#//api/name/cache">cache</a> based on the file system.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cacheDirectoryPath">&nbsp;&nbsp;cacheDirectoryPath</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indexFilePath">&nbsp;&nbsp;indexFilePath</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cache">&nbsp;&nbsp;cache</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/urlRequestMatcher">&nbsp;&nbsp;urlRequestMatcher</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localUriMatcher">&nbsp;&nbsp;localUriMatcher</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/timeToLiveSeconds">&nbsp;&nbsp;timeToLiveSeconds</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/diskPersistent">&nbsp;&nbsp;diskPersistent</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:">+&nbsp;setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:</a></code>
+		<span class="tooltip"><p>Indicates how many <a href="#//api/name/cache">cache</a> instances should be created.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/instance">+&nbsp;instance</a></code>
+		<span class="tooltip"><p>the single <a href="#//api/name/instance">instance</a> of the class</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/instance:">+&nbsp;instance:</a></code>
+		<span class="tooltip"><p>the position of the <a href="#//api/name/instance">instance</a> to return</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getFromCache:">&ndash;&nbsp;getFromCache:</a></code>
+		<span class="tooltip"><p>@throws <a href="../Classes/SnSURLCacheException.html">SnSURLCacheException</a> if the data is not available according to the <a href="#//api/name/cache">cache</a> policy asked for</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getFromCache:cachePolicy:timeoutInterval:">&ndash;&nbsp;getFromCache:cachePolicy:timeoutInterval:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getFromCache:timeoutInterval:andDelegate:">&ndash;&nbsp;getFromCache:timeoutInterval:andDelegate:</a></code>
+		<span class="tooltip"><p>Retrieves some data from the <a href="#//api/name/cache">cache</a> in two phases: the data is returned from the <a href="#//api/name/cache">cache</a> if available, and then updated from Internet.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getFromCache:timeoutInterval:andDelegate:andSelector:andObject:">&ndash;&nbsp;getFromCache:timeoutInterval:andDelegate:andSelector:andObject:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getCachedURL:">&ndash;&nbsp;getCachedURL:</a></code>
+		<span class="tooltip"><p>a local file URL corresponding to the provided URL, if already in <a href="#//api/name/cache">cache</a>; if not, <code>nil</code> is returned</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/empty">&ndash;&nbsp;empty</a></code>
+		<span class="tooltip"><p>Totally empties the <a href="#//api/name/cache">cache</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setURLRequestMatcher:">&ndash;&nbsp;setURLRequestMatcher:</a></code>
+		<span class="tooltip"><p>Enables to control the mapping between the cached URLs and their local file counterpart.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLocalURIMatcher:">&ndash;&nbsp;setLocalURIMatcher:</a></code>
+		<span class="tooltip"><p>Enables to control the mapping between the cached URLs and their local file counterpart.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isBinaryData:">+&nbsp;isBinaryData:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:">&ndash;&nbsp;initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithMemoryCapacity:diskCapacity:diskPath:">&ndash;&nbsp;initWithMemoryCapacity:diskCapacity:diskPath:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataIsAvailable:withoutNetwork:withCachePolicy:">&ndash;&nbsp;dataIsAvailable:withoutNetwork:withCachePolicy:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cachedResponseForRequest:">&ndash;&nbsp;cachedResponseForRequest:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/storeCachedResponse:forRequest:">&ndash;&nbsp;storeCachedResponse:forRequest:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/computeURLMatch:">&ndash;&nbsp;computeURLMatch:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getURLMatchFor:result:">&ndash;&nbsp;getURLMatchFor:result:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/computeCacheFilePath:andFileName:">&ndash;&nbsp;computeCacheFilePath:andFileName:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getLocalURIMatchFor:andFileName:result:">&ndash;&nbsp;getLocalURIMatchFor:andFileName:result:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cache" title="cache"></a>
+	<h3 class="subsubtitle method-title">cache</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cacheDirectoryPath" title="cacheDirectoryPath"></a>
+	<h3 class="subsubtitle method-title">cacheDirectoryPath</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/diskPersistent" title="diskPersistent"></a>
+	<h3 class="subsubtitle method-title">diskPersistent</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/indexFilePath" title="indexFilePath"></a>
+	<h3 class="subsubtitle method-title">indexFilePath</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localUriMatcher" title="localUriMatcher"></a>
+	<h3 class="subsubtitle method-title">localUriMatcher</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/timeToLiveSeconds" title="timeToLiveSeconds"></a>
+	<h3 class="subsubtitle method-title">timeToLiveSeconds</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/urlRequestMatcher" title="urlRequestMatcher"></a>
+	<h3 class="subsubtitle method-title">urlRequestMatcher</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/instance" title="instance"></a>
+	<h3 class="subsubtitle method-title">instance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>the single <a href="#//api/name/instance">instance</a> of the class</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SnSURLCache *)instance</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the single <a href="#//api/name/instance">instance</a> of the class</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/instance:" title="instance:"></a>
+	<h3 class="subsubtitle method-title">instance:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>the position of the <a href="#//api/name/instance">instance</a> to return</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SnSURLCache *)instance:(NSUInteger)<em>index</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>the position of the <a href="#//api/name/instance">instance</a> to return</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a valid <a href="#//api/name/instance">instance</a> of the class, corresponding to the provided index</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isBinaryData:" title="isBinaryData:"></a>
+	<h3 class="subsubtitle method-title">isBinaryData:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:" title="setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:"></a>
+	<h3 class="subsubtitle method-title">setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates how many <a href="#//api/name/cache">cache</a> instances should be created.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)setInstances:(NSUInteger)<em>count</em> andMemoryCapacities:(NSUInteger [ ])<em>memoryCapacities</em> andDiskCapacities:(NSUInteger [ ])<em>diskCapacities</em> andDiskPaths:(NSString *[ ])<em>diskPaths</em> andTimeValidity:(NSTimeInterval)<em>timeToLive</em> andPersistence:(BOOL)<em>diskPersistence</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>count</em></dt>
+			<dd><p>the number of instances to create</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates how many <a href="#//api/name/cache">cache</a> instances should be created.</p>
+
+<p>
+Should be invoked only once, before using the [cache](#//api/name/cache)! If this method is not called, only one [instance](#//api/name/instance) is available.
+</p>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cachedResponseForRequest:" title="cachedResponseForRequest:"></a>
+	<h3 class="subsubtitle method-title">cachedResponseForRequest:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/computeCacheFilePath:andFileName:" title="computeCacheFilePath:andFileName:"></a>
+	<h3 class="subsubtitle method-title">computeCacheFilePath:andFileName:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/computeURLMatch:" title="computeURLMatch:"></a>
+	<h3 class="subsubtitle method-title">computeURLMatch:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataIsAvailable:withoutNetwork:withCachePolicy:" title="dataIsAvailable:withoutNetwork:withCachePolicy:"></a>
+	<h3 class="subsubtitle method-title">dataIsAvailable:withoutNetwork:withCachePolicy:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/empty" title="empty"></a>
+	<h3 class="subsubtitle method-title">empty</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Totally empties the <a href="#//api/name/cache">cache</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)empty</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Totally empties the <a href="#//api/name/cache">cache</a>.</p>
+
+<p>The cached persisted files are destroyed as well, not only the indexes.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getCachedURL:" title="getCachedURL:"></a>
+	<h3 class="subsubtitle method-title">getCachedURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>a local file URL corresponding to the provided URL, if already in <a href="#//api/name/cache">cache</a>; if not, <code>nil</code> is returned</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSURL *)getCachedURL:(NSString *)<em>url</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a local file URL corresponding to the provided URL, if already in <a href="#//api/name/cache">cache</a>; if not, <code>nil</code> is returned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getFromCache:" title="getFromCache:"></a>
+	<h3 class="subsubtitle method-title">getFromCache:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@throws <a href="../Classes/SnSURLCacheException.html">SnSURLCacheException</a> if the data is not available according to the <a href="#//api/name/cache">cache</a> policy asked for</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSData *)getFromCache:(NSURLRequest *)<em>urlRequest</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@throws <a href="../Classes/SnSURLCacheException.html">SnSURLCacheException</a> if the data is not available according to the <a href="#//api/name/cache">cache</a> policy asked for</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getFromCache:cachePolicy:timeoutInterval:" title="getFromCache:cachePolicy:timeoutInterval:"></a>
+	<h3 class="subsubtitle method-title">getFromCache:cachePolicy:timeoutInterval:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getFromCache:timeoutInterval:andDelegate:" title="getFromCache:timeoutInterval:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">getFromCache:timeoutInterval:andDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves some data from the <a href="#//api/name/cache">cache</a> in two phases: the data is returned from the <a href="#//api/name/cache">cache</a> if available, and then updated from Internet.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSData *)getFromCache:(NSString *)<em>url</em> timeoutInterval:(NSTimeInterval)<em>timeoutInterval</em> andDelegate:(SnSDelegateWithObject *)<em>delegate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>the object that will trigger its underlying selector when the data have been updated from Internet. The selector
+must have the following signature: <code>(void) selector:(<a href="../Classes/SnSURLCacheData.html">SnSURLCacheData</a> *)urlCacheData</code></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the cached data; may be <code>nil</code> if the <a href="#//api/name/cache">cache</a> does not already contain the data
+@throws <a href="../Classes/SnSURLCacheException.html">SnSURLCacheException</a> if the data is not available according to the <a href="#//api/name/cache">cache</a> policy asked for</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieves some data from the <a href="#//api/name/cache">cache</a> in two phases: the data is returned from the <a href="#//api/name/cache">cache</a> if available, and then updated from Internet.</p>
+
+<p>The method returns as soon as the potential local <a href="#//api/name/cache">cache</a> has been retrieved, and will perform the data reloading from Internet in
+a detached separate thread.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getFromCache:timeoutInterval:andDelegate:andSelector:andObject:" title="getFromCache:timeoutInterval:andDelegate:andSelector:andObject:"></a>
+	<h3 class="subsubtitle method-title">getFromCache:timeoutInterval:andDelegate:andSelector:andObject:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getLocalURIMatchFor:andFileName:result:" title="getLocalURIMatchFor:andFileName:result:"></a>
+	<h3 class="subsubtitle method-title">getLocalURIMatchFor:andFileName:result:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getURLMatchFor:result:" title="getURLMatchFor:result:"></a>
+	<h3 class="subsubtitle method-title">getURLMatchFor:result:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithMemoryCapacity:diskCapacity:diskPath:" title="initWithMemoryCapacity:diskCapacity:diskPath:"></a>
+	<h3 class="subsubtitle method-title">initWithMemoryCapacity:diskCapacity:diskPath:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:" title="initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:"></a>
+	<h3 class="subsubtitle method-title">initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLocalURIMatcher:" title="setLocalURIMatcher:"></a>
+	<h3 class="subsubtitle method-title">setLocalURIMatcher:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables to control the mapping between the cached URLs and their local file counterpart.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setLocalURIMatcher:(SnSDelegate *)<em>delegate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>the delegate method that will be invoked, and which takes two arguments: the first one is a <code>NSString <strong></code> containing the URL, the second is a <code>NSString </strong></code> which contains the local file name, the third is a <code>NString **</code> which should contain the result</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Enables to control the mapping between the cached URLs and their local file counterpart.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setURLRequestMatcher:" title="setURLRequestMatcher:"></a>
+	<h3 class="subsubtitle method-title">setURLRequestMatcher:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables to control the mapping between the cached URLs and their local file counterpart.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setURLRequestMatcher:(SnSDelegate *)<em>delegate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>the delegate method that will be invoked, and which takes two arguments: the first one is a <code>NSURL <strong></code> containing the URL, the second is a <code>NString </strong>*</code> which should contain the result</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Enables to control the mapping between the cached URLs and their local file counterpart.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSURLCache.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/storeCachedResponse:forRequest:" title="storeCachedResponse:forRequest:"></a>
+	<h3 class="subsubtitle method-title">storeCachedResponse:forRequest:</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Smart&amp;Soft. All rights reserved. (Last updated: 2011-08-31)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

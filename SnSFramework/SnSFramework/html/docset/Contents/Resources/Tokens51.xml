@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSViewControllerDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSViewControllerDelegate</TokenIdentifier>
+			<Abstract>An internal class which enables to bind a UIViewController, or derivated class to a list of SnSViewControllerLifeCycle entities.</Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>
+			
+			<NodeRef refid="51"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/initWith:aggregates:</TokenIdentifier>
+			<Abstract>Defined in order to notify when the UIViewController::viewDidAppear method is being been entered.
+   </Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(UIViewController&lt;SnSViewControllerAggregator,SnSViewControllerLifeCycle&gt; *)theAggregator aggregates:(NSArray *)theAggregates</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:aggregates:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/loadView:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)loadView:(UIView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/loadView:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/viewDidLoad</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidLoad</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidLoad</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/viewDidUnload</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidUnload</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidUnload</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/viewWillAppear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)viewWillAppear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewWillAppear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/viewDidAppear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidAppear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidAppear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/viewWillDisappear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)viewWillDisappear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewWillDisappear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/viewDidDisappear:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)viewDidDisappear:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/viewDidDisappear:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/waitForSynchronizedDisplayObjects</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)waitForSynchronizedDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/waitForSynchronizedDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/isBusinessObjectsRetrievalAsynchronous:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isBusinessObjectsRetrievalAsynchronous:(id)aggregate</Declaration>
+			
+			
+			<Anchor>//api/name/isBusinessObjectsRetrievalAsynchronous:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onRetrieveDisplayObjectsInternal:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onRetrieveDisplayObjectsInternal:(UIView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/onRetrieveDisplayObjectsInternal:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onRetrieveBusinessObjectsInternal:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (BOOL)onRetrieveBusinessObjectsInternal:(NSNumber *)index</Declaration>
+			
+			
+			<Anchor>//api/name/onRetrieveBusinessObjectsInternal:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onBusinessObjectsRetrieved:atIndex:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onBusinessObjectsRetrieved:(id)aggregate atIndex:(NSUInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/onBusinessObjectsRetrieved:atIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onFulfillDisplayObjectsInternalAsynchronous:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onFulfillDisplayObjectsInternalAsynchronous:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/onFulfillDisplayObjectsInternalAsynchronous:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onSynchronizeDisplayObjectsInternalAsynchronous:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onSynchronizeDisplayObjectsInternalAsynchronous:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/onSynchronizeDisplayObjectsInternalAsynchronous:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onFulfillDisplayObjectsInternal:atIndex:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (BOOL)onFulfillDisplayObjectsInternal:(id)aggregate atIndex:(NSUInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/onFulfillDisplayObjectsInternal:atIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onSynchronizeDisplayObjectsInternal:atIndex:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (BOOL)onSynchronizeDisplayObjectsInternal:(id)aggregate atIndex:(NSUInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/onSynchronizeDisplayObjectsInternal:atIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSViewControllerDelegate/onDiscardedInternal</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onDiscardedInternal</Declaration>
+			
+			
+			<Anchor>//api/name/onDiscardedInternal</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

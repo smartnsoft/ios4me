@@ -1,0 +1,5 @@
+{
+	"CounterpartTemplateFile" = "class.h";
+	Description = "An Objective-C class file, with an optional header which derives from a SnSTableViewRefreshController.";
+	MainTemplateFile = "class.m";
+}

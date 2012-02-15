@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnsBusinessObjectsRetrievalAsynchronousPolicy.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnsBusinessObjectsRetrievalAsynchronousPolicy</TokenIdentifier>
+			<Abstract>Should be used only on a codeUIViewController/code, and indicates that the loading of the business objects should be loaded asynchronously or not.</Abstract>
+			<DeclaredIn>SnSLifeCycle.h</DeclaredIn>
+			
+			<NodeRef refid="78"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

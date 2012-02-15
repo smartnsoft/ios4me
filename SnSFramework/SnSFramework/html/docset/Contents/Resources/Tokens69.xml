@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnSExceptionHandler.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnSExceptionHandler</TokenIdentifier>
+			<Abstract>Receives all the framework exceptions in a single place.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>
+			
+			<NodeRef refid="69"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSExceptionHandler/onException:exception:resume:</TokenIdentifier>
+			<Abstract>May be invoked when an exception is thrown from an object that is not a UIViewController.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)onException:(id)sender exception:(NSException *)exception resume:(BOOL *)resume</Declaration>
+			
+			
+			<Anchor>//api/name/onException:exception:resume:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSExceptionHandler/onBusinessObjectException:aggregate:exception:resume:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)onBusinessObjectException:(UIViewController *)viewController aggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate exception:(SnSBusinessObjectException *)exception resume:(BOOL *)resume</Declaration>
+			
+			
+			<Anchor>//api/name/onBusinessObjectException:aggregate:exception:resume:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSExceptionHandler/onLifeCycleException:aggregate:exception:resume:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)onLifeCycleException:(UIViewController *)viewController aggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate exception:(SnSLifeCycleException *)exception resume:(BOOL *)resume</Declaration>
+			
+			
+			<Anchor>//api/name/onLifeCycleException:aggregate:exception:resume:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSExceptionHandler/onOtherException:aggregate:exception:resume:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)onOtherException:(UIViewController *)viewController aggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate exception:(NSException *)exception resume:(BOOL *)resume</Declaration>
+			
+			
+			<Anchor>//api/name/onOtherException:aggregate:exception:resume:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

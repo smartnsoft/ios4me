@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSAppDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSAppDelegate</TokenIdentifier>
+			<Abstract>An iPhone application delegate which proposes additional services.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSAppDelegate/window</TokenIdentifier>
+			<Abstract>The window of the application.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) UIWindow *window</Declaration>
+			
+			
+			<Anchor>//api/name/window</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSAppDelegate/loadingView</TokenIdentifier>
+			<Abstract>The loading view, displayed when some loading is pending.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) UIView *loadingView</Declaration>
+			
+			
+			<Anchor>//api/name/loadingView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/getExceptionHandler</TokenIdentifier>
+			<Abstract>Invoked at the start of the application delegate, in order to determine the application exception handler.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;SnSExceptionHandler&gt;)getExceptionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/getExceptionHandler</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/getInterceptor</TokenIdentifier>
+			<Abstract>A hook for intercepting the aggregates life cycle events.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;SnSViewControllerInterceptor&gt;)getInterceptor</Declaration>
+			
+			
+			<Anchor>//api/name/getInterceptor</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/getDecorator</TokenIdentifier>
+			<Abstract>Decorator for default design of all components of views</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;SnSViewDecorator&gt;)getDecorator</Declaration>
+			
+			
+			<Anchor>//api/name/getDecorator</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSAppDelegate/startLoading:withMessage:</TokenIdentifier>
+			<Abstract>Indicates that some pending action by displaying a greyed modal view on top of the current view.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>+ (void)startLoading:(id)sender withMessage:(NSString *)message</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sender</Name>
+					<Abstract>the object sending the notification</Abstract>
+				</Parameter><Parameter>
+					<Name>message</Name>
+					<Abstract>the message which explains why the loading is running. May be codenil/code</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/startLoading:withMessage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSAppDelegate/stopLoading:</TokenIdentifier>
+			<Abstract>Indicates that a previous loading action is now over.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>+ (void)stopLoading:(id)sender</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sender</Name>
+					<Abstract>the object sending the notification</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/stopLoading:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/getStartingViewController</TokenIdentifier>
+			<Abstract>Is invoked when starting the application.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (UIViewController *)getStartingViewController</Declaration>
+			
+			<ReturnValue><Abstract>the application starting view controller.</Abstract></ReturnValue>
+			<Anchor>//api/name/getStartingViewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/onApplicationDidFinishLaunchingBegin:</TokenIdentifier>
+			<Abstract>Is invoked at the start of the code- (void) applicationDidFinishLaunching:(UIApplication *)application/code method.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)onApplicationDidFinishLaunchingBegin:(UIApplication *)application</Declaration>
+			
+			
+			<Anchor>//api/name/onApplicationDidFinishLaunchingBegin:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/onApplicationDidFinishLaunchingEnd:</TokenIdentifier>
+			<Abstract>Is invoked at the end of the code- (void) applicationDidFinishLaunching:(UIApplication *)application/code method.</Abstract>
+			<DeclaredIn>SnSAppDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)onApplicationDidFinishLaunchingEnd:(UIApplication *)application</Declaration>
+			
+			
+			<Anchor>//api/name/onApplicationDidFinishLaunchingEnd:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/applicationDidFinishLaunching:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSAppDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)applicationDidFinishLaunching:(UIApplication *)application</Declaration>
+			
+			
+			<Anchor>//api/name/applicationDidFinishLaunching:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/applicationWillTerminate:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSAppDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)applicationWillTerminate:(UIApplication *)application</Declaration>
+			
+			
+			<Anchor>//api/name/applicationWillTerminate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/applicationDidReceiveMemoryWarning:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSAppDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application</Declaration>
+			
+			
+			<Anchor>//api/name/applicationDidReceiveMemoryWarning:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSAppDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/listenToNotifications</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSAppDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)listenToNotifications</Declaration>
+			
+			
+			<Anchor>//api/name/listenToNotifications</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/onLoadingActivity:</TokenIdentifier>
+			<Abstract>Performed in a new thread, in order to relief the caller.</Abstract>
+			<DeclaredIn>SnSAppDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)onLoadingActivity:(NSNotification *)notification</Declaration>
+			
+			
+			<Anchor>//api/name/onLoadingActivity:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSAppDelegate/handleLoadingActivity:</TokenIdentifier>
+			<Abstract>When a loading action is in progress, the terminal network activity is displayed.
+TODO: handle the message as well
+TODO: count the number of times the "start" has been pushed</Abstract>
+			<DeclaredIn>SnSAppDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)handleLoadingActivity:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/handleLoadingActivity:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

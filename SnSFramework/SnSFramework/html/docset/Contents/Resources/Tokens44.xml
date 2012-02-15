@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSURLCache.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSURLCache</TokenIdentifier>
+			<Abstract>Proposes a simple persistent cache based on the file system.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>
+			
+			<NodeRef refid="44"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCache/cacheDirectoryPath</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) NSString *cacheDirectoryPath</Declaration>
+			
+			
+			<Anchor>//api/name/cacheDirectoryPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCache/indexFilePath</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) NSString *indexFilePath</Declaration>
+			
+			
+			<Anchor>//api/name/indexFilePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCache/cache</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) NSMutableDictionary *cache</Declaration>
+			
+			
+			<Anchor>//api/name/cache</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCache/urlRequestMatcher</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) SnSDelegate *urlRequestMatcher</Declaration>
+			
+			
+			<Anchor>//api/name/urlRequestMatcher</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCache/localUriMatcher</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) SnSDelegate *localUriMatcher</Declaration>
+			
+			
+			<Anchor>//api/name/localUriMatcher</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCache/timeToLiveSeconds</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSTimeInterval timeToLiveSeconds</Declaration>
+			
+			
+			<Anchor>//api/name/timeToLiveSeconds</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCache/diskPersistent</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL diskPersistent</Declaration>
+			
+			
+			<Anchor>//api/name/diskPersistent</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLCache/setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:</TokenIdentifier>
+			<Abstract>Indicates how many cache instances should be created.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setInstances:(NSUInteger)count andMemoryCapacities:(NSUInteger [ ])memoryCapacities andDiskCapacities:(NSUInteger [ ])diskCapacities andDiskPaths:(NSString *[ ])diskPaths andTimeValidity:(NSTimeInterval)timeToLive andPersistence:(BOOL)diskPersistence</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>count</Name>
+					<Abstract>the number of instances to create</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLCache/instance</TokenIdentifier>
+			<Abstract>the single instance of the class</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>+ (SnSURLCache *)instance</Declaration>
+			
+			<ReturnValue><Abstract>the single instance of the class</Abstract></ReturnValue>
+			<Anchor>//api/name/instance</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLCache/instance:</TokenIdentifier>
+			<Abstract>the position of the instance to return</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>+ (SnSURLCache *)instance:(NSUInteger)index</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract>the position of the instance to return</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>a valid instance of the class, corresponding to the provided index</Abstract></ReturnValue>
+			<Anchor>//api/name/instance:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/getFromCache:</TokenIdentifier>
+			<Abstract>@throws SnSURLCacheException if the data is not available according to the cache policy asked for</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)getFromCache:(NSURLRequest *)urlRequest</Declaration>
+			
+			
+			<Anchor>//api/name/getFromCache:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/getFromCache:cachePolicy:timeoutInterval:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)getFromCache:(NSString *)url cachePolicy:(NSURLRequestCachePolicy)cachePolicy timeoutInterval:(NSTimeInterval)timeoutInterval</Declaration>
+			
+			
+			<Anchor>//api/name/getFromCache:cachePolicy:timeoutInterval:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/getFromCache:timeoutInterval:andDelegate:</TokenIdentifier>
+			<Abstract>Retrieves some data from the cache in two phases: the data is returned from the cache if available, and then updated from Internet.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)getFromCache:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval andDelegate:(SnSDelegateWithObject *)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>delegate</Name>
+					<Abstract>the object that will trigger its underlying selector when the data have been updated from Internet. The selector
+must have the following signature: code(void) selector:(SnSURLCacheData *)urlCacheData/code</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the cached data; may be codenil/code if the cache does not already contain the data
+@throws SnSURLCacheException if the data is not available according to the cache policy asked for</Abstract></ReturnValue>
+			<Anchor>//api/name/getFromCache:timeoutInterval:andDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/getFromCache:timeoutInterval:andDelegate:andSelector:andObject:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)getFromCache:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval andDelegate:(id)delegate andSelector:(SEL)selector andObject:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/getFromCache:timeoutInterval:andDelegate:andSelector:andObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/getCachedURL:</TokenIdentifier>
+			<Abstract>a local file URL corresponding to the provided URL, if already in cache; if not, codenil/code is returned</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (NSURL *)getCachedURL:(NSString *)url</Declaration>
+			
+			<ReturnValue><Abstract>a local file URL corresponding to the provided URL, if already in cache; if not, codenil/code is returned</Abstract></ReturnValue>
+			<Anchor>//api/name/getCachedURL:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/empty</TokenIdentifier>
+			<Abstract>Totally empties the cache.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)empty</Declaration>
+			
+			
+			<Anchor>//api/name/empty</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/setURLRequestMatcher:</TokenIdentifier>
+			<Abstract>Enables to control the mapping between the cached URLs and their local file counterpart.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)setURLRequestMatcher:(SnSDelegate *)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>delegate</Name>
+					<Abstract>the delegate method that will be invoked, and which takes two arguments: the first one is a codeNSURL /code containing the URL, the second is a codeNString */code which should contain the result</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setURLRequestMatcher:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/setLocalURIMatcher:</TokenIdentifier>
+			<Abstract>Enables to control the mapping between the cached URLs and their local file counterpart.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (void)setLocalURIMatcher:(SnSDelegate *)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>delegate</Name>
+					<Abstract>the delegate method that will be invoked, and which takes two arguments: the first one is a codeNSString /code containing the URL, the second is a codeNSString /code which contains the local file name, the third is a codeNString **/code which should contain the result</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setLocalURIMatcher:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLCache/isBinaryData:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isBinaryData:(NSString *)typeMIME</Declaration>
+			
+			
+			<Anchor>//api/name/isBinaryData:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWithMemoryCapacity:(NSUInteger)memoryCapacity diskCapacity:(NSUInteger)diskCapacity diskPath:(NSString *)path andTimeValidity:(NSTimeInterval)timeToLive andPersistence:(BOOL)onDisk</Declaration>
+			
+			
+			<Anchor>//api/name/initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/initWithMemoryCapacity:diskCapacity:diskPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWithMemoryCapacity:(NSUInteger)memoryCapacity diskCapacity:(NSUInteger)diskCapacity diskPath:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/initWithMemoryCapacity:diskCapacity:diskPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/dataIsAvailable:withoutNetwork:withCachePolicy:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (BOOL)dataIsAvailable:(NSDictionary *)cacheInfo withoutNetwork:(BOOL)network withCachePolicy:(NSURLRequestCachePolicy)cachePolicy</Declaration>
+			
+			
+			<Anchor>//api/name/dataIsAvailable:withoutNetwork:withCachePolicy:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/cachedResponseForRequest:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (NSCachedURLResponse *)cachedResponseForRequest:(NSURLRequest *)urlRequest</Declaration>
+			
+			
+			<Anchor>//api/name/cachedResponseForRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/storeCachedResponse:forRequest:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)storeCachedResponse:(NSCachedURLResponse *)cachedResponse forRequest:(NSURLRequest *)urlRequest</Declaration>
+			
+			
+			<Anchor>//api/name/storeCachedResponse:forRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/computeURLMatch:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (NSString *)computeURLMatch:(NSURLRequest *)urlRequest</Declaration>
+			
+			
+			<Anchor>//api/name/computeURLMatch:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/getURLMatchFor:result:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)getURLMatchFor:(NSURLRequest *)urlRequest result:(NSString **)result</Declaration>
+			
+			
+			<Anchor>//api/name/getURLMatchFor:result:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/computeCacheFilePath:andFileName:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (NSString *)computeCacheFilePath:(NSString *)url andFileName:(NSString *)fileName</Declaration>
+			
+			
+			<Anchor>//api/name/computeCacheFilePath:andFileName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCache/getLocalURIMatchFor:andFileName:result:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)getLocalURIMatchFor:(NSString *)url andFileName:(NSString *)fileName result:(NSString **)result</Declaration>
+			
+			
+			<Anchor>//api/name/getLocalURIMatchFor:andFileName:result:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

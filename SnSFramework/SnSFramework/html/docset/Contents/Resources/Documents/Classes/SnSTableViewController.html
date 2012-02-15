@@ -1,0 +1,1424 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SnSTableViewController Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SnSFramework </a></h1>
+				<a id="developerHome" href="../index.html">Smart&amp;Soft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SnSTableViewController Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/businessObjects">&nbsp;&nbsp;&nbsp;&nbsp;businessObjects</option>
+	
+	<option value="//api/name/context">&nbsp;&nbsp;&nbsp;&nbsp;context</option>
+	
+	<option value="//api/name/indexObjects">&nbsp;&nbsp;&nbsp;&nbsp;indexObjects</option>
+	
+	<option value="//api/name/responderRedirector">&nbsp;&nbsp;&nbsp;&nbsp;responderRedirector</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/dealloc">&nbsp;&nbsp;&nbsp;&nbsp;- dealloc</option>
+	
+	<option value="//api/name/didReceiveMemoryWarning">&nbsp;&nbsp;&nbsp;&nbsp;- didReceiveMemoryWarning</option>
+	
+	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/initWithStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithStyle:</option>
+	
+	<option value="//api/name/loadView">&nbsp;&nbsp;&nbsp;&nbsp;- loadView</option>
+	
+	<option value="//api/name/numberOfSectionsInTableView:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfSectionsInTableView:</option>
+	
+	<option value="//api/name/onDiscarded">&nbsp;&nbsp;&nbsp;&nbsp;- onDiscarded</option>
+	
+	<option value="//api/name/onFulfillDisplayObjects">&nbsp;&nbsp;&nbsp;&nbsp;- onFulfillDisplayObjects</option>
+	
+	<option value="//api/name/onRetrieveAggregates">&nbsp;&nbsp;&nbsp;&nbsp;- onRetrieveAggregates</option>
+	
+	<option value="//api/name/onRetrieveBusinessObjects">&nbsp;&nbsp;&nbsp;&nbsp;- onRetrieveBusinessObjects</option>
+	
+	<option value="//api/name/onRetrieveDisplayObjects:">&nbsp;&nbsp;&nbsp;&nbsp;- onRetrieveDisplayObjects:</option>
+	
+	<option value="//api/name/onSynchronizeDisplayObjects">&nbsp;&nbsp;&nbsp;&nbsp;- onSynchronizeDisplayObjects</option>
+	
+	<option value="//api/name/retrieveBusinessObjectsAndSynchronize">&nbsp;&nbsp;&nbsp;&nbsp;- retrieveBusinessObjectsAndSynchronize</option>
+	
+	<option value="//api/name/synchronizeDisplay:withBusinessObject:">&nbsp;&nbsp;&nbsp;&nbsp;- synchronizeDisplay:withBusinessObject:</option>
+	
+	<option value="//api/name/synchronizeDisplayObjects">&nbsp;&nbsp;&nbsp;&nbsp;- synchronizeDisplayObjects</option>
+	
+	<option value="//api/name/tableView:cellForRowAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- tableView:cellForRowAtIndexPath:</option>
+	
+	<option value="//api/name/tableView:didSelectRowAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- tableView:didSelectRowAtIndexPath:</option>
+	
+	<option value="//api/name/tableView:numberOfRowsInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- tableView:numberOfRowsInSection:</option>
+	
+	<option value="//api/name/tableView:willDisplayCell:forRowAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- tableView:willDisplayCell:forRowAtIndexPath:</option>
+	
+	<option value="//api/name/tableViewCustom:didSelectRowAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- tableViewCustom:didSelectRowAtIndexPath:</option>
+	
+	<option value="//api/name/tableViewCustom:willDisplayCell:forRowAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- tableViewCustom:willDisplayCell:forRowAtIndexPath:</option>
+	
+	<option value="//api/name/viewDidAppear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidAppear:</option>
+	
+	<option value="//api/name/viewDidDisappear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidDisappear:</option>
+	
+	<option value="//api/name/viewDidLoad">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidLoad</option>
+	
+	<option value="//api/name/viewDidUnload">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidUnload</option>
+	
+	<option value="//api/name/viewWillAppear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewWillAppear:</option>
+	
+	<option value="//api/name/viewWillDisappear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewWillDisappear:</option>
+	
+	<option value="//api/name/waitForSynchronizedDisplayObjects">&nbsp;&nbsp;&nbsp;&nbsp;- waitForSynchronizedDisplayObjects</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Private Methods">Private Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/businessObjects">businessObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/context">context</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indexObjects">indexObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/responderRedirector">responderRedirector</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dealloc">dealloc</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didReceiveMemoryWarning">didReceiveMemoryWarning</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithStyle:">initWithStyle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadView">loadView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfSectionsInTableView:">numberOfSectionsInTableView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onDiscarded">onDiscarded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onFulfillDisplayObjects">onFulfillDisplayObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onRetrieveAggregates">onRetrieveAggregates</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onRetrieveBusinessObjects">onRetrieveBusinessObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onRetrieveDisplayObjects:">onRetrieveDisplayObjects:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onSynchronizeDisplayObjects">onSynchronizeDisplayObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/retrieveBusinessObjectsAndSynchronize">retrieveBusinessObjectsAndSynchronize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/synchronizeDisplay:withBusinessObject:">synchronizeDisplay:withBusinessObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/synchronizeDisplayObjects">synchronizeDisplayObjects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView:cellForRowAtIndexPath:">tableView:cellForRowAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView:didSelectRowAtIndexPath:">tableView:didSelectRowAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView:numberOfRowsInSection:">tableView:numberOfRowsInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView:willDisplayCell:forRowAtIndexPath:">tableView:willDisplayCell:forRowAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableViewCustom:didSelectRowAtIndexPath:">tableViewCustom:didSelectRowAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableViewCustom:willDisplayCell:forRowAtIndexPath:">tableViewCustom:willDisplayCell:forRowAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidAppear:">viewDidAppear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidDisappear:">viewDidDisappear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidLoad">viewDidLoad</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidUnload">viewDidUnload</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewWillAppear:">viewWillAppear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewWillDisappear:">viewWillDisappear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/waitForSynchronizedDisplayObjects">waitForSynchronizedDisplayObjects</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SnSTableViewController Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SnSTableViewController Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UITableViewController</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/SnSTableViewControllerBusinessObjects.html">SnSTableViewControllerBusinessObjects</a><br /><a href="../Protocols/SnSViewControllerAggregator.html">SnSViewControllerAggregator</a><br /><a href="../Protocols/SnSViewControllerLifeCycle.html">SnSViewControllerLifeCycle</a></td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SnSTableViewController.h<br />SnSTableViewController.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An UITableViewController which follows the <a href="../Protocols/SnSViewControllerLifeCycle.html">SnSViewControllerLifeCycle</a> life-cycle, and which is also able to
+aggregate other <a href="../Protocols/SnSViewControllerLifeCycle.html">SnSViewControllerLifeCycle</a> entities.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/context">&nbsp;&nbsp;context</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/responderRedirector">&nbsp;&nbsp;responderRedirector</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableViewCustom:didSelectRowAtIndexPath:">&ndash;&nbsp;tableViewCustom:didSelectRowAtIndexPath:</a></code>
+		<span class="tooltip"><p>The method which is actually called and wrapped when the end-user clicks on a table row.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableViewCustom:willDisplayCell:forRowAtIndexPath:">&ndash;&nbsp;tableViewCustom:willDisplayCell:forRowAtIndexPath:</a></code>
+		<span class="tooltip"><p>The method which is called to override the display style of a table row.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/waitForSynchronizedDisplayObjects">&ndash;&nbsp;waitForSynchronizedDisplayObjects</a></code>
+		<span class="tooltip"><p>That method will hang the calling thread until the UIViewController::<a href="#//api/name/viewDidAppear:">viewDidAppear:</a>(BOOL) has been entered.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/synchronizeDisplayObjects">&ndash;&nbsp;synchronizeDisplayObjects</a></code>
+		<span class="tooltip"><p>Use that method in order to synchronize the display.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/retrieveBusinessObjectsAndSynchronize">&ndash;&nbsp;retrieveBusinessObjectsAndSynchronize</a></code>
+		<span class="tooltip"><p>Use that method in order to reload the data and synchronize the display accordingly.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithStyle:">&ndash;&nbsp;initWithStyle:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onRetrieveAggregates">&ndash;&nbsp;onRetrieveAggregates</a></code>
+		<span class="tooltip"><p>an array of <a href="../Protocols/SnSViewControllerLifeCycle.html">SnSViewControllerLifeCycle</a> objects, which indicates the entities that are handled by the current object</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onRetrieveDisplayObjects:">&ndash;&nbsp;onRetrieveDisplayObjects:</a></code>
+		<span class="tooltip"><p>Responsible for computing the GUI objects associated to the current entity, and for adding
+it to the parent view.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onRetrieveBusinessObjects">&ndash;&nbsp;onRetrieveBusinessObjects</a></code>
+		<span class="tooltip"><p>In charge of retrieving the business objects that represent in memory the entity.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onFulfillDisplayObjects">&ndash;&nbsp;onFulfillDisplayObjects</a></code>
+		<span class="tooltip"><p>In charge of binding the business objects with their GUI representation.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onSynchronizeDisplayObjects">&ndash;&nbsp;onSynchronizeDisplayObjects</a></code>
+		<span class="tooltip"><p>In charge of binding the business objects with their GUI representation.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onDiscarded">&ndash;&nbsp;onDiscarded</a></code>
+		<span class="tooltip"><p>In charge of cleaning up the memory associated with the business objects and the GUI elements.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/synchronizeDisplay:withBusinessObject:">&ndash;&nbsp;synchronizeDisplay:withBusinessObject:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadView">&ndash;&nbsp;loadView</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidLoad">&ndash;&nbsp;viewDidLoad</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidUnload">&ndash;&nbsp;viewDidUnload</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewWillAppear:">&ndash;&nbsp;viewWillAppear:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidAppear:">&ndash;&nbsp;viewDidAppear:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewWillDisappear:">&ndash;&nbsp;viewWillDisappear:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidDisappear:">&ndash;&nbsp;viewDidDisappear:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didReceiveMemoryWarning">&ndash;&nbsp;didReceiveMemoryWarning</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfSectionsInTableView:">&ndash;&nbsp;numberOfSectionsInTableView:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView:numberOfRowsInSection:">&ndash;&nbsp;tableView:numberOfRowsInSection:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView:cellForRowAtIndexPath:">&ndash;&nbsp;tableView:cellForRowAtIndexPath:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView:didSelectRowAtIndexPath:">&ndash;&nbsp;tableView:didSelectRowAtIndexPath:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView:willDisplayCell:forRowAtIndexPath:">&ndash;&nbsp;tableView:willDisplayCell:forRowAtIndexPath:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Private Methods" name="task_Private Methods"></a>
+						<h3 class="subsubtitle task-title">Private Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/businessObjects">&nbsp;&nbsp;businessObjects</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indexObjects">&nbsp;&nbsp;indexObjects</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/businessObjects" title="businessObjects"></a>
+	<h3 class="subsubtitle method-title">businessObjects</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/context" title="context"></a>
+	<h3 class="subsubtitle method-title">context</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/indexObjects" title="indexObjects"></a>
+	<h3 class="subsubtitle method-title">indexObjects</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/responderRedirector" title="responderRedirector"></a>
+	<h3 class="subsubtitle method-title">responderRedirector</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/didReceiveMemoryWarning" title="didReceiveMemoryWarning"></a>
+	<h3 class="subsubtitle method-title">didReceiveMemoryWarning</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithStyle:" title="initWithStyle:"></a>
+	<h3 class="subsubtitle method-title">initWithStyle:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadView" title="loadView"></a>
+	<h3 class="subsubtitle method-title">loadView</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfSectionsInTableView:" title="numberOfSectionsInTableView:"></a>
+	<h3 class="subsubtitle method-title">numberOfSectionsInTableView:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onDiscarded" title="onDiscarded"></a>
+	<h3 class="subsubtitle method-title">onDiscarded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>In charge of cleaning up the memory associated with the business objects and the GUI elements.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onDiscarded</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In charge of cleaning up the memory associated with the business objects and the GUI elements.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onFulfillDisplayObjects" title="onFulfillDisplayObjects"></a>
+	<h3 class="subsubtitle method-title">onFulfillDisplayObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>In charge of binding the business objects with their GUI representation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onFulfillDisplayObjects</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In charge of binding the business objects with their GUI representation.</p>
+
+<p>Will be invoked only the first time the entity is displayed on the screen.</p>
+
+<p>It is ensured that this method will be invoked from the GUI thread.</p>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onRetrieveAggregates" title="onRetrieveAggregates"></a>
+	<h3 class="subsubtitle method-title">onRetrieveAggregates</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>an array of <a href="../Protocols/SnSViewControllerLifeCycle.html">SnSViewControllerLifeCycle</a> objects, which indicates the entities that are handled by the current object</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)onRetrieveAggregates</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an array of <a href="../Protocols/SnSViewControllerLifeCycle.html">SnSViewControllerLifeCycle</a> objects, which indicates the entities that are handled by the current object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onRetrieveBusinessObjects" title="onRetrieveBusinessObjects"></a>
+	<h3 class="subsubtitle method-title">onRetrieveBusinessObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>In charge of retrieving the business objects that represent in memory the entity.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onRetrieveBusinessObjects</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In charge of retrieving the business objects that represent in memory the entity.</p>
+
+<p>That method will not necessarily be invoked from the GUI thread.</p>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onRetrieveDisplayObjects:" title="onRetrieveDisplayObjects:"></a>
+	<h3 class="subsubtitle method-title">onRetrieveDisplayObjects:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Responsible for computing the GUI objects associated to the current entity, and for adding
+it to the parent view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onRetrieveDisplayObjects:(UIView *)<em>view</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>view</em></dt>
+			<dd><p>the parent view the current entity should be represented on</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Responsible for computing the GUI objects associated to the current entity, and for adding
+it to the parent view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onSynchronizeDisplayObjects" title="onSynchronizeDisplayObjects"></a>
+	<h3 class="subsubtitle method-title">onSynchronizeDisplayObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>In charge of binding the business objects with their GUI representation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onSynchronizeDisplayObjects</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In charge of binding the business objects with their GUI representation.</p>
+
+<p>Will be invoked everytime the entity is displayed on the screen.</p>
+
+<p>It is ensured that this method will be invoked from the GUI thread.</p>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/retrieveBusinessObjectsAndSynchronize" title="retrieveBusinessObjectsAndSynchronize"></a>
+	<h3 class="subsubtitle method-title">retrieveBusinessObjectsAndSynchronize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use that method in order to reload the data and synchronize the display accordingly.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)retrieveBusinessObjectsAndSynchronize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use that method in order to reload the data and synchronize the display accordingly.</p>
+
+<p>The method will invoke the [SnSViewControllerLifeCycle](../Protocols/SnSViewControllerLifeCycle.html)::[onRetrieveBusinessObjects](#//api/name/onRetrieveBusinessObjects) and [SnSViewControllerLifeCycle](../Protocols/SnSViewControllerLifeCycle.html)::[onSynchronizeDisplayObjects](#//api/name/onSynchronizeDisplayObjects) protocol methods.</p>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/synchronizeDisplay:withBusinessObject:" title="synchronizeDisplay:withBusinessObject:"></a>
+	<h3 class="subsubtitle method-title">synchronizeDisplay:withBusinessObject:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/synchronizeDisplayObjects" title="synchronizeDisplayObjects"></a>
+	<h3 class="subsubtitle method-title">synchronizeDisplayObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use that method in order to synchronize the display.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)synchronizeDisplayObjects</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use that method in order to synchronize the display.</p>
+
+<p>The method will invoke the [SnSViewControllerLifeCycle](../Protocols/SnSViewControllerLifeCycle.html)::[onSynchronizeDisplayObjects](#//api/name/onSynchronizeDisplayObjects) protocol method.</p>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView:cellForRowAtIndexPath:" title="tableView:cellForRowAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">tableView:cellForRowAtIndexPath:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView:didSelectRowAtIndexPath:" title="tableView:didSelectRowAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">tableView:didSelectRowAtIndexPath:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView:numberOfRowsInSection:" title="tableView:numberOfRowsInSection:"></a>
+	<h3 class="subsubtitle method-title">tableView:numberOfRowsInSection:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView:willDisplayCell:forRowAtIndexPath:" title="tableView:willDisplayCell:forRowAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">tableView:willDisplayCell:forRowAtIndexPath:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableViewCustom:didSelectRowAtIndexPath:" title="tableViewCustom:didSelectRowAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">tableViewCustom:didSelectRowAtIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The method which is actually called and wrapped when the end-user clicks on a table row.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)tableViewCustom:(UITableView *)<em>aTableView</em> didSelectRowAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The method which is actually called and wrapped when the end-user clicks on a table row.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableViewCustom:willDisplayCell:forRowAtIndexPath:" title="tableViewCustom:willDisplayCell:forRowAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">tableViewCustom:willDisplayCell:forRowAtIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The method which is called to override the display style of a table row.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)tableViewCustom:(UITableView *)<em>aTableView</em> willDisplayCell:(UITableViewCell *)<em>cell</em> forRowAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The method which is called to override the display style of a table row.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidAppear:" title="viewDidAppear:"></a>
+	<h3 class="subsubtitle method-title">viewDidAppear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidDisappear:" title="viewDidDisappear:"></a>
+	<h3 class="subsubtitle method-title">viewDidDisappear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidLoad" title="viewDidLoad"></a>
+	<h3 class="subsubtitle method-title">viewDidLoad</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidUnload" title="viewDidUnload"></a>
+	<h3 class="subsubtitle method-title">viewDidUnload</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewWillAppear:" title="viewWillAppear:"></a>
+	<h3 class="subsubtitle method-title">viewWillAppear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewWillDisappear:" title="viewWillDisappear:"></a>
+	<h3 class="subsubtitle method-title">viewWillDisappear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/waitForSynchronizedDisplayObjects" title="waitForSynchronizedDisplayObjects"></a>
+	<h3 class="subsubtitle method-title">waitForSynchronizedDisplayObjects</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>That method will hang the calling thread until the UIViewController::<a href="#//api/name/viewDidAppear:">viewDidAppear:</a>(BOOL) has been entered.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)waitForSynchronizedDisplayObjects</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>That method will hang the calling thread until the UIViewController::<a href="#//api/name/viewDidAppear:">viewDidAppear:</a>(BOOL) has been entered.</p>
+
+<p>Should never be invoked from the GUI thread, otherwise a dead-lock may occur!</p>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSTableViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Smart&amp;Soft. All rights reserved. (Last updated: 2011-08-31)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnSCacheDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnSCacheDelegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="68"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSCacheDelegate/didRetreiveItemForRequest:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (SnSCacheItem *)didRetreiveItemForRequest:(NSURLRequest *)iRequest</Declaration>
+			
+			
+			<Anchor>//api/name/didRetreiveItemForRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSCacheDelegate/didFailRetreiveItemForRequest:error:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)didFailRetreiveItemForRequest:(NSURLRequest *)iRequest error:(NSError *)iError</Declaration>
+			
+			
+			<Anchor>//api/name/didFailRetreiveItemForRequest:error:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

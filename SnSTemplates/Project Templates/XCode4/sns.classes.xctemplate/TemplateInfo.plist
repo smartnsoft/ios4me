@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>This template provides an starting point for Smart&amp;Soft Classes.</string>
+	<key>Identifier</key>
+	<string>com.smartnsoft.classes</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	
+	<key>Definitions</key>
+	<dict>
+		
+		<!-- ************************************************************** -->
+		<!-- 							CONTROLLERS							-->
+		<!-- ************************************************************** -->
+		<key>Classes/Controller/___PROJECTNAMEASIDENTIFIER___ViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Controller</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___ViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Controller/___PROJECTNAMEASIDENTIFIER___ViewController.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Controller</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___ViewController.m</string>
+		</dict>
+		<key>Classes/Controller/Common/AboutViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Controller</string>
+				<string>Common</string>
+			</array>
+			<key>Path</key>
+			<string>Common/AboutViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Controller/Common/AboutViewController.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Controller</string>
+				<string>Common</string>
+			</array>
+			<key>Path</key>
+			<string>Common/AboutViewController.m</string>
+		</dict>
+		<key>Classes/Controller/Common/WebViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Controller</string>
+				<string>Common</string>
+			</array>
+			<key>Path</key>
+			<string>Common/WebViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Controller/Common/WebViewController.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Controller</string>
+				<string>Common</string>
+			</array>
+			<key>Path</key>
+			<string>Common/WebViewController.m</string>
+		</dict>
+		
+		<!-- ************************************************************** -->
+		<!-- 							SERVICES 							-->
+		<!-- ************************************************************** -->
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Services</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___Services.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Services</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___Services.m</string>
+		</dict>
+		
+		<!-- ************************************************************** -->
+		<!-- 						   	UTILS 								-->
+		<!-- ************************************************************** -->
+		<key>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Utils</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___Utils.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Utils</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___Utils.m</string>
+		</dict>
+		
+	</dict>
+	<key>Nodes</key>
+	<array>
+
+		<!-- 							CONTROLLER 							-->
+		<string>Classes/Controller/___PROJECTNAMEASIDENTIFIER___ViewController.h</string>
+		<string>Classes/Controller/___PROJECTNAMEASIDENTIFIER___ViewController.m</string>
+		<string>Classes/Controller/Common/AboutViewController.h</string>
+		<string>Classes/Controller/Common/AboutViewController.m</string>
+		<string>Classes/Controller/Common/WebViewController.h</string>
+		<string>Classes/Controller/Common/WebViewController.m</string>
+		
+		<!-- 							SERVICES 							-->
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.h</string>
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.m</string>
+		
+		<!-- 							 UTILS 								-->
+		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.h</string>
+		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.m</string>
+	</array>
+	
+</dict>
+</plist>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSCacheError.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSCacheError</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheException.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheError/reason</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheException.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *reason</Declaration>
+			
+			
+			<Anchor>//api/name/reason</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSCacheError/errorWithCode:userInfo:</TokenIdentifier>
+			<Abstract>This becomes the designated initalizer for SnSErrors</Abstract>
+			<DeclaredIn>SnSCacheException.h</DeclaredIn>			
+			
+			<Declaration>+ (id)errorWithCode:(SnSCacheErrorType)iCode userInfo:(NSDictionary *)iUserInfo</Declaration>
+			
+			
+			<Anchor>//api/name/errorWithCode:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheError/initWithCode:userInfo:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheException.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCode:(SnSCacheErrorType)iCode userInfo:(NSDictionary *)iUserInfo</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCode:userInfo:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSCacheError/errorWithCode:localizedDescription:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheException.h</DeclaredIn>			
+			
+			<Declaration>+ (id)errorWithCode:(SnSCacheErrorType)iCode localizedDescription:(NSString *)iDescription</Declaration>
+			
+			
+			<Anchor>//api/name/errorWithCode:localizedDescription:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheError/initWithCode:localizedDescription:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheException.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCode:(SnSCacheErrorType)iCode localizedDescription:(NSString *)iDescription</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCode:localizedDescription:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheError/extraInformationFromCode:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheException.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)extraInformationFromCode:(SnSCacheErrorType)iCode</Declaration>
+			
+			
+			<Anchor>//api/name/extraInformationFromCode:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheError/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheException.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

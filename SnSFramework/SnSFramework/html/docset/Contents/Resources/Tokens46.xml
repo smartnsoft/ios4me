@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSURLCacheException.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSURLCacheException</TokenIdentifier>
+			<Abstract>An exception which may be thrown by the SnSURLCache methods.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>
+			
+			<NodeRef refid="46"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCacheException/cause</TokenIdentifier>
+			<Abstract>The cause of the exception: may be codenil/code</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) id cause</Declaration>
+			
+			
+			<Anchor>//api/name/cause</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLCacheException/raise:</TokenIdentifier>
+			<Abstract>@throws SnSURLCacheException an exception built from the provided error</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>+ (void)raise:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/raise:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCacheException/initWithError:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/initWithError:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

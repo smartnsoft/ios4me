@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnSViewDecorator.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnSViewDecorator</TokenIdentifier>
+			<Abstract>In charge of adding, render a view.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>
+			
+			<NodeRef refid="77"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewDecorator/renderView:onAggregate:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)renderView:(UIViewController *)viewController onAggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate</Declaration>
+			
+			
+			<Anchor>//api/name/renderView:onAggregate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewDecorator/renderViewTableCell:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)renderViewTableCell:(UITableViewCell *)viewCell</Declaration>
+			
+			
+			<Anchor>//api/name/renderViewTableCell:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewDecorator/getCustomLoadingView</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (UIView *)getCustomLoadingView</Declaration>
+			
+			
+			<Anchor>//api/name/getCustomLoadingView</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

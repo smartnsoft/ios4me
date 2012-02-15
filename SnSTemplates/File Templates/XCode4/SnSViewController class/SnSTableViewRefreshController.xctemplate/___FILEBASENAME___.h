@@ -1,0 +1,1 @@
+../../../XCode3/SnSViewController class/SnSTableViewRefreshController subclass.pbfiletemplate/class.h

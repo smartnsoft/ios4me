@@ -1,0 +1,1 @@
+../../../XCode3/ImportedClasses/SnSFramework/Extensions//UIDevice+DeviceDetection.h

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSFormViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSFormViewController</TokenIdentifier>
+			<Abstract>Defines a formular based on a UITableViewController.</Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormViewController/currentlyEditedCell</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) NSIndexPath *currentlyEditedCell</Declaration>
+			
+			
+			<Anchor>//api/name/currentlyEditedCell</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormViewController/formDictionary</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) SnSFormDictionary *formDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/formDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/computeFormDictionary</TokenIdentifier>
+			<Abstract>the dictionary which describes the sorted fields of the form</Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (SnSFormDictionary *)computeFormDictionary</Declaration>
+			
+			<ReturnValue><Abstract>the dictionary which describes the sorted fields of the form</Abstract></ReturnValue>
+			<Anchor>//api/name/computeFormDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onValidate:</TokenIdentifier>
+			<Abstract>The method which is called when the last form cell has been edited.</Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)onValidate:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/onValidate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/init</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onValidateInternalInNewThread:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onValidateInternalInNewThread:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/onValidateInternalInNewThread:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onValidateInternal:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onValidateInternal:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/onValidateInternal:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onCancelEdition:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onCancelEdition:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/onCancelEdition:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/textFieldDidBeginEditing:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)textFieldDidBeginEditing:(UITextField *)textField</Declaration>
+			
+			
+			<Anchor>//api/name/textFieldDidBeginEditing:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/textFieldDidEndEditing:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)textFieldDidEndEditing:(UITextField *)textField</Declaration>
+			
+			
+			<Anchor>//api/name/textFieldDidEndEditing:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/textFieldShouldReturn:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (BOOL)textFieldShouldReturn:(UITextField *)textField</Declaration>
+			
+			
+			<Anchor>//api/name/textFieldShouldReturn:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onRetrieveDisplayObjects:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onRetrieveDisplayObjects:(UIView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/onRetrieveDisplayObjects:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onRetrieveBusinessObjects</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onRetrieveBusinessObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onRetrieveBusinessObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onFulfillDisplayObjects</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onFulfillDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onFulfillDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onSynchronizeDisplayObjects</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onSynchronizeDisplayObjects</Declaration>
+			
+			
+			<Anchor>//api/name/onSynchronizeDisplayObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/onDiscarded</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)onDiscarded</Declaration>
+			
+			
+			<Anchor>//api/name/onDiscarded</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/numberOfSectionsInTableView:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfSectionsInTableView:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/tableView:numberOfRowsInSection:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:numberOfRowsInSection:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/tableView:cellForRowAtIndexPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:cellForRowAtIndexPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/tableView:titleForHeaderInSection:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (NSString *)tableView:(UITableView *)theTableView titleForHeaderInSection:(NSInteger)section</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:titleForHeaderInSection:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/tableView:heightForRowAtIndexPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (CGFloat)tableView:(UITableView *)theTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:heightForRowAtIndexPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormViewController/tableViewCustom:didSelectRowAtIndexPath:</TokenIdentifier>
+			<Abstract>The method which is actually called and wrapped when the end-user clicks on a table row.</Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)tableViewCustom:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewCustom:didSelectRowAtIndexPath:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

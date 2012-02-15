@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSFormTableViewCell.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSFormTableViewCell</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>
+			
+			<NodeRef refid="26"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormTableViewCell/title</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) UILabel *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormTableViewCell/text</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) UITextField *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormTableViewCell/initWith:andDelegate:andFormField:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(NSString *)reuseIdentifier andDelegate:(id)delegate andFormField:(SnSFormField *)formField</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:andDelegate:andFormField:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormTableViewCell/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

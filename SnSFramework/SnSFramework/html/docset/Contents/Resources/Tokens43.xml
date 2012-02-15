@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSUILabelUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSUILabelUtils</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>
+			
+			<NodeRef refid="43"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSUILabelUtils/resizeLabelHeight:usingVerticalAlign:</TokenIdentifier>
+			<Abstract>Resize of a UILabel using its width and fixing the vertical alignement.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (void)resizeLabelHeight:(UILabel *)myLabel usingVerticalAlign:(int)vertAlign</Declaration>
+			
+			
+			<Anchor>//api/name/resizeLabelHeight:usingVerticalAlign:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSUILabelUtils/setUILabel:withMaxWidth:withText:usingVerticalAlign:</TokenIdentifier>
+			<Abstract>Resize of a UILabel with a fixed width and vertical alignement.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setUILabel:(UILabel *)myLabel withMaxWidth:(CGFloat)maxWidth withText:(NSString *)theText usingVerticalAlign:(int)vertAlign</Declaration>
+			
+			
+			<Anchor>//api/name/setUILabel:withMaxWidth:withText:usingVerticalAlign:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSUILabelUtils/setUILabel:withMaxFrame:withText:usingVerticalAlign:</TokenIdentifier>
+			<Abstract>Resize of a UILabel in a specified frame and fixing the vertical alignement.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setUILabel:(UILabel *)myLabel withMaxFrame:(CGRect)maxFrame withText:(NSString *)theText usingVerticalAlign:(int)vertAlign</Declaration>
+			
+			
+			<Anchor>//api/name/setUILabel:withMaxFrame:withText:usingVerticalAlign:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

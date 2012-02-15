@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SQLiteCommon.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SQLiteCommon</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>
+			
+			<NodeRef refid="63"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SQLiteCommon/sqlID</TokenIdentifier>
+			<Abstract>	Returns the value of the protocol user ID as it is seen in the DB.
+@return
+The value of the object id in db ex: 'valueforid'</Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)sqlID</Declaration>
+			
+			
+			<Anchor>//api/name/sqlID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SQLiteCommon/sqlColumnNameID</TokenIdentifier>
+			<Abstract>	Returns the column name used as a table main ID. ex. 'wid'
+@return
+The column name used as a table main ID. ex. 'column_id'</Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)sqlColumnNameID</Declaration>
+			
+			
+			<Anchor>//api/name/sqlColumnNameID</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SQLiteCommon/columnsForSQL</TokenIdentifier>
+			<Abstract>	Returns the list of columns used to construct queries for 
+	that business object.
+@return
+The list of columns used to construct queries.
+	ex. ['colum_id', 'column1', 'column2']</Abstract>
+			<DeclaredIn>SnSSQLiteStorable.h</DeclaredIn>			
+			
+			<Declaration>+ (NSArray *)columnsForSQL</Declaration>
+			
+			
+			<Anchor>//api/name/columnsForSQL</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

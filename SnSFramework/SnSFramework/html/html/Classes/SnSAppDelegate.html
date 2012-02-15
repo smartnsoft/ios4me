@@ -1,0 +1,1072 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SnSAppDelegate Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SnSFramework </a></h1>
+				<a id="developerHome" href="../index.html">Smart&amp;Soft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SnSAppDelegate Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/loadingView">&nbsp;&nbsp;&nbsp;&nbsp;loadingView</option>
+	
+	<option value="//api/name/window">&nbsp;&nbsp;&nbsp;&nbsp;window</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/startLoading:withMessage:">&nbsp;&nbsp;&nbsp;&nbsp;+ startLoading:withMessage:</option>
+	
+	<option value="//api/name/stopLoading:">&nbsp;&nbsp;&nbsp;&nbsp;+ stopLoading:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/applicationDidFinishLaunching:">&nbsp;&nbsp;&nbsp;&nbsp;- applicationDidFinishLaunching:</option>
+	
+	<option value="//api/name/applicationDidReceiveMemoryWarning:">&nbsp;&nbsp;&nbsp;&nbsp;- applicationDidReceiveMemoryWarning:</option>
+	
+	<option value="//api/name/applicationWillTerminate:">&nbsp;&nbsp;&nbsp;&nbsp;- applicationWillTerminate:</option>
+	
+	<option value="//api/name/dealloc">&nbsp;&nbsp;&nbsp;&nbsp;- dealloc</option>
+	
+	<option value="//api/name/getDecorator">&nbsp;&nbsp;&nbsp;&nbsp;- getDecorator</option>
+	
+	<option value="//api/name/getExceptionHandler">&nbsp;&nbsp;&nbsp;&nbsp;- getExceptionHandler</option>
+	
+	<option value="//api/name/getInterceptor">&nbsp;&nbsp;&nbsp;&nbsp;- getInterceptor</option>
+	
+	<option value="//api/name/getStartingViewController">&nbsp;&nbsp;&nbsp;&nbsp;- getStartingViewController</option>
+	
+	<option value="//api/name/handleLoadingActivity:">&nbsp;&nbsp;&nbsp;&nbsp;- handleLoadingActivity:</option>
+	
+	<option value="//api/name/listenToNotifications">&nbsp;&nbsp;&nbsp;&nbsp;- listenToNotifications</option>
+	
+	<option value="//api/name/onApplicationDidFinishLaunchingBegin:">&nbsp;&nbsp;&nbsp;&nbsp;- onApplicationDidFinishLaunchingBegin:</option>
+	
+	<option value="//api/name/onApplicationDidFinishLaunchingEnd:">&nbsp;&nbsp;&nbsp;&nbsp;- onApplicationDidFinishLaunchingEnd:</option>
+	
+	<option value="//api/name/onLoadingActivity:">&nbsp;&nbsp;&nbsp;&nbsp;- onLoadingActivity:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadingView">loadingView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/window">window</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startLoading:withMessage:">startLoading:withMessage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopLoading:">stopLoading:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationDidReceiveMemoryWarning:">applicationDidReceiveMemoryWarning:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationWillTerminate:">applicationWillTerminate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dealloc">dealloc</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDecorator">getDecorator</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getExceptionHandler">getExceptionHandler</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getInterceptor">getInterceptor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getStartingViewController">getStartingViewController</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleLoadingActivity:">handleLoadingActivity:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/listenToNotifications">listenToNotifications</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onApplicationDidFinishLaunchingBegin:">onApplicationDidFinishLaunchingBegin:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onApplicationDidFinishLaunchingEnd:">onApplicationDidFinishLaunchingEnd:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onLoadingActivity:">onLoadingActivity:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SnSAppDelegate Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SnSAppDelegate Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">UIApplicationDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SnSAppDelegate.h<br />SnSAppDelegate.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An iPhone application delegate which proposes additional services.</p>
+
+<p>The <code>&ndash; (void) <a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a>(UIApplication *)application</code> method should not be overloaded,
+and only the methods overriden.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/window">&nbsp;&nbsp;window</a></code>
+		<span class="tooltip"><p>The <a href="#//api/name/window">window</a> of the application.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadingView">&nbsp;&nbsp;loadingView</a></code>
+		<span class="tooltip"><p>The loading view, displayed when some loading is pending.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getExceptionHandler">&ndash;&nbsp;getExceptionHandler</a></code>
+		<span class="tooltip"><p>Invoked at the start of the application delegate, in order to determine the application exception handler.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getInterceptor">&ndash;&nbsp;getInterceptor</a></code>
+		<span class="tooltip"><p>A hook for intercepting the aggregates life cycle events.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getDecorator">&ndash;&nbsp;getDecorator</a></code>
+		<span class="tooltip"><p>Decorator for default design of all components of views</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startLoading:withMessage:">+&nbsp;startLoading:withMessage:</a></code>
+		<span class="tooltip"><p>Indicates that some pending action by displaying a greyed modal view on top of the current view.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopLoading:">+&nbsp;stopLoading:</a></code>
+		<span class="tooltip"><p>Indicates that a previous loading action is now over.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getStartingViewController">&ndash;&nbsp;getStartingViewController</a></code>
+		<span class="tooltip"><p>Is invoked when starting the application.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onApplicationDidFinishLaunchingBegin:">&ndash;&nbsp;onApplicationDidFinishLaunchingBegin:</a></code>
+		<span class="tooltip"><p>Is invoked at the start of the <code>&ndash; (void) <a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a>(UIApplication *)application</code> method.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onApplicationDidFinishLaunchingEnd:">&ndash;&nbsp;onApplicationDidFinishLaunchingEnd:</a></code>
+		<span class="tooltip"><p>Is invoked at the end of the <code>&ndash; (void) <a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a>(UIApplication *)application</code> method.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationDidFinishLaunching:">&ndash;&nbsp;applicationDidFinishLaunching:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationWillTerminate:">&ndash;&nbsp;applicationWillTerminate:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationDidReceiveMemoryWarning:">&ndash;&nbsp;applicationDidReceiveMemoryWarning:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/listenToNotifications">&ndash;&nbsp;listenToNotifications</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onLoadingActivity:">&ndash;&nbsp;onLoadingActivity:</a></code>
+		<span class="tooltip"><p>Performed in a new thread, in order to relief the caller.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleLoadingActivity:">&ndash;&nbsp;handleLoadingActivity:</a></code>
+		<span class="tooltip"><p>When a loading action is in progress, the terminal network activity is displayed.
+TODO: handle the message as well
+TODO: count the number of times the &ldquo;start&rdquo; has been pushed</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/loadingView" title="loadingView"></a>
+	<h3 class="subsubtitle method-title">loadingView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The loading view, displayed when some loading is pending.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIView *loadingView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The loading view, displayed when some loading is pending.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/window" title="window"></a>
+	<h3 class="subsubtitle method-title">window</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/window">window</a> of the application.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UIWindow *window</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/window">window</a> of the application.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/startLoading:withMessage:" title="startLoading:withMessage:"></a>
+	<h3 class="subsubtitle method-title">startLoading:withMessage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates that some pending action by displaying a greyed modal view on top of the current view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)startLoading:(id)<em>sender</em> withMessage:(NSString *)<em>message</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sender</em></dt>
+			<dd><p>the object sending the notification</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>the message which explains why the loading is running. May be <code>nil</code></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates that some pending action by displaying a greyed modal view on top of the current view.</p>
+
+<p>Loading actions can be stacked.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopLoading:" title="stopLoading:"></a>
+	<h3 class="subsubtitle method-title">stopLoading:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates that a previous loading action is now over.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)stopLoading:(id)<em>sender</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sender</em></dt>
+			<dd><p>the object sending the notification</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates that a previous loading action is now over.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationDidFinishLaunching:" title="applicationDidFinishLaunching:"></a>
+	<h3 class="subsubtitle method-title">applicationDidFinishLaunching:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationDidReceiveMemoryWarning:" title="applicationDidReceiveMemoryWarning:"></a>
+	<h3 class="subsubtitle method-title">applicationDidReceiveMemoryWarning:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationWillTerminate:" title="applicationWillTerminate:"></a>
+	<h3 class="subsubtitle method-title">applicationWillTerminate:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getDecorator" title="getDecorator"></a>
+	<h3 class="subsubtitle method-title">getDecorator</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Decorator for default design of all components of views</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id&lt;SnSViewDecorator&gt;)getDecorator</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Decorator for default design of all components of views</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getExceptionHandler" title="getExceptionHandler"></a>
+	<h3 class="subsubtitle method-title">getExceptionHandler</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Invoked at the start of the application delegate, in order to determine the application exception handler.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id&lt;SnSExceptionHandler&gt;)getExceptionHandler</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Invoked at the start of the application delegate, in order to determine the application exception handler.</p>
+
+<p>By default, no exception handler is associated.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getInterceptor" title="getInterceptor"></a>
+	<h3 class="subsubtitle method-title">getInterceptor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A hook for intercepting the aggregates life cycle events.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id&lt;SnSViewControllerInterceptor&gt;)getInterceptor</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A hook for intercepting the aggregates life cycle events.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getStartingViewController" title="getStartingViewController"></a>
+	<h3 class="subsubtitle method-title">getStartingViewController</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Is invoked when starting the application.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (UIViewController *)getStartingViewController</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the application starting view controller.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Is invoked when starting the application.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handleLoadingActivity:" title="handleLoadingActivity:"></a>
+	<h3 class="subsubtitle method-title">handleLoadingActivity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>When a loading action is in progress, the terminal network activity is displayed.
+TODO: handle the message as well
+TODO: count the number of times the &ldquo;start&rdquo; has been pushed</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)handleLoadingActivity:(id)<em>object</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>When a loading action is in progress, the terminal network activity is displayed.
+TODO: handle the message as well
+TODO: count the number of times the &ldquo;start&rdquo; has been pushed</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/listenToNotifications" title="listenToNotifications"></a>
+	<h3 class="subsubtitle method-title">listenToNotifications</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onApplicationDidFinishLaunchingBegin:" title="onApplicationDidFinishLaunchingBegin:"></a>
+	<h3 class="subsubtitle method-title">onApplicationDidFinishLaunchingBegin:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Is invoked at the start of the <code>&ndash; (void) <a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a>(UIApplication *)application</code> method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onApplicationDidFinishLaunchingBegin:(UIApplication *)<em>application</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Is invoked at the start of the <code>&ndash; (void) <a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a>(UIApplication *)application</code> method.</p>
+
+<p>At this point, the UIWindow has not been even created.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onApplicationDidFinishLaunchingEnd:" title="onApplicationDidFinishLaunchingEnd:"></a>
+	<h3 class="subsubtitle method-title">onApplicationDidFinishLaunchingEnd:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Is invoked at the end of the <code>&ndash; (void) <a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a>(UIApplication *)application</code> method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onApplicationDidFinishLaunchingEnd:(UIApplication *)<em>application</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Is invoked at the end of the <code>&ndash; (void) <a href="#//api/name/applicationDidFinishLaunching:">applicationDidFinishLaunching:</a>(UIApplication *)application</code> method.</p>
+
+<p>At this point, the initialization is over, and in particular, the application UIWindow is visible.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onLoadingActivity:" title="onLoadingActivity:"></a>
+	<h3 class="subsubtitle method-title">onLoadingActivity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performed in a new thread, in order to relief the caller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)onLoadingActivity:(NSNotification *)<em>notification</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Performed in a new thread, in order to relief the caller.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSAppDelegate.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Smart&amp;Soft. All rights reserved. (Last updated: 2011-08-31)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

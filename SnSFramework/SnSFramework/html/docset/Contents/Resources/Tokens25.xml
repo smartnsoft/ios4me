@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSFormField.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSFormField</TokenIdentifier>
+			<Abstract>Describes a single form attribute.</Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>
+			
+			<NodeRef refid="25"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/name</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/title</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/value</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/indexPath</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSIndexPath *indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/indexPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/keyboardType</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) UIKeyboardType keyboardType</Declaration>
+			
+			
+			<Anchor>//api/name/keyboardType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/autocapitalizationType</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) UITextAutocapitalizationType autocapitalizationType</Declaration>
+			
+			
+			<Anchor>//api/name/autocapitalizationType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/placeHolder</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *placeHolder</Declaration>
+			
+			
+			<Anchor>//api/name/placeHolder</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormField/isSecure</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL isSecure</Declaration>
+			
+			
+			<Anchor>//api/name/isSecure</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormField/getStringValue</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)getStringValue</Declaration>
+			
+			
+			<Anchor>//api/name/getStringValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormField/setValueFromString:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)setValueFromString:(NSString *)stringValue</Declaration>
+			
+			
+			<Anchor>//api/name/setValueFromString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormField/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

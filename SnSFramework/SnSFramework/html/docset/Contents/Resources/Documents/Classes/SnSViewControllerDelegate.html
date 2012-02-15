@@ -1,0 +1,642 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SnSViewControllerDelegate Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SnSFramework </a></h1>
+				<a id="developerHome" href="../index.html">Smart&amp;Soft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SnSViewControllerDelegate Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/dealloc">&nbsp;&nbsp;&nbsp;&nbsp;- dealloc</option>
+	
+	<option value="//api/name/initWith:aggregates:">&nbsp;&nbsp;&nbsp;&nbsp;- initWith:aggregates:</option>
+	
+	<option value="//api/name/isBusinessObjectsRetrievalAsynchronous:">&nbsp;&nbsp;&nbsp;&nbsp;- isBusinessObjectsRetrievalAsynchronous:</option>
+	
+	<option value="//api/name/loadView:">&nbsp;&nbsp;&nbsp;&nbsp;- loadView:</option>
+	
+	<option value="//api/name/onBusinessObjectsRetrieved:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- onBusinessObjectsRetrieved:atIndex:</option>
+	
+	<option value="//api/name/onDiscardedInternal">&nbsp;&nbsp;&nbsp;&nbsp;- onDiscardedInternal</option>
+	
+	<option value="//api/name/onFulfillDisplayObjectsInternal:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- onFulfillDisplayObjectsInternal:atIndex:</option>
+	
+	<option value="//api/name/onFulfillDisplayObjectsInternalAsynchronous:">&nbsp;&nbsp;&nbsp;&nbsp;- onFulfillDisplayObjectsInternalAsynchronous:</option>
+	
+	<option value="//api/name/onRetrieveBusinessObjectsInternal:">&nbsp;&nbsp;&nbsp;&nbsp;- onRetrieveBusinessObjectsInternal:</option>
+	
+	<option value="//api/name/onRetrieveDisplayObjectsInternal:">&nbsp;&nbsp;&nbsp;&nbsp;- onRetrieveDisplayObjectsInternal:</option>
+	
+	<option value="//api/name/onSynchronizeDisplayObjectsInternal:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- onSynchronizeDisplayObjectsInternal:atIndex:</option>
+	
+	<option value="//api/name/onSynchronizeDisplayObjectsInternalAsynchronous:">&nbsp;&nbsp;&nbsp;&nbsp;- onSynchronizeDisplayObjectsInternalAsynchronous:</option>
+	
+	<option value="//api/name/viewDidAppear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidAppear:</option>
+	
+	<option value="//api/name/viewDidDisappear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidDisappear:</option>
+	
+	<option value="//api/name/viewDidLoad">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidLoad</option>
+	
+	<option value="//api/name/viewDidUnload">&nbsp;&nbsp;&nbsp;&nbsp;- viewDidUnload</option>
+	
+	<option value="//api/name/viewWillAppear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewWillAppear:</option>
+	
+	<option value="//api/name/viewWillDisappear:">&nbsp;&nbsp;&nbsp;&nbsp;- viewWillDisappear:</option>
+	
+	<option value="//api/name/waitForSynchronizedDisplayObjects">&nbsp;&nbsp;&nbsp;&nbsp;- waitForSynchronizedDisplayObjects</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Private Methods">Private Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dealloc">dealloc</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWith:aggregates:">initWith:aggregates:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isBusinessObjectsRetrievalAsynchronous:">isBusinessObjectsRetrievalAsynchronous:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadView:">loadView:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onBusinessObjectsRetrieved:atIndex:">onBusinessObjectsRetrieved:atIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onDiscardedInternal">onDiscardedInternal</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onFulfillDisplayObjectsInternal:atIndex:">onFulfillDisplayObjectsInternal:atIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onFulfillDisplayObjectsInternalAsynchronous:">onFulfillDisplayObjectsInternalAsynchronous:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onRetrieveBusinessObjectsInternal:">onRetrieveBusinessObjectsInternal:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onRetrieveDisplayObjectsInternal:">onRetrieveDisplayObjectsInternal:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onSynchronizeDisplayObjectsInternal:atIndex:">onSynchronizeDisplayObjectsInternal:atIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onSynchronizeDisplayObjectsInternalAsynchronous:">onSynchronizeDisplayObjectsInternalAsynchronous:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidAppear:">viewDidAppear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidDisappear:">viewDidDisappear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidLoad">viewDidLoad</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewDidUnload">viewDidUnload</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewWillAppear:">viewWillAppear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewWillDisappear:">viewWillDisappear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/waitForSynchronizedDisplayObjects">waitForSynchronizedDisplayObjects</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SnSViewControllerDelegate Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SnSViewControllerDelegate Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SnSViewController.h<br />SnSViewController.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An internal class which enables to bind a UIViewController, or derivated class to a list of <a href="../Protocols/SnSViewControllerLifeCycle.html">SnSViewControllerLifeCycle</a> entities.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWith:aggregates:">&ndash;&nbsp;initWith:aggregates:</a></code>
+		<span class="tooltip"><p>Defined in order to notify when the UIViewController::viewDidAppear method is being been entered.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadView:">&ndash;&nbsp;loadView:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidLoad">&ndash;&nbsp;viewDidLoad</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidUnload">&ndash;&nbsp;viewDidUnload</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewWillAppear:">&ndash;&nbsp;viewWillAppear:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidAppear:">&ndash;&nbsp;viewDidAppear:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewWillDisappear:">&ndash;&nbsp;viewWillDisappear:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewDidDisappear:">&ndash;&nbsp;viewDidDisappear:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/waitForSynchronizedDisplayObjects">&ndash;&nbsp;waitForSynchronizedDisplayObjects</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Private Methods" name="task_Private Methods"></a>
+						<h3 class="subsubtitle task-title">Private Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isBusinessObjectsRetrievalAsynchronous:">&ndash;&nbsp;isBusinessObjectsRetrievalAsynchronous:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onRetrieveDisplayObjectsInternal:">&ndash;&nbsp;onRetrieveDisplayObjectsInternal:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onRetrieveBusinessObjectsInternal:">&ndash;&nbsp;onRetrieveBusinessObjectsInternal:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onBusinessObjectsRetrieved:atIndex:">&ndash;&nbsp;onBusinessObjectsRetrieved:atIndex:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onFulfillDisplayObjectsInternalAsynchronous:">&ndash;&nbsp;onFulfillDisplayObjectsInternalAsynchronous:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onSynchronizeDisplayObjectsInternalAsynchronous:">&ndash;&nbsp;onSynchronizeDisplayObjectsInternalAsynchronous:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onFulfillDisplayObjectsInternal:atIndex:">&ndash;&nbsp;onFulfillDisplayObjectsInternal:atIndex:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onSynchronizeDisplayObjectsInternal:atIndex:">&ndash;&nbsp;onSynchronizeDisplayObjectsInternal:atIndex:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onDiscardedInternal">&ndash;&nbsp;onDiscardedInternal</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWith:aggregates:" title="initWith:aggregates:"></a>
+	<h3 class="subsubtitle method-title">initWith:aggregates:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Defined in order to notify when the UIViewController::viewDidAppear method is being been entered.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWith:(UIViewController&lt;SnSViewControllerAggregator,SnSViewControllerLifeCycle&gt; *)<em>theAggregator</em> aggregates:(NSArray *)<em>theAggregates</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Defined in order to notify when the UIViewController::viewDidAppear method is being been entered.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isBusinessObjectsRetrievalAsynchronous:" title="isBusinessObjectsRetrievalAsynchronous:"></a>
+	<h3 class="subsubtitle method-title">isBusinessObjectsRetrievalAsynchronous:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadView:" title="loadView:"></a>
+	<h3 class="subsubtitle method-title">loadView:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onBusinessObjectsRetrieved:atIndex:" title="onBusinessObjectsRetrieved:atIndex:"></a>
+	<h3 class="subsubtitle method-title">onBusinessObjectsRetrieved:atIndex:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onDiscardedInternal" title="onDiscardedInternal"></a>
+	<h3 class="subsubtitle method-title">onDiscardedInternal</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onFulfillDisplayObjectsInternal:atIndex:" title="onFulfillDisplayObjectsInternal:atIndex:"></a>
+	<h3 class="subsubtitle method-title">onFulfillDisplayObjectsInternal:atIndex:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onFulfillDisplayObjectsInternalAsynchronous:" title="onFulfillDisplayObjectsInternalAsynchronous:"></a>
+	<h3 class="subsubtitle method-title">onFulfillDisplayObjectsInternalAsynchronous:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onRetrieveBusinessObjectsInternal:" title="onRetrieveBusinessObjectsInternal:"></a>
+	<h3 class="subsubtitle method-title">onRetrieveBusinessObjectsInternal:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onRetrieveDisplayObjectsInternal:" title="onRetrieveDisplayObjectsInternal:"></a>
+	<h3 class="subsubtitle method-title">onRetrieveDisplayObjectsInternal:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onSynchronizeDisplayObjectsInternal:atIndex:" title="onSynchronizeDisplayObjectsInternal:atIndex:"></a>
+	<h3 class="subsubtitle method-title">onSynchronizeDisplayObjectsInternal:atIndex:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/onSynchronizeDisplayObjectsInternalAsynchronous:" title="onSynchronizeDisplayObjectsInternalAsynchronous:"></a>
+	<h3 class="subsubtitle method-title">onSynchronizeDisplayObjectsInternalAsynchronous:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidAppear:" title="viewDidAppear:"></a>
+	<h3 class="subsubtitle method-title">viewDidAppear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidDisappear:" title="viewDidDisappear:"></a>
+	<h3 class="subsubtitle method-title">viewDidDisappear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidLoad" title="viewDidLoad"></a>
+	<h3 class="subsubtitle method-title">viewDidLoad</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewDidUnload" title="viewDidUnload"></a>
+	<h3 class="subsubtitle method-title">viewDidUnload</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewWillAppear:" title="viewWillAppear:"></a>
+	<h3 class="subsubtitle method-title">viewWillAppear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewWillDisappear:" title="viewWillDisappear:"></a>
+	<h3 class="subsubtitle method-title">viewWillDisappear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/waitForSynchronizedDisplayObjects" title="waitForSynchronizedDisplayObjects"></a>
+	<h3 class="subsubtitle method-title">waitForSynchronizedDisplayObjects</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Smart&amp;Soft. All rights reserved. (Last updated: 2011-08-31)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

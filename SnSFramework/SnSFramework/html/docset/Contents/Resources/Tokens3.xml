@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/EGORefreshTableHeaderView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/EGORefreshTableHeaderView</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EGORefreshTableHeaderView/delegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;EGORefreshTableHeaderDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/initWithFrame:arrowImageName:textColor:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFrame:arrowImageName:textColor:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/refreshLastUpdatedDate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (void)refreshLastUpdatedDate</Declaration>
+			
+			
+			<Anchor>//api/name/refreshLastUpdatedDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/egoRefreshScrollViewDidScroll:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView</Declaration>
+			
+			
+			<Anchor>//api/name/egoRefreshScrollViewDidScroll:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/egoRefreshScrollViewDidEndDragging:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (void)egoRefreshScrollViewDidEndDragging:(UIScrollView *)scrollView</Declaration>
+			
+			
+			<Anchor>//api/name/egoRefreshScrollViewDidEndDragging:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/egoRefreshScrollViewDataSourceDidFinishedLoading:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (void)egoRefreshScrollViewDataSourceDidFinishedLoading:(UIScrollView *)scrollView</Declaration>
+			
+			
+			<Anchor>//api/name/egoRefreshScrollViewDataSourceDidFinishedLoading:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/initWithFrame:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFrame:(CGRect)frame</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFrame:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/setState:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.m</DeclaredIn>			
+			
+			<Declaration>- (void)setState:(EGOPullRefreshState)aState</Declaration>
+			
+			
+			<Anchor>//api/name/setState:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EGORefreshTableHeaderView/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

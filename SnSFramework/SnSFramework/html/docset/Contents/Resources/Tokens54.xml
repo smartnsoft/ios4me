@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSObject(SnSExtension).html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSObject</TokenIdentifier>
+			<Abstract>Defined in order to augment the native NSObject class.</Abstract>
+			<DeclaredIn>NSObject+SnSExtension.h</DeclaredIn>
+			
+			<NodeRef refid="54"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject/performSelectorInBackgroundWithAutoreleasePool:</TokenIdentifier>
+			<Abstract>Does the same thing as the built-in code- (void) performSelectorInBackground:(SEL)aSelector/code,
+but creates an NSAutoreleasePool at the start of the thread, and drains it at the end of its life cycle.</Abstract>
+			<DeclaredIn>NSObject+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>- (void)performSelectorInBackgroundWithAutoreleasePool:(SEL)aSelector</Declaration>
+			
+			
+			<Anchor>//api/name/performSelectorInBackgroundWithAutoreleasePool:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject/performSelectorInBackgroundWithAutoreleasePool:withObject:</TokenIdentifier>
+			<Abstract>Does the same thing as the built-in code- (void) performSelectorInBackground:(SEL)aSelector withObject:(id)arg/code,
+but creates an NSAutoreleasePool at the start of the thread, and drains it at the end of its life cycle.</Abstract>
+			<DeclaredIn>NSObject+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>- (void)performSelectorInBackgroundWithAutoreleasePool:(SEL)aSelector withObject:(id)arg</Declaration>
+			
+			
+			<Anchor>//api/name/performSelectorInBackgroundWithAutoreleasePool:withObject:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

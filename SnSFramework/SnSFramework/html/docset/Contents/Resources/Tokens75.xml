@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnSViewControllerInterceptor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnSViewControllerInterceptor</TokenIdentifier>
+			<Abstract>Receives all the SnSViewControllerLifeCycle life cycle events in a single place...</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>
+			
+			<NodeRef refid="75"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSViewControllerInterceptor/onLifeCycleEvent:onAggregate:withEvent:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate withEvent:(SnSViewControllerInterceptorEvent)event</Declaration>
+			
+			
+			<Anchor>//api/name/onLifeCycleEvent:onAggregate:withEvent:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

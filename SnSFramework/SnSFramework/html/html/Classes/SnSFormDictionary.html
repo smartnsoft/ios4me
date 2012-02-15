@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SnSFormDictionary Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SnSFramework </a></h1>
+				<a id="developerHome" href="../index.html">Smart&amp;Soft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SnSFormDictionary Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/indexedDictionary">&nbsp;&nbsp;&nbsp;&nbsp;indexedDictionary</option>
+	
+	<option value="//api/name/namedDictionary">&nbsp;&nbsp;&nbsp;&nbsp;namedDictionary</option>
+	
+	<option value="//api/name/rowsInSection">&nbsp;&nbsp;&nbsp;&nbsp;rowsInSection</option>
+	
+	<option value="//api/name/sectionTitles">&nbsp;&nbsp;&nbsp;&nbsp;sectionTitles</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addField:">&nbsp;&nbsp;&nbsp;&nbsp;- addField:</option>
+	
+	<option value="//api/name/dealloc">&nbsp;&nbsp;&nbsp;&nbsp;- dealloc</option>
+	
+	<option value="//api/name/formFieldForName:">&nbsp;&nbsp;&nbsp;&nbsp;- formFieldForName:</option>
+	
+	<option value="//api/name/formFieldForPath:">&nbsp;&nbsp;&nbsp;&nbsp;- formFieldForPath:</option>
+	
+	<option value="//api/name/getTitle:">&nbsp;&nbsp;&nbsp;&nbsp;- getTitle:</option>
+	
+	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/isLastField:">&nbsp;&nbsp;&nbsp;&nbsp;- isLastField:</option>
+	
+	<option value="//api/name/nextIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- nextIndexPath:</option>
+	
+	<option value="//api/name/numberOfFieldsInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfFieldsInSection:</option>
+	
+	<option value="//api/name/numberOfSections">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfSections</option>
+	
+	<option value="//api/name/setTitle:forSection:">&nbsp;&nbsp;&nbsp;&nbsp;- setTitle:forSection:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indexedDictionary">indexedDictionary</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/namedDictionary">namedDictionary</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rowsInSection">rowsInSection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionTitles">sectionTitles</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addField:">addField:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dealloc">dealloc</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/formFieldForName:">formFieldForName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/formFieldForPath:">formFieldForPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getTitle:">getTitle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isLastField:">isLastField:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nextIndexPath:">nextIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfFieldsInSection:">numberOfFieldsInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfSections">numberOfSections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setTitle:forSection:">setTitle:forSection:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SnSFormDictionary Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SnSFormDictionary Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SnSFormViewController.h<br />SnSFormViewController.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The dictionary which described what are the cells to edit.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionTitles">&nbsp;&nbsp;sectionTitles</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indexedDictionary">&nbsp;&nbsp;indexedDictionary</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/namedDictionary">&nbsp;&nbsp;namedDictionary</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rowsInSection">&nbsp;&nbsp;rowsInSection</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setTitle:forSection:">&ndash;&nbsp;setTitle:forSection:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getTitle:">&ndash;&nbsp;getTitle:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addField:">&ndash;&nbsp;addField:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formFieldForPath:">&ndash;&nbsp;formFieldForPath:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formFieldForName:">&ndash;&nbsp;formFieldForName:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfSections">&ndash;&nbsp;numberOfSections</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfFieldsInSection:">&ndash;&nbsp;numberOfFieldsInSection:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isLastField:">&ndash;&nbsp;isLastField:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nextIndexPath:">&ndash;&nbsp;nextIndexPath:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/indexedDictionary" title="indexedDictionary"></a>
+	<h3 class="subsubtitle method-title">indexedDictionary</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/namedDictionary" title="namedDictionary"></a>
+	<h3 class="subsubtitle method-title">namedDictionary</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rowsInSection" title="rowsInSection"></a>
+	<h3 class="subsubtitle method-title">rowsInSection</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionTitles" title="sectionTitles"></a>
+	<h3 class="subsubtitle method-title">sectionTitles</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addField:" title="addField:"></a>
+	<h3 class="subsubtitle method-title">addField:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/formFieldForName:" title="formFieldForName:"></a>
+	<h3 class="subsubtitle method-title">formFieldForName:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/formFieldForPath:" title="formFieldForPath:"></a>
+	<h3 class="subsubtitle method-title">formFieldForPath:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getTitle:" title="getTitle:"></a>
+	<h3 class="subsubtitle method-title">getTitle:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isLastField:" title="isLastField:"></a>
+	<h3 class="subsubtitle method-title">isLastField:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nextIndexPath:" title="nextIndexPath:"></a>
+	<h3 class="subsubtitle method-title">nextIndexPath:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfFieldsInSection:" title="numberOfFieldsInSection:"></a>
+	<h3 class="subsubtitle method-title">numberOfFieldsInSection:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfSections" title="numberOfSections"></a>
+	<h3 class="subsubtitle method-title">numberOfSections</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setTitle:forSection:" title="setTitle:forSection:"></a>
+	<h3 class="subsubtitle method-title">setTitle:forSection:</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Smart&amp;Soft. All rights reserved. (Last updated: 2011-08-31)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

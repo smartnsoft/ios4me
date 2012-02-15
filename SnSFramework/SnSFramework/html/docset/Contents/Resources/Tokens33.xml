@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSLog.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSLog</TokenIdentifier>
+			<Abstract>Defines some helper functions and macros for logging.</Abstract>
+			<DeclaredIn>SnSLog.h</DeclaredIn>
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSLog/log:lineNumber:logLevel:format:</TokenIdentifier>
+			<Abstract>Do not use, use the macros instead!</Abstract>
+			<DeclaredIn>SnSLog.h</DeclaredIn>			
+			
+			<Declaration>+ (void)log:(char *)sourceFile lineNumber:(int)lineNumber logLevel:(SnSLogLevel)logLevel format:(NSString *)format, ...</Declaration>
+			
+			
+			<Anchor>//api/name/log:lineNumber:logLevel:format:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSLog/logWithStringLevel:lineNumber:logLevel:logLevelString:format:</TokenIdentifier>
+			<Abstract>Do not use, use the macros instead!</Abstract>
+			<DeclaredIn>SnSLog.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logWithStringLevel:(char *)sourceFile lineNumber:(int)lineNumber logLevel:(SnSLogLevel)logLevel logLevelString:(NSString *)logLevelString format:(NSString *)format, ...</Declaration>
+			
+			
+			<Anchor>//api/name/logWithStringLevel:lineNumber:logLevel:logLevelString:format:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSLog/logWithStringLevel:lineNumber:logLevel:logLevelString:exception:format:</TokenIdentifier>
+			<Abstract>Do not use, use the macros instead!</Abstract>
+			<DeclaredIn>SnSLog.h</DeclaredIn>			
+			
+			<Declaration>+ (void)logWithStringLevel:(char *)sourceFile lineNumber:(int)lineNumber logLevel:(SnSLogLevel)logLevel logLevelString:(NSString *)logLevelString exception:(NSException *)exception format:(NSString *)format, ...</Declaration>
+			
+			
+			<Anchor>//api/name/logWithStringLevel:lineNumber:logLevel:logLevelString:exception:format:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

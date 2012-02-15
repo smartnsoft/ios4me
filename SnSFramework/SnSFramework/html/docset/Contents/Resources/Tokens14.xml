@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSCacheSilo.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSCacheSilo</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheSilo/memoryCapacity</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) NSInteger memoryCapacity</Declaration>
+			
+			
+			<Anchor>//api/name/memoryCapacity</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheSilo/diskCapacity</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) NSInteger diskCapacity</Declaration>
+			
+			
+			<Anchor>//api/name/diskCapacity</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheSilo/diskPath</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *diskPath</Declaration>
+			
+			
+			<Anchor>//api/name/diskPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheSilo/items</TokenIdentifier>
+			<Abstract>Key:    url
+Value:  SnSURLCacheItem</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSMutableDictionary *items</Declaration>
+			
+			
+			<Anchor>//api/name/items</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/initWithMemoryCapacity:diskCapacity:</TokenIdentifier>
+			<Abstract>Creates the cache with its memory and disk capacity</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithMemoryCapacity:(NSInteger)iMemoryCapacity diskCapacity:(NSInteger)iDiskCapacity</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iMemoryCapacity</Name>
+					<Abstract>The maximum size of the cache used in memory in bytes</Abstract>
+				</Parameter><Parameter>
+					<Name>iDiskCapacity</Name>
+					<Abstract>The maximum size of the cache used in disk in bytes</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithMemoryCapacity:diskCapacity:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/removeAllCachedItems</TokenIdentifier>
+			<Abstract>Removes all items from the cache.
+	Note that this doesn't release the items object. It only removes all its content.</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeAllCachedItems</Declaration>
+			
+			
+			<Anchor>//api/name/removeAllCachedItems</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/removeCacheFolder</TokenIdentifier>
+			<Abstract>	Removes the entire cache and its data</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeCacheFolder</Declaration>
+			
+			
+			<Anchor>//api/name/removeCacheFolder</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/createCacheFolderIfNeeded</TokenIdentifier>
+			<Abstract>Useful at first launch of an application
+	This creates the cache folder where the content will be stored if that folder
+	is not already created</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (void)createCacheFolderIfNeeded</Declaration>
+			
+			
+			<Anchor>//api/name/createCacheFolderIfNeeded</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/storeCacheItem:forKey:</TokenIdentifier>
+			<Abstract>This method overrides whatever was stored for the given key
+	with the new item passed in parameter.</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeCacheItem:(SnSCacheItem *)iItem forKey:(id)iKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iItem</Name>
+					<Abstract>The new item fetched</Abstract>
+				</Parameter><Parameter>
+					<Name>iKey</Name>
+					<Abstract>The key used to store/retreive the cached object</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/storeCacheItem:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/storeData:forKey:</TokenIdentifier>
+			<Abstract>This method overrides whatever data was stored for the given key
+	with the new item passed in parameter.</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (void)storeData:(NSData *)iData forKey:(id)iKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iData</Name>
+					<Abstract>The data associated to the key that we want to store</Abstract>
+				</Parameter><Parameter>
+					<Name>iKey</Name>
+					<Abstract>The key used to store/retreive the cached object</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/storeData:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/cachedItemForKey:</TokenIdentifier>
+			<Abstract>Retreives the cached item given its key.</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (SnSCacheItem *)cachedItemForKey:(id)iKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iKey</Name>
+					<Abstract>The key that will be used to retreive the corresponding item.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cachedItemForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/cachedDataForKey:</TokenIdentifier>
+			<Abstract>Retreives the cached data for a given key.</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)cachedDataForKey:(id)iKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iKey</Name>
+					<Abstract>The key that will be used to retreive the corresponding item.
+@return
+	The data associated to given key if found, nil otherwise</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cachedDataForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/archiveCacheItem:path:</TokenIdentifier>
+			<Abstract>Uses an NSKeyedArchiver to write an item into a specified file</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (void)archiveCacheItem:(SnSCacheItem *)iItem path:(NSString *)iPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iItem</Name>
+					<Abstract>The cache item to store</Abstract>
+				</Parameter><Parameter>
+					<Name>iPath</Name>
+					<Abstract>The path where the item is to be written</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/archiveCacheItem:path:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/unarchiveCacheItemAtPath:</TokenIdentifier>
+			<Abstract>Uses an NSKeyedArchiver to write an item into a specified file</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (SnSCacheItem *)unarchiveCacheItemAtPath:(NSString *)iPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iPath</Name>
+					<Abstract>The path where the item is to be read</Abstract>
+				</Parameter><Parameter>
+					<Name>The</Name>
+					<Abstract>item built from read the file at specified path</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/unarchiveCacheItemAtPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/archive</TokenIdentifier>
+			<Abstract>	Saves the cache into a readable object for future load</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (void)archive</Declaration>
+			
+			
+			<Anchor>//api/name/archive</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSCacheSilo/cacheUnarchivedFromPath:</TokenIdentifier>
+			<Abstract>	Reloads the cache from disk</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>+ (id)cacheUnarchivedFromPath:(NSString *)iPath</Declaration>
+			
+			
+			<Anchor>//api/name/cacheUnarchivedFromPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/uniquePathNameForKey:</TokenIdentifier>
+			<Abstract>Generates a unique path for a given item</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)uniquePathNameForKey:(id)iKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iKey</Name>
+					<Abstract>The cache key to store</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A unique path made of the cache silo path and a unique string in UUID format</Abstract></ReturnValue>
+			<Anchor>//api/name/uniquePathNameForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/dataPathForKey:</TokenIdentifier>
+			<Abstract>Returns the data path associated to a given key</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)dataPathForKey:(id)iKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iKey</Name>
+					<Abstract>The cache key to store</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A unique path made of the cache silo path and a unique string in UUID format</Abstract></ReturnValue>
+			<Anchor>//api/name/dataPathForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/infoPathForKey:</TokenIdentifier>
+			<Abstract>Returns the information (date, hits...) path associated to a given key</Abstract>
+			<DeclaredIn>SnSCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)infoPathForKey:(id)iKey</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iKey</Name>
+					<Abstract>The cache key to store</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A unique path made of the cache silo path and a unique string in UUID format</Abstract></ReturnValue>
+			<Anchor>//api/name/infoPathForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/description</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.m</DeclaredIn>			
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			
+			<Anchor>//api/name/description</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/encodeWithCoder:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.m</DeclaredIn>			
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheSilo/initWithCoder:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheSilo.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

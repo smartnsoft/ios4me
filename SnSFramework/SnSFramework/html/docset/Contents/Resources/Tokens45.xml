@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSURLCacheData.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSURLCacheData</TokenIdentifier>
+			<Abstract>Stores some data associated to an object.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>
+			
+			<NodeRef refid="45"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCacheData/data</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSData *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCacheData/object</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id object</Declaration>
+			
+			
+			<Anchor>//api/name/object</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSURLCacheData/cacheDataWith:andObject:</TokenIdentifier>
+			<Abstract>a newly created object which holds the provided data and its associated object.</Abstract>
+			<DeclaredIn>SnSURLCache.h</DeclaredIn>			
+			
+			<Declaration>+ (id)cacheDataWith:(NSData *)theData andObject:(id)theObject</Declaration>
+			
+			<ReturnValue><Abstract>a newly created object which holds the provided data and its associated object.</Abstract></ReturnValue>
+			<Anchor>//api/name/cacheDataWith:andObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCacheData/initWith:andObject:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(NSData *)theData andObject:(id)theObject</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:andObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCacheData/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSURLCache.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

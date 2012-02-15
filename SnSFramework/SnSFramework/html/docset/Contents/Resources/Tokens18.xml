@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSDelegate</TokenIdentifier>
+			<Abstract>Enables to wrap a delegate with a selector.</Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSDelegate/delegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain, readonly) id delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSDelegate/selector</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) SEL selector</Declaration>
+			
+			
+			<Anchor>//api/name/selector</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSDelegate/delegateWith:andSelector:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>+ (id)delegateWith:(id)theDelegate andSelector:(SEL)theSelector</Declaration>
+			
+			
+			<Anchor>//api/name/delegateWith:andSelector:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDelegate/initWith:andSelector:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(id)theDelegate andSelector:(SEL)theSelector</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:andSelector:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDelegate/perform</TokenIdentifier>
+			<Abstract>Runs the underlying selector in the current thread.</Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)perform</Declaration>
+			
+			
+			<Anchor>//api/name/perform</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDelegate/perform:</TokenIdentifier>
+			<Abstract>Runs the underlying selector in the current thread.</Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)perform:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract>the only argument passed on the selector</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/perform:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDelegate/perform:andObject:</TokenIdentifier>
+			<Abstract>Runs the underlying selector in the current thread.</Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)perform:(id)object andObject:(id)otherObject</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract>the first argument passed on the selector</Abstract>
+				</Parameter><Parameter>
+					<Name>otherObject</Name>
+					<Abstract>the second argument passed on the selector</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/perform:andObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDelegate/perform:andObject:andObject:</TokenIdentifier>
+			<Abstract>Runs the underlying selector in the current thread.</Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)perform:(id)object andObject:(id)otherObject1 andObject:(id)otherObjec2t</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract>the first argument passed on the selector</Abstract>
+				</Parameter><Parameter>
+					<Name>otherObject1</Name>
+					<Abstract>the second argument passed on the selector</Abstract>
+				</Parameter><Parameter>
+					<Name>otherObject2</Name>
+					<Abstract>the second argument passed on the selector</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/perform:andObject:andObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDelegate/performOnMainThread:</TokenIdentifier>
+			<Abstract>Runs the underlying selector in the main thread, and is non-blocking.</Abstract>
+			<DeclaredIn>SnSDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)performOnMainThread:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract>the only argument passed on the selector</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/performOnMainThread:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDelegate/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSDelegate.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

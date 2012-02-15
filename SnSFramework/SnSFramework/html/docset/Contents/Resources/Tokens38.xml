@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSSingleton.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSSingleton</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSingleton.h</DeclaredIn>
+			
+			<NodeRef refid="38"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSSingleton/instance</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSingleton.h</DeclaredIn>			
+			
+			<Declaration>+ (id)instance</Declaration>
+			
+			
+			<Anchor>//api/name/instance</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSSingleton/reset</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSSingleton.h</DeclaredIn>			
+			
+			<Declaration>- (void)reset</Declaration>
+			
+			
+			<Anchor>//api/name/reset</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

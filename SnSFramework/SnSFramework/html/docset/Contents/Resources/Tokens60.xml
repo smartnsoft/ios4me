@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UINavigationController(SnSExtension).html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UINavigationController</TokenIdentifier>
+			<Abstract>Defined in order to augment the native UINavigationController class.</Abstract>
+			<DeclaredIn>UIKit+SnSExtension.h</DeclaredIn>
+			
+			<NodeRef refid="60"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UINavigationController/popAndPushViewController:</TokenIdentifier>
+			<Abstract>Pops the current view controller and replace it with the given one.</Abstract>
+			<DeclaredIn>UIKit+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>- (void)popAndPushViewController:(UIViewController *)viewController</Declaration>
+			
+			
+			<Anchor>//api/name/popAndPushViewController:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UINavigationController/popViewControllers:animated:</TokenIdentifier>
+			<Abstract>Pops several view controllers at the same time.</Abstract>
+			<DeclaredIn>UIKit+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>- (void)popViewControllers:(NSUInteger)howMany animated:(BOOL)animated</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>howMany</Name>
+					<Abstract>the number of UIViewControllers to pop</Abstract>
+				</Parameter><Parameter>
+					<Name>animated</Name>
+					<Abstract>the traditional animation flag</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/popViewControllers:animated:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>SnSFramework</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
+						<NodeRef refid="19"/>
+						<NodeRef refid="20"/>
+						<NodeRef refid="21"/>
+						<NodeRef refid="22"/>
+						<NodeRef refid="23"/>
+						<NodeRef refid="24"/>
+						<NodeRef refid="25"/>
+						<NodeRef refid="26"/>
+						<NodeRef refid="27"/>
+						<NodeRef refid="28"/>
+						<NodeRef refid="29"/>
+						<NodeRef refid="30"/>
+						<NodeRef refid="31"/>
+						<NodeRef refid="32"/>
+						<NodeRef refid="33"/>
+						<NodeRef refid="34"/>
+						<NodeRef refid="35"/>
+						<NodeRef refid="36"/>
+						<NodeRef refid="37"/>
+						<NodeRef refid="38"/>
+						<NodeRef refid="39"/>
+						<NodeRef refid="40"/>
+						<NodeRef refid="41"/>
+						<NodeRef refid="42"/>
+						<NodeRef refid="43"/>
+						<NodeRef refid="44"/>
+						<NodeRef refid="45"/>
+						<NodeRef refid="46"/>
+						<NodeRef refid="47"/>
+						<NodeRef refid="48"/>
+						<NodeRef refid="49"/>
+						<NodeRef refid="50"/>
+						<NodeRef refid="51"/>
+						<NodeRef refid="52"/>
+						<NodeRef refid="53"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="54"/>
+						<NodeRef refid="55"/>
+						<NodeRef refid="56"/>
+						<NodeRef refid="57"/>
+						<NodeRef refid="58"/>
+						<NodeRef refid="59"/>
+						<NodeRef refid="60"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="61"/>
+						<NodeRef refid="62"/>
+						<NodeRef refid="63"/>
+						<NodeRef refid="64"/>
+						<NodeRef refid="65"/>
+						<NodeRef refid="66"/>
+						<NodeRef refid="67"/>
+						<NodeRef refid="68"/>
+						<NodeRef refid="69"/>
+						<NodeRef refid="70"/>
+						<NodeRef refid="71"/>
+						<NodeRef refid="72"/>
+						<NodeRef refid="73"/>
+						<NodeRef refid="74"/>
+						<NodeRef refid="75"/>
+						<NodeRef refid="76"/>
+						<NodeRef refid="77"/>
+						<NodeRef refid="78"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		<Node id="1">
+			<Name>ButtonWithImage</Name>
+			<Path>Classes/ButtonWithImage.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>ChoiceButton</Name>
+			<Path>Classes/ChoiceButton.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>EGORefreshTableHeaderView</Name>
+			<Path>Classes/EGORefreshTableHeaderView.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>LayerButton</Name>
+			<Path>Classes/LayerButton.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>NoAnimationShapeCAGradientLayer</Name>
+			<Path>Classes/NoAnimationShapeCAGradientLayer.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>NoAnimationShapeLayer</Name>
+			<Path>Classes/NoAnimationShapeLayer.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>SnSAggregateViewController</Name>
+			<Path>Classes/SnSAggregateViewController.html</Path>
+		</Node>
+		<Node id="8">
+			<Name>SnSAppDelegate</Name>
+			<Path>Classes/SnSAppDelegate.html</Path>
+		</Node>
+		<Node id="9">
+			<Name>SnSApplicationController</Name>
+			<Path>Classes/SnSApplicationController.html</Path>
+		</Node>
+		<Node id="10">
+			<Name>SnSBusinessObjectException</Name>
+			<Path>Classes/SnSBusinessObjectException.html</Path>
+		</Node>
+		<Node id="11">
+			<Name>SnSCacheError</Name>
+			<Path>Classes/SnSCacheError.html</Path>
+		</Node>
+		<Node id="12">
+			<Name>SnSCacheException</Name>
+			<Path>Classes/SnSCacheException.html</Path>
+		</Node>
+		<Node id="13">
+			<Name>SnSCacheItem</Name>
+			<Path>Classes/SnSCacheItem.html</Path>
+		</Node>
+		<Node id="14">
+			<Name>SnSCacheSilo</Name>
+			<Path>Classes/SnSCacheSilo.html</Path>
+		</Node>
+		<Node id="15">
+			<Name>SnSCallException</Name>
+			<Path>Classes/SnSCallException.html</Path>
+		</Node>
+		<Node id="16">
+			<Name>SnSColorUtils</Name>
+			<Path>Classes/SnSColorUtils.html</Path>
+		</Node>
+		<Node id="17">
+			<Name>SnSDateUtils</Name>
+			<Path>Classes/SnSDateUtils.html</Path>
+		</Node>
+		<Node id="18">
+			<Name>SnSDelegate</Name>
+			<Path>Classes/SnSDelegate.html</Path>
+		</Node>
+		<Node id="19">
+			<Name>SnSDelegateWithObject</Name>
+			<Path>Classes/SnSDelegateWithObject.html</Path>
+		</Node>
+		<Node id="20">
+			<Name>SnSDownloadImageDelegate</Name>
+			<Path>Classes/SnSDownloadImageDelegate.html</Path>
+		</Node>
+		<Node id="21">
+			<Name>SnSDownloadImageOperation</Name>
+			<Path>Classes/SnSDownloadImageOperation.html</Path>
+		</Node>
+		<Node id="22">
+			<Name>SnSDownloadOperation</Name>
+			<Path>Classes/SnSDownloadOperation.html</Path>
+		</Node>
+		<Node id="23">
+			<Name>SnSFontUtils</Name>
+			<Path>Classes/SnSFontUtils.html</Path>
+		</Node>
+		<Node id="24">
+			<Name>SnSFormDictionary</Name>
+			<Path>Classes/SnSFormDictionary.html</Path>
+		</Node>
+		<Node id="25">
+			<Name>SnSFormField</Name>
+			<Path>Classes/SnSFormField.html</Path>
+		</Node>
+		<Node id="26">
+			<Name>SnSFormTableViewCell</Name>
+			<Path>Classes/SnSFormTableViewCell.html</Path>
+		</Node>
+		<Node id="27">
+			<Name>SnSFormViewController</Name>
+			<Path>Classes/SnSFormViewController.html</Path>
+		</Node>
+		<Node id="28">
+			<Name>SnSFramework</Name>
+			<Path>Classes/SnSFramework.html</Path>
+		</Node>
+		<Node id="29">
+			<Name>SnSImageDownloader</Name>
+			<Path>Classes/SnSImageDownloader.html</Path>
+		</Node>
+		<Node id="30">
+			<Name>SnSImageUtils</Name>
+			<Path>Classes/SnSImageUtils.html</Path>
+		</Node>
+		<Node id="31">
+			<Name>SnSImageViewDownloadImageOperation</Name>
+			<Path>Classes/SnSImageViewDownloadImageOperation.html</Path>
+		</Node>
+		<Node id="32">
+			<Name>SnSLifeCycleException</Name>
+			<Path>Classes/SnSLifeCycleException.html</Path>
+		</Node>
+		<Node id="33">
+			<Name>SnSLog</Name>
+			<Path>Classes/SnSLog.html</Path>
+		</Node>
+		<Node id="34">
+			<Name>SnSMasterCache</Name>
+			<Path>Classes/SnSMasterCache.html</Path>
+		</Node>
+		<Node id="35">
+			<Name>SnSMemoryCache</Name>
+			<Path>Classes/SnSMemoryCache.html</Path>
+		</Node>
+		<Node id="36">
+			<Name>SnSResponserRedirector</Name>
+			<Path>Classes/SnSResponserRedirector.html</Path>
+		</Node>
+		<Node id="37">
+			<Name>SnSSQLiteAccessor</Name>
+			<Path>Classes/SnSSQLiteAccessor.html</Path>
+		</Node>
+		<Node id="38">
+			<Name>SnSSingleton</Name>
+			<Path>Classes/SnSSingleton.html</Path>
+		</Node>
+		<Node id="39">
+			<Name>SnSStoreManager</Name>
+			<Path>Classes/SnSStoreManager.html</Path>
+		</Node>
+		<Node id="40">
+			<Name>SnSTableViewCellDownloadImageOperation</Name>
+			<Path>Classes/SnSTableViewCellDownloadImageOperation.html</Path>
+		</Node>
+		<Node id="41">
+			<Name>SnSTableViewController</Name>
+			<Path>Classes/SnSTableViewController.html</Path>
+		</Node>
+		<Node id="42">
+			<Name>SnSTableViewRefreshController</Name>
+			<Path>Classes/SnSTableViewRefreshController.html</Path>
+		</Node>
+		<Node id="43">
+			<Name>SnSUILabelUtils</Name>
+			<Path>Classes/SnSUILabelUtils.html</Path>
+		</Node>
+		<Node id="44">
+			<Name>SnSURLCache</Name>
+			<Path>Classes/SnSURLCache.html</Path>
+		</Node>
+		<Node id="45">
+			<Name>SnSURLCacheData</Name>
+			<Path>Classes/SnSURLCacheData.html</Path>
+		</Node>
+		<Node id="46">
+			<Name>SnSURLCacheException</Name>
+			<Path>Classes/SnSURLCacheException.html</Path>
+		</Node>
+		<Node id="47">
+			<Name>SnSURLCacheSilo</Name>
+			<Path>Classes/SnSURLCacheSilo.html</Path>
+		</Node>
+		<Node id="48">
+			<Name>SnSURLConnection</Name>
+			<Path>Classes/SnSURLConnection.html</Path>
+		</Node>
+		<Node id="49">
+			<Name>SnSUtils</Name>
+			<Path>Classes/SnSUtils.html</Path>
+		</Node>
+		<Node id="50">
+			<Name>SnSViewController</Name>
+			<Path>Classes/SnSViewController.html</Path>
+		</Node>
+		<Node id="51">
+			<Name>SnSViewControllerDelegate</Name>
+			<Path>Classes/SnSViewControllerDelegate.html</Path>
+		</Node>
+		<Node id="52">
+			<Name>SnSWebServiceCaller</Name>
+			<Path>Classes/SnSWebServiceCaller.html</Path>
+		</Node>
+		<Node id="53">
+			<Name>SnSWorkItem</Name>
+			<Path>Classes/SnSWorkItem.html</Path>
+		</Node>
+		
+		<Node id="54">
+			<Name>NSObject(SnSExtension)</Name>
+			<Path>Categories/NSObject(SnSExtension).html</Path>
+		</Node>
+		<Node id="55">
+			<Name>NSObject(SnSExtensionPrivate)</Name>
+			<Path>Categories/NSObject(SnSExtensionPrivate).html</Path>
+		</Node>
+		<Node id="56">
+			<Name>NSString(SnSExtensionPrivate)</Name>
+			<Path>Categories/NSString(SnSExtensionPrivate).html</Path>
+		</Node>
+		<Node id="57">
+			<Name>NSString(SnSSQLiteStorable)</Name>
+			<Path>Categories/NSString(SnSSQLiteStorable).html</Path>
+		</Node>
+		<Node id="58">
+			<Name>UIDevice(DeviceConnectivity)</Name>
+			<Path>Categories/UIDevice(DeviceConnectivity).html</Path>
+		</Node>
+		<Node id="59">
+			<Name>UIDevice(DeviceDetection)</Name>
+			<Path>Categories/UIDevice(DeviceDetection).html</Path>
+		</Node>
+		<Node id="60">
+			<Name>UINavigationController(SnSExtension)</Name>
+			<Path>Categories/UINavigationController(SnSExtension).html</Path>
+		</Node>
+		
+		<Node id="61">
+			<Name>ChoiceButtonDelegate</Name>
+			<Path>Protocols/ChoiceButtonDelegate.html</Path>
+		</Node>
+		<Node id="62">
+			<Name>EGORefreshTableHeaderDelegate</Name>
+			<Path>Protocols/EGORefreshTableHeaderDelegate.html</Path>
+		</Node>
+		<Node id="63">
+			<Name>SQLiteCommon</Name>
+			<Path>Protocols/SQLiteCommon.html</Path>
+		</Node>
+		<Node id="64">
+			<Name>SQLiteReadable</Name>
+			<Path>Protocols/SQLiteReadable.html</Path>
+		</Node>
+		<Node id="65">
+			<Name>SQLiteStorable</Name>
+			<Path>Protocols/SQLiteStorable.html</Path>
+		</Node>
+		<Node id="66">
+			<Name>SQLiteWritable</Name>
+			<Path>Protocols/SQLiteWritable.html</Path>
+		</Node>
+		<Node id="67">
+			<Name>SnSCacheConnectionHandler</Name>
+			<Path>Protocols/SnSCacheConnectionHandler.html</Path>
+		</Node>
+		<Node id="68">
+			<Name>SnSCacheDelegate</Name>
+			<Path>Protocols/SnSCacheDelegate.html</Path>
+		</Node>
+		<Node id="69">
+			<Name>SnSExceptionHandler</Name>
+			<Path>Protocols/SnSExceptionHandler.html</Path>
+		</Node>
+		<Node id="70">
+			<Name>SnSStoreManagerDelegate</Name>
+			<Path>Protocols/SnSStoreManagerDelegate.html</Path>
+		</Node>
+		<Node id="71">
+			<Name>SnSTableViewControllerBusinessObjects</Name>
+			<Path>Protocols/SnSTableViewControllerBusinessObjects.html</Path>
+		</Node>
+		<Node id="72">
+			<Name>SnSURLConnectionDelegate</Name>
+			<Path>Protocols/SnSURLConnectionDelegate.html</Path>
+		</Node>
+		<Node id="73">
+			<Name>SnSViewControllerAggregator</Name>
+			<Path>Protocols/SnSViewControllerAggregator.html</Path>
+		</Node>
+		<Node id="74">
+			<Name>SnSViewControllerExceptionHandler</Name>
+			<Path>Protocols/SnSViewControllerExceptionHandler.html</Path>
+		</Node>
+		<Node id="75">
+			<Name>SnSViewControllerInterceptor</Name>
+			<Path>Protocols/SnSViewControllerInterceptor.html</Path>
+		</Node>
+		<Node id="76">
+			<Name>SnSViewControllerLifeCycle</Name>
+			<Path>Protocols/SnSViewControllerLifeCycle.html</Path>
+		</Node>
+		<Node id="77">
+			<Name>SnSViewDecorator</Name>
+			<Path>Protocols/SnSViewDecorator.html</Path>
+		</Node>
+		<Node id="78">
+			<Name>SnsBusinessObjectsRetrievalAsynchronousPolicy</Name>
+			<Path>Protocols/SnsBusinessObjectsRetrievalAsynchronousPolicy.html</Path>
+		</Node>
+		
+	</Library>
+</DocSetNodes>

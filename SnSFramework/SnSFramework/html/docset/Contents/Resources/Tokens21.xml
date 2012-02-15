@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSDownloadImageOperation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSDownloadImageOperation</TokenIdentifier>
+			<Abstract>The inspiration is taken from http://www.cimgf.com/2008/02/16/cocoa-tutorial-nsoperation-and-nsoperationqueue .</Abstract>
+			<DeclaredIn>SnSImageDownloader.h</DeclaredIn>
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadImageOperation/initWith:andUrl:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(BOOL)useCache andUrl:(NSString *)url</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:andUrl:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadImageOperation/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadImageOperation/enqueue:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.m</DeclaredIn>			
+			
+			<Declaration>- (void)enqueue:(SnSDownloadImageOperation *)downloadImageOperation</Declaration>
+			
+			
+			<Anchor>//api/name/enqueue:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadImageOperation/main</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.m</DeclaredIn>			
+			
+			<Declaration>- (void)main</Declaration>
+			
+			
+			<Anchor>//api/name/main</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadImageOperation/downloadImage</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.m</DeclaredIn>			
+			
+			<Declaration>- (NSData *)downloadImage</Declaration>
+			
+			
+			<Anchor>//api/name/downloadImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSDownloadImageOperation/onDataDownloaded:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.m</DeclaredIn>			
+			
+			<Declaration>- (void)onDataDownloaded:(NSData *)data</Declaration>
+			
+			
+			<Anchor>//api/name/onDataDownloaded:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

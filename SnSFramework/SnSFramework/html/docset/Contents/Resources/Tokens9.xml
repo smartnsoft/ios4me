@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSApplicationController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSApplicationController</TokenIdentifier>
+			<Abstract>Is responsible for handling the application exceptions, and view controllers redirections.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSApplicationController/instance</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>+ (SnSApplicationController *)instance</Declaration>
+			
+			
+			<Anchor>//api/name/instance</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/registerInterceptor:</TokenIdentifier>
+			<Abstract>Indicates the interceptor to use for handling all the SnSViewControllerLifeCycle entities events.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)registerInterceptor:(id&lt;SnSViewControllerInterceptor&gt;)theInterceptor</Declaration>
+			
+			
+			<Anchor>//api/name/registerInterceptor:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/registerDecorator:</TokenIdentifier>
+			<Abstract>Indicates the decorator to use for design style of view.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)registerDecorator:(id&lt;SnSViewDecorator&gt;)theDecorator</Declaration>
+			
+			
+			<Anchor>//api/name/registerDecorator:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/registerExceptionHandler:</TokenIdentifier>
+			<Abstract>Indicates the exception handler that will be queried when exceptions occur.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)registerExceptionHandler:(id&lt;SnSExceptionHandler&gt;)theExceptionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/registerExceptionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/onLifeCycleEvent:onAggregate:withEvent:</TokenIdentifier>
+			<Abstract>Dispatches to the registered SnSViewControllerInterceptor (if any) the handling of the provided event.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate withEvent:(SnSViewControllerInterceptorEvent)event</Declaration>
+			
+			
+			<Anchor>//api/name/onLifeCycleEvent:onAggregate:withEvent:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/renderView:onAggregate:</TokenIdentifier>
+			<Abstract>Dispatches to the registered SnSViewDecorator (if any) the design of the current view.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)renderView:(UIViewController *)viewController onAggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate</Declaration>
+			
+			
+			<Anchor>//api/name/renderView:onAggregate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/renderViewTableCell:</TokenIdentifier>
+			<Abstract>Dispatches to the registered SnSViewDecorator (if any) the design of cell in tableView.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)renderViewTableCell:(UITableViewCell *)viewCell</Declaration>
+			
+			
+			<Anchor>//api/name/renderViewTableCell:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/handleException:aggregate:exception:resume:</TokenIdentifier>
+			<Abstract>Delegates to the registered SnSExceptionHandler the handling of the provided exception, that was triggered from a UIViewController.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)handleException:(UIViewController *)viewController aggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate exception:(NSException *)exception resume:(BOOL *)resume</Declaration>
+			
+			
+			<Anchor>//api/name/handleException:aggregate:exception:resume:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/handleException:exception:resume:</TokenIdentifier>
+			<Abstract>Delegates to the registered SnSExceptionHandler the handling of the provided exception, that was triggered from an object which is not a UIViewController.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)handleException:(id)sender exception:(NSException *)exception resume:(BOOL *)resume</Declaration>
+			
+			
+			<Anchor>//api/name/handleException:exception:resume:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/performSelectorByHandlingException:aggregate:delegate:</TokenIdentifier>
+			<Abstract>Executes a delegate, and if a NSException is thrown during its exception, delegates to the SnSExceptionHanlder the handing of the exception.</Abstract>
+			<DeclaredIn>SnSApplicationController.h</DeclaredIn>			
+			
+			<Declaration>- (void)performSelectorByHandlingException:(UIViewController *)viewController aggregate:(id&lt;SnSViewControllerLifeCycle&gt;)aggregate delegate:(SnSDelegate *)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/performSelectorByHandlingException:aggregate:delegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSApplicationController/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSApplicationController.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

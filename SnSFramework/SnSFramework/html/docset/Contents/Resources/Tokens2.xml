@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ChoiceButton.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ChoiceButton</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ChoiceButton/buttonState</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) ChoiceButtonState buttonState</Declaration>
+			
+			
+			<Anchor>//api/name/buttonState</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ChoiceButton/buttonId</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) int buttonId</Declaration>
+			
+			
+			<Anchor>//api/name/buttonId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ChoiceButton/buttonDelegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;ChoiceButtonDelegate&gt; buttonDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/buttonDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ChoiceButton/buttonImage</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) UIImage *buttonImage</Declaration>
+			
+			
+			<Anchor>//api/name/buttonImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/initWithFrame:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFrame:(CGRect)aRect</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFrame:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/resizeImage:dimension:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)resizeImage:(UIImage *)image dimension:(int)dim</Declaration>
+			
+			
+			<Anchor>//api/name/resizeImage:dimension:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/cropImage:size:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)cropImage:(UIImage *)image size:(CGRect)rect</Declaration>
+			
+			
+			<Anchor>//api/name/cropImage:size:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/drawRect:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (void)drawRect:(CGRect)rect</Declaration>
+			
+			
+			<Anchor>//api/name/drawRect:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/touchesBegan:withEvent:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event</Declaration>
+			
+			
+			<Anchor>//api/name/touchesBegan:withEvent:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/layer:isIn:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (BOOL)layer:(CALayer *)layer1 isIn:(CALayer *)layer2</Declaration>
+			
+			
+			<Anchor>//api/name/layer:isIn:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/blinkLayer:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (void)blinkLayer:(CALayer *)layer</Declaration>
+			
+			
+			<Anchor>//api/name/blinkLayer:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/endOpacity:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (void)endOpacity:(NSTimer *)timer</Declaration>
+			
+			
+			<Anchor>//api/name/endOpacity:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ChoiceButton/doWiggle:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (void)doWiggle:(CALayer *)touchedLayer</Declaration>
+			
+			
+			<Anchor>//api/name/doWiggle:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

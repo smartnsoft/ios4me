@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses the Smart&amp;Soft Framework.</string>
+	<key>Identifier</key>
+	<string>com.smartnsoft.ipad</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Concrete</key>
+	<true/>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Ancestors											-->
+	<!-- ****************************************************** -->
+	<key>Ancestors</key>
+	<array>
+		<string>com.smartnsoft.bundlebase</string>
+		<string>com.smartnsoft.iosbase</string>
+		<string>com.smartnsoft.classes</string>
+		<string>com.smartnsoft.importedclasses</string>
+	</array>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Definitions										-->
+	<!-- ****************************************************** -->
+	<key>Definitions</key>
+	<dict>
+		<key>Classes/___PROJECTNAMEASIDENTIFIER___AppDelegate.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Classes</string>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___AppDelegate.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/___PROJECTNAMEASIDENTIFIER___AppDelegate.m</key>
+		<dict>
+			<key>Group</key>
+			<string>Classes</string>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___AppDelegate.m</string>
+		</dict>
+		<key>Classes/Constants.h</key>
+		<dict>
+			<key>Group</key>
+			<string>Classes</string>
+			<key>Path</key>
+			<string>Constants.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Constants.m</key>
+		<dict>
+			<key>Group</key>
+			<string>Classes</string>
+			<key>Path</key>
+			<string>Constants.m</string>
+		</dict>
+		<key>main.m</key>
+		<dict>
+			<key>Group</key>
+			<string>Supporting Files</string>
+			<key>Path</key>
+			<string>main.m</string>
+		</dict>
+		<key>___PROJECTNAMEASIDENTIFIER____Prefix.pch</key>
+		<dict>
+			<key>Group</key>
+			<string>Supporting Files</string>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER____Prefix.pch</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Static/about.css</key>
+		<dict>
+			<key>Group</key>
+			<string>Static</string>
+			<key>Path</key>
+			<string>Static/about.css</string>
+		</dict>
+		<key>Static/about_iphone.html</key>
+		<dict>
+			<key>Group</key>
+			<string>Static</string>
+			<key>Path</key>
+			<string>Static/about_iphone.html</string>
+		</dict>
+		<key>Static/application_logo.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Static</string>
+			<key>Path</key>
+			<string>Static/application_logo.png</string>
+		</dict>
+		<key>Static/smartnsoft_logo.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Static</string>
+			<key>Path</key>
+			<string>Static/smartnsoft_logo.png</string>
+		</dict>
+		<key>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+	</dict>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Nodes 											-->
+	<!-- ****************************************************** -->
+	<key>Nodes</key>
+	<array>
+		<string>___PROJECTNAMEASIDENTIFIER____Prefix.pch</string>
+		<string>main.m</string>
+		<string>Classes/___PROJECTNAMEASIDENTIFIER___AppDelegate.h</string>
+		<string>Classes/___PROJECTNAMEASIDENTIFIER___AppDelegate.m</string>
+		<string>Classes/Constants.h</string>
+		<string>Classes/Constants.m</string>
+		<string>Static/about_iphone.html</string>
+		<string>Static/about.css</string>
+		<string>Static/application_logo.png</string>
+		<string>Static/smartnsoft_logo.png</string>
+		<string>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
+	</array>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Options 											-->
+	<!-- ****************************************************** -->
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>deviceFamily</string>
+			<key>Units</key>
+			<dict>
+				<key>iPad</key>
+				<dict>
+					<key>Definitions</key>
+					<dict/>
+				</dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Definitions</key>
+					<dict/>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Targets 											-->
+	<!-- ****************************************************** -->
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>Frameworks</key>
+			<array>
+				<string>Smart&amp;Soft</string>
+			</array>
+			<key>SharedSettings</key>
+			<dict>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>2</string>
+			</dict>
+		</dict>
+	</array>
+	
+</dict>
+</plist>

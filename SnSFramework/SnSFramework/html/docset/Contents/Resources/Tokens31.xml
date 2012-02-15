@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSImageViewDownloadImageOperation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSImageViewDownloadImageOperation</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.h</DeclaredIn>
+			
+			<NodeRef refid="31"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSImageViewDownloadImageOperation/initWith:andTarget:andUrl:andTemporaryImage:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWith:(BOOL)useCache andTarget:(UIImageView *)target andUrl:(NSString *)url andTemporaryImage:(NSString *)imageResourceName</Declaration>
+			
+			
+			<Anchor>//api/name/initWith:andTarget:andUrl:andTemporaryImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSImageViewDownloadImageOperation/initAndEnqueueWith:andTarget:andUrl:andTemporaryImage:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.h</DeclaredIn>			
+			
+			<Declaration>- (id)initAndEnqueueWith:(BOOL)useCache andTarget:(UIImageView *)target andUrl:(NSString *)url andTemporaryImage:(NSString *)imageResourceName</Declaration>
+			
+			
+			<Anchor>//api/name/initAndEnqueueWith:andTarget:andUrl:andTemporaryImage:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSImageViewDownloadImageOperation/onDataDownloaded:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSImageDownloader.m</DeclaredIn>			
+			
+			<Declaration>- (void)onDataDownloaded:(NSData *)data</Declaration>
+			
+			
+			<Anchor>//api/name/onDataDownloaded:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

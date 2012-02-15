@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSFontUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSFontUtils</TokenIdentifier>
+			<Abstract>** To know list of font on device
+for (NSString ** familyName in [UIFont familyNames]) {
+for (NSString ** fontName  in [UIFont fontNamesForFamilyName:familyName]) {
+SnSLogD(@"familyName : %@  ; fontName : %@", familyName, fontName);
+}
+}
+**</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>
+			
+			<NodeRef refid="23"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSFontUtils/updateFontSize:addPointSize:</TokenIdentifier>
+			<Abstract>Add x point to a spécific font.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (UIFont *)updateFontSize:(UIFont *)font addPointSize:(CGFloat)point</Declaration>
+			
+			
+			<Anchor>//api/name/updateFontSize:addPointSize:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

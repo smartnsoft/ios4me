@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSFormDictionary.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSFormDictionary</TokenIdentifier>
+			<Abstract>The dictionary which described what are the cells to edit.</Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>
+			
+			<NodeRef refid="24"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormDictionary/sectionTitles</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *sectionTitles</Declaration>
+			
+			
+			<Anchor>//api/name/sectionTitles</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormDictionary/indexedDictionary</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *indexedDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/indexedDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormDictionary/namedDictionary</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *namedDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/namedDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSFormDictionary/rowsInSection</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *rowsInSection</Declaration>
+			
+			
+			<Anchor>//api/name/rowsInSection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/init</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/setTitle:forSection:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)setTitle:(NSString *)title forSection:(NSInteger)section</Declaration>
+			
+			
+			<Anchor>//api/name/setTitle:forSection:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/getTitle:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)getTitle:(NSInteger)section</Declaration>
+			
+			
+			<Anchor>//api/name/getTitle:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/addField:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)addField:(SnSFormField *)formField</Declaration>
+			
+			
+			<Anchor>//api/name/addField:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/formFieldForPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (SnSFormField *)formFieldForPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/formFieldForPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/formFieldForName:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (SnSFormField *)formFieldForName:(NSString *)name</Declaration>
+			
+			
+			<Anchor>//api/name/formFieldForName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/numberOfSections</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (NSInteger)numberOfSections</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfSections</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/numberOfFieldsInSection:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (NSInteger)numberOfFieldsInSection:(NSInteger)section</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfFieldsInSection:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/isLastField:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isLastField:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/isLastField:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/nextIndexPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (NSIndexPath *)nextIndexPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/nextIndexPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSFormDictionary/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSFormViewController.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

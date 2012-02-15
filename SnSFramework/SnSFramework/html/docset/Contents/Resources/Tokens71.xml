@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SnSTableViewControllerBusinessObjects.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SnSTableViewControllerBusinessObjects</TokenIdentifier>
+			<Abstract>An attempt to formalize the way list of business objects can be handled graphically.</Abstract>
+			<DeclaredIn>SnSTableViewController.h</DeclaredIn>
+			
+			<NodeRef refid="71"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSTableViewControllerBusinessObjects/retrieveBusinessObjects</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSTableViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)retrieveBusinessObjects</Declaration>
+			
+			
+			<Anchor>//api/name/retrieveBusinessObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSTableViewControllerBusinessObjects/retrieveIndexObjects</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSTableViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)retrieveIndexObjects</Declaration>
+			
+			
+			<Anchor>//api/name/retrieveIndexObjects</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSTableViewControllerBusinessObjects/synchronizeDisplay:withBusinessObject:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSTableViewController.h</DeclaredIn>			
+			
+			<Declaration>- (void)synchronizeDisplay:(UITableViewCell *)cell withBusinessObject:(id)businessObject</Declaration>
+			
+			
+			<Anchor>//api/name/synchronizeDisplay:withBusinessObject:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SnSTableViewControllerBusinessObjects/initCellWithIdentifier:andResponder:</TokenIdentifier>
+			<Abstract>The method to specify a custom TableCellView for each line of table.</Abstract>
+			<DeclaredIn>SnSTableViewController.h</DeclaredIn>			
+			
+			<Declaration>- (id)initCellWithIdentifier:(NSString *)reuseIdentifier andResponder:(SnSResponserRedirector *)responderRedirector</Declaration>
+			
+			
+			<Anchor>//api/name/initCellWithIdentifier:andResponder:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

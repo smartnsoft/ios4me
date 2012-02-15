@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/NoAnimationShapeCAGradientLayer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/NoAnimationShapeCAGradientLayer</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NoAnimationShapeCAGradientLayer/actionForKey:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.m</DeclaredIn>			
+			
+			<Declaration>- (id&lt;CAAction&gt;)actionForKey:(NSString *)event</Declaration>
+			
+			
+			<Anchor>//api/name/actionForKey:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/EGORefreshTableHeaderDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/EGORefreshTableHeaderDelegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>
+			
+			<NodeRef refid="62"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/EGORefreshTableHeaderDelegate/egoRefreshTableHeaderDidTriggerRefresh:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/egoRefreshTableHeaderDidTriggerRefresh:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/EGORefreshTableHeaderDelegate/egoRefreshTableHeaderDataSourceIsLoading:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/egoRefreshTableHeaderDataSourceIsLoading:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/EGORefreshTableHeaderDelegate/egoRefreshTableHeaderDataSourceLastUpdated:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>EGORefreshTableHeaderView.h</DeclaredIn>			
+			
+			<Declaration>- (NSDate *)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/egoRefreshTableHeaderDataSourceLastUpdated:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

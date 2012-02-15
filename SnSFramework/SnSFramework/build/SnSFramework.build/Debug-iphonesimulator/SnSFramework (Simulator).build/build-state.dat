@@ -1,0 +1,1317 @@
+TSnSFramework (Simulator)
+v4
+r1
+cCheck dependencies
+cProcessPCH /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch.gch SnSFramework/SnSFramework_Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFramework.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/EGORefreshTableHeaderView.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppDelegate.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSApplicationController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheException.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheItem.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheSilo.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMasterCache.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMemoryCache.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCache.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCacheSilo.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLConnection.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFormViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLifeCycle.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewRefreshController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSObject+SnSExtension.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSString+SnSExtension.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceConnectivity.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceDetection.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIKit+SnSExtension.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLog.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSQLiteAccessor.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStoreManager.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSWebServiceCaller.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSDelegate.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSImageDownloader.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSingleton.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSUtils.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewControllerDelegate.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackSubViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackView.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackTableSubViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppWindow.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cLibtool /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/libSnSFrameworkSimulator.a normal i386
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/ASIHTTPFramework.framework/ASIHTTPFramework
+c000000004F326F1100000000003E15F4
+t1328705297
+s4068852
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/StoreKit.framework/StoreKit
+c000000004D99FA790000000000010AC0
+t1301936761
+s68288
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+c000000004E9D25D90000000000000110
+t1318921689
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004E72F23F00000000002050D0
+t1316155967
+s2117840
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004E72F2960000000000353830
+t1316156054
+s3487792
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004E72F28F0000000000001534
+t1316156047
+s5428
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004E72F5AB00000000000000C4
+t1316156843
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.h
+c000000004E78072E000000000000016E
+t1316489006
+s366
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkReachability.h
+c000000004E72F172000000000000353E
+t1316155762
+s13630
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImage.h
+c000000004E78066A0000000000001697
+t1316488810
+s5783
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImageView.h
+c000000004E78066A00000000000006BE
+t1316488810
+s1726
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004E78066A0000000000000BCB
+t1316488810
+s3019
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h
+c000000004E78066A0000000000003783
+t1316488810
+s14211
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/sqlite3.h
+c000000004E72EDC4000000000004ECA4
+t1316154820
+s322724
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/sys/xattr.h
+c000000004E72F3620000000000000BC1
+t1316156258
+s3009
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.h
+c000000004EE0A8B7000000000000229E
+t1323346103
+s8862
+i<sqlite3.h>
+i"SnSSingleton.h"
+i"SnSSQLiteStorable.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.m
+c000000004F0AC288000000000000573A
+t1326105224
+s22330
+i"SnSSQLiteAccessor.h"
+i"SnSUtils.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteStorable.h
+c000000004EE21DD10000000000000E50
+t1323441617
+s3664
+i<Foundation/Foundation.h>
+i<sqlite3.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.h
+c000000004ECB64FE0000000000000B8A
+t1321952510
+s2954
+i<UIKit/UIKit.h>
+i"SnSApplicationController.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.m
+c000000004EE0A35700000000000024EA
+t1323344727
+s9450
+i"SnSAppDelegate.h"
+i"SnSAppWindow.h"
+i"SnSLog.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.h
+c000000004ECB63DE000000000000024C
+t1321952222
+s588
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.m
+c000000004ECB63E3000000000000023A
+t1321952227
+s570
+i"SnSAppWindow.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.h
+c000000004E5B8C770000000000001A41
+t1314622583
+s6721
+i<Foundation/Foundation.h>
+i"SnSLifeCycle.h"
+i"SnSDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.m
+c000000004E5B8C770000000000001B86
+t1314622583
+s7046
+i"SnSApplicationController.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheDelegate.h
+c000000004E5B8C770000000000000266
+t1314622583
+s614
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.h
+c000000004E5B8C770000000000000908
+t1314622583
+s2312
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.m
+c000000004E5B8C770000000000001018
+t1314622583
+s4120
+i"SnSCacheException.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.h
+c000000004E5B8C7700000000000004BF
+t1314622583
+s1215
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.m
+c000000004E5B8C7700000000000007DE
+t1314622583
+s2014
+i"SnSCacheItem.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.h
+c000000004E5B8C770000000000001000
+t1314622583
+s4096
+i<Foundation/Foundation.h>
+i"SnSSingleton.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.m
+c000000004EE0A1D40000000000001F0F
+t1323344340
+s7951
+i"SnSCacheSilo.h"
+i"SnSUtils.h"
+i"SnSCacheException.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.h
+c000000004E5B8C7700000000000003BD
+t1314622583
+s957
+i<Foundation/Foundation.h>
+i"SnSSingleton.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.m
+c000000004EE0A2510000000000001A4E
+t1323344465
+s6734
+i"SnSMasterCache.h"
+i"SnSCacheItem.h"
+i"SnSCacheException.h"
+i"SnSCacheSilo.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.h
+c000000004E5B8C770000000000000344
+t1314622583
+s836
+i<Foundation/Foundation.h>
+i"SnSSingleton.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.m
+c000000004E5B8C770000000000000322
+t1314622583
+s802
+i"SnSMemoryCache.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.h
+c000000004E5B8C770000000000001651
+t1314622583
+s5713
+i<Foundation/Foundation.h>
+i"SnSDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m
+c000000004F326CA500000000000067FF
+t1328704677
+s26623
+i"SnSURLCache.h"
+i"SnSLog.h"
+i"SnSDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.h
+c000000004E5B8C77000000000000046F
+t1314622583
+s1135
+i<Foundation/Foundation.h>
+i"SnSCacheSilo.h"
+i"SnSCacheDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.m
+c000000004E5B8C770000000000000A71
+t1314622583
+s2673
+i"SnSURLCacheSilo.h"
+i"SnSCacheItem.h"
+i"SnSCacheException.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.h
+c000000004E5B8C7700000000000002A9
+t1314622583
+s681
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.m
+c000000004E5B8C770000000000000AFC
+t1314622583
+s2812
+i"SnSURLConnection.h"
+i"SnSMasterCache.h"
+i"SnSCacheItem.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.h
+c000000004E5B8C770000000000000C60
+t1314622583
+s3168
+i<UIKit/UIKit.h>
+i"SnSTableViewController.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.m
+c000000004E5B8C770000000000002A68
+t1314622583
+s10856
+i"SnSFormViewController.h"
+i"SnSLog.h"
+i"NSObject+SnSExtension.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.h
+c000000004E5B8C770000000000000D39
+t1314622583
+s3385
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.m
+c000000004E5B8C77000000000000050F
+t1314622583
+s1295
+i"SnSLifeCycle.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.h
+c000000004F3BBCDE0000000000000C0D
+t1329315038
+s3085
+i<UIKit/UIKit.h>
+i"SnSLifeCycle.h"
+i"SnSViewControllerDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.m
+c000000004F3BBCAC0000000000001C95
+t1329314988
+s7317
+i"SnSTableViewController.h"
+i"SnSLog.h"
+i"SnSDelegate.h"
+i"NSObject+SnSExtension.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.h
+c000000004E5B8C7700000000000003AF
+t1314622583
+s943
+i<UIKit/UIKit.h>
+i"EGORefreshTableHeaderView.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.m
+c000000004F3BBA5D0000000000000C59
+t1329314397
+s3161
+i"SnSTableViewRefreshController.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.h
+c000000004EE878250000000000000909
+t1323857957
+s2313
+i<UIKit/UIKit.h>
+i"SnSLifeCycle.h"
+i"SnSViewControllerDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.m
+c000000004F291FE9000000000000111C
+t1328095209
+s4380
+i"SnSViewController.h"
+i"SnSLog.h"
+i"SnSApplicationController.h"
+i"SnSViewControllerDelegate.h"
+i"SnSDelegate.h"
+i"NSObject+SnSExtension.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.h
+c000000004E6A05EE00000000000009E5
+t1315571182
+s2533
+i<Foundation/Foundation.h>
+i"SnSLifeCycle.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.m
+c000000004F3BBDD700000000000031E9
+t1329315287
+s12777
+i"SnSViewControllerDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.h
+c000000004EC537490000000000000420
+t1321547593
+s1056
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.m
+c000000004ECB71B20000000000000F1E
+t1321955762
+s3870
+i"SnSStackSubViewController.h"
+i"SnSStackView.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.h
+c000000004EC4F02F0000000000000300
+t1321529391
+s768
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.m
+c000000004ECB713800000000000011E9
+t1321955640
+s4585
+i<QuartzCore/QuartzCore.h>
+i"SnSStackTableSubViewController.h"
+i"SnSStackSubViewController.h"
+i"SnSStackView.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.h
+c000000004EC65FDD0000000000000279
+t1321623517
+s633
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.m
+c000000004EC68054000000000000102E
+t1321631828
+s4142
+i"SnSStackView.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.h
+c000000004EFC45240000000000000C5F
+t1325155620
+s3167
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m
+c000000004EFC46140000000000003B58
+t1325155860
+s15192
+i"SnSStackViewController.h"
+i"SnSStackSubViewController.h"
+i"SnSStackView.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.h
+c000000004E5B8C7700000000000006F8
+t1314622583
+s1784
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.m
+c000000004E6A19990000000000000A3C
+t1315576217
+s2620
+i"NSObject+SnSExtension.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.h
+c000000004ECE216300000000000002AF
+t1322131811
+s687
+i<Foundation/Foundation.h>
+i<sqlite3.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.m
+c000000004EE0E3DC0000000000000B58
+t1323361244
+s2904
+i"NSString+SnSExtension.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.h
+c000000004E5B8C77000000000000015B
+t1314622583
+s347
+i<SystemConfiguration/SCNetworkReachability.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.m
+c000000004E5B8C77000000000000053B
+t1314622583
+s1339
+i"UIDevice+DeviceConnectivity.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.h
+c000000004E5B8C77000000000000019D
+t1314622583
+s413
+i<SystemConfiguration/SCNetworkReachability.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m
+c000000004E5B8C7700000000000006A2
+t1314622583
+s1698
+i"UIDevice+DeviceDetection.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.h
+c000000004E5B8C77000000000000062D
+t1314622583
+s1581
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.m
+c000000004E5B8C77000000000000074D
+t1314622583
+s1869
+i"UIKit+SnSExtension.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.h
+c000000004EA96CB70000000000001747
+t1319726263
+s5959
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.m
+c000000004EE0A23600000000000015D9
+t1323344438
+s5593
+i"SnSLog.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.h
+c000000004E5B8C77000000000000068F
+t1314622583
+s1679
+i<Foundation/Foundation.h>
+i<StoreKit/StoreKit.h>
+i"SnSSingleton.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.m
+c000000004E5B8C77000000000000132F
+t1314622583
+s4911
+i"SnSStoreManager.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.h
+c000000004EF3362700000000000006C5
+t1324561959
+s1733
+i<Foundation/Foundation.h>
+i"SnSSingleton.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.m
+c000000004E5B8C7700000000000006A4
+t1314622583
+s1700
+i"SnSWebServiceCaller.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSConstants.h
+c000000004EE0A485000000000000052D
+t1323345029
+s1325
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.h
+c000000004ECB64A100000000000008D8
+t1321952417
+s2264
+i<Foundation/Foundation.h>
+i"SnSConstants.h"
+i"SnSAppWindow.h"
+i"SnSAppDelegate.h"
+i"SnSDelegate.h"
+i"SnSCacheDelegate.h"
+i"SnSMemoryCache.h"
+i"SnSURLCache.h"
+i"SnSCacheItem.h"
+i"SnSCacheSilo.h"
+i"SnSURLCacheSilo.h"
+i"SnSMasterCache.h"
+i"SnSURLConnection.h"
+i"SnSLifeCycle.h"
+i"SnSViewControllerDelegate.h"
+i"SnSViewController.h"
+i"SnSTableViewController.h"
+i"SnSTableViewRefreshController.h"
+i"SnSFormViewController.h"
+i"SnSStackView.h"
+i"SnSStackViewController.h"
+i"SnSStackSubViewController.h"
+i"SnSStackTableSubViewController.h"
+i"NSObject+SnSExtension.h"
+i"UIKit+SnSExtension.h"
+i"NSString+SnSExtension.h"
+i"UIDevice+DeviceDetection.h"
+i"UIDevice+DeviceConnectivity.h"
+i"SnSSQLiteStorable.h"
+i"SnSSQLiteAccessor.h"
+i"SnSLog.h"
+i"SnSWebServiceCaller.h"
+i"SnSStoreManager.h"
+i"SnSCacheException.h"
+i"SnSUtils.h"
+i"SnSImageDownloader.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.m
+c000000004E5B8C7700000000000002A5
+t1314622583
+s677
+i"SnSFramework.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.h
+c000000004EDE1FAD0000000000000BAD
+t1323179949
+s2989
+i<UIKit/UIKit.h>
+i<QuartzCore/QuartzCore.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.m
+c000000004EE0C84A0000000000002A0E
+t1323354186
+s10766
+i"EGORefreshTableHeaderView.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.h
+c000000004E6A19EE0000000000000B2A
+t1315576302
+s2858
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.m
+c000000004E6A19FF0000000000000BDA
+t1315576319
+s3034
+i"SnSDelegate.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.h
+c000000004E5B8C77000000000000094D
+t1314622583
+s2381
+i<Foundation/Foundation.h>
+i<UIKit/UIImageView.h>
+i<UIKit/UITableViewCell.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.m
+c000000004F326EF70000000000001D49
+t1328705271
+s7497
+i"SnSImageDownloader.h"
+i"SnSLog.h"
+i<UIKit/UIImage.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.h
+c000000004E5B8C7700000000000000FB
+t1314622583
+s251
+i<Foundation/Foundation.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.m
+c000000004E5B8C77000000000000056F
+t1314622583
+s1391
+i"SnSSingleton.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.h
+c000000004F1056910000000000002635
+t1326470801
+s9781
+i<UIKit/UIKit.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.m
+c000000004F1056940000000000003B34
+t1326470804
+s15156
+i"SnSUtils.h"
+i<sys/xattr.h>
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/SnSFramework_Prefix.pch
+c000000004E5B8C7700000000000002CF
+t1314622583
+s719
+i<Foundation/Foundation.h>
+i"SnSFramework.h"
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/libSnSFrameworkSimulator.a
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/EGORefreshTableHeaderView.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSObject+SnSExtension.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSString+SnSExtension.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppDelegate.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppWindow.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSApplicationController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheException.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheItem.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheSilo.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSDelegate.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFormViewController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFramework.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFrameworkSimulator.LinkFileList
+c000000004F3BD23C0000000000001842
+t1329320508
+s6210
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSImageDownloader.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLifeCycle.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLog.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMasterCache.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMemoryCache.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSQLiteAccessor.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSingleton.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackSubViewController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackTableSubViewController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackView.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackViewController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStoreManager.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewRefreshController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCache.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCacheSilo.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLConnection.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSUtils.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewController.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewControllerDelegate.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSWebServiceCaller.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceConnectivity.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceDetection.o
+t2
+s0
+
+N/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIKit+SnSExtension.o
+t2
+s0
+
+N/var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch.gch
+t1329315054
+s16092528
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies460922bc09ecb441^645c45bc09ecb441^---0#1#0#--18"Check dependencies36"46AEFBB9-6862-4A07-8817-103E23A2FF31-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/EGORefreshTableHeaderView.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.270981
+e351013309.227997
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/EGORefreshTableHeaderView.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.mf39045bc09ecb441^e1ce81bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.m0000000000000000^2715"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/EGORefreshTableHeaderView.o" SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/UI/RefreshTableHeaderView/EGORefreshTableHeaderView.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/EGORefreshTableHeaderView.o"36"E909DDC3-5907-4FC7-AFC2-60F81D61A1BC-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSObject+SnSExtension.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.230560
+e351013309.288748
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSObject+SnSExtension.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.mc83f3bbd09ecb441^b4e481bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.m0000000000000000^2669"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSObject+SnSExtension.o" SnSFramework/Classes/Extensions/NSObject+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSObject+SnSExtension.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSObject+SnSExtension.o"36"D7DF3720-10E5-4A3E-ACB6-0438BF8D48AB-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSString+SnSExtension.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.254879
+e351013309.338906
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSString+SnSExtension.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.m431f44bd09ecb441^dcf281bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.m0000000000000000^2669"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSString+SnSExtension.o" SnSFramework/Classes/Extensions/NSString+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/NSString+SnSExtension.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/NSString+SnSExtension.o"36"6FC301B7-48F5-4AA8-B712-3729EA3DF1AE-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppDelegate.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.270988
+e351013309.207228
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppDelegate.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.mc18c45bc09ecb441^a32335bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.m0000000000000000^2627"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppDelegate.o" SnSFramework/Classes/App/SnSAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppDelegate.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppDelegate.o"36"9F9D43A7-713B-4A8A-A680-7790939DD2AC-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppWindow.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.468974
+e351013309.550700
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppWindow.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.m045478bd09ecb441^e42f95be09ecb441^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.m0000000000000000^2619"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppWindow.o" SnSFramework/Classes/App/SnSAppWindow.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSAppWindow.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSAppWindow.o"36"7FC46CF5-CD53-42DC-B7F0-664AF22467F6-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSApplicationController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.271592
+e351013309.187502
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSApplicationController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.m9fab45bc09ecb441^8b3530bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.m0000000000000000^2667"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSApplicationController.o" SnSFramework/Classes/App/SnSApplicationController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/App/SnSApplicationController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSApplicationController.o"36"DC3BB2AC-5D4D-4150-963C-93CE98CF7FF9-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheException.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.271628
+e351013309.151537
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheException.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.mc9ad45bc09ecb441^38d926bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.m0000000000000000^2643"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheException.o" SnSFramework/Classes/Cache/SnSCacheException.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheException.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheException.o"36"371E7EC9-6E90-4D9C-A056-19CE02C5238C-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheItem.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.271666
+e351013309.152334
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheItem.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.m24b445bc09ecb441^9f0327bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.m0000000000000000^2623"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheItem.o" SnSFramework/Classes/Cache/SnSCacheItem.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheItem.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheItem.o"36"171CFB1F-894E-4C50-B903-B85997DECF44-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheSilo.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.272642
+e351013309.176222
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheSilo.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.m28f145bc09ecb441^52262dbd09ecb441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.m0000000000000000^2623"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheSilo.o" SnSFramework/Classes/Cache/SnSCacheSilo.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSCacheSilo.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSCacheSilo.o"36"72C18154-02ED-42D8-B8CB-2ED6C6D44DF3-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSDelegate.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.356438
+e351013309.427786
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSDelegate.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.mbc785bbd09ecb441^16a548be09ecb441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.m0000000000000000^2619"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSDelegate.o" SnSFramework/Classes/Utils/SnSDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSDelegate.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSDelegate.o"36"86162EB0-1ED1-4211-BD56-945A00479889-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFormViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.177267
+e351013309.391730
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFormViewController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.m529e2dbd09ecb441^35630dbe09ecb441^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.m0000000000000000^2669"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFormViewController.o" SnSFramework/Classes/Controller/SnSFormViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSFormViewController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFormViewController.o"36"5E3A4B6A-C07B-42AF-875F-D207C045ADC2-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFramework.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.270700
+e351013309.128842
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFramework.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.m1c7c45bc09ecb441^850b21bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.m0000000000000000^2611"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFramework.o" SnSFramework/Classes/SnSFramework.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/SnSFramework.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFramework.o"36"A10032E7-68C6-4F79-AE77-FB3B11976CFA-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSImageDownloader.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.371349
+e351013309.502994
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSImageDownloader.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.m11525fbd09ecb441^da1e95be09ecb441^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.m0000000000000000^2647"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSImageDownloader.o" SnSFramework/Classes/Utils/SnSImageDownloader.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSImageDownloader.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSImageDownloader.o"36"04D24064-990A-42A9-B047-6451E01CA8A6-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLifeCycle.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.189268
+e351013309.292621
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLifeCycle.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.m46b130bd09ecb441^5be981bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.m0000000000000000^2633"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLifeCycle.o" SnSFramework/Classes/Controller/SnSLifeCycle.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSLifeCycle.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLifeCycle.o"36"21CE552F-758A-49E5-B7A7-4C0C2D919C78-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLog.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.340202
+e351013309.419644
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLog.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.md25457bd09ecb441^289948be09ecb441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.m0000000000000000^2595"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLog.o" SnSFramework/Classes/Log/SnSLog.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Log/SnSLog.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSLog.o"36"C3FA9C2C-581E-4920-B6CE-189B897B11DA-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMasterCache.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013308.272762
+e351013309.175410
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMasterCache.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.m970246bc09ecb441^5af22cbd09ecb441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.m0000000000000000^2631"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMasterCache.o" SnSFramework/Classes/Cache/SnSMasterCache.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMasterCache.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMasterCache.o"36"C035C1B1-897F-42BF-B9B3-AF3FDF499E3C-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMemoryCache.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.130750
+e351013309.195683
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMemoryCache.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.m37c321bd09ecb441^3f3532bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.m0000000000000000^2631"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMemoryCache.o" SnSFramework/Classes/Cache/SnSMemoryCache.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSMemoryCache.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSMemoryCache.o"36"68D50200-A0F9-4FBA-ACF3-BD474E3C1519-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSQLiteAccessor.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.340282
+e351013309.466931
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSQLiteAccessor.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.meb5657bd09ecb441^e2ac48be09ecb441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.m0000000000000000^2651"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSQLiteAccessor.o" SnSFramework/Classes/Accessors/SnSSQLiteAccessor.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Accessors/SnSSQLiteAccessor.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSQLiteAccessor.o"36"74F7E34A-2204-4D46-9B61-4EE54D9F7E93-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSingleton.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.393113
+e351013309.449069
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSingleton.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.mdee364bd09ecb441^d6a748be09ecb441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.m0000000000000000^2623"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSingleton.o" SnSFramework/Classes/Utils/SnSSingleton.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSSingleton.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSSingleton.o"36"95AE550A-8A25-4AA4-81E2-50272770DE7E-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackSubViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.429013
+e351013309.537815
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackSubViewController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.mb8216ebd09ecb441^232d95be09ecb441^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.m0000000000000000^2725"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackSubViewController.o" SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackSubViewController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackSubViewController.o"36"5934376A-8726-4F26-A4C5-F421A0ECE286-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackTableSubViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.460337
+e351013309.564453
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackTableSubViewController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection146"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.ma22676bd09ecb441^9c3495be09ecb441^---0#0#0#-19%DVTDocumentLocation2@154"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.m0000000000000000^2745"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackTableSubViewController.o" SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackTableSubViewController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackTableSubViewController.o"36"7248BDB1-36CA-451D-BF44-65BDCCB485FA-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackView.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.450425
+e351013309.566589
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackView.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.me69573bd09ecb441^a227ddbe09ecb441^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.m0000000000000000^2673"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackView.o" SnSFramework/Classes/Controller/StackViewController/SnSStackView.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackView.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackView.o"36"51C8B90E-5B7F-4F3C-8DF9-BA6E01CDC6A5-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.427206
+e351013309.576531
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackViewController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m0e9e6dbd09ecb441^a12bddbe09ecb441^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m0000000000000000^2713"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackViewController.o" SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/StackViewController/SnSStackViewController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStackViewController.o"36"EABDC08B-54B5-4CE7-A904-55201A3F51B5-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStoreManager.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.350206
+e351013309.458901
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStoreManager.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.m41ef59bd09ecb441^65aa48be09ecb441^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.m0000000000000000^2639"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStoreManager.o" SnSFramework/Classes/Service/SnSStoreManager.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSStoreManager.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSStoreManager.o"36"2F3CA6E6-452C-48E7-8260-543FC9E362D6-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.197740
+e351013309.339645
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.m0ce732bd09ecb441^0ef781bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.m0000000000000000^2673"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewController.o" SnSFramework/Classes/Controller/SnSTableViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewController.o"36"9569954E-6856-419B-845C-20B54AD39CFF-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewRefreshController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.208980
+e351013309.323563
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewRefreshController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.m37c735bd09ecb441^46ee81bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.m0000000000000000^2701"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewRefreshController.o" SnSFramework/Classes/Controller/SnSTableViewRefreshController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSTableViewRefreshController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSTableViewRefreshController.o"36"7C9A1AB3-DDED-473E-AC69-F8EB29E94BB1-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCache.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.152750
+e351013309.353713
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCache.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+o/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m: In function '+[SnSURLCache setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:]':
+o/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m:187: warning: no '-initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:' method found
+o/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m:187: warning: (Messages without a matching method signature
+o/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m:187: warning: will be assumed to return 'id' and accept
+o/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m:187: warning: '...' as arguments.)
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m956627bd09ecb441^260182bd09ecb441^-582"/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m: In function '+[SnSURLCache setInstances:andMemoryCapacities:andDiskCapacities:andDiskPaths:andTimeValidity:andPersistence:]':/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m:187: warning: no '-initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:' method found/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m:187: warning: (Messages without a matching method signature2(21%IDEActivityLogMessage2@95"No '-initWithMemoryCapacity:diskCapacity:diskPath:andTimeValidity:andPersistence:' method found-351013309#222#205#-1#-23%DVTTextDocumentLocation3@110"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m0000000000000000^186#18446744073709551615#186#18446744073709551615#18446744073709551615#0#19"No '*' method found--2@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)-351013309#427#155#-0#-3@110"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m0000000000000000^186#18446744073709551615#186#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--0#0#0#-19%DVTDocumentLocation4@110"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m0000000000000000^2619"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCache.o" SnSFramework/Classes/Cache/SnSURLCache.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCache.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCache.o"36"89A396B0-8563-4F44-A84E-41CF67CA521F-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCacheSilo.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.154126
+e351013309.228949
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCacheSilo.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.m19ad27bd09ecb441^6fd981bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.m0000000000000000^2635"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCacheSilo.o" SnSFramework/Classes/Cache/SnSURLCacheSilo.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLCacheSilo.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLCacheSilo.o"36"C9B165AF-9B99-44B2-8E8B-C7303B8D23FB-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLConnection.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.176606
+e351013309.249256
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLConnection.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.m42772dbd09ecb441^98df81bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.m0000000000000000^2639"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLConnection.o" SnSFramework/Classes/Cache/SnSURLConnection.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Cache/SnSURLConnection.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSURLConnection.o"36"A658A165-F0CB-47C5-ADDA-8C740E3A934F-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSUtils.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.416624
+e351013309.566457
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSUtils.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.m6ce86abd09ecb441^f83695be09ecb441^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.m0000000000000000^2607"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSUtils.o" SnSFramework/Classes/Utils/SnSUtils.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Utils/SnSUtils.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSUtils.o"36"38B37DE0-ABE1-49E4-8106-6957AC6B547E-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewController.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.230039
+e351013309.369826
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewController.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.m41283bbd09ecb441^ab5f0dbe09ecb441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.m0000000000000000^2653"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewController.o" SnSFramework/Classes/Controller/SnSViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewController.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewController.o"36"0D961EAB-9C48-44D1-BD76-52936AA4B9F7-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewControllerDelegate.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.420918
+e351013309.563479
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewControllerDelegate.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.mb4056cbd09ecb441^403295be09ecb441^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.m0000000000000000^2685"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewControllerDelegate.o" SnSFramework/Classes/Controller/SnSViewControllerDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Controller/SnSViewControllerDelegate.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSViewControllerDelegate.o"36"01E54012-9838-4536-A3F4-BC5B1B65F34A-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSWebServiceCaller.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.355247
+e351013309.415309
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSWebServiceCaller.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.me63c5bbd09ecb441^d59448be09ecb441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.m0000000000000000^2655"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSWebServiceCaller.o" SnSFramework/Classes/Service/SnSWebServiceCaller.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Service/SnSWebServiceCaller.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSWebServiceCaller.o"36"8F1572E5-4ADA-41B4-B573-AAC799C47112-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceConnectivity.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.290119
+e351013309.344595
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceConnectivity.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.mc87e4abd09ecb441^d7fb81bd09ecb441^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.m0000000000000000^2693"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceConnectivity.o" SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceConnectivity.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceConnectivity.o"36"9B1C843F-10FA-4E98-A6F4-E9A105713218-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceDetection.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.293852
+e351013309.355074
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceDetection.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m3f914bbd09ecb441^8a5b0dbe09ecb441^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m0000000000000000^2681"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceDetection.o" SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIDevice+DeviceDetection.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIDevice+DeviceDetection.o"36"2F1C2690-1D9A-4F86-835C-F8649918C859-
+
+CCompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIKit+SnSExtension.o" /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s351013309.324981
+e351013309.423556
+r1
+xCompileC
+xbuild/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIKit+SnSExtension.o
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.m047453bd09ecb441^809c48be09ecb441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.m0000000000000000^2657"CompileC "build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIKit+SnSExtension.o" SnSFramework/Classes/Extensions/UIKit+SnSExtension.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DSNS_LOG_FILE -DSNS_LOG_LEVEL_DEBUG -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-generated-files.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-own-target-headers.hmap" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-all-target-headers.hmap" -iquote "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/SnSFrameworkSimulator-project-headers.hmap" -I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/include "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources/i386" "-I/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/DerivedSources" -F/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -include /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch -c /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/SnSFramework/Classes/Extensions/UIKit+SnSExtension.m -o "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/UIKit+SnSExtension.o"36"D7626C84-2D03-4134-948F-948F263DF536-
+
+CLibtool /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/libSnSFrameworkSimulator.a normal i386
+s351013309.584716
+e351013309.607058
+r1
+xLibtool
+x/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/libSnSFrameworkSimulator.a
+xnormal
+xi386
+o/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Libtool build/Debug-iphonesimulator/libSnSFrameworkSimulator.a normal i386aed695bd09ecb441^a7ca17bf09ecb441^---0#0#0#--1015"Libtool build/Debug-iphonesimulator/libSnSFrameworkSimulator.a normal i386    cd /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator -filelist "/Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/SnSFramework.build/Debug-iphonesimulator/SnSFramework (Simulator).build/Objects-normal/i386/SnSFrameworkSimulator.LinkFileList" -ObjC -framework ASIHTTPFramework -framework StoreKit -framework Foundation -framework CFNetwork -o /Users/johan/Desktop/ios4me/SnSFramework/SnSFramework/build/Debug-iphonesimulator/libSnSFrameworkSimulator.a36"B2B800D8-74C4-4B4D-AE36-C754ED8CE29D-
+
+CProcessPCH /var/folders/vb/srv7v25d1gs3txy84j8_t8yr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SnSFramework_Prefix-cprtamrcbfpnxsduuwpavzuqfmoo/SnSFramework_Prefix.pch.gch SnSFramework/SnSFramework_Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+r0
+

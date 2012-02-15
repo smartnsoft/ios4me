@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>This template provides a starting point for Smart&amp;Soft Framework.</string>
+	<key>Identifier</key>
+	<string>com.smartnsoft.framework</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	
+	<key>Ancestors</key>
+	<array>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>ImportedClasses/SnSFramework/SnSFramework.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+			</array>
+			<key>Path</key>
+			<string>SnSFramework.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+		<!-- ******************************************************************* -->
+		<!-- 								APP									 -->
+		<!-- ******************************************************************* -->
+		<key>ImportedClasses/SnSFramework/App/SnSAppDelegate.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>App</string>
+			</array>
+			<key>Path</key>
+			<string>App/SnSAppDelegate.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/App/SnSApplicationController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>App</string>
+			</array>
+			<key>Path</key>
+			<string>App/SnSApplicationController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+		<!-- ******************************************************************* -->
+		<!-- 								CACHE								 -->
+		<!-- ******************************************************************* -->
+		<key>ImportedClasses/SnSFramework/Cache/SnSMemoryCache.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Cache</string>
+			</array>
+			<key>Path</key>
+			<string>Cache/SnSMemoryCache.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Cache/SnSURLCache.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Cache</string>
+			</array>
+			<key>Path</key>
+			<string>Cache/SnSURLCache.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+		<!-- ******************************************************************* -->
+		<!-- 								CONTROLLER							 -->
+		<!-- ******************************************************************* -->
+		<key>ImportedClasses/SnSFramework/Controller/SnSFormViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Controller</string>
+			</array>
+			<key>Path</key>
+			<string>Controller/SnSFormViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Controller/SnSLifeCycle.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Controller</string>
+			</array>
+			<key>Path</key>
+			<string>Controller/SnSLifeCycle.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Controller/SnSTableViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Controller</string>
+			</array>
+			<key>Path</key>
+			<string>Controller/SnSTableViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Controller/SnSViewController.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Controller</string>
+			</array>
+			<key>Path</key>
+			<string>Controller/SnSViewController.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+		<!-- ******************************************************************* -->
+		<!-- 								EXTENSIONS							 -->
+		<!-- ******************************************************************* -->
+		<key>ImportedClasses/SnSFramework/Extensions/NSObject+SnSExtension.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Extensions</string>
+			</array>
+			<key>Path</key>
+			<string>Extensions/NSObject+SnSExtension.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Extensions/UIDevice+DeviceConnectivity.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Extensions</string>
+			</array>
+			<key>Path</key>
+			<string>Extensions/UIDevice+DeviceConnectivity.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Extensions/UIDevice+DeviceDetection.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Extensions</string>
+			</array>
+			<key>Path</key>
+			<string>Extensions/UIDevice+DeviceDetection.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Extensions/UIKit+SnSExtension.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Extensions</string>
+			</array>
+			<key>Path</key>
+			<string>Extensions/UIKit+SnSExtension.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+		<!-- ******************************************************************* -->
+		<!-- 								LOG									 -->
+		<!-- ******************************************************************* -->
+		<key>ImportedClasses/SnSFramework/Log/SnSLog.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Log</string>
+			</array>
+			<key>Path</key>
+			<string>Log/SnSLog.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+		<!-- ******************************************************************* -->
+		<!-- 								SERVICE								 -->
+		<!-- ******************************************************************* -->
+		<key>ImportedClasses/SnSFramework/Service/SnSWebServiceCaller.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Service</string>
+			</array>
+			<key>Path</key>
+			<string>Service/SnSWebServiceCaller.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+		<!-- ******************************************************************* -->
+		<!-- 								UTILS								 -->
+		<!-- ******************************************************************* -->
+		<key>ImportedClasses/SnSFramework/Utils/SnSDelegate.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Utils</string>
+			</array>
+			<key>Path</key>
+			<string>Utils/SnSDelegate.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Utils/SnSImageDownloader.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Utils</string>
+			</array>
+			<key>Path</key>
+			<string>Utils/SnSImageDownloader.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>ImportedClasses/SnSFramework/Utils/SnSUtils.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>ImportedClasses</string>
+				<string>SnSFramework</string>
+				<string>Utils</string>
+			</array>
+			<key>Path</key>
+			<string>Utils/SnSUtils.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		
+	</dict>
+	
+	
+	<key>Nodes</key>
+	<array>		
+		<!-- 				      Framework						 -->
+		<string>ImportedClasses/SnSFramework/SnSFramework.h</string>
+		
+		<!-- 				        App							 -->
+		<string>ImportedClasses/SnSFramework/App/SnSAppDelegate.h</string>
+		<string>ImportedClasses/SnSFramework/App/SnSApplicationController.h</string>
+		
+		<!-- 				       Cache						 -->
+		<string>ImportedClasses/SnSFramework/Cache/SnSMemoryCache.h</string>
+		<string>ImportedClasses/SnSFramework/Cache/SnSURLCache.h</string>
+		
+		<!-- 				     Controller						 -->
+		<string>ImportedClasses/SnSFramework/Controller/SnSFormViewController.h</string>
+		<string>ImportedClasses/SnSFramework/Controller/SnSLifeCycle.h</string>
+		<string>ImportedClasses/SnSFramework/Controller/SnSTableViewController.h</string>
+		<string>ImportedClasses/SnSFramework/Controller/SnSViewController.h</string>
+		
+		<!-- 				     Extensions						 -->
+		<string>ImportedClasses/SnSFramework/Extensions/NSObject+SnSExtension.h</string>
+		<string>ImportedClasses/SnSFramework/Extensions/UIDevice+DeviceConnectivity.h</string>
+		<string>ImportedClasses/SnSFramework/Extensions/UIDevice+DeviceDetection.h</string>
+		<string>ImportedClasses/SnSFramework/Extensions/UIKit+SnSExtension.h</string>
+		
+		<!-- 				        Log							 -->
+		<string>ImportedClasses/SnSFramework/Log/SnSLog.h</string>
+		
+		<!-- 				      Service						 -->
+		<string>ImportedClasses/SnSFramework/Service/SnSWebServiceCaller.h</string>
+		
+		<!-- 				       Utils						 -->
+		<string>ImportedClasses/SnSFramework/Utils/SnSDelegate.h</string>
+		<string>ImportedClasses/SnSFramework/Utils/SnSImageDownloader.h</string>
+		<string>ImportedClasses/SnSFramework/Utils/SnSUtils.h</string>
+		
+		
+	</array>
+</dict>
+</plist>

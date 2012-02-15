@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIDevice(DeviceConnectivity).html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIDevice</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceConnectivity.h</DeclaredIn>
+			
+			<NodeRef refid="58"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/cellularConnected</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceConnectivity.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)cellularConnected</Declaration>
+			
+			
+			<Anchor>//api/name/cellularConnected</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/wiFiConnected</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceConnectivity.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)wiFiConnected</Declaration>
+			
+			
+			<Anchor>//api/name/wiFiConnected</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/networkConnected</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceConnectivity.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)networkConnected</Declaration>
+			
+			
+			<Anchor>//api/name/networkConnected</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

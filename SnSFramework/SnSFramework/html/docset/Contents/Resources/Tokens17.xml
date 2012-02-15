@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSDateUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSDateUtils</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSDateUtils/dateFromISO8601:</TokenIdentifier>
+			<Abstract>Parsing of a date in a ISO8601 format.</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDate *)dateFromISO8601:(NSString *)str</Declaration>
+			
+			
+			<Anchor>//api/name/dateFromISO8601:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSDateUtils/formatDate:withPattern:withLocale:</TokenIdentifier>
+			<Abstract>Format a date in a specify pattern
+Pattern must be in Unicode standard : http://unicode.org/reports/tr35/tr35-6.html#DateFormatPatterns</Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)formatDate:(NSDate *)date withPattern:(NSString *)pattern withLocale:(NSLocale *)locale</Declaration>
+			
+			
+			<Anchor>//api/name/formatDate:withPattern:withLocale:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SnSDateUtils/parseString:withPattern:withLocale:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDate *)parseString:(NSString *)string withPattern:(NSString *)pattern withLocale:(NSLocale *)locale</Declaration>
+			
+			
+			<Anchor>//api/name/parseString:withPattern:withLocale:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSURLCacheSilo.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSURLCacheSilo</TokenIdentifier>
+			<Abstract>	This class overrides some of the default SnSCacheBehaviour to match
+	the behaviour of real URL cache and therefore downloads the content if needed.</Abstract>
+			<DeclaredIn>SnSURLCacheSilo.h</DeclaredIn>
+			
+			<NodeRef refid="47"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSURLCacheSilo/connectionHandler</TokenIdentifier>
+			<Abstract>	The object responsible for handling the connection.
+	If not provided the default behaviour will occur.</Abstract>
+			<DeclaredIn>SnSURLCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id&lt;SnSCacheConnectionHandler&gt; connectionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/connectionHandler</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCacheSilo/dataForRequest:</TokenIdentifier>
+			<Abstract>	Creates the request for the given URL and fetches the content.</Abstract>
+			<DeclaredIn>SnSURLCacheSilo.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)dataForRequest:(NSURLRequest *)iURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iURL</Name>
+					<Abstract>The url to fetch</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>The data associated with that URL</Abstract></ReturnValue>
+			<Anchor>//api/name/dataForRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSURLCacheSilo/cachedItemForKey:</TokenIdentifier>
+			<Abstract>Retreives the cached item given its key.</Abstract>
+			<DeclaredIn>SnSURLCacheSilo.m</DeclaredIn>			
+			
+			<Declaration>- (SnSCacheItem *)cachedItemForKey:(NSURLRequest *)iRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>iKey</Name>
+					<Abstract>The key that will be used to retreive the corresponding item.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cachedItemForKey:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

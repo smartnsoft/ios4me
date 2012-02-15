@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	
+	<key>Description</key>
+	<string>This template provides a starting point for a Unit Test project based on the Smart&amp;Soft Framework.</string>
+	<key>Identifier</key>
+	<string>com.smartnsoft.test</string>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Concrete</key>
+	<true/>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Ancestors											-->
+	<!-- ****************************************************** -->
+	<key>Ancestors</key>
+	<array>
+		<string>com.smartnsoft.bundlebase</string>
+		<string>com.smartnsoft.iosbase</string>
+	</array>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Definitions 										-->
+	<!-- ****************************************************** -->
+	<key>Definitions</key>
+	<dict>
+		<key>___PROJECTNAMEASIDENTIFIER____Prefix.pch</key>
+		<dict>
+			<key>Group</key>
+			<string>Supporting Files</string>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER____Prefix.pch</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>GHUnitIOSTestMain.m</key>
+		<dict>
+			<key>Path</key>
+			<string>GHUnitIOSTestMain.m</string>
+		</dict>
+		<key>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Test-___PROJECTNAMEASIDENTIFIER___.m</key>
+		<dict>
+			<key>Path</key>
+			<string>Test-___PROJECTNAMEASIDENTIFIER___.m</string>
+		</dict>
+		
+		<!-- **** From Options ****	-->
+		<key>RunTests.sh</key>
+		<dict>
+			<key>Path</key>
+			<string>RunTests.sh</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+	</dict>
+
+	
+	<!-- ****************************************************** -->
+	<!-- **** Nodes 											-->
+	<!-- ****************************************************** -->
+	<key>Nodes</key>
+	<array>
+		<string>___PROJECTNAMEASIDENTIFIER____Prefix.pch</string>
+		<string>GHUnitIOSTestMain.m</string>
+		<string>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
+		<string>Test-___PROJECTNAMEASIDENTIFIER___.m</string>
+	</array>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Options 											-->
+	<!-- ****************************************************** -->
+	<key>Options</key>
+	<array>
+		
+		<!-- **** Command line ****	-->
+		<dict>
+			<key>Default</key>
+			<string>false</string>
+			<key>Description</key>
+			<string>Indicates whether the unit test will be run using the command line.</string>
+			<key>Identifier</key>
+			<string>includeCommandLine</string>
+			<key>Name</key>
+			<string>Activate Command Line</string>
+			<key>SortOrder</key>
+			<integer>1</integer>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Units</key>
+			<dict>
+				<key>true</key>
+				<array>
+					<dict>
+						<!-- **** Add News Targets ****	-->
+						<key>Targets</key>
+						<array>
+							<dict>
+								<key>BuildPhases</key>
+								<array>
+									<dict>
+										<key>Class</key>
+										<string>ShellScript</string>
+										<key>ShellPath</key>
+										<string>/bin/sh ___PACKAGENAME___/RunTests.sh</string>
+										<!-- <key>ShellScript</key>
+																				<string></string> -->
+									</dict>
+								</array>
+							</dict>
+						</array>
+						
+						<!-- **** Add News Nodes ****	-->
+						<key>Nodes</key>
+						<array>
+							<string>RunTests.sh</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	
+	<!-- ****************************************************** -->
+	<!-- **** Targets 											-->
+	<!-- ****************************************************** -->
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>Frameworks</key>
+			<array>
+					<string>GHUnitIOS</string>
+			</array>
+		</dict>
+	</array>
+	
+	
+</dict>
+</plist>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIDevice(DeviceDetection).html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIDevice</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>
+			
+			<NodeRef refid="59"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/deviceType</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>			
+			
+			<Declaration>+ (int)deviceType</Declaration>
+			
+			
+			<Anchor>//api/name/deviceType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/iOSVersion</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>			
+			
+			<Declaration>+ (float)iOSVersion</Declaration>
+			
+			
+			<Anchor>//api/name/iOSVersion</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/isIPad</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isIPad</Declaration>
+			
+			
+			<Anchor>//api/name/isIPad</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/isIPhone</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isIPhone</Declaration>
+			
+			
+			<Anchor>//api/name/isIPhone</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/isIPhoneOS4</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isIPhoneOS4</Declaration>
+			
+			
+			<Anchor>//api/name/isIPhoneOS4</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/isRetinaDisplay</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isRetinaDisplay</Declaration>
+			
+			
+			<Anchor>//api/name/isRetinaDisplay</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIDevice/udid</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>UIDevice+DeviceDetection.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)udid</Declaration>
+			
+			
+			<Anchor>//api/name/udid</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

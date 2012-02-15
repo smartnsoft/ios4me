@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ButtonWithImage.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ButtonWithImage</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ButtonWithImage.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ButtonWithImage/initWithFrame:image:legend:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ButtonWithImage.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFrame:(CGRect)frame image:(NSString *)imgName legend:(NSString *)legend</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFrame:image:legend:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ButtonWithImage/addTarget:action:forControlEvents:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ButtonWithImage.h</DeclaredIn>			
+			
+			<Declaration>- (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents</Declaration>
+			
+			
+			<Anchor>//api/name/addTarget:action:forControlEvents:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ButtonWithImage/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ButtonWithImage.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,616 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SnSStoreManager Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SnSFramework </a></h1>
+				<a id="developerHome" href="../index.html">Smart&amp;Soft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SnSStoreManager Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/products">&nbsp;&nbsp;&nbsp;&nbsp;products</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/buyProduct:">&nbsp;&nbsp;&nbsp;&nbsp;- buyProduct:</option>
+	
+	<option value="//api/name/buyProduct:quantity:">&nbsp;&nbsp;&nbsp;&nbsp;- buyProduct:quantity:</option>
+	
+	<option value="//api/name/buyProductIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- buyProductIdentifier:</option>
+	
+	<option value="//api/name/buyProductIdentifier:quantity:">&nbsp;&nbsp;&nbsp;&nbsp;- buyProductIdentifier:quantity:</option>
+	
+	<option value="//api/name/completedTransaction:">&nbsp;&nbsp;&nbsp;&nbsp;- completedTransaction:</option>
+	
+	<option value="//api/name/dealloc">&nbsp;&nbsp;&nbsp;&nbsp;- dealloc</option>
+	
+	<option value="//api/name/failedTransaction:">&nbsp;&nbsp;&nbsp;&nbsp;- failedTransaction:</option>
+	
+	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/paymentQueue:restoreCompletedTransactionsFailedWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- paymentQueue:restoreCompletedTransactionsFailedWithError:</option>
+	
+	<option value="//api/name/paymentQueue:updatedTransactions:">&nbsp;&nbsp;&nbsp;&nbsp;- paymentQueue:updatedTransactions:</option>
+	
+	<option value="//api/name/paymentQueueRestoreCompletedTransactionsFinished:">&nbsp;&nbsp;&nbsp;&nbsp;- paymentQueueRestoreCompletedTransactionsFinished:</option>
+	
+	<option value="//api/name/purchasingTransaction:">&nbsp;&nbsp;&nbsp;&nbsp;- purchasingTransaction:</option>
+	
+	<option value="//api/name/requestProductData:">&nbsp;&nbsp;&nbsp;&nbsp;- requestProductData:</option>
+	
+	<option value="//api/name/restoreTranscation">&nbsp;&nbsp;&nbsp;&nbsp;- restoreTranscation</option>
+	
+	<option value="//api/name/restoredTransaction:">&nbsp;&nbsp;&nbsp;&nbsp;- restoredTransaction:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/products">products</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buyProduct:">buyProduct:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buyProduct:quantity:">buyProduct:quantity:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buyProductIdentifier:">buyProductIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buyProductIdentifier:quantity:">buyProductIdentifier:quantity:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/completedTransaction:">completedTransaction:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dealloc">dealloc</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/failedTransaction:">failedTransaction:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/paymentQueue:restoreCompletedTransactionsFailedWithError:">paymentQueue:restoreCompletedTransactionsFailedWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/paymentQueue:updatedTransactions:">paymentQueue:updatedTransactions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/paymentQueueRestoreCompletedTransactionsFinished:">paymentQueueRestoreCompletedTransactionsFinished:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/purchasingTransaction:">purchasingTransaction:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestProductData:">requestProductData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restoreTranscation">restoreTranscation</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restoredTransaction:">restoredTransaction:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SnSStoreManager Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SnSStoreManager Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/SnSSingleton.html">SnSSingleton</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">SKPaymentTransactionObserver<br />SKProductsRequestDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SnSStoreManager.h<br />SnSStoreManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/products">&nbsp;&nbsp;products</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/buyProduct:">&ndash;&nbsp;buyProduct:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/buyProduct:quantity:">&ndash;&nbsp;buyProduct:quantity:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/buyProductIdentifier:">&ndash;&nbsp;buyProductIdentifier:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/buyProductIdentifier:quantity:">&ndash;&nbsp;buyProductIdentifier:quantity:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestProductData:">&ndash;&nbsp;requestProductData:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/purchasingTransaction:">&ndash;&nbsp;purchasingTransaction:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/completedTransaction:">&ndash;&nbsp;completedTransaction:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/failedTransaction:">&ndash;&nbsp;failedTransaction:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restoredTransaction:">&ndash;&nbsp;restoredTransaction:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restoreTranscation">&ndash;&nbsp;restoreTranscation</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/paymentQueue:updatedTransactions:">&ndash;&nbsp;paymentQueue:updatedTransactions:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/paymentQueue:restoreCompletedTransactionsFailedWithError:">&ndash;&nbsp;paymentQueue:restoreCompletedTransactionsFailedWithError:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/paymentQueueRestoreCompletedTransactionsFinished:">&ndash;&nbsp;paymentQueueRestoreCompletedTransactionsFinished:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/products" title="products"></a>
+	<h3 class="subsubtitle method-title">products</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/buyProduct:" title="buyProduct:"></a>
+	<h3 class="subsubtitle method-title">buyProduct:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/buyProduct:quantity:" title="buyProduct:quantity:"></a>
+	<h3 class="subsubtitle method-title">buyProduct:quantity:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/buyProductIdentifier:" title="buyProductIdentifier:"></a>
+	<h3 class="subsubtitle method-title">buyProductIdentifier:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/buyProductIdentifier:quantity:" title="buyProductIdentifier:quantity:"></a>
+	<h3 class="subsubtitle method-title">buyProductIdentifier:quantity:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/completedTransaction:" title="completedTransaction:"></a>
+	<h3 class="subsubtitle method-title">completedTransaction:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/failedTransaction:" title="failedTransaction:"></a>
+	<h3 class="subsubtitle method-title">failedTransaction:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/paymentQueue:restoreCompletedTransactionsFailedWithError:" title="paymentQueue:restoreCompletedTransactionsFailedWithError:"></a>
+	<h3 class="subsubtitle method-title">paymentQueue:restoreCompletedTransactionsFailedWithError:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/paymentQueue:updatedTransactions:" title="paymentQueue:updatedTransactions:"></a>
+	<h3 class="subsubtitle method-title">paymentQueue:updatedTransactions:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/paymentQueueRestoreCompletedTransactionsFinished:" title="paymentQueueRestoreCompletedTransactionsFinished:"></a>
+	<h3 class="subsubtitle method-title">paymentQueueRestoreCompletedTransactionsFinished:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/purchasingTransaction:" title="purchasingTransaction:"></a>
+	<h3 class="subsubtitle method-title">purchasingTransaction:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestProductData:" title="requestProductData:"></a>
+	<h3 class="subsubtitle method-title">requestProductData:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restoreTranscation" title="restoreTranscation"></a>
+	<h3 class="subsubtitle method-title">restoreTranscation</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restoredTransaction:" title="restoredTransaction:"></a>
+	<h3 class="subsubtitle method-title">restoredTransaction:</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Smart&amp;Soft. All rights reserved. (Last updated: 2011-08-31)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

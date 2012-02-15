@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SnSCacheItem.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SnSCacheItem</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.h</DeclaredIn>
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheItem/initWithKey:date:data:</TokenIdentifier>
+			<Abstract>	Create the Cache Item object with its basic information</Abstract>
+			<DeclaredIn>SnSCacheItem.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithKey:(id)iKey date:(NSDate *)iDate data:(NSData *)iData</Declaration>
+			
+			
+			<Anchor>//api/name/initWithKey:date:data:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheItem/isEqualToCacheItem:</TokenIdentifier>
+			<Abstract>	Compare two cache items and return YES if their attributes are identical</Abstract>
+			<DeclaredIn>SnSCacheItem.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isEqualToCacheItem:(SnSCacheItem *)iItem</Declaration>
+			
+			
+			<Anchor>//api/name/isEqualToCacheItem:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheItem/hits</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger hits</Declaration>
+			
+			
+			<Anchor>//api/name/hits</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheItem/key</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) id key</Declaration>
+			
+			
+			<Anchor>//api/name/key</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheItem/data</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSData *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SnSCacheItem/lastAccessedDate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSDate *lastAccessedDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastAccessedDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheItem/encodeWithCoder:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.m</DeclaredIn>			
+			
+			<Declaration>- (void)encodeWithCoder:(NSCoder *)aCoder</Declaration>
+			
+			
+			<Anchor>//api/name/encodeWithCoder:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheItem/initWithCoder:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.m</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCoder:(NSCoder *)aDecoder</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCoder:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheItem/dealloc</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.m</DeclaredIn>			
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SnSCacheItem/description</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>SnSCacheItem.m</DeclaredIn>			
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			
+			<Anchor>//api/name/description</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,2043 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SnSSQLiteAccessor Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SnSFramework </a></h1>
+				<a id="developerHome" href="../index.html">Smart&amp;Soft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SnSSQLiteAccessor Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/lastInsertedRowID">&nbsp;&nbsp;&nbsp;&nbsp;lastInsertedRowID</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/arrayOfObjectsFromQuery:object:">&nbsp;&nbsp;&nbsp;&nbsp;- arrayOfObjectsFromQuery:object:</option>
+	
+	<option value="//api/name/businessObjectFromID:object:">&nbsp;&nbsp;&nbsp;&nbsp;- businessObjectFromID:object:</option>
+	
+	<option value="//api/name/createsDatabaseIfNeeded">&nbsp;&nbsp;&nbsp;&nbsp;- createsDatabaseIfNeeded</option>
+	
+	<option value="//api/name/databaseName">&nbsp;&nbsp;&nbsp;&nbsp;- databaseName</option>
+	
+	<option value="//api/name/databasePath">&nbsp;&nbsp;&nbsp;&nbsp;- databasePath</option>
+	
+	<option value="//api/name/deleteAllFromTable:">&nbsp;&nbsp;&nbsp;&nbsp;- deleteAllFromTable:</option>
+	
+	<option value="//api/name/deleteBusinessObject:">&nbsp;&nbsp;&nbsp;&nbsp;- deleteBusinessObject:</option>
+	
+	<option value="//api/name/didFailToExecute:parameter:">&nbsp;&nbsp;&nbsp;&nbsp;- didFailToExecute:parameter:</option>
+	
+	<option value="//api/name/didSucceedToExecute:parameter:">&nbsp;&nbsp;&nbsp;&nbsp;- didSucceedToExecute:parameter:</option>
+	
+	<option value="//api/name/executeQuery:">&nbsp;&nbsp;&nbsp;&nbsp;- executeQuery:</option>
+	
+	<option value="//api/name/insert:">&nbsp;&nbsp;&nbsp;&nbsp;- insert:</option>
+	
+	<option value="//api/name/insert:withForeignKeys:">&nbsp;&nbsp;&nbsp;&nbsp;- insert:withForeignKeys:</option>
+	
+	<option value="//api/name/lastInsertRowID:">&nbsp;&nbsp;&nbsp;&nbsp;- lastInsertRowID:</option>
+	
+	<option value="//api/name/patchDatabaseIfNeeded">&nbsp;&nbsp;&nbsp;&nbsp;- patchDatabaseIfNeeded</option>
+	
+	<option value="//api/name/preparationForInsert:">&nbsp;&nbsp;&nbsp;&nbsp;- preparationForInsert:</option>
+	
+	<option value="//api/name/preparationForSelect:">&nbsp;&nbsp;&nbsp;&nbsp;- preparationForSelect:</option>
+	
+	<option value="//api/name/preparationStatement">&nbsp;&nbsp;&nbsp;&nbsp;- preparationStatement</option>
+	
+	<option value="//api/name/removeDatabase">&nbsp;&nbsp;&nbsp;&nbsp;- removeDatabase</option>
+	
+	<option value="//api/name/resetDatabase">&nbsp;&nbsp;&nbsp;&nbsp;- resetDatabase</option>
+	
+	<option value="//api/name/save:">&nbsp;&nbsp;&nbsp;&nbsp;- save:</option>
+	
+	<option value="//api/name/save:withForeignKeys:">&nbsp;&nbsp;&nbsp;&nbsp;- save:withForeignKeys:</option>
+	
+	<option value="//api/name/sqlInformatiomFromCode:">&nbsp;&nbsp;&nbsp;&nbsp;- sqlInformatiomFromCode:</option>
+	
+	<option value="//api/name/update:">&nbsp;&nbsp;&nbsp;&nbsp;- update:</option>
+	
+	<option value="//api/name/update:withForeignKeys:">&nbsp;&nbsp;&nbsp;&nbsp;- update:withForeignKeys:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastInsertedRowID">lastInsertedRowID</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/arrayOfObjectsFromQuery:object:">arrayOfObjectsFromQuery:object:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/businessObjectFromID:object:">businessObjectFromID:object:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createsDatabaseIfNeeded">createsDatabaseIfNeeded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/databaseName">databaseName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/databasePath">databasePath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteAllFromTable:">deleteAllFromTable:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteBusinessObject:">deleteBusinessObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didFailToExecute:parameter:">didFailToExecute:parameter:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didSucceedToExecute:parameter:">didSucceedToExecute:parameter:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/executeQuery:">executeQuery:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insert:">insert:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insert:withForeignKeys:">insert:withForeignKeys:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastInsertRowID:">lastInsertRowID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/patchDatabaseIfNeeded">patchDatabaseIfNeeded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/preparationForInsert:">preparationForInsert:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/preparationForSelect:">preparationForSelect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/preparationStatement">preparationStatement</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeDatabase">removeDatabase</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetDatabase">resetDatabase</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save:">save:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save:withForeignKeys:">save:withForeignKeys:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sqlInformatiomFromCode:">sqlInformatiomFromCode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/update:">update:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/update:withForeignKeys:">update:withForeignKeys:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SnSSQLiteAccessor Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SnSSQLiteAccessor Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/SnSSingleton.html">SnSSingleton</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SnSSQLiteAccessor.h<br />SnSSQLiteAccessor.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lastInsertedRowID">&nbsp;&nbsp;lastInsertedRowID</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createsDatabaseIfNeeded">&ndash;&nbsp;createsDatabaseIfNeeded</a></code>
+		<span class="tooltip"><p>For first time launch of the application the local sqlite database
+needs to be put to the application document folder
+@result
+True if the reset was correctly processed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/patchDatabaseIfNeeded">&ndash;&nbsp;patchDatabaseIfNeeded</a></code>
+		<span class="tooltip"><p>Everytime the database is changed you must update this part of the code</p>
+
+<pre><code>to test if a patch needs to be applied and apply it if needed
+</code></pre>
+
+<p>@result
+True if the database needed to be patched</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetDatabase">&ndash;&nbsp;resetDatabase</a></code>
+		<span class="tooltip"><pre><code>Restores original database with default settings by copying
+the sqlite3 database located in Resources into the application directory
+</code></pre>
+
+<p>@result
+True if the reset was correctly processed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeDatabase">&ndash;&nbsp;removeDatabase</a></code>
+		<span class="tooltip"><pre><code>Removes the database from the filesystem
+</code></pre>
+
+<p>@result
+True if the action was correctly processed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/databasePath">&ndash;&nbsp;databasePath</a></code>
+		<span class="tooltip"><pre><code>Returns the exact path where the local sqlite 
+database is stored. (This path is set once and for when the user downloads an application)
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/databaseName">&ndash;&nbsp;databaseName</a></code>
+		<span class="tooltip"><pre><code>Your master accessor should override this method to set the current databasename
+of your application. ex. "my_database.db"
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/preparationStatement">&ndash;&nbsp;preparationStatement</a></code>
+		<span class="tooltip"><pre><code>Returns the statement located into SELECT or INSERT queries
+and will vary depending on the subclass called
+</code></pre>
+
+<p>@result
+An autoreleased string object</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/preparationForInsert:">&ndash;&nbsp;preparationForInsert:</a></code>
+		<span class="tooltip"><pre><code>Returns part of the statement that will be used for insertion
+</code></pre>
+
+<p>@param iBusinessObjectClass</p>
+
+<pre><code>The class for the object to be inserted
+</code></pre>
+
+<p>@result
+A coma separated list of strings that will be inserted</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/preparationForSelect:">&ndash;&nbsp;preparationForSelect:</a></code>
+		<span class="tooltip"><pre><code>Returns part of the statement that will be used for selection
+</code></pre>
+
+<p>@param iBusinessObjectClass</p>
+
+<pre><code>The class for the object to be selected
+</code></pre>
+
+<p>@result
+A coma separated list of strings that will be selected</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lastInsertRowID:">&ndash;&nbsp;lastInsertRowID:</a></code>
+		<span class="tooltip"><pre><code>Runs a SELECT last_insert_rowid() and returns the result
+</code></pre>
+
+<p>Please note that running this if mutiple threads are inserting at the
+same time is useless as it can&rsquo;t be trusted.
+@result
+The result of the SELECT last_insert_rowid().
+0 means query insertion most likely failed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/arrayOfObjectsFromQuery:object:">&ndash;&nbsp;arrayOfObjectsFromQuery:object:</a></code>
+		<span class="tooltip"><pre><code>Creates the sqlite statement and does the sqlite3 call 
+</code></pre>
+
+<p>to retreive elements with more than one matching element.
+@param iQuery
+The string that holding the query
+@param iClass
+The object class that will be used during the array construction
+@result
+An array built from matching objects</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/businessObjectFromID:object:">&ndash;&nbsp;businessObjectFromID:object:</a></code>
+		<span class="tooltip"><pre><code>Creates and executes a query of type:
+SELECT * FROM iClass WHERE mainIDColumName = iObjectID 
+</code></pre>
+
+<p>@param iObjectID
+The value of the id as it should be found in the database
+@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/executeQuery:">&ndash;&nbsp;executeQuery:</a></code>
+		<span class="tooltip"><pre><code>Execute the given query and returns the last statement result
+</code></pre>
+
+<p>@param iQuery
+The string that holding the query (ex. select * from table)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deleteBusinessObject:">&ndash;&nbsp;deleteBusinessObject:</a></code>
+		<span class="tooltip"><pre><code>Creates and executes a query of type:
+DELETE FROM iBusinessObject.class WHERE mainIDColumName = iBusinessObject.id
+</code></pre>
+
+<p>@param iBusinessObject
+The object to be deleted from database</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deleteAllFromTable:">&ndash;&nbsp;deleteAllFromTable:</a></code>
+		<span class="tooltip"><pre><code>Delete All elements from the given class
+</code></pre>
+
+<p>@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save:">&ndash;&nbsp;save:</a></code>
+		<span class="tooltip"><pre><code>Saves the object passed in parameter into the database.
+Saving means 
+    1. Updating if business object is already stored&lt;
+    2. Inserting if business object is not already stored in local db
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+
+<pre><code>This object should respond to both Writable and Readable protocol because a
+query is made before to see if insertion is required.
+</code></pre></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save:withForeignKeys:">&ndash;&nbsp;save:withForeignKeys:</a></code>
+		<span class="tooltip"><pre><code>Saves the object passed in parameter into the database.
+Saving means 
+    1. Updating if business object is already stored&lt;
+    2. Inserting if business object is not already stored in local db
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+
+<pre><code>This object should respond to both Writable and Readable protocol because a
+query is made before to see if insertion is required.
+</code></pre>
+
+<p>@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insert:">&ndash;&nbsp;insert:</a></code>
+		<span class="tooltip"><pre><code>The insert method only adds objects it doesn't update them.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insert:withForeignKeys:">&ndash;&nbsp;insert:withForeignKeys:</a></code>
+		<span class="tooltip"><pre><code>The insert method only adds objects it doesn't update them.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/update:">&ndash;&nbsp;update:</a></code>
+		<span class="tooltip"><pre><code>The udpate method doesn't insert any new objects it only udpates an existing one.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/update:withForeignKeys:">&ndash;&nbsp;update:withForeignKeys:</a></code>
+		<span class="tooltip"><pre><code>The udpate method doesn't insert any new objects it only udpates an existing one.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didFailToExecute:parameter:">&ndash;&nbsp;didFailToExecute:parameter:</a></code>
+		<span class="tooltip"><p>@method   <br/>
+queryFailed:
+@abstract <br/>
+Treats a query that failed to execute by, for example, printing an error message.</p>
+
+<pre><code>TODO: Put this into a @protocol
+</code></pre>
+
+<p>@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didSucceedToExecute:parameter:">&ndash;&nbsp;didSucceedToExecute:parameter:</a></code>
+		<span class="tooltip"><p>@method   <br/>
+queryFailed:
+@abstract <br/>
+Treats a query that was executed successfully to execute by, for example, printing an a sucess message.</p>
+
+<pre><code>TODO: Put this into a @protocol
+</code></pre>
+
+<p>@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sqlInformatiomFromCode:">&ndash;&nbsp;sqlInformatiomFromCode:</a></code>
+		<span class="tooltip"><p>@method   <br/>
+<a href="#//api/name/sqlInformatiomFromCode:">sqlInformatiomFromCode:</a>
+@abstract <br/>
+ex. a Query returns SQLITE_MISMATCH, the purpose of this function to give the correct</p>
+
+<pre><code>string useful to pop as a log.
+</code></pre>
+
+<p>@param iErrorCode
+The error Code ex. SQLITE_MISMATCH
+@result</p>
+
+<pre><code>ex. SQLITE_MISMATCH -&gt; @" SQLITE_MISMATCH      (Data type mismatch)"
+</code></pre></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/lastInsertedRowID" title="lastInsertedRowID"></a>
+	<h3 class="subsubtitle method-title">lastInsertedRowID</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/arrayOfObjectsFromQuery:object:" title="arrayOfObjectsFromQuery:object:"></a>
+	<h3 class="subsubtitle method-title">arrayOfObjectsFromQuery:object:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Creates the sqlite statement and does the sqlite3 call 
+</code></pre>
+
+<p>to retreive elements with more than one matching element.
+@param iQuery
+The string that holding the query
+@param iClass
+The object class that will be used during the array construction
+@result
+An array built from matching objects</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)arrayOfObjectsFromQuery:(NSString *)<em>iQuery</em> object:(Class&lt;SQLiteReadable&gt;)<em>iClass</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Creates the sqlite statement and does the sqlite3 call 
+</code></pre>
+
+<p>to retreive elements with more than one matching element.
+@param iQuery
+The string that holding the query
+@param iClass
+The object class that will be used during the array construction
+@result
+An array built from matching objects</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/businessObjectFromID:object:" title="businessObjectFromID:object:"></a>
+	<h3 class="subsubtitle method-title">businessObjectFromID:object:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Creates and executes a query of type:
+SELECT * FROM iClass WHERE mainIDColumName = iObjectID 
+</code></pre>
+
+<p>@param iObjectID
+The value of the id as it should be found in the database
+@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSObject&lt;SQLiteReadable&gt; *)businessObjectFromID:(NSString *)<em>iObjectID</em> object:(Class&lt;SQLiteReadable&gt;)<em>iClass</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Creates and executes a query of type:
+SELECT * FROM iClass WHERE mainIDColumName = iObjectID 
+</code></pre>
+
+<p>@param iObjectID
+The value of the id as it should be found in the database
+@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createsDatabaseIfNeeded" title="createsDatabaseIfNeeded"></a>
+	<h3 class="subsubtitle method-title">createsDatabaseIfNeeded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>For first time launch of the application the local sqlite database
+needs to be put to the application document folder
+@result
+True if the reset was correctly processed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (Boolean)createsDatabaseIfNeeded</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For first time launch of the application the local sqlite database
+needs to be put to the application document folder
+@result
+True if the reset was correctly processed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/databaseName" title="databaseName"></a>
+	<h3 class="subsubtitle method-title">databaseName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Your master accessor should override this method to set the current databasename
+of your application. ex. "my_database.db"
+</code></pre>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)databaseName</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string with the database name</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Your master accessor should override this method to set the current databasename
+of your application. ex. "my_database.db"
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/databasePath" title="databasePath"></a>
+	<h3 class="subsubtitle method-title">databasePath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Returns the exact path where the local sqlite 
+database is stored. (This path is set once and for when the user downloads an application)
+</code></pre>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)databasePath</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string with the corresponding path</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Returns the exact path where the local sqlite 
+database is stored. (This path is set once and for when the user downloads an application)
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deleteAllFromTable:" title="deleteAllFromTable:"></a>
+	<h3 class="subsubtitle method-title">deleteAllFromTable:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Delete All elements from the given class
+</code></pre>
+
+<p>@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)deleteAllFromTable:(Class&lt;SQLiteWritable&gt;)<em>iClass</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Delete All elements from the given class
+</code></pre>
+
+<p>@param iClass
+The object class that will be used during the array construction
+@result
+The object initalized if found or nil otherwise</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deleteBusinessObject:" title="deleteBusinessObject:"></a>
+	<h3 class="subsubtitle method-title">deleteBusinessObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Creates and executes a query of type:
+DELETE FROM iBusinessObject.class WHERE mainIDColumName = iBusinessObject.id
+</code></pre>
+
+<p>@param iBusinessObject
+The object to be deleted from database</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)deleteBusinessObject:(NSObject&lt;SQLiteReadable&gt; *)<em>iBusinessObject</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Creates and executes a query of type:
+DELETE FROM iBusinessObject.class WHERE mainIDColumName = iBusinessObject.id
+</code></pre>
+
+<p>@param iBusinessObject
+The object to be deleted from database</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/didFailToExecute:parameter:" title="didFailToExecute:parameter:"></a>
+	<h3 class="subsubtitle method-title">didFailToExecute:parameter:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method   <br/>
+queryFailed:
+@abstract <br/>
+Treats a query that failed to execute by, for example, printing an error message.</p>
+
+<pre><code>TODO: Put this into a @protocol
+</code></pre>
+
+<p>@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)didFailToExecute:(NSString *)<em>iQuery</em> parameter:(id)<em>iParameter</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method   <br/>
+queryFailed:
+@abstract <br/>
+Treats a query that failed to execute by, for example, printing an error message.</p>
+
+<pre><code>TODO: Put this into a @protocol
+</code></pre>
+
+<p>@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/didSucceedToExecute:parameter:" title="didSucceedToExecute:parameter:"></a>
+	<h3 class="subsubtitle method-title">didSucceedToExecute:parameter:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method   <br/>
+queryFailed:
+@abstract <br/>
+Treats a query that was executed successfully to execute by, for example, printing an a sucess message.</p>
+
+<pre><code>TODO: Put this into a @protocol
+</code></pre>
+
+<p>@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)didSucceedToExecute:(NSString *)<em>iQuery</em> parameter:(id)<em>iParameter</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method   <br/>
+queryFailed:
+@abstract <br/>
+Treats a query that was executed successfully to execute by, for example, printing an a sucess message.</p>
+
+<pre><code>TODO: Put this into a @protocol
+</code></pre>
+
+<p>@param iQuery
+The query that failed to execte
+@param iParameter
+Anything related to the query that could be useful to display</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/executeQuery:" title="executeQuery:"></a>
+	<h3 class="subsubtitle method-title">executeQuery:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Execute the given query and returns the last statement result
+</code></pre>
+
+<p>@param iQuery
+The string that holding the query (ex. select * from table)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)executeQuery:(NSString *)<em>iQuery</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Execute the given query and returns the last statement result
+</code></pre>
+
+<p>@param iQuery
+The string that holding the query (ex. select * from table)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insert:" title="insert:"></a>
+	<h3 class="subsubtitle method-title">insert:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>The insert method only adds objects it doesn't update them.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)insert:(NSObject&lt;SQLiteWritable&gt; *)<em>iBusinessObject</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise
+@see</p>
+
+<pre><code>save:
+update:
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>The insert method only adds objects it doesn't update them.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insert:withForeignKeys:" title="insert:withForeignKeys:"></a>
+	<h3 class="subsubtitle method-title">insert:withForeignKeys:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>The insert method only adds objects it doesn't update them.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)insert:(NSObject&lt;SQLiteWritable&gt; *)<em>iBusinessObject</em> withForeignKeys:(NSDictionary *)<em>iFKeys</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise
+@see</p>
+
+<pre><code>insert:
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>The insert method only adds objects it doesn't update them.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lastInsertRowID:" title="lastInsertRowID:"></a>
+	<h3 class="subsubtitle method-title">lastInsertRowID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Runs a SELECT last_insert_rowid() and returns the result
+</code></pre>
+
+<p>Please note that running this if mutiple threads are inserting at the
+same time is useless as it can&rsquo;t be trusted.
+@result
+The result of the SELECT last_insert_rowid().
+0 means query insertion most likely failed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSInteger)lastInsertRowID:(sqlite3 *)<em>pDatabase</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Runs a SELECT last_insert_rowid() and returns the result
+</code></pre>
+
+<p>Please note that running this if mutiple threads are inserting at the
+same time is useless as it can&rsquo;t be trusted.
+@result
+The result of the SELECT last_insert_rowid().
+0 means query insertion most likely failed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/patchDatabaseIfNeeded" title="patchDatabaseIfNeeded"></a>
+	<h3 class="subsubtitle method-title">patchDatabaseIfNeeded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Everytime the database is changed you must update this part of the code</p>
+
+<pre><code>to test if a patch needs to be applied and apply it if needed
+</code></pre>
+
+<p>@result
+True if the database needed to be patched</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (Boolean)patchDatabaseIfNeeded</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Everytime the database is changed you must update this part of the code</p>
+
+<pre><code>to test if a patch needs to be applied and apply it if needed
+</code></pre>
+
+<p>@result
+True if the database needed to be patched</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/preparationForInsert:" title="preparationForInsert:"></a>
+	<h3 class="subsubtitle method-title">preparationForInsert:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Returns part of the statement that will be used for insertion
+</code></pre>
+
+<p>@param iBusinessObjectClass</p>
+
+<pre><code>The class for the object to be inserted
+</code></pre>
+
+<p>@result
+A coma separated list of strings that will be inserted</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)preparationForInsert:(Class)<em>iBusinessObjectClass</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Returns part of the statement that will be used for insertion
+</code></pre>
+
+<p>@param iBusinessObjectClass</p>
+
+<pre><code>The class for the object to be inserted
+</code></pre>
+
+<p>@result
+A coma separated list of strings that will be inserted</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/preparationForSelect:" title="preparationForSelect:"></a>
+	<h3 class="subsubtitle method-title">preparationForSelect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Returns part of the statement that will be used for selection
+</code></pre>
+
+<p>@param iBusinessObjectClass</p>
+
+<pre><code>The class for the object to be selected
+</code></pre>
+
+<p>@result
+A coma separated list of strings that will be selected</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)preparationForSelect:(Class)<em>iBusinessObjectClass</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Returns part of the statement that will be used for selection
+</code></pre>
+
+<p>@param iBusinessObjectClass</p>
+
+<pre><code>The class for the object to be selected
+</code></pre>
+
+<p>@result
+A coma separated list of strings that will be selected</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/preparationStatement" title="preparationStatement"></a>
+	<h3 class="subsubtitle method-title">preparationStatement</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Returns the statement located into SELECT or INSERT queries
+and will vary depending on the subclass called
+</code></pre>
+
+<p>@result
+An autoreleased string object</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)preparationStatement</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Returns the statement located into SELECT or INSERT queries
+and will vary depending on the subclass called
+</code></pre>
+
+<p>@result
+An autoreleased string object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeDatabase" title="removeDatabase"></a>
+	<h3 class="subsubtitle method-title">removeDatabase</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Removes the database from the filesystem
+</code></pre>
+
+<p>@result
+True if the action was correctly processed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (Boolean)removeDatabase</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Removes the database from the filesystem
+</code></pre>
+
+<p>@result
+True if the action was correctly processed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resetDatabase" title="resetDatabase"></a>
+	<h3 class="subsubtitle method-title">resetDatabase</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Restores original database with default settings by copying
+the sqlite3 database located in Resources into the application directory
+</code></pre>
+
+<p>@result
+True if the reset was correctly processed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (Boolean)resetDatabase</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Restores original database with default settings by copying
+the sqlite3 database located in Resources into the application directory
+</code></pre>
+
+<p>@result
+True if the reset was correctly processed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/save:" title="save:"></a>
+	<h3 class="subsubtitle method-title">save:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Saves the object passed in parameter into the database.
+Saving means 
+    1. Updating if business object is already stored&lt;
+    2. Inserting if business object is not already stored in local db
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+
+<pre><code>This object should respond to both Writable and Readable protocol because a
+query is made before to see if insertion is required.
+</code></pre>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)save:(NSObject&lt;SQLiteWritable,SQLiteReadable&gt; *)<em>iBusinessObject</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise
+@see</p>
+
+<pre><code>insert:
+update:
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Saves the object passed in parameter into the database.
+Saving means 
+    1. Updating if business object is already stored&lt;
+    2. Inserting if business object is not already stored in local db
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+
+<pre><code>This object should respond to both Writable and Readable protocol because a
+query is made before to see if insertion is required.
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/save:withForeignKeys:" title="save:withForeignKeys:"></a>
+	<h3 class="subsubtitle method-title">save:withForeignKeys:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>Saves the object passed in parameter into the database.
+Saving means 
+    1. Updating if business object is already stored&lt;
+    2. Inserting if business object is not already stored in local db
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+
+<pre><code>This object should respond to both Writable and Readable protocol because a
+query is made before to see if insertion is required.
+</code></pre>
+
+<p>@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)save:(NSObject&lt;SQLiteWritable,SQLiteReadable&gt; *)<em>iBusinessObject</em> withForeignKeys:(NSDictionary *)<em>iFKeys</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise
+@see</p>
+
+<pre><code>insert:
+update:
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>Saves the object passed in parameter into the database.
+Saving means 
+    1. Updating if business object is already stored&lt;
+    2. Inserting if business object is not already stored in local db
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+
+<pre><code>This object should respond to both Writable and Readable protocol because a
+query is made before to see if insertion is required.
+</code></pre>
+
+<p>@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sqlInformatiomFromCode:" title="sqlInformatiomFromCode:"></a>
+	<h3 class="subsubtitle method-title">sqlInformatiomFromCode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method   <br/>
+<a href="#//api/name/sqlInformatiomFromCode:">sqlInformatiomFromCode:</a>
+@abstract <br/>
+ex. a Query returns SQLITE_MISMATCH, the purpose of this function to give the correct</p>
+
+<pre><code>string useful to pop as a log.
+</code></pre>
+
+<p>@param iErrorCode
+The error Code ex. SQLITE_MISMATCH
+@result</p>
+
+<pre><code>ex. SQLITE_MISMATCH -&gt; @" SQLITE_MISMATCH      (Data type mismatch)"
+</code></pre>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)sqlInformatiomFromCode:(NSInteger)<em>iErrorCode</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method   <br/>
+<a href="#//api/name/sqlInformatiomFromCode:">sqlInformatiomFromCode:</a>
+@abstract <br/>
+ex. a Query returns SQLITE_MISMATCH, the purpose of this function to give the correct</p>
+
+<pre><code>string useful to pop as a log.
+</code></pre>
+
+<p>@param iErrorCode
+The error Code ex. SQLITE_MISMATCH
+@result</p>
+
+<pre><code>ex. SQLITE_MISMATCH -&gt; @" SQLITE_MISMATCH      (Data type mismatch)"
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/update:" title="update:"></a>
+	<h3 class="subsubtitle method-title">update:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>The udpate method doesn't insert any new objects it only udpates an existing one.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)update:(NSObject&lt;SQLiteWritable&gt; *)<em>iBusinessObject</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise
+@see</p>
+
+<pre><code>save:
+insert:
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>The udpate method doesn't insert any new objects it only udpates an existing one.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/update:withForeignKeys:" title="update:withForeignKeys:"></a>
+	<h3 class="subsubtitle method-title">update:withForeignKeys:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<pre><code>The udpate method doesn't insert any new objects it only udpates an existing one.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)update:(NSObject&lt;SQLiteWritable&gt; *)<em>iBusinessObject</em> withForeignKeys:(NSDictionary *)<em>iFKeys</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if correctly processed. false otherwise
+@see</p>
+
+<pre><code>save:
+insert:
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>The udpate method doesn't insert any new objects it only udpates an existing one.
+</code></pre>
+
+<p>@param iBusinessObject
+The business object to store into the database
+@param iFKeys
+The hash map of foreign key to refer to (Key &ndash;> Value)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SnSSQLiteAccessor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Smart&amp;Soft. All rights reserved. (Last updated: 2011-08-31)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

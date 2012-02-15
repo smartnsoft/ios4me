@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSString(SnSExtensionPrivate).html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSString</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+SnSExtension.h</DeclaredIn>
+			
+			<NodeRef refid="56"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/stringUnique</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)stringUnique</Declaration>
+			
+			
+			<Anchor>//api/name/stringUnique</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/stringByEscapingSingleQuotesForSQLite</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)stringByEscapingSingleQuotesForSQLite</Declaration>
+			
+			
+			<Anchor>//api/name/stringByEscapingSingleQuotesForSQLite</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/stringByJoiningArray:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)stringByJoiningArray:(NSArray *)iArray</Declaration>
+			
+			
+			<Anchor>//api/name/stringByJoiningArray:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/initWithSQLiteStatement:column:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)initWithSQLiteStatement:(sqlite3_stmt *)iStatement column:(NSInteger)iColumn</Declaration>
+			
+			
+			<Anchor>//api/name/initWithSQLiteStatement:column:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/integerFromStatement:column:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+SnSExtension.h</DeclaredIn>			
+			
+			<Declaration>+ (NSInteger)integerFromStatement:(sqlite3_stmt *)iStatement column:(NSInteger)iColumn</Declaration>
+			
+			
+			<Anchor>//api/name/integerFromStatement:column:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSString/integerFromDictionary:key:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>NSString+SnSExtension.m</DeclaredIn>			
+			
+			<Declaration>+ (NSInteger)integerFromDictionary:(NSDictionary *)iDict key:(NSString *)iKey</Declaration>
+			
+			
+			<Anchor>//api/name/integerFromDictionary:key:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

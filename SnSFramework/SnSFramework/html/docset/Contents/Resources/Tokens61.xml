@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/ChoiceButtonDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/ChoiceButtonDelegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>
+			
+			<NodeRef refid="61"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ChoiceButtonDelegate/closeButton:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>- (void)closeButton:(ChoiceButton *)button</Declaration>
+			
+			
+			<Anchor>//api/name/closeButton:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ChoiceButtonDelegate/editButton:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>- (void)editButton:(ChoiceButton *)button</Declaration>
+			
+			
+			<Anchor>//api/name/editButton:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ChoiceButtonDelegate/selectButton:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ChoiceButton.h</DeclaredIn>			
+			
+			<Declaration>- (void)selectButton:(ChoiceButton *)button</Declaration>
+			
+			
+			<Anchor>//api/name/selectButton:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

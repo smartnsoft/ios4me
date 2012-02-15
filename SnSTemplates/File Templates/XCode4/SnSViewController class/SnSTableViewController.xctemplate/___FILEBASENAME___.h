@@ -1,0 +1,1 @@
+../../../XCode3/SnSViewController class/SnSTableViewController subclass.pbfiletemplate/class.h

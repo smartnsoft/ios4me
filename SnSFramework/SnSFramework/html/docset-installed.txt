@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/johan/Library/Developer/Shared/Documentation/DocSets/com.smartnsoft.standard.SnSFramework.docset
+Time: 2011-08-31 14:25:13 +0000
