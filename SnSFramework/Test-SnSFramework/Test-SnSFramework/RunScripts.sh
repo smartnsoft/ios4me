@@ -6,6 +6,3 @@
 TEST_SQL_PATH="Test-SnSFramework/Test-SQLiteAccessor"
 python ${PROJECT}/Resources/sqlite2model.py -s -p Test --id tid --output ${TEST_SQL_PATH} ${TEST_SQL_PATH}/test_sqlite.sql
  
- 
-
-
