@@ -11,9 +11,10 @@ BASE_FRAMEWORK_ROOT_DIR=`find /Developer/Platforms/ -name "*.sdk" -type d -maxde
 BASE_XCODE_VERSION="3 4"
 
 SCRIPT_PATH="$PWD/`dirname $0`"
+PROJECT_NAME="ios4me"
 SMARTNSOFT_VER='SmartnSoftv1.0'
 SMARTNSOFT_FRAMEWORKS_PATH="${SCRIPT_PATH}/Frameworks"
-SMARTNSOFT_TEMPLATE_NAME="SmartnSoft Application"
+SMARTNSOFT_TEMPLATE_NAME="${PROJECT_NAME} Application"
 
 #BASE_TEMPLATE_DIR="./REP_install_template"
 #BASE_TEMPLATE_USER_DIR="./REP_install_template"
@@ -183,7 +184,7 @@ replace_identifier ()
 
 copy_frameworks()
 {
-	print_template_banner "Installing SmartnSoft External Frameworks"
+	print_template_banner "Installing ${PROJECT_NAME}  External Frameworks"
 	
 	echo "List of Frameworks to Copy: "
 	ls  ${SMARTNSOFT_FRAMEWORKS_PATH} | grep -i "framework"
@@ -203,7 +204,7 @@ copy_project_templates(){
 	
 	for xcode in ${BASE_XCODE_VERSION}
 	do	
-		print_template_banner "Installing SmartnSoft Project Templates for XCode${xcode}"
+		print_template_banner "Installing ${PROJECT_NAME} Project Templates for XCode${xcode}"
 			
 		TEMPLATE_DIR=`template_dir $xcode "Project Templates"`
 		
@@ -214,7 +215,7 @@ copy_project_templates(){
 		check_dst_dir
 		
 		if [[ ! -d "$TEMPLATE_DIR" ]]; then
-			echo '...creating SmartnSoft template directory'
+			echo "...creating ${PROJECT_NAME} template directory"
 			echo ''
 			mkdir -p "$TEMPLATE_DIR"
 		fi
@@ -238,7 +239,7 @@ copy_file_templates(){
 	
 	for xcode in ${BASE_XCODE_VERSION}
 	do	
-		print_template_banner "Installing SmartnSoft File Templates for XCode${xcode}..."
+		print_template_banner "Installing ${PROJECT_NAME} File Templates for XCode${xcode}..."
 	
 		TEMPLATE_DIR=`template_dir $xcode "File Templates"`
 		DST_DIR="$TEMPLATE_DIR"
@@ -247,7 +248,7 @@ copy_file_templates(){
 	
 
 		if [[ ! -d "$TEMPLATE_DIR" ]]; then
-			echo 'creating SmartnSoft template directory'
+			echo "creating ${PROJECT_NAME} template directory"
 			mkdir -p "$TEMPLATE_DIR"
 		fi
 	
@@ -271,21 +272,21 @@ copy_file_templates(){
 
 build_framework ()
 {
-	print_template_banner "Building Smart&Soft Framework"
+	print_template_banner "Building ${PROJECT_NAME} Framework"
 	
 	log_path="${SCRIPT_PATH}/log.txt"
 	log_err="${SCRIPT_PATH}/log.err"
 	
 	cd "${SCRIPT_PATH}/../SnSFramework"
-	echo '... Building: xcodebuild -workspace "SnSFramework.xcworkspace" -scheme "SnSFramework (Framework)" -configuration "Debug"'
-	sudo -u $SUDO_USER xcodebuild -workspace "SnSFramework.xcworkspace" -scheme "SnSFramework (Framework)" -configuration "Debug" > ${log_path} 2>${log_err}
+	echo '... Building: xcodebuild -workspace "SnSFramework.xcworkspace" -scheme "ios4me (Framework)" -configuration "Debug"'
+	sudo -u $SUDO_USER xcodebuild -workspace "SnSFramework.xcworkspace" -scheme "ios4me (Framework)" -configuration "Debug" > ${log_path} 2>${log_err}
 	
 	if [ $? -gt 0 ]
 	then
 		build_dir=`grep "setenv BUILD_DIR" ${log_path} | grep -oP "\".+\""`
 		errors="`grep '' ${log_err}`\n`grep 'error:' ${log_path}`"
 		find "${build_dir}" -exec chown $SUDO_USER {}  \; 2>>${log_err}
-		print_err "Failed to execute: xcodebuild -target 'SnSFramework (Framework)' -configuration 'Debug' \n${errors}"
+		print_err "Failed to execute: xcodebuild -target 'ios4me (Framework)' -configuration 'Debug' \n${errors}"
 		# exit
 	fi
 	
@@ -304,7 +305,7 @@ build_framework ()
 	cp -rf $snsframework_path ${SMARTNSOFT_FRAMEWORKS_PATH}
 	for folder in ${BASE_FRAMEWORK_ROOT_DIR}
 	do
-		echo "... Coping Smart&Soft.framework to $folder"
+		echo "... Coping ios4me.framework to $folder"
 		copy_files "${SMARTNSOFT_FRAMEWORKS_PATH}" "$folder"
 	done
 	
@@ -323,7 +324,7 @@ __main__ ()
 {
 	setup_colors
 
-	print_template_banner 'SmartnSoft Project Template Installer'
+	print_template_banner "${PROJECT_NAME} Project Template Installer"
 	
 	copy_frameworks
 
