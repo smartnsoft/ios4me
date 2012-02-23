@@ -21,8 +21,6 @@
 #import "SnSLog.h"
 #import "SnSUtils.h"
 
-(void) onExceptionHandler (NSException *exception);
-
 #pragma mark -
 #pragma mark SnSAppDelegate(Private)
 
@@ -158,8 +156,6 @@
 		BOOL resume = YES;
 		[[SnSApplicationController instance] handleException:self exception:exception resume:&resume];
 	}
-	
-	NSSetUncaughtExceptionHandler (&onExceptionHandler);
 }
 
 - (void) applicationWillTerminate:(UIApplication *) application
@@ -210,12 +206,6 @@ NSString * LOADING_ACTION_MESSAGE = @"message";
 + (void) stopLoading:(id)sender
 {
 	[[NSNotificationCenter defaultCenter] postNotificationName:LOADING_ACTION_NOTIFICATION_NAME object:sender userInfo:nil];
-}
-
-(void)onExceptionHandler (NSException *exception) // C Syntax
-{
-	NSArray *stack = [exception callStackReturnAddresses];
-    SnSLogE(@"********************************\n****Stack trace:\n%@", stack);
 }
 
 #pragma mark -
