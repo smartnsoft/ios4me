@@ -5,9 +5,6 @@
       location = "group:Test-SnSFramework/Test-SnSFramework.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:SnSFramework/SnSFramework.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:SnSFramework/ios4me.xcodeproj">
    </FileRef>
 </Workspace>
