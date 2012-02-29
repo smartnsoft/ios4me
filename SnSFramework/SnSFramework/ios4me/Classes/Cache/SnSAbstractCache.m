@@ -1,5 +1,5 @@
 //
-//  SnSURLCacheSilo.m
+//  SnSURLAbstractCache.m
 //  SnSFramework
 //
 //  Created by Johan Attali on 26/07/11.
@@ -9,7 +9,6 @@
 #import "SnSAbstractCache.h"
 
 #import "SnSUtils.h"
-#import "SnSCacheException.h"
 
 @implementation SnSAbstractCache
 
@@ -17,30 +16,32 @@
 
 @synthesize highCapacity = highCapacity_;
 @synthesize lowCapacity = lowCapacity_;
-@synthesize items = _items;
+@synthesize cacheSize = cacheSize_;
+@synthesize items = items_;
 
 static NSInteger sCacheIndex = -1;
 
-//#pragma mark - Singleton Methods
-//
-//+ (SnSURLCacheSilo*)instance
-//{
-//    static SnSURLCacheSilo* aSingleton = nil;
-//    
-//    if (aSingleton == nil)
-//        aSingleton = [[SnSURLCacheSilo alloc] init];
-//    
-//    return aSingleton;
-//}
+#define kSnSAbstractCacheHighCapacityKey @"highCapacity"
+#define kSnSAbstractCacheLowCapacityKey @"lowCapacity"
+#define kSnSAbstractCacheCacheIndexKey @"cacheIndex"
+#define kSnSAbstractCacheItemsKey @"items"
 
-#define kSnSCacheSiloHighCapacityKey @"highCapacity"
-#define kSnSCacheSiloLowCapacityKey @"lowCapacity"
-#define kSnSCacheSiloCacheIndexKey @"cacheIndex"
-#define kSnSCacheSiloItemsKey @"items"
-#define kSnSCacheSiloMemoryKey @"memory"
+#define kSnSAbstractCacheDefaultHighCapacity 1024*1024*3	// 3 Megabytes
+#define kSnSAbstractCacheDefaultLowCapacity 1024*300		// 300 Kilobytes
 
-#pragma mark - Init Methods
+#pragma mark -
+#pragma mark NSObject
+#pragma mark -
 
+- (id)init
+{
+	return [self initWithMaxCapacity:kSnSAbstractCacheDefaultHighCapacity 
+						 minCapacity:kSnSAbstractCacheDefaultLowCapacity];
+}
+
+/** 
+ *	Designated Initalizer
+ */
 - (id)initWithMaxCapacity:(NSInteger)iHighCapacity
 			  minCapacity:(NSInteger)iLowCapacity
 {
@@ -52,6 +53,7 @@ static NSInteger sCacheIndex = -1;
 
 		/* ***  Computed Values *** */
 		cacheIndex_ = ++sCacheIndex;
+		cacheSize_ = 0;
 				
         items_ = [[NSMutableDictionary alloc] init];
     }
@@ -72,23 +74,29 @@ static NSInteger sCacheIndex = -1;
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"id: %u - items [%d] - high: %d - low: %d", cacheIndex_, [items_ count], highCapacity_, lowCapacity_];
+	return [NSString stringWithFormat:@"id: %u - size: %d - items [%d] - high: %d - low: %d", 
+			cacheIndex_, 
+			cacheSize_,
+			[items_ count],
+			highCapacity_,
+			lowCapacity_];
 }
 
-#pragma mark - NSCoding Methods
+#pragma mark -
+#pragma mark NSCoding Methods
+#pragma mark -
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 	SnSLogD(@"Encoding Cache [%@] ", self);
 	
 	// Integers
-	[aCoder encodeInteger:highCapacity_ forKey:kSnSCacheSiloHighCapacityKey];
-	[aCoder encodeInteger:lowCapacity_ forKey:kSnSCacheSiloLowCapacityKey];
-	[aCoder encodeInteger:cacheIndex_ forKey:kSnSCacheSiloCacheIndexKey];
-
+	[aCoder encodeInteger:highCapacity_ forKey:kSnSAbstractCacheHighCapacityKey];
+	[aCoder encodeInteger:lowCapacity_ forKey:kSnSAbstractCacheLowCapacityKey];
+	[aCoder encodeInteger:cacheIndex_ forKey:kSnSAbstractCacheCacheIndexKey];
 
 	// Objects
-	[aCoder encodeObject:items_ forKey:kSnSCacheSiloItemsKey];
+	[aCoder encodeObject:items_ forKey:kSnSAbstractCacheItemsKey];
 
 }
 
@@ -96,11 +104,11 @@ static NSInteger sCacheIndex = -1;
 {
 	if ((self = [super init]))
 	{
-		highCapacity_		= [aDecoder decodeIntegerForKey:kSnSCacheSiloHighCapacityKey];
-		lowCapacity_		= [aDecoder decodeIntegerForKey:kSnSCacheSiloLowCapacityKey];
-		cacheIndex_			= [aDecoder decodeIntegerForKey:kSnSCacheSiloCacheIndexKey];
+		highCapacity_		= [aDecoder decodeIntegerForKey:kSnSAbstractCacheHighCapacityKey];
+		lowCapacity_		= [aDecoder decodeIntegerForKey:kSnSAbstractCacheLowCapacityKey];
+		cacheIndex_			= [aDecoder decodeIntegerForKey:kSnSAbstractCacheCacheIndexKey];
 
-		items_				= [[aDecoder decodeObjectForKey:kSnSCacheSiloItemsKey] retain];
+		items_				= [[aDecoder decodeObjectForKey:kSnSAbstractCacheItemsKey] retain];
 		
 		sCacheIndex = MAX(cacheIndex_, sCacheIndex);
 	}
@@ -111,7 +119,9 @@ static NSInteger sCacheIndex = -1;
 }
 
 
+#pragma mark -
 #pragma mark Store/Retrieve data from cache
+#pragma mark -
 
 - (void)storeCacheItem:(SnSCacheItem*)iItem forKey:(id)iKey
 {
@@ -122,7 +132,6 @@ static NSInteger sCacheIndex = -1;
 {
 	SnSLogW(@"This method will do nothing and should be overwritten in your custom %@ class", [self class]);
 }
-
 
 - (SnSCacheItem*)cachedItemForKey:(id)iKey
 {

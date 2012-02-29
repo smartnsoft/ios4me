@@ -79,10 +79,6 @@
 #import "SnSWebServiceCaller.h"
 #import "SnSStoreManager.h"
 
-
-// Errors/Exceptions
-#import "SnSCacheException.h"
-
 // Utils
 #import "SnSUtils.h"
 #import "SnSImageDownloader.h"

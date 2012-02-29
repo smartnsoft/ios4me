@@ -26,10 +26,12 @@
     
     @protected
     NSInteger   cacheIndex_;
+	NSInteger	cacheSize_;		//<! The cache size is calculated in the background by the SnSCacheChecker
 }
 
 @property (nonatomic) NSInteger highCapacity;
 @property (nonatomic) NSInteger lowCapacity;
+@property (assign) NSInteger cacheSize;
 
 /**
  *  Key:    <url>
@@ -84,9 +86,6 @@
  *	The object associated to given key if found, nil otherwise
  */
 - (id)cachedObjectForKey:(id)iKey;
-
-
-
 
 
 

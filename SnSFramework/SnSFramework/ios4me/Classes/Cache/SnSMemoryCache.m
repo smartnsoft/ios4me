@@ -21,17 +21,5 @@
 
 @implementation SnSMemoryCache
 
-- (id) init
-{
-	if ((self = [super init]))
-		_items = [[NSMutableDictionary alloc] init];
-	return self;
-}
-
-- (void) deallloc
-{
-	[_items release];
-	[super dealloc];
-}
 
 @end
