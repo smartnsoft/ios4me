@@ -67,14 +67,13 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
 	[self validateAndSaveCriticalApplicationData];
 	
 	UIAlertView *alert =
-		[[[UIAlertView alloc]
-			initWithTitle:NSLocalizedString(@"Unhandled exception", nil)
-			message:[NSString stringWithFormat:NSLocalizedString(
-				@"You can try to continue but the application may be unstable.\n\n"
-				@"Debug details will be logged", nil)]
-			delegate:self
-			cancelButtonTitle:NSLocalizedString(@"Quit", nil)
-			otherButtonTitles:NSLocalizedString(@"Continue", nil), nil]
+		[[[UIAlertView alloc] initWithTitle:@"Unhandled exception"
+									message:[NSString stringWithFormat:@"%@%@",
+											 @"You can try to continue but the application may be unstable.\n\n",
+											 @"Debug details will be logged"]
+								   delegate:self
+						  cancelButtonTitle:NSLocalizedString(@"Quit", nil)
+						  otherButtonTitles:NSLocalizedString(@"Continue", nil), nil]
 		autorelease];
 	[alert show];
 		
