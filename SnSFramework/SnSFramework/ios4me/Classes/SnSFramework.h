@@ -68,6 +68,9 @@
 #import "UIDevice+DeviceDetection.h"
 #import "UIDevice+DeviceConnectivity.h"
 
+// Exceptions
+#import "SnSExceptionHandler.h"
+
 // SQLite 
 #import "SnSSQLiteStorable.h"
 #import "SnSSQLiteAccessor.h"

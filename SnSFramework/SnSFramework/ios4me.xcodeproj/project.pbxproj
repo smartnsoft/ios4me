@@ -93,6 +93,10 @@
 		04ADDBE614ED470200C2087E /* SnSSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADDB4A14ED470200C2087E /* SnSSingleton.m */; };
 		04ADDBE914ED470200C2087E /* SnSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADDB4C14ED470200C2087E /* SnSUtils.m */; };
 		04ADDBEA14ED470200C2087E /* SnSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADDB4C14ED470200C2087E /* SnSUtils.m */; };
+		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
+		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
+		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
+		04FB835014F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
 		803BC91B12A6BEF100336B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
 		803BC91D12A6BEF100336B25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91C12A6BEF100336B25 /* UIKit.framework */; };
 		80504FFD14064672006A9B23 /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */; };
@@ -108,7 +112,7 @@
 		04ADDA7B14ED195500C2087E /* libios4meDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios4meDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADDAD314ED196400C2087E /* libios4meSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios4meSimulator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADDAEA14ED46DD00C2087E /* ios4me_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ios4me_Prefix.pch; path = ios4me/ios4me_Prefix.pch; sourceTree = "<group>"; };
-		04ADDAEB14ED46DD00C2087E /* ios4me.plist */ = {isa = PBXFileReference; fileEncoding = 4; name = ios4me.plist; path = ios4me/ios4me.plist; sourceTree = "<group>"; };
+		04ADDAEB14ED46DD00C2087E /* ios4me.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ios4me.plist; path = ios4me/ios4me.plist; sourceTree = "<group>"; };
 		04ADDAEF14ED46EF00C2087E /* iOSFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = iOSFramework.sh; path = ios4me/iOSFramework.sh; sourceTree = "<group>"; };
 		04ADDAF214ED470200C2087E /* SnSSQLiteAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSSQLiteAccessor.h; sourceTree = "<group>"; };
 		04ADDAF314ED470200C2087E /* SnSSQLiteAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSQLiteAccessor.m; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		04ADDB4A14ED470200C2087E /* SnSSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSingleton.m; sourceTree = "<group>"; };
 		04ADDB4B14ED470200C2087E /* SnSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSUtils.h; sourceTree = "<group>"; };
 		04ADDB4C14ED470200C2087E /* SnSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSUtils.m; sourceTree = "<group>"; };
+		04FB834B14F68150004754E7 /* SnSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSExceptionHandler.h; sourceTree = "<group>"; };
+		04FB834C14F68150004754E7 /* SnSExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSExceptionHandler.m; sourceTree = "<group>"; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		803BC91C12A6BEF100336B25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASIHTTPFramework.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/ASIHTTPFramework.framework; sourceTree = DEVELOPER_DIR; };
@@ -275,6 +281,7 @@
 				04ADDAF514ED470200C2087E /* App */,
 				04ADDAFC14ED470200C2087E /* Cache */,
 				04ADDB0E14ED470200C2087E /* Controller */,
+				04FB834A14F68150004754E7 /* Exceptions */,
 				04ADDB2414ED470200C2087E /* Extensions */,
 				04ADDB2F14ED470200C2087E /* Log */,
 				04ADDB3214ED470200C2087E /* Service */,
@@ -439,6 +446,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		04FB834A14F68150004754E7 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				04FB834B14F68150004754E7 /* SnSExceptionHandler.h */,
+				04FB834C14F68150004754E7 /* SnSExceptionHandler.m */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
 		0867D691FE84028FC02AAC07 /* SnSFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +534,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +542,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +761,7 @@
 				04ADDBE114ED470200C2087E /* SnSImageDownloader.m in Sources */,
 				04ADDBE514ED470200C2087E /* SnSSingleton.m in Sources */,
 				04ADDBE914ED470200C2087E /* SnSUtils.m in Sources */,
+				04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +805,7 @@
 				04ADDBE214ED470200C2087E /* SnSImageDownloader.m in Sources */,
 				04ADDBE614ED470200C2087E /* SnSSingleton.m in Sources */,
 				04ADDBEA14ED470200C2087E /* SnSUtils.m in Sources */,
+				04FB835014F68150004754E7 /* SnSExceptionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

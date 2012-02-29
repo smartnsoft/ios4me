@@ -14,7 +14,7 @@
 		<key>SnSFramework (Framework).xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
@@ -42,7 +42,7 @@
 		<key>ios4me (Framework).xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>

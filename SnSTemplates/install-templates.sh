@@ -21,6 +21,7 @@ SMARTNSOFT_TEMPLATE_NAME="${PROJECT_NAME} Application"
 
 force=
 user_dir=
+skip=
 
 usage(){
 cat << EOF
@@ -31,13 +32,14 @@ Install / update templates for ${SMARTNSOFT_VER}
 OPTIONS:
    -f	force overwrite if directories exist
    -h	this help
+   -s   skip the copy framework part
    -u	install in user's Library directory instead of global directory
    -x	Version of XCode to use. Could be 3 or 4 (default both)
 EOF
 }
 
 #'
-while getopts "fhux:" OPTION; do
+while getopts "fhuxs:" OPTION; do
 	case "$OPTION" in
 		f)
 			force=1
@@ -48,6 +50,9 @@ while getopts "fhux:" OPTION; do
 			;;
 		u)
 			user_dir=1
+			;;
+		s)
+			skip=1
 			;;
 		x)
 			BASE_XCODE_VERSION=${OPTARG}
@@ -184,19 +189,22 @@ replace_identifier ()
 
 copy_frameworks()
 {
-	print_template_banner "Installing ${PROJECT_NAME}  External Frameworks"
+	if [[ "$skip" != "1" ]];
+	then
+		print_template_banner "Installing ${PROJECT_NAME}  External Frameworks"
 	
-	echo "List of Frameworks to Copy: "
-	ls  ${SMARTNSOFT_FRAMEWORKS_PATH} | grep -i "framework"
+		echo "List of Frameworks to Copy: "
+		ls  ${SMARTNSOFT_FRAMEWORKS_PATH} | grep -i "framework"
 	
-	echo  ""
-	for folder in ${BASE_FRAMEWORK_ROOT_DIR}
-	do
-		echo "... Coping Frameworks to $folder"
-		copy_files "${SMARTNSOFT_FRAMEWORKS_PATH}" "$folder"
-	done
+		echo  ""
+		for folder in ${BASE_FRAMEWORK_ROOT_DIR}
+		do
+			echo "... Coping Frameworks to $folder"
+			copy_files "${SMARTNSOFT_FRAMEWORKS_PATH}" "$folder"
+		done
 	
-	print_ok "Done"
+		print_ok "Done"
+	fi
 }
 
 # copies project-based templates

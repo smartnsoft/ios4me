@@ -17,6 +17,7 @@
 
 #import "SnSAppDelegate.h"
 #import "SnSAppWindow.h"
+#import "SnSExceptionHandler.h"
 
 #import "SnSLog.h"
 #import "SnSUtils.h"
@@ -156,6 +157,12 @@
 		BOOL resume = YES;
 		[[SnSApplicationController instance] handleException:self exception:exception resume:&resume];
 	}
+	
+	// -----------------------------
+	// Install the Global Exception Handler
+	// -----------------------------
+	InstallUncaughtExceptionHandler();
+	
 }
 
 - (void) applicationWillTerminate:(UIApplication *) application
