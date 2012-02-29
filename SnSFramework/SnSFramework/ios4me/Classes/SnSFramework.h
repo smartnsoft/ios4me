@@ -37,12 +37,9 @@
 #import "SnSCacheDelegate.h"
 
 // Cache
+#import "SnSAbstractCache.h"
 #import "SnSMemoryCache.h"
 #import "SnSURLCache.h"
-#import "SnSCacheItem.h"
-#import "SnSCacheSilo.h"
-#import "SnSURLCacheSilo.h"
-#import "SnSMasterCache.h"
 
 // Connection
 #import "SnSURLConnection.h"

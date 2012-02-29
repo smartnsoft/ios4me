@@ -13,6 +13,7 @@
 		040D0C8A1407936C00F4EF09 /* test_sqlite.sql in Resources */ = {isa = PBXBuildFile; fileRef = 040D0C871407936C00F4EF09 /* test_sqlite.sql */; };
 		040D0C901407A6BC00F4EF09 /* TableA.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0C8F1407A6BB00F4EF09 /* TableA.m */; };
 		0424C44313E92C1200A91451 /* Test-Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0424C44213E92C1200A91451 /* Test-Singleton.m */; };
+		0480A9B814FE33CC005C2FD2 /* ios4me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480A9B714FE33CC005C2FD2 /* ios4me.framework */; };
 		048411E213F2D2E8004B17A1 /* Test-StoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048411E113F2D2E8004B17A1 /* Test-StoreManager.m */; };
 		048411E513F2DCAE004B17A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411E413F2DCAE004B17A1 /* StoreKit.framework */; };
 		04ADD96614EBEC3E00C2087E /* sqlite2model.py in Resources */ = {isa = PBXBuildFile; fileRef = 04ADD96514EBEC3E00C2087E /* sqlite2model.py */; };
@@ -34,7 +35,6 @@
 		04CB24A413DF01BF00A5B069 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 04CB24A313DF01BF00A5B069 /* iTunesArtwork */; };
 		04CB24A813DF01BF00A5B069 /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB24A713DF01BF00A5B069 /* GHUnitIOSTestMain.m */; };
 		04CB24AB13DF01BF00A5B069 /* Test-Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB24AA13DF01BF00A5B069 /* Test-Cache.m */; };
-		04D7B7FD140E5E5B00238E32 /* Smart&Soft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D7B7FC140E5E5B00238E32 /* Smart&Soft.framework */; };
 		04D7B800140E5E7400238E32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D7B7FF140E5E7400238E32 /* QuartzCore.framework */; };
 		04D7B804140E75DB00238E32 /* Test-TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7B803140E75DB00238E32 /* Test-TableView.m */; };
 		04D7B80E140E7CBC00238E32 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7B80D140E7CBC00238E32 /* TableViewController.m */; };
@@ -51,6 +51,7 @@
 		040D0C8E1407A6BB00F4EF09 /* TableA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableA.h; sourceTree = "<group>"; };
 		040D0C8F1407A6BB00F4EF09 /* TableA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableA.m; sourceTree = "<group>"; };
 		0424C44213E92C1200A91451 /* Test-Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-Singleton.m"; sourceTree = "<group>"; };
+		0480A9B714FE33CC005C2FD2 /* ios4me.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios4me.framework; path = ../SnSFramework/build/Framework/ios4me.framework; sourceTree = "<group>"; };
 		048411E113F2D2E8004B17A1 /* Test-StoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-StoreManager.m"; sourceTree = "<group>"; };
 		048411E413F2DCAE004B17A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		04ADD96514EBEC3E00C2087E /* sqlite2model.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = sqlite2model.py; path = Resources/sqlite2model.py; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		04CB24A913DF01BF00A5B069 /* Test_SnSFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Test_SnSFramework-Info.plist"; path = "Resources/Test_SnSFramework-Info.plist"; sourceTree = "<group>"; };
 		04CB24AA13DF01BF00A5B069 /* Test-Cache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Test-Cache.m"; sourceTree = "<group>"; };
 		04CB24AC13DF01BF00A5B069 /* RunTests.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RunTests.sh; sourceTree = "<group>"; };
-		04D7B7FC140E5E5B00238E32 /* Smart&Soft.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Smart&Soft.framework"; path = "../SnSFramework/build/Framework/Smart&Soft.framework"; sourceTree = "<group>"; };
 		04D7B7FF140E5E7400238E32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		04D7B802140E75DB00238E32 /* Test-TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-TableView.h"; sourceTree = "<group>"; };
 		04D7B803140E75DB00238E32 /* Test-TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-TableView.m"; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0480A9B814FE33CC005C2FD2 /* ios4me.framework in Frameworks */,
 				04D7B800140E5E7400238E32 /* QuartzCore.framework in Frameworks */,
 				048411E513F2DCAE004B17A1 /* StoreKit.framework in Frameworks */,
 				04CB248413DF01BF00A5B069 /* UIKit.framework in Frameworks */,
@@ -102,7 +103,6 @@
 				04CB248E13DF01BF00A5B069 /* CoreLocation.framework in Frameworks */,
 				04CB249013DF01BF00A5B069 /* MobileCoreServices.framework in Frameworks */,
 				04CB249213DF01BF00A5B069 /* GHUnitIOS.framework in Frameworks */,
-				04D7B7FD140E5E5B00238E32 /* Smart&Soft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +142,8 @@
 		04CB248213DF01BF00A5B069 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0480A9B714FE33CC005C2FD2 /* ios4me.framework */,
 				04D7B7FF140E5E7400238E32 /* QuartzCore.framework */,
-				04D7B7FC140E5E5B00238E32 /* Smart&Soft.framework */,
 				048411E413F2DCAE004B17A1 /* StoreKit.framework */,
 				04CB248313DF01BF00A5B069 /* UIKit.framework */,
 				04CB248513DF01BF00A5B069 /* Foundation.framework */,

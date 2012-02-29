@@ -7,7 +7,7 @@
 //
 
 #import "SnSURLConnection.h"
-#import "SnSMasterCache.h"
+//#import "SnSMasterCache.h"
 #import "SnSCacheItem.h"
 
 @implementation SnSURLConnection
@@ -67,25 +67,25 @@
 		_request.cachePolicy == NSURLRequestReturnCacheDataElseLoad ||
 		_request.cachePolicy == NSURLRequestReloadRevalidatingCacheData)
 	{
-		SnSMasterCache* aMasterCache = [SnSMasterCache instance];
-		SnSCacheItem* aCacheItem = [aMasterCache cachedItemForQuery:_request.URL];
+//		SnSMasterCache* aMasterCache = [SnSMasterCache instance];
+//		SnSCacheItem* aCacheItem = [aMasterCache cachedItemForQuery:_request.URL];
 		
-		// Item not in cache ?
-		if (!aCacheItem)
-		{
-			// retreive it 
-			// TODO: check the request cache policy for a finer connection system
-			// TODO: add async data fetching
-			NSData* aData = [self retreiveData];
-			
-			// Create cache item
-			aCacheItem = [[SnSCacheItem alloc] initWithKey:_request.URL date:[NSDate date] data:aData];
-			
-			// Store it
-			[aMasterCache storeCacheItem:aCacheItem forQuery:_request.URL];
-			
-			[aCacheItem release];
-		}
+//		// Item not in cache ?
+//		if (0)
+//		{
+//			// retreive it 
+//			// TODO: check the request cache policy for a finer connection system
+//			// TODO: add async data fetching
+//			NSData* aData = [self retreiveData];
+//			
+//			// Create cache item
+//			aCacheItem = [[SnSCacheItem alloc] initWithKey:_request.URL date:[NSDate date] data:aData];
+//			
+//			// Store it
+//			[aMasterCache storeCacheItem:aCacheItem forQuery:_request.URL];
+//			
+//			[aCacheItem release];
+//		}
 	}
 }
 
