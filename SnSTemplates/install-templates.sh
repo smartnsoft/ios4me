@@ -14,6 +14,7 @@ SCRIPT_PATH="$PWD/`dirname $0`"
 PROJECT_NAME="ios4me"
 SMARTNSOFT_VER='SmartnSoftv1.0'
 SMARTNSOFT_FRAMEWORKS_PATH="${SCRIPT_PATH}/Frameworks"
+SMARTNSOFT_EXTRACT_PATH="${SCRIPT_PATH}/Frameworks/extracts"
 SMARTNSOFT_TEMPLATE_NAME="${PROJECT_NAME} Application"
 
 #BASE_TEMPLATE_DIR="./REP_install_template"
@@ -192,15 +193,18 @@ copy_frameworks()
 	if [[ "$skip" != "1" ]];
 	then
 		print_template_banner "Installing ${PROJECT_NAME}  External Frameworks"
-	
-		echo "List of Frameworks to Copy: "
-		ls  ${SMARTNSOFT_FRAMEWORKS_PATH} | grep -i "framework"
-	
+		mkdir -p  ${SMARTNSOFT_EXTRACT_PATH}
+		
+		echo "List of Frameworks to Untar & Copy: "
+		ls  ${SMARTNSOFT_FRAMEWORKS_PATH} | grep -i "tar.gz"
+		
+		find ${SMARTNSOFT_FRAMEWORKS_PATH} -name "*.tar.gz" -exec tar -xzf {} --directory ${SMARTNSOFT_EXTRACT_PATH} \;
+			
 		echo  ""
 		for folder in ${BASE_FRAMEWORK_ROOT_DIR}
 		do
 			echo "... Coping Frameworks to $folder"
-			copy_files "${SMARTNSOFT_FRAMEWORKS_PATH}" "$folder"
+			copy_files "${SMARTNSOFT_EXTRACT_PATH}" "$folder"
 		done
 	
 		print_ok "Done"
@@ -310,11 +314,11 @@ build_framework ()
 	fi
 	
 	#Copy SnSFramework
-	cp -rf $snsframework_path ${SMARTNSOFT_FRAMEWORKS_PATH}
+	cp -rf $snsframework_path ${SMARTNSOFT_EXTRACT_PATH}
 	for folder in ${BASE_FRAMEWORK_ROOT_DIR}
 	do
 		echo "... Coping ios4me.framework to $folder"
-		copy_files "${SMARTNSOFT_FRAMEWORKS_PATH}" "$folder"
+		copy_files "${SMARTNSOFT_EXTRACT_PATH}" "$folder"
 	done
 	
 	#change back ownership to previous owner if in sudo mode

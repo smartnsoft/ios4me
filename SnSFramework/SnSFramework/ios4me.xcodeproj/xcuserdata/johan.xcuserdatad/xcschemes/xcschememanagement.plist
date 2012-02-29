@@ -4,34 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SnSFramework (Device).xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>SnSFramework (Framework).xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>SnSFramework (Simulator).xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>SnSFramework.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>ios4me (Device).xcscheme</key>
 		<dict>
 			<key>isShown</key>

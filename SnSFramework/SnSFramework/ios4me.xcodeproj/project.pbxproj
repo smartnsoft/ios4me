@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		047C403613D58B340002EF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
-		047C404313D58B710002EF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
-		048411CE13F2B1AD004B17A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
-		048411CF13F2B1D7004B17A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
-		048411D013F2B1E2004B17A1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CDE4E13DEF425006C2E4D /* CFNetwork.framework */; };
-		048CDE4F13DEF425006C2E4D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CDE4E13DEF425006C2E4D /* CFNetwork.framework */; };
 		04ADDA4B14ED195500C2087E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
 		04ADDA4C14ED195500C2087E /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */; };
 		04ADDA4D14ED195500C2087E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
@@ -97,16 +91,10 @@
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
 		04FB835014F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
-		803BC91B12A6BEF100336B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
-		803BC91D12A6BEF100336B25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91C12A6BEF100336B25 /* UIKit.framework */; };
-		80504FFD14064672006A9B23 /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */; };
-		80504FFE1406467F006A9B23 /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04756103140B8A3A00C0DF6C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		047C403513D58B340002EF65 /* libios4meSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios4meSimulator.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		047C404213D58B710002EF65 /* libios4meDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios4meDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		048411CD13F2B1AD004B17A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		048CDE4E13DEF425006C2E4D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		04ADDA7B14ED195500C2087E /* libios4meDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios4meDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,32 +190,9 @@
 		8050503714065564006A9B23 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		8050503814065564006A9B23 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		8050503914065564006A9B23 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
-		D2AAC07E0554694100DB518D /* libSnSFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnSFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		047C403213D58B340002EF65 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				80504FFD14064672006A9B23 /* ASIHTTPFramework.framework in Frameworks */,
-				048411CE13F2B1AD004B17A1 /* StoreKit.framework in Frameworks */,
-				047C403613D58B340002EF65 /* Foundation.framework in Frameworks */,
-				048411D013F2B1E2004B17A1 /* CFNetwork.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		047C403F13D58B710002EF65 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				048411CF13F2B1D7004B17A1 /* StoreKit.framework in Frameworks */,
-				80504FFE1406467F006A9B23 /* ASIHTTPFramework.framework in Frameworks */,
-				047C404313D58B710002EF65 /* Foundation.framework in Frameworks */,
-				048CDE4F13DEF425006C2E4D /* CFNetwork.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04ADDA4A14ED195500C2087E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,24 +215,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2AAC07C0554694100DB518D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				803BC91B12A6BEF100336B25 /* Foundation.framework in Frameworks */,
-				803BC91D12A6BEF100336B25 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libSnSFramework.a */,
-				047C403513D58B340002EF65 /* libios4meSimulator.a */,
-				047C404213D58B710002EF65 /* libios4meDevice.a */,
 				04ADDA7B14ED195500C2087E /* libios4meDevice.a */,
 				04ADDAD314ED196400C2087E /* libios4meSimulator.a */,
 			);
@@ -516,20 +469,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		047C403313D58B340002EF65 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		047C404013D58B710002EF65 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04ADDA4F14ED195500C2087E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -546,30 +485,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2AAC07A0554694100DB518D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXLegacyTarget section */
-		047C409313D58FEA0002EF65 /* SnSFramework (Framework) */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "$(ACTION)";
-			buildConfigurationList = 047C409413D58FEA0002EF65 /* Build configuration list for PBXLegacyTarget "SnSFramework (Framework)" */;
-			buildPhases = (
-			);
-			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "";
-			dependencies = (
-			);
-			name = "SnSFramework (Framework)";
-			passBuildSettingsInEnvironment = 1;
-			productName = "SnSFramework (Framework)";
-		};
 		04ADDAD414ED197100C2087E /* ios4me (Framework) */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION)";
@@ -587,40 +505,6 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		047C403413D58B340002EF65 /* SnSFramework (Simulator) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 047C403C13D58B340002EF65 /* Build configuration list for PBXNativeTarget "SnSFramework (Simulator)" */;
-			buildPhases = (
-				047C403113D58B340002EF65 /* Sources */,
-				047C403213D58B340002EF65 /* Frameworks */,
-				047C403313D58B340002EF65 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SnSFramework (Simulator)";
-			productName = "SnSFramework (Simulator)";
-			productReference = 047C403513D58B340002EF65 /* libios4meSimulator.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		047C404113D58B710002EF65 /* SnSFramework (Device) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 047C404713D58B710002EF65 /* Build configuration list for PBXNativeTarget "SnSFramework (Device)" */;
-			buildPhases = (
-				047C403E13D58B710002EF65 /* Sources */,
-				047C403F13D58B710002EF65 /* Frameworks */,
-				047C404013D58B710002EF65 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SnSFramework (Device)";
-			productName = "SnSFramework (Device)";
-			productReference = 047C404213D58B710002EF65 /* libios4meDevice.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		04ADDA2414ED195500C2087E /* ios4me (Device) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04ADDA7814ED195500C2087E /* Build configuration list for PBXNativeTarget "ios4me (Device)" */;
@@ -655,23 +539,6 @@
 			productReference = 04ADDAD314ED196400C2087E /* libios4meSimulator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D2AAC07D0554694100DB518D /* SnSFramework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SnSFramework" */;
-			buildPhases = (
-				D2AAC07A0554694100DB518D /* Headers */,
-				D2AAC07B0554694100DB518D /* Sources */,
-				D2AAC07C0554694100DB518D /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SnSFramework;
-			productName = SnSFramework;
-			productReference = D2AAC07E0554694100DB518D /* libSnSFramework.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -695,10 +562,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* SnSFramework */,
-				047C403413D58B340002EF65 /* SnSFramework (Simulator) */,
-				047C404113D58B710002EF65 /* SnSFramework (Device) */,
-				047C409313D58FEA0002EF65 /* SnSFramework (Framework) */,
 				04ADDA2414ED195500C2087E /* ios4me (Device) */,
 				04ADDA7C14ED196400C2087E /* ios4me (Simulator) */,
 				04ADDAD414ED197100C2087E /* ios4me (Framework) */,
@@ -707,20 +570,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		047C403113D58B340002EF65 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		047C403E13D58B710002EF65 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04ADDA2514ED195500C2087E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -809,138 +658,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2AAC07B0554694100DB518D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		047C403A13D58B340002EF65 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
-				DSTROOT = /tmp/SnSFramework__Simulator_.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT)/$(PROJECT)_Prefix.pch";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(PROJECT)Simulator";
-				SDKROOT = iphonesimulator;
-			};
-			name = Debug;
-		};
-		047C403B13D58B340002EF65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
-				DSTROOT = /tmp/SnSFramework__Simulator_.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT)/$(PROJECT)_Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(PROJECT)Simulator";
-				SDKROOT = iphonesimulator;
-			};
-			name = Release;
-		};
-		047C404813D58B710002EF65 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
-				DSTROOT = /tmp/SnSFramework__Device_.dst;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT)/$(PROJECT)_Prefix.pch";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(PROJECT)Device";
-			};
-			name = Debug;
-		};
-		047C404913D58B710002EF65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
-				DSTROOT = /tmp/SnSFramework__Device_.dst;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT)/$(PROJECT)_Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(PROJECT)Device";
-			};
-			name = Release;
-		};
-		047C409513D58FEA0002EF65 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ONLY_ACTIVE_ARCH_PRE_XCODE_3_1)";
-				BUILD_DIR = "$(PROJECT_DIR)/build";
-				COPY_PHASE_STRIP = NO;
-				DEBUGGING_SYMBOLS = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH_ACTUAL)";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "Smart&Soft";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		047C409613D58FEA0002EF65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
-				BUILD_DIR = "$(PROJECT_DIR)/build";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "Smart&Soft";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 		04ADDA7914ED195500C2087E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1061,44 +781,6 @@
 			};
 			name = Release;
 		};
-		1DEB921F08733DC00010E9CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					armv6,
-				);
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/SnSFramework.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SnSFramework_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = SnSFramework;
-			};
-			name = Debug;
-		};
-		1DEB922008733DC00010E9CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					armv6,
-				);
-				DSTROOT = /tmp/SnSFramework.dst;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SnSFramework_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = SnSFramework;
-			};
-			name = Release;
-		};
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1143,33 +825,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		047C403C13D58B340002EF65 /* Build configuration list for PBXNativeTarget "SnSFramework (Simulator)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				047C403A13D58B340002EF65 /* Debug */,
-				047C403B13D58B340002EF65 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		047C404713D58B710002EF65 /* Build configuration list for PBXNativeTarget "SnSFramework (Device)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				047C404813D58B710002EF65 /* Debug */,
-				047C404913D58B710002EF65 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		047C409413D58FEA0002EF65 /* Build configuration list for PBXLegacyTarget "SnSFramework (Framework)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				047C409513D58FEA0002EF65 /* Debug */,
-				047C409613D58FEA0002EF65 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		04ADDA7814ED195500C2087E /* Build configuration list for PBXNativeTarget "ios4me (Device)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1193,15 +848,6 @@
 			buildConfigurations = (
 				04ADDAD614ED197100C2087E /* Debug */,
 				04ADDAD714ED197100C2087E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SnSFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DEB921F08733DC00010E9CD /* Debug */,
-				1DEB922008733DC00010E9CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
