@@ -8,7 +8,12 @@
 
 #pragma mark - GHTestCase
 
-@interface TestCache : GHAsyncTestCase <SnSCacheDelegate> { }
+@interface TestCache : GHAsyncTestCase <SnSCacheDelegate> 
+{
+	SEL currentTest_;
+	
+	SnSAbstractCache* cache_;
+}
 
 @end
 
@@ -20,12 +25,19 @@
     return NO;
 }
 
-- (void)setUpClass {
-    // Run at start of all tests in the class
+- (void)setUpClass
+{	
+	cache_ = [[SnSMemoryCache alloc] initWithMaxCapacity:1024 minCapacity:16];
+	
+	[[SnSCacheChecker instance] setDelegate:self];
+	[[SnSCacheChecker instance] setFrequency:5];
 }
 
-- (void)tearDownClass {
-    // Run at end of all tests in the class
+- (void)tearDownClass 
+{
+	[cache_ release];
+	
+	[[SnSCacheChecker instance] reset];
 }
 
 - (void)setUp {
@@ -42,16 +54,11 @@
 {
 	[self prepare];
 	
-	SnSAbstractCache* aCache = [[SnSMemoryCache alloc] initWithMaxCapacity:1024 minCapacity:16];
+	currentTest_ = _cmd;
 	
-	GHAssertNotNil(aCache, @"No cache could be created");
-	
-	[[SnSCacheChecker instance] setDelegate:self];
-	[[SnSCacheChecker instance] setFrequency:5];
-	
-	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:20.0];
-	
-	
+	GHAssertNotNil(cache_, @"Main memory cache could not be created");
+
+	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:20.0];	
 }
 
 						   
@@ -59,8 +66,9 @@
 
 - (void)didProcessChecksOnCache:(SnSAbstractCache*)iCache
 {
-	SnSLogD(@"");
-	
+	if ([NSStringFromSelector(currentTest_) isEqualToString:@"test01_AbstractCache"])
+		[self notify:kGHUnitWaitStatusSuccess forSelector:@selector(test01_AbstractCache)];
+		
 }
 
 @end

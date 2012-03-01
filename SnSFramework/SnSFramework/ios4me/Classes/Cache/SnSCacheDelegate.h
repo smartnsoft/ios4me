@@ -29,6 +29,7 @@
 
 - (void)willProcessChecksOnCache:(SnSAbstractCache*)iCache;
 - (void)didProcessChecksOnCache:(SnSAbstractCache*)iCache;
+- (void)didCancelChecks;
 
 
 

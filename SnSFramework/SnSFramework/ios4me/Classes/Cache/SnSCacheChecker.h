@@ -32,6 +32,7 @@
 
 - (void)setup;
 - (void)process;
+- (void)stop;
 
 #pragma mark Interact with Caches
 

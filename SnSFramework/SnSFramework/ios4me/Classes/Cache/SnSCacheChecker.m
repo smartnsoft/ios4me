@@ -12,6 +12,19 @@
 
 @synthesize frequency = frequency_;
 @synthesize delegate = delegate_;
+
+#pragma mark -
+#pragma mark SnSSingleton
+#pragma mark -
+
+- (void)reset
+{
+	[self stop];
+	
+	[super reset];
+}
+
+
 #pragma mark -
 #pragma mark NSObject
 #pragma mark -
@@ -42,7 +55,7 @@
 
 - (void)setup
 {	
-	// create low priority queue
+	// use the system LOW priority queue
 	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0); 
 	
 	// create our timer source
@@ -61,6 +74,12 @@
 		[self process];
 	});
 	
+	// what to do when checks are cancelled ? (eg when the checher is stopped)
+	dispatch_source_set_cancel_handler(timer_, ^{
+		if ([delegate_ respondsToSelector:@selector(didCancelChecks)])
+			[delegate_ didCancelChecks];
+	});
+	
 	// now that our timer is all set to go, start it
 	dispatch_resume(timer_);
 }
@@ -77,6 +96,17 @@
 		if ([delegate_ respondsToSelector:@selector(didProcessChecksOnCache:)])
 			[delegate_ didProcessChecksOnCache:aCache];
 	}
+}
+
+- (void)stop
+{
+	// Cancel all events on timer
+	dispatch_source_cancel(timer_);
+	
+	// release the timer
+	dispatch_release(timer_);
+	
+	
 }
 
 #pragma mark -
