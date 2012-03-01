@@ -43,7 +43,7 @@
 - (void)setup
 {	
 	// create low priority queue
-	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0); 
+	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0); 
 	
 	// create our timer source
 	timer_ = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
@@ -51,12 +51,13 @@
 	// set the time to fire (we're only going to fire once,
 	// so just fill in the initial time).
 	dispatch_source_set_timer(timer_,
-							  dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC), //frequency_ * NSEC_PER_SEC),
-							  DISPATCH_TIME_FOREVER, 1ull * NSEC_PER_SEC); //(float)frequency_*0.01*NSEC_PER_SEC);
+							  dispatch_walltime(NULL, frequency_ * NSEC_PER_SEC),	// Do not start immediatly wait for frequency time
+							  frequency_ * NSEC_PER_SEC,							// Interval
+							  (float)(frequency_) * 0.01 * NSEC_PER_SEC				// 1/10th of the frequency for leaveway
+							  );
 	
-	// Hey, let's actually do something when the timer fires!
+	// what to do at each cycle ?
 	dispatch_source_set_event_handler(timer_, ^{
-		
 		[self process];
 	});
 	
@@ -102,8 +103,10 @@
 	if (timer_)
 	{
 		dispatch_source_set_timer(timer_,
-								  dispatch_time(DISPATCH_TIME_NOW, frequency_ * NSEC_PER_SEC),
-								  DISPATCH_TIME_FOREVER, (float)frequency_*0.01*NSEC_PER_SEC);
+								  dispatch_walltime(NULL, frequency_ * NSEC_PER_SEC),	// Do not start immediatly wait for frequency time
+								  frequency_ * NSEC_PER_SEC,							// Interval
+								  (float)(frequency_) * 0.01 * NSEC_PER_SEC				// 1/10th of the frequency for leaveway
+								  );
 	}
 }
 

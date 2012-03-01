@@ -44,6 +44,8 @@
 	
 	SnSAbstractCache* aCache = [[SnSMemoryCache alloc] initWithMaxCapacity:1024 minCapacity:16];
 	
+	GHAssertNotNil(aCache, @"No cache could be created");
+	
 	[[SnSCacheChecker instance] setDelegate:self];
 	[[SnSCacheChecker instance] setFrequency:5];
 	
