@@ -40,6 +40,8 @@
 #import "SnSAbstractCache.h"
 #import "SnSMemoryCache.h"
 #import "SnSURLCache.h"
+#import "SnSCacheChecker.h"
+#import "SnSCacheDelegate.h"
 
 // Connection
 #import "SnSURLConnection.h"

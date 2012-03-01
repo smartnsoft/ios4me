@@ -3,8 +3,6 @@
 // For Mac OS X
 //#import <GHUnit/GHUnit.h>
 
-#import <Smart&Soft/SnSFramework.h>
-
 #pragma mark - GHTestCase
 
 @interface TestOther : GHTestCase 

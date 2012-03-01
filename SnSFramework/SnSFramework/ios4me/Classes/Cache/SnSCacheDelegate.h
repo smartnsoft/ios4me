@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class SnSCacheItem;
+@class SnSAbstractCache;
 
 @protocol SnSCacheDelegate <NSObject>
 
@@ -22,9 +23,12 @@
 
 @end
 
-@protocol SnSCacheConnectionHandler <NSObject>
+@protocol SnSCacheCheckerDelegate <NSObject>
 
-- (NSData*)handleSynchronousURLConnection:(NSURLRequest*)iRequest returningResponse:(NSURLResponse**)oResponse error:(NSError **)oError;
+@optional
+
+- (void)willProcessChecksOnCache:(SnSAbstractCache*)iCache;
+- (void)didProcessChecksOnCache:(SnSAbstractCache*)iCache;
 
 
 

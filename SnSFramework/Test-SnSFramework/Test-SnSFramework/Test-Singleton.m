@@ -3,8 +3,6 @@
 // For Mac OS X
 //#import <GHUnit/GHUnit.h>
 
-#import <Smart&Soft/SnSSingleton.h>
-
 #pragma mark - Test Classes
 
 @interface ChildSingleton : SnSSingleton

@@ -7,6 +7,7 @@
 //
 
 #import "SnSAbstractCache.h"
+#import "SnSCacheChecker.h"
 
 #import "SnSUtils.h"
 
@@ -47,15 +48,25 @@ static NSInteger sCacheIndex = -1;
 {
     if ((self = [super init]))
     {
+		//------------------------------------
+		// Propery Vars
+		//------------------------------------
         highCapacity_ = iHighCapacity;
         lowCapacity_ = iLowCapacity;
         
 
-		/* ***  Computed Values *** */
+		//------------------------------------
+		// Default Values
+		//------------------------------------
 		cacheIndex_ = ++sCacheIndex;
 		cacheSize_ = 0;
 				
         items_ = [[NSMutableDictionary alloc] init];
+		
+		//------------------------------------
+		// Cache Checker
+		//------------------------------------
+		[[SnSCacheChecker instance] addCache:self];
     }
     return self;
 }
@@ -63,10 +74,7 @@ static NSInteger sCacheIndex = -1;
 - (void)dealloc
 {
 	@synchronized(items_)
-	{
-		[items_ release];
-		items_ = nil;
-	}
+		{ SnSReleaseAndNil(items_); }
 	
     [super dealloc];
     

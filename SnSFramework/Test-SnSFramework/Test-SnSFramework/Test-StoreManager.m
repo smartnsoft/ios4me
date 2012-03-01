@@ -14,7 +14,6 @@
 // For Mac OS X
 //#import <GHUnit/GHUnit.h>
 
-#import <Smart&Soft/SnSStoreManager.h>
 #import <StoreKit/StoreKit.h>
 
 @interface TestStoreManager : GHAsyncTestCase <SnSStoreManagerDelegate>
