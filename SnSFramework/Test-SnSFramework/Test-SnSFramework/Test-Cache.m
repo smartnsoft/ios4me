@@ -19,7 +19,7 @@ static NSInteger kTestCacheMaxHits		= 64;
 	NSDictionary* actions_;  // Nb of bytes -> nb of times it will be hit
 }
 
-- (void)createTestArray:(NSInteger)iNbObjects;
+- (NSDictionary*)createTestActions:(NSInteger)iNbObjects;
 
 @end
 
@@ -33,10 +33,11 @@ static NSInteger kTestCacheMaxHits		= 64;
 
 - (void)setUpClass
 {	
-	cache_ = [[SnSMemoryCache alloc] initWithMaxCapacity:kTestCacheHighCapacity minCapacity:kTestCacheLowCapacity];
+	cache_		= [[SnSMemoryCache alloc] initWithMaxCapacity:kTestCacheHighCapacity minCapacity:kTestCacheLowCapacity];
+	actions_	= [[self createTestActions:8] retain];
 	
 	[[SnSCacheChecker instance] setDelegate:self];
-	[[SnSCacheChecker instance] setFrequency:5];
+	[[SnSCacheChecker instance] setFrequency:1];
 }
 
 - (void)tearDownClass 
@@ -57,16 +58,16 @@ static NSInteger kTestCacheMaxHits		= 64;
 
 #pragma mark - Abstract Cache
 
-- (void)test01_AbstractCache
-{
-	[self prepare];
-	
-	currentTest_ = _cmd;
-	
-	GHAssertNotNil(cache_, @"Main memory cache could not be created");
-
-	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:20.0];	
-}
+//- (void)test01_AbstractCache
+//{
+//	[self prepare];
+//	
+//	currentTest_ = _cmd;
+//	
+//	GHAssertNotNil(cache_, @"Main memory cache could not be created");
+//
+//	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:5.0];	
+//}
 
 - (void)test02_AddData
 {
@@ -74,13 +75,19 @@ static NSInteger kTestCacheMaxHits		= 64;
 	
 	currentTest_ = _cmd;
 	
-	
-//	unsigned char* someBytes = (unsigned char*)malloc(aDataLengthInBytes);
-//	aData = [NSData dataWithBytes:someBytes length:aDataLengthInBytes];
-//	free(someBytes);
-	
+	for (NSString* aKey in [actions_ allKeys])
+	{
+		NSInteger aNbBytes = [[aKey stringByStrippingNonNumbers] integerValue];
 		
-	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:20.0];	
+		unsigned char* someBytes = (unsigned char*)malloc(aNbBytes);
+		NSData* aData = [NSData dataWithBytes:someBytes length:aNbBytes];
+		free(someBytes);
+		
+		
+		[cache_ storeObject:aData forKey:[NSURL URLWithString:aKey]];
+	}	
+		
+	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:3.0];	
 }
 
 						   
@@ -97,7 +104,7 @@ static NSInteger kTestCacheMaxHits		= 64;
 
 #pragma mark - Useful
 
-- (void)createTestArray:(NSInteger)iNbObjects
+- (NSDictionary*)createTestActions:(NSInteger)iNbObjects
 {
 	NSMutableDictionary* aDic = [NSMutableDictionary dictionaryWithCapacity:iNbObjects];
 	
@@ -108,11 +115,11 @@ static NSInteger kTestCacheMaxHits		= 64;
 		NSInteger aRandomValue = arc4random()%(aRatio);
 		NSInteger aRandomHits  = arc4random()%(kTestCacheMaxHits);
 		[aDic setValue:[NSString stringWithFormat:@"%d", aRandomHits]
-				forKey:[NSString stringWithFormat:@"%d", aRandomValue]];
+				forKey:[NSString stringWithFormat:@"bytes://%d", aRandomValue]];
 		
 	}
 	
-	actions_  = [[NSDictionary dictionaryWithDictionary:aDic] retain];
+	return [NSDictionary dictionaryWithDictionary:aDic];
 }
 
 

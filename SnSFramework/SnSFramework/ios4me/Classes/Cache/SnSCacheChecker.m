@@ -7,6 +7,7 @@
 //
 
 #import "SnSCacheChecker.h"
+#import "SnSCacheItem.h"
 
 @implementation SnSCacheChecker
 
@@ -91,7 +92,22 @@
 		if ([delegate_ respondsToSelector:@selector(willProcessChecksOnCache:)])
 			[delegate_ willProcessChecksOnCache:aCache];
 		
-		SnSLogD(@"Processing Cache %p \n %@", aCache, aCache);
+		SnSLogD(@"Processing Cache %p", aCache);
+		
+		NSInteger aTotalLength = 0;
+		
+		for (id aKey in [aCache.items allKeys])
+		{
+			SnSCacheItem* aItem = [aCache cachedItemForKey:aKey];
+			NSData* aData = aItem.data;
+			
+			aTotalLength += [aData length];
+		}
+		
+		aCache.cacheSize = aTotalLength;
+		
+		SnSLogD(@"Processing Cache %p - %@", aCache, aCache);
+
 		
 		if ([delegate_ respondsToSelector:@selector(didProcessChecksOnCache:)])
 			[delegate_ didProcessChecksOnCache:aCache];

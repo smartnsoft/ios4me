@@ -22,12 +22,16 @@
     NSDate*		_lastAccessedDate;
 }
 
++ (id)itemWithKey:(id)iKey
+			 data:(NSData*)iData;
+
 /**
+ *	Designated Initalizer
  *	Create the Cache Item object with its basic information
  */
 - (id)initWithKey:(id)iKey
-			 date:(NSDate*)iDate
-			 data:(NSData*)iData;
+			 data:(id)iData;
+
 
 /**
  *	Compare two cache items and return YES if their attributes are identical

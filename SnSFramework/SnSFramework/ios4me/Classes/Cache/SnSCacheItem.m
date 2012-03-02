@@ -51,18 +51,25 @@
 	return self;
 }
 
++ (id)itemWithKey:(id)iKey data:(NSData *)iData
+{
+	SnSCacheItem* aItem = [[[SnSCacheItem alloc] initWithKey:iKey
+														data:iData] autorelease];
+	
+	return aItem;
+}
+
 - (id)initWithKey:(id)iKey
-			 date:(NSDate*)iDate
 			 data:(NSData*)iData;
 {
 	if ((self = [super init]))
 	{
 		_key				= [iKey retain];
-		_lastAccessedDate	= [iDate retain];
 		_data				= [iData retain];
 		
 		// Computed default values
 		_hits = 0;
+		_lastAccessedDate	= [[NSDate date] retain];
 		
 	}
 	return  self;

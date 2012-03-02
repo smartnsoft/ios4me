@@ -29,4 +29,7 @@
 {
 }
 
+- (void)storeData:(NSData*)iData forKey:(id)iKey;
+- (void)storeString:(NSString*)iStr forKey:(id)iKey;
+
 @end

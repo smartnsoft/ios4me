@@ -62,6 +62,7 @@ static NSInteger sCacheIndex = -1;
 		cacheSize_ = 0;
 				
         items_ = [[NSMutableDictionary alloc] init];
+		queue_ = dispatch_queue_create( "com.smartnsoft.cache", NULL );
 		
 		//------------------------------------
 		// Cache Checker
@@ -73,8 +74,9 @@ static NSInteger sCacheIndex = -1;
 
 - (void)dealloc
 {
-	@synchronized(items_)
-		{ SnSReleaseAndNil(items_); }
+	[items_ release];
+	
+	dispatch_release(queue_);
 	
     [super dealloc];
     

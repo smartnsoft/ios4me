@@ -27,6 +27,7 @@
     @protected
     NSInteger   cacheIndex_;
 	NSInteger	cacheSize_;		//<! The cache size is calculated in the background by the SnSCacheChecker
+	dispatch_queue_t queue_;	//<! The cache GCD queue used for read and write operations
 }
 
 @property (nonatomic) NSInteger highCapacity;
@@ -69,7 +70,7 @@
  *	@param	iData	The data associated to the key that we want to store
  *	@param	iKey	The key used to store/retreive the cached object
  */
-- (void)storeObject:(NSData*)iData forKey:(id)iKey;
+- (void)storeObject:(id)iObj forKey:(id)iKey;
 
 
 /**
