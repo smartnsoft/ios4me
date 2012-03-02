@@ -1,19 +1,19 @@
-/* 
- * Copyright (C) 2009 Smart&Soft.
- * All rights reserved.
+/*
+ * (C) Copyright 2009-2011 Smart&Soft SAS (http://www.smartnsoft.com/) and contributors.
  *
- * The code hereby is the full property of Smart&Soft, SIREN 517 961 744.
- * http://www.smartnsoft.com - contact@smartnsoft.com
- * 
- * You are not allowed to use the source code or the resulting binary code, nor to modify the source code, without prior permission of the owner.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the GNU Lesser General Public License
+ * (LGPL) version 3.0 which accompanies this distribution, and is available at
+ * http://www.gnu.org/licenses/lgpl.html
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * Contributors:
+ *     Smart&Soft - initial API and implementation
  */
-
-//
-//  SnSDelegate.h
-//  SnSFramework
-//
-//  Created by Édouard Mercier on 18/12/2009.
-//
 
 #import <UIKit/UIKit.h>
 
