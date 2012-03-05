@@ -40,7 +40,7 @@
 
 
 //@property (nonatomic) SnSCacheZone zone;				//!< The where the item is located: ex. Memory, Disk...
-@property (nonatomic, readonly) NSUInteger hits;		//!< The number of times the item has been requested
+@property (nonatomic,assign) NSUInteger hits;			//!< The number of times the item has been requested
 @property (nonatomic,retain) id key;					//!< The key element holding that item (could be a string or url for example)
 @property (nonatomic,retain) NSData* data;				//!< The data associated with that element
 @property (nonatomic,retain) NSDate* lastAccessedDate;	//!< The last time the element was accessed

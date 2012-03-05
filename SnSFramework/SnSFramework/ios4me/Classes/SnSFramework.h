@@ -42,6 +42,7 @@
 #import "SnSURLCache.h"
 #import "SnSCacheChecker.h"
 #import "SnSCacheDelegate.h"
+#import "SnSCacheItem.h"
 
 // Connection
 #import "SnSURLConnection.h"

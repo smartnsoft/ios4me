@@ -21,6 +21,7 @@ static NSInteger kTestCacheMaxHits		= 64;
 
 - (NSDictionary*)createTestActions:(NSInteger)iNbObjects;
 
+- (void)checkTestAddData;
 @end
 
 @implementation TestCache
@@ -56,18 +57,18 @@ static NSInteger kTestCacheMaxHits		= 64;
     // Run after each test method
 }  
 
-#pragma mark - Abstract Cache
+#pragma mark - Tests
 
-//- (void)test01_AbstractCache
-//{
-//	[self prepare];
-//	
-//	currentTest_ = _cmd;
-//	
-//	GHAssertNotNil(cache_, @"Main memory cache could not be created");
-//
-//	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:5.0];	
-//}
+- (void)test01_AbstractCache
+{
+	[self prepare];
+	
+	currentTest_ = _cmd;
+	
+	GHAssertNotNil(cache_, @"Main memory cache could not be created");
+
+	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:3.0];	
+}
 
 - (void)test02_AddData
 {
@@ -84,10 +85,57 @@ static NSInteger kTestCacheMaxHits		= 64;
 		free(someBytes);
 		
 		
-		[cache_ storeObject:aData forKey:[NSURL URLWithString:aKey]];
+		[cache_ storeData:aData forKey:[NSURL URLWithString:aKey]];
 	}	
 		
 	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:3.0];	
+}
+
+- (void)test03_Hits
+{
+	[self prepare];
+	
+	currentTest_ = _cmd;
+	
+	for (NSString* aKey in [actions_ allKeys])
+	{
+		NSURL* aURL = [NSURL URLWithString:aKey];
+		NSUInteger aNbHit = [[actions_ objectForKey:aKey] integerValue];
+		
+		// This should increment the number of hits on each cached object
+		for (NSInteger i = 0; i < aNbHit; ++i)
+			[cache_  cachedDataForKey:aURL];	
+		
+		// Check for the number of hits
+		SnSCacheItem* aItem = [cache_ cachedItemForKey:aURL];
+		
+		GHAssertEquals(aItem.hits, aNbHit, @"Hits Received: %d / Hits Expected: %d", aItem.hits, aNbHit);
+		
+	}	
+	
+}
+
+#pragma mark - Checks
+
+
+- (void)checkTestAddData
+{
+	SnSLogD(@"Cache Size, %d", cache_.cacheSize);
+	
+	NSInteger aTotalBytes = 0;
+	for (NSString* aKey in [actions_ allKeys])
+		aTotalBytes += [[aKey stringByStrippingNonNumbers] integerValue];
+	
+	SnSLogD(@"aTotalBytes Size, %d", aTotalBytes);
+	
+	GHAssertEquals(aTotalBytes, 
+				   cache_.cacheSize, 
+				   @"The total cache size [%d] is not of excpeted size [%d]", 
+				   cache_.cacheSize,
+				   aTotalBytes);
+
+	[self notify:kGHUnitWaitStatusSuccess forSelector:currentTest_];
+
 }
 
 						   
@@ -98,7 +146,9 @@ static NSInteger kTestCacheMaxHits		= 64;
 	SnSLogD(@"");
 	
 	if ([NSStringFromSelector(currentTest_) isEqualToString:@"test01_AbstractCache"])
-		[self notify:kGHUnitWaitStatusSuccess forSelector:@selector(test01_AbstractCache)];
+		[self notify:kGHUnitWaitStatusSuccess forSelector:currentTest_];
+	else if ([NSStringFromSelector(currentTest_) isEqualToString:@"test02_AddData"])
+		[self checkTestAddData];
 		
 }
 
@@ -116,7 +166,6 @@ static NSInteger kTestCacheMaxHits		= 64;
 		NSInteger aRandomHits  = arc4random()%(kTestCacheMaxHits);
 		[aDic setValue:[NSString stringWithFormat:@"%d", aRandomHits]
 				forKey:[NSString stringWithFormat:@"bytes://%d", aRandomValue]];
-		
 	}
 	
 	return [NSDictionary dictionaryWithDictionary:aDic];

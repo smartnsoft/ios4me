@@ -138,19 +138,17 @@ static NSInteger sCacheIndex = -1;
 	SnSLogW(@"This method will do nothing and should be overwritten in your custom %@ class", [self class]);
 }
 
-- (void)storeObject:(id)iObject forKey:(id)iKey
+- (void)storeData:(NSData*)iData forKey:(id)iKey
 {
 	SnSLogW(@"This method will do nothing and should be overwritten in your custom %@ class", [self class]);
 }
 
 - (SnSCacheItem*)cachedItemForKey:(id)iKey
 {
-	SnSLogW(@"This method will return nil and should be overwritten in your custom %@ class", [self class]);
-	
-	return nil;
+	return [self cachedItemForKey:iKey update:NO];
 }
 
-- (id)cachedObjectForKey:(id)iKey
+- (SnSCacheItem*)cachedItemForKey:(id)iKey update:(BOOL)iUpdate
 {
 	SnSLogW(@"This method will return nil and should be overwritten in your custom %@ class", [self class]);
 	
@@ -158,6 +156,22 @@ static NSInteger sCacheIndex = -1;
 }
 
 
+- (NSData*)cachedDataForKey:(id)iKey
+{
+	SnSLogW(@"This method will return nil and should be overwritten in your custom %@ class", [self class]);
+	
+	return nil;
+}
+
+#pragma mark -
+#pragma mark Purge Cache
+#pragma mark -
+
+- (void)purge
+{
+	SnSLogW(@"This method will do nothing and should be overwritten in your custom %@ class", [self class]);
+
+}
 
 			 
 

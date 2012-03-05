@@ -70,14 +70,16 @@
  *	@param	iData	The data associated to the key that we want to store
  *	@param	iKey	The key used to store/retreive the cached object
  */
-- (void)storeObject:(id)iObj forKey:(id)iKey;
+- (void)storeData:(NSData*)iData forKey:(id)iKey;
 
 
 /**
  *  Retreives the cached item given its key.
  *	@param iKey	The key that will be used to retreive the corresponding item.
+ *  @param  iUpdate	A boolean that tells if the cache item should be updated or no (default is NO).
  */
 - (SnSCacheItem*)cachedItemForKey:(id)iKey;
+- (SnSCacheItem*)cachedItemForKey:(id)iKey update:(BOOL)iUpdate;
 
 /**
  *  Retreives the cached data for a given key.
@@ -86,8 +88,12 @@
  * @return
  *	The object associated to given key if found, nil otherwise
  */
-- (id)cachedObjectForKey:(id)iKey;
+- (NSData*)cachedDataForKey:(id)iKey;
 
+
+#pragma mark Purge Cache
+
+- (void)purge;
 
 
 @end
