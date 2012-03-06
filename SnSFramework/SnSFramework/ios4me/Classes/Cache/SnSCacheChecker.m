@@ -13,6 +13,7 @@
 
 @synthesize frequency = frequency_;
 @synthesize delegate = delegate_;
+@synthesize caches = caches_;
 
 #pragma mark -
 #pragma mark SnSSingleton

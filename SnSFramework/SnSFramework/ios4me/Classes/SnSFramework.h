@@ -86,6 +86,9 @@
 #import "SnSUtils.h"
 #import "SnSImageDownloader.h"
 
+// UI Views
+#import "SnSLoadingView.h"
+
 #define SNS_FRAMEWORK_VERSION @"1.0"
 
 /**

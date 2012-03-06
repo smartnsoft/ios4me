@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042B2D3B15064BCB00854572 /* SnSRemoteServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D3915064BCB00854572 /* SnSRemoteServices.h */; };
+		042B2D3C15064BCB00854572 /* SnSRemoteServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D3915064BCB00854572 /* SnSRemoteServices.h */; };
+		042B2D3D15064BCB00854572 /* SnSRemoteServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D3A15064BCB00854572 /* SnSRemoteServices.m */; };
+		042B2D3E15064BCB00854572 /* SnSRemoteServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D3A15064BCB00854572 /* SnSRemoteServices.m */; };
+		042B2D4315064E9100854572 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D4115064E9100854572 /* SnSLoadingView.h */; };
+		042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D4115064E9100854572 /* SnSLoadingView.h */; };
+		042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
+		042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
 		047C403613D58B340002EF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
 		047C404313D58B710002EF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
 		048411CE13F2B1AD004B17A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
@@ -104,6 +112,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042B2D3915064BCB00854572 /* SnSRemoteServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSRemoteServices.h; sourceTree = "<group>"; };
+		042B2D3A15064BCB00854572 /* SnSRemoteServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSRemoteServices.m; sourceTree = "<group>"; };
+		042B2D4115064E9100854572 /* SnSLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSLoadingView.h; sourceTree = "<group>"; };
+		042B2D4215064E9100854572 /* SnSLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSLoadingView.m; sourceTree = "<group>"; };
 		04756103140B8A3A00C0DF6C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		047C403513D58B340002EF65 /* libios4meSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios4meSimulator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		047C404213D58B710002EF65 /* libios4meDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios4meDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +282,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		042B2D4015064E6F00854572 /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				042B2D4115064E9100854572 /* SnSLoadingView.h */,
+				042B2D4215064E9100854572 /* SnSLoadingView.m */,
+			);
+			name = "Loading View";
+			path = SnSLoadingView;
+			sourceTree = "<group>";
+		};
 		04ADDAF014ED470200C2087E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +424,8 @@
 				04ADDB3414ED470200C2087E /* SnSStoreManager.m */,
 				04ADDB3514ED470200C2087E /* SnSWebServiceCaller.h */,
 				04ADDB3614ED470200C2087E /* SnSWebServiceCaller.m */,
+				042B2D3915064BCB00854572 /* SnSRemoteServices.h */,
+				042B2D3A15064BCB00854572 /* SnSRemoteServices.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -409,6 +433,7 @@
 		04ADDB3A14ED470200C2087E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				042B2D4015064E6F00854572 /* Loading View */,
 				04ADDB4114ED470200C2087E /* RefreshTableHeaderView */,
 			);
 			path = UI;
@@ -529,6 +554,8 @@
 				04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */,
 				04B41FF814FE448E0006A34E /* SnSURLCache.h in Headers */,
 				04B4202214FE83970006A34E /* SnSCacheChecker.h in Headers */,
+				042B2D3B15064BCB00854572 /* SnSRemoteServices.h in Headers */,
+				042B2D4315064E9100854572 /* SnSLoadingView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +566,8 @@
 				04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */,
 				04B41FF914FE448E0006A34E /* SnSURLCache.h in Headers */,
 				04B4202314FE83970006A34E /* SnSCacheChecker.h in Headers */,
+				042B2D3C15064BCB00854572 /* SnSRemoteServices.h in Headers */,
+				042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +785,8 @@
 				04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */,
 				04B41FFA14FE448E0006A34E /* SnSURLCache.m in Sources */,
 				04B4202414FE83970006A34E /* SnSCacheChecker.m in Sources */,
+				042B2D3D15064BCB00854572 /* SnSRemoteServices.m in Sources */,
+				042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +829,8 @@
 				04FB835014F68150004754E7 /* SnSExceptionHandler.m in Sources */,
 				04B41FFB14FE448E0006A34E /* SnSURLCache.m in Sources */,
 				04B4202514FE83970006A34E /* SnSCacheChecker.m in Sources */,
+				042B2D3E15064BCB00854572 /* SnSRemoteServices.m in Sources */,
+				042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,6 +1139,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
@@ -1124,6 +1158,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = SNS_LOG_LEVEL_WARN;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;

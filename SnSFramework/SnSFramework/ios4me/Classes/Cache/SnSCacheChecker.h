@@ -27,6 +27,7 @@
 
 @property (nonatomic, assign) NSInteger frequency;						//<! The number of seconds between each cache checker cycle
 @property (nonatomic, assign) id <SnSCacheCheckerDelegate> delegate; 	//<! The cache checker delegate
+@property (nonatomic, readonly) NSArray* caches;						//<! The list of caches to check (basically all SnSAbstractCaches instances)
 
 #pragma mark Process
 
