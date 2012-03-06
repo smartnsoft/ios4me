@@ -70,7 +70,7 @@
 
 }
 
-- (void)purge
+- (NSArray*)purge
 {
 	NSInteger aTotalSizeKept = 0;
 	
@@ -104,12 +104,41 @@
 		// as long as the current capacity doesn't excess the low memory cap
 		// keep adding the keys to keep
 		if (aTotalSizeKept + aDataLength <= self.lowCapacity)
+		{
 			[aKeysToKeep addObject:aKey];
+			aTotalSizeKept += aDataLength;
+		}
 		
 		// othwersise, since the array is sorted stop right there
 		else
 			break;
 	}
+	
+	// Update the cache size
+	// (note that the property is atomic for thread safe reasons)
+	self.cacheSize = aTotalSizeKept;
+	
+	// Finally remove all elements that were not part of the keys to keep
+	NSInteger aLastIndex = [aKeysToKeep indexOfObject:[aKeysToKeep lastObject]];
+	NSMutableArray* aRemovedKeys = [NSMutableArray arrayWithCapacity:[aSortedKeys count]];
+	
+	@synchronized(items_)
+	{
+		for (NSInteger i = aLastIndex; aLastIndex != NSNotFound && i < [aSortedKeys count]; ++i)
+		{
+			// Retrieve corresponding key
+			id aKey = [aSortedKeys objectAtIndex:i];
+
+			// Remove the associated value
+			[items_ removeObjectForKey:aKey];
+			
+			// Add that key to the liset of removed oens
+			[aRemovedKeys addObject:aKey];
+		}
+	}
+	
+	return aRemovedKeys;
+	
 	
 }
 

@@ -27,8 +27,16 @@
 
 @optional
 
+#pragma mark Checks
+
 - (void)willProcessChecksOnCache:(SnSAbstractCache*)iCache;
 - (void)didProcessChecksOnCache:(SnSAbstractCache*)iCache;
+
+#pragma mark Purge
+
+- (void)willPurgeCache:(SnSAbstractCache*)iCache;
+- (void)didPurgeCache:(SnSAbstractCache*)iCache removedKeys:(NSArray*)iKeys;
+
 - (void)didCancelChecks;
 
 

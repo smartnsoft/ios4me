@@ -167,10 +167,10 @@ static NSInteger sCacheIndex = -1;
 #pragma mark Purge Cache
 #pragma mark -
 
-- (void)purge
+- (NSArray*)purge
 {
-	SnSLogW(@"This method will do nothing and should be overwritten in your custom %@ class", [self class]);
-
+	SnSLogW(@"This method will return nil and should be overwritten in your custom %@ class", [self class]);
+	return nil;
 }
 
 			 

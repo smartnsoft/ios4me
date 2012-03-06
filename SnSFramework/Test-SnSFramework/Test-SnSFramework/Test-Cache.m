@@ -22,6 +22,8 @@ static NSInteger kTestCacheMaxHits		= 64;
 - (NSDictionary*)createTestActions:(NSInteger)iNbObjects;
 
 - (void)checkTestAddData;
+- (void)checkTestPurge:(NSArray*)purgedKeys;
+
 @end
 
 @implementation TestCache
@@ -115,6 +117,25 @@ static NSInteger kTestCacheMaxHits		= 64;
 	
 }
 
+- (void)test04_Purge
+{
+	[self prepare];
+
+	currentTest_ = _cmd;
+	
+	NSInteger aNbBytes = kTestCacheHighCapacity*2;
+		
+	unsigned char* someBytes = (unsigned char*)malloc(aNbBytes);
+	NSData* aData = [NSData dataWithBytes:someBytes length:aNbBytes];
+	free(someBytes);
+		
+		
+	[cache_ storeData:aData forKey:[NSURL URLWithString:@"bytes://excess"]];
+	
+		
+	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:3.0];	
+}
+
 #pragma mark - Checks
 
 
@@ -138,17 +159,50 @@ static NSInteger kTestCacheMaxHits		= 64;
 
 }
 
+- (void)checkTestPurge:(NSArray*)purgedKeys
+{
+	GHAssertGreaterThanOrEqual([purgedKeys count], (NSUInteger)1, 
+							   @"There should be one item purged at least");
+	
+	GHAssertLessThanOrEqual(cache_.cacheSize,
+							kTestCacheLowCapacity,
+							@"The cache has not been purge correctly. [%d bytes]", 
+							cache_.cacheSize);
+	
+	[self notify:kGHUnitWaitStatusSuccess forSelector:currentTest_];
+
+}
 						   
 #pragma mark - SnSCacheDelegate
 
+- (void)willPurgeCache:(SnSAbstractCache*)iCache
+{
+	SnSLogD(@"");
+	
+	GHAssertGreaterThan(cache_.cacheSize,
+						kTestCacheHighCapacity,
+						@"The cache size is lower than expected : %d bytes", 
+						cache_.cacheSize);
+
+	
+}
+
+- (void)didPurgeCache:(SnSAbstractCache*)iCache removedKeys:(NSArray*)iKeys
+{
+	if ([NSStringFromSelector(currentTest_) isEqualToString:@"test04_Purge"])
+		[self checkTestPurge:iKeys];
+}
 - (void)didProcessChecksOnCache:(SnSAbstractCache*)iCache
 {
 	SnSLogD(@"");
 	
 	if ([NSStringFromSelector(currentTest_) isEqualToString:@"test01_AbstractCache"])
 		[self notify:kGHUnitWaitStatusSuccess forSelector:currentTest_];
+	
 	else if ([NSStringFromSelector(currentTest_) isEqualToString:@"test02_AddData"])
 		[self checkTestAddData];
+	
+	
 		
 }
 

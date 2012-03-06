@@ -93,7 +93,13 @@
 
 #pragma mark Purge Cache
 
-- (void)purge;
+/**
+ *  Purges the cache so that it reaches a sizes close to the lowCapacity
+ *  property desired
+ * @return
+ *	The Array of keys that were removed during purge
+ */
+- (NSArray*)purge;
 
 
 @end

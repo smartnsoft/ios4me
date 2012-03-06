@@ -104,9 +104,25 @@
 			aTotalLength += [aData length];
 		}
 		
-		aCache.cacheSize = aTotalLength;
+		@synchronized(aCache)
+			{ aCache.cacheSize = aTotalLength; }
 		
-		SnSLogD(@"Processing Cache %p - %@", aCache, aCache);
+		
+		SnSLogD(@"Processing Cache %p - %@ - Purge Needed [%d]", aCache, aCache, aCache.cacheSize > aCache.highCapacity);
+		
+		// Is purge required
+		if (aCache.cacheSize > aCache.highCapacity)
+		{
+			if ([delegate_ respondsToSelector:@selector(willPurgeCache:)])
+				[delegate_ willPurgeCache:aCache];
+			
+			NSArray* aRemovedKeys = [aCache purge];
+			
+			if ([delegate_ respondsToSelector:@selector(didPurgeCache:removedKeys:)])
+				[delegate_ didPurgeCache:aCache removedKeys:aRemovedKeys];
+			
+			SnSLogD(@"Purged Cache %p - %@", aCache, aCache, aCache.cacheSize > aCache.highCapacity);
+		}
 
 		
 		if ([delegate_ respondsToSelector:@selector(didProcessChecksOnCache:)])
