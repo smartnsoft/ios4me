@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # To run the tests from the command line type the whole line below:
-# GHUNIT_CLI=1 xcodebuild -target Test_SnSFramework -configuration Debug -sdk iphonesimulator build
+# GHUNIT_CLI=1 xcodebuild -target Automation -configuration Debug -sdk iphonesimulator build
  
  
 
