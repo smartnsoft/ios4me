@@ -173,6 +173,11 @@ static NSInteger sCacheIndex = -1;
 	return nil;
 }
 
+- (void)purgeAll
+{
+	SnSLogW(@"This method will do nothing and should be overwritten in your custom %@ class", [self class]);
+}
+
 			 
 
 

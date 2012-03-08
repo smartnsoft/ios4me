@@ -101,6 +101,10 @@
  */
 - (NSArray*)purge;
 
+/**
+ *  Same as purge execpts it removes all item from the cache
+ */
+- (void)purgeAll;
 
 @end
 

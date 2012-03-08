@@ -142,6 +142,16 @@
 	
 }
 
+- (void)purgeAll
+{
+	@synchronized(items_)
+	{
+		[items_ removeAllObjects];
+	}
+	
+	self.cacheSize = 0;
+}
+
 #pragma mark -
 #pragma mark SnSMemoryCache
 #pragma mark -

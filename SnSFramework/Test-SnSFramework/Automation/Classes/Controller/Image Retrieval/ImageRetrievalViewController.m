@@ -126,6 +126,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[[ASIDownloadCache sharedCache] clearCachedResponsesForStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
+	[[SnSMemoryCache instance] purgeAll];
 }
 
 /**
