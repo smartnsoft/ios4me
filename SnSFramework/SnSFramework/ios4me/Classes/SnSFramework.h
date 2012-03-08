@@ -79,6 +79,7 @@
 #import "SnSLog.h"
 
 // Services
+#import "SnSRemoteServices.h"
 #import "SnSWebServiceCaller.h"
 #import "SnSStoreManager.h"
 

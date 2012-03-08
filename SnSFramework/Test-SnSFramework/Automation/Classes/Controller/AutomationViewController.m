@@ -20,16 +20,19 @@
 #import "AutomationViewController.h"
 #import "AboutViewController.h"
 
-#define kControllerViewWidth self.view.frame.size.width
-#define kControllerViewHeight self.view.frame.size.height
+// Controllers
+#import "ImageRetrievalViewController.h"
 
-#pragma mark -
-#pragma mark AutomationViewController
+#define VIEW_X(v)			((v).frame.origin.x)
+#define VIEW_Y(v)			((v).frame.origin.y)
+#define VIEW_WIDTH(v)		((v).frame.size.width)
+#define VIEW_HEIGHT(v)		((v).frame.size.height)
 
 @implementation AutomationViewController
 
 #pragma mark -
 #pragma mark AutomationViewController
+#pragma mark -
 
 - (void) onAbout:(id)sender
 {
@@ -59,22 +62,31 @@
 	//[SnSAppDelegate stopLoading:self.responderRedirector];
 }
 
-- (void) updateDisplay
+- (void)pushControllerNamed:(NSString *)iName
 {
+	// Create Controller from name
+	SnSViewController* aController = [[NSClassFromString(iName) alloc] initWithNibName:nil bundle:nil];
 	
+	// Push Controller
+	[[self navigationController] pushViewController:aController animated:YES];
+	
+	// Release
+	[aController release];
 }
-
 #pragma mark -
 #pragma mark SnSViewControllerLifeCycle
+#pragma mark -
 
 - (id) retrieveBusinessObjects
 {
 	SnSLogD(@"Retrieving Business Objects");
-
-    // Uncomment to simulate the time to obtain business objects
-    // sleep(3);
 	
-    return nil;
+	NSMutableArray* aControllers = [NSMutableArray array];
+		
+	// Here, add all the controller you want to test
+	[aControllers addObject:NSStringFromClass([ImageRetrievalViewController class])];
+		
+    return aControllers;
 }
 
 - (void) onRetrieveDisplayObjects:(UIView *)view
@@ -108,6 +120,11 @@
 {
 	[super onRetrieveBusinessObjects];
 	
+	// Init Memory Cache
+	[[SnSMemoryCache instance] setHighCapacity:1024*1024*2];
+	[[SnSMemoryCache instance] setLowCapacity:1024*400];
+	
+	
 }
 
 - (void) onFulfillDisplayObjects
@@ -128,19 +145,42 @@
 }
 
 #pragma mark -
-#pragma mark SnSViewControllerExceptionHandler
+#pragma mark UITableViewDataSource
+#pragma mark -
 
-/*
- 
- - (BOOL) onBusinessObjectException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSBusinessObjectException *)exception resume:(BOOL *)resume;
- - (BOOL) onLifeCycleException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSLifeCycleException *)exception resume:(BOOL *)resume;
- - (BOOL) onOtherException:(id<SnSViewControllerLifeCycle>)aggregate exception:(NSException *)exception resume:(BOOL *)resume;
- 
- */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+	
+	if (aCell == nil)
+		aCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+									   reuseIdentifier:NSStringFromClass([self class])] autorelease];
+		
+	NSString* aControllerStr = [businessObjects objectAtIndex:indexPath.row];
+
+	aCell.textLabel.text = aControllerStr;
+	
+	return aCell;
+		
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate
+#pragma mark -
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	NSString* aControllerStr = [businessObjects objectAtIndex:indexPath.row];
+	
+	[self pushControllerNamed:aControllerStr];
+	
+}
+
 
 
 #pragma mark -
 #pragma mark UIViewController
+#pragma mark -
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {

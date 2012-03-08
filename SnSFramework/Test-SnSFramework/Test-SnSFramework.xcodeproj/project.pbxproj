@@ -38,8 +38,10 @@
 		049A00B415076B8300DD76D2 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A00A915076B8300DD76D2 /* WebViewController.m */; };
 		049A00B515076B8300DD76D2 /* AutomationServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A00AC15076B8300DD76D2 /* AutomationServices.m */; };
 		049A00B615076B8300DD76D2 /* AutomationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A00AF15076B8300DD76D2 /* AutomationUtils.m */; };
-		049A00BA15076EED00DD76D2 /* ios4me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A00B915076EED00DD76D2 /* ios4me.framework */; };
-		049A00BB15076EF200DD76D2 /* ios4me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A00B915076EED00DD76D2 /* ios4me.framework */; };
+		049A00BF15077B6F00DD76D2 /* ImageRetrievalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A00BE15077B6F00DD76D2 /* ImageRetrievalViewController.m */; };
+		049A00C31507A8AC00DD76D2 /* ImageRetrievallCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049A00C21507A8AC00DD76D2 /* ImageRetrievallCellView.m */; };
+		049A00C51507B3DE00DD76D2 /* ios4me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A00C41507B3DE00DD76D2 /* ios4me.framework */; };
+		049A00C61507B3E700DD76D2 /* ios4me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A00C41507B3DE00DD76D2 /* ios4me.framework */; };
 		049AFFEB1507694000DD76D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248313DF01BF00A5B069 /* UIKit.framework */; };
 		049AFFEC1507694000DD76D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248513DF01BF00A5B069 /* Foundation.framework */; };
 		049AFFED1507694000DD76D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248713DF01BF00A5B069 /* CoreGraphics.framework */; };
@@ -118,7 +120,11 @@
 		049A00AC15076B8300DD76D2 /* AutomationServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomationServices.m; sourceTree = "<group>"; };
 		049A00AE15076B8300DD76D2 /* AutomationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomationUtils.h; sourceTree = "<group>"; };
 		049A00AF15076B8300DD76D2 /* AutomationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomationUtils.m; sourceTree = "<group>"; };
-		049A00B915076EED00DD76D2 /* ios4me.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios4me.framework; path = System/Library/Frameworks/ios4me.framework; sourceTree = SDKROOT; };
+		049A00BD15077B6F00DD76D2 /* ImageRetrievalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRetrievalViewController.h; sourceTree = "<group>"; };
+		049A00BE15077B6F00DD76D2 /* ImageRetrievalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageRetrievalViewController.m; sourceTree = "<group>"; };
+		049A00C11507A8AC00DD76D2 /* ImageRetrievallCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRetrievallCellView.h; sourceTree = "<group>"; };
+		049A00C21507A8AC00DD76D2 /* ImageRetrievallCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageRetrievallCellView.m; sourceTree = "<group>"; };
+		049A00C41507B3DE00DD76D2 /* ios4me.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios4me.framework; path = ../SnSFramework/build/Framework/ios4me.framework; sourceTree = "<group>"; };
 		049AFFE91507694000DD76D2 /* Automation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADD96514EBEC3E00C2087E /* sqlite2model.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = sqlite2model.py; path = Resources/sqlite2model.py; sourceTree = "<group>"; };
 		04CB247F13DF01BF00A5B069 /* Unit Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049A00C51507B3DE00DD76D2 /* ios4me.framework in Frameworks */,
 				049AFFEB1507694000DD76D2 /* UIKit.framework in Frameworks */,
 				049AFFEC1507694000DD76D2 /* Foundation.framework in Frameworks */,
 				049AFFED1507694000DD76D2 /* CoreGraphics.framework in Frameworks */,
@@ -167,7 +174,6 @@
 				049AFFF11507694000DD76D2 /* CoreLocation.framework in Frameworks */,
 				049AFFF21507694000DD76D2 /* MobileCoreServices.framework in Frameworks */,
 				049AFFF31507694000DD76D2 /* StoreKit.framework in Frameworks */,
-				049A00BB15076EF200DD76D2 /* ios4me.framework in Frameworks */,
 				049AFFF41507694000DD76D2 /* ASIHTTPFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +189,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049A00BA15076EED00DD76D2 /* ios4me.framework in Frameworks */,
 				042B2D5F15075F2200854572 /* ASIHTTPFramework.framework in Frameworks */,
 				04D7B800140E5E7400238E32 /* QuartzCore.framework in Frameworks */,
 				048411E513F2DCAE004B17A1 /* StoreKit.framework in Frameworks */,
@@ -194,6 +199,7 @@
 				04CB248C13DF01BF00A5B069 /* SystemConfiguration.framework in Frameworks */,
 				04CB248E13DF01BF00A5B069 /* CoreLocation.framework in Frameworks */,
 				04CB249013DF01BF00A5B069 /* MobileCoreServices.framework in Frameworks */,
+				049A00C61507B3E700DD76D2 /* ios4me.framework in Frameworks */,
 				04CB249213DF01BF00A5B069 /* GHUnitIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +260,7 @@
 		049A009D15076B8300DD76D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				049A00C01507A88700DD76D2 /* Views */,
 				049A009E15076B8300DD76D2 /* AutomationAppDelegate.h */,
 				049A009F15076B8300DD76D2 /* AutomationAppDelegate.m */,
 				049A00A015076B8300DD76D2 /* Constants.h */,
@@ -268,6 +275,7 @@
 		049A00A215076B8300DD76D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				049A00BC15077B5A00DD76D2 /* Image Retrieval */,
 				049A00A315076B8300DD76D2 /* AutomationViewController.h */,
 				049A00A415076B8300DD76D2 /* AutomationViewController.m */,
 				049A00A515076B8300DD76D2 /* Common */,
@@ -304,6 +312,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		049A00BC15077B5A00DD76D2 /* Image Retrieval */ = {
+			isa = PBXGroup;
+			children = (
+				049A00BD15077B6F00DD76D2 /* ImageRetrievalViewController.h */,
+				049A00BE15077B6F00DD76D2 /* ImageRetrievalViewController.m */,
+			);
+			path = "Image Retrieval";
+			sourceTree = "<group>";
+		};
+		049A00C01507A88700DD76D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				049A00C11507A8AC00DD76D2 /* ImageRetrievallCellView.h */,
+				049A00C21507A8AC00DD76D2 /* ImageRetrievallCellView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		049AFFF71507694000DD76D2 /* Automation */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,7 +363,7 @@
 		04CB248213DF01BF00A5B069 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				049A00B915076EED00DD76D2 /* ios4me.framework */,
+				049A00C41507B3DE00DD76D2 /* ios4me.framework */,
 				042B2D5E15075F2200854572 /* ASIHTTPFramework.framework */,
 				04D7B7FF140E5E7400238E32 /* QuartzCore.framework */,
 				048411E413F2DCAE004B17A1 /* StoreKit.framework */,
@@ -559,6 +585,8 @@
 				049A00B415076B8300DD76D2 /* WebViewController.m in Sources */,
 				049A00B515076B8300DD76D2 /* AutomationServices.m in Sources */,
 				049A00B615076B8300DD76D2 /* AutomationUtils.m in Sources */,
+				049A00BF15077B6F00DD76D2 /* ImageRetrievalViewController.m in Sources */,
+				049A00C31507A8AC00DD76D2 /* ImageRetrievallCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +624,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SnSFramework/build/Framework\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Automation/Automation-Prefix.pch";
@@ -606,7 +638,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "Automation/Automation-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Automation/Libraries\"",
@@ -619,6 +651,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -629,12 +662,16 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SnSFramework/build/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Automation/Automation-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "Automation/Automation-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Automation/Libraries\"",
@@ -647,6 +684,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -668,6 +706,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "";
@@ -686,6 +725,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";

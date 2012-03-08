@@ -9,23 +9,22 @@
  */
 
 //
-//  AutomationViewController.m
-//  Automation
+//  ImageRetrievalViewController.h
+//  Test-SnSFramework
 //
 //  Created by «FULLUSERNAME» on «DATE».
 //  Copyright «YEAR» «ORGANIZATIONNAME». All rights reserved.
-//  Created by ApplicationAuthor on ApplicationCreationDate.
 //
 
 #import <UIKit/UIKit.h>
 
+#import <ios4me/SnSTableViewRefreshController.h>
 
-#pragma mark -
-#pragma mark AutomationViewController
-@interface AutomationViewController : SnSTableViewRefreshController <SnsBusinessObjectsRetrievalAsynchronousPolicy>
+@interface ImageRetrievalViewController : SnSViewController  <UITableViewDataSource,UITableViewDelegate>
 {
-	
+	NSArray* businessObjects_;
 }
-- (void)pushControllerNamed:(NSString*)iName;
+
+@property (nonatomic, retain) NSArray* businessObjects;
 
 @end

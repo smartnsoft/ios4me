@@ -42,6 +42,6 @@
  *	@param	iBindingView	The view responsible for binding when the image is done downloading
  *	@param	iLoadingView	Optional. The loading view that will be automatically started stopped.
  */
-- (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(SnSLoadingView*)iLoadingView;
+- (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(UIView*)iLoadingView;
 
 @end

@@ -44,42 +44,90 @@
 	
 	[iRequest setCachePolicy:ASIOnlyLoadIfNotCachedCachePolicy];
 	[iRequest setCacheStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
+	[iRequest setDownloadCache:[ASIDownloadCache sharedCache]];
+
 }
 
 #pragma mark -
 #pragma mark Image Retrieval
 #pragma mark -
 
-- (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(SnSLoadingView*)iLoadingView
+- (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(UIView*)iLoadingView
 {
+	//------------------------------
+	// Variables and Queue
+	//------------------------------
+	
+	// The image data will be modified in the blocks
 	__block NSData* aImageData	= nil;
-	NSString* aBindingViewStr	= [NSString stringWithFormat:@"%p", iBindingView];
+	
+	// this will be used to associate a request to its binding view
+	NSString* aBindingViewStr	= iBindingView ? [NSString stringWithFormat:@"%p", iBindingView] : nil;
 
 	// Create the background queue
 	dispatch_queue_t aQueue = dispatch_queue_create("Image Retrieval", NULL);
 	
+	// Start animating if passed in parameters
+	if ([iLoadingView respondsToSelector:@selector(startAnimating)])
+		[(id)iLoadingView startAnimating];
+	
 	//------------------------------
-	// 1. Process Old Request
+	// Image Construction and Binding
 	//------------------------------
-	dispatch_sync(aQueue, ^{
+	void (^finalization)(NSData*) = ^ (NSData* d) {
+		
+		// make sure the request is diassociated from its binding view
+		@synchronized(requests_)
+		{ [requests_  removeObjectForKey:aBindingViewStr]; }
+		
+		UIImage* aImage = [UIImage imageWithData:d];
+		
+		dispatch_async(dispatch_get_main_queue(), ^{
+			
+			if (aImage)
+			{
+				CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
+				crossFade.duration = 0.15f;
+				crossFade.fromValue = (id)iBindingView.image.CGImage;
+				crossFade.toValue = (id)aImage.CGImage;
+				[iBindingView.layer addAnimation:crossFade forKey:@"animateContents"];
 				
+				iBindingView.image = aImage;				
+			}
+			
+			if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
+				[(id)iLoadingView stopAnimating];
+		});		
+		
+	};
+	
+	//------------------------------
+	// Image Download
+	//------------------------------
+	dispatch_async(aQueue, ^{
+		
+		//------------------------------
+		// Processing old request
+		//------------------------------
+		
 		// First check if there is already a request corresponding to this view
 		ASIHTTPRequest* aOldRequest = [requests_ objectForKey:aBindingViewStr];
 		
 		// If there is, cancel it
 		if (aOldRequest)
 		{
+			SnSLogD(@"Cancelling retrieval for %@: %@ ", aBindingViewStr, [aOldRequest url]);
+
 			[aOldRequest cancel];
 			
 			@synchronized(requests_)
 			{ [requests_ removeObjectForKey:aBindingViewStr]; }
 		}	
-	});
-	
-	//------------------------------
-	// 2. Memory Cache
-	//------------------------------
-	dispatch_sync(aQueue, ^{		
+		
+		//------------------------------
+		// Checking memory cache
+		//------------------------------
+		
 		for (SnSAbstractCache* aCache in [[SnSCacheChecker instance] caches])
 		{
 			// Is there cached data associated to that URL
@@ -87,21 +135,20 @@
 			
 			if (aImageData)
 			{
-				SnSLogD(@"Cached data found for URL: %@", iURL);
+				SnSLogD(@"Cached data found for URL: %@ [%d bytes]", iURL, [aImageData length]);
 				break;
 			}
 			
-		}
-	});
-	
-	//------------------------------
-	// 3. Image Construction
-	//------------------------------
-	dispatch_sync(aQueue, ^{
+		}		
+		
+		//------------------------------
+		// Request creation
+		//------------------------------
+		
 		// No image found in memory cache ? Fetch it
 		if (aImageData == nil)
 		{
-			ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
+			__block ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
 			[self prepareRequest:aRequest];
 			
 			SnSLogD(@"Retrieving image: %@", [aRequest url]);
@@ -110,26 +157,35 @@
 			@synchronized(requests_)
 				{ [requests_ setObject:aRequest forKey:aBindingViewStr]; }
 			
-			// The download can be synchrounous since GCD will be running this code
-			// in another thread
-			[aRequest startSynchronous];
+			[aRequest setFailedBlock:^{
+				
+				if ([[aRequest error] code] == ASIRequestCancelledErrorType)
+					SnSLogD(@"Cancelled retrieval for image: %@", [aRequest url]);
+				else
+					SnSLogE(@"Error %@ in image retrieval: %@", [[aRequest error] description], [aRequest url]);
+				
+				finalization(nil);
+
+			}];
+			[aRequest setCompletionBlock:^{
+				
+				aImageData  = [aRequest responseData];
+				
+				[[SnSMemoryCache instance] storeData:aImageData forKey:[aRequest url]];
+				
+				SnSLogD(@"Retrieved image: %@ [%d bytes]", [aRequest url], [aImageData length]);
+				
+				finalization(aImageData);
+			}];
 			
-			@synchronized(requests_)
-				{ [requests_  removeObjectForKey:aBindingViewStr]; }
+			[aRequest startAsynchronous];
 			
-			aImageData  = [aRequest responseData];
-			
-			SnSLogD(@"Retrieved image: %@ [%d bytes]", [aRequest url], [aImageData length]);
+		}
+		else
+		{
+			finalization(aImageData);
 		}
 		
-		UIImage* aImage = [UIImage imageWithData:aImageData];
-		
-		// Process is done, call the completion block in the main thread
-		dispatch_async(dispatch_get_main_queue(), ^{
-			iBindingView.image = aImage;
-			
-			[iLoadingView stopAnimating];
-		});
 	});
 	
 	//won’t actually go away until queue is empty 
