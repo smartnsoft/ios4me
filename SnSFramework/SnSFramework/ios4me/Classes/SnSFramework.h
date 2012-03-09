@@ -35,12 +35,12 @@
 #import "SnSCacheDelegate.h"
 
 // Cache
+#import "SnSAbstractCache.h"
 #import "SnSMemoryCache.h"
 #import "SnSURLCache.h"
+#import "SnSCacheChecker.h"
+#import "SnSCacheDelegate.h"
 #import "SnSCacheItem.h"
-#import "SnSCacheSilo.h"
-#import "SnSURLCacheSilo.h"
-#import "SnSMasterCache.h"
 
 // Connection
 #import "SnSURLConnection.h"
@@ -77,16 +77,16 @@
 #import "SnSLog.h"
 
 // Services
+#import "SnSRemoteServices.h"
 #import "SnSWebServiceCaller.h"
 #import "SnSStoreManager.h"
-
-
-// Errors/Exceptions
-#import "SnSCacheException.h"
 
 // Utils
 #import "SnSUtils.h"
 #import "SnSImageDownloader.h"
+
+// UI Views
+#import "SnSLoadingView.h"
 
 #define SNS_FRAMEWORK_VERSION @"1.0"
 

@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Test-SnSFramework/Test-SnSFramework.xcodeproj">
+      location = "group:SnSFramework/ios4me.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:SnSFramework/ios4me.xcodeproj">
+      location = "group:Test-SnSFramework/Test-SnSFramework.xcodeproj">
    </FileRef>
 </Workspace>

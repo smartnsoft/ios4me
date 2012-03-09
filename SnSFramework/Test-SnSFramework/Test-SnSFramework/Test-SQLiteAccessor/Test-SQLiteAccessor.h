@@ -11,7 +11,6 @@
 // For Mac OS X
 //#import <GHUnit/GHUnit.h>
 
-#import <Smart&Soft/SnSFramework.h>
 #import <StoreKit/StoreKit.h>
 
 
