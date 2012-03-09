@@ -7,7 +7,7 @@ BASE_TEMPLATE_ROOT_DIR_XCODE4="/Library/Developer/Xcode/Templates"
 BASE_TEMPLATE_USER_DIR_XCODE3="$HOME/Library/Application Support/Developer/Shared/Xcode"
 BASE_TEMPLATE_USER_DIR_XCODE4="$HOME/Library/Developer/Xcode/Templates"
 
-BASE_FRAMEWORK_ROOT_DIR=`find /Developer/Platforms/ -name "*.sdk" -type d -maxdepth 4 |xargs -I {} echo "{}/System/Library/Frameworks"`
+BASE_FRAMEWORK_ROOT_DIR=`find /Developer/Platforms/ /Applications/Xcode.app/ -name "*.sdk" -type d -maxdepth 8 |xargs -I {} echo "{}/System/Library/Frameworks"`
 BASE_XCODE_VERSION="3 4"
 
 SCRIPT_PATH="$PWD/`dirname $0`"
