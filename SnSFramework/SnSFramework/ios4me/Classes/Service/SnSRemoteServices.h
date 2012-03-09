@@ -11,6 +11,10 @@
 
 @class ASIHTTPRequest;
 
+typedef void (^SnSImageCompletionBlock)(UIImage*);
+typedef void (^SnSImageErrorBlock)(NSError*);
+
+
 /** 
  * @interface SnSRemoteServices
  * Your application main services class should always inherit this class
@@ -38,10 +42,18 @@
 /**
  *	Retrieve an image given its target url and binds it to the image view passed in paramater
  *	Also, if a loading view is given, starts animating it stops it when the image is downloaded
- *	@param	iURL			The URL to retreive the image from
- *	@param	iBindingView	The view responsible for binding when the image is done downloading
- *	@param	iLoadingView	Optional. The loading view that will be automatically started stopped.
+ *	@param	iURL				The URL to retreive the image from
+ *	@param	iBindingView		The view responsible for binding when the image is done downloading
+ *	@param	iLoadingView		Optional. The loading view that will be automatically started stopped.
+ *	@param	iCompletionBlock	Optional. The block executed once the image has been retrieved
+ *	@param	iErrorBlock			Optional. The block executed when an error occured
  */
 - (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(UIView*)iLoadingView;
+
+- (void)retrieveImageURL:(NSURL*)iURL 
+				 binding:(UIImageView*)iBindingView 
+			   indicator:(UIView*)iLoadingView 
+		 completionBlock:(SnSImageCompletionBlock)iBlock
+			  errorBlock:(SnSImageErrorBlock)iBlock;
 
 @end

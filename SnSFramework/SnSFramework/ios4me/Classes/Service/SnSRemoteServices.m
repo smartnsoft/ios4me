@@ -52,7 +52,16 @@
 #pragma mark Image Retrieval
 #pragma mark -
 
-- (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(UIView*)iLoadingView
+- (void)retrieveImageURL:(NSURL *)iURL binding:(UIImageView *)iBindingView indicator:(UIView *)iLoadingView
+{
+	[self retrieveImageURL:iURL binding:iBindingView indicator:iLoadingView completionBlock:nil errorBlock:nil];
+}
+
+- (void)retrieveImageURL:(NSURL*)iURL
+				 binding:(UIImageView*)iBindingView 
+			   indicator:(UIView*)iLoadingView 
+		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock 
+			  errorBlock:(SnSImageErrorBlock)iErrorBlock
 {
 	//------------------------------
 	// Variables and Queue
@@ -74,7 +83,7 @@
 	//------------------------------
 	// Image Construction and Binding
 	//------------------------------
-	void (^finalization)(NSData*) = ^ (NSData* d) {
+	UIImage* (^finalization)(NSData*) = ^ (NSData* d) {
 				
 		UIImage* aImage = [UIImage imageWithData:d];
 		
@@ -103,7 +112,9 @@
 
 			}
 			
-		});		
+		});	
+		
+		return aImage;
 		
 	};
 	
@@ -171,6 +182,9 @@
 					SnSLogE(@"Error Image Retrieval [u:%@] [v:%@] [e:%@]", [aRequest url], aBindingViewStr, [[aRequest error] description]);
 				
 				finalization(nil);
+								
+				if (iErrorBlock)
+					iErrorBlock([aRequest error]);
 
 			}];
 			[aRequest setCompletionBlock:^{
@@ -181,7 +195,11 @@
 				
 				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], aBindingViewStr);
 				
-				finalization(aImageData);
+				UIImage* aImage = finalization(aImageData);
+				
+				if (iCompletionBlock)
+					iCompletionBlock(aImage);
+				
 			}];
 			
 			[aRequest startAsynchronous];

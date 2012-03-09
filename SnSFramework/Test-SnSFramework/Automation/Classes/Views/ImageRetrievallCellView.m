@@ -65,7 +65,7 @@
 
 	NSString* aURLStr = (NSString*)iObj;
 	
-	imgThumbnail_.image = nil;
+//	imgThumbnail_.image = nil;
 	lblTitle_.text = aURLStr;
 	
 	[[AutomationRemoteServices instance] retrieveImageURL:[NSURL URLWithString:aURLStr]
