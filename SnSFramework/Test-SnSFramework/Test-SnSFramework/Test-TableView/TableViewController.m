@@ -245,7 +245,7 @@
 
 - (void)clickedTest:(id)sender
 {
-	SnSLogD(__FUNCTION__);
+	SnSLogD(@"");
 }
 
 #pragma mark -

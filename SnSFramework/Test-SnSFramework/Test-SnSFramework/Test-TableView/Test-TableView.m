@@ -77,8 +77,8 @@
 
 	[self prepare]; 
 	
-	UITableViewCell* aCell = [_tableController tableView:[_tableController tableView] 
-								   cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+//	UITableViewCell* aCell = [_tableController tableView:[_tableController tableView] 
+//								   cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
 	
 	[self performTouchInView:[_tableController testButton]];
 	[_tableController tableView:[_tableController tableView] didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];

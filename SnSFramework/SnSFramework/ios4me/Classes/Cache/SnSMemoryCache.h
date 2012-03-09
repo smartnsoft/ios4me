@@ -17,15 +17,17 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SnSSingleton.h"
+#import "SnSAbstractCache.h"
 
 /**
  *	The memory cache holds data up to a certain limit in memory.
  *	That amount is set in the cache silo creation.
  */
-@interface SnSMemoryCache : SnSSingleton
+@interface SnSMemoryCache : SnSAbstractCache
 {
-	NSMutableDictionary * _items;
 }
+
+- (void)storeObject:(id)iObj forKey:(id)iKey;
+- (void)storeString:(NSString*)iStr forKey:(id)iKey;
 
 @end

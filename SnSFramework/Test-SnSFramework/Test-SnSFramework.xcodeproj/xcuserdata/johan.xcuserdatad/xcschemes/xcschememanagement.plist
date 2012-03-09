@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Test-SnSFramework.xcscheme</key>
+		<key>Automation.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Unit Testing.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
@@ -14,6 +19,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>049AFFBD1507664800DD76D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>049AFFE81507694000DD76D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>04CB247E13DF01BF00A5B069</key>
 		<dict>
 			<key>primary</key>
