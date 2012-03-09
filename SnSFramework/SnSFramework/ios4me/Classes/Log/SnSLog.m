@@ -44,15 +44,34 @@
 
 + (void)logString:(NSString *)iStr
 {
-	NSLog(@"%@", iStr);
+	// We'll log strings asynchrnously into a low priority quue
+	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0); 
 	
+	// This will be used to make sure that the strings are logged 
+	// in the same order they came in
+	static NSString* _lock_ = nil;
+	if (_lock_ == nil)
+		_lock_ = [[NSString alloc] init];
+
+	// log everything in the background especially because logging
+	// into the file will be SLOW !
+	dispatch_async(queue, ^{
+		
+		@synchronized(_lock_)
+		{
+			NSLog(@"%@", iStr);
+
 #if SNS_LOG_FILE !=0
-	NSDate* aDate = [NSDate date];
-	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
-	[self logString:[NSString stringWithFormat:@"%@ %@",[dateFormatter stringFromDate:aDate], iStr] toFile:[self logFilePath]];
-	[dateFormatter release];
+			NSDate* aDate = [NSDate date];
+			NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+			[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+			[self logString:[NSString stringWithFormat:@"%@ %@",[dateFormatter stringFromDate:aDate], iStr] toFile:[self logFilePath]];
+			[dateFormatter release];
 #endif
+		}
+	});
+	
+
 	
 }
 

@@ -49,11 +49,19 @@ typedef void (^SnSImageErrorBlock)(NSError*);
  *	@param	iErrorBlock			Optional. The block executed when an error occured
  */
 - (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(UIView*)iLoadingView;
-
 - (void)retrieveImageURL:(NSURL*)iURL 
 				 binding:(UIImageView*)iBindingView 
 			   indicator:(UIView*)iLoadingView 
 		 completionBlock:(SnSImageCompletionBlock)iBlock
 			  errorBlock:(SnSImageErrorBlock)iBlock;
+
+/**
+ *	Returns YES if the URL passed in parameter is already cached either by the memory cache or by
+ *	the file system cache.
+ *	@return	YES if already cached no otherwise
+ */
+- (BOOL)isCachedImageURL:(NSURL*)iURL;
+
+
 
 @end

@@ -52,6 +52,35 @@
 #pragma mark Image Retrieval
 #pragma mark -
 
+- (BOOL)isCachedImageURL:(NSURL *)iURL
+{
+	//------------------------------
+	// Checking memory cache
+	//------------------------------
+	
+	for (SnSAbstractCache* aCache in [[SnSCacheChecker instance] caches])
+	{
+		// Is there cached data associated to that URL
+		NSData* aImageData = [aCache cachedDataForKey:iURL];
+		
+		if (aImageData)
+		{
+			SnSLogD(@"Cached data found for [u:%@] [s:%d bytes]", iURL, [aImageData length]);
+			return YES;
+		}
+	}	
+	
+	//------------------------------
+	// Checking ASI Cache
+	//------------------------------
+	
+	ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
+	
+	[self prepareRequest:aRequest];
+	
+	return [[ASIDownloadCache sharedCache] isCachedDataCurrentForRequest:aRequest];
+}
+
 - (void)retrieveImageURL:(NSURL *)iURL binding:(UIImageView *)iBindingView indicator:(UIView *)iLoadingView
 {
 	[self retrieveImageURL:iURL binding:iBindingView indicator:iLoadingView completionBlock:nil errorBlock:nil];
@@ -184,7 +213,14 @@
 				finalization(nil);
 								
 				if (iErrorBlock)
-					iErrorBlock([aRequest error]);
+				{
+					if (iCompletionBlock)
+					{
+						dispatch_async(dispatch_get_main_queue(), ^{
+							iErrorBlock([aRequest error]);
+						});						
+					}
+				}
 
 			}];
 			[aRequest setCompletionBlock:^{
@@ -198,7 +234,12 @@
 				UIImage* aImage = finalization(aImageData);
 				
 				if (iCompletionBlock)
-					iCompletionBlock(aImage);
+				{
+					dispatch_async(dispatch_get_main_queue(), ^{
+						iCompletionBlock(aImage);
+					});						
+				}
+					
 				
 			}];
 			

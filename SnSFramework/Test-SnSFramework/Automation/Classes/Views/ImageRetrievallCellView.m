@@ -63,14 +63,20 @@
 {
 	SnSLogD(@"Loading cell %p with business object: %@", self, iObj);
 
-	NSString* aURLStr = (NSString*)iObj;
+	NSURL* aURL = [NSURL URLWithString:(NSString*)iObj];
 	
-//	imgThumbnail_.image = nil;
-	lblTitle_.text = aURLStr;
+	if (![[AutomationRemoteServices instance] isCachedImageURL:aURL])
+		imgThumbnail_.image = nil;
 	
-	[[AutomationRemoteServices instance] retrieveImageURL:[NSURL URLWithString:aURLStr]
+	lblTitle_.text = [aURL absoluteString];
+	
+	[[AutomationRemoteServices instance] retrieveImageURL:aURL
 												  binding:imgThumbnail_
-												indicator:actLoader_];
+												indicator:actLoader_
+										  completionBlock:^(UIImage* i){
+											  SnSLogD(@"Done Loading cell %p", self);
+										  }
+											   errorBlock:nil];
 	
 	
 }
