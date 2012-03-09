@@ -121,9 +121,9 @@
 	[super onRetrieveBusinessObjects];
 	
 	// Init Memory Cache
-	[[SnSMemoryCache instance] setHighCapacity:1024*1024*2];
+	[[SnSMemoryCache instance] setHighCapacity:1024*1024*1];
 	[[SnSMemoryCache instance] setLowCapacity:1024*400];
-	
+	[[SnSCacheChecker instance] setFrequency:30];
 	
 }
 

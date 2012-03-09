@@ -75,28 +75,34 @@
 	// Image Construction and Binding
 	//------------------------------
 	void (^finalization)(NSData*) = ^ (NSData* d) {
-		
-		// make sure the request is diassociated from its binding view
-		@synchronized(requests_)
-		{ [requests_  removeObjectForKey:aBindingViewStr]; }
-		
+				
 		UIImage* aImage = [UIImage imageWithData:d];
 		
 		dispatch_async(dispatch_get_main_queue(), ^{
 			
 			if (aImage)
 			{
+				// Only remove the assocition binding view -> request
+				// if the image was correctly built.
+				// Otherwise you could remove it after a cancelation but also right after another
+				// download on the same buiding view has started
+				@synchronized(requests_)
+				{ [requests_  removeObjectForKey:aBindingViewStr]; }
+				
 				CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
-				crossFade.duration = 0.15f;
+				crossFade.duration = 0.2f;
 				crossFade.fromValue = (id)iBindingView.image.CGImage;
 				crossFade.toValue = (id)aImage.CGImage;
 				[iBindingView.layer addAnimation:crossFade forKey:@"animateContents"];
 				
 				iBindingView.image = aImage;				
+				
+				
+				if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
+					[(id)iLoadingView stopAnimating];
+
 			}
 			
-			if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
-				[(id)iLoadingView stopAnimating];
 		});		
 		
 	};
@@ -116,7 +122,7 @@
 		// If there is, cancel it
 		if (aOldRequest)
 		{
-			SnSLogD(@"Cancelling retrieval for %@: %@ ", aBindingViewStr, [aOldRequest url]);
+			SnSLogD(@"Cancelling Image Retrieval [u:%@] [v:%@]", [aOldRequest url], aBindingViewStr);
 
 			[aOldRequest cancel];
 			
@@ -135,7 +141,7 @@
 			
 			if (aImageData)
 			{
-				SnSLogD(@"Cached data found for URL: %@ [%d bytes]", iURL, [aImageData length]);
+				SnSLogD(@"Cached data found for [u:%@] [s:%d bytes]", iURL, [aImageData length]);
 				break;
 			}
 			
@@ -151,7 +157,7 @@
 			__block ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
 			[self prepareRequest:aRequest];
 			
-			SnSLogD(@"Retrieving image: %@", [aRequest url]);
+			SnSLogD(@"Retrieving Image [u:%@] [v:%@]", [aRequest url], aBindingViewStr);
 			
 			// Lock request and add it to the dictionary 
 			@synchronized(requests_)
@@ -160,9 +166,9 @@
 			[aRequest setFailedBlock:^{
 				
 				if ([[aRequest error] code] == ASIRequestCancelledErrorType)
-					SnSLogD(@"Cancelled retrieval for image: %@", [aRequest url]);
+					SnSLogD(@"Cancelled Image Retrieval [u:%@] [v:%@]", [aRequest url], aBindingViewStr);
 				else
-					SnSLogE(@"Error %@ in image retrieval: %@", [[aRequest error] description], [aRequest url]);
+					SnSLogE(@"Error Image Retrieval [u:%@] [v:%@] [e:%@]", [aRequest url], aBindingViewStr, [[aRequest error] description]);
 				
 				finalization(nil);
 
@@ -173,7 +179,7 @@
 				
 				[[SnSMemoryCache instance] storeData:aImageData forKey:[aRequest url]];
 				
-				SnSLogD(@"Retrieved image: %@ [%d bytes]", [aRequest url], [aImageData length]);
+				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], aBindingViewStr);
 				
 				finalization(aImageData);
 			}];
