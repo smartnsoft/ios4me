@@ -144,22 +144,14 @@
 				
 				// if completion block has been set call it
 				if (iCompletionBlock)
-				{
-					dispatch_async(dispatch_get_main_queue(), ^{
-						iCompletionBlock(aImage);
-					});						
-				}
+					iCompletionBlock(aImage);					
 
 			}
 			
 			else {
 				
 				if (iErrorBlock)
-				{
-					dispatch_async(dispatch_get_main_queue(), ^{
-						iErrorBlock(nil);
-					});						
-				}
+					iErrorBlock(nil);
 
 			}
 			
