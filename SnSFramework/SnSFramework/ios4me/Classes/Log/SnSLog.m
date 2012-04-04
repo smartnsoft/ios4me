@@ -78,6 +78,9 @@
 + (NSString *)logFilePath
 {
 	NSString* aFileName = [[[NSProcessInfo processInfo] processName] stringByAppendingString:@".log"];
+	
+	aFileName = [aFileName stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+	
 	NSString* aFilePath = [[SnSUtils applicationCachesPath] stringByAppendingPathComponent:aFileName];
 	
 	

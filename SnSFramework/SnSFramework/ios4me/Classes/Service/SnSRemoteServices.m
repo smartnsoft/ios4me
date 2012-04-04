@@ -100,7 +100,10 @@
 	__block NSData* aImageData	= nil;
 	
 	// this will be used to associate a request to its binding view
-	NSString* aBindingViewStr	= iBindingView ? [NSString stringWithFormat:@"%p", iBindingView] : nil;
+	NSString* aBindingViewStr	= iBindingView ? [NSString stringWithFormat:@"%p", iBindingView] : [NSString stringUnique] ;
+	
+	// check if the binding view is an image view
+	UIImageView* aImageView = [iBindingView isKindOfClass:[UIImageView class]] ? iBindingView : nil;
 
 	// Create the background queue
 	dispatch_queue_t aQueue = dispatch_queue_create("Image Retrieval", NULL);
@@ -129,15 +132,34 @@
 				
 				CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
 				crossFade.duration = 0.2f;
-				crossFade.fromValue = (id)iBindingView.image.CGImage;
+				crossFade.fromValue = (id)aImageView.image.CGImage;
 				crossFade.toValue = (id)aImage.CGImage;
-				[iBindingView.layer addAnimation:crossFade forKey:@"animateContents"];
+				[aImageView.layer addAnimation:crossFade forKey:@"animateContents"];
 				
-				iBindingView.image = aImage;				
+				aImageView.image = aImage;				
 				
 				
 				if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
 					[(id)iLoadingView stopAnimating];
+				
+				// if completion block has been set call it
+				if (iCompletionBlock)
+				{
+					dispatch_async(dispatch_get_main_queue(), ^{
+						iCompletionBlock(aImage);
+					});						
+				}
+
+			}
+			
+			else {
+				
+				if (iErrorBlock)
+				{
+					dispatch_async(dispatch_get_main_queue(), ^{
+						iErrorBlock(nil);
+					});						
+				}
 
 			}
 			
@@ -214,12 +236,9 @@
 								
 				if (iErrorBlock)
 				{
-					if (iCompletionBlock)
-					{
-						dispatch_async(dispatch_get_main_queue(), ^{
-							iErrorBlock([aRequest error]);
-						});						
-					}
+					dispatch_async(dispatch_get_main_queue(), ^{
+						iErrorBlock([aRequest error]);
+					});						
 				}
 
 			}];
@@ -233,12 +252,7 @@
 				
 				UIImage* aImage = finalization(aImageData);
 				
-				if (iCompletionBlock)
-				{
-					dispatch_async(dispatch_get_main_queue(), ^{
-						iCompletionBlock(aImage);
-					});						
-				}
+				
 					
 				
 			}];
