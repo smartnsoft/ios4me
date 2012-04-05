@@ -181,7 +181,7 @@
 			[aOldRequest cancel];
 			
 			@synchronized(requests_)
-			{ [requests_ removeObjectForKey:aBindingViewStr]; }
+			{ [requests_ removeObjectForKey:aBindingViewStr];}
 		}	
 		
 		//------------------------------
@@ -242,7 +242,7 @@
 				
 				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], aBindingViewStr);
 				
-				UIImage* aImage = finalization(aImageData);
+				finalization(aImageData);
 				
 				
 					

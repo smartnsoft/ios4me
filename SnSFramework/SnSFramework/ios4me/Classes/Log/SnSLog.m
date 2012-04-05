@@ -61,12 +61,14 @@
 		{
 			NSLog(@"%@", iStr);
 
-#if SNS_LOG_FILE !=0
+#ifdef SNS_LOG_FILE 
+#if TARGET_IPHONE_SIMULATOR
 			NSDate* aDate = [NSDate date];
 			NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 			[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
 			[self logString:[NSString stringWithFormat:@"%@ %@",[dateFormatter stringFromDate:aDate], iStr] toFile:[self logFilePath]];
 			[dateFormatter release];
+#endif
 #endif
 		}
 	});
