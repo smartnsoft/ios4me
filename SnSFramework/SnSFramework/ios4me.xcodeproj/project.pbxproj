@@ -15,12 +15,6 @@
 		042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D4115064E9100854572 /* SnSLoadingView.h */; };
 		042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
 		042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
-		047C403613D58B340002EF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
-		047C404313D58B710002EF65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
-		048411CE13F2B1AD004B17A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
-		048411CF13F2B1D7004B17A1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
-		048411D013F2B1E2004B17A1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CDE4E13DEF425006C2E4D /* CFNetwork.framework */; };
-		048CDE4F13DEF425006C2E4D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CDE4E13DEF425006C2E4D /* CFNetwork.framework */; };
 		04ADDA4B14ED195500C2087E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
 		04ADDA4C14ED195500C2087E /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */; };
 		04ADDA4D14ED195500C2087E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
@@ -101,6 +95,10 @@
 		04B4202314FE83970006A34E /* SnSCacheChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B4202014FE83970006A34E /* SnSCacheChecker.h */; };
 		04B4202414FE83970006A34E /* SnSCacheChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4202114FE83970006A34E /* SnSCacheChecker.m */; };
 		04B4202514FE83970006A34E /* SnSCacheChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4202114FE83970006A34E /* SnSCacheChecker.m */; };
+		04C43E8F152F21C20011695E /* SnSScrollFollowerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */; };
+		04C43E90152F21C20011695E /* SnSScrollFollowerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */; };
+		04C43E91152F21C20011695E /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */; };
+		04C43E92152F21C20011695E /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */; };
 		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
@@ -191,6 +189,8 @@
 		04B41FF714FE448E0006A34E /* SnSURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSURLCache.m; sourceTree = "<group>"; };
 		04B4202014FE83970006A34E /* SnSCacheChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSCacheChecker.h; sourceTree = "<group>"; };
 		04B4202114FE83970006A34E /* SnSCacheChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSCacheChecker.m; sourceTree = "<group>"; };
+		04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSScrollFollowerView.h; sourceTree = "<group>"; };
+		04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSScrollFollowerView.m; sourceTree = "<group>"; };
 		04FB834B14F68150004754E7 /* SnSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSExceptionHandler.h; sourceTree = "<group>"; };
 		04FB834C14F68150004754E7 /* SnSExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSExceptionHandler.m; sourceTree = "<group>"; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -392,6 +392,7 @@
 		04ADDB3A14ED470200C2087E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				04C43E8B152F21A90011695E /* SnSScrollFollowerView */,
 				042B2D4015064E6F00854572 /* Loading View */,
 				04ADDB4114ED470200C2087E /* RefreshTableHeaderView */,
 			);
@@ -420,6 +421,15 @@
 				04ADDB4C14ED470200C2087E /* SnSUtils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		04C43E8B152F21A90011695E /* SnSScrollFollowerView */ = {
+			isa = PBXGroup;
+			children = (
+				04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */,
+				04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */,
+			);
+			path = SnSScrollFollowerView;
 			sourceTree = "<group>";
 		};
 		04FB834A14F68150004754E7 /* Exceptions */ = {
@@ -501,6 +511,7 @@
 				04B4202214FE83970006A34E /* SnSCacheChecker.h in Headers */,
 				042B2D3B15064BCB00854572 /* SnSRemoteServices.h in Headers */,
 				042B2D4315064E9100854572 /* SnSLoadingView.h in Headers */,
+				04C43E8F152F21C20011695E /* SnSScrollFollowerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +524,7 @@
 				04B4202314FE83970006A34E /* SnSCacheChecker.h in Headers */,
 				042B2D3C15064BCB00854572 /* SnSRemoteServices.h in Headers */,
 				042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */,
+				04C43E90152F21C20011695E /* SnSScrollFollowerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +654,7 @@
 				04B4202414FE83970006A34E /* SnSCacheChecker.m in Sources */,
 				042B2D3D15064BCB00854572 /* SnSRemoteServices.m in Sources */,
 				042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */,
+				04C43E91152F21C20011695E /* SnSScrollFollowerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +699,7 @@
 				04B4202514FE83970006A34E /* SnSCacheChecker.m in Sources */,
 				042B2D3E15064BCB00854572 /* SnSRemoteServices.m in Sources */,
 				042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */,
+				04C43E92152F21C20011695E /* SnSScrollFollowerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
