@@ -130,7 +130,7 @@ static NSString *randomImgs[] = {
 {
 	[super onFulfillDisplayObjects];
 	
-	CGFloat w = 150, h = 60;
+	CGFloat w = 100, h = 40;
 	scrollFollower_.view.frame = CGRectMake(VIEW_WIDTH(tableView_)-w-10, 0, w, h);
 	
 	

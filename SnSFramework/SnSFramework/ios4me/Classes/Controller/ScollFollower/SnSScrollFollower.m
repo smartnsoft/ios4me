@@ -118,13 +118,77 @@
 
 - (void)onPan:(UIPanGestureRecognizer *)iPanRecognizer
 {
-	SnSLogD(@"");
+	SnSLogD(@"Panning");
+	
+	panStatus_.location = [iPanRecognizer locationInView:self.view];
+		
+	// -----------------------------
+	// Gesture Began: Setup
+	// -----------------------------
+	if (iPanRecognizer.state == UIGestureRecognizerStateBegan) 
+	{
+		panStatus_.direction	= CGPointZero;
+		panStatus_.displacement = 0.f;
+		panStatus_.hitLocation	= panStatus_.location;
+		panStatus_.lastLocation = panStatus_.location;
+		panStatus_.initialOffset= scrollFollowed_.contentOffset;
+	}
+	
+	// -----------------------------
+	// Determining Panning Direction
+	// -----------------------------
+	if (CGPointEqualToPoint(panStatus_.direction, CGPointZero) && iPanRecognizer.state == UIGestureRecognizerStateChanged) 
+		panStatus_.direction = CGPointMake(0, panStatus_.location.y > panStatus_.hitLocation.y ? 1.f : -1.f);
+	
+	// -----------------------------
+	// Updating Displacement values
+	// -----------------------------
+	panStatus_.displacement = panStatus_.location.y - panStatus_.hitLocation.y;
+	
+	
+	CGPoint center = [self safeCenter:CGPointMake(self.view.center.x, self.view.center.y + panStatus_.displacement)];
+	
+	// Setup vars
+	CGFloat h	= scrollFollowed_.bounds.size.height;
+	CGFloat he	= VIEW_HEIGHT(self.view);
+	CGFloat cy	= center.y;
+	
+	// The formula to retrieve the ratio (0-1) based ton the current displaced view center
+	CGFloat ratio = cy / (h - 2.f*he) - h/(2.f*(h-2.f*he)) + 0.5f;
+	
+	if (ratio > 1.f)
+		ratio = 1.f;
+	if (ratio < 0.f)
+		ratio = 0.f;
+	
+	
+	scrollFollowed_.contentOffset = CGPointMake(scrollFollowed_.contentOffset.x, 
+												ratio*(scrollFollowed_.contentSize.height-scrollFollowed_.bounds.size.height));
+	
+//	SnSLogD(@"status: %@ - %.1f - ratio %.3f - off: %@",
+//			NSStringFromCGPoint(panStatus_.direction),
+//			panStatus_.displacement,
+//			ratio,
+//			NSStringFromCGPoint(scrollFollowed_.contentOffset));
+
 }
 
 #pragma mark -
 #pragma mark Scroll Follower 
 #pragma mark -
 
+- (CGPoint)safeCenter:(CGPoint)iCenter
+{
+	CGFloat y = iCenter.y;
+	// Readjust position if overflow
+	if (y < VIEW_HEIGHT(self.view)*0.5f)
+		y = VIEW_HEIGHT(self.view)*0.5f;
+	else if (y+VIEW_HEIGHT(self.view)*0.5f > VIEW_HEIGHT(scrollFollowed_))
+		y = VIEW_HEIGHT(scrollFollowed_)-VIEW_HEIGHT(self.view)*0.5f;
+	
+	return CGPointMake(iCenter.x, y);
+
+}
 - (void)follow
 {
 	// No need to go further if the scroll view is not set
@@ -140,17 +204,10 @@
 	CGFloat shift = -length*ratio + length*0.5f;
 	
 	// calculate the new y position
-	CGFloat y = ratio * scrollFollowed_.bounds.size.height + shift;
-	
-	// Readjust position if overflow
-	if (y < VIEW_HEIGHT(self.view)*0.5f)
-		y = VIEW_HEIGHT(self.view)*0.5f;
-	else if (y+VIEW_HEIGHT(self.view)*0.5f > VIEW_HEIGHT(scrollFollowed_))
-		y = VIEW_HEIGHT(scrollFollowed_)-VIEW_HEIGHT(self.view)*0.5f;
-	
+	CGFloat y = ratio * scrollFollowed_.bounds.size.height + shift;	
 	
 	// update the view position
-	self.view.center = CGPointMake(self.view.center.x, y);
+	self.view.center = [self safeCenter:CGPointMake(self.view.center.x, y)];
 	
 }
 

@@ -20,9 +20,23 @@
 
 #import <UIKit/UIKit.h>
 
+typedef struct SnSScrollFollowerPanStatus
+{
+	CGFloat		displacement;
+	CGPoint		initialOffset;
+	CGPoint		location;
+	CGPoint		hitLocation;
+	CGPoint		lastLocation;
+	CGPoint		direction;	
+	
+	
+} SnSScrollFollowerPanStatus;
+
 @interface SnSScrollFollower : SnSViewController 
 {
 	UIScrollView* scrollFollowed_;
+	
+	SnSScrollFollowerPanStatus panStatus_;
 }
 
 /**
@@ -46,6 +60,8 @@
  * Returns the calculated indicator length of the scrollview
  */
 - (CGFloat)indicatorLength;
+
+- (CGPoint)safeCenter:(CGPoint)iCenter;
 
 #pragma mark Events
 
