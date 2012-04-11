@@ -22,6 +22,7 @@
 
 // Controllers
 #import "ImageRetrievalViewController.h"
+#import "ScrollFollowerViewController.h"
 
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)
@@ -85,7 +86,8 @@
 		
 	// Here, add all the controller you want to test
 	[aControllers addObject:NSStringFromClass([ImageRetrievalViewController class])];
-		
+	[aControllers addObject:NSStringFromClass([ScrollFollowerViewController class])];
+	
     return aControllers;
 }
 

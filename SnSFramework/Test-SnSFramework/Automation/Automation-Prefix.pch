@@ -4,7 +4,8 @@
 
 #ifdef __OBJC__
 
-#import "ios4me/SnSFramework.h"
-#import "Constants.h"
+#	import <ios4me/SnSFramework.h>
+#	import <ASIHTTPFramework/ASIHTTPFramework.h>
+#	import "Constants.h"
 
 #endif

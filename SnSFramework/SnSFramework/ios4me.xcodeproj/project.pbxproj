@@ -95,10 +95,14 @@
 		04B4202314FE83970006A34E /* SnSCacheChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B4202014FE83970006A34E /* SnSCacheChecker.h */; };
 		04B4202414FE83970006A34E /* SnSCacheChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4202114FE83970006A34E /* SnSCacheChecker.m */; };
 		04B4202514FE83970006A34E /* SnSCacheChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4202114FE83970006A34E /* SnSCacheChecker.m */; };
-		04C43E8F152F21C20011695E /* SnSScrollFollowerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */; };
-		04C43E90152F21C20011695E /* SnSScrollFollowerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */; };
-		04C43E91152F21C20011695E /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */; };
-		04C43E92152F21C20011695E /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */; };
+		04BA6B35153467F10084B421 /* SnSScrollFollower.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BA6B33153467F10084B421 /* SnSScrollFollower.h */; };
+		04BA6B36153467F10084B421 /* SnSScrollFollower.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BA6B33153467F10084B421 /* SnSScrollFollower.h */; };
+		04BA6B37153467F10084B421 /* SnSScrollFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B34153467F10084B421 /* SnSScrollFollower.m */; };
+		04BA6B38153467F10084B421 /* SnSScrollFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B34153467F10084B421 /* SnSScrollFollower.m */; };
+		04BA6B3B15347A160084B421 /* SnSScrollFollowerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BA6B3915347A160084B421 /* SnSScrollFollowerView.h */; };
+		04BA6B3C15347A160084B421 /* SnSScrollFollowerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BA6B3915347A160084B421 /* SnSScrollFollowerView.h */; };
+		04BA6B3D15347A160084B421 /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */; };
+		04BA6B3E15347A160084B421 /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */; };
 		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
@@ -189,8 +193,10 @@
 		04B41FF714FE448E0006A34E /* SnSURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSURLCache.m; sourceTree = "<group>"; };
 		04B4202014FE83970006A34E /* SnSCacheChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSCacheChecker.h; sourceTree = "<group>"; };
 		04B4202114FE83970006A34E /* SnSCacheChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSCacheChecker.m; sourceTree = "<group>"; };
-		04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSScrollFollowerView.h; sourceTree = "<group>"; };
-		04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSScrollFollowerView.m; sourceTree = "<group>"; };
+		04BA6B33153467F10084B421 /* SnSScrollFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSScrollFollower.h; sourceTree = "<group>"; };
+		04BA6B34153467F10084B421 /* SnSScrollFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSScrollFollower.m; sourceTree = "<group>"; };
+		04BA6B3915347A160084B421 /* SnSScrollFollowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSScrollFollowerView.h; sourceTree = "<group>"; };
+		04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSScrollFollowerView.m; sourceTree = "<group>"; };
 		04FB834B14F68150004754E7 /* SnSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSExceptionHandler.h; sourceTree = "<group>"; };
 		04FB834C14F68150004754E7 /* SnSExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSExceptionHandler.m; sourceTree = "<group>"; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -318,6 +324,8 @@
 		04ADDB0E14ED470200C2087E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04ADDB1B14ED470200C2087E /* StackViewController */,
+				04BA6B31153467D20084B421 /* ScollFollower */,
 				04ADDB0F14ED470200C2087E /* SnSFormViewController.h */,
 				04ADDB1014ED470200C2087E /* SnSFormViewController.m */,
 				04ADDB1114ED470200C2087E /* SnSLifeCycle.h */,
@@ -330,7 +338,6 @@
 				04ADDB1814ED470200C2087E /* SnSViewController.m */,
 				04ADDB1914ED470200C2087E /* SnSViewControllerDelegate.h */,
 				04ADDB1A14ED470200C2087E /* SnSViewControllerDelegate.m */,
-				04ADDB1B14ED470200C2087E /* StackViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,7 +399,6 @@
 		04ADDB3A14ED470200C2087E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				04C43E8B152F21A90011695E /* SnSScrollFollowerView */,
 				042B2D4015064E6F00854572 /* Loading View */,
 				04ADDB4114ED470200C2087E /* RefreshTableHeaderView */,
 			);
@@ -423,13 +429,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		04C43E8B152F21A90011695E /* SnSScrollFollowerView */ = {
+		04BA6B31153467D20084B421 /* ScollFollower */ = {
 			isa = PBXGroup;
 			children = (
-				04C43E8D152F21C20011695E /* SnSScrollFollowerView.h */,
-				04C43E8E152F21C20011695E /* SnSScrollFollowerView.m */,
+				04BA6B3915347A160084B421 /* SnSScrollFollowerView.h */,
+				04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */,
+				04BA6B33153467F10084B421 /* SnSScrollFollower.h */,
+				04BA6B34153467F10084B421 /* SnSScrollFollower.m */,
 			);
-			path = SnSScrollFollowerView;
+			path = ScollFollower;
 			sourceTree = "<group>";
 		};
 		04FB834A14F68150004754E7 /* Exceptions */ = {
@@ -511,7 +519,8 @@
 				04B4202214FE83970006A34E /* SnSCacheChecker.h in Headers */,
 				042B2D3B15064BCB00854572 /* SnSRemoteServices.h in Headers */,
 				042B2D4315064E9100854572 /* SnSLoadingView.h in Headers */,
-				04C43E8F152F21C20011695E /* SnSScrollFollowerView.h in Headers */,
+				04BA6B35153467F10084B421 /* SnSScrollFollower.h in Headers */,
+				04BA6B3B15347A160084B421 /* SnSScrollFollowerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +533,8 @@
 				04B4202314FE83970006A34E /* SnSCacheChecker.h in Headers */,
 				042B2D3C15064BCB00854572 /* SnSRemoteServices.h in Headers */,
 				042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */,
-				04C43E90152F21C20011695E /* SnSScrollFollowerView.h in Headers */,
+				04BA6B36153467F10084B421 /* SnSScrollFollower.h in Headers */,
+				04BA6B3C15347A160084B421 /* SnSScrollFollowerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +664,8 @@
 				04B4202414FE83970006A34E /* SnSCacheChecker.m in Sources */,
 				042B2D3D15064BCB00854572 /* SnSRemoteServices.m in Sources */,
 				042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */,
-				04C43E91152F21C20011695E /* SnSScrollFollowerView.m in Sources */,
+				04BA6B37153467F10084B421 /* SnSScrollFollower.m in Sources */,
+				04BA6B3D15347A160084B421 /* SnSScrollFollowerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,7 +710,8 @@
 				04B4202514FE83970006A34E /* SnSCacheChecker.m in Sources */,
 				042B2D3E15064BCB00854572 /* SnSRemoteServices.m in Sources */,
 				042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */,
-				04C43E92152F21C20011695E /* SnSScrollFollowerView.m in Sources */,
+				04BA6B38153467F10084B421 /* SnSScrollFollower.m in Sources */,
+				04BA6B3E15347A160084B421 /* SnSScrollFollowerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

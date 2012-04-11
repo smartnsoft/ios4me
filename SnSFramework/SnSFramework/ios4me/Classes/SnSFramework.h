@@ -52,6 +52,7 @@
 #import "SnSTableViewController.h"
 #import "SnSTableViewRefreshController.h"
 #import "SnSFormViewController.h"
+#import "SnSScrollFollower.h"
 
 // StackView Controllers
 #import "SnSStackView.h"

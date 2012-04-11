@@ -53,6 +53,9 @@
 		049AFFF31507694000DD76D2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411E413F2DCAE004B17A1 /* StoreKit.framework */; };
 		049AFFF41507694000DD76D2 /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042B2D5E15075F2200854572 /* ASIHTTPFramework.framework */; };
 		04ADD96614EBEC3E00C2087E /* sqlite2model.py in Resources */ = {isa = PBXBuildFile; fileRef = 04ADD96514EBEC3E00C2087E /* sqlite2model.py */; };
+		04BA6B47153576BF0084B421 /* ScrollFollowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B46153576BF0084B421 /* ScrollFollowerViewController.m */; };
+		04BA6B56153577960084B421 /* ScrollFollowerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B55153577960084B421 /* ScrollFollowerViewCell.m */; };
+		04BA6B5B153579F50084B421 /* ScrollFollowerRemoteServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B5A153579F50084B421 /* ScrollFollowerRemoteServices.m */; };
 		04CB248413DF01BF00A5B069 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248313DF01BF00A5B069 /* UIKit.framework */; };
 		04CB248613DF01BF00A5B069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248513DF01BF00A5B069 /* Foundation.framework */; };
 		04CB248813DF01BF00A5B069 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248713DF01BF00A5B069 /* CoreGraphics.framework */; };
@@ -127,6 +130,12 @@
 		049A00C41507B3DE00DD76D2 /* ios4me.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios4me.framework; path = ../SnSFramework/build/Framework/ios4me.framework; sourceTree = "<group>"; };
 		049AFFE91507694000DD76D2 /* Automation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04ADD96514EBEC3E00C2087E /* sqlite2model.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = sqlite2model.py; path = Resources/sqlite2model.py; sourceTree = "<group>"; };
+		04BA6B45153576BF0084B421 /* ScrollFollowerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollFollowerViewController.h; sourceTree = "<group>"; };
+		04BA6B46153576BF0084B421 /* ScrollFollowerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollFollowerViewController.m; sourceTree = "<group>"; };
+		04BA6B54153577960084B421 /* ScrollFollowerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollFollowerViewCell.h; sourceTree = "<group>"; };
+		04BA6B55153577960084B421 /* ScrollFollowerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollFollowerViewCell.m; sourceTree = "<group>"; };
+		04BA6B59153579F50084B421 /* ScrollFollowerRemoteServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollFollowerRemoteServices.h; sourceTree = "<group>"; };
+		04BA6B5A153579F50084B421 /* ScrollFollowerRemoteServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollFollowerRemoteServices.m; sourceTree = "<group>"; };
 		04CB247F13DF01BF00A5B069 /* Unit Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CB248313DF01BF00A5B069 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04CB248513DF01BF00A5B069 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -275,6 +284,7 @@
 		049A00A215076B8300DD76D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04BA6B431535769D0084B421 /* Scroll Follower */,
 				049A00BC15077B5A00DD76D2 /* Image Retrieval */,
 				049A00A315076B8300DD76D2 /* AutomationViewController.h */,
 				049A00A415076B8300DD76D2 /* AutomationViewController.m */,
@@ -339,6 +349,19 @@
 				049A005A150769EA00DD76D2 /* Static */,
 			);
 			path = Automation;
+			sourceTree = "<group>";
+		};
+		04BA6B431535769D0084B421 /* Scroll Follower */ = {
+			isa = PBXGroup;
+			children = (
+				04BA6B54153577960084B421 /* ScrollFollowerViewCell.h */,
+				04BA6B55153577960084B421 /* ScrollFollowerViewCell.m */,
+				04BA6B45153576BF0084B421 /* ScrollFollowerViewController.h */,
+				04BA6B46153576BF0084B421 /* ScrollFollowerViewController.m */,
+				04BA6B59153579F50084B421 /* ScrollFollowerRemoteServices.h */,
+				04BA6B5A153579F50084B421 /* ScrollFollowerRemoteServices.m */,
+			);
+			path = "Scroll Follower";
 			sourceTree = "<group>";
 		};
 		04CB247313DF01BF00A5B069 = {
@@ -587,6 +610,9 @@
 				049A00B615076B8300DD76D2 /* AutomationUtils.m in Sources */,
 				049A00BF15077B6F00DD76D2 /* ImageRetrievalViewController.m in Sources */,
 				049A00C31507A8AC00DD76D2 /* ImageRetrievallCellView.m in Sources */,
+				04BA6B47153576BF0084B421 /* ScrollFollowerViewController.m in Sources */,
+				04BA6B56153577960084B421 /* ScrollFollowerViewCell.m in Sources */,
+				04BA6B5B153579F50084B421 /* ScrollFollowerRemoteServices.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +832,7 @@
 				049A00481507694000DD76D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04CB247813DF01BF00A5B069 /* Build configuration list for PBXProject "Test-SnSFramework" */ = {
 			isa = XCConfigurationList;

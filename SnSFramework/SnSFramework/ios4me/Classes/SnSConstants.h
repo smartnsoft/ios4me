@@ -45,6 +45,15 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 #pragma mark -
+#pragma mark SnSScrollFollower
+#pragma mark -
+
+#define SnSScollFollowerDefaultSize CGSizeMake(80,90)
+#define SnSScollFollowerDefaultIndicatorLength 9
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark -
 #pragma mark SnSStackView
 #pragma mark -
 
