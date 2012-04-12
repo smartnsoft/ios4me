@@ -164,7 +164,6 @@
 	if (ratio < 0.f)
 		ratio = 0.f;
 	
-	
 	scrollFollowed_.contentOffset = CGPointMake(scrollFollowed_.contentOffset.x, 
 												ratio*(scrollFollowed_.contentSize.height-scrollFollowed_.bounds.size.height));
 	
@@ -179,6 +178,7 @@
 		// If dispear was requested make it happen 
 		if (panStatus_.shouldDisapear)
 			[self disappear];
+	
 	}
 
 }
@@ -250,9 +250,13 @@
 
 - (void)appear
 {
-	CGPoint p = self.view.center;
+	// No need to go further if the scroll view is not set
+	if (scrollFollowed_ == nil)
+		return;
+	
+	CGPoint p = CGPointMake(VIEW_WIDTH(scrollFollowed_)-VIEW_WIDTH(self.view)*0.5-10,self.view.center.y);
 	CGFloat s = SnSScollFollowerDefaultAnimationOffset;
-	self.view.center = CGPointMake(self.view.center.x - s, self.view.center.y);
+	self.view.center = CGPointMake(p.x - s, p.y);
 	[UIView animateWithDuration:0.3f
 						  delay:0
 						options:UIViewAnimationOptionAllowUserInteraction
