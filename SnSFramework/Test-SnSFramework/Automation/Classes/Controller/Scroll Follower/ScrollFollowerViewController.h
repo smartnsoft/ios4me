@@ -19,15 +19,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class ClockView;
+
 @interface ScrollFollowerViewController : SnSViewController <UITableViewDataSource, UITableViewDelegate>
 {
 	UITableView* tableView_;
 	SnSScrollFollower* scrollFollower_;
+	ClockView* clockView_;
 
 }
 
 @property (nonatomic, retain) UITableView* tableView;
 @property (nonatomic, retain) SnSScrollFollower* scrollFollower;
+@property (nonatomic, retain) ClockView* clockView;
 
 
 @end

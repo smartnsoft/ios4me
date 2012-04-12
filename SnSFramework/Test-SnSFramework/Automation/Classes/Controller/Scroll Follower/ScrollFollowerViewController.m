@@ -21,6 +21,9 @@
 #import "ScrollFollowerViewCell.h"
 #import "ScrollFollowerRemoteServices.h"
 
+// Views
+#import "ClockView.h"
+
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)
 #define VIEW_WIDTH(v)		((v).frame.size.width)
@@ -29,6 +32,7 @@
 @implementation ScrollFollowerViewController
 @synthesize tableView = tableView_;
 @synthesize scrollFollower = scrollFollower_;
+@synthesize clockView = clockView_;
 
 #pragma mark -
 #pragma mark ScrollFollowerViewController
@@ -78,6 +82,7 @@ static NSString *randomImgs[] = {
 	@"http://farm5.staticflickr.com/4018/4680292604_4f35c9dccd_%@.jpg",
 };
 
+
 #define N_RANDOM_WORDS (sizeof(randomWords)/sizeof(NSString *))
 #define N_RANDOM_IMAGES (sizeof(randomImgs)/sizeof(NSString *))
 
@@ -110,7 +115,13 @@ static NSString *randomImgs[] = {
 	scrollFollower_ = [[SnSScrollFollower alloc] initWithNibName:nil bundle:nil];
 	scrollFollower_.scrollFollowed = tableView_;
 	[self.view addSubview:scrollFollower_.view];
-
+	
+	
+	// ---------------------------
+	// ClockView 
+	// ---------------------------
+	clockView_ = [[ClockView alloc] initWithFrame:CGRectMake(3, 3, 34, 34)];
+	[scrollFollower_.view addSubview:clockView_];
 
 }
 
@@ -215,7 +226,7 @@ static NSString *randomImgs[] = {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 50; // arc4random()%150+40;
+	return arc4random()%150+40;
 }
 
 #pragma mark -
@@ -229,7 +240,7 @@ static NSString *randomImgs[] = {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 150;
+    return 30;
 }
 
 #pragma mark -
@@ -246,6 +257,13 @@ static NSString *randomImgs[] = {
 	
 //	lblfollow_.text = [NSString stringWithFormat:@"%.2f", [scrollFollower_ ratio]];
 	[scrollFollower_ follow];
+	
+	NSArray* visibleRows = [tableView_ indexPathsForVisibleRows];
+	NSIndexPath* firstRow = [visibleRows objectAtIndex:0];
+	
+	NSDate* date = [NSDate dateWithTimeIntervalSinceNow:-arc4random()%(1000*1000)];
+	
+	SnSLogD(@"first row: %d", firstRow.row);
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
@@ -270,6 +288,7 @@ static NSString *randomImgs[] = {
 {
 	self.tableView = nil;
 	self.scrollFollower = nil;
+	self.clockView = nil;
 	
 	[super dealloc];
 }

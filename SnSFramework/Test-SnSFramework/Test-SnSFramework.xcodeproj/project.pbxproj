@@ -56,6 +56,7 @@
 		04BA6B47153576BF0084B421 /* ScrollFollowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B46153576BF0084B421 /* ScrollFollowerViewController.m */; };
 		04BA6B56153577960084B421 /* ScrollFollowerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B55153577960084B421 /* ScrollFollowerViewCell.m */; };
 		04BA6B5B153579F50084B421 /* ScrollFollowerRemoteServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B5A153579F50084B421 /* ScrollFollowerRemoteServices.m */; };
+		04BA6B92153728240084B421 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B91153728240084B421 /* ClockView.m */; };
 		04CB248413DF01BF00A5B069 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248313DF01BF00A5B069 /* UIKit.framework */; };
 		04CB248613DF01BF00A5B069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248513DF01BF00A5B069 /* Foundation.framework */; };
 		04CB248813DF01BF00A5B069 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CB248713DF01BF00A5B069 /* CoreGraphics.framework */; };
@@ -136,6 +137,8 @@
 		04BA6B55153577960084B421 /* ScrollFollowerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollFollowerViewCell.m; sourceTree = "<group>"; };
 		04BA6B59153579F50084B421 /* ScrollFollowerRemoteServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollFollowerRemoteServices.h; sourceTree = "<group>"; };
 		04BA6B5A153579F50084B421 /* ScrollFollowerRemoteServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollFollowerRemoteServices.m; sourceTree = "<group>"; };
+		04BA6B90153728240084B421 /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
+		04BA6B91153728240084B421 /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
 		04CB247F13DF01BF00A5B069 /* Unit Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CB248313DF01BF00A5B069 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04CB248513DF01BF00A5B069 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -360,6 +363,8 @@
 				04BA6B46153576BF0084B421 /* ScrollFollowerViewController.m */,
 				04BA6B59153579F50084B421 /* ScrollFollowerRemoteServices.h */,
 				04BA6B5A153579F50084B421 /* ScrollFollowerRemoteServices.m */,
+				04BA6B90153728240084B421 /* ClockView.h */,
+				04BA6B91153728240084B421 /* ClockView.m */,
 			);
 			path = "Scroll Follower";
 			sourceTree = "<group>";
@@ -613,6 +618,7 @@
 				04BA6B47153576BF0084B421 /* ScrollFollowerViewController.m in Sources */,
 				04BA6B56153577960084B421 /* ScrollFollowerViewCell.m in Sources */,
 				04BA6B5B153579F50084B421 /* ScrollFollowerRemoteServices.m in Sources */,
+				04BA6B92153728240084B421 /* ClockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
