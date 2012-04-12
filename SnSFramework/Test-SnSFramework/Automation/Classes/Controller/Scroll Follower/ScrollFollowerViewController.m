@@ -255,7 +255,7 @@ static NSString *randomImgs[] = {
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-	[scrollFollower_ disappear:YES];
+	[scrollFollower_ disappear];
 }
 
 

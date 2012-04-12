@@ -178,7 +178,7 @@
 		
 		// If dispear was requested make it happen 
 		if (panStatus_.shouldDisapear)
-			[self disappear:YES];
+			[self disappear];
 	}
 
 }
@@ -263,7 +263,7 @@
 					 completion:nil];
 }
 
-- (void)disappear:(BOOL)startsNow
+- (void)disappear
 {
 	// If the user is panning the view do not make it disapear just yet
 	if (panStatus_.isPanning)

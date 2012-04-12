@@ -47,7 +47,7 @@ typedef struct SnSScrollFollowerPanStatus
 @property (nonatomic, assign) UIScrollView* scrollFollowed;
 
 - (void)appear;
-- (void)disappear:(BOOL)startsNow;
+- (void)disappear;
 
 /**
  * Tells the view to updates its position based on the scroll view its is attached to
