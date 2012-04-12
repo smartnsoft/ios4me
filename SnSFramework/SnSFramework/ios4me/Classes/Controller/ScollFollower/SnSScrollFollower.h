@@ -28,6 +28,8 @@ typedef struct SnSScrollFollowerPanStatus
 	CGPoint		hitLocation;
 	CGPoint		lastLocation;
 	CGPoint		direction;	
+	BOOL		isPanning;
+	BOOL		shouldDisapear;
 	
 	
 } SnSScrollFollowerPanStatus;
@@ -43,6 +45,9 @@ typedef struct SnSScrollFollowerPanStatus
  * @property The scroll view that this view will be following
  */
 @property (nonatomic, assign) UIScrollView* scrollFollowed;
+
+- (void)appear;
+- (void)disappear:(BOOL)startsNow;
 
 /**
  * Tells the view to updates its position based on the scroll view its is attached to

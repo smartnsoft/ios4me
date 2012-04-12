@@ -53,6 +53,7 @@
 	self.view.frame				= CGRectMake(0, 0, SnSScollFollowerDefaultSize.width, SnSScollFollowerDefaultSize.height);
 	self.view.center			= CGPointMake(VIEW_WIDTH(scrollFollowed_)-VIEW_WIDTH(self.view), 0);
 	self.view.backgroundColor	= [UIColor clearColor];
+	self.view.alpha				= 0.f;
 	self.view.clipsToBounds		= YES;
 	
 	// -------------------------
@@ -127,11 +128,13 @@
 	// -----------------------------
 	if (iPanRecognizer.state == UIGestureRecognizerStateBegan) 
 	{
-		panStatus_.direction	= CGPointZero;
-		panStatus_.displacement = 0.f;
-		panStatus_.hitLocation	= panStatus_.location;
-		panStatus_.lastLocation = panStatus_.location;
-		panStatus_.initialOffset= scrollFollowed_.contentOffset;
+		panStatus_.direction		= CGPointZero;
+		panStatus_.displacement		= 0.f;
+		panStatus_.hitLocation		= panStatus_.location;
+		panStatus_.lastLocation		= panStatus_.location;
+		panStatus_.initialOffset	= scrollFollowed_.contentOffset;
+		panStatus_.isPanning		= YES;
+		panStatus_.shouldDisapear	= NO;
 	}
 	
 	// -----------------------------
@@ -165,11 +168,18 @@
 	scrollFollowed_.contentOffset = CGPointMake(scrollFollowed_.contentOffset.x, 
 												ratio*(scrollFollowed_.contentSize.height-scrollFollowed_.bounds.size.height));
 	
-//	SnSLogD(@"status: %@ - %.1f - ratio %.3f - off: %@",
-//			NSStringFromCGPoint(panStatus_.direction),
-//			panStatus_.displacement,
-//			ratio,
-//			NSStringFromCGPoint(scrollFollowed_.contentOffset));
+	// -----------------------------
+	// Gesture Ended: Finish up
+	// -----------------------------
+	if (iPanRecognizer.state == UIGestureRecognizerStateEnded || iPanRecognizer.state == UIGestureRecognizerStateCancelled) 
+	{
+		// Panning ended
+		panStatus_.isPanning	= NO;
+		
+		// If dispear was requested make it happen 
+		if (panStatus_.shouldDisapear)
+			[self disappear:YES];
+	}
 
 }
 
@@ -195,6 +205,11 @@
 	if (!scrollFollowed_)
 		return;
 	
+	// Make the view appear if needed
+	if (self.view.alpha == 0)
+		[self appear];
+	
+	
 	// the ratio will depend on the view relative position to its window
 	CGFloat ratio = [self ratio];
 	
@@ -210,12 +225,6 @@
 	self.view.center = [self safeCenter:CGPointMake(self.view.center.x, y)];
 	
 }
-
-
-
-#pragma mark -
-#pragma mark Scroll Math Calculation
-#pragma mark -
 
 -(CGFloat)ratio
 {
@@ -233,6 +242,51 @@
 	length = length < 35.f ? 35.f : length;
 	
 	return length;
+}
+
+#pragma mark -
+#pragma mark Animation
+#pragma mark -
+
+- (void)appear
+{
+	CGPoint p = self.view.center;
+	CGFloat s = SnSScollFollowerDefaultAnimationOffset;
+	self.view.center = CGPointMake(self.view.center.x - s, self.view.center.y);
+	[UIView animateWithDuration:0.3f
+						  delay:0
+						options:UIViewAnimationOptionAllowUserInteraction
+					 animations:^{
+						 self.view.alpha = 1.f;
+						 self.view.center = CGPointMake(p.x, self.view.center.y);
+					 }
+					 completion:nil];
+}
+
+- (void)disappear:(BOOL)startsNow
+{
+	// If the user is panning the view do not make it disapear just yet
+	if (panStatus_.isPanning)
+	{
+		panStatus_.shouldDisapear = YES;
+		return;
+	}
+
+	
+	CGPoint p = self.view.center;
+	CGFloat s = SnSScollFollowerDefaultAnimationOffset;
+	[UIView animateWithDuration:0.3f
+						  delay:0
+						options:UIViewAnimationOptionAllowUserInteraction
+					 animations:^{
+						 self.view.alpha = 0.f;
+						 self.view.center = CGPointMake(p.x-s, self.view.center.y);
+					 }
+					 completion:^ (BOOL f){
+						 if (f)
+							 self.view.center = p;
+						 
+					 }];
 }
 
 

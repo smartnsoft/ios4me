@@ -50,6 +50,7 @@
 
 #define SnSScollFollowerDefaultSize CGSizeMake(80,90)
 #define SnSScollFollowerDefaultIndicatorLength 9
+#define SnSScollFollowerDefaultAnimationOffset 60;
 
 //////////////////////////////////////////////////////////////////////////////////////
 
