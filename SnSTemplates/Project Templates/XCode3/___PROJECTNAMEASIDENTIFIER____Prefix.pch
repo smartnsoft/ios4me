@@ -26,7 +26,7 @@
   #import <UIKit/UIKit.h>
 
   // The SnSFramework
-  #import <Smart&Soft/SnSFramework.h>
+  #import <ios4me/SnSFramework.h>
   #import "Constants.h"
 
 #endif
