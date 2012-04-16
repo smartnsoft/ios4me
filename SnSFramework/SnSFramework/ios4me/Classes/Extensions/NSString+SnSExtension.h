@@ -21,17 +21,28 @@
 
 @interface NSString (SnSExtensionPrivate)
 
+#pragma mark Class Methods
+
 + (NSString*) stringUnique;
 
-- (NSString*)stringByEscapingSingleQuotesForSQLite;
-
-- (NSString*)stringByJoiningArray:(NSArray*)iArray;
-
-- (NSString *)initWithSQLiteStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn;
-
 + (NSInteger)integerFromStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn;
-
 + (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey;
+
+#pragma mark -
+#pragma mark Object Methods
+#pragma mark -
+
+#pragma mark Init Methods
+
+- (id)initWithSQLiteStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn;
+
+- (id)initWithDictionary:(NSDictionary *)iDic key:(NSString *)iKey;
+
+#pragma mark - Stripping / Joining
+
+- (NSString*) stringByEscapingSingleQuotesForSQLite;
+
+- (NSString*) stringByJoiningArray:(NSArray*)iArray;
 
 - (NSString*) stringByStrippingNonNumbers;
 

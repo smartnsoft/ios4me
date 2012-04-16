@@ -10,6 +10,10 @@
 
 @implementation NSString (SnSExtensionPrivate)
 
+#pragma mark -
+#pragma mark Class Methods
+#pragma mark -
+
 + (NSString*) stringUnique
 {
 	CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
@@ -23,13 +27,34 @@
 	return aUniqueString;
 }
 
-- (NSString*) stringByEscapingSingleQuotesForSQLite
++ (NSInteger)integerFromStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn
 {
-    // Quoting in SQLite means adding one more quote an existing one
-    return [self stringByReplacingOccurrencesOfString:@"'" withString:@"''"];
+    NSInteger aRes = NSIntegerMin;
+	if (sqlite3_column_type(iStatement, iColumn) == SQLITE_INTEGER)
+		aRes = (NSInteger)sqlite3_column_int(iStatement, iColumn);
+	return aRes;
 }
 
-- (NSString *)initWithSQLiteStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn
++ (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey
+{
+	
+	NSInteger aRes = NSIntegerMin;
+	NSString* aValue = [iDict objectForKey:iKey];
+	
+	if ([aValue isKindOfClass:[NSString class]] || [aValue isKindOfClass:[NSNumber class]])
+		aRes  = [aValue integerValue];
+	
+	return aRes;
+	
+}
+
+#pragma mark -
+#pragma mark Object Methods
+#pragma mark -
+
+#pragma mark - Init Methods
+
+- (id)initWithSQLiteStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn
 {
     const unsigned char* t = sqlite3_column_text(iStatement, iColumn);
 	
@@ -39,6 +64,39 @@
 										 encoding:NSUTF8StringEncoding];
 	return self;
 }
+
+- (id)initWithDictionary:(NSDictionary *)iDic key:(NSString *)iKey
+{
+	if ([iDic isKindOfClass:[NSDictionary class]])
+	{
+		NSString* aValue = [iDic objectForKey:iKey];		
+		
+		if ([aValue isKindOfClass:[NSString class]])
+		{
+			aValue = [aValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+			self = [self initWithString:aValue];
+		}
+		else if ([aValue isKindOfClass:[NSNumber class]])
+			self = [self initWithFormat:@"%@", aValue];
+		else
+			self = [self initWithString:@""];
+
+	}
+	else
+		self = [self initWithString:@"-failed init-"];
+		
+	return self;
+}
+
+
+#pragma mark - Stripping / Joining
+
+- (NSString*) stringByEscapingSingleQuotesForSQLite
+{
+    // Quoting in SQLite means adding one more quote an existing one
+    return [self stringByReplacingOccurrencesOfString:@"'" withString:@"''"];
+}
+
 
 - (NSString*) stringByJoiningArray:(NSArray*)iArray
 {
@@ -54,27 +112,6 @@
     }
     
     return aJoinedString;
-}
-
-+ (NSInteger)integerFromStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn
-{
-    NSInteger aRes = NSIntegerMin;
-	if (sqlite3_column_type(iStatement, iColumn) == SQLITE_INTEGER)
-		aRes = (NSInteger)sqlite3_column_int(iStatement, iColumn);
-	return aRes;
-}
-
-+ (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey
-{
-		
-	NSInteger aRes = NSIntegerMin;
-	NSString* aValue = [iDict objectForKey:iKey];
-	
-	if ([aValue isKindOfClass:[NSString class]] || [aValue isKindOfClass:[NSNumber class]])
-		aRes  = [aValue integerValue];
-	
-	return aRes;
-	
 }
 
 - (NSString*) stringByStrippingNonNumbers

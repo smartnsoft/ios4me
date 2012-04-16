@@ -10,4 +10,9 @@
 
 @interface NSDate (SnSExtension)
 
+#pragma mark Object Methods
+
+- (id)initWithDictionary:(NSDictionary*)iDic key:(NSString*)iKey;
+
+
 @end

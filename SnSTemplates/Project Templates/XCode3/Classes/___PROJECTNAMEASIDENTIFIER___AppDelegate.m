@@ -20,7 +20,7 @@
 #import "___PROJECTNAMEASIDENTIFIER___AppDelegate.h"
 #import "___PROJECTNAMEASIDENTIFIER___ViewController.h"
 
-#import "GANTracker.h"
+//#import "GANTracker.h"
 //#import "FlurryAPI.h"
 
 #pragma mark -
@@ -72,9 +72,9 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 - (void) onApplicationDidFinishLaunchingBegin:(UIApplication *)application
 {
 	// Init Google Analytics tracker 
-	[[GANTracker sharedTracker] startTrackerWithAccountID:GA_UID
-										   dispatchPeriod:kGANDispatchPeriodSec
-												 delegate:nil];
+//	[[GANTracker sharedTracker] startTrackerWithAccountID:GA_UID
+//										   dispatchPeriod:kGANDispatchPeriodSec
+//												 delegate:nil];
 	
 	//  // Flurry Analytics Init 
 	//  [FlurryAPI startSession:FLURRY_APPLICATION_KEY];
@@ -167,16 +167,11 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 {
 	if (aggregate == nil)
 	{
-		NSError *error;
-		NSString * screenName = [[viewController class] description];
 		if (event == SnSViewControllerInterceptorEventOnRetrieveDisplayObjects)
 		{
 			// Add some extra informations
 			SnSLogD(@"Screen '%@' being loaded...", screenName);
-			if (![[GANTracker sharedTracker] trackPageview:[self computeUrlForTracker:screenName andController:viewController] withError:&error]) 
-			{
-				SnSLogE(@"Error tracking GA for screenName : %@ - %@ - %@", screenName, [error localizedDescription], [error localizedFailureReason]);
-			}
+			
 			
 			//[FlurryAPI logEvent:screenName];
 		}

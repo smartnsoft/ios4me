@@ -64,6 +64,7 @@
 #import "NSObject+SnSExtension.h"
 #import "UIKit+SnSExtension.h"
 #import "NSString+SnSExtension.h"
+#import "NSDate+SnSExtension.h"
 #import "UIDevice+DeviceDetection.h"
 #import "UIDevice+DeviceConnectivity.h"
 
