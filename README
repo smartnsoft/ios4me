@@ -14,7 +14,8 @@ Installation
 The Smart&Soft framework can simply be installed by going into the SnSTemplates Folder and run the install-templates.sh script as a super user.
 
 cd SnSTemplates
-sudo bash ./install-templates.sh 
+sudo bash ./install-templates.sh (however some users have timeout issues when using this command)
+sudo bash ./install-templates.sh -f (this way no timeout should occur)
 
 The reason this script needs to run as a super user is because the framework will be built from the ground up and will eventually be copied into your default framework folders (ex /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/...)
 
