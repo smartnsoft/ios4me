@@ -40,10 +40,9 @@
 
 #pragma mark - Stripping / Joining
 
-- (NSString*) stringByEscapingSingleQuotesForSQLite;
-
-- (NSString*) stringByJoiningArray:(NSArray*)iArray;
-
-- (NSString*) stringByStrippingNonNumbers;
+- (NSString*)stringByStrippingHTML;
+- (NSString*)stringByEscapingSingleQuotesForSQLite;
+- (NSString*)stringByJoiningArray:(NSArray*)iArray;
+- (NSString*)stringByStrippingNonNumbers;
 
 @end

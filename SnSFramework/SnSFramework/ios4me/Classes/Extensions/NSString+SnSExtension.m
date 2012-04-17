@@ -91,6 +91,15 @@
 
 #pragma mark - Stripping / Joining
 
+- (NSString *)stringByStrippingHTML 
+{
+	NSRange r;
+	NSString *s = [[self copy] autorelease];
+	while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+		s = [s stringByReplacingCharactersInRange:r withString:@""];
+	return s;
+}
+
 - (NSString*) stringByEscapingSingleQuotesForSQLite
 {
     // Quoting in SQLite means adding one more quote an existing one
