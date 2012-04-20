@@ -81,13 +81,13 @@
 	return [[ASIDownloadCache sharedCache] isCachedDataCurrentForRequest:aRequest];
 }
 
-- (void)retrieveImageURL:(NSURL *)iURL binding:(UIImageView *)iBindingView indicator:(UIView *)iLoadingView
+- (void)retrieveImageURL:(NSURL*)iURL binding:(UIView*)iBindingView indicator:(UIView*)iLoadingView
 {
 	[self retrieveImageURL:iURL binding:iBindingView indicator:iLoadingView completionBlock:nil errorBlock:nil];
 }
 
 - (void)retrieveImageURL:(NSURL*)iURL
-				 binding:(UIImageView*)iBindingView 
+				 binding:(UIView*)iBindingView 
 			   indicator:(UIView*)iLoadingView 
 		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock 
 			  errorBlock:(SnSImageErrorBlock)iErrorBlock
@@ -100,13 +100,13 @@
 	__block NSData* aImageData	= nil;
 	
 	// this will be used to associate a request to its binding view
-	NSString* aBindingViewStr	= iBindingView ? [NSString stringWithFormat:@"%p", iBindingView] : [NSString stringUnique] ;
+	NSString* bindStr	= iBindingView ? [NSString stringWithFormat:@"%p", iBindingView] : [NSString stringUnique];
 	
 	// check if the binding view is an image view
-	UIImageView* aImageView = [iBindingView isKindOfClass:[UIImageView class]] ? iBindingView : nil;
+	UIImageView* imageView = [iBindingView isKindOfClass:[UIImageView class]] ? iBindingView : nil;
 
 	// Create the background queue
-	dispatch_queue_t aQueue = dispatch_queue_create("Image Retrieval", NULL);
+	dispatch_queue_t queue = dispatch_queue_create("Image Retrieval", NULL);
 	
 	// Start animating if passed in parameters
 	if ([iLoadingView respondsToSelector:@selector(startAnimating)])
@@ -117,26 +117,26 @@
 	//------------------------------
 	UIImage* (^finalization)(NSData*) = ^ (NSData* d) {
 				
-		UIImage* aImage = [UIImage imageWithData:d];
+		UIImage* image = [UIImage imageWithData:d];
 		
 		dispatch_async(dispatch_get_main_queue(), ^{
 			
-			if (aImage)
+			if (image)
 			{
 				// Only remove the assocition binding view -> request
 				// if the image was correctly built.
 				// Otherwise you could remove it after a cancelation but also right after another
 				// download on the same buiding view has started
 				@synchronized(requests_)
-				{ [requests_  removeObjectForKey:aBindingViewStr]; }
+				{ [requests_  removeObjectForKey:bindStr]; }
 				
 				CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
 				crossFade.duration = 0.2f;
-				crossFade.fromValue = (id)aImageView.image.CGImage;
-				crossFade.toValue = (id)aImage.CGImage;
-				[aImageView.layer addAnimation:crossFade forKey:@"animateContents"];
+				crossFade.fromValue = (id)imageView.image.CGImage;
+				crossFade.toValue = (id)image.CGImage;
+				[imageView.layer addAnimation:crossFade forKey:@"animateContents"];
 				
-				aImageView.image = aImage;				
+				imageView.image = image;				
 				
 				
 				if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
@@ -144,7 +144,7 @@
 				
 				// if completion block has been set call it
 				if (iCompletionBlock)
-					iCompletionBlock(aImage);					
+					iCompletionBlock(image);					
 
 			}
 			
@@ -157,31 +157,31 @@
 			
 		});	
 		
-		return aImage;
+		return image;
 		
 	};
 	
 	//------------------------------
 	// Image Download
 	//------------------------------
-	dispatch_async(aQueue, ^{
+	dispatch_async(queue, ^{
 		
 		//------------------------------
 		// Processing old request
 		//------------------------------
 		
 		// First check if there is already a request corresponding to this view
-		ASIHTTPRequest* aOldRequest = [requests_ objectForKey:aBindingViewStr];
+		ASIHTTPRequest* aOldRequest = [requests_ objectForKey:bindStr];
 		
 		// If there is, cancel it
 		if (aOldRequest)
 		{
-			SnSLogD(@"Cancelling Image Retrieval [u:%@] [v:%@]", [aOldRequest url], aBindingViewStr);
+			SnSLogD(@"Cancelling Image Retrieval [u:%@] [v:%@]", [aOldRequest url], bindStr);
 
 			[aOldRequest cancel];
 			
 			@synchronized(requests_)
-			{ [requests_ removeObjectForKey:aBindingViewStr];}
+			{ [requests_ removeObjectForKey:bindStr];}
 		}	
 		
 		//------------------------------
@@ -211,18 +211,18 @@
 			__block ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
 			[self prepareRequest:aRequest];
 			
-			SnSLogD(@"Retrieving Image [u:%@] [v:%@]", [aRequest url], aBindingViewStr);
+			SnSLogD(@"Retrieving Image [u:%@] [v:%@]", [aRequest url], bindStr);
 			
 			// Lock request and add it to the dictionary 
 			@synchronized(requests_)
-				{ [requests_ setObject:aRequest forKey:aBindingViewStr]; }
+				{ [requests_ setObject:aRequest forKey:bindStr]; }
 			
 			[aRequest setFailedBlock:^{
 				
 				if ([[aRequest error] code] == ASIRequestCancelledErrorType)
-					SnSLogD(@"Cancelled Image Retrieval [u:%@] [v:%@]", [aRequest url], aBindingViewStr);
+					SnSLogD(@"Cancelled Image Retrieval [u:%@] [v:%@]", [aRequest url], bindStr);
 				else
-					SnSLogE(@"Error Image Retrieval [u:%@] [v:%@] [e:%@]", [aRequest url], aBindingViewStr, [[aRequest error] description]);
+					SnSLogE(@"Error Image Retrieval [u:%@] [v:%@] [e:%@]", [aRequest url], bindStr, [[aRequest error] description]);
 				
 				finalization(nil);
 								
@@ -240,7 +240,7 @@
 				
 				[[SnSMemoryCache instance] storeData:aImageData forKey:[aRequest url]];
 				
-				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], aBindingViewStr);
+				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
 				
 				finalization(aImageData);
 				
@@ -260,7 +260,7 @@
 	});
 	
 	//won’t actually go away until queue is empty 
-	dispatch_release(aQueue); 	
+	dispatch_release(queue); 	
 	
 	
 }

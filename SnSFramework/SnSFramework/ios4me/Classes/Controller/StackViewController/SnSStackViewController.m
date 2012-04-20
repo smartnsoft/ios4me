@@ -2,8 +2,8 @@
 //  SnSStackViewController.m
 //  SnSFramework
 //
-//  Created by «FULLUSERNAME» on «DATE».
-//  Copyright «YEAR» «ORGANIZATIONNAME». All rights reserved.
+//  Created by Johan Attali on «DATE».
+//  Copyright 2012 Smart&Soft. All rights reserved.
 //
 
 // View Controllers

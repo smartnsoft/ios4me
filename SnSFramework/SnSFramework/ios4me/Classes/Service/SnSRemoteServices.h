@@ -48,9 +48,9 @@ typedef void (^SnSImageErrorBlock)(NSError*);
  *	@param	iCompletionBlock	Optional. The block executed once the image has been retrieved
  *	@param	iErrorBlock			Optional. The block executed when an error occured
  */
-- (void)retrieveImageURL:(NSURL*)iURL binding:(UIImageView*)iBindingView indicator:(UIView*)iLoadingView;
+- (void)retrieveImageURL:(NSURL*)iURL binding:(UIView*)iBindingView indicator:(UIView*)iLoadingView;
 - (void)retrieveImageURL:(NSURL*)iURL 
-				 binding:(UIImageView*)iBindingView 
+				 binding:(UIView*)iBindingView 
 			   indicator:(UIView*)iLoadingView 
 		 completionBlock:(SnSImageCompletionBlock)iBlock
 			  errorBlock:(SnSImageErrorBlock)iBlock;
