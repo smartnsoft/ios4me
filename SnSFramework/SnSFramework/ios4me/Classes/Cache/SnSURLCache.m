@@ -242,7 +242,7 @@ SnSURLCache ** urlCacheInstances = nil;
             else if ([urlResponse isKindOfClass:[NSHTTPURLResponse class]] && [urlResponse statusCode] != 200)
             {
                 SnSLogD(@"Received a response from server with status code %i corresponding to the URL '%@'", [urlResponse statusCode], url);
-                [data release];
+//                [data release];
                 NSString * errorName = (data == nil ? @"Bad response from server" : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 				SnSLogE(@"%@ - Status Code %i", errorName, [urlResponse statusCode]);
 //                @throw [[SnSURLCacheException alloc] initWithName:errorName
