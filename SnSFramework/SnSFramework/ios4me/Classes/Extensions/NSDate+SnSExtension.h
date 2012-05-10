@@ -10,6 +10,9 @@
 
 @interface NSDate (SnSExtension)
 
++ (NSDate *)dateMidnight;
+- (NSDate *)dateMidnight;
+
 #pragma mark Object Methods
 
 - (id)initWithDictionary:(NSDictionary*)iDic key:(NSString*)iKey;

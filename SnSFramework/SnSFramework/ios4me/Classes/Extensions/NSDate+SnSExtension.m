@@ -10,6 +10,37 @@
 
 @implementation NSDate (SnSExtension)
 
++ (NSDate *)dateMidnight
+{
+	NSDate* aDateNow = [NSDate date];
+	
+	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSIntegerMax fromDate:aDateNow];
+	[components setHour:0];
+	[components setMinute:0];
+	[components setSecond:0];
+	
+	NSDate *aDateMidnight = [[NSCalendar currentCalendar] dateFromComponents:components];
+	
+	return aDateMidnight;
+	
+}
+
+- (NSDate *)dateMidnight
+{
+	NSDate* aDateNow = self;
+	
+	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSIntegerMax fromDate:aDateNow];
+	[components setHour:0];
+	[components setMinute:0];
+	[components setSecond:0];
+	
+	NSDate *aDateMidnight = [[NSCalendar currentCalendar] dateFromComponents:components];
+	
+	return aDateMidnight;
+}
+
+#pragma mark Parsing
+
 - (id)initWithDictionary:(NSDictionary*)iDic key:(NSString*)iKey
 {
 	NSString* aDateStr = [iDic objectForKey:iKey];
