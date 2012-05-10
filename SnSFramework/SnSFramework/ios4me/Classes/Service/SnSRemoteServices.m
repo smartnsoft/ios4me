@@ -48,6 +48,13 @@
 
 }
 
+- (NSURL *)urlForResizingServices:(NSURL *)iImageURL binding:(UIImageView *)iBindingView
+{
+	SnSLogW(@"This method will have a default behaviour and should be overwritten in your children class %@", [self class]);
+	
+	return iImageURL;
+}
+
 #pragma mark -
 #pragma mark Image Retrieval
 #pragma mark -
@@ -83,12 +90,45 @@
 
 - (void)retrieveImageURL:(NSURL*)iURL binding:(UIView*)iBindingView indicator:(UIView*)iLoadingView
 {
-	[self retrieveImageURL:iURL binding:iBindingView indicator:iLoadingView completionBlock:nil errorBlock:nil];
+	[self retrieveImageURL:iURL 
+				   binding:iBindingView 
+				 indicator:iLoadingView 
+					option:kSnSImageRetrievalOptionNone
+		   completionBlock:nil 
+				errorBlock:nil];
+}
+
+- (void)retrieveImageURL:(NSURL*)iURL 
+				 binding:(UIView*)iBindingView 
+			   indicator:(UIView*)iLoadingView 
+				  option:(SnSImageRetrievalOption)iOption
+{
+	[self retrieveImageURL:iURL 
+				   binding:iBindingView 
+				 indicator:iLoadingView 
+					option:iOption
+		   completionBlock:nil 
+				errorBlock:nil];
 }
 
 - (void)retrieveImageURL:(NSURL*)iURL
 				 binding:(UIView*)iBindingView 
 			   indicator:(UIView*)iLoadingView 
+		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock 
+			  errorBlock:(SnSImageErrorBlock)iErrorBlock
+{
+	[self retrieveImageURL:iURL 
+				   binding:iBindingView 
+				 indicator:iLoadingView 
+					option:kSnSImageRetrievalOptionNone
+		   completionBlock:iCompletionBlock 
+				errorBlock:iErrorBlock];
+}
+
+- (void)retrieveImageURL:(NSURL*)iURL
+				 binding:(UIView*)iBindingView 
+			   indicator:(UIView*)iLoadingView 
+				  option:(SnSImageRetrievalOption)iOption
 		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock 
 			  errorBlock:(SnSImageErrorBlock)iErrorBlock
 {
@@ -98,12 +138,12 @@
 	
 	// The image data will be modified in the blocks
 	__block NSData* aImageData	= nil;
-	
+		
 	// this will be used to associate a request to its binding view
 	NSString* bindStr	= iBindingView ? [NSString stringWithFormat:@"%p", iBindingView] : [NSString stringUnique];
 	
 	// check if the binding view is an image view
-	UIImageView* imageView = [iBindingView isKindOfClass:[UIImageView class]] ? iBindingView : nil;
+	UIImageView* imageView = [iBindingView isKindOfClass:[UIImageView class]] ? (UIImageView*)iBindingView : nil;
 
 	// Create the background queue
 	dispatch_queue_t queue = dispatch_queue_create("Image Retrieval", NULL);
@@ -111,6 +151,10 @@
 	// Start animating if passed in parameters
 	if ([iLoadingView respondsToSelector:@selector(startAnimating)])
 		[(id)iLoadingView startAnimating];
+	
+	// Override default url if resize asked
+	if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeURL))
+		iURL = [self urlForResizingServices:iURL binding:(UIImageView*)iBindingView];
 	
 	//------------------------------
 	// Image Construction and Binding
@@ -178,7 +222,9 @@
 		{
 			SnSLogD(@"Cancelling Image Retrieval [u:%@] [v:%@]", [aOldRequest url], bindStr);
 
-			[aOldRequest cancel];
+			// Cancel old request unless specified not to
+			if (!(iOption & kSnSImageRetrievalOptionDoNotCancelRequest))
+				[aOldRequest cancel];
 			
 			@synchronized(requests_)
 			{ [requests_ removeObjectForKey:bindStr];}

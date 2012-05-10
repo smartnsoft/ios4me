@@ -14,6 +14,13 @@
 typedef void (^SnSImageCompletionBlock)(UIImage*);
 typedef void (^SnSImageErrorBlock)(NSError*);
 
+typedef enum SnSImageRetrievalOption
+{
+	kSnSImageRetrievalOptionNone = 0x0,
+	kSnSImageRetrievalOptionDoNotCancelRequest = 0x001,
+	kSnSImageRetrievalOptionResizeURL = 0x010,
+}SnSImageRetrievalOption;
+
 
 /** 
  * @interface SnSRemoteServices
@@ -37,6 +44,13 @@ typedef void (^SnSImageErrorBlock)(NSError*);
  */
 - (void)prepareRequest:(ASIHTTPRequest*)iRequest;
 
+/**
+ *	Override this default behaviour method to customize string format that is used
+ *	to resize the images that have been passed the kSnSImageRetrievalOptionResizeURL option .
+ *	@return	An formatted to accept the width and height
+ */
+- (NSURL*)urlForResizingServices:(NSURL*)iImageURL binding:(UIImageView*)iBindingView;
+
 #pragma mark Image Retrieval
 
 /**
@@ -49,9 +63,22 @@ typedef void (^SnSImageErrorBlock)(NSError*);
  *	@param	iErrorBlock			Optional. The block executed when an error occured
  */
 - (void)retrieveImageURL:(NSURL*)iURL binding:(UIView*)iBindingView indicator:(UIView*)iLoadingView;
+
 - (void)retrieveImageURL:(NSURL*)iURL 
 				 binding:(UIView*)iBindingView 
 			   indicator:(UIView*)iLoadingView 
+				  option:(SnSImageRetrievalOption)iOption;
+
+- (void)retrieveImageURL:(NSURL*)iURL 
+				 binding:(UIView*)iBindingView 
+			   indicator:(UIView*)iLoadingView 
+		 completionBlock:(SnSImageCompletionBlock)iBlock
+			  errorBlock:(SnSImageErrorBlock)iBlock;
+
+- (void)retrieveImageURL:(NSURL*)iURL 
+				 binding:(UIView*)iBindingView 
+			   indicator:(UIView*)iLoadingView 
+				  option:(SnSImageRetrievalOption)iOption
 		 completionBlock:(SnSImageCompletionBlock)iBlock
 			  errorBlock:(SnSImageErrorBlock)iBlock;
 
