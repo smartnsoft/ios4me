@@ -46,6 +46,8 @@
 			<string>YES</string>
 			<key>GCC_WARN_UNUSED_VARIABLE</key>
 			<string>YES</string>
+			<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+			<string>NO</string>
 		</dict>
 	</dict>
 	
