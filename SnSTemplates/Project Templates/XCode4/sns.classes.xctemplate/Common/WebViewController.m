@@ -43,7 +43,7 @@
 	// -----------------------------
 	// Setup Webview
 	// -----------------------------
-	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kSnSScreenWidth, kSnSScreenHeight)];
 	webView.delegate = self;
 	webView.dataDetectorTypes = UIDataDetectorTypeNone;
 	webView.scalesPageToFit = YES;
@@ -55,7 +55,7 @@
 	// Setup activity indicator
 	// -----------------------------
 	activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-	activity.center = CGPointMake(screenWidth/2, screenHeight/2);
+	activity.center = CGPointMake(kSnSScreenWidth/2, kSnSScreenHeight/2);
 	[activity startAnimating];
 	
 	// -----------------------------

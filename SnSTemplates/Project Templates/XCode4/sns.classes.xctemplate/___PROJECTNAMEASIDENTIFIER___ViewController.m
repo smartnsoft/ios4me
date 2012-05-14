@@ -90,8 +90,8 @@
 	// Add About button
 	// -----------------------------
 	UIButton * aboutButton = [[UIButton buttonWithType:UIButtonTypeInfoDark] retain];
-	aboutButton.frame = CGRectMake(screenWidth-(aboutButton.frame.size.width*2),							// X
-								   screenHeight-navigationBarHeight-(aboutButton.frame.size.height*2),		// Y
+	aboutButton.frame = CGRectMake(kSnSScreenWidth-(aboutButton.frame.size.width*2),							// X
+								   kSnSScreenHeight-navigationBarHeight-(aboutButton.frame.size.height*2),		// Y
 								   aboutButton.frame.size.width*2,											// Width
 								   aboutButton.frame.size.height*2);										// Height
 	[aboutButton setContentMode:UIViewContentModeScaleAspectFit];

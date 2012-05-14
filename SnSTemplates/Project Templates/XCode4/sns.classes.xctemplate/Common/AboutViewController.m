@@ -81,7 +81,7 @@
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self.responderRedirector action:@selector(onClose:)];
   
 	// content of About
-	self.aboutContent = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,screenWidth, screenHeight-navigationBarHeight)];
+	self.aboutContent = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,kSnSScreenWidth, kSnSScreenHeight-navigationBarHeight)];
   self.aboutContent.delegate = self;
 	self.aboutContent.backgroundColor = [UIColor clearColor];
 	self.aboutContent.opaque = NO;
@@ -92,7 +92,7 @@
   [self.view addSubview:aboutContent];
   
   self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-  self.activity.center = CGPointMake(screenWidth/2, screenHeight/2);
+  self.activity.center = CGPointMake(kSnSScreenWidth/2, kSnSScreenHeight/2);
   [self.view addSubview:self.activity];
   [self.activity startAnimating];
   

@@ -9,7 +9,7 @@
  */
 
 //
-//  ___PROJECTNAMEASIDENTIFIER___AppDelegate.h
+//  ￼___FILENAME___
 //  ___PROJECTNAMEASIDENTIFIER___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -18,11 +18,17 @@
 
 #import <UIKit/UIKit.h>
 
-#pragma mark -
-#pragma mark ___PROJECTNAMEASIDENTIFIER___AppDelegate
+#define kAbstractObjectIDKey @"id"
+#define kAbstractObjectTestKey @"test"
 
-@interface ___PROJECTNAMEASIDENTIFIER___AppDelegate : SnSAppDelegate<SnSExceptionHandler, SnSViewControllerInterceptor, SnSViewDecorator>
+@interface ___FILEBASENAME___ : NSObject
 {
+	NSString* mainID_;
 }
+
+@property (nonatomic, retain) NSString* mainID;
+
+- (id)initWithJSONDictionary:(NSDictionary*)iDic;
+
 
 @end

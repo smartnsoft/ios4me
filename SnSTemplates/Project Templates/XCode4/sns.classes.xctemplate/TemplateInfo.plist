@@ -89,19 +89,33 @@
 		<!-- ************************************************************** -->
 		<!-- 							SERVICES 							-->
 		<!-- ************************************************************** -->
-		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.h</key>
+		<key>Classes/BOM/___PROJECTNAMEASIDENTIFIER___AbstractObject.h</key>
 		<dict>
 			<key>Group</key>
 			<array>
 				<string>Classes</string>
-				<string>Services</string>
+				<string>Business Objects</string>
 			</array>
 			<key>Path</key>
-			<string>___PROJECTNAMEASIDENTIFIER___Services.h</string>
+			<string>___PROJECTNAMEASIDENTIFIER___AbstractObject.h</string>
 			<key>TargetIndices</key>
 			<array/>
 		</dict>
-		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.m</key>
+		<key>Classes/BOM/___PROJECTNAMEASIDENTIFIER___AbstractObject.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Business Objects</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___AbstractObject.m</string>
+		</dict>
+		
+		<!-- ************************************************************** -->
+		<!-- 							SERVICES 							-->
+		<!-- ************************************************************** -->
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.h</key>
 		<dict>
 			<key>Group</key>
 			<array>
@@ -109,7 +123,19 @@
 				<string>Services</string>
 			</array>
 			<key>Path</key>
-			<string>___PROJECTNAMEASIDENTIFIER___Services.m</string>
+			<string>___PROJECTNAMEASIDENTIFIER___RemoteServices.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Services</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___RemoteServices.m</string>
 		</dict>
 		
 		<!-- ************************************************************** -->
@@ -150,9 +176,13 @@
 		<string>Classes/Controller/Common/WebViewController.h</string>
 		<string>Classes/Controller/Common/WebViewController.m</string>
 		
+		<!-- 					BUSINESS OBJECTS					-->
+		<string>Classes/BOM/___PROJECTNAMEASIDENTIFIER___AbstractObject.h</string>
+		<string>Classes/BOM/___PROJECTNAMEASIDENTIFIER___AbstractObject.m</string>
+		
 		<!-- 							SERVICES 							-->
-		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.h</string>
-		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___Services.m</string>
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.h</string>
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.m</string>
 		
 		<!-- 							 UTILS 								-->
 		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.h</string>

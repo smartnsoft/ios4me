@@ -153,6 +153,8 @@
 				<string></string>
 				<key>OTHER_LDFLAGS</key>
 				<string>-lz -lsqlite3.0 -all_load -ObjC -lxml2</string>
+				<key>HEADER_SEARCH_PATHS</key>
+				<string>/usr/include/libxml2</string>
 			</dict>
 		</dict>
 	</array>

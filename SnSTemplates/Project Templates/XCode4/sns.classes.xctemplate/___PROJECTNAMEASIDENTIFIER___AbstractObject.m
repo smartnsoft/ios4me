@@ -9,20 +9,37 @@
  */
 
 //
-//  ___PROJECTNAMEASIDENTIFIER___AppDelegate.h
+//  ￼___FILENAME___
 //  ___PROJECTNAMEASIDENTIFIER___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "___FILEBASENAME___.h"
+
+@implementation ___FILEBASENAME___
+@synthesize mainID = mainID_;
 
 #pragma mark -
-#pragma mark ___PROJECTNAMEASIDENTIFIER___AppDelegate
+#pragma mark Init/Dealloc
+#pragma mark -
 
-@interface ___PROJECTNAMEASIDENTIFIER___AppDelegate : SnSAppDelegate<SnSExceptionHandler, SnSViewControllerInterceptor, SnSViewDecorator>
+- (id)initWithJSONDictionary:(NSDictionary *)iDic
 {
+	if ((self = [super init]))
+	{
+		mainID_ = [[NSString alloc] initWithDictionary:iDic key:kAbstractObjectIDKey];
+	}
+	
+	return self;
+}
+
+- (void)dealloc
+{
+	self.mainID = nil;
+	
+	[super dealloc];
 }
 
 @end

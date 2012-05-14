@@ -12,9 +12,8 @@
 //  Constants.h
 //  ___PROJECTNAMEASIDENTIFIER___
 //
-//  Created by «FULLUSERNAME» on «DATE».
-//  Copyright «YEAR» «ORGANIZATIONNAME». All rights reserved.
-//  Created by ApplicationAuthor on ApplicationCreationDate.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 
@@ -34,8 +33,6 @@
 #define standardSliderHeight 30
 
 #define APP_DELEGATE ((___PROJECTNAMEASIDENTIFIER___AppDelegate *) [[UIApplication sharedApplication] delegate])
-#define screenWidth [[UIScreen mainScreen] applicationFrame].size.width
-#define screenHeight [[UIScreen mainScreen] applicationFrame].size.height
 
 #ifdef __IPHONE_3_2
 #define IS_RUNNING_ON_IPAD UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
@@ -49,6 +46,15 @@
 #define COLOR_CCCCCC COLOR_HEXA(@"#CCCCCC")
 #define COLOR_999999 COLOR_HEXA(@"#999999")
 #define COLOR_000000 COLOR_HEXA(@"#000000")
+
+#define VIEW_X(v)			((v).frame.origin.x)
+#define VIEW_Y(v)			((v).frame.origin.y)
+#define VIEW_WIDTH(v)		((v).frame.size.width)
+#define VIEW_HEIGHT(v)		((v).frame.size.height)
+
+#define kSnSScreenWidth			[[UIScreen mainScreen] applicationFrame].size.width
+#define kSnSScreenHeight		[[UIScreen mainScreen] applicationFrame].size.height
+#define kSnSCurrentOrientation 	[[UIApplication sharedApplication] statusBarOrientation]
 
 #define SnSLocalized(s) NSLocalizedString(s,@"")
 
@@ -70,8 +76,8 @@ extern NSString * const FLURRY_APPLICATION_KEY;
 
 
 /*
-extern NSString * const WEB_SERVICE_URL_PREFIX;
-*/
+ extern NSString * const WEB_SERVICE_URL_PREFIX;
+ */
 
 extern NSString * const CREDITS_URL_PREFIX;
 
