@@ -64,12 +64,18 @@ typedef struct SnSStackPanningStatus
 	
 	// Delegate
 	id<SnSStackViewControllerDelegate> _delegate;
+	
+	// Options
+    BOOL menuCoverAllowed_;
 
 }
 
 @property (nonatomic, retain) NSArray* stackControllers;
 @property (nonatomic, assign) NSInteger offsetShift;
 @property (nonatomic, retain) id<SnSStackViewControllerDelegate> delegate;
+
+// Options
+@property (nonatomic, assign, getter=isMenuCoverAllowed) BOOL menuCoverAllowed;
 
 #pragma mark Callbacks
 

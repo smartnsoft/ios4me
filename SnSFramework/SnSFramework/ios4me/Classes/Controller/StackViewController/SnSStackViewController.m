@@ -23,6 +23,8 @@
 @synthesize offsetShift = _offsetShift;
 @synthesize delegate = _delegate;
 
+// Options
+@synthesize menuCoverAllowed = menuCoverAllowed_;
 //@synthesize menuView = _menuView;
 
 #pragma mark -
@@ -46,7 +48,8 @@
 	[super onRetrieveDisplayObjects:view];
 	
 	self.offsetShift = SnSStackDefaultShift;
-	
+	self.menuCoverAllowed = NO;
+    
 	// -----------------------------
 	// Create the Pan Gesture Recognizer
 	// -----------------------------
@@ -57,7 +60,7 @@
 	[panRecognizer setCancelsTouchesInView:TRUE];
 	
 	[self.view addGestureRecognizer:panRecognizer];
-
+	
 }
 
 /**
@@ -230,7 +233,7 @@
 - (void)onPanning:(UIPanGestureRecognizer*)iRecognizer
 {
 	_panningStatus.location = [iRecognizer locationInView:self.view];
-
+	
 	// -----------------------------
 	// Gesture Began: Setup
 	// -----------------------------
@@ -252,7 +255,7 @@
 		_panningStatus.direction = kPanningDirectionRight;
 	else if (_panningStatus.location.x < _panningStatus.lastLocation.x)
 		_panningStatus.direction = kPanningDirectionLeft;
-
+	
 	// -----------------------------
 	// Updating Displacement values
 	// -----------------------------
@@ -276,10 +279,19 @@
 	// Gesture Ended: Post Mortem
 	// -----------------------------
 	if (iRecognizer.state == UIGestureRecognizerStateEnded || iRecognizer.state == UIGestureRecognizerStateCancelled) 
-	{
+	{           
+        UIView* viewMoving = _panningStatus.viewMoving;
+		
 		// Panning was left, restore view to original location
+        // unless menu cover is allowed
 		if (_panningStatus.direction == kPanningDirectionLeft)
-			[self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
+        {
+            if (menuCoverAllowed_ && VIEW_X(viewMoving) > 0 && VIEW_X(viewMoving) < VIEW_WIDTH(_menuView))
+                [self shiftView:viewMoving offset:-VIEW_WIDTH(_menuView)-_panningStatus.displacement animated:YES];
+            else
+                [self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
+			
+        }
 		
 		// Panning was right, either shift back or remove controller
 		else if  (_panningStatus.direction == kPanningDirectionRight)
@@ -291,7 +303,12 @@
 				[self removeControllersFromController:aCenterController animated:YES];
 			}
 			else
-				[self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
+            {
+                if (menuCoverAllowed_ && viewMoving == _centerView)
+                    [self shiftViewToOrigin:_centerView animated:YES];
+                else
+                    [self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
+            }
 		}
 	}
 	
@@ -304,7 +321,7 @@
 							  _panningStatus.displacement];
 	
 	SnSLogD(aPanningInfo);
-		
+	
 }
 
 
@@ -331,7 +348,7 @@
 		iController.stackview.frame				= aDefaultFrame;
 		iController.stackview.framePortrait		= iController.stackview.frame;
 		iController.stackview.frameLandscape	= iController.stackview.frame;
-
+		
 	}
 	
 	
@@ -364,7 +381,7 @@
 	// Next move the controller to its origin position
 	[self shiftViewToOrigin:iController.stackview animated:iAnimated];
 	
-
+	
 }
 
 - (void)removeControllersFromController:(UIViewController *)iController animated:(BOOL)iAnimated
@@ -387,7 +404,7 @@
 			// Inform delegate removal is about to start
 			if ([_delegate respondsToSelector:@selector(willRemoveSnSStackSubController:)])
 				[_delegate willRemoveSnSStackSubController:aController];
-				
+			
 			[self shiftView:aController.view 
 				 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(aController.view)) 
 				 completion:^(BOOL completed) {
@@ -411,12 +428,12 @@
 			// we must update the inner view to refresh the stack controller content
 			[self updateInnerViews];
 		}
-			
-
+		
+		
 	}
-
-		
-		
+	
+	
+	
 }
 
 - (void)removeControllers:(NSArray *)iControllers
@@ -462,8 +479,8 @@
 - (BOOL)isViewShifted:(SnSStackSubView *)iView
 {
 	CGFloat aOriginX = SnSOrientationDependWithOrientation([[UIApplication sharedApplication] statusBarOrientation],
-                                                      iView.framePortrait.origin.x, 
-                                                      iView.frameLandscape.origin.x);
+														   iView.framePortrait.origin.x, 
+														   iView.frameLandscape.origin.x);
     
     // Views repositionning can shift from a ocuple of pixels
 	return abs(VIEW_X(iView) - aOriginX) > 2;
@@ -503,7 +520,7 @@
             aFrame = iView.framePortrait;
         else
             aFrame = iView.frameLandscape;
-
+		
     }
 	
 	[self shiftView:iView toPosition:aFrame.origin  animated:iAnimated];
