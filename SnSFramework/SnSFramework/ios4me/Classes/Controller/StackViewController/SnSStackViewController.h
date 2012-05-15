@@ -50,7 +50,7 @@ typedef struct SnSStackPanningStatus
 @end
 
 
-@interface SnSStackViewController : SnSViewController 
+@interface SnSStackViewController : SnSViewController <UIGestureRecognizerDelegate>
 {
 	NSMutableArray* _stackControllers;
 	
@@ -66,7 +66,8 @@ typedef struct SnSStackPanningStatus
 	id<SnSStackViewControllerDelegate> _delegate;
 	
 	// Options
-    BOOL menuCoverAllowed_;
+    BOOL canCoverMenu_;
+	BOOL enableGestures_;
 
 }
 
@@ -75,7 +76,8 @@ typedef struct SnSStackPanningStatus
 @property (nonatomic, retain) id<SnSStackViewControllerDelegate> delegate;
 
 // Options
-@property (nonatomic, assign, getter=isMenuCoverAllowed) BOOL menuCoverAllowed;
+@property (nonatomic, assign) BOOL canCoverMenu;
+@property (nonatomic, assign) BOOL enableGestures;
 
 #pragma mark Callbacks
 

@@ -24,7 +24,8 @@
 @synthesize delegate = _delegate;
 
 // Options
-@synthesize menuCoverAllowed = menuCoverAllowed_;
+@synthesize canCoverMenu = canCoverMenu_;
+@synthesize enableGestures = enableGestures_;
 //@synthesize menuView = _menuView;
 
 #pragma mark -
@@ -47,13 +48,18 @@
 {
 	[super onRetrieveDisplayObjects:view];
 	
+	// -----------------------------
+	// Default Member Values
+	// -----------------------------
 	self.offsetShift = SnSStackDefaultShift;
-	self.menuCoverAllowed = NO;
+	self.canCoverMenu = NO;
+	self.enableGestures = YES;
     
 	// -----------------------------
 	// Create the Pan Gesture Recognizer
 	// -----------------------------
 	UIPanGestureRecognizer* panRecognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanning:)] autorelease];
+	[panRecognizer setDelegate:self];
 	[panRecognizer setMaximumNumberOfTouches:1];
 	[panRecognizer setDelaysTouchesBegan:TRUE];
 	[panRecognizer setDelaysTouchesEnded:TRUE];
@@ -228,10 +234,31 @@
 #pragma mark SnSStackViewController
 #pragma mark -
 
-#pragma mark Callbacks
+#pragma mark Panning
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+	BOOL shouldReceiveTouch = YES;
+	
+	// List here all classes that should not receive a touch
+	NSArray* classes = [NSArray arrayWithObjects:NSStringFromClass([UISlider class]), nil];
+	
+	for (NSString* strClass in classes)
+	{
+		Class cl = NSClassFromString(strClass);
+		if ([touch.view isKindOfClass:cl])
+			shouldReceiveTouch = NO;
+	}
+
+    return shouldReceiveTouch;
+}
 
 - (void)onPanning:(UIPanGestureRecognizer*)iRecognizer
 {
+	// No need to go further if panning is disable
+	if (!self.enableGestures)
+		return;
+	
 	_panningStatus.location = [iRecognizer locationInView:self.view];
 	
 	// -----------------------------
@@ -286,7 +313,7 @@
         // unless menu cover is allowed
 		if (_panningStatus.direction == kPanningDirectionLeft)
         {
-            if (menuCoverAllowed_ && VIEW_X(viewMoving) > 0 && VIEW_X(viewMoving) < VIEW_WIDTH(_menuView))
+            if (canCoverMenu_ && VIEW_X(viewMoving) > 0 && VIEW_X(viewMoving) < VIEW_WIDTH(_menuView))
                 [self shiftView:viewMoving offset:-VIEW_WIDTH(_menuView)-_panningStatus.displacement animated:YES];
             else
                 [self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
@@ -304,7 +331,7 @@
 			}
 			else
             {
-                if (menuCoverAllowed_ && viewMoving == _centerView)
+                if (canCoverMenu_ && viewMoving == _centerView)
                     [self shiftViewToOrigin:_centerView animated:YES];
                 else
                     [self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
