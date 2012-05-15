@@ -9,18 +9,18 @@
  */
 
 //
-//  «FILENAME»
-//  «PROJECTNAME»
+//  ___FILENAME___
+//  ___PROJECTNAMEASIDENTIFIER___
 //
-//  Created by «FULLUSERNAME» on «DATE».
-//  Copyright «YEAR» «ORGANIZATIONNAME». All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface «FILEBASENAMEASIDENTIFIER» : SnSTableViewController
+@interface «FILEBASENAMEASIDENTIFIER» : SnSViewController <UITableViewDataSource,UITableViewDelegate>
 {
-
+	UITableView* tableView_;
 }
 
 @end

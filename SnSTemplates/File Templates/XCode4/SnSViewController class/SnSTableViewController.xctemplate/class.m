@@ -9,178 +9,16 @@
  */
 
 //
-//  «FILENAME»
-//  «PROJECTNAME»
+//  ___FILENAME___
+//  ___PROJECTNAMEASIDENTIFIER___
 //
-//  Created by «FULLUSERNAME» on «DATE».
-//  Copyright «YEAR» «ORGANIZATIONNAME». All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 «OPTIONALHEADERIMPORTLINE»
 
-#import <QuartzCore/QuartzCore.h>
-
-#define viewWidth self.view.frame.size.width
-#define viewHeight self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height
-
-#define kTableCellHeight 50
-
-@interface «FILEBASENAMEASIDENTIFIER»Cell : UITableViewCell
-{
-	BOOL isIpad;
-}
-
-- (id) initWithIdentifier:(NSString *)reuseIdentifier andResponder:(SnSResponserRedirector *)responderRedirector;
-- (void) resize;
-- (void) update:(id)businessObject atRow:(NSInteger)row;
-
-@end
-
-@implementation «FILEBASENAMEASIDENTIFIER»Cell
-
-- (id) initWithIdentifier:(NSString *)reuseIdentifier andResponder:(SnSResponserRedirector *)responderRedirector
-{
-	if ([self initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier] == nil)
-	{
-		return nil;
-	}
-	isIpad = [UIDevice isIPad];
-	
-	return self;
-}
-
-- (void) dealloc
-{
-	[super dealloc];
-}
-
-- (void) resizeIPhone
-{
-	
-}
-
-- (void) resizeIPad
-{
-	
-}
-
-- (void) resize
-{
-	
-	if (isIpad) 
-	{
-		[self resizeIPad];
-	}
-	else 
-	{
-		[self resizeIPhone];
-	}
-}
-
-- (void) fulfillDisplayObject:(id)businessObject
-{
-	
-}
-
-- (void) update:(id)businessObject atRow:(NSInteger)row
-{
-	[self resize];
-}
-
-@end
-
-
-#pragma mark -
-#pragma mark «FILEBASENAMEASIDENTIFIER»
-
 @implementation «FILEBASENAMEASIDENTIFIER»
-
-- (void) onRefresh:(id)sender
-{
-	[SnSAppDelegate startLoading:self.responderRedirector withMessage:nil ];
-	
-	[self retrieveBusinessObjectsAndSynchronize];
-	
-	[SnSAppDelegate stopLoading:self.responderRedirector];
-}
-
-- (void) updateIpadDisplay
-{
-	
-}
-
-- (void) updateIphoneDisplay
-{
-	
-}
-
-- (void) updateDisplay
-{
-#ifdef __IPHONE_3_2
-	if (IS_RUNNING_ON_IPAD)
-	{
-		[self updateIpadDisplay];
-	}
-	else
-#endif
-	{
-		[self updateIphoneDisplay];
-	}
-}
-
-
-
-#pragma mark -
-#pragma mark - SnSTableViewController
-
-- (NSArray *) retrieveBusinessObjects
-{
-	SnSLogD(@"");
-	
-	return [NSArray arrayWithObjects:@"A", @"B", @"C", nil];	
-}
-
-- (id) initCellWithIdentifier:(NSString *)reuseIdentifier andResponder:(SnSResponserRedirector *)responderRedirector
-{
-	SnSLogD(@"");
-	
-	return [[«FILEBASENAMEASIDENTIFIER»Cell alloc] initWithIdentifier:reuseIdentifier andResponder:self.responderRedirector];
-}
-
-- (void) synchronizeDisplay:(UITableViewCell *)cell withBusinessObject:(id)businessObject
-{
-	SnSLogD(@"");
-	
-	[((«FILEBASENAMEASIDENTIFIER»Cell *) cell) fulfillDisplayObject:(NSString *)businessObject];
-}
-
-/**
- * The method which is actually called and wrapped when the end-user clicks on a table row.
- */
-- (void) tableViewCustom:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	SnSLogI(@"");
-
-	[SnSAppDelegate startLoading:self.responderRedirector withMessage:nil];
-	
-	
-	[SnSAppDelegate stopLoading:self.responderRedirector];
-}
-
-//
-// Uncomment to override the default style
-- (void) tableViewCustom:(UITableView *)aTableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	SnSLogD(@"")
-	
-	// comment to avoid default style
-	[super tableViewCustom:aTableView willDisplayCell:cell forRowAtIndexPath:indexPath];
-	
-	id currentBusinessObject = (id) [businessObjects objectAtIndex:indexPath.row];
-	[((«FILEBASENAMEASIDENTIFIER»Cell *) cell) update:currentBusinessObject atRow:indexPath.row];
-	
-}
-
 
 #pragma mark -
 #pragma mark SnSViewControllerLifeCycle
@@ -189,7 +27,16 @@
 {
 	[super onRetrieveDisplayObjects:view];
 	
-	
+	// -----------------------------
+	// Add Tableview
+	// -----------------------------
+	tableView_ = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SnSViewW(self.view), SnSViewH(self.view)-45-20)
+											  style:UITableViewStylePlain];
+
+	tableView_.delegate = self;
+	tableView_.dataSource = self;
+
+	[self.view addSubview:tableView_];	
 }
 
 - (void) onRetrieveBusinessObjects
@@ -218,41 +65,67 @@
 }
 
 #pragma mark -
-#pragma mark SnSViewControllerExceptionHandler
+#pragma mark UITableViewDelegate
+#pragma mark -
 
-/*
- 
- - (BOOL) onBusinessObjectException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSBusinessObjectException *)exception resume:(BOOL *)resume;
- - (BOOL) onLifeCycleException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSLifeCycleException *)exception resume:(BOOL *)resume;
- - (BOOL) onOtherException:(id<SnSViewControllerLifeCycle>)aggregate exception:(NSException *)exception resume:(BOOL *)resume;
- 
- */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	Class cellClass 		= [UITableViewCell class];
+	NSString* identifier 	= NSStringFromClass(cellClass);
+	UITableViewCell* cell 	= [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+	 												  reuseIdentifier:identifier] autorelease];
+//	 UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+	
+	// Create cell if needed
+	if (cell == nil)
+	{
+		// Create owner
+		UITableViewCell* xibCell = [[[cellClass alloc] init] autorelease];
+		
+		// load cell from xib
+		NSArray* objects = [[NSBundle mainBundle] loadNibNamed:@"XIBCellName" owner:xibCell options:nil];
+		
+		// assign first object to identified cell
+		cell = [objects objectAtIndex:0];
+	}
+		
+	// Configure cell
+	cell.textLabel.text = @"Not Yet Configured";
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	
+}
+
 
 #pragma mark -
-#pragma mark UITableViewController
+#pragma mark UITableViewDataSource
+#pragma mark -
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return kTableCellHeight;
+	return arc4random()%30+1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 1;
 }
 
 
 #pragma mark -
 #pragma mark UIViewController
+#pragma mark -
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
-{
-	return DeviceOrientationSupported(interfaceOrientation);
-}
+#pragma mark Basics
 
-- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)dealloc
 {
-	SnSLogI(@"");
-}
-
-- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-	SnSLogI(@"");
+	SnSReleaseAndNil(tableView_);
+	
+	[super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -261,6 +134,23 @@
 	
 	[super didReceiveMemoryWarning];
 	
+}
+
+#pragma mark Rotation
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
+{
+	return DeviceOrientationSupported(interfaceOrientation);
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	SnSLogD(@"");
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+	SnSLogD(@"");
 }
 
 @end

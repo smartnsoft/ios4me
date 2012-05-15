@@ -1,17 +1,12 @@
 //
-//  «FILENAME»
-//  «PROJECTNAME»
+//  ___FILENAME___
+//  ___PROJECTNAMEASIDENTIFIER___
 //
-//  Created by «FULLUSERNAME» on «DATE».
-//  Copyright «YEAR» «ORGANIZATIONNAME». All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 «OPTIONALHEADERIMPORTLINE»
-
-#define VIEW_X(v)			((v).frame.origin.x)
-#define VIEW_Y(v)			((v).frame.origin.y)
-#define VIEW_WIDTH(v)		((v).frame.size.width)
-#define VIEW_HEIGHT(v)		((v).frame.size.height)
 
 @implementation «FILEBASENAMEASIDENTIFIER»
 
@@ -73,16 +68,9 @@
 }
 
 #pragma mark -
-#pragma mark SnSViewControllerExceptionHandler
+#pragma mark Events
 #pragma mark -
 
-/*
- 
- - (BOOL) onBusinessObjectException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSBusinessObjectException *)exception resume:(BOOL *)resume;
- - (BOOL) onLifeCycleException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSLifeCycleException *)exception resume:(BOOL *)resume;
- - (BOOL) onOtherException:(id<SnSViewControllerLifeCycle>)aggregate exception:(NSException *)exception resume:(BOOL *)resume;
- 
- */
 
 
 #pragma mark -
