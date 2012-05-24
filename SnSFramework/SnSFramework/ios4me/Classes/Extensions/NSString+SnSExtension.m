@@ -143,5 +143,25 @@
     return [NSString stringWithString:aStrippedString];
 }
 
+- (NSString*) stringByStrippingNumbers
+{
+    NSMutableString *strippedStr = [NSMutableString stringWithCapacity:self.length];
+    
+    NSScanner *scanner         = [NSScanner scannerWithString:self];
+    NSCharacterSet *numbers  = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    
+    while ([scanner isAtEnd] == NO)
+    {
+        NSString *str;
+        if (![scanner scanCharactersFromSet:numbers intoString:&str])
+            [strippedStr appendString:str];
+		
+        else
+            [scanner setScanLocation:([scanner scanLocation] + 1)];
+    }
+    
+    return [NSString stringWithString:strippedStr];
+}
+
 
 @end

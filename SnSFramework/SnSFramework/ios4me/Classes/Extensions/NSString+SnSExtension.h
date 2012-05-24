@@ -44,5 +44,6 @@
 - (NSString*)stringByEscapingSingleQuotesForSQLite;
 - (NSString*)stringByJoiningArray:(NSArray*)iArray;
 - (NSString*)stringByStrippingNonNumbers;
+- (NSString*)stringByStrippingNumbers;
 
 @end
