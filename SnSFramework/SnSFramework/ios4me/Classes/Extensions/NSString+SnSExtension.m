@@ -153,11 +153,10 @@
     while ([scanner isAtEnd] == NO)
     {
         NSString *str;
-        if (![scanner scanCharactersFromSet:numbers intoString:&str])
+        if ([scanner scanUpToCharactersFromSet:numbers intoString:&str])
             [strippedStr appendString:str];
-		
-        else
-            [scanner setScanLocation:([scanner scanLocation] + 1)];
+		else
+			[scanner setScanLocation:([scanner scanLocation] + 1)];
     }
     
     return [NSString stringWithString:strippedStr];
