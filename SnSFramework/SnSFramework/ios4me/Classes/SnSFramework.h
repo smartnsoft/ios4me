@@ -67,6 +67,7 @@
 #import "NSDate+SnSExtension.h"
 #import "UIDevice+DeviceDetection.h"
 #import "UIDevice+DeviceConnectivity.h"
+#import "NSArray+SnSExtension.h"
 
 // Exceptions
 #import "SnSExceptionHandler.h"
