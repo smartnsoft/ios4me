@@ -15,6 +15,10 @@
 		042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D4115064E9100854572 /* SnSLoadingView.h */; };
 		042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
 		042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
+		044DB5BE1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */; };
+		044DB5BF1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */; };
+		044DB5C01573D3C6009574EF /* NSArray+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DB5BD1573D3C6009574EF /* NSArray+SnSExtension.m */; };
+		044DB5C11573D3C6009574EF /* NSArray+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DB5BD1573D3C6009574EF /* NSArray+SnSExtension.m */; };
 		045CA2D91538599600118E7C /* NSDate+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 045CA2D71538599600118E7C /* NSDate+SnSExtension.h */; };
 		045CA2DA1538599600118E7C /* NSDate+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 045CA2D71538599600118E7C /* NSDate+SnSExtension.h */; };
 		045CA2DB1538599600118E7C /* NSDate+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CA2D81538599600118E7C /* NSDate+SnSExtension.m */; };
@@ -118,6 +122,8 @@
 		042B2D3A15064BCB00854572 /* SnSRemoteServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSRemoteServices.m; sourceTree = "<group>"; };
 		042B2D4115064E9100854572 /* SnSLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSLoadingView.h; sourceTree = "<group>"; };
 		042B2D4215064E9100854572 /* SnSLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSLoadingView.m; sourceTree = "<group>"; };
+		044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SnSExtension.h"; sourceTree = "<group>"; };
+		044DB5BD1573D3C6009574EF /* NSArray+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SnSExtension.m"; sourceTree = "<group>"; };
 		045CA2D71538599600118E7C /* NSDate+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SnSExtension.h"; sourceTree = "<group>"; };
 		045CA2D81538599600118E7C /* NSDate+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SnSExtension.m"; sourceTree = "<group>"; };
 		04756103140B8A3A00C0DF6C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -378,6 +384,8 @@
 				04ADDB2C14ED470200C2087E /* UIDevice+DeviceDetection.m */,
 				04ADDB2D14ED470200C2087E /* UIKit+SnSExtension.h */,
 				04ADDB2E14ED470200C2087E /* UIKit+SnSExtension.m */,
+				044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */,
+				044DB5BD1573D3C6009574EF /* NSArray+SnSExtension.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -530,6 +538,7 @@
 				04BA6B35153467F10084B421 /* SnSScrollFollower.h in Headers */,
 				04BA6B3B15347A160084B421 /* SnSScrollFollowerView.h in Headers */,
 				045CA2D91538599600118E7C /* NSDate+SnSExtension.h in Headers */,
+				044DB5BE1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +554,7 @@
 				04BA6B36153467F10084B421 /* SnSScrollFollower.h in Headers */,
 				04BA6B3C15347A160084B421 /* SnSScrollFollowerView.h in Headers */,
 				045CA2DA1538599600118E7C /* NSDate+SnSExtension.h in Headers */,
+				044DB5BF1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +687,7 @@
 				04BA6B37153467F10084B421 /* SnSScrollFollower.m in Sources */,
 				04BA6B3D15347A160084B421 /* SnSScrollFollowerView.m in Sources */,
 				045CA2DB1538599600118E7C /* NSDate+SnSExtension.m in Sources */,
+				044DB5C01573D3C6009574EF /* NSArray+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +735,7 @@
 				04BA6B38153467F10084B421 /* SnSScrollFollower.m in Sources */,
 				04BA6B3E15347A160084B421 /* SnSScrollFollowerView.m in Sources */,
 				045CA2DC1538599600118E7C /* NSDate+SnSExtension.m in Sources */,
+				044DB5C11573D3C6009574EF /* NSArray+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
