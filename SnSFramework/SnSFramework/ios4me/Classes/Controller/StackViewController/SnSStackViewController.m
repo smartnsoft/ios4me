@@ -454,12 +454,8 @@
 			// Since we removed at least one controller, 
 			// we must update the inner view to refresh the stack controller content
 			[self updateInnerViews];
-		}
-		
-		
-	}
-	
-	
+		}		
+	}	
 	
 }
 
@@ -550,26 +546,23 @@
 		
     }
 	
-	[self shiftView:iView toPosition:aFrame.origin  animated:iAnimated];
+	
+	// now if we can cover the menu and its already covered shift also from offset
+	if (canCoverMenu_ && VIEW_X(_centerView) < _offsetShift)
+		[self shiftView:iView toPosition:CGPointMake(0, VIEW_Y(iView)) animated:iAnimated];
+	
+	// Start by shifting the view to its original position
+	else
+		[self shiftView:iView toPosition:aFrame.origin  animated:iAnimated];
+
+	
+	
 }
 
 - (void)shiftView:(UIView *)iView offset:(NSInteger)iOffset animated:(BOOL)iAnimated
 {
 	[self shiftView:iView toPosition:CGPointMake(VIEW_X(iView) + iOffset, VIEW_Y(iView)) animated:iAnimated];
 }
-
-
-#pragma mark -
-#pragma mark SnSViewControllerExceptionHandler
-#pragma mark -
-
-/*
- 
- - (BOOL) onBusinessObjectException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSBusinessObjectException *)exception resume:(BOOL *)resume;
- - (BOOL) onLifeCycleException:(id<SnSViewControllerLifeCycle>)aggregate exception:(SnSLifeCycleException *)exception resume:(BOOL *)resume;
- - (BOOL) onOtherException:(id<SnSViewControllerLifeCycle>)aggregate exception:(NSException *)exception resume:(BOOL *)resume;
- 
- */
 
 
 @end
