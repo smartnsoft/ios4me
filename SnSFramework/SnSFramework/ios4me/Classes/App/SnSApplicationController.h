@@ -57,7 +57,7 @@
 @end
 
 #pragma mark -
-#pragma mark SnSViewControllerInterceptorEvent
+#pragma mark SnSInterceptorEvent
 
 /**
  * Defines all the interception events which correspond to the SnSViewControllerLifeCycle methods.
@@ -67,25 +67,25 @@ typedef enum
   /**
    * Called just before the SnSViewControllerLifeCycle::onRetrieveDisplayObjects() method is called.
    */
-  SnSViewControllerInterceptorEventOnRetrieveDisplayObjects,
+  SnSInterceptorEventOnRetrieveDisplayObjects,
   /**
    * Called just after the SnSViewControllerLifeCycle::onRetrieveBusinessObjects() method has been called, provided no NSException exception has been thrown.
    */
-  SnSViewControllerInterceptorEventOnRetrieveBusinessObjects,
+  SnSInterceptorEventOnRetrieveBusinessObjects,
   /**
    * Called just after the SnSViewControllerLifeCycle::onFulfillDisplayObjects() method has been called, provided no NSException exception has been thrown.
    */
-  SnSViewControllerInterceptorEventOnFulfillDisplayObjects,
+  SnSInterceptorEventOnFulfillDisplayObjects,
   /**
    * Called just after the SnSViewControllerLifeCycle::onSynchronizeDisplayObjects() method has been called, provided no NSException exception has been thrown.
    */
-  SnSViewControllerInterceptorEventOnSynchronizeDisplayObjects,
+  SnSInterceptorEventOnSynchronizeDisplayObjects,
   /**
    * Called just before the SnSViewControllerLifeCycle::onDiscarded() method has been called.
    */
-  SnSViewControllerInterceptorEventOnDiscarded,
+  SnSInterceptorEventOnDiscarded,
 }
-SnSViewControllerInterceptorEvent;
+SnSInterceptorEvent;
 
 #pragma mark -
 #pragma mark SnSViewControllerInterceptor
@@ -95,7 +95,7 @@ SnSViewControllerInterceptorEvent;
  */
 @protocol SnSViewControllerInterceptor
 
-- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSViewControllerInterceptorEvent)event;
+- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSInterceptorEvent)event;
 
 @end
 
@@ -147,7 +147,7 @@ SnSViewControllerInterceptorEvent;
 /**
  * Dispatches to the registered SnSViewControllerInterceptor (if any) the handling of the provided event.
  */
-- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSViewControllerInterceptorEvent)event;
+- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSInterceptorEvent)event;
 
 /**
  * Dispatches to the registered SnSViewDecorator (if any) the design of the current view.

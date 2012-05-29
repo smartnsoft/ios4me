@@ -42,7 +42,7 @@
 		{
 			[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
 													  onAggregate:(aggregator == aggregate ? nil : aggregate)
-														withEvent:SnSViewControllerInterceptorEventOnRetrieveDisplayObjects];
+														withEvent:SnSInterceptorEventOnRetrieveDisplayObjects];
 			
 			[aggregate onRetrieveDisplayObjects:view];
 			
@@ -75,7 +75,7 @@
 		[aggregate onRetrieveBusinessObjects];
 		[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
 												  onAggregate:(aggregator == aggregate ? nil : aggregate)
-													withEvent:SnSViewControllerInterceptorEventOnRetrieveBusinessObjects];
+													withEvent:SnSInterceptorEventOnRetrieveBusinessObjects];
 	}
 	@catch (NSException* exception)
 	{
@@ -161,7 +161,7 @@
 		[aggregate onFulfillDisplayObjects];
 		[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
 												  onAggregate:(aggregator == aggregate ? nil : aggregate)
-													withEvent:SnSViewControllerInterceptorEventOnFulfillDisplayObjects];
+													withEvent:SnSInterceptorEventOnFulfillDisplayObjects];
 	}
 	@catch (NSException* exception)
 	{
@@ -185,7 +185,7 @@
 			[aggregate onSynchronizeDisplayObjects];
 			[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
 													  onAggregate:(aggregator == aggregate ? nil : aggregate)
-														withEvent:SnSViewControllerInterceptorEventOnSynchronizeDisplayObjects];
+														withEvent:SnSInterceptorEventOnSynchronizeDisplayObjects];
 			//[[SnSApplicationController instance] renderView:aggregator onAggregate:(aggregator == aggregate ? nil : aggregate)];
 		}
 		@catch (NSException* exception)
@@ -209,7 +209,7 @@
 		{
 			[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
 													  onAggregate:(aggregator == aggregate ? nil : aggregate)
-														withEvent:SnSViewControllerInterceptorEventOnDiscarded];
+														withEvent:SnSInterceptorEventOnDiscarded];
 			[aggregate onDiscarded];
 		}
 		@catch (NSException* exception)

@@ -50,7 +50,7 @@
 	decorator = theDecorator;
 }
 
-- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSViewControllerInterceptorEvent)event
+- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSInterceptorEvent)event
 {
   if (interceptor != nil)
   {

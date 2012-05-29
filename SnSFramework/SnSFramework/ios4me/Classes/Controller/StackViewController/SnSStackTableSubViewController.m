@@ -44,7 +44,7 @@
 {
 	[super onRetrieveDisplayObjects:view];
 	
-	self.stackview.frame = CGRectMake(0, 0, 400, VIEW_HEIGHT([self.view superview]));
+	self.stackview.frame = CGRectMake(0, 0, 400, VIEW_HEIGHT(_stackController.view));
 	self.stackview.layer.borderColor = [UIColor lightGrayColor].CGColor;
 	self.stackview.layer.borderWidth = 1.f;
 	
