@@ -19,9 +19,9 @@
 
 @interface SnSStackTableSubViewController : SnSStackSubViewController <UITableViewDataSource, UITableViewDelegate>
 {
-	IBOutlet UITableView* _tableView;
+	UITableView* _tableView;
 }
 
-@property (nonatomic, retain) UITableView* tableView;
+@property (nonatomic, retain) IBOutlet UITableView* tableView;
 
 @end

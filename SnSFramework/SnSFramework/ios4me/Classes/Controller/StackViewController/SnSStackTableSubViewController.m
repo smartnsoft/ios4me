@@ -109,19 +109,9 @@
 
 #pragma mark Basics
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-	// Thankfully, this is the designated initializer
-	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]))
-	{
-			}
-	
-	return self;
-}
-
 - (void)dealloc
 {
-	[_tableView release];
+	self.tableView = nil;
 	
 	[super dealloc];
 }
