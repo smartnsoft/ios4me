@@ -42,7 +42,7 @@
 	NSString* aValue = [iDict objectForKey:iKey];
 	
 	if ([aValue isKindOfClass:[NSString class]] || [aValue isKindOfClass:[NSNumber class]])
-		aRes  = [aValue integerValue];
+		aRes  = [[aValue stringByStrippingNonNumbers] integerValue];
 	
 	return aRes;
 	
