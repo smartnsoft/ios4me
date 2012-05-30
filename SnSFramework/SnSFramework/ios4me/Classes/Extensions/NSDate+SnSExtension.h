@@ -16,6 +16,7 @@
 #pragma mark Object Methods
 
 - (id)initWithDictionary:(NSDictionary*)iDic key:(NSString*)iKey;
+- (id)initWithDictionary:(NSDictionary*)iDic key:(NSString*)iKey format:(NSString*)iFormat;
 
 
 @end
