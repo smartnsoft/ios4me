@@ -16,9 +16,10 @@ typedef void (^SnSImageErrorBlock)(NSError*);
 
 typedef enum SnSImageRetrievalOption
 {
-	kSnSImageRetrievalOptionNone = 0x0,
-	kSnSImageRetrievalOptionDoNotCancelRequest = 0x001,
-	kSnSImageRetrievalOptionResizeURL = 0x010,
+	kSnSImageRetrievalOptionNone				= 0x0,
+	kSnSImageRetrievalOptionDoNotCancelRequest	= 0x001,
+	kSnSImageRetrievalOptionResizeURL			= 0x010,
+	kSnSImageRetrievalOptionImageCrossFade		= 0x100,
 }SnSImageRetrievalOption;
 
 

@@ -174,11 +174,15 @@
 				@synchronized(requests_)
 				{ [requests_  removeObjectForKey:bindStr]; }
 				
-				CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
-				crossFade.duration = 0.2f;
-				crossFade.fromValue = (id)imageView.image.CGImage;
-				crossFade.toValue = (id)image.CGImage;
-				[imageView.layer addAnimation:crossFade forKey:@"animateContents"];
+				
+				if (iOption & kSnSImageRetrievalOptionImageCrossFade)
+				{
+					CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
+					crossFade.duration = 0.2f;
+					crossFade.fromValue = (id)imageView.image.CGImage;
+					crossFade.toValue = (id)image.CGImage;
+					[imageView.layer addAnimation:crossFade forKey:@"animateContents"];
+				}		
 				
 				imageView.image = image;				
 				
