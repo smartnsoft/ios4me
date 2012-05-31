@@ -115,6 +115,10 @@
 		04BA6B3C15347A160084B421 /* SnSScrollFollowerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BA6B3915347A160084B421 /* SnSScrollFollowerView.h */; };
 		04BA6B3D15347A160084B421 /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */; };
 		04BA6B3E15347A160084B421 /* SnSScrollFollowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */; };
+		04EB258F157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EB258D157767EA009E43F6 /* UILabel+SnSExtension.h */; };
+		04EB2590157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EB258D157767EA009E43F6 /* UILabel+SnSExtension.h */; };
+		04EB2591157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */; };
+		04EB2592157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */; };
 		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
@@ -215,6 +219,8 @@
 		04BA6B34153467F10084B421 /* SnSScrollFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSScrollFollower.m; sourceTree = "<group>"; };
 		04BA6B3915347A160084B421 /* SnSScrollFollowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSScrollFollowerView.h; sourceTree = "<group>"; };
 		04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSScrollFollowerView.m; sourceTree = "<group>"; };
+		04EB258D157767EA009E43F6 /* UILabel+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SnSExtension.h"; sourceTree = "<group>"; };
+		04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SnSExtension.m"; sourceTree = "<group>"; };
 		04FB834B14F68150004754E7 /* SnSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSExceptionHandler.h; sourceTree = "<group>"; };
 		04FB834C14F68150004754E7 /* SnSExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSExceptionHandler.m; sourceTree = "<group>"; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -394,6 +400,8 @@
 				044DB5BD1573D3C6009574EF /* NSArray+SnSExtension.m */,
 				044DB5F215751672009574EF /* UIView+SnSExtension.h */,
 				044DB5F315751672009574EF /* UIView+SnSExtension.m */,
+				04EB258D157767EA009E43F6 /* UILabel+SnSExtension.h */,
+				04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -548,6 +556,7 @@
 				045CA2D91538599600118E7C /* NSDate+SnSExtension.h in Headers */,
 				044DB5BE1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */,
 				044DB5F415751672009574EF /* UIView+SnSExtension.h in Headers */,
+				04EB258F157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +574,7 @@
 				045CA2DA1538599600118E7C /* NSDate+SnSExtension.h in Headers */,
 				044DB5BF1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */,
 				044DB5F515751672009574EF /* UIView+SnSExtension.h in Headers */,
+				04EB2590157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +709,7 @@
 				045CA2DB1538599600118E7C /* NSDate+SnSExtension.m in Sources */,
 				044DB5C01573D3C6009574EF /* NSArray+SnSExtension.m in Sources */,
 				044DB5F615751672009574EF /* UIView+SnSExtension.m in Sources */,
+				04EB2591157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +759,7 @@
 				045CA2DC1538599600118E7C /* NSDate+SnSExtension.m in Sources */,
 				044DB5C11573D3C6009574EF /* NSArray+SnSExtension.m in Sources */,
 				044DB5F715751672009574EF /* UIView+SnSExtension.m in Sources */,
+				04EB2592157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
