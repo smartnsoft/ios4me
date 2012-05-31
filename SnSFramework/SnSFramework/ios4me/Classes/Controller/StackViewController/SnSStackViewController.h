@@ -67,6 +67,7 @@ typedef struct SnSStackPanningStatus
 	
 	// Options
     BOOL canCoverMenu_;
+	BOOL canMoveFreely_;
 	BOOL enableGestures_;
 
 }
@@ -77,6 +78,7 @@ typedef struct SnSStackPanningStatus
 
 // Options
 @property (nonatomic, assign) BOOL canCoverMenu;
+@property (nonatomic, assign) BOOL canMoveFreely;
 @property (nonatomic, assign) BOOL enableGestures;
 
 #pragma mark Callbacks

@@ -25,6 +25,7 @@
 
 // Options
 @synthesize canCoverMenu = canCoverMenu_;
+@synthesize canMoveFreely = canMoveFreely_;
 @synthesize enableGestures = enableGestures_;
 //@synthesize menuView = _menuView;
 
@@ -296,10 +297,16 @@
 		_panningStatus.viewMoving != nil &&
 		_panningStatus.direction != kPanningDirectionUnkown) 
 	{
-		[_panningStatus.viewMoving setFrame:CGRectMake(_panningStatus.initialFrame.origin.x+_panningStatus.displacement,
-													   VIEW_Y(_panningStatus.viewMoving),
-													   VIEW_WIDTH(_panningStatus.viewMoving), 
-													   VIEW_HEIGHT(_panningStatus.viewMoving))];
+		CGFloat x = _panningStatus.initialFrame.origin.x+_panningStatus.displacement;
+		
+		// only allow x < 0 move if authorized to
+		if (canMoveFreely_ || x >= 0)
+		{
+			[_panningStatus.viewMoving setFrame:CGRectMake(x,
+														   VIEW_Y(_panningStatus.viewMoving),
+														   VIEW_WIDTH(_panningStatus.viewMoving), 
+														   VIEW_HEIGHT(_panningStatus.viewMoving))];
+		}
 	}
 	
 	// -----------------------------
@@ -313,20 +320,33 @@
         // unless menu cover is allowed
 		if (_panningStatus.direction == kPanningDirectionLeft)
         {
-            if (canCoverMenu_ && VIEW_X(viewMoving) > 0 && VIEW_X(viewMoving) < VIEW_WIDTH(_menuView))
-                [self shiftView:viewMoving offset:-VIEW_WIDTH(_menuView)-_panningStatus.displacement animated:YES];
+			CGFloat x = 0;
+			
+			if (canCoverMenu_ && VIEW_X(viewMoving) < VIEW_WIDTH(_menuView))
+				x = 0;
+			
             else
-                [self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
+				x = VIEW_X(_panningStatus.viewMoving) -_panningStatus.displacement;
+			
+			[self shiftView:_panningStatus.viewMoving
+				 toPosition:CGPointMake(x, VIEW_Y(_panningStatus.viewMoving))
+				   animated:YES];
 			
         }
 		
 		// Panning was right, either shift back or remove controller
 		else if  (_panningStatus.direction == kPanningDirectionRight)
 		{
+			// view moved is outer : remove it
 			if (_panningStatus.viewMoving == _outerView)
 			{
 				UIViewController* aCenterController = [self controllerFromView:_centerView];
-				[self shiftView:_centerView offset:_offsetShift animated:YES];
+				
+				// do not automatically shift back center view if menu cover is activated
+				if (!canCoverMenu_)
+					[self shiftView:_centerView offset:_offsetShift animated:YES];
+				
+				// remove the current outer controller
 				[self removeControllersFromController:aCenterController animated:YES];
 			}
 			else
@@ -548,7 +568,7 @@
 	
 	
 	// now if we can cover the menu and its already covered shift also from offset
-	if (canCoverMenu_ && VIEW_X(_centerView) < _offsetShift)
+	if (canCoverMenu_ && VIEW_X(_centerView) < _offsetShift && iView != _centerView)
 		[self shiftView:iView toPosition:CGPointMake(0, VIEW_Y(iView)) animated:iAnimated];
 	
 	// Start by shifting the view to its original position
