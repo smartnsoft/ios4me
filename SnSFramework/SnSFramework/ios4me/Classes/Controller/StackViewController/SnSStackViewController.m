@@ -322,15 +322,41 @@
         {
 			CGFloat x = 0;
 			
+			// if can cover the menu we must check if other views
+			// should be moved too
 			if (canCoverMenu_ && VIEW_X(viewMoving) < VIEW_WIDTH(_menuView))
-				x = 0;
+			{
+				for (SnSStackSubViewController* c in _stackControllers)
+				{
+					UIView* viewToMove = c.view;
+					
+					if (viewToMove == _menuView)
+						continue;
+					
+//					if (VIEW_X(viewToMove) <= VIEW_WIDTH(_menuView))
+//						x = 0;				
+//					else if (viewMoving == viewToMove)
+//						x = VIEW_X(viewToMove) -_panningStatus.displacement;
+//					else
+//						viewToMove = nil;
+					
+					[self shiftView:viewToMove
+						 toPosition:CGPointMake(0, VIEW_Y(viewToMove))
+						   animated:YES];					
+				}
+			}
+			// menu is not covered so simply move back the moving view
+			else
+			{
+				x = VIEW_X(viewMoving) -_panningStatus.displacement;
+				
+				[self shiftView:viewMoving
+					 toPosition:CGPointMake(x, VIEW_Y(_panningStatus.viewMoving))
+					   animated:YES];
+			}
 			
-            else
-				x = VIEW_X(_panningStatus.viewMoving) -_panningStatus.displacement;
 			
-			[self shiftView:_panningStatus.viewMoving
-				 toPosition:CGPointMake(x, VIEW_Y(_panningStatus.viewMoving))
-				   animated:YES];
+			
 			
         }
 		
