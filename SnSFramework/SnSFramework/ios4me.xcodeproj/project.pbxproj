@@ -28,10 +28,8 @@
 		045CA2DB1538599600118E7C /* NSDate+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CA2D81538599600118E7C /* NSDate+SnSExtension.m */; };
 		045CA2DC1538599600118E7C /* NSDate+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CA2D81538599600118E7C /* NSDate+SnSExtension.m */; };
 		04ADDA4B14ED195500C2087E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
-		04ADDA4C14ED195500C2087E /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */; };
 		04ADDA4D14ED195500C2087E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
 		04ADDA4E14ED195500C2087E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CDE4E13DEF425006C2E4D /* CFNetwork.framework */; };
-		04ADDAA314ED196400C2087E /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */; };
 		04ADDAA414ED196400C2087E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
 		04ADDAA514ED196400C2087E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
 		04ADDAA614ED196400C2087E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CDE4E13DEF425006C2E4D /* CFNetwork.framework */; };
@@ -123,6 +121,8 @@
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
 		04FB835014F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
+		1F06724E157F85890070154A /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F06724D157F85890070154A /* ASIHTTPFramework.framework */; };
+		1F06724F157F85A40070154A /* ASIHTTPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F06724D157F85890070154A /* ASIHTTPFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,17 +223,9 @@
 		04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SnSExtension.m"; sourceTree = "<group>"; };
 		04FB834B14F68150004754E7 /* SnSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSExceptionHandler.h; sourceTree = "<group>"; };
 		04FB834C14F68150004754E7 /* SnSExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSExceptionHandler.m; sourceTree = "<group>"; };
+		1F06724D157F85890070154A /* ASIHTTPFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASIHTTPFramework.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/ASIHTTPFramework.framework; sourceTree = DEVELOPER_DIR; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		803BC91C12A6BEF100336B25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASIHTTPFramework.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/ASIHTTPFramework.framework; sourceTree = DEVELOPER_DIR; };
-		8050503214065564006A9B23 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
-		8050503314065564006A9B23 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
-		8050503414065564006A9B23 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
-		8050503514065564006A9B23 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
-		8050503614065564006A9B23 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
-		8050503714065564006A9B23 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
-		8050503814065564006A9B23 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
-		8050503914065564006A9B23 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,8 +233,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F06724F157F85A40070154A /* ASIHTTPFramework.framework in Frameworks */,
 				04ADDA4B14ED195500C2087E /* StoreKit.framework in Frameworks */,
-				04ADDA4C14ED195500C2087E /* ASIHTTPFramework.framework in Frameworks */,
 				04ADDA4D14ED195500C2087E /* Foundation.framework in Frameworks */,
 				04ADDA4E14ED195500C2087E /* CFNetwork.framework in Frameworks */,
 			);
@@ -252,7 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04ADDAA314ED196400C2087E /* ASIHTTPFramework.framework in Frameworks */,
+				1F06724E157F85890070154A /* ASIHTTPFramework.framework in Frameworks */,
 				04ADDAA414ED196400C2087E /* StoreKit.framework in Frameworks */,
 				04ADDAA514ED196400C2087E /* Foundation.framework in Frameworks */,
 				04ADDAA614ED196400C2087E /* CFNetwork.framework in Frameworks */,
@@ -498,7 +490,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				80504FFC14064672006A9B23 /* ASIHTTPFramework.framework */,
+				1F06724D157F85890070154A /* ASIHTTPFramework.framework */,
 				048411CD13F2B1AD004B17A1 /* StoreKit.framework */,
 				048CDE4E13DEF425006C2E4D /* CFNetwork.framework */,
 				803BC91A12A6BEF100336B25 /* Foundation.framework */,
@@ -527,14 +519,6 @@
 		8050503114065564006A9B23 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				8050503214065564006A9B23 /* blackArrow.png */,
-				8050503314065564006A9B23 /* blackArrow@2x.png */,
-				8050503414065564006A9B23 /* blueArrow.png */,
-				8050503514065564006A9B23 /* blueArrow@2x.png */,
-				8050503614065564006A9B23 /* grayArrow.png */,
-				8050503714065564006A9B23 /* grayArrow@2x.png */,
-				8050503814065564006A9B23 /* whiteArrow.png */,
-				8050503914065564006A9B23 /* whiteArrow@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -776,7 +760,10 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				DSTROOT = /tmp/SnSFramework__Device_.dst;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -797,7 +784,10 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 				);
 				DSTROOT = /tmp/SnSFramework__Device_.dst;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_THUMB_SUPPORT = NO;
