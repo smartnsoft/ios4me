@@ -35,25 +35,25 @@
 - (void)onRetrieveDisplayObjectsInternal:(UIView*)view
 {
 	NSUInteger index = 0;
-	id<SnSViewControllerLifeCycle> aggregate = aggregator;
+	//id<SnSViewControllerLifeCycle> aggregate = aggregator;
 	//for (id<SnSViewControllerLifeCycle> aggregate in aggregates)
 //	{
 		@try
 		{
 			[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
-													  onAggregate:(aggregator == aggregate ? nil : aggregate)
+													  onAggregate:nil //(aggregator == aggregate ? nil : aggregate)
 														withEvent:SnSInterceptorEventOnRetrieveDisplayObjects];
 			
-			[aggregate onRetrieveDisplayObjects:view];
+			[aggregator onRetrieveDisplayObjects:view];
 			
 			[[SnSApplicationController instance] renderView:aggregator
-												onAggregate:(aggregator == aggregate ? nil : aggregate)];
+												onAggregate:nil]; //(aggregator == aggregate ? nil : aggregate)];
 		}
 		@catch (NSException* exception)
 		{
 			SnSLogEW(exception, @"Could not properly retrieve the display objects");
 			[[SnSApplicationController instance] handleException:aggregator 
-													   aggregate:(aggregator == aggregate ? nil : aggregate)
+													   aggregate:nil //(aggregator == aggregate ? nil : aggregate)
 													   exception:exception
 														  resume:&(statuses[index])];
 		}
@@ -68,25 +68,25 @@
 		return NO;
 	
 	
-	id<SnSViewControllerLifeCycle> aggregate = aggregator; //[aggregates objectAtIndex:plainIndex];
+	//id<SnSViewControllerLifeCycle> aggregate = aggregator; //[aggregates objectAtIndex:plainIndex];
 	@try
 	{
 		
-		[aggregate onRetrieveBusinessObjects];
+		[aggregator onRetrieveBusinessObjects];
 		[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
-												  onAggregate:(aggregator == aggregate ? nil : aggregate)
+												  onAggregate:nil //(aggregator == aggregate ? nil : aggregate)
 													withEvent:SnSInterceptorEventOnRetrieveBusinessObjects];
 	}
 	@catch (NSException* exception)
 	{
 		SnSLogEW(exception, @"Could not properly retrieve the business objects");
 		[[SnSApplicationController instance] handleException:aggregator 
-												   aggregate:(aggregator == aggregate ? nil : aggregate)
+												   aggregate:nil //(aggregator == aggregate ? nil : aggregate)
 												   exception:exception 
 													  resume:&(statuses[plainIndex])];
 	}
 	if (statuses[plainIndex] == YES)
-		[self onBusinessObjectsRetrieved:aggregate atIndex:plainIndex];
+		[self onBusinessObjectsRetrieved:aggregator atIndex:plainIndex];
 	
 	return statuses[plainIndex];
 }
@@ -202,22 +202,22 @@
 
 - (void)onDiscardedInternal
 {
-	id<SnSViewControllerLifeCycle> aggregate = aggregator; 
+	//id<SnSViewControllerLifeCycle> aggregate = aggregator; 
 	//for (id<SnSViewControllerLifeCycle> aggregate in aggregates)
 	//{
 		@try
 		{
 			[[SnSApplicationController instance] onLifeCycleEvent:aggregator 
-													  onAggregate:(aggregator == aggregate ? nil : aggregate)
+													  onAggregate:nil //(aggregator == aggregate ? nil : aggregate)
 														withEvent:SnSInterceptorEventOnDiscarded];
-			[aggregate onDiscarded];
+			[aggregator onDiscarded];
 		}
 		@catch (NSException* exception)
 		{
 			SnSLogEW(exception, @"An error occured while discarding the object");
 			BOOL dummyResume;
 			[[SnSApplicationController instance] handleException:aggregator
-													   aggregate:(aggregator == aggregate ? nil : aggregate)
+													   aggregate:nil //(aggregator == aggregate ? nil : aggregate)
 													   exception:exception 
 														  resume:&(dummyResume)];
 		}
@@ -274,10 +274,11 @@
 {
 	isFirstCycle = YES;
 	NSUInteger index = 0;
-	id<SnSViewControllerLifeCycle> aggregate = aggregator;
+	//id<SnSViewControllerLifeCycle> aggregate = aggregator;
 	//for (id<SnSViewControllerLifeCycle> aggregate in aggregates)
 	//{
-		if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == YES)
+        //if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == YES)
+		if ([self isBusinessObjectsRetrievalAsynchronous:aggregator] == YES) 
 		{
 			// The loading of the business objects should be asynchronous
 			[self performSelectorInBackgroundWithAutoreleasePool:@selector(onRetrieveBusinessObjectsInternal:)
@@ -300,11 +301,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	NSUInteger index = 0;
-	id<SnSViewControllerLifeCycle> aggregate = aggregator;
+	//id<SnSViewControllerLifeCycle> aggregate = aggregator;
 	//for (id<SnSViewControllerLifeCycle> aggregate in aggregates)
 	//{
-		if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO && isFirstCycle == YES)
-			[self onFulfillDisplayObjectsInternal:aggregate atIndex:index];
+		//if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO && isFirstCycle == YES)
+		//	[self onFulfillDisplayObjectsInternal:aggregate atIndex:index];
+    
+    if ([self isBusinessObjectsRetrievalAsynchronous:aggregator] == NO && isFirstCycle == YES) {
+        [self onFulfillDisplayObjectsInternal:aggregator atIndex:index];
+    }
 		
 		++index;
 	//}
@@ -316,11 +321,16 @@
 	// We notify that the 'viewDidAppear' method has been entered
 	[viewDidAppearCondition signal];
 	NSUInteger index = 0;
-	id<SnSViewControllerLifeCycle> aggregate = aggregator;
+	//id<SnSViewControllerLifeCycle> aggregate = aggregator;
 	//for (id<SnSViewControllerLifeCycle> aggregate in aggregates)
 	//{
-		if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO || isFirstCycle == NO)
-			[self onSynchronizeDisplayObjectsInternal:aggregate atIndex:index];
+		//if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO || isFirstCycle == NO)
+		//	[self onSynchronizeDisplayObjectsInternal:aggregate atIndex:index];
+    
+    if ([self isBusinessObjectsRetrievalAsynchronous:aggregator] == NO || isFirstCycle == NO) {
+        [self onSynchronizeDisplayObjectsInternal:aggregator atIndex:index];
+    }
+    
 		++index;
 	//}
 	isFirstCycle = NO;
