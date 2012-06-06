@@ -5,10 +5,17 @@
 
 # OS generated files #
 ######################
-.DS_Store*
-ehthumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 Icon?
+ehthumbs.db
 Thumbs.db
 
 SnSFramework/SnSFramework/build/
 SnSFramework/Test-SnSFramework/build/
+SnSFramework/SnSFramework/.DS_Store
+
+SnSFramework/.DS_Store
