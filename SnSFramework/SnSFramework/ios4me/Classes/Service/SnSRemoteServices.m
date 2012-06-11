@@ -159,9 +159,17 @@
 	//------------------------------
 	// Image Construction and Binding
 	//------------------------------
-	UIImage* (^finalization)(NSData*) = ^ (NSData* d) {
+	UIImage* (^finalization)(NSData*) = ^ (NSData* d) 
+	{
 				
-		UIImage* image = [UIImage imageWithData:d];
+		CGDataProviderRef imgDataProvider = CGDataProviderCreateWithCFData((CFDataRef) d);
+
+		CGImageRef imgRef = CGImageCreateWithJPEGDataProvider(imgDataProvider, NULL, true, kCGRenderingIntentDefault);
+
+		UIImage* image = [UIImage imageWithCGImage:imgRef];
+		
+		CGImageRelease(imgRef);
+		CGDataProviderRelease(imgDataProvider);
 		
 		dispatch_async(dispatch_get_main_queue(), ^{
 			
@@ -184,7 +192,7 @@
 					[imageView.layer addAnimation:crossFade forKey:@"animateContents"];
 				}		
 				
-				imageView.image = image;				
+				imageView.image = [UIImage imageWithCGImage:imgRef];				
 				
 				
 				if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
