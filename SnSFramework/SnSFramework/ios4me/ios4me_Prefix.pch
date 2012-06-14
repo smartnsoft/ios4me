@@ -24,6 +24,6 @@
     #import <Foundation/Foundation.h>
 
     // We import all the framework header files
-    #import "SnSFramework.h" fff
+    #import "SnSFramework.h"
 
 //#endif
