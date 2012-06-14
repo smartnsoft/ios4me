@@ -144,6 +144,7 @@
 	scrollview_.layer.shadowColor = [UIColor blackColor].CGColor;
 	scrollview_.layer.shadowPath = [UIBezierPath bezierPathWithRect:scrollview_.bounds].CGPath;
 	
+	// update frame
 	scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), 0);
 
 	// animate
