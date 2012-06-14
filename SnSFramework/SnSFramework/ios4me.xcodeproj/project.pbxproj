@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040C74761588F30400C7D546 /* SnSDropListViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 040C74741588F30400C7D546 /* SnSDropListViewCell.h */; };
+		040C74771588F30400C7D546 /* SnSDropListViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 040C74741588F30400C7D546 /* SnSDropListViewCell.h */; };
+		040C74781588F30400C7D546 /* SnSDropListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C74751588F30400C7D546 /* SnSDropListViewCell.m */; };
+		040C74791588F30400C7D546 /* SnSDropListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C74751588F30400C7D546 /* SnSDropListViewCell.m */; };
 		042B2D3B15064BCB00854572 /* SnSRemoteServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D3915064BCB00854572 /* SnSRemoteServices.h */; };
 		042B2D3C15064BCB00854572 /* SnSRemoteServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D3915064BCB00854572 /* SnSRemoteServices.h */; };
 		042B2D3D15064BCB00854572 /* SnSRemoteServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D3A15064BCB00854572 /* SnSRemoteServices.m */; };
 		042B2D3E15064BCB00854572 /* SnSRemoteServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D3A15064BCB00854572 /* SnSRemoteServices.m */; };
-		042B2D4315064E9100854572 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D4115064E9100854572 /* SnSLoadingView.h */; };
-		042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B2D4115064E9100854572 /* SnSLoadingView.h */; };
-		042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
-		042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B2D4215064E9100854572 /* SnSLoadingView.m */; };
 		044DB5BE1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */; };
 		044DB5BF1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */; };
 		044DB5C01573D3C6009574EF /* NSArray+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DB5BD1573D3C6009574EF /* NSArray+SnSExtension.m */; };
@@ -99,6 +99,14 @@
 		04ADDBE614ED470200C2087E /* SnSSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADDB4A14ED470200C2087E /* SnSSingleton.m */; };
 		04ADDBE914ED470200C2087E /* SnSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADDB4C14ED470200C2087E /* SnSUtils.m */; };
 		04ADDBEA14ED470200C2087E /* SnSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ADDB4C14ED470200C2087E /* SnSUtils.m */; };
+		04AE69EC158774EB00FEAEF8 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AE69EA158774EB00FEAEF8 /* SnSLoadingView.h */; };
+		04AE69ED158774EB00FEAEF8 /* SnSLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AE69EA158774EB00FEAEF8 /* SnSLoadingView.h */; };
+		04AE69EE158774EB00FEAEF8 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE69EB158774EB00FEAEF8 /* SnSLoadingView.m */; };
+		04AE69EF158774EB00FEAEF8 /* SnSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE69EB158774EB00FEAEF8 /* SnSLoadingView.m */; };
+		04AE69F21587750800FEAEF8 /* SnSDropListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AE69F01587750800FEAEF8 /* SnSDropListView.h */; };
+		04AE69F31587750800FEAEF8 /* SnSDropListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AE69F01587750800FEAEF8 /* SnSDropListView.h */; };
+		04AE69F41587750800FEAEF8 /* SnSDropListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE69F11587750800FEAEF8 /* SnSDropListView.m */; };
+		04AE69F51587750800FEAEF8 /* SnSDropListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE69F11587750800FEAEF8 /* SnSDropListView.m */; };
 		04B41FF814FE448E0006A34E /* SnSURLCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B41FF614FE448E0006A34E /* SnSURLCache.h */; };
 		04B41FF914FE448E0006A34E /* SnSURLCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B41FF614FE448E0006A34E /* SnSURLCache.h */; };
 		04B41FFA14FE448E0006A34E /* SnSURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B41FF714FE448E0006A34E /* SnSURLCache.m */; };
@@ -126,10 +134,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040C74741588F30400C7D546 /* SnSDropListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSDropListViewCell.h; sourceTree = "<group>"; };
+		040C74751588F30400C7D546 /* SnSDropListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSDropListViewCell.m; sourceTree = "<group>"; };
 		042B2D3915064BCB00854572 /* SnSRemoteServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSRemoteServices.h; sourceTree = "<group>"; };
 		042B2D3A15064BCB00854572 /* SnSRemoteServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSRemoteServices.m; sourceTree = "<group>"; };
-		042B2D4115064E9100854572 /* SnSLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSLoadingView.h; sourceTree = "<group>"; };
-		042B2D4215064E9100854572 /* SnSLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSLoadingView.m; sourceTree = "<group>"; };
 		044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SnSExtension.h"; sourceTree = "<group>"; };
 		044DB5BD1573D3C6009574EF /* NSArray+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SnSExtension.m"; sourceTree = "<group>"; };
 		044DB5F215751672009574EF /* UIView+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SnSExtension.h"; sourceTree = "<group>"; };
@@ -211,6 +219,10 @@
 		04ADDB4A14ED470200C2087E /* SnSSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSingleton.m; sourceTree = "<group>"; };
 		04ADDB4B14ED470200C2087E /* SnSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSUtils.h; sourceTree = "<group>"; };
 		04ADDB4C14ED470200C2087E /* SnSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSUtils.m; sourceTree = "<group>"; };
+		04AE69EA158774EB00FEAEF8 /* SnSLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSLoadingView.h; sourceTree = "<group>"; };
+		04AE69EB158774EB00FEAEF8 /* SnSLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSLoadingView.m; sourceTree = "<group>"; };
+		04AE69F01587750800FEAEF8 /* SnSDropListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSDropListView.h; sourceTree = "<group>"; };
+		04AE69F11587750800FEAEF8 /* SnSDropListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSDropListView.m; sourceTree = "<group>"; };
 		04B41FF614FE448E0006A34E /* SnSURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSURLCache.h; sourceTree = "<group>"; };
 		04B41FF714FE448E0006A34E /* SnSURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSURLCache.m; sourceTree = "<group>"; };
 		04B4202014FE83970006A34E /* SnSCacheChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSCacheChecker.h; sourceTree = "<group>"; };
@@ -269,16 +281,6 @@
 				04ADDAD314ED196400C2087E /* libios4meSimulator.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		042B2D4015064E6F00854572 /* Loading View */ = {
-			isa = PBXGroup;
-			children = (
-				042B2D4115064E9100854572 /* SnSLoadingView.h */,
-				042B2D4215064E9100854572 /* SnSLoadingView.m */,
-			);
-			name = "Loading View";
-			path = SnSLoadingView;
 			sourceTree = "<group>";
 		};
 		04ADDAF014ED470200C2087E /* Classes */ = {
@@ -431,7 +433,8 @@
 		04ADDB3A14ED470200C2087E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				042B2D4015064E6F00854572 /* Loading View */,
+				04AE69E7158774D600FEAEF8 /* SnSDropListView */,
+				04AE69E9158774EB00FEAEF8 /* SnSLoadingView */,
 				04ADDB4114ED470200C2087E /* RefreshTableHeaderView */,
 			);
 			path = UI;
@@ -459,6 +462,26 @@
 				04ADDB4C14ED470200C2087E /* SnSUtils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		04AE69E7158774D600FEAEF8 /* SnSDropListView */ = {
+			isa = PBXGroup;
+			children = (
+				04AE69F01587750800FEAEF8 /* SnSDropListView.h */,
+				04AE69F11587750800FEAEF8 /* SnSDropListView.m */,
+				040C74741588F30400C7D546 /* SnSDropListViewCell.h */,
+				040C74751588F30400C7D546 /* SnSDropListViewCell.m */,
+			);
+			path = SnSDropListView;
+			sourceTree = "<group>";
+		};
+		04AE69E9158774EB00FEAEF8 /* SnSLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				04AE69EA158774EB00FEAEF8 /* SnSLoadingView.h */,
+				04AE69EB158774EB00FEAEF8 /* SnSLoadingView.m */,
+			);
+			path = SnSLoadingView;
 			sourceTree = "<group>";
 		};
 		04BA6B31153467D20084B421 /* ScollFollower */ = {
@@ -550,13 +573,15 @@
 				04B41FF814FE448E0006A34E /* SnSURLCache.h in Headers */,
 				04B4202214FE83970006A34E /* SnSCacheChecker.h in Headers */,
 				042B2D3B15064BCB00854572 /* SnSRemoteServices.h in Headers */,
-				042B2D4315064E9100854572 /* SnSLoadingView.h in Headers */,
 				04BA6B35153467F10084B421 /* SnSScrollFollower.h in Headers */,
 				04BA6B3B15347A160084B421 /* SnSScrollFollowerView.h in Headers */,
 				045CA2D91538599600118E7C /* NSDate+SnSExtension.h in Headers */,
 				044DB5BE1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */,
 				044DB5F415751672009574EF /* UIView+SnSExtension.h in Headers */,
 				04EB258F157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */,
+				04AE69EC158774EB00FEAEF8 /* SnSLoadingView.h in Headers */,
+				04AE69F21587750800FEAEF8 /* SnSDropListView.h in Headers */,
+				040C74761588F30400C7D546 /* SnSDropListViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,13 +593,15 @@
 				04B41FF914FE448E0006A34E /* SnSURLCache.h in Headers */,
 				04B4202314FE83970006A34E /* SnSCacheChecker.h in Headers */,
 				042B2D3C15064BCB00854572 /* SnSRemoteServices.h in Headers */,
-				042B2D4415064E9100854572 /* SnSLoadingView.h in Headers */,
 				04BA6B36153467F10084B421 /* SnSScrollFollower.h in Headers */,
 				04BA6B3C15347A160084B421 /* SnSScrollFollowerView.h in Headers */,
 				045CA2DA1538599600118E7C /* NSDate+SnSExtension.h in Headers */,
 				044DB5BF1573D3C6009574EF /* NSArray+SnSExtension.h in Headers */,
 				044DB5F515751672009574EF /* UIView+SnSExtension.h in Headers */,
 				04EB2590157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */,
+				04AE69ED158774EB00FEAEF8 /* SnSLoadingView.h in Headers */,
+				04AE69F31587750800FEAEF8 /* SnSDropListView.h in Headers */,
+				040C74771588F30400C7D546 /* SnSDropListViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,13 +730,15 @@
 				04B41FFA14FE448E0006A34E /* SnSURLCache.m in Sources */,
 				04B4202414FE83970006A34E /* SnSCacheChecker.m in Sources */,
 				042B2D3D15064BCB00854572 /* SnSRemoteServices.m in Sources */,
-				042B2D4515064E9100854572 /* SnSLoadingView.m in Sources */,
 				04BA6B37153467F10084B421 /* SnSScrollFollower.m in Sources */,
 				04BA6B3D15347A160084B421 /* SnSScrollFollowerView.m in Sources */,
 				045CA2DB1538599600118E7C /* NSDate+SnSExtension.m in Sources */,
 				044DB5C01573D3C6009574EF /* NSArray+SnSExtension.m in Sources */,
 				044DB5F615751672009574EF /* UIView+SnSExtension.m in Sources */,
 				04EB2591157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */,
+				04AE69EE158774EB00FEAEF8 /* SnSLoadingView.m in Sources */,
+				04AE69F41587750800FEAEF8 /* SnSDropListView.m in Sources */,
+				040C74781588F30400C7D546 /* SnSDropListViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,13 +782,15 @@
 				04B41FFB14FE448E0006A34E /* SnSURLCache.m in Sources */,
 				04B4202514FE83970006A34E /* SnSCacheChecker.m in Sources */,
 				042B2D3E15064BCB00854572 /* SnSRemoteServices.m in Sources */,
-				042B2D4615064E9100854572 /* SnSLoadingView.m in Sources */,
 				04BA6B38153467F10084B421 /* SnSScrollFollower.m in Sources */,
 				04BA6B3E15347A160084B421 /* SnSScrollFollowerView.m in Sources */,
 				045CA2DC1538599600118E7C /* NSDate+SnSExtension.m in Sources */,
 				044DB5C11573D3C6009574EF /* NSArray+SnSExtension.m in Sources */,
 				044DB5F715751672009574EF /* UIView+SnSExtension.m in Sources */,
 				04EB2592157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */,
+				04AE69EF158774EB00FEAEF8 /* SnSLoadingView.m in Sources */,
+				04AE69F51587750800FEAEF8 /* SnSDropListView.m in Sources */,
+				040C74791588F30400C7D546 /* SnSDropListViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
