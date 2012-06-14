@@ -35,6 +35,7 @@
 @interface SnSDropListView : UIView
 {
 	UILabel* mainLabel_;
+	UIView* backgroundView_;
 	UIScrollView* scrollview_;
 	SnSDropListViewCell* selectedCell_;
 
@@ -50,6 +51,7 @@
 @property (nonatomic, assign) CGFloat maxScrollHeight;
 @property (nonatomic, readonly) UILabel* mainLabel;
 @property (nonatomic, readonly) UIScrollView* scrollView;
+@property (nonatomic, readonly) UIView* backgroundView;
 
 #pragma mark Internal Events
 

@@ -22,6 +22,7 @@
 @synthesize maxScrollHeight = maxScrollHeight_;
 @synthesize mainLabel = mainLabel_;
 @synthesize scrollView = scrollview_;
+@synthesize backgroundView = backgroundView_;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -35,39 +36,31 @@
 
 - (void)setup
 {
+	// -----------------------------
+	// 
+	// -----------------------------
 	self.clipsToBounds = NO;
 	self.userInteractionEnabled = YES;
 	self.backgroundColor = [UIColor whiteColor];
+	self.layer.cornerRadius = 4.f;
 	
 	// -----------------------------
 	// Configure Sub Views
 	// -----------------------------
+	
+	backgroundView_ = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, SnSViewW(self), SnSViewH(self))] autorelease];
+	backgroundView_.backgroundColor = [UIColor clearColor];
+	
 	mainLabel_ = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, SnSViewW(self)-10, SnSViewH(self))] autorelease];
 	mainLabel_.backgroundColor = [UIColor clearColor];
 	
-	self.layer.cornerRadius = 4.f;
-	
 	scrollview_ = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, 0)];
 	scrollview_.backgroundColor = [UIColor whiteColor];
-	scrollview_.hidden = YES;
 	scrollview_.userInteractionEnabled = YES;
 
-
+	[self addSubview:backgroundView_];
 	[self addSubview:mainLabel_];
-	[self addSubview:scrollview_];
-	
-//	// -----------------------------
-//	// Layers
-//	// -----------------------------
-//	UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:mainLabel_.bounds 
-//												   byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight)
-//														 cornerRadii:CGSizeMake(4, 4)];
-//	CAShapeLayer *maskLayer = [CAShapeLayer layer];
-//	maskLayer.frame = mainLabel_.bounds;
-//	maskLayer.path = maskPath.CGPath;
-//	maskLayer.backgroundColor = [UIColor whiteColor].CGColor;
-//	[self.layer addSublayer:maskLayer];
-//	
+
 	// -----------------------------
 	// Configure Gesture Recognizer
 	// -----------------------------
@@ -101,7 +94,7 @@
 
 - (void)onTapMainView_:(id)sender
 {
-	if (scrollview_.hidden == YES)
+	if (SnSViewH(scrollview_) == 0)
 		[self openScrollView];
 	else
 		[self closeScrollView];
@@ -135,22 +128,15 @@
 
 }
 
-- (void)onTapLabel_:(id)sender
-{
-	if (scrollview_.hidden == YES)
-		[self openScrollView];
-	else
-		[self closeScrollView];
-}
-
 #pragma mark -
 #pragma mark Building views
 #pragma mark -
 
 - (void)openScrollView
-{
-	scrollview_.hidden = NO;
-	scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), SnSViewH(scrollview_));
+{	
+	// warn delegate scroll view is about to open
+	if ([delegate_ respondsToSelector:@selector(dropList:willOpenScrollView:)])
+		[delegate_ dropList:self willOpenScrollView:scrollview_];
 	
 	scrollview_.layer.shadowRadius = 50;
 	scrollview_.layer.shadowOpacity = 1;
@@ -158,20 +144,43 @@
 	scrollview_.layer.shadowColor = [UIColor blackColor].CGColor;
 	scrollview_.layer.shadowPath = [UIBezierPath bezierPathWithRect:scrollview_.bounds].CGPath;
 	
-//	self.frame = CGRectMake(SnSViewX(self), SnSViewY(self), SnSViewW(self), SnSViewH(scrollview_)+SnSViewH(mainLabel_));
+	scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), 0);
+
+	// animate
+	[UIView animateWithDuration:0.3f animations:^{
+		scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), expectedHeight_);
+
+	}];
+		
 	
+	// add to parent subview
 	[[self superview] addSubview:scrollview_];
+	
+	
 
 }
 
 - (void)closeScrollView
 {
-	scrollview_.hidden = YES;
+	// warn delegate scroll view is about to close
+	if ([delegate_ respondsToSelector:@selector(dropList:willCloseScrollView:)])
+		[delegate_ dropList:self willCloseScrollView:scrollview_];
+	
+	
 	scrollview_.layer.shadowOpacity = 0.0f;
 	
-//	self.frame = CGRectMake(SnSViewX(self), SnSViewY(self), SnSViewW(self), SnSViewH(scrollview_));
-
-	[scrollview_ removeFromSuperview];
+	// remove all previous animations
+	[scrollview_.layer removeAllAnimations];
+	
+	// animate move back and when done, remove from super view
+	[UIView animateWithDuration:0.3f
+					 animations:^{
+						 scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), 0);
+					 }
+					 completion:^(BOOL done){
+						 if (done)
+							 [scrollview_ removeFromSuperview];
+					 }];
 }
 
 - (void)reloadData
@@ -198,6 +207,8 @@
 	else
 		height = rows*kSnSDropListLabelDefaulttHeight;
 	
+	
+	
 	// -----------------------------
 	// Update Scroll View
 	// -----------------------------	
@@ -209,6 +220,9 @@
 								   height > maxScrollHeight_ ? maxScrollHeight_ : height);
 	
 	scrollview_.contentSize = CGSizeMake(SnSViewX(scrollview_), height);	
+	
+	// Update expectedHeight used for future animation
+	expectedHeight_ = SnSViewH(scrollview_);
 	
 	// -----------------------------
 	// Build Scroll View
