@@ -124,7 +124,7 @@
 
 + (void) log:(char *)sourceFile 
   lineNumber:(int)lineNumber
-	  method:(char*)method
+	  method:(const char*)method
 	logLevel:(SnSLogLevel)logLevel 
 	  format:(NSString *)format, ...
 {
