@@ -36,7 +36,8 @@
 {
 	UILabel* mainLabel_;
 	UIScrollView* scrollview_;
-	
+	SnSDropListViewCell* selectedCell_;
+
 	id<SnSDropListDelegate> delegate_;
 	id<SnSDropListDataSource> dataSource_;
 	

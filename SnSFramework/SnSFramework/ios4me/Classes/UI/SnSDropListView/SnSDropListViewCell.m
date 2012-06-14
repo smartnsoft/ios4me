@@ -9,7 +9,7 @@
 #import "SnSDropListViewCell.h"
 
 #define kCellBackgroundSelectedColor RGB(2,50,63)
-#define kCellBackgroundDefaultColor RGB(255,255,255)
+#define kCellBackgroundDefaultColor [UIColor clearColor]
 #define kCellTextDefaultColor RGB(0,0,0)
 #define kCellTextSelectedColor RGB(255,255,255)
 
@@ -47,6 +47,17 @@
 		titleLabel_.backgroundColor = kCellBackgroundDefaultColor;
 		titleLabel_.textColor = kCellTextDefaultColor;
 	}
+}
+
+- (void)setFrame:(CGRect)frame
+{
+	[super setFrame:frame];
+	
+	if (titleLabel_)
+		titleLabel_.frame = CGRectMake(10, 
+									   0, 
+									   frame.size.width-10, 
+									   frame.size.height);
 }
 
 /*

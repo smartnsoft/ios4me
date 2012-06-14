@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface SnSDropListViewCell : UIView
 {
-	UILabel* titleLabel_;
+	UILabel* titleLabel_;	
 }
 @property (nonatomic, readonly) UILabel* titleLabel;
 

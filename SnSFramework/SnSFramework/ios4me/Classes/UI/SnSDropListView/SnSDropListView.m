@@ -7,6 +7,7 @@
 //
 
 #import "SnSDropListView.h"
+#import "SnSDropListViewCell.h"
 
 #define SnSViewX(v)			((v).frame.origin.x)
 #define SnSViewY(v)			((v).frame.origin.y)
@@ -108,12 +109,30 @@
 
 - (void)onTapCellView_:(id)sender
 {
-	NSInteger idx = [[scrollview_ subviews] indexOfObject:[sender view]];
+	SnSDropListViewCell* cell = (SnSDropListViewCell*)[sender view];
 	
-	SnSLogD(@"Tapped %d cell", idx);
+	// set previous seletected cell to unselected
+	[selectedCell_ setSelected:NO animated:YES];
 	
+	// update current selected cell
+	if ([cell isKindOfClass:[SnSDropListViewCell class]])
+	{
+		selectedCell_ = cell;
+		[selectedCell_ setSelected:YES animated:YES];
+	}
+	
+	// update main label (default behaviour)
+	mainLabel_.text = selectedCell_.titleLabel.text;
+		
+	// retreive index of selected cell
+	NSInteger idx = [[scrollview_ subviews] indexOfObject:cell];
+	
+	// call delegate and hit didSelectRow method
 	if ([delegate_ respondsToSelector:@selector(dropList:didSelectRow:)])
 		[delegate_ dropList:self didSelectRow:idx];
+	
+	SnSLogD(@"Tapped %d cell", idx);
+
 }
 
 - (void)onTapLabel_:(id)sender
@@ -139,7 +158,7 @@
 	scrollview_.layer.shadowColor = [UIColor blackColor].CGColor;
 	scrollview_.layer.shadowPath = [UIBezierPath bezierPathWithRect:scrollview_.bounds].CGPath;
 	
-	self.frame = CGRectMake(SnSViewX(self), SnSViewY(self), SnSViewW(self), SnSViewH(scrollview_)+SnSViewH(mainLabel_));
+//	self.frame = CGRectMake(SnSViewX(self), SnSViewY(self), SnSViewW(self), SnSViewH(scrollview_)+SnSViewH(mainLabel_));
 	
 	[[self superview] addSubview:scrollview_];
 
@@ -150,7 +169,7 @@
 	scrollview_.hidden = YES;
 	scrollview_.layer.shadowOpacity = 0.0f;
 	
-	self.frame = CGRectMake(SnSViewX(self), SnSViewY(self), SnSViewW(self), SnSViewH(scrollview_));
+//	self.frame = CGRectMake(SnSViewX(self), SnSViewY(self), SnSViewW(self), SnSViewH(scrollview_));
 
 	[scrollview_ removeFromSuperview];
 }
@@ -196,12 +215,10 @@
 	// -----------------------------
 	for (NSInteger i = 0; i < rows; ++i)
 	{
-		UILabel* label = nil;
+		SnSDropListViewCell* cell = nil;
 		
-		if ([delegate_ respondsToSelector:@selector(dropList:labelForRow:)])
-			label = [delegate_ dropList:self labelForRow:i];
-		else
-			label = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+		if ([delegate_ respondsToSelector:@selector(dropList:cellForRow:)])
+			cell = [delegate_ dropList:self cellForRow:i];
 		
 		if ([delegate_ respondsToSelector:@selector(dropList:heightForRow:)])
 			height = [delegate_ dropList:self heightForRow:i];
@@ -209,17 +226,17 @@
 			height = kSnSDropListLabelDefaulttHeight;
 				
 		// Update frame
-		label.userInteractionEnabled = YES;
-		label.frame = CGRectMake(SnSViewX(label), y, SnSViewW(scrollview_)-SnSViewX(label), height);
+		cell.userInteractionEnabled = YES;
+		cell.frame = CGRectMake(0, y, SnSViewW(scrollview_), height);
 		
 		// add gesture recognizer
 		UITapGestureRecognizer* tap = [[[UITapGestureRecognizer alloc] initWithTarget:self
 																			  action:@selector(onTapCellView_:)] autorelease];
 		tap.numberOfTapsRequired = 1;
-		[label addGestureRecognizer:tap];
+		[cell addGestureRecognizer:tap];
 				
 		// add to subview
-		[scrollview_ addSubview:label];
+		[scrollview_ addSubview:cell];
 		
 		// update new position
 		y += height;
