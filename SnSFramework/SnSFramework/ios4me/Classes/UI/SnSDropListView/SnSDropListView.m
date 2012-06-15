@@ -23,6 +23,7 @@
 @synthesize mainLabel = mainLabel_;
 @synthesize scrollView = scrollview_;
 @synthesize backgroundView = backgroundView_;
+@synthesize enabled = enabled_;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -43,6 +44,7 @@
 	self.userInteractionEnabled = YES;
 	self.backgroundColor = [UIColor whiteColor];
 	self.layer.cornerRadius = 4.f;
+	self.enabled = YES;
 	
 	// -----------------------------
 	// Configure Sub Views
@@ -94,6 +96,9 @@
 
 - (void)onTapMainView_:(id)sender
 {
+	if (!enabled_)
+		return;
+	
 	if (SnSViewH(scrollview_) == 0)
 		[self openScrollView];
 	else
