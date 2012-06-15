@@ -92,6 +92,8 @@
 
 // UI Views
 #import "SnSLoadingView.h"
+#import "SnSDropListView.h"
+#import "SnSDropListViewCell.h"
 #import "SnSScrollFollowerView.h"
 
 #define SNS_FRAMEWORK_VERSION @"1.0"

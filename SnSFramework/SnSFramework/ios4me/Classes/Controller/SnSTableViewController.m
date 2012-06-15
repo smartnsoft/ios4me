@@ -256,7 +256,8 @@
 	{
 		if ([self respondsToSelector:@selector(initCellWithIdentifier:andResponder:)] == YES)
 		{
-			cell = [self initCellWithIdentifier:cellIdentifier andResponder:self.responderRedirector];
+			cell = (UITableViewCell *)[self initCellWithIdentifier:cellIdentifier
+													  andResponder:self.responderRedirector];
 		}
 		else 
 		{

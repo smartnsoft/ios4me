@@ -41,8 +41,10 @@
 	NSInteger aRes = NSIntegerMin;
 	NSString* aValue = [iDict objectForKey:iKey];
 	
-	if ([aValue isKindOfClass:[NSString class]] || [aValue isKindOfClass:[NSNumber class]])
+	if ([aValue isKindOfClass:[NSString class]])
 		aRes  = [[aValue stringByStrippingNonNumbers] integerValue];
+	else if ([aValue isKindOfClass:[NSNumber class]])
+		aRes = [aValue integerValue];
 	
 	return aRes;
 	
