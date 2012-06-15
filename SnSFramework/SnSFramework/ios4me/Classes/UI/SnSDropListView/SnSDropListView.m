@@ -35,6 +35,16 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super initWithCoder:aDecoder];
+	
+	if (self)
+		[self setup];
+	
+	return self;
+}
+
 - (void)setup
 {
 	// -----------------------------
@@ -267,18 +277,6 @@
 	
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	SnSLogD(@"");
-}
 
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
-//{
-//	return self;
-//}
 
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
-{
-	return [super pointInside:point withEvent:event];
-}
 @end
