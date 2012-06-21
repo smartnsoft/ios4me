@@ -23,6 +23,14 @@
 						  forState:UIControlStateNormal];
 		}
 		
+		else if ([v isKindOfClass:[UITextField class]])
+		{
+			
+			UITextField* f = (UITextField*)v;
+			f.text = NSLocalizedString(f.text, nil);
+			f.placeholder = NSLocalizedString(f.placeholder, nil);
+		}
+		
 		[v localizeRecursively];
 	}
 }
