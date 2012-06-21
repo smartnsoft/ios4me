@@ -21,7 +21,11 @@
 - (CGFloat)dropList:(SnSDropListView*)iDropList heightForRow:(NSInteger)iRow;
 
 - (void)dropList:(SnSDropListView*)iDropList willOpenScrollView:(UIScrollView*)iScrollView;
+- (void)dropList:(SnSDropListView*)iDropList didOpenScrollView:(UIScrollView*)iScrollView;
+
 - (void)dropList:(SnSDropListView*)iDropList willCloseScrollView:(UIScrollView*)iScrollView;
+- (void)dropList:(SnSDropListView*)iDropList didCloseScrollView:(UIScrollView*)iScrollView;
+
 @end
 
 @protocol SnSDropListDataSource <NSObject>
@@ -70,6 +74,6 @@
 #pragma mark Loading Data
 
 - (void)reloadData;
-
-
+- (NSInteger)selectedRow;
+- (void)selectRow:(NSInteger)index;
 @end

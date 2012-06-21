@@ -163,10 +163,17 @@
 	scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), 0);
 
 	// animate
-	[UIView animateWithDuration:0.3f animations:^{
-		scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), expectedHeight_);
-
-	}];
+	[UIView animateWithDuration:0.3f
+					 animations:^{
+						 scrollview_.frame = CGRectMake(SnSViewX(self)-0,
+														SnSViewY(self)+SnSViewH(self)-1, 
+														SnSViewW(self),
+														expectedHeight_);
+					 }
+					 completion:^(BOOL f){
+						 if (f && [delegate_ respondsToSelector:@selector(dropList:didOpenScrollView:)] )
+							 [delegate_ dropList:self didOpenScrollView:scrollview_];
+					 }];
 		
 	
 	// add to parent subview
@@ -193,11 +200,30 @@
 					 animations:^{
 						 scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), 0);
 					 }
-					 completion:^(BOOL done){
-						 if (done)
+					 completion:^(BOOL f){
+						 if (f)
 							 [scrollview_ removeFromSuperview];
+						 if (f && [delegate_ respondsToSelector:@selector(dropList:didCloseScrollView:)] )
+							 [delegate_ dropList:self didCloseScrollView:scrollview_];
+
 					 }];
 }
+
+- (NSInteger)selectedRow
+{
+	return [[scrollview_ subviews] indexOfObject:selectedCell_];
+}
+
+- (void)selectRow:(NSInteger)index
+{
+	SnSDropListViewCell* cell = nil;
+	if (index >= 0 && index < [[scrollview_ subviews] count])
+		cell = [[scrollview_ subviews] objectAtIndex:index];
+	
+	[cell setSelected:YES animated:YES];
+	selectedCell_ = cell;
+}
+
 
 - (void)reloadData
 {
@@ -276,6 +302,7 @@
 	
 	
 }
+
 
 
 
