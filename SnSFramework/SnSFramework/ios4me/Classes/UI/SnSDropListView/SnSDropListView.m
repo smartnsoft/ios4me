@@ -109,6 +109,9 @@
 	if (!enabled_)
 		return;
 	
+	if ([delegate_ respondsToSelector:@selector(didTapDropListView:)])
+		[delegate_ didTapDropListView:self];
+	
 	if (SnSViewH(scrollview_) == 0)
 		[self openScrollView];
 	else

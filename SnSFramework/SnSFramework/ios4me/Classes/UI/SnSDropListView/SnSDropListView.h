@@ -17,6 +17,8 @@
 
 @optional
 
+- (void)didTapDropListView:(SnSDropListView*)iDropList;
+
 - (void)dropList:(SnSDropListView*)iDropList didSelectRow:(NSInteger)iRow;
 - (CGFloat)dropList:(SnSDropListView*)iDropList heightForRow:(NSInteger)iRow;
 
