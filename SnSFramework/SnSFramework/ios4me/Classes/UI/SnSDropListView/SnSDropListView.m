@@ -152,6 +152,9 @@
 
 - (void)openScrollView
 {	
+	if (!enabled_)
+		return;
+	
 	// warn delegate scroll view is about to open
 	if ([delegate_ respondsToSelector:@selector(dropList:willOpenScrollView:)])
 		[delegate_ dropList:self willOpenScrollView:scrollview_];
