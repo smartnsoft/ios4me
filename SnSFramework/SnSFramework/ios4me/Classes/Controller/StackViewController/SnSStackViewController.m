@@ -260,6 +260,11 @@
 	if (!self.enableGestures)
 		return;
 	
+	// same thing is panning is disable for the receiver controller
+	SnSStackSubViewController* movingController = [self controllerFromView:_panningStatus.viewMoving];
+	if (movingController && movingController.isPanEnabled == NO)
+		return;
+	
 	_panningStatus.location = [iRecognizer locationInView:self.view];
 	
 	// -----------------------------
@@ -366,14 +371,14 @@
 			// view moved is outer : remove it
 			if (_panningStatus.viewMoving == _outerView)
 			{
-				UIViewController* aCenterController = [self controllerFromView:_centerView];
+				SnSStackSubViewController* controller = [self controllerFromView:_centerView];
 				
 				// do not automatically shift back center view if menu cover is activated
 				if (!canCoverMenu_)
 					[self shiftView:_centerView offset:_offsetShift animated:YES];
 				
 				// remove the current outer controller
-				[self removeControllersFromController:aCenterController animated:YES];
+				[self removeControllersFromController:controller animated:YES];
 			}
 			else
             {
@@ -527,19 +532,19 @@
 	}
 }
 
-- (UIViewController*)controllerFromView:(UIView*)iView
+- (SnSStackSubViewController*)controllerFromView:(UIView*)iView
 {
-	UIViewController* aFoundController = nil;
-	for (UIViewController* aController in _stackControllers)
+	SnSStackSubViewController* foundController = nil;
+	for (SnSStackSubViewController* controller in _stackControllers)
 	{
-		if (aController.view == iView)
+		if (controller.view == iView)
 		{
-			aFoundController = aController;
+			foundController = controller;
 			break;
 		}
 	}
 	
-	return aFoundController;
+	return foundController;
 }
 
 

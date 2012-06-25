@@ -106,7 +106,7 @@ typedef struct SnSStackPanningStatus
  * @param	iView	The view to test
  * @return	The controller having iView as it's view content or nil if not found
  */
-- (UIViewController*)controllerFromView:(UIView*)iView;
+- (SnSStackSubViewController*)controllerFromView:(UIView*)iView;
 
 /*! 
  * If a user selects pushes a new controller from an existing controller (not the last one)

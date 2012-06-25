@@ -19,6 +19,7 @@
 @synthesize framePortrait = _framePortrait;
 @synthesize frameLandscape = _frameLandscape;
 @synthesize stackController = _stackController;
+@synthesize enablePan = _enablePan;
 
 #pragma mark -
 #pragma mark SnSStackSubViewController
@@ -39,6 +40,9 @@
 - (void) onRetrieveDisplayObjects:(UIView *)view
 {
 	[super onRetrieveDisplayObjects:view];
+	
+	// Default to YES
+	self.enablePan = YES;
 }
 
 /**
