@@ -38,6 +38,11 @@
 
 - (id)initWithDictionary:(NSDictionary *)iDic key:(NSString *)iKey;
 
+#pragma mark - Hashing
+
+- (NSString*)md5;
+- (NSString*)sha1;
+
 #pragma mark - Stripping / Joining
 
 - (NSString*)stringByStrippingHTML;
