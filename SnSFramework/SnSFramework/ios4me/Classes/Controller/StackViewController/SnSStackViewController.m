@@ -459,6 +459,15 @@
 	// Next move the controller to its origin position
 	[self shiftViewToOrigin:iController.stackview animated:iAnimated];
 	
+	// On iOS 4 and below the viewDidAppear was not triggered in non UIKit Controllers
+	if ([[[UIDevice currentDevice] systemVersion] characterAtIndex:0] < '5')
+	{
+		[iController viewWillAppear:iAnimated];
+		[iController viewDidAppear:iAnimated];
+	}
+	
+	
+	
 	
 }
 

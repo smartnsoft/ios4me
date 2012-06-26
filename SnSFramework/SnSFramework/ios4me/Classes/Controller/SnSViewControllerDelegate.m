@@ -303,7 +303,7 @@
 	id<SnSViewControllerLifeCycle> aggregate = aggregator;
 	//for (id<SnSViewControllerLifeCycle> aggregate in aggregates)
 	//{
-		if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO && isFirstCycle == YES)
+		if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO/* && isFirstCycle == YES*/)
 			[self onFulfillDisplayObjectsInternal:aggregate atIndex:index];
 		
 		++index;
@@ -319,7 +319,7 @@
 	id<SnSViewControllerLifeCycle> aggregate = aggregator;
 	//for (id<SnSViewControllerLifeCycle> aggregate in aggregates)
 	//{
-		if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO || isFirstCycle == NO)
+		if ([self isBusinessObjectsRetrievalAsynchronous:aggregate] == NO/* || isFirstCycle == NO*/)
 			[self onSynchronizeDisplayObjectsInternal:aggregate atIndex:index];
 		++index;
 	//}
