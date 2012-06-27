@@ -70,6 +70,7 @@
 #import "NSArray+SnSExtension.h"
 #import "UIView+SnSExtension.h"
 #import "UILabel+SnSExtension.h"
+#import "NSData+SnSExtension.h"
 
 // Exceptions
 #import "SnSExceptionHandler.h"

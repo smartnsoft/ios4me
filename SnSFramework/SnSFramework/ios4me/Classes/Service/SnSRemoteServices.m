@@ -147,7 +147,7 @@
 
 	// Create the background queue
 	dispatch_queue_t queue = dispatch_queue_create("Image Retrieval", NULL);
-	
+
 	// Start animating if passed in parameters
 	if ([iLoadingView respondsToSelector:@selector(startAnimating)])
 		[(id)iLoadingView startAnimating];
@@ -163,8 +163,12 @@
 	{
 				
 		CGDataProviderRef imgDataProvider = CGDataProviderCreateWithCFData((CFDataRef) d);
-
-		CGImageRef imgRef = CGImageCreateWithJPEGDataProvider(imgDataProvider, NULL, true, kCGRenderingIntentDefault);
+		CGImageRef imgRef = nil;
+		
+		if ([d isJPG])
+			imgRef = CGImageCreateWithJPEGDataProvider(imgDataProvider, NULL, true, kCGRenderingIntentDefault);
+		else if ([d isPNG])
+			imgRef = CGImageCreateWithPNGDataProvider(imgDataProvider, NULL, true, kCGRenderingIntentDefault);
 
 		UIImage* image = [UIImage imageWithCGImage:imgRef];
 		
@@ -300,10 +304,15 @@
 				
 				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
 				
-				finalization(aImageData);
-				
-				
+				// create queue for processing asynchronously. This is needed because
+				// the ASIHTTPREquest completion is executed on the main thread.
+				dispatch_queue_t processing = dispatch_queue_create("Image Processing", NULL);
+
+				// dispath finalization block on separate thread
+				dispatch_async(processing, ^{ finalization(aImageData); });
 					
+				// won’t actually go away until queue is empty
+				dispatch_release(processing);
 				
 			}];
 			
@@ -319,7 +328,8 @@
 	
 	//won’t actually go away until queue is empty 
 	dispatch_release(queue); 	
-	
+ 	
+
 	
 }
 
