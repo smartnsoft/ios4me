@@ -121,7 +121,7 @@
 
 	}
 	else
-		self = [self initWithString:@"-failed init-"];
+		self = [self initWithString:@""];
 		
 	return self;
 }
