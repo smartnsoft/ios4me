@@ -131,6 +131,10 @@
 		04EB2590157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EB258D157767EA009E43F6 /* UILabel+SnSExtension.h */; };
 		04EB2591157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */; };
 		04EB2592157767EB009E43F6 /* UILabel+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */; };
+		04EC134B15B0792F002AD6A9 /* UIImage+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EC134915B0792F002AD6A9 /* UIImage+SnSExtension.h */; };
+		04EC134C15B0792F002AD6A9 /* UIImage+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EC134915B0792F002AD6A9 /* UIImage+SnSExtension.h */; };
+		04EC134D15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */; };
+		04EC134E15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */; };
 		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
@@ -239,6 +243,8 @@
 		04BA6B3A15347A160084B421 /* SnSScrollFollowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSScrollFollowerView.m; sourceTree = "<group>"; };
 		04EB258D157767EA009E43F6 /* UILabel+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SnSExtension.h"; sourceTree = "<group>"; };
 		04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SnSExtension.m"; sourceTree = "<group>"; };
+		04EC134915B0792F002AD6A9 /* UIImage+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SnSExtension.h"; sourceTree = "<group>"; };
+		04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SnSExtension.m"; sourceTree = "<group>"; };
 		04FB834B14F68150004754E7 /* SnSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSExceptionHandler.h; sourceTree = "<group>"; };
 		04FB834C14F68150004754E7 /* SnSExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSExceptionHandler.m; sourceTree = "<group>"; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -412,6 +418,8 @@
 				04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */,
 				044F1CF0159B0D7200021BE8 /* NSData+SnSExtension.h */,
 				044F1CF1159B0D7200021BE8 /* NSData+SnSExtension.m */,
+				04EC134915B0792F002AD6A9 /* UIImage+SnSExtension.h */,
+				04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -591,6 +599,7 @@
 				04AE69F21587750800FEAEF8 /* SnSDropListView.h in Headers */,
 				040C74761588F30400C7D546 /* SnSDropListViewCell.h in Headers */,
 				044F1CF2159B0D7200021BE8 /* NSData+SnSExtension.h in Headers */,
+				04EC134B15B0792F002AD6A9 /* UIImage+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +621,7 @@
 				04AE69F31587750800FEAEF8 /* SnSDropListView.h in Headers */,
 				040C74771588F30400C7D546 /* SnSDropListViewCell.h in Headers */,
 				044F1CF3159B0D7200021BE8 /* NSData+SnSExtension.h in Headers */,
+				04EC134C15B0792F002AD6A9 /* UIImage+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +761,7 @@
 				04AE69F41587750800FEAEF8 /* SnSDropListView.m in Sources */,
 				040C74781588F30400C7D546 /* SnSDropListViewCell.m in Sources */,
 				044F1CF4159B0D7200021BE8 /* NSData+SnSExtension.m in Sources */,
+				04EC134D15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +815,7 @@
 				04AE69F51587750800FEAEF8 /* SnSDropListView.m in Sources */,
 				040C74791588F30400C7D546 /* SnSDropListViewCell.m in Sources */,
 				044F1CF5159B0D7200021BE8 /* NSData+SnSExtension.m in Sources */,
+				04EC134E15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

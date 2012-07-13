@@ -172,6 +172,11 @@
 
 		UIImage* image = [UIImage imageWithCGImage:imgRef];
 		
+		if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeToBinding))
+			image = [image resizedImageWithContentMode:iBindingView.contentMode
+												bounds:iBindingView.bounds.size
+								  interpolationQuality:kCGInterpolationMedium];
+		
 		CGImageRelease(imgRef);
 		CGDataProviderRelease(imgDataProvider);
 		
@@ -196,7 +201,7 @@
 					[imageView.layer addAnimation:crossFade forKey:@"animateContents"];
 				}		
 				
-				imageView.image = [UIImage imageWithCGImage:imgRef];				
+				imageView.image = image;				
 				
 				
 				if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
