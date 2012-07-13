@@ -116,4 +116,5 @@ typedef struct SnSStackPanningStatus
 - (void)removeControllers:(NSArray*)iController;
 - (void)pushStackController:(SnSStackSubViewController*)iController fromController:(UIViewController*)iController animated:(BOOL)iAnimated;
 
+
 @end

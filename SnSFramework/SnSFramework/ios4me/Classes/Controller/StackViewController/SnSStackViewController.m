@@ -259,7 +259,7 @@
 	// No need to go further if panning is disable
 	if (!self.enableGestures)
 		return;
-	
+    
 	// same thing is panning is disable for the receiver controller
 	SnSStackSubViewController* movingController = [self controllerFromView:_panningStatus.viewMoving];
 	if (movingController && movingController.isPanEnabled == NO)
@@ -279,7 +279,8 @@
 		_panningStatus.viewMoving	= _outerView ? _outerView : _centerView;
 		_panningStatus.initialFrame	= _panningStatus.viewMoving.frame;
 	}
-	
+    
+    [movingController shadowEnabled:YES];
 	
 	// -----------------------------
 	// Determining Panning Direction
@@ -320,7 +321,7 @@
 	if (iRecognizer.state == UIGestureRecognizerStateEnded || iRecognizer.state == UIGestureRecognizerStateCancelled) 
 	{           
         UIView* viewMoving = _panningStatus.viewMoving;
-		
+		        
 		// Panning was left, restore view to original location
         // unless menu cover is allowed
 		if (_panningStatus.direction == kPanningDirectionLeft)
@@ -360,9 +361,7 @@
 					   animated:YES];
 			}
 			
-			
-			
-			
+            [movingController shadowEnabled:NO];
         }
 		
 		// Panning was right, either shift back or remove controller

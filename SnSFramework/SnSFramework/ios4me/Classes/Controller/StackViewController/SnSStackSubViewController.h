@@ -41,6 +41,7 @@
 #pragma mark UIView
 
 - (SnSStackSubView*)stackview;
+- (void)shadowEnabled:(BOOL)enabled;
 
 
 @end
