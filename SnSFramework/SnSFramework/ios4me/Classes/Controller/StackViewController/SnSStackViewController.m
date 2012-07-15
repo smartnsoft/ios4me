@@ -280,8 +280,9 @@
 		_panningStatus.initialFrame	= _panningStatus.viewMoving.frame;
 	}
     
-    [movingController shadowEnabled:YES];
-	
+    if (!movingController.view.layer.shadowColor)
+        [movingController shadowEnabled:YES];
+
 	// -----------------------------
 	// Determining Panning Direction
 	// -----------------------------
@@ -321,7 +322,13 @@
 	if (iRecognizer.state == UIGestureRecognizerStateEnded || iRecognizer.state == UIGestureRecognizerStateCancelled) 
 	{           
         UIView* viewMoving = _panningStatus.viewMoving;
-		        
+        void (^viewShiftEnded)(BOOL) = ^(BOOL ended)
+        {
+            if (ended)
+                [movingController shadowEnabled:NO];
+        };
+        
+        
 		// Panning was left, restore view to original location
         // unless menu cover is allowed
 		if (_panningStatus.direction == kPanningDirectionLeft)
@@ -346,9 +353,9 @@
 //					else
 //						viewToMove = nil;
 					
-					[self shiftView:viewToMove
-						 toPosition:CGPointMake(0, VIEW_Y(viewToMove))
-						   animated:YES];					
+                    [self shiftView:viewToMove
+                         toPosition:CGPointMake(0, VIEW_Y(viewToMove))
+                         completion:viewShiftEnded];
 				}
 			}
 			// menu is not covered so simply move back the moving view
@@ -358,10 +365,8 @@
 				
 				[self shiftView:viewMoving
 					 toPosition:CGPointMake(x, VIEW_Y(_panningStatus.viewMoving))
-					   animated:YES];
+					   completion:viewShiftEnded];
 			}
-			
-            [movingController shadowEnabled:NO];
         }
 		
 		// Panning was right, either shift back or remove controller
@@ -411,7 +416,8 @@
 	
 	// add its view to display
 	[self.view addSubview:iController.view];
-	
+    [iController shadowEnabled:YES];
+    
 	// Set default location if not provided
 	if (CGRectIsEmpty(iController.stackview.framePortrait) || CGRectIsEmpty(iController.stackview.frameLandscape))
 	{
@@ -425,13 +431,12 @@
 		iController.stackview.frame				= aDefaultFrame;
 		iController.stackview.framePortrait		= iController.stackview.frame;
 		iController.stackview.frameLandscape	= iController.stackview.frame;
-		
 	}
 	
 	
 	// Setup is done, retain the controller in the stack
 	[_stackControllers addObject:iController];
-	
+
 	SnSStackSubView* aOldCenterView = _centerView;
 	SnSStackSubView* aOldOuterView = _outerView;
 	
@@ -443,9 +448,7 @@
 		[self shiftView:aOldCenterView offset:-self.offsetShift animated:YES];
 	
 	if (![self isViewShifted:aOldOuterView])
-		[self shiftView:aOldOuterView offset:-self.offsetShift animated:YES];	
-	
-	
+		[self shiftView:aOldOuterView offset:-self.offsetShift animated:YES];
 	
 	// If animation is wanted, start by putting the controller to the extra edge of the master view
 	if (iAnimated)
@@ -454,9 +457,14 @@
 			 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(iController.stackview))
 			   animated:NO];
 	}
-	
+
 	// Next move the controller to its origin position
-	[self shiftViewToOrigin:iController.stackview animated:iAnimated];
+	[self shiftViewToOrigin:iController.stackview animated:iAnimated completion:^(BOOL ended)
+     {
+         if (canCoverMenu_ && VIEW_X(_centerView) < _offsetShift &&
+             iController.stackview != _centerView && ended)
+             [iController shadowEnabled:NO];
+     }];
 	
 	// On iOS 4 and below the viewDidAppear was not triggered in non UIKit Controllers
 	if ([[[UIDevice currentDevice] systemVersion] characterAtIndex:0] < '5')
@@ -464,10 +472,6 @@
 		[iController viewWillAppear:iAnimated];
 		[iController viewDidAppear:iAnimated];
 	}
-	
-	
-	
-	
 }
 
 - (void)removeControllersFromController:(UIViewController *)iController animated:(BOOL)iAnimated
@@ -490,10 +494,14 @@
 			// Inform delegate removal is about to start
 			if ([_delegate respondsToSelector:@selector(willRemoveSnSStackSubController:)])
 				[_delegate willRemoveSnSStackSubController:aController];
-			
-			[self shiftView:aController.view 
-				 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(aController.view)) 
+            
+			[self shiftView:aController.view
+				 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(aController.view))
+                   animated:YES
 				 completion:^(BOOL completed) {
+                     // View hidden, disable shadow
+                     [aController shadowEnabled:NO];
+                     
 					 [aController.view removeFromSuperview];
 					 
 					 // if the last controller is a tableview controller we must delect it's current row
@@ -502,7 +510,6 @@
 					 if ([aLastController isKindOfClass:[SnSStackTableSubViewController class]])
 						 [aLastController.tableView deselectRowAtIndexPath:[aLastController.tableView indexPathForSelectedRow]
 																  animated:YES];
-					 
 				 }];
 		}
 		
@@ -514,8 +521,7 @@
 			// we must update the inner view to refresh the stack controller content
 			[self updateInnerViews];
 		}		
-	}	
-	
+	}
 }
 
 - (void)removeControllers:(NSArray *)iControllers
@@ -584,6 +590,14 @@
 	
 }
 
+- (void)shiftView:(UIView *)iView toPosition:(CGPoint)iPos animated:(BOOL)iAnimated completion:(void(^)(BOOL))iBlock
+{
+	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+	[UIView animateWithDuration:(iAnimated ? SnSStackAnimationDuration : .0f)
+					 animations:^{ [iView setFrame:CGRectMake(iPos.x, iPos.y, VIEW_WIDTH(iView), VIEW_HEIGHT(iView))]; }
+					 completion:iBlock];
+}
+
 - (void)shiftView:(UIView*)iView toPosition:(CGPoint)iPos completion:(void(^)(BOOL))iBlock
 {
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
@@ -594,6 +608,11 @@
 
 - (void)shiftViewToOrigin:(SnSStackSubView *)iView animated:(BOOL)iAnimated
 {
+    [self shiftViewToOrigin:iView animated:iAnimated completion:nil];
+}
+
+- (void)shiftViewToOrigin:(SnSStackSubView *)iView animated:(BOOL)iAnimated completion:(void(^)(BOOL))iBlock
+{
 	CGRect aFrame = iView.frame;
     
     if ([iView isKindOfClass:[SnSStackSubView class]])
@@ -602,20 +621,15 @@
             aFrame = iView.framePortrait;
         else
             aFrame = iView.frameLandscape;
-		
     }
-	
 	
 	// now if we can cover the menu and its already covered shift also from offset
 	if (canCoverMenu_ && VIEW_X(_centerView) < _offsetShift && iView != _centerView)
-		[self shiftView:iView toPosition:CGPointMake(0, VIEW_Y(iView)) animated:iAnimated];
+		[self shiftView:iView toPosition:CGPointMake(0, VIEW_Y(iView)) animated:iAnimated completion:iBlock];
 	
 	// Start by shifting the view to its original position
 	else
-		[self shiftView:iView toPosition:aFrame.origin  animated:iAnimated];
-
-	
-	
+		[self shiftView:iView toPosition:aFrame.origin  animated:iAnimated completion:iBlock];
 }
 
 - (void)shiftView:(UIView *)iView offset:(NSInteger)iOffset animated:(BOOL)iAnimated

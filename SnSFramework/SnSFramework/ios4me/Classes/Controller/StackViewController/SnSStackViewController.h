@@ -87,9 +87,11 @@ typedef struct SnSStackPanningStatus
 
 #pragma mark Shifting Controllers
 
+- (void)shiftViewToOrigin:(SnSStackSubView*)iView animated:(BOOL)iAnimated completion:(void(^)(BOOL))iBlock;
 - (void)shiftViewToOrigin:(SnSStackSubView*)iView animated:(BOOL)iAnimated;
-- (void)shiftView:(UIView*)iView toPosition:(CGPoint)iPos completion:(void(^)(BOOL))iBlock;
 - (void)shiftView:(UIView*)iView toPosition:(CGPoint)iPos animated:(BOOL)iAnimated;
+- (void)shiftView:(UIView*)iView toPosition:(CGPoint)iPos animated:(BOOL)iAnimated completion:(void(^)(BOOL))iBlock;
+- (void)shiftView:(UIView*)iView toPosition:(CGPoint)iPos completion:(void(^)(BOOL))iBlock;
 - (void)shiftView:(UIView*)iView offset:(NSInteger)iOffset animated:(BOOL)iAnimated;
 - (BOOL)isViewShifted:(SnSStackSubView*)iView;
 

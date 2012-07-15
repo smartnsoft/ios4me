@@ -43,6 +43,7 @@
 	
 	// Default to YES
 	self.enablePan = YES;
+    [self shadowEnabled:NO];
 }
 
 /**
@@ -166,6 +167,7 @@
 
 - (void)shadowEnabled:(BOOL)enabled
 {
+    SnSLogD(@"Shadow %@ on %@.", (enabled ? @"enabled" : @"disabled"), self);
     self.view.layer.shadowColor = (enabled ? [UIColor blackColor].CGColor : nil);
     self.view.layer.shadowOpacity = (enabled ? 50.f : 0.f);
     self.view.layer.shadowRadius = (enabled ? 7.f : 0.f);
