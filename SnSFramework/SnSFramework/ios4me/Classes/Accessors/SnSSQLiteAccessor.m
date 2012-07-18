@@ -404,7 +404,7 @@
 
 #pragma mark - Execution
 
-- (NSInteger) lastInsertRowID:(sqlite3*)pDatabase
+- (NSInteger)lastInsertRowID:(sqlite3*)pDatabase
 {
     NSInteger aRet = 0;
     sqlite3_stmt *statement;
