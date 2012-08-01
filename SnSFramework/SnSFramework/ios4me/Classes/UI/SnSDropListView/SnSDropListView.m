@@ -24,6 +24,8 @@
 @synthesize scrollView = scrollview_;
 @synthesize backgroundView = backgroundView_;
 @synthesize enabled = enabled_;
+@synthesize arrowImage = imgArrow_;
+@synthesize backgroundImage = imgBackground_;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -69,10 +71,19 @@
 	scrollview_ = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, 0)];
 	scrollview_.backgroundColor = [UIColor whiteColor];
 	scrollview_.userInteractionEnabled = YES;
-
+	
+	imgBackground_ = [[[UIImageView alloc] initWithFrame:(CGRect){0, 0, self.frame.size}] autorelease];
+	imgBackground_.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	
+	imgArrow_ = [[[UIImageView alloc] initWithFrame:CGRectZero] autorelease];
+	imgArrow_.frame = CGRectMake(SnSViewW(backgroundView_) - (SnSViewW(imgArrow_) + 8), 10, SnSViewW(imgArrow_), SnSViewH(imgArrow_));
+	
+	[self.backgroundView addSubview:imgBackground_];
+	[self.backgroundView addSubview:imgArrow_];
+    
 	[self addSubview:backgroundView_];
 	[self addSubview:mainLabel_];
-
+	
 	// -----------------------------
 	// Configure Gesture Recognizer
 	// -----------------------------

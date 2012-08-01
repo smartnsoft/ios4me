@@ -43,6 +43,8 @@
 	UILabel* mainLabel_;
 	UIView* backgroundView_;
 	UIScrollView* scrollview_;
+	UIImageView* imgArrow_;
+	UIImageView* imgBackground_;
 	SnSDropListViewCell* selectedCell_;
 
 	id<SnSDropListDelegate> delegate_;
@@ -61,6 +63,8 @@
 @property (nonatomic, readonly) UILabel* mainLabel;
 @property (nonatomic, readonly) UIScrollView* scrollView;
 @property (nonatomic, readonly) UIView* backgroundView;
+@property (nonatomic, readonly) UIImageView* arrowImage;
+@property (nonatomic, readonly) UIImageView* backgroundImage;
 
 #pragma mark Internal Events
 
