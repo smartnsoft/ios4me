@@ -139,6 +139,22 @@
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
 		04FB835014F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
+		9CACA02A15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */; };
+		9CACA02B15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */; };
+		9CACA02C15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02315C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m */; };
+		9CACA02D15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02315C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m */; };
+		9CACA02E15C96DF3001F331B /* SnSSmartPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02415C96DF3001F331B /* SnSSmartPlayerController.h */; };
+		9CACA02F15C96DF3001F331B /* SnSSmartPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02415C96DF3001F331B /* SnSSmartPlayerController.h */; };
+		9CACA03015C96DF3001F331B /* SnSSmartPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02515C96DF3001F331B /* SnSSmartPlayerController.m */; };
+		9CACA03115C96DF3001F331B /* SnSSmartPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02515C96DF3001F331B /* SnSSmartPlayerController.m */; };
+		9CACA03215C96DF3001F331B /* SnSSmartPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02615C96DF3001F331B /* SnSSmartPlayerView.h */; };
+		9CACA03315C96DF3001F331B /* SnSSmartPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02615C96DF3001F331B /* SnSSmartPlayerView.h */; };
+		9CACA03415C96DF3001F331B /* SnSSmartPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02715C96DF3001F331B /* SnSSmartPlayerView.m */; };
+		9CACA03515C96DF3001F331B /* SnSSmartPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02715C96DF3001F331B /* SnSSmartPlayerView.m */; };
+		9CACA03615C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02815C96DF3001F331B /* SnSSmartSubtitleView.h */; };
+		9CACA03715C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02815C96DF3001F331B /* SnSSmartSubtitleView.h */; };
+		9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */; };
+		9CACA03915C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -258,6 +274,14 @@
 		8050503714065564006A9B23 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		8050503814065564006A9B23 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		8050503914065564006A9B23 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+SnSSmartPlayer.h"; sourceTree = "<group>"; };
+		9CACA02315C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayerItem+SnSSmartPlayer.m"; sourceTree = "<group>"; };
+		9CACA02415C96DF3001F331B /* SnSSmartPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSSmartPlayerController.h; sourceTree = "<group>"; };
+		9CACA02515C96DF3001F331B /* SnSSmartPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSmartPlayerController.m; sourceTree = "<group>"; };
+		9CACA02615C96DF3001F331B /* SnSSmartPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSSmartPlayerView.h; sourceTree = "<group>"; };
+		9CACA02715C96DF3001F331B /* SnSSmartPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSmartPlayerView.m; sourceTree = "<group>"; };
+		9CACA02815C96DF3001F331B /* SnSSmartSubtitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSSmartSubtitleView.h; sourceTree = "<group>"; };
+		9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSmartSubtitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +386,7 @@
 		04ADDB0E14ED470200C2087E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9CACA02115C96DF3001F331B /* SnSSmartPlayer */,
 				04ADDB1B14ED470200C2087E /* StackViewController */,
 				04BA6B31153467D20084B421 /* ScollFollower */,
 				04ADDB0F14ED470200C2087E /* SnSFormViewController.h */,
@@ -578,6 +603,21 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		9CACA02115C96DF3001F331B /* SnSSmartPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */,
+				9CACA02315C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m */,
+				9CACA02415C96DF3001F331B /* SnSSmartPlayerController.h */,
+				9CACA02515C96DF3001F331B /* SnSSmartPlayerController.m */,
+				9CACA02615C96DF3001F331B /* SnSSmartPlayerView.h */,
+				9CACA02715C96DF3001F331B /* SnSSmartPlayerView.m */,
+				9CACA02815C96DF3001F331B /* SnSSmartSubtitleView.h */,
+				9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */,
+			);
+			path = SnSSmartPlayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -600,6 +640,10 @@
 				040C74761588F30400C7D546 /* SnSDropListViewCell.h in Headers */,
 				044F1CF2159B0D7200021BE8 /* NSData+SnSExtension.h in Headers */,
 				04EC134B15B0792F002AD6A9 /* UIImage+SnSExtension.h in Headers */,
+				9CACA02A15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */,
+				9CACA02E15C96DF3001F331B /* SnSSmartPlayerController.h in Headers */,
+				9CACA03215C96DF3001F331B /* SnSSmartPlayerView.h in Headers */,
+				9CACA03615C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +666,10 @@
 				040C74771588F30400C7D546 /* SnSDropListViewCell.h in Headers */,
 				044F1CF3159B0D7200021BE8 /* NSData+SnSExtension.h in Headers */,
 				04EC134C15B0792F002AD6A9 /* UIImage+SnSExtension.h in Headers */,
+				9CACA02B15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */,
+				9CACA02F15C96DF3001F331B /* SnSSmartPlayerController.h in Headers */,
+				9CACA03315C96DF3001F331B /* SnSSmartPlayerView.h in Headers */,
+				9CACA03715C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +810,10 @@
 				040C74781588F30400C7D546 /* SnSDropListViewCell.m in Sources */,
 				044F1CF4159B0D7200021BE8 /* NSData+SnSExtension.m in Sources */,
 				04EC134D15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */,
+				9CACA02C15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m in Sources */,
+				9CACA03015C96DF3001F331B /* SnSSmartPlayerController.m in Sources */,
+				9CACA03415C96DF3001F331B /* SnSSmartPlayerView.m in Sources */,
+				9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +868,10 @@
 				040C74791588F30400C7D546 /* SnSDropListViewCell.m in Sources */,
 				044F1CF5159B0D7200021BE8 /* NSData+SnSExtension.m in Sources */,
 				04EC134E15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */,
+				9CACA02D15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m in Sources */,
+				9CACA03115C96DF3001F331B /* SnSSmartPlayerController.m in Sources */,
+				9CACA03515C96DF3001F331B /* SnSSmartPlayerView.m in Sources */,
+				9CACA03915C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

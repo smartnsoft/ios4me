@@ -54,6 +54,11 @@
 #import "SnSFormViewController.h"
 #import "SnSScrollFollower.h"
 
+// SnSSmartPlayer
+#import "SnSSmartPlayerController.h"
+#import "SnSSmartPlayerView.h"
+#import "SnSSmartSubtitleView.h"
+
 // StackView Controllers
 #import "SnSStackView.h"
 #import "SnSStackViewController.h"
