@@ -166,6 +166,7 @@
 	if (!enabled_)
 		return;
 	
+	
 	// warn delegate scroll view is about to open
 	if ([delegate_ respondsToSelector:@selector(dropList:willOpenScrollView:)])
 		[delegate_ dropList:self willOpenScrollView:scrollview_];
@@ -176,15 +177,18 @@
 	scrollview_.layer.shadowColor = [UIColor blackColor].CGColor;
 	scrollview_.layer.shadowPath = [UIBezierPath bezierPathWithRect:scrollview_.bounds].CGPath;
 	
-	// update frame
-	scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), 0);
+//	// update frame
+//	scrollview_.frame = CGRectMake(SnSViewX(scrollview_), 
+//								   SnSViewY(scrollview_)+SnSViewH(scrollview_), 
+//								   SnSViewW(scrollview_), 
+//								   0);
 
 	// animate
 	[UIView animateWithDuration:0.3f
 					 animations:^{
-						 scrollview_.frame = CGRectMake(SnSViewX(self)-0,
-														SnSViewY(self)+SnSViewH(self)-1, 
-														SnSViewW(self),
+						 scrollview_.frame = CGRectMake(SnSViewX(scrollview_),
+														SnSViewY(scrollview_), 
+														SnSViewW(scrollview_),
 														expectedHeight_);
 					 }
 					 completion:^(BOOL f){
@@ -192,11 +196,9 @@
 							 [delegate_ dropList:self didOpenScrollView:scrollview_];
 					 }];
 		
-	
-	// add to parent subview
-	[[self superview] addSubview:scrollview_];
-	
-	
+//	
+//	// add to parent subview
+//	[[self superview] addSubview:scrollview_];
 
 }
 
@@ -215,7 +217,7 @@
 	// animate move back and when done, remove from super view
 	[UIView animateWithDuration:0.3f
 					 animations:^{
-						 scrollview_.frame = CGRectMake(SnSViewX(self)-0, SnSViewY(self)+SnSViewH(self)-1, SnSViewW(self), 0);
+						 scrollview_.frame = CGRectMake(SnSViewX(scrollview_), SnSViewY(scrollview_), SnSViewW(scrollview_), 0);
 					 }
 					 completion:^(BOOL f){
 						 if (f)
@@ -282,6 +284,9 @@
 	
 	// Update expectedHeight used for future animation
 	expectedHeight_ = SnSViewH(scrollview_);
+	
+	// put scroll view height back to 0
+	scrollview_.frame = CGRectMake(SnSViewX(scrollview_), SnSViewY(scrollview_), SnSViewW(scrollview_), 0);
 	
 	// -----------------------------
 	// Build Scroll View
