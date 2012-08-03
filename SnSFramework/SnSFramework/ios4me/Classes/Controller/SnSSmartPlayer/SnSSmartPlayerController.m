@@ -293,7 +293,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         self.subtitlesAnimation.beginTime = AVCoreAnimationBeginTimeAtZero;
         self.subtitlesAnimation.calculationMode = kCAAnimationDiscrete;
         self.subtitlesAnimation.duration = CMTimeGetSeconds(urlAsset_.duration);
-        self.subtitlesAnimation.keyPath = @"delegate.text";
+        self.subtitlesAnimation.keyPath = @"superlayer.delegate.text";
 
         self.subtitlesAnimation.values = subtitlesTexts_;
         self.subtitlesAnimation.keyTimes = subtitlesTimes_;
@@ -417,12 +417,12 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     subArea.layer.sublayers = nil;
     
     CATextLayer *textLayer = [CATextLayer layer];
-    textLayer.delegate = subArea;
+//    textLayer.delegate = subArea; // Crash on removeFromView
     textLayer.string = nil;
     textLayer.hidden = YES;
     textLayer.frame = (CGRect){0, 0, subArea.frame.size};
 
-    [textLayer addAnimation:[[self.subtitlesAnimation copy] autorelease] forKey:@"delegate.text"];
+    [textLayer addAnimation:[[self.subtitlesAnimation copy] autorelease] forKey:@"superlayer.delegate.text"];
     
     CAKeyframeAnimation *monkeyFix = [[self.subtitlesAnimation copy] autorelease];
     monkeyFix.keyPath = @"string";
@@ -498,7 +498,6 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         NSArray *requestedKeys = [NSArray arrayWithObjects:kSPTracksKey, kSPPlayableKey, nil];
         [urlAsset_ loadValuesAsynchronouslyForKeys:requestedKeys completionHandler:^
          {
-             dispatch_async(dispatch_get_main_queue(), ^{
              for (NSString *key in requestedKeys)
              {
                  NSError *error = nil;
@@ -532,7 +531,6 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                  
 //                 [self syncPlayPauseButtons]; // TODO synButtons on Main Thread
              }
-             });
          }];
         
         [self syncScrubber];
