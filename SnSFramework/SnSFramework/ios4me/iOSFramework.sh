@@ -83,4 +83,4 @@ echo ""
 
 # You can comment the next line it's just a visual confirmation the project was succesfully built
 # and will open the Finder at the build path
-open "$FRAMEWORK_BUILD_PATH"
+# open "$FRAMEWORK_BUILD_PATH"
