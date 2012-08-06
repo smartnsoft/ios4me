@@ -60,9 +60,9 @@
 
 - (void)dealloc
 {	
-	[super dealloc];
-    
     self.player = nil;
+    
+    [super dealloc];
 }
 
 @end

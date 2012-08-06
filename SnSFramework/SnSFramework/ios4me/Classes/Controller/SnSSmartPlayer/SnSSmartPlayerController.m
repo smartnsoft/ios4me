@@ -183,8 +183,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         if (player_)
         {
-            [player_ removeObserver:self forKeyPath:kSPCurrentItemKey];
-            [player_ removeObserver:self forKeyPath:kSPRateKey];
+            [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
+            [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
         }
         
 		[player_ release];
@@ -219,7 +219,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         if (currentItem_)
         {
-            [currentItem_ removeObserver:self forKeyPath:kSPStatusKey];
+            [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
             [[NSNotificationCenter defaultCenter] removeObserver:self
                                                             name:AVPlayerItemDidPlayToEndTimeNotification
                                                           object:currentItem_];
@@ -293,7 +293,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         self.subtitlesAnimation.beginTime = AVCoreAnimationBeginTimeAtZero;
         self.subtitlesAnimation.calculationMode = kCAAnimationDiscrete;
         self.subtitlesAnimation.duration = CMTimeGetSeconds(urlAsset_.duration);
-        self.subtitlesAnimation.keyPath = @"delegate.text";
+        self.subtitlesAnimation.keyPath = @"superlayer.delegate.text";
 
         self.subtitlesAnimation.values = subtitlesTexts_;
         self.subtitlesAnimation.keyTimes = subtitlesTimes_;
@@ -417,12 +417,12 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     subArea.layer.sublayers = nil;
     
     CATextLayer *textLayer = [CATextLayer layer];
-    textLayer.delegate = subArea;
+//    textLayer.delegate = subArea; // Crash on removeFromView
     textLayer.string = nil;
     textLayer.hidden = YES;
     textLayer.frame = (CGRect){0, 0, subArea.frame.size};
 
-    [textLayer addAnimation:[[self.subtitlesAnimation copy] autorelease] forKey:@"delegate.text"];
+    [textLayer addAnimation:[[self.subtitlesAnimation copy] autorelease] forKey:@"superlayer.delegate.text"];
     
     CAKeyframeAnimation *monkeyFix = [[self.subtitlesAnimation copy] autorelease];
     monkeyFix.keyPath = @"string";
@@ -498,7 +498,6 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         NSArray *requestedKeys = [NSArray arrayWithObjects:kSPTracksKey, kSPPlayableKey, nil];
         [urlAsset_ loadValuesAsynchronouslyForKeys:requestedKeys completionHandler:^
          {
-             dispatch_async(dispatch_get_main_queue(), ^{
              for (NSString *key in requestedKeys)
              {
                  NSError *error = nil;
@@ -532,7 +531,6 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                  
 //                 [self syncPlayPauseButtons]; // TODO synButtons on Main Thread
              }
-             });
          }];
         
         [self syncScrubber];
@@ -866,6 +864,21 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 # pragma mark Basics
 # pragma mark -
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
+    [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
+    
+    [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:AVPlayerItemDidPlayToEndTimeNotification
+                                                  object:currentItem_];
+    
+    
+    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
+    ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;   
+}
+
 - (id)retain
 {
     SnSLogD(@"Player retained");
@@ -904,7 +917,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     self.volumeSliders = nil;
     self.scrubberSliders = nil;
     
-    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay"];
+    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
     ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;
     
     self.subAreas = nil;

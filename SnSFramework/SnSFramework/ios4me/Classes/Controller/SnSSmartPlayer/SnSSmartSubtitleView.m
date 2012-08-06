@@ -47,10 +47,10 @@
 # pragma mark -
 
 - (void)dealloc
-{	
-	[super dealloc];
-    
+{
     self.playerItem = nil;
+    
+    [super dealloc];
 }
 
 @end
