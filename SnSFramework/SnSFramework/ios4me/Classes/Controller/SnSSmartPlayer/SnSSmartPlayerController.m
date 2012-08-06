@@ -183,8 +183,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         if (player_)
         {
-            [player_ removeObserver:self forKeyPath:kSPCurrentItemKey];
-            [player_ removeObserver:self forKeyPath:kSPRateKey];
+            [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
+            [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
         }
         
 		[player_ release];
@@ -219,7 +219,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         if (currentItem_)
         {
-            [currentItem_ removeObserver:self forKeyPath:kSPStatusKey];
+            [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
             [[NSNotificationCenter defaultCenter] removeObserver:self
                                                             name:AVPlayerItemDidPlayToEndTimeNotification
                                                           object:currentItem_];
@@ -864,6 +864,21 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 # pragma mark Basics
 # pragma mark -
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
+    [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
+    
+    [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:AVPlayerItemDidPlayToEndTimeNotification
+                                                  object:currentItem_];
+    
+    
+    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
+    ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;   
+}
+
 - (id)retain
 {
     SnSLogD(@"Player retained");
@@ -902,7 +917,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     self.volumeSliders = nil;
     self.scrubberSliders = nil;
     
-    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay"];
+    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
     ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;
     
     self.subAreas = nil;
