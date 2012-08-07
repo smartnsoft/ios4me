@@ -231,12 +231,12 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         if (!currentItem_)
             return ;
         
-        // Observe the player item "status" key to determine when it is ready to play.
+//        // Observe the player item "status" key to determine when it is ready to play.
         [currentItem_ addObserver:self
                        forKeyPath:kSPStatusKey
                           options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
                           context:SPStatusObservationContext];
-        
+//        
         // When the player item has played to its end time we'll toggle
         // the movie controller Pause button to be the Play button.
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -605,11 +605,12 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 			double tolerance = 0.5f * duration / width;
             
 			self.scrubbersTimeObserver = [player_ addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(tolerance, NSEC_PER_SEC) 
-                                                                                queue:NULL
-                                                                           usingBlock:^(CMTime time)
-                                           {
-                                               [self syncScrubber];
-                                           }];
+                                                                               queue:nil
+                                                                          usingBlock:^(CMTime time)
+                                          {
+                                              [self syncScrubber];
+//                                              dispatch_async(dispatch_get_main_queue(), ^{ [self syncScrubber]; });
+                                          }];
 		}
 	}
     
@@ -674,7 +675,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                                @"observeRateofObject:change:", [NSValue valueWithPointer:SPRateObservationContext],
                                @"observeLayerReadyForDisplayofObject:change:", [NSValue valueWithPointer:SPLayerReadyForDisplay],
                                nil];
-    
+
+    stringSelector = [reference objectForKey:[NSValue valueWithPointer:context]];
     if ((stringSelector = [reference objectForKey:[NSValue valueWithPointer:context]]) &&
         NSSelectorFromString(stringSelector) && 
         [self respondsToSelector:NSSelectorFromString(stringSelector)])
@@ -768,6 +770,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         object.contentsGravity = kCAGravityResizeAspectFill;
         object.hidden = NO;
         // [self.player play]; // Auto-Play
+        
+        [object removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
     }
 }
 
@@ -794,12 +798,13 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 	}
     
 	// Update the scrubber during normal playback.
-	self.scrubbersTimeObserver = [player_ addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(interval, NSEC_PER_SEC) 
-                                                                        queue:NULL
-                                                                   usingBlock:^(CMTime time) 
-                                   {
-                                       [self syncScrubber];
-                                   }];
+    self.scrubbersTimeObserver = [player_ addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(interval, NSEC_PER_SEC) 
+                                                                       queue:nil
+                                                                  usingBlock:^(CMTime time) 
+                                  {                                    
+                                      [self syncScrubber];
+                                      // dispatch_async(dispatch_get_main_queue(), ^{ [self syncScrubber]; NSLog(@"Hey Testing !"); });
+                                  }];
 }
 
 // Set the scrubber based on the player current time.
@@ -821,7 +826,9 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 		float maxValue = ((UISlider*)[scrubberSliders_ firstObject]).maximumValue;
 		double time = CMTimeGetSeconds(player_.currentTime);
 		
-        ((UISlider*)[scrubberSliders_ firstObject]).value = (maxValue - minValue) * time / duration + minValue;
+        dispatch_async(dispatch_get_main_queue(), ^{ 
+            ((UISlider*)[scrubberSliders_ firstObject]).value = (maxValue - minValue) * time / duration + minValue;
+        });
 	}
 }
 
@@ -866,17 +873,20 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
-    [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
+//    [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
+//    [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
+//    
+//    [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self
+//                                                    name:AVPlayerItemDidPlayToEndTimeNotification
+//                                                  object:currentItem_];
+//    
+//    
+//    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
+//    ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil; 
     
-    [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:AVPlayerItemDidPlayToEndTimeNotification
-                                                  object:currentItem_];
-    
-    
-    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
-    ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;   
+    // MonkeyFix! with AVPlayer timeObservers
+    self.scrubbersTimeObserver = nil;
 }
 
 - (id)retain
@@ -917,7 +927,6 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     self.volumeSliders = nil;
     self.scrubberSliders = nil;
     
-    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
     ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;
     
     self.subAreas = nil;
