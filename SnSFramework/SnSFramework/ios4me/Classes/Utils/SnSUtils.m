@@ -361,7 +361,7 @@ const NSString * DEFAULT_EXTENTION = @".png";
 {
 	if ([UIDevice isIPhoneOS4]) 
 	{
-		SnSLogD(@"iOS Version greater than 4");
+//		SnSLogD(@"iOS Version greater than 4");
 		// iOS works without extention
 		UIImage * result = [UIImage imageNamed:name];
 		// HACK : Only for iPhone application running on iPad
