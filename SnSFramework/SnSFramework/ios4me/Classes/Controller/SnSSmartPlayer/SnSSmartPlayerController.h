@@ -11,6 +11,13 @@
 
 # pragma mark Local Symbol definition
 
+@protocol SnSSmartPlayerDelegate <NSObject>
+@optional
+
+- (void) smartPlayerDidReachEnd;
+
+@end
+
 @interface SnSSmartPlayerController : UIViewController
 {
     // Views Containers
@@ -25,6 +32,8 @@
     IBOutletCollection(id)       NSMutableArray *subAreas_;
     IBOutletCollection(UIView)   NSMutableArray *playerViews_;
 
+    id <SnSSmartPlayerDelegate> delegate_;
+    
     // Utilities
     
     BOOL isPreparedToPlay_;
@@ -65,6 +74,8 @@
 
 @property (nonatomic, retain, readonly) NSArray *subAreas;
 @property (nonatomic, retain, readonly) NSArray *playerViews;
+
+@property (nonatomic, assign) id <SnSSmartPlayerDelegate> delegate;
 
 // Utilities
 

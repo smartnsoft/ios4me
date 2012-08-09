@@ -98,6 +98,8 @@ static void *SPLayerReadyForDisplay = &SPLayerReadyForDisplay;
 @synthesize subAreas = subAreas_;
 @synthesize playerViews = playerViews_;
 
+@synthesize delegate = delegate_;
+
 @synthesize isPreparedToPlay = isPreparedToPlay_;
 
 @synthesize contentURL = contentURL_;
@@ -327,6 +329,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         // player_ = [[AVPlayer alloc] init]; // Done on prepareToPlay when assetReady
         player_ = nil;
         currentItem_ = nil;
+        delegate_ = nil;
         
         self.playButtons = [NSMutableArray array];
         self.pauseButtons = [NSMutableArray array];
@@ -475,6 +478,9 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 		[self.player seekToTime:kCMTimeZero];
 	}
     
+    if ([self.playerViews count])
+        ((UIView*)self.playerViews.lastObject).hidden = NO;
+    
 	[self.player play];
 	
     // [self showStopButton]; // TODO Stop Button
@@ -584,8 +590,13 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         float maxValue = sender.maximumValue;
         float value = sender.value;
         
+        SnSLogD(@"duration value: %f:", duration);
+        SnSLogD(@"Scrubber value: %f", value);
         double time = duration * (value - minValue) / (maxValue - minValue);
+        SnSLogD(@"Scrubber timev: %f", time);
+
         
+        seekToZeroBeforePlay_ = NO;
         [player_ seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
     }
 }
@@ -657,6 +668,12 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 	seekToZeroBeforePlay_ = YES;
     
     // We don't go back here, because the scrubber should not go back.
+
+    if (delegate_ && [delegate_ respondsToSelector:@selector(smartPlayerDidReachEnd)])
+        [delegate_ smartPlayerDidReachEnd];
+    
+    if ([self.playerViews count])
+        ((UIView*)self.playerViews.lastObject).hidden = YES;
 }
 
 # pragma mark -
@@ -711,6 +728,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
             if (![playerView isKindOfClass:[SnSSmartPlayerView class]])
                 continue ;
 
+            playerView.tag = 1;
             [playerView.layer addObserver:self
                                forKeyPath:@"readyForDisplay"
                                   options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
@@ -759,6 +777,10 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 // Observe AVPlayerItem rate = self.currentItem.rate
 - (void)observeRateofObject:(AVPlayerItem*)object change:(NSDictionary*)change
 {
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        if ([self.playerViews count])
+//            ((UIView*)self.playerViews.lastObject).hidden = NO;
+//    });
     // TODO Sync buttons
 }
 
@@ -768,10 +790,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     if ([[change objectForKey:NSKeyValueChangeNewKey] boolValue])
     {
         object.contentsGravity = kCAGravityResizeAspectFill;
-        object.hidden = NO;
+        // object.hidden = NO;
         // [self.player play]; // Auto-Play
-        
-        [object removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
     }
 }
 
@@ -927,10 +947,18 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     self.volumeSliders = nil;
     self.scrubberSliders = nil;
     
+    for (SnSSmartPlayerView* playerView in playerViews_)
+    {
+        if (playerView.tag)
+            [playerView.layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
+    }
+
     ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;
     
     self.subAreas = nil;
     self.playerViews = nil;
+    
+    self.delegate = nil;
     
     self.contentURL = nil;
     
