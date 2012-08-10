@@ -295,7 +295,7 @@ build_framework ()
 	
 	if [ $? -gt 0 ]
 	then
-		build_dir=`grep "setenv BUILD_DIR" ${log_path} | grep -oP "\".+\""`
+		build_dir=`grep "setenv BUILD_DIR" ${log_path} | grep -oE "\".+\""`
 		errors="`grep '' ${log_err}`\n`grep 'error:' ${log_path}`"
 		find "${build_dir}" -exec chown $SUDO_USER {}  \; 2>>${log_err}
 		print_err "Failed to execute: xcodebuild -target 'ios4me (Framework)' -configuration 'Debug' \n${errors}"
@@ -304,8 +304,8 @@ build_framework ()
 	
 	cd ${SCRIPT_PATH}
 	
-	build_dir=`grep "setenv BUILD_DIR" ${log_path} | grep -oP "\".+\""|sed "s/\"//g"`
-	snsframework_path=`grep -i 'The framework was built at' ${log_path}|grep -oP '/.*\.framework'`
+	build_dir=`grep "setenv BUILD_DIR" ${log_path} | grep -oE "\".+\""|sed "s/\"//g"`
+	snsframework_path=`grep -i 'The framework was built at' ${log_path}|grep -oE '/.*\.framework'`
 	
 	if [ "${snsframework_path}" = "" ]
 	then
