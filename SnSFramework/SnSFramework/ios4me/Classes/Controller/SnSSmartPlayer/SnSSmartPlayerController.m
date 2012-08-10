@@ -185,8 +185,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         if (player_)
         {
-            [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
-            [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
+            [player_ removeObserver:self forKeyPath:kSPCurrentItemKey];
+            [player_ removeObserver:self forKeyPath:kSPRateKey];
         }
         
 		[player_ release];
@@ -221,7 +221,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         if (currentItem_)
         {
-            [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
+            [currentItem_ removeObserver:self forKeyPath:kSPStatusKey];
             [[NSNotificationCenter defaultCenter] removeObserver:self
                                                             name:AVPlayerItemDidPlayToEndTimeNotification
                                                           object:currentItem_];
@@ -950,7 +950,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     for (SnSSmartPlayerView* playerView in playerViews_)
     {
         if (playerView.tag)
-            [playerView.layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
+            [playerView.layer removeObserver:self forKeyPath:@"readyForDisplay"];
     }
 
     ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;
