@@ -27,6 +27,7 @@
 
 + (NSInteger)integerFromStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn;
 + (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey;
++ (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey defaultValue:(NSInteger)defaultValue;
 
 #pragma mark -
 #pragma mark Object Methods

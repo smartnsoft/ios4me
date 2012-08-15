@@ -51,6 +51,21 @@
 	
 }
 
++ (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey defaultValue:(NSInteger)defaultValue
+{
+	
+	NSInteger aRes = defaultValue;
+	NSString* aValue = [iDict objectForKey:iKey];
+	
+	if ([aValue isKindOfClass:[NSString class]])
+		aRes  = [[aValue stringByStrippingNonNumbers] integerValue];
+	else if ([aValue isKindOfClass:[NSNumber class]])
+		aRes = [aValue integerValue];
+	
+	return aRes;
+	
+}
+
 #pragma mark -
 #pragma mark Hashing
 #pragma mark -
