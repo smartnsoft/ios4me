@@ -106,7 +106,8 @@
 
 # pragma mark Initializers
 
-- (id)initWithContentURL:(NSURL *)url; // Designated Initializer
+- (id)initWithContentURL:(NSURL *)url nibName:(NSString *)name; // Designated Initializer
+- (id)initWithContentURL:(NSURL *)url;
 
 + (id)resourceNamed:(NSString *)name withExtension:(NSString *)extension;
 

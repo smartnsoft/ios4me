@@ -319,9 +319,16 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     return [smartPlayer autorelease];
 }
 
-- (id)initWithContentURL:(NSURL *)url
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    if ((self = [super init]) && url)
+    if ((self = [super initWithCoder:aDecoder]))
+        ; // Init
+    return self;
+}
+
+- (id)initWithContentURL:(NSURL *)url nibName:(NSString *)name
+{
+    if ((self = [super initWithNibName:name bundle:nil]) && url)
     {
         self.contentURL = url;
         self.urlAsset = [AVURLAsset URLAssetWithURL:contentURL_ options:nil];
@@ -334,16 +341,24 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         self.playButtons = [NSMutableArray array];
         self.pauseButtons = [NSMutableArray array];
         self.stopButtons = [NSMutableArray array];
-
+        
         self.volumeSliders = [NSMutableArray array];
         self.scrubberSliders = [NSMutableArray array];
         
         self.subAreas = [NSMutableArray array];
         self.playerViews = [NSMutableArray array];
-
-//        [self prepareToPlay];
+        
+        //        [self prepareToPlay];
     }
     return self;
+}
+
+
+- (id)initWithContentURL:(NSURL *)url
+{
+    if ((self = [self initWithContentURL:url nibName:nil]) && url)
+        return self;
+    return nil;
 }
 
 # pragma mark -
@@ -736,7 +751,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         
             dispatch_async(dispatch_get_main_queue(), ^{
                 playerView.layer.hidden = YES;
-                [playerView setVideoFillMode:AVLayerVideoGravityResizeAspect];
+                [playerView setVideoFillMode:AVLayerVideoGravityResize];
             });
         }
         // TODO sync
