@@ -605,11 +605,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         float maxValue = sender.maximumValue;
         float value = sender.value;
         
-        SnSLogD(@"duration value: %f:", duration);
-        SnSLogD(@"Scrubber value: %f", value);
         double time = duration * (value - minValue) / (maxValue - minValue);
-        SnSLogD(@"Scrubber timev: %f", time);
-
         
         seekToZeroBeforePlay_ = NO;
         [player_ seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
@@ -836,10 +832,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     self.scrubbersTimeObserver = [player_ addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(interval, NSEC_PER_SEC) 
                                                                        queue:nil
                                                                   usingBlock:^(CMTime time) 
-                                  {                                    
-                                      [self syncScrubber];
-                                      // dispatch_async(dispatch_get_main_queue(), ^{ [self syncScrubber]; NSLog(@"Hey Testing !"); });
-                                  }];
+                                  { [self syncScrubber]; }];
 }
 
 // Set the scrubber based on the player current time.
@@ -924,16 +917,9 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     self.scrubbersTimeObserver = nil;
 }
 
-- (id)retain
-{
-    SnSLogD(@"Player retained");
-    
-    return [super retain];
-}
-
 - (void)dealloc
 {	    
-    SnSLogD(@"GO GO Dealloc dealloc");
+    SnSLogD(@"smartPlayer dealloc called.");
     
     for (UIButton *but in playButtons_)
         [but removeTarget:self action:@selector(play) forControlEvents:UIControlEventTouchUpInside];
