@@ -18,4 +18,10 @@
 		return nil;
 }
 
+- (void)makeObjectsPerformBlock:(void (^)(id))block
+{
+	for (id obj in self)
+		block (obj);
+}
+
 @end

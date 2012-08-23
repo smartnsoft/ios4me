@@ -11,5 +11,6 @@
 @interface NSArray (SnSExtension)
 
 - (id)firstObject;
+- (void)makeObjectsPerformBlock:(void (^)(id))block;
 
 @end
