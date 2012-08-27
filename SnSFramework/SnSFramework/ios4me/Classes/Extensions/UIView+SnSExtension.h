@@ -11,5 +11,5 @@
 @interface UIView (SnSExtension)
 
 - (void)localizeRecursively;
-
+- (NSArray*)subviewsOfClass:(Class)iClass;
 @end

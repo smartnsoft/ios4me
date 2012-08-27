@@ -10,6 +10,13 @@
 
 @implementation UIView (SnSExtension)
 
+/**
+ * @abstract
+ *  Goes through all the subviews and will automitcally call NSLocalizedString with the text set.
+ * @discussion
+ *  This is very useful when using XIB files because you only have to put the keys inside labels/buttons...
+ *  and one call to this selector on the main will localize everything.
+ */
 - (void)localizeRecursively
 {
 	for (UIView* v in [self subviews])
@@ -33,6 +40,27 @@
 		
 		[v localizeRecursively];
 	}
+}
+
+/**
+ * @warning
+ *  This method is recursive and will add all subviews subviews objects the class
+ *  passed in parameter
+ */
+- (NSArray *)subviewsOfClass:(Class)iClass
+{
+    NSMutableArray* array = [NSMutableArray arrayWithCapacity:self.subviews.count];
+    
+    for (UIView* v in self.subviews)
+    {
+        if ([v isKindOfClass:iClass])
+            [array addObject:v];
+        
+        // recursively add objects from subviews of self
+        [array addObjectsFromArray:[v subviewsOfClass:iClass]];
+    }
+    
+    return [NSArray arrayWithArray:array];
 }
 
 @end
