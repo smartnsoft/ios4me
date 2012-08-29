@@ -80,6 +80,8 @@
 		04D7B80E140E7CBC00238E32 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7B80D140E7CBC00238E32 /* TableViewController.m */; };
 		04D7B813140F8F4E00238E32 /* TouchSynthesis.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7B812140F8F4E00238E32 /* TouchSynthesis.m */; };
 		04E9CD0013F50F7900819F8F /* Test-Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CCFF13F50F7900819F8F /* Test-Connection.m */; };
+		80EEAD8215DE8A2A004887D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EEAD8115DE8A2A004887D8 /* CoreMedia.framework */; };
+		80EEAD8415DE8A3E004887D8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EEAD8315DE8A3E004887D8 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +171,9 @@
 		04D7B811140F8F4E00238E32 /* TouchSynthesis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchSynthesis.h; sourceTree = "<group>"; };
 		04D7B812140F8F4E00238E32 /* TouchSynthesis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchSynthesis.m; sourceTree = "<group>"; };
 		04E9CCFF13F50F7900819F8F /* Test-Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-Connection.m"; sourceTree = "<group>"; };
+		80EEAD7F15DE8A10004887D8 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		80EEAD8115DE8A2A004887D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		80EEAD8315DE8A3E004887D8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80EEAD8415DE8A3E004887D8 /* AVFoundation.framework in Frameworks */,
+				80EEAD8215DE8A2A004887D8 /* CoreMedia.framework in Frameworks */,
 				049A00C51507B3DE00DD76D2 /* ios4me.framework in Frameworks */,
 				049AFFEB1507694000DD76D2 /* UIKit.framework in Frameworks */,
 				049AFFEC1507694000DD76D2 /* Foundation.framework in Frameworks */,
@@ -187,13 +194,6 @@
 				049AFFF21507694000DD76D2 /* MobileCoreServices.framework in Frameworks */,
 				049AFFF31507694000DD76D2 /* StoreKit.framework in Frameworks */,
 				049AFFF41507694000DD76D2 /* ASIHTTPFramework.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		049AFFE61507694000DD76D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +372,9 @@
 		04CB247313DF01BF00A5B069 = {
 			isa = PBXGroup;
 			children = (
+				80EEAD8315DE8A3E004887D8 /* AVFoundation.framework */,
+				80EEAD8115DE8A2A004887D8 /* CoreMedia.framework */,
+				80EEAD7F15DE8A10004887D8 /* CoreAudio.framework */,
 				04CB249313DF01BF00A5B069 /* Test-SnSFramework */,
 				049AFFF71507694000DD76D2 /* Automation */,
 				04CB248213DF01BF00A5B069 /* Frameworks */,
@@ -481,9 +484,6 @@
 				049AFFE21507694000DD76D2 /* Sources */,
 				049AFFE31507694000DD76D2 /* Frameworks */,
 				049AFFE41507694000DD76D2 /* Resources */,
-				049AFFE51507694000DD76D2 /* Sources */,
-				049AFFE61507694000DD76D2 /* Frameworks */,
-				049AFFE71507694000DD76D2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -557,13 +557,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		049AFFE71507694000DD76D2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04CB247C13DF01BF00A5B069 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -619,13 +612,6 @@
 				04BA6B56153577960084B421 /* ScrollFollowerViewCell.m in Sources */,
 				04BA6B5B153579F50084B421 /* ScrollFollowerRemoteServices.m in Sources */,
 				04BA6B92153728240084B421 /* ClockView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		049AFFE51507694000DD76D2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
