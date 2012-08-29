@@ -38,17 +38,7 @@
 
 + (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey
 {
-	
-	NSInteger aRes = NSIntegerMin;
-	NSString* aValue = [iDict objectForKey:iKey];
-	
-	if ([aValue isKindOfClass:[NSString class]])
-		aRes  = [[aValue stringByStrippingNonNumbers] integerValue];
-	else if ([aValue isKindOfClass:[NSNumber class]])
-		aRes = [aValue integerValue];
-	
-	return aRes;
-	
+	return [self integerFromDictionary:iDict key:iKey defaultValue:NSIntegerMin];
 }
 
 + (NSInteger)integerFromDictionary:(NSDictionary*)iDict key:(NSString*)iKey defaultValue:(NSInteger)defaultValue
