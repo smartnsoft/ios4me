@@ -12,4 +12,6 @@
 
 - (void)localizeRecursively;
 - (NSArray*)subviewsOfClass:(Class)iClass;
+- (NSArray*)subviewsDesired;
+
 @end

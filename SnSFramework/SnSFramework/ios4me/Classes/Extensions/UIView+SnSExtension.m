@@ -63,4 +63,36 @@
     return [NSArray arrayWithArray:array];
 }
 
+/**
+ * @abstract
+ *  This fixes issues with the subviews method on iOS 4.x where some UIViews (suchs as UIScrollViews)
+ *  would have by default prebuilt subviews by default
+ * @return 
+ *  An array of subviews by getting rid of the prebuilt ones
+ */
+- (NSArray*)subviewsDesired
+{
+    NSArray* subviews = [self subviews];
+    
+    // add all other UIViews subclass that have this problem
+    // currently: only UIScrollView
+    if ([self isKindOfClass:[UIScrollView class]])
+    {
+        if ([[[UIDevice currentDevice] systemVersion] characterAtIndex:0] < '5')
+        {
+            NSMutableArray* purged = [NSMutableArray arrayWithCapacity:[[self subviews] count]];
+            
+            for (UIView* aView in [self subviews])
+            {
+                if (![aView isKindOfClass:[UIImageView class]] || aView.frame.size.width > 7)
+                    [purged addObject:aView];
+            }
+            
+            subviews = [NSArray arrayWithArray:purged];
+        }
+    }
+    
+    return subviews;
+}
+
 @end
