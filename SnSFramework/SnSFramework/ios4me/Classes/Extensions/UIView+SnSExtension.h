@@ -13,5 +13,5 @@
 - (void)localizeRecursively;
 - (NSArray*)subviewsOfClass:(Class)iClass;
 - (NSArray*)subviewsDesired;
-
++ (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay animations:(void (^)(void))animations;
 @end

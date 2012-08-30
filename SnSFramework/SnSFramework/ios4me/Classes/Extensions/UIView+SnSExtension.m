@@ -95,4 +95,18 @@
     return subviews;
 }
 
+/**
+ * @abstract
+ *  This signature is missing from UIKit, if you want delay you must have the full thing.
+ *  This methods creates a default behaviour for options and set the completion to nil
+ */
++ (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay animations:(void (^)(void))animations
+{
+    [UIView animateWithDuration:duration
+                          delay:delay
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:animations
+                     completion:nil];
+}
+
 @end
