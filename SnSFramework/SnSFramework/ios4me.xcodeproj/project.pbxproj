@@ -135,6 +135,10 @@
 		04EC134C15B0792F002AD6A9 /* UIImage+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EC134915B0792F002AD6A9 /* UIImage+SnSExtension.h */; };
 		04EC134D15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */; };
 		04EC134E15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */; };
+		04F4BDA815F103E3004D5180 /* NSDictionary+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F4BDA615F103E3004D5180 /* NSDictionary+SnSExtension.h */; };
+		04F4BDA915F103E3004D5180 /* NSDictionary+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F4BDA615F103E3004D5180 /* NSDictionary+SnSExtension.h */; };
+		04F4BDAA15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4BDA715F103E3004D5180 /* NSDictionary+SnSExtension.m */; };
+		04F4BDAB15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4BDA715F103E3004D5180 /* NSDictionary+SnSExtension.m */; };
 		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
@@ -261,6 +265,8 @@
 		04EB258E157767EA009E43F6 /* UILabel+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SnSExtension.m"; sourceTree = "<group>"; };
 		04EC134915B0792F002AD6A9 /* UIImage+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SnSExtension.h"; sourceTree = "<group>"; };
 		04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SnSExtension.m"; sourceTree = "<group>"; };
+		04F4BDA615F103E3004D5180 /* NSDictionary+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SnSExtension.h"; sourceTree = "<group>"; };
+		04F4BDA715F103E3004D5180 /* NSDictionary+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SnSExtension.m"; sourceTree = "<group>"; };
 		04FB834B14F68150004754E7 /* SnSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSExceptionHandler.h; sourceTree = "<group>"; };
 		04FB834C14F68150004754E7 /* SnSExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSExceptionHandler.m; sourceTree = "<group>"; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -445,6 +451,8 @@
 				044F1CF1159B0D7200021BE8 /* NSData+SnSExtension.m */,
 				04EC134915B0792F002AD6A9 /* UIImage+SnSExtension.h */,
 				04EC134A15B0792F002AD6A9 /* UIImage+SnSExtension.m */,
+				04F4BDA615F103E3004D5180 /* NSDictionary+SnSExtension.h */,
+				04F4BDA715F103E3004D5180 /* NSDictionary+SnSExtension.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -644,6 +652,7 @@
 				9CACA02E15C96DF3001F331B /* SnSSmartPlayerController.h in Headers */,
 				9CACA03215C96DF3001F331B /* SnSSmartPlayerView.h in Headers */,
 				9CACA03615C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */,
+				04F4BDA815F103E3004D5180 /* NSDictionary+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +679,7 @@
 				9CACA02F15C96DF3001F331B /* SnSSmartPlayerController.h in Headers */,
 				9CACA03315C96DF3001F331B /* SnSSmartPlayerView.h in Headers */,
 				9CACA03715C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */,
+				04F4BDA915F103E3004D5180 /* NSDictionary+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +824,7 @@
 				9CACA03015C96DF3001F331B /* SnSSmartPlayerController.m in Sources */,
 				9CACA03415C96DF3001F331B /* SnSSmartPlayerView.m in Sources */,
 				9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
+				04F4BDAA15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +883,7 @@
 				9CACA03115C96DF3001F331B /* SnSSmartPlayerController.m in Sources */,
 				9CACA03515C96DF3001F331B /* SnSSmartPlayerView.m in Sources */,
 				9CACA03915C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
+				04F4BDAB15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
