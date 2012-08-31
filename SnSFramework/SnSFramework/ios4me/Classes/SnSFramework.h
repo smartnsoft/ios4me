@@ -77,6 +77,7 @@
 #import "UILabel+SnSExtension.h"
 #import "NSData+SnSExtension.h"
 #import "UIImage+SnSExtension.h"
+#import "NSDictionary+SnSExtension.h"
 
 // Exceptions
 #import "SnSExceptionHandler.h"
