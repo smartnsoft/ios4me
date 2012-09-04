@@ -65,6 +65,22 @@
 
 /**
  * @abstract
+ *  Apply a given block recursively to all subviews
+ */
+- (void)applyBlockRecursively:(void (^)(id))block stop:(BOOL *)stop
+{
+    if (stop != NULL && *stop == YES)
+        return;
+    
+    block(self);
+    
+    for (UIView* view in self.subviews)
+        [view applyBlockRecursively:block stop:stop];
+}
+
+
+/**
+ * @abstract
  *  This fixes issues with the subviews method on iOS 4.x where some UIViews (suchs as UIScrollViews)
  *  would have by default prebuilt subviews by default
  * @return 
