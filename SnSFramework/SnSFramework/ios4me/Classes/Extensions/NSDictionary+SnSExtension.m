@@ -34,4 +34,11 @@
 	return [NSString stringWithFormat:@"%@%@%@", baseUrl, queryPrefix, query];
 }
 
+
+- (void)makeObjectsPerformBlock:(void (^)(id,id))block
+{
+    for (id key in [self allKeys])
+        block(key, [self objectForKey:key]);
+}
+
 @end

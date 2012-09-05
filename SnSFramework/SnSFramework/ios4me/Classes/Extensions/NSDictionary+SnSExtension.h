@@ -11,5 +11,6 @@
 @interface NSDictionary (SnSExtension)
 
 - (NSString*)serializeForURL:(NSString *)baseUrl;
+- (void)makeObjectsPerformBlock:(void (^)(id,id))block;
 
 @end
