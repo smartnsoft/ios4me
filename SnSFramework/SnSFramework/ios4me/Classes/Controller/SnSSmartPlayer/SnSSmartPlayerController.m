@@ -101,6 +101,7 @@ static void *SPLayerReadyForDisplay = &SPLayerReadyForDisplay;
 @synthesize delegate = delegate_;
 
 @synthesize isPreparedToPlay = isPreparedToPlay_;
+@synthesize enabled = enabled_;
 
 @synthesize contentURL = contentURL_;
 
@@ -349,6 +350,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         self.playerViews = [NSMutableArray array];
         
         //        [self prepareToPlay];
+        self.enabled = NO;
     }
     return self;
 }
@@ -514,6 +516,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)prepareToPlay
 {
+    self.enabled = YES;
     if (urlAsset_)
     {
         NSArray *requestedKeys = [NSArray arrayWithObjects:kSPTracksKey, kSPPlayableKey, nil];
@@ -526,21 +529,22 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                  if (keyStatus == AVKeyValueStatusFailed)
                      return ;    // TODO Handle error
              }
-    
+             
              // The asset is playable ?
 //             if (!urlAsset_.playable)
 //                 return; // TODO Handle Error
          
              // We are ready to setup/handle the playback
-             
              // Create a AVPlayerItem, observing some value done in property setter
              self.currentItem = [AVPlayerItem playerItemWithAsset:urlAsset_];
-             
+
              seekToZeroBeforePlay_ = NO;
              
              if (!player_)
                  self.player = [AVPlayer playerWithPlayerItem:currentItem_];
                  // Set player - observing some value done in property setter
+             
+//             SnSLogD(@"Is Player OK ?: %@ - Error: %@ && Status: %@", self.player, self.player.error, self.player.status);
              
              // Make our new AVPlayerItem the AVPlayer's current item.
              if (player_.currentItem != currentItem_)
@@ -549,7 +553,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                  // asynchronously; observe the currentItem property to find out when the 
                  // replacement will/did occur*/
                  [player_ replaceCurrentItemWithPlayerItem:currentItem_];
-                 
+
 //                 [self syncPlayPauseButtons]; // TODO synButtons on Main Thread
              }
          }];
@@ -766,8 +770,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         self.scrubbersTimeObserver = nil;
     else if (status == AVPlayerStatusReadyToPlay)
         [self initScrubberTimer]; // initScrubberTimer;
-    
-    
+        
     dispatch_async(dispatch_get_main_queue(), ^{
         [self syncScrubber];
       
@@ -782,6 +785,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         [self stopButtonsEnabled:enabled];
     });
     
+    if (status == AVPlayerStatusFailed)
+        self.enabled = NO;
     // TODO Handle ERROR AVPlayerStatusFailed
 }
 
@@ -854,8 +859,9 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 		float maxValue = ((UISlider*)[scrubberSliders_ firstObject]).maximumValue;
 		double time = CMTimeGetSeconds(player_.currentTime);
 		
-        dispatch_async(dispatch_get_main_queue(), ^{ 
-            ((UISlider*)[scrubberSliders_ firstObject]).value = (maxValue - minValue) * time / duration + minValue;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.enabled)
+                ((UISlider*)[scrubberSliders_ firstObject]).value = (maxValue - minValue) * time / duration + minValue;
         });
 	}
 }
@@ -901,20 +907,26 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-//    [player_ removeObserver:self forKeyPath:kSPCurrentItemKey context:SPCurrentItemObservationContext];
-//    [player_ removeObserver:self forKeyPath:kSPRateKey context:SPRateObservationContext];
-//    
-//    [currentItem_ removeObserver:self forKeyPath:kSPStatusKey context:SPStatusObservationContext];
-//    [[NSNotificationCenter defaultCenter] removeObserver:self
-//                                                    name:AVPlayerItemDidPlayToEndTimeNotification
-//                                                  object:currentItem_];
-//    
-//    
-//    [((SnSSmartPlayerView*)self.playerViews.lastObject).layer removeObserver:self forKeyPath:@"readyForDisplay" context:SPLayerReadyForDisplay];
-//    ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil; 
-    
     // MonkeyFix! with AVPlayer timeObservers
     self.scrubbersTimeObserver = nil;
+}
+
+- (void)shutdown
+{
+    [self stop];
+    for (SnSSmartPlayerView* playerView in playerViews_)
+    {
+        if (playerView.tag)
+        {
+            [playerView.layer removeObserver:self forKeyPath:@"readyForDisplay"];
+            playerView.tag = 0;
+        }
+    }
+    
+    ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;
+    self.player = nil;
+    self.scrubbersTimeObserver = nil;
+    self.enabled = NO;
 }
 
 - (void)dealloc
@@ -951,7 +963,10 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     for (SnSSmartPlayerView* playerView in playerViews_)
     {
         if (playerView.tag)
+        {
             [playerView.layer removeObserver:self forKeyPath:@"readyForDisplay"];
+            playerView.tag = 0;
+        }
     }
 
     ((SnSSmartPlayerView*)self.playerViews.lastObject).player = nil;

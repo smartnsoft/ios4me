@@ -37,6 +37,7 @@
     // Utilities
     
     BOOL isPreparedToPlay_;
+    BOOL enabled_;
     
     NSURL *contentURL_;
     
@@ -80,6 +81,7 @@
 // Utilities
 
 @property (nonatomic, assign, readonly) BOOL isPreparedToPlay;
+@property (nonatomic,assign) BOOL enabled;
 
 @property (nonatomic, assign) NSURL *contentURL;
 
@@ -118,6 +120,7 @@
 - (IBAction)pause;
 - (IBAction)stop;
 - (void)prepareToPlay;
+- (void)shutdown;
 
 - (IBAction)beginSeekingBackward;
 - (IBAction)beginSeekingForward;
