@@ -13,5 +13,6 @@
 - (void)localizeRecursively;
 - (NSArray*)subviewsOfClass:(Class)iClass;
 - (NSArray*)subviewsDesired;
+- (void)applyBlockRecursively:(void (^)(id))block stop:(BOOL*)stop;
 + (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay animations:(void (^)(void))animations;
 @end
