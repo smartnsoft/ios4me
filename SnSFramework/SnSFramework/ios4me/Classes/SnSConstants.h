@@ -42,6 +42,9 @@
 #define SnSOrientationDepend(p,l) ( SnSOrientationDependWithOrientation([[UIApplication sharedApplication] statusBarOrientation], (p) , (l) ) )
 #define SnSOrientationDependWithOrientation(o,p,l) ( UIDeviceOrientationIsValidInterfaceOrientation(o) ? (UIDeviceOrientationIsPortrait(o) ? (p) : (l)) : 0 )
 
+#define SnSStrechButton(b,x,y) ([b setBackgroundImage:[[b backgroundImageForState:UIControlStateNormal] stretchableImageWithLeftCapWidth:x topCapHeight:y] \
+                                             forState:UIControlStateNormal])
+
 //////////////////////////////////////////////////////////////////////////////////////
 
 #pragma mark -
