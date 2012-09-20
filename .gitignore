@@ -3,6 +3,13 @@
 *.xcscheme
 *.xcworkspace*
 
+
+# Tarball creation   #
+######################
+extracts/
+build/
+ios4me.framework/
+
 # OS generated files #
 ######################
 .DS_Store*
