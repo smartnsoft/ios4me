@@ -1,0 +1,252 @@
+#!/bin/sh
+
+
+##############################################################################
+##                                                                          ##
+## VARIABLES: List of used variables in caller script                       ##
+##                                                                          ##
+##############################################################################
+
+LOG_LAST_OUTPUT="" #last executed output
+
+##############################################################################
+## DESCRIPTION: Generates the colors variables                              ##
+##                                                                          ##
+## PARAMETERS:                                                              ##
+##                                                                          ##
+## RETURN: 0: success, !=0: failure                                         ##
+##############################################################################
+__setup_colors__()
+{
+  fg_rd='\033[91m'
+  fg_gr='\033[92m'
+  fg_yl='\033[93m'
+  fg_bl='\033[94m'
+  fg_pk='\033[95m'
+  fg_cy='\033[96m'
+  fg_wh='\033[98m'
+
+
+  fg_lrd='\033[31m'
+  fg_lgr='\033[32m'
+  fg_lyl='\033[33m'
+  fg_lbl='\033[34m'
+  fg_lpk='\033[35m'
+  fg_lcy='\033[36m'
+  fg_lwh='\033[38m'
+
+  fg_reset='\033[0m'
+
+  return 0
+}
+
+##############################################################################
+## DESCRIPTION: Log a message to the user                                   ##
+##                                                                          ##
+## PARAMETERS:                                                              ##
+##  > $1  : trace text                                                      ##
+##                                                                          ##
+## RETURN: 0: success, !=0: failure                                         ##
+##############################################################################
+
+Log()
+{
+  echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
+  echo "$*" | tee -a $LOGFILE > /dev/tty
+  echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
+  return 0
+}
+
+##############################################################################
+## DESCRIPTION: Log a command to the user                                   ##
+##                                                                          ##
+## PARAMETERS:                                                              ##
+##  > $1  : trace text                                                      ##
+##                                                                          ##
+## RETURN: 0: success, !=0: failure                                         ##
+##############################################################################
+LogCommand()
+{
+  # echo ${fg_lcy}
+  # echo "---------------------------------------------------------------------------" | tee -a $LOGFILE > /dev/tty
+  # echo "$*" | tee -a $LOGFILE > /dev/tty
+  # echo "---------------------------------------------------------------------------" | tee -a $LOGFILE > /dev/tty
+  # echo "${fg_reset}"
+  
+  echo "${fg_lcy}\c"; Log "[ EXECUTING ] $*" | tee -a $LOGFILE > /dev/tty; echo "${fg_reset}"
+  
+  return 0
+}
+
+LogAndExecuteCommandHidden()
+{
+  LogCommand $*
+  eval $* 1>/dev/null 2>${LOGERR}
+  result=$?
+  if [ $result -gt 0 ];
+  then
+    LogError "Failed to execute: $* [error:$result] \n`cat ${LOGERR}`" $result
+  fi
+  return 0
+}
+
+LogAndExecuteCommandTTY()
+{
+  LogCommand $*
+  eval "$*"
+  result=$?
+
+  if [[ -x ${LOGERR} && -n `cat ${LOGERR}` ]]; then
+    LogWarning `cat ${LOGERR}`
+    echo > $LOGERR
+  fi
+
+  if [ $result -gt 0 ];
+  then
+    LogError "Failed to execute: $* [error:$result]\n`cat ${LOGERR}`"
+  fi
+  return 0
+}
+
+
+##############################################################################
+## DESCRIPTION: Log a message to the LogFile                                ##
+##                                                                          ##
+## PARAMETERS:                                                              ##
+##  > $1  : trace text                                                      ##
+##                                                                          ##
+## RETURN: 0: success, !=0: failure                                         ##
+##############################################################################
+
+LogBanner()
+{
+  Banner=$1
+  echo "${fg_lbl}\c"
+  echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
+  echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
+  echo "$Banner" | tee -a $LOGFILE > /dev/tty
+  echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
+  echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
+  echo "${fg_reset}"
+  return 0
+}
+
+##############################################################################
+## FUNCTION NAME: Procerror                                                 ##
+##                                                                          ##
+## DESCRIPTION: error processing                                            ##
+##                                                                          ##
+## PARAMETERS:                                                              ##
+##  > $1  : error text                                                      ##
+##                                                                          ##
+## RETURN: 0: success, !=0: failure                                         ##
+##############################################################################
+LogError()
+{
+  echo "${fg_rd}"
+  Log "[ ERROR ] $1" | tee -a $LOGFILE > /dev/tty
+  echo "${fg_reset}"
+  exit $2
+  
+  # if [ "${EMAIL}" != "" ]
+  #    then
+  #     EMAIL_BODY="Error During Delivery Process at `date` launch by `whoami` on `hostname` for ${APPLICATION}-${COMPONENT}-${VERSION}. \n Log File is  ${LOGFILE}."
+  #     echo "${EMAIL_BODY}"| mailx -r "DELIVERY" -s  "ERROR Delivery Process ${APPLICATION}-${COMPONENT}-${VERSION}" "${EMAIL}"    
+  #    fi
+  #    exit $2
+}
+
+
+LogOK()
+{
+  echo "${fg_lgr}"; Log "[ OK ] $*" | tee -a $LOGFILE > /dev/tty; echo "${fg_reset}"
+}
+
+LogWarning()
+{
+  
+  echo "${fg_lyl}"; Log "[ WARNING ] $*" | tee -a $LOGFILE > /dev/tty; echo "${fg_reset}"
+
+  return 0
+}
+
+##############################################################################
+## FUNCTION NAME: Echo                                                      ##
+##                                                                          ##
+## DESCRIPTION: Display a string on screen                                  ##
+##                                                                          ##
+## PARAMETERS:                                                              ##
+##  > $1  : text to be displayed                                            ##
+##                                                                          ##
+## RETURN: 0: success, !=0: failure                                         ##
+##############################################################################
+
+Echo()
+{
+  echo "$*" | tee -a $LOGFILE > /dev/tty
+  return 0
+}
+
+
+
+ProcEnd()
+{
+  WARNING_LOG=`more "${LOGFILE}" | grep "\[ WARNING \]"`
+  NBWARNING=`echo "${WARNING_LOG}" | wc -l`
+  WARNING=""
+  if [ "${NBWARNING}" != "0" ]
+    then
+    WARNING="but with ${NBWARNING} Warning(s)"
+  fi
+
+  Log "$fg_lgr\033[1m[ OK ] Delivery Process Finished Sucessfully ${WARNING}" | tee -a $LOGFILE > /dev/tty
+  if [ "${EMAIL}" != "" ]
+    then
+    EMAIL_BODY="Successfull Delivery Process at `date` launch by `whoami` on `hostname` for ${APPLICATION}-${COMPONENT}-${VERSION}. \n Log File is  ${LOGFILE}. \n ${WARNING_LOG}"
+    echo "${EMAIL_BODY}"| mailx -r "DELIVERY" -s  "Success Delivery Process ${APPLICATION}-${COMPONENT}-${VERSION} ${WARNING}" "${EMAIL}"    
+  fi
+  exit 0
+}
+
+##############################################################################
+## FUNCTION NAME: Ask                                                       ##
+##                                                                          ##
+## DESCRIPTION: Ask a question                                              ##
+##                                                                          ##
+## PARAMETERS:                                                              ##
+##  > $1  : question text                                                   ##
+##  > $2  : default answer                                                  ##
+##                                                                          ##
+## RETURN: 0: success, !=0: failure                                         ##
+##############################################################################
+Ask()
+{
+  if [ -z "$2" ]; then
+    Echo "$fg_lpk$1  => ${fg_reset}\c"
+  else
+    Echo "$fg_lpk$1 [$2]  => ${fg_reset}\c"
+  fi
+  read answer < /dev/tty
+  if [ -n "${answer}" ] ; then
+    echo ${answer} | tee -a $LOGFILE
+  else
+    echo "$2" | tee -a $LOGFILE
+  fi
+  unset answer
+}
+
+__test_colors__()
+{
+  LogBanner "testLogBanner"
+  Log "testLog"
+  LogCommand "testLogCommand"
+  LogOK "testLogOk"
+  LogError "testLogError"
+  LogWarning "testLogWarning"
+  isdone=`Ask "Done ? [y/n]" "y"`
+}
+
+__setup_colors__
+
+# Uncomment next line to have a show case of the log command
+#__test_colors__
