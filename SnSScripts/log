@@ -54,7 +54,6 @@ Log()
   echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
   echo "$*" | tee -a $LOGFILE > /dev/tty
   echo "===========================================================================" | tee -a $LOGFILE > /dev/tty
-  return 0
 }
 
 ##############################################################################
@@ -74,8 +73,6 @@ LogCommand()
   # echo "${fg_reset}"
   
   echo "${fg_lcy}\c"; Log "[ EXECUTING ] $*" | tee -a $LOGFILE > /dev/tty; echo "${fg_reset}"
-  
-  return 0
 }
 
 LogAndExecuteCommandHidden()

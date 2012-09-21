@@ -19,12 +19,13 @@ IOS4ME_PROJECT_WORKSPACE="SnSFramework.xcworkspace"
 IOS4ME_PROJECT_SCHEME="ios4me\ \(Framework\)"
 IOS4ME_PROJECT_CONFIGURATION="Release"
 IOS4ME_VERSION="HEAD"
+IOS4ME_COMPUTED_NAME=""
 
 # global options
 GLOBAL_BUILD_VERSION=""
 GLOBAL_BUILD_NAME=""
 
-GLOBAL_WORK_PATH=""
+GLOBAL_WORK_SDKS="/Applications/Xcode*/Contents/Developer/Platforms/**/*.sdk"
 GLOBAL_WORK_DISTPATH=""
 GLOBAL_WORK_FRAMEWORK_PATH=""
 GLOBAL_WORK_FRAMEWORK_NAME="ios4me.framework"
@@ -50,18 +51,6 @@ parse_options()
       esac
       shift
     done
-    
-  ##################################
-  # Computed variables
-  GLOBAL_BUILD_NAME="${GLOBAL_PROJECT_NAME}-${GLOBAL_BUILD_VERSION}"
-  GLOBAL_WORK_PATH="/tmp/${GLOBAL_BUILD_NAME}"  
-  GLOBAL_WORK_FRAMEWORK_PATH="${GLOBAL_WORK_PATH}/build/Framework/${GLOBAL_WORK_FRAMEWORK_NAME}"
-
-  if [[ $GLOBAL_OPTION_VERBOSE != "y" ]]; then
-    GLOBAL_LOG_CMD=LogAndExecuteCommandHidden
-  else
-    GLOBAL_LOG_CMD=LogAndExecuteCommandTTY
-  fi
 }
 
 ask_questions()
@@ -78,8 +67,11 @@ ask_questions()
     IOS4ME_VERSION=`Ask "Which version should I compile ? [dev/master/HEAD/tag# ...] ?" "$IOS4ME_VERSION"`
 
     GLOBAL_OPTION_INSTALL=`Ask "Should I install the framework when done compiling [y/n] ?" "$GLOBAL_OPTION_INSTALL"`
-
   fi
+
+  ##################################
+  # Computed variables
+  IOS4ME_COMPUTED_NAME="ios4me.`echo ${IOS4ME_VERSION}|sed 's/\./-/g'`.framework"
 }
 
 print_usage()
@@ -129,7 +121,7 @@ process_build()
 
   log_cmd xcodebuild -workspace "$IOS4ME_PROJECT_WORKSPACE" -scheme "${IOS4ME_PROJECT_SCHEME}" -configuration "${IOS4ME_PROJECT_CONFIGURATION}"
 
-  log_cmd find . -name ${GLOBAL_WORK_FRAMEWORK_NAME} -exec cp -r {} ${TMP_WORK_PATH} "\;"
+  log_cmd find . -name ${GLOBAL_WORK_FRAMEWORK_NAME} -exec cp -r {} ${TMP_WORK_PATH}/${IOS4ME_COMPUTED_NAME} "\;"
 
   if [[ ${GLOBAL_OPTION_INSTALL} = "y" ]]; then
     copy_framework
@@ -143,7 +135,18 @@ create_folders()
 
 copy_framework()
 {
+  frameworks_dir=""
 
+  #log_cmd "find /Applications/Xcode*.app/ -name '*.sdk' -type d -maxdepth 8 |xargs -I {} echo '{}/System/Library/Frameworks'"
+  #frameworks_dir=`find /Applications/Xcode*.app/ -name "*.sdk" -type d -maxdepth 8 |xargs -I {} echo "{}/System/Library/Frameworks"`
+
+  #for sdk in ${GLOBAL_WORK_SDKS} ; do
+    #frameworks_dir=`echo ${GLOBAL_WORK_SDKS}/System/Library/Frameworks`
+
+    for framework_dir in /Applications/Xcode*/Contents/Developer/Platforms/**/*.sdk/System/Library/Frameworks ; do
+      LogAndExecuteCommandTTY cp -rf ${TMP_WORK_PATH}/${IOS4ME_COMPUTED_NAME} ${framework_dir}
+    done
+  #done
 }
 
 __main__()
