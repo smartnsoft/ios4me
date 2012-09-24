@@ -7,7 +7,8 @@ BASE_TEMPLATE_ROOT_DIR_XCODE4="/Library/Developer/Xcode/Templates"
 BASE_TEMPLATE_USER_DIR_XCODE3="$HOME/Library/Application Support/Developer/Shared/Xcode"
 BASE_TEMPLATE_USER_DIR_XCODE4="$HOME/Library/Developer/Xcode/Templates"
 
-BASE_FRAMEWORK_ROOT_DIR=`find /Developer/Platforms/ /Applications/Xcode*.app/ -name "*.sdk" -type d -maxdepth 8 |xargs -I {} echo "{}/System/Library/Frameworks"`
+BASE_FRAMEWORK_ROOT_DIR=`find /Applications/Xcode*.app/ -name "*.sdk" -type d -maxdepth 8 |xargs -I {} echo "{}/System/Library/Frameworks"`
+BASE_XCODE_USR_DIRECTORY=`find /Applications/Xcode*.app/ -maxdepth 0|xargs -I {} echo {}/Contents/Developer/usr/local/bin`
 BASE_XCODE_VERSION="3 4"
 
 SCRIPT_PATH="$PWD/`dirname $0`"
@@ -15,8 +16,10 @@ PROJECT_NAME="ios4me"
 SMARTNSOFT_VER='SmartnSoftv1.0'
 SMARTNSOFT_FRAMEWORKS_PATH="${SCRIPT_PATH}/Frameworks"
 SMARTNSOFT_EXTRACT_PATH="${SCRIPT_PATH}/Frameworks/extracts"
+SMARTNSOFT_IOS4ME_PATH="${SCRIPT_PATH}/.."
 SMARTNSOFT_TEMPLATE_NAME="${PROJECT_NAME} Application"
-
+SMARTNSOFT_SCRIPTS_PATH="${SCRIPT_PATH}/../SnSScripts"
+SMARTNSOFT_MAGIC_PATH="/path/to/ios4me"
 #BASE_TEMPLATE_DIR="./REP_install_template"
 #BASE_TEMPLATE_USER_DIR="./REP_install_template"
 
@@ -110,6 +113,25 @@ copy_base_files(){
 	echo ...copying SmartnSoft framework dependency files
 #	copy_files external/TouchJSON "$LIBS_DIR"
 
+}
+
+copy_scripts()
+{
+	for path in $BASE_XCODE_USR_DIRECTORY ; do
+
+		echo "Copying scripts to $BASE_XCODE_USR_DIRECTORY"
+
+		mkdir -p $BASE_XCODE_USR_DIRECTORY
+		cp -f ${SMARTNSOFT_SCRIPTS_PATH}/* $BASE_XCODE_USR_DIRECTORY
+
+		files=`find $BASE_XCODE_USR_DIRECTORY -type f -exec grep "$SMARTNSOFT_MAGIC_PATH" -l {} \;`
+
+		for file in $files; do
+			perl -pi -e "s?$SMARTNSOFT_MAGIC_PATH?$SMARTNSOFT_IOS4ME_PATH?g" $file
+		done
+
+		exit 2
+	done
 }
 
 setup_colors()
@@ -338,6 +360,9 @@ __main__ ()
 
 	print_template_banner "${PROJECT_NAME} Project Template Installer"
 	
+	copy_scripts
+	exit
+
 	copy_frameworks
 
 	copy_project_templates
