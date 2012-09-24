@@ -1,7 +1,6 @@
 #!/bin/zsh
 
-#I4M_PATH_GIT="/path/to/ios4me"
-I4M_PATH_GIT="/Volumes/Storage/Projects/ios4me"
+I4M_PATH_GIT="/path/to/ios4me"
 
 if [[ ! -d ${I4M_PATH_GIT}/.git ]]; then
   echo "${I4M_PATH_GIT} doesn't seem to be a valid ios4me repository"
