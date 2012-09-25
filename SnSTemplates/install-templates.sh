@@ -361,7 +361,6 @@ __main__ ()
 	print_template_banner "${PROJECT_NAME} Project Template Installer"
 	
 	copy_scripts
-	exit
 
 	copy_frameworks
 
