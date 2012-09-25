@@ -129,8 +129,6 @@ copy_scripts()
 		for file in $files; do
 			perl -pi -e "s?$SMARTNSOFT_MAGIC_PATH?$SMARTNSOFT_IOS4ME_PATH?g" $file
 		done
-
-		exit 2
 	done
 }
 

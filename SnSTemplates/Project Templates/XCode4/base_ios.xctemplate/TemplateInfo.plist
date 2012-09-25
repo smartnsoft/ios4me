@@ -138,7 +138,9 @@
 			<array>
 				<string>UIKit</string>
 				<string>Foundation</string>
+				<string>AVFoundation</string>
 				<string>CoreGraphics</string>
+				<string>CoreMedia</string>
 				<string>QuartzCore</string>
 				<string>CFNetwork</string>
 				<string>SystemConfiguration</string>

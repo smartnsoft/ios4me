@@ -14,6 +14,19 @@
 	<key>Targets</key>
 	<array>
 		<dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>ShellPath</key>
+					<string>/bin/sh</string>
+					<key>ShellScript</key>
+					<string>#Automatic Tagging of AppStore builds					
+#This is done for tagging the ios4me framework each time a new App Store build is made
+tag-framework.sh</string>
+				</dict>
+			</array>
 			<key>SharedSettings</key>
 			<dict>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
