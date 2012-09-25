@@ -2,6 +2,12 @@
 
 I4M_PATH_GIT="/path/to/ios4me"
 
+# no need to go further is configuration doesn't match AppStore
+if [[ `echo ${CONFIGURATION}|grep -iE "App\s*Store"` == "" ]]; then
+  echo "Skippng Tagging for Configuration [${CONFIGURATION}]"
+  exit 0
+fi
+
 if [[ ! -d ${I4M_PATH_GIT}/.git ]]; then
   echo "${I4M_PATH_GIT} doesn't seem to be a valid ios4me repository"
   exit 1
