@@ -162,23 +162,20 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 	return urlTracker;
 }
 
-- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSViewControllerInterceptorEvent)event
+- (void) onLifeCycleEvent:(UIViewController *)viewController onAggregate:(id<SnSViewControllerLifeCycle>)aggregate withEvent:(SnSInterceptorEvent)event
 {
 	if (aggregate == nil)
 	{
-		if (event == SnSViewControllerInterceptorEventOnRetrieveDisplayObjects)
+		if (event == SnSInterceptorEventOnRetrieveDisplayObjects)
 		{
 			// Add some extra informations
 			SnSLogD(@"Screen '%@' being loaded...", screenName);
-			
-			
-			//[FlurryAPI logEvent:screenName];
 		}
-		else if (event == SnSViewControllerInterceptorEventOnSynchronizeDisplayObjects)
+		else if (event == SnSInterceptorEventOnSynchronizeDisplayObjects)
 			{ SnSLogD(@"Screen '%@' being redisplayed...", screenName); }
-		else if (event == SnSViewControllerInterceptorEventOnFulfillDisplayObjects)
+		else if (event == SnSInterceptorEventOnFulfillDisplayObjects)
 			{ SnSLogD(@"Screen '%@' being displayed...", screenName); }
-		else if (event == SnSViewControllerInterceptorEventOnDiscarded)
+		else if (event == SnSInterceptorEventOnDiscarded)
 			{ SnSLogD(@"Screen '%@' being discarded...", screenName); }
 	}
 }
