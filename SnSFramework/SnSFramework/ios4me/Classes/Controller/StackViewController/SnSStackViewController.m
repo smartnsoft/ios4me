@@ -436,6 +436,9 @@
 	
 	// Setup is done, retain the controller in the stack
 	[_stackControllers addObject:iController];
+    
+    // set stack controller
+    iController.stackController = self;
 
 	SnSStackSubView* aOldCenterView = _centerView;
 	SnSStackSubView* aOldOuterView = _outerView;
