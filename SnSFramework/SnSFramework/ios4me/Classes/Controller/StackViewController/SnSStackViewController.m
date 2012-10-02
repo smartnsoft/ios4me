@@ -309,12 +309,23 @@
 		// only allow x < 0 move if authorized to
 		if (canMoveFreely_ || x >= 0)
 		{
+            // shift moving view
 			[_panningStatus.viewMoving setFrame:CGRectMake(x,
 														   VIEW_Y(_panningStatus.viewMoving),
 														   VIEW_WIDTH(_panningStatus.viewMoving), 
 														   VIEW_HEIGHT(_panningStatus.viewMoving))];
+            
+            // inform delegate view has moved
+            if ([_delegate respondsToSelector:@selector(stackController:didMoveView:controller:direction:)])
+            {
+                [_delegate stackController:self
+                               didMoveView:_panningStatus.viewMoving
+                                controller:[self controllerFromView:_panningStatus.viewMoving]
+                                 direction:_panningStatus.direction];
+            }
 		}
-	}
+        
+    }
 	
 	// -----------------------------
 	// Gesture Ended: Post Mortem
@@ -326,8 +337,7 @@
         {
             if (ended)
                 [movingController shadowEnabled:NO];
-        };
-        
+        };        
         
 		// Panning was left, restore view to original location
         // unless menu cover is allowed
@@ -345,13 +355,6 @@
 					
 					if (viewToMove == _menuView)
 						continue;
-					
-//					if (VIEW_X(viewToMove) <= VIEW_WIDTH(_menuView))
-//						x = 0;				
-//					else if (viewMoving == viewToMove)
-//						x = VIEW_X(viewToMove) -_panningStatus.displacement;
-//					else
-//						viewToMove = nil;
 					
                     [self shiftView:viewToMove
                          toPosition:CGPointMake(0, VIEW_Y(viewToMove))
@@ -392,6 +395,14 @@
                     [self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
             }
 		}
+        
+        // inform delegate panning has ended
+        if ([_delegate respondsToSelector:@selector(stackController:didEndPanningOn:controller:)])
+        {
+            [_delegate stackController:self
+                       didEndPanningOn:viewMoving
+                            controller:[self controllerFromView:viewMoving]];
+        }
 	}
 	
 	
@@ -495,8 +506,8 @@
 		for (SnSStackSubViewController* aController in aArray)
 		{
 			// Inform delegate removal is about to start
-			if ([_delegate respondsToSelector:@selector(willRemoveSnSStackSubController:)])
-				[_delegate willRemoveSnSStackSubController:aController];
+			if ([_delegate respondsToSelector:@selector(stackController:willRemoveController:)])
+				[_delegate stackController:self willRemoveController:aController];
             
 			[self shiftView:aController.view
 				 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(aController.view))
