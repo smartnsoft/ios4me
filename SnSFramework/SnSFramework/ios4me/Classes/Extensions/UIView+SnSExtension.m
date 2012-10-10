@@ -12,6 +12,19 @@
 
 /**
  * @abstract
+ *  Recursively checks all superview of caller view until nil is found.
+ *  The last non nil view is then returned
+ */
+- (UIView*)rootview
+{
+    if (self.superview == nil)
+        return self;
+    
+    return [self.superview rootview];
+}
+
+/**
+ * @abstract
  *  Goes through all the subviews and will automitcally call NSLocalizedString with the text set.
  * @discussion
  *  This is very useful when using XIB files because you only have to put the keys inside labels/buttons...
