@@ -60,10 +60,12 @@ typedef struct SnSStackPanningStatus
  * @param stackController   The master stack controller handling the panning
  * @param view              The view that was being moved
  * @param controller        The controller attached to the view
+ * @param direction         The direction where the view is being moved
  */
 - (void)stackController:(SnSStackViewController*)stackController
-        didEndPanningOn:(UIView*)view
-             controller:(SnSStackSubViewController*)subController;
+        didEndPanOnView:(UIView*)view
+             controller:(SnSStackSubViewController*)subController
+              direction:(SnSStackViewDirection)direction;
 
 
 /**
