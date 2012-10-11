@@ -412,8 +412,8 @@
 
 - (void)dealloc
 {
-	[_container release];
-	
+	SnSReleaseAndNil(_container);
+    
 	[super dealloc];
 }
 
