@@ -23,7 +23,7 @@
 	{
         titleLabel_ = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, frame.size.width-10, frame.size.height)] autorelease];
 		titleLabel_.textColor = [UIColor blackColor];
-		titleLabel_.backgroundColor = kCellTextDefaultColor;
+		titleLabel_.backgroundColor = kCellBackgroundDefaultColor;
 		
 		[self addSubview:titleLabel_];
 		

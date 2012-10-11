@@ -52,13 +52,15 @@
 	
 	CGFloat maxScrollHeight_;
 	CGFloat expectedHeight_;
-	
+	CGFloat padding_;
+    
 	BOOL enabled_;
 }
 
 @property (nonatomic, assign) id<SnSDropListDelegate> delegate;
 @property (nonatomic, assign) id<SnSDropListDataSource> dataSource;
 @property (nonatomic, assign) CGFloat maxScrollHeight;
+@property (nonatomic, assign) CGFloat padding;
 @property (nonatomic, assign) BOOL enabled;
 @property (nonatomic, readonly) UILabel* mainLabel;
 @property (nonatomic, readonly) UIScrollView* scrollView;

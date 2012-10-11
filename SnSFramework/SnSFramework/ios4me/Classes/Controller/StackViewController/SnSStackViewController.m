@@ -309,12 +309,23 @@
 		// only allow x < 0 move if authorized to
 		if (canMoveFreely_ || x >= 0)
 		{
+            // shift moving view
 			[_panningStatus.viewMoving setFrame:CGRectMake(x,
 														   VIEW_Y(_panningStatus.viewMoving),
 														   VIEW_WIDTH(_panningStatus.viewMoving), 
 														   VIEW_HEIGHT(_panningStatus.viewMoving))];
+            
+            // inform delegate view has moved
+            if ([_delegate respondsToSelector:@selector(stackController:didMoveView:controller:direction:)])
+            {
+                [_delegate stackController:self
+                               didMoveView:_panningStatus.viewMoving
+                                controller:[self controllerFromView:_panningStatus.viewMoving]
+                                 direction:_panningStatus.direction];
+            }
 		}
-	}
+        
+    }
 	
 	// -----------------------------
 	// Gesture Ended: Post Mortem
@@ -326,8 +337,7 @@
         {
             if (ended)
                 [movingController shadowEnabled:NO];
-        };
-        
+        };        
         
 		// Panning was left, restore view to original location
         // unless menu cover is allowed
@@ -345,13 +355,6 @@
 					
 					if (viewToMove == _menuView)
 						continue;
-					
-//					if (VIEW_X(viewToMove) <= VIEW_WIDTH(_menuView))
-//						x = 0;				
-//					else if (viewMoving == viewToMove)
-//						x = VIEW_X(viewToMove) -_panningStatus.displacement;
-//					else
-//						viewToMove = nil;
 					
                     [self shiftView:viewToMove
                          toPosition:CGPointMake(0, VIEW_Y(viewToMove))
@@ -392,6 +395,15 @@
                     [self shiftView:_panningStatus.viewMoving offset:-_panningStatus.displacement animated:YES];
             }
 		}
+        
+        // inform delegate panning has ended
+        if ([_delegate respondsToSelector:@selector(stackController:didEndPanOnView:controller:direction:)])
+        {
+            [_delegate stackController:self
+                       didEndPanOnView:viewMoving
+                            controller:[self controllerFromView:viewMoving]
+                             direction:_panningStatus.direction];
+        }
 	}
 	
 	
@@ -495,8 +507,8 @@
 		for (SnSStackSubViewController* aController in aArray)
 		{
 			// Inform delegate removal is about to start
-			if ([_delegate respondsToSelector:@selector(willRemoveSnSStackSubController:)])
-				[_delegate willRemoveSnSStackSubController:aController];
+			if ([_delegate respondsToSelector:@selector(stackController:willRemoveController:)])
+				[_delegate stackController:self willRemoveController:aController];
             
 			[self shiftView:aController.view
 				 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(aController.view))
@@ -578,35 +590,50 @@
 }
 
 - (void)shiftView:(UIView *)iView toPosition:(CGPoint)iPos animated:(BOOL)iAnimated
-{
-	if (iAnimated)
-	{
-		[UIView beginAnimations:nil context:nil];
-		[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
-		[UIView setAnimationDuration:SnSStackAnimationDuration];
-	}
-	
-	[iView setFrame:CGRectMake(iPos.x, iPos.y, VIEW_WIDTH(iView), VIEW_HEIGHT(iView))];
-	
-	if (iAnimated)
-		[UIView commitAnimations];
-	
+{    
+    SnSStackSubViewController* controller = [self controllerFromView:iView];
+    
+    [UIView animateWithDuration:iAnimated ? SnSStackAnimationDuration : 0
+     
+                     animations:^{
+                         if (!controller.view.layer.shadowColor)
+                             [controller shadowEnabled:YES];
+                         
+                         [iView setFrame:CGRectMake(iPos.x, iPos.y, VIEW_WIDTH(iView), VIEW_HEIGHT(iView))];
+                     }
+     
+                     completion:^(BOOL done){
+                        if (done && iPos.x == 0)
+                            [controller shadowEnabled:NO];
+                     }];
 }
 
 - (void)shiftView:(UIView *)iView toPosition:(CGPoint)iPos animated:(BOOL)iAnimated completion:(void(^)(BOOL))iBlock
 {
+    SnSStackSubViewController* controller = [self controllerFromView:iView];
+
 	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
 	[UIView animateWithDuration:(iAnimated ? SnSStackAnimationDuration : .0f)
-					 animations:^{ [iView setFrame:CGRectMake(iPos.x, iPos.y, VIEW_WIDTH(iView), VIEW_HEIGHT(iView))]; }
-					 completion:iBlock];
+     
+					 animations:^{
+                         if (!controller.view.layer.shadowColor)
+                             [controller shadowEnabled:YES];
+
+                         [iView setFrame:CGRectMake(iPos.x, iPos.y, VIEW_WIDTH(iView), VIEW_HEIGHT(iView))];
+                     }
+     
+					 completion:^(BOOL done){
+                         if (done && iPos.x == 0)
+                             [controller shadowEnabled:NO];
+                         
+                         if (iBlock)
+                             iBlock(done);
+                     }];
 }
 
 - (void)shiftView:(UIView*)iView toPosition:(CGPoint)iPos completion:(void(^)(BOOL))iBlock
 {
-	[UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
-	[UIView animateWithDuration:SnSStackAnimationDuration 
-					 animations:^{ [iView setFrame:CGRectMake(iPos.x, iPos.y, VIEW_WIDTH(iView), VIEW_HEIGHT(iView))]; }
-					 completion:iBlock];
+	[self shiftView:iView toPosition:iPos animated:YES completion:iBlock];
 }
 
 - (void)shiftViewToOrigin:(SnSStackSubView *)iView animated:(BOOL)iAnimated

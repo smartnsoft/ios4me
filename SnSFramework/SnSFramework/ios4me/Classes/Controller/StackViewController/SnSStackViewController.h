@@ -19,6 +19,13 @@
 
 @class SnSStackSubViewController;
 @class SnSStackSubView;
+@class SnSStackViewController;
+
+typedef enum SnSStackViewDirection {
+    kPanningDirectionUnkown		= +0,
+    kPanningDirectionLeft		= -1,
+    kPanningDirectionRight		= +1
+}SnSStackViewDirection;
 
 typedef struct SnSStackPanningStatus
 {
@@ -28,12 +35,7 @@ typedef struct SnSStackPanningStatus
 	CGPoint		hitLocation;
 	CGPoint		lastLocation;
 	CGRect		initialFrame;
-	enum 
-	{
-		kPanningDirectionUnkown		= +0,
-		kPanningDirectionLeft		= -1,
-		kPanningDirectionRight		= +1
-	}direction;
+	SnSStackViewDirection direction;
 	
 } SnSStackPanningStatus;
 
@@ -42,10 +44,36 @@ typedef struct SnSStackPanningStatus
 @optional
 
 /**
+ * This is sent when the view is actually being panned.
+ * @param stackController   The master stack controller handling the panning
+ * @param view              The view that was being moved
+ * @param controller        The controller attached to the view
+ * @param direction         The direction where the view is being moved
+ */
+- (void)stackController:(SnSStackViewController*)stackController
+            didMoveView:(UIView*)view
+             controller:(SnSStackSubViewController*)subController
+              direction:(SnSStackViewDirection)direction;
+
+/**
+ * This is sent before when the stack view controller is done with the panning gesture
+ * @param stackController   The master stack controller handling the panning
+ * @param view              The view that was being moved
+ * @param controller        The controller attached to the view
+ * @param direction         The direction where the view is being moved
+ */
+- (void)stackController:(SnSStackViewController*)stackController
+        didEndPanOnView:(UIView*)view
+             controller:(SnSStackSubViewController*)subController
+              direction:(SnSStackViewDirection)direction;
+
+
+/**
  * This is sent before the stack view controller is deleted from the _stackController list
  * @param iController The controller that is beeing removed from the stack controllers
  */
-- (void)willRemoveSnSStackSubController:(SnSStackSubViewController*)iController;
+- (void)stackController:(SnSStackViewController*)stackController
+   willRemoveController:(SnSStackSubViewController*)subController;
 
 @end
 

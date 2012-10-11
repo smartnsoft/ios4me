@@ -26,6 +26,7 @@
 @synthesize enabled = enabled_;
 @synthesize arrowImage = imgArrow_;
 @synthesize backgroundImage = imgBackground_;
+@synthesize padding = padding_;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -76,7 +77,8 @@
 	imgBackground_.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	
 	imgArrow_ = [[[UIImageView alloc] initWithFrame:CGRectZero] autorelease];
-	imgArrow_.frame = CGRectMake(SnSViewW(backgroundView_) - (SnSViewW(imgArrow_) + 8), 10, SnSViewW(imgArrow_), SnSViewH(imgArrow_));
+    imgArrow_.contentMode = UIViewContentModeCenter;
+	imgArrow_.frame = CGRectMake(SnSViewW(self) - 30, 0, 30, SnSViewH(self));
 	
 	[self.backgroundView addSubview:imgBackground_];
 	[self.backgroundView addSubview:imgArrow_];
@@ -152,6 +154,9 @@
 	// call delegate and hit didSelectRow method
 	if ([delegate_ respondsToSelector:@selector(dropList:didSelectRow:)])
 		[delegate_ dropList:self didSelectRow:idx];
+    
+    // automatically close scroll view
+    [self closeScrollView];
 	
 	SnSLogD(@"Tapped %d cell", idx);
 
@@ -165,7 +170,12 @@
 {	
 	if (!enabled_)
 		return;
-	
+    
+    // update scrollview position
+    CGPoint p = [self.superview convertPoint:self.frame.origin toView:self.rootview];
+    scrollview_.frame = (CGRect){CGPointMake(p.x+padding_, p.y+SnSViewH(self)),CGSizeMake(SnSViewW(self)-padding_*2, SnSViewH(self))};
+    
+    [self.rootview addSubview:scrollview_];
 	
 	// warn delegate scroll view is about to open
 	if ([delegate_ respondsToSelector:@selector(dropList:willOpenScrollView:)])
@@ -176,12 +186,6 @@
 	scrollview_.layer.shadowOffset = CGSizeMake(1, 50);
 	scrollview_.layer.shadowColor = [UIColor blackColor].CGColor;
 	scrollview_.layer.shadowPath = [UIBezierPath bezierPathWithRect:scrollview_.bounds].CGPath;
-	
-//	// update frame
-//	scrollview_.frame = CGRectMake(SnSViewX(scrollview_), 
-//								   SnSViewY(scrollview_)+SnSViewH(scrollview_), 
-//								   SnSViewW(scrollview_), 
-//								   0);
 
 	// animate
 	[UIView animateWithDuration:0.3f
@@ -317,9 +321,7 @@
 		[scrollview_ addSubview:cell];
 		
 		// update new position
-		y += height;
-
-		
+		y += height;		
 	}
 	
 	
