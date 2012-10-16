@@ -253,6 +253,7 @@
 	if (!delegate_ || !dataSource_)
 		return;
 	
+    selectedCell_ = nil;
 	
 	// -----------------------------
 	// Measurement
