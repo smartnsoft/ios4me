@@ -15,5 +15,7 @@
 - (NSArray*)subviewsDesired;
 - (void)applyBlockRecursively:(void (^)(id))block stop:(BOOL*)stop;
 + (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay animations:(void (^)(void))animations;
+
 - (UIView*)rootview;
+- (UIView*)superviewOfClass:(Class)iClass;
 @end

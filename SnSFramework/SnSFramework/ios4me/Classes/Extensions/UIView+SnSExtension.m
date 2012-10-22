@@ -25,6 +25,21 @@
 
 /**
  * @abstract
+ *  Recursively checks all superview of caller view until iclass is found.
+ *  If the class is not found, nil is returned instead
+ */
+- (UIView *)superviewOfClass:(Class)iclass
+{
+    if ([self isKindOfClass:iclass])
+        return self;
+    
+    if (self.superview == nil)
+        return nil;
+    
+    return [self.superview superviewOfClass:iclass];
+}
+/**
+ * @abstract
  *  Goes through all the subviews and will automitcally call NSLocalizedString with the text set.
  * @discussion
  *  This is very useful when using XIB files because you only have to put the keys inside labels/buttons...
