@@ -126,6 +126,26 @@
 - (IBAction)beginSeekingForward;
 - (void)endSeeking;
 
+- (void)initScrubberTimer;
+- (void)syncScrubber;
+- (void)playButtonsEnabled:(BOOL)enabled;
+- (void)pauseButtonsEnabled:(BOOL)enabled;
+- (void)stopButtonsEnabled:(BOOL)enabled;
+- (void)volumeSlidersEnabled:(BOOL)enabled;
+- (void)scrubbersSlidersEnabled:(BOOL)enabled;
+- (void)subAreasEnabled:(BOOL)enabled;
+- (void)playerViewsEnabled:(BOOL)enabled;
+
+#pragma mark Notifications
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification;
+
+#pragma mark KVO Observer
+
+- (void)observeStatusofObject:(AVPlayerItem*)object change:(NSDictionary *)change;
+- (void)observeRateofObject:(AVPlayerItem*)object change:(NSDictionary*)change;
+- (void)observeLayerReadyForDisplayofObject:(AVPlayerLayer*)object change:(NSDictionary*)change;
+
 # pragma mark Add Button/Slider/Views
 
 - (void)addPlayButton:(UIButton*)button;
