@@ -78,6 +78,7 @@
 #import "NSData+SnSExtension.h"
 #import "UIImage+SnSExtension.h"
 #import "NSDictionary+SnSExtension.h"
+#import "UIScreen+Resolutions.h"
 
 // Exceptions
 #import "SnSExceptionHandler.h"
