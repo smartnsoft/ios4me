@@ -487,6 +487,9 @@
 		[iController viewWillAppear:iAnimated];
 		[iController viewDidAppear:iAnimated];
 	}
+    
+    // set the new child controller
+    [iFromController addChildViewController:iController];
 }
 
 - (void)removeControllersFromController:(UIViewController *)iController animated:(BOOL)iAnimated
