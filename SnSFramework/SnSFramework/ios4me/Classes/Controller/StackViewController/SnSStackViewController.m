@@ -228,7 +228,14 @@
 	return _stackControllers;
 }
 
+#pragma mark -
+#pragma mark Accessing Controllers
+#pragma mark -
 
+- (SnSStackSubViewController*)rootViewController
+{
+    return [_stackControllers firstObject];
+}
 
 
 #pragma mark -
@@ -424,6 +431,10 @@
 
 - (void)pushStackController:(SnSStackSubViewController*)iController fromController:(UIViewController*)iFromController animated:(BOOL)iAnimated
 {
+    // take first controller if from controller is set to nil
+    if (iFromController == nil)
+        iFromController = [self rootViewController];
+    
 	[self removeControllersFromController:iFromController animated:YES];
 	
 	// add its view to display

@@ -123,6 +123,10 @@ typedef struct SnSStackPanningStatus
 - (void)shiftView:(UIView*)iView offset:(NSInteger)iOffset animated:(BOOL)iAnimated;
 - (BOOL)isViewShifted:(SnSStackSubView*)iView;
 
+#pragma mark Accessing Controllers
+
+- (SnSStackSubViewController*)rootViewController;
+
 #pragma mark Adding/Removing Controllers
 
 /*! 
