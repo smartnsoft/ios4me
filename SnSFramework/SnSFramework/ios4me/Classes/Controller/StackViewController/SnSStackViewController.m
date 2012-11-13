@@ -500,7 +500,7 @@
 	}
     
     // set the new child controller
-    [iFromController addChildViewController:iController];
+    [self addChildViewController:iController];
 }
 
 - (void)removeControllersFromController:(UIViewController *)iController animated:(BOOL)iAnimated
@@ -555,6 +555,8 @@
 
 - (void)removeControllers:(NSArray *)iControllers
 {
+    [iControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
+    
 	[_stackControllers removeObjectsInArray:iControllers];
 }
 
