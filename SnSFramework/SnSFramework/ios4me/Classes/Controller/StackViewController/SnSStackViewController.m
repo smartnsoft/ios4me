@@ -249,13 +249,17 @@
 	BOOL shouldReceiveTouch = YES;
 	
 	// List here all classes that should not receive a touch
-	NSArray* classes = [NSArray arrayWithObjects:NSStringFromClass([UISlider class]), nil];
+	NSArray* classes = [NSArray arrayWithObjects:
+                        NSStringFromClass([UITableViewCell class]),
+                        NSStringFromClass([UISlider class]),
+                        nil];
 	
 	for (NSString* strClass in classes)
 	{
 		Class cl = NSClassFromString(strClass);
-		if ([touch.view isKindOfClass:cl])
-			shouldReceiveTouch = NO;
+        
+        if ([touch.view superviewOfClass:cl] != nil)
+            shouldReceiveTouch = NO;
 	}
 
     return shouldReceiveTouch;
