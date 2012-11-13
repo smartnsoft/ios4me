@@ -247,10 +247,12 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
 	BOOL shouldReceiveTouch = YES;
+    
+    if ([touch.view superviewOfClass:[SnSStackSubView class]] == nil)
+        shouldReceiveTouch = NO;
 	
 	// List here all classes that should not receive a touch
 	NSArray* classes = [NSArray arrayWithObjects:
-                        NSStringFromClass([UITableViewCell class]),
                         NSStringFromClass([UISlider class]),
                         nil];
 	
