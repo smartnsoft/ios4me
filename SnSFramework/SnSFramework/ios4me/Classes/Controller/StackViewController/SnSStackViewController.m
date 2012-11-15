@@ -504,9 +504,13 @@
 		[iController viewWillAppear:iAnimated];
 		[iController viewDidAppear:iAnimated];
 	}
+    else
+    {
+        // set the new child controller
+        [self addChildViewController:iController];
+    }
     
-    // set the new child controller
-    [self addChildViewController:iController];
+  
 }
 
 - (void)removeControllersFromController:(UIViewController *)iController animated:(BOOL)iAnimated
@@ -561,7 +565,10 @@
 
 - (void)removeControllers:(NSArray *)iControllers
 {
-    [iControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
+    // only use the parent controlling system on devices > 5.0
+    if ([[[UIDevice currentDevice] systemVersion] characterAtIndex:0] > '5')
+	    [iControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
+
     
 	[_stackControllers removeObjectsInArray:iControllers];
 }
