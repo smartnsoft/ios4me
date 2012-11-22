@@ -28,4 +28,6 @@
 // Returns an affine transform that takes into account the image orientation when drawing a scaled image
 - (CGAffineTransform)transformForOrientation:(CGSize)newSize;
 
+- (UIImage*)fixOrientation;
+
 @end
