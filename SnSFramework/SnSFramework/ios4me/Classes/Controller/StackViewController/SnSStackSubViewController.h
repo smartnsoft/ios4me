@@ -38,6 +38,7 @@
 @property (nonatomic, assign) CGRect frameLandscape;
 @property (nonatomic, assign) SnSStackViewController* stackController;
 @property (nonatomic, assign, getter = isPanEnabled) BOOL enablePan;
+ 
 #pragma mark UIView
 
 - (SnSStackSubView*)stackview;

@@ -573,6 +573,18 @@
 	[_stackControllers removeObjectsInArray:iControllers];
 }
 
+- (void)popCurrentController
+{
+    if (_stackControllers.count > 2)
+    {
+        SnSStackSubViewController* c = [_stackControllers objectAtIndex:_stackControllers.count-2];
+        
+        [self removeControllersFromController:c animated:YES];
+    }
+}
+
+#pragma mark Accessing Inner Views/Controllers
+
 - (void)updateInnerViews
 {
 	SnSStackSubViewController* aLastController = [_stackControllers lastObject];

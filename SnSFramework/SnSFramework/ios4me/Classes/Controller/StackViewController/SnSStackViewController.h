@@ -142,6 +142,11 @@ typedef struct SnSStackPanningStatus
  */
 - (SnSStackSubViewController*)controllerFromView:(UIView*)iView;
 
+/*!
+ * Removes the current controller from the stack and present the previous one
+ */
+- (void)popCurrentController;
+
 /*! 
  * If a user selects pushes a new controller from an existing controller (not the last one)
  * we must unstack all previous controllers and remove them from controller list
