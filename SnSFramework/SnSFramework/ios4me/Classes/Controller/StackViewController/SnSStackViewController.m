@@ -441,12 +441,15 @@
     if (iFromController == nil)
         iFromController = [self rootViewController];
     
-	[self removeControllersFromController:iFromController animated:YES];
-	
-	// add its view to display
+    // set stack controller
+    iController.stackController = self;
+    
+    // add its view to display
 	[self.view addSubview:iController.view];
     [iController shadowEnabled:YES];
     
+	[self removeControllersFromController:iFromController animated:YES];
+	
 	// Set default location if not provided
 	if (CGRectIsEmpty(iController.stackview.framePortrait) || CGRectIsEmpty(iController.stackview.frameLandscape))
 	{
@@ -466,9 +469,6 @@
 	// Setup is done, retain the controller in the stack
 	[_stackControllers addObject:iController];
     
-    // set stack controller
-    iController.stackController = self;
-
 	SnSStackSubView* aOldCenterView = _centerView;
 	SnSStackSubView* aOldOuterView = _outerView;
 	
