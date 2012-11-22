@@ -566,7 +566,7 @@
 - (void)removeControllers:(NSArray *)iControllers
 {
     // only use the parent controlling system on devices > 5.0
-    if ([[[UIDevice currentDevice] systemVersion] characterAtIndex:0] > '5')
+    if ([[[UIDevice currentDevice] systemVersion] characterAtIndex:0] >= '5')
 	    [iControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
 
     
