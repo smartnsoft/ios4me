@@ -143,6 +143,10 @@
 		04FB834E14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
 		04FB835014F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
+		80F008CE164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */; };
+		80F008CF164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */; };
+		80F008D0164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */; };
+		80F008D1164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */; };
 		9CACA02A15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */; };
 		9CACA02B15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */; };
 		9CACA02C15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02315C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m */; };
@@ -280,6 +284,8 @@
 		8050503714065564006A9B23 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		8050503814065564006A9B23 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		8050503914065564006A9B23 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Resolutions.h"; sourceTree = "<group>"; };
+		80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Resolutions.m"; sourceTree = "<group>"; };
 		9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+SnSSmartPlayer.h"; sourceTree = "<group>"; };
 		9CACA02315C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayerItem+SnSSmartPlayer.m"; sourceTree = "<group>"; };
 		9CACA02415C96DF3001F331B /* SnSSmartPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSSmartPlayerController.h; sourceTree = "<group>"; };
@@ -439,6 +445,8 @@
 				04ADDB2A14ED470200C2087E /* UIDevice+DeviceConnectivity.m */,
 				04ADDB2B14ED470200C2087E /* UIDevice+DeviceDetection.h */,
 				04ADDB2C14ED470200C2087E /* UIDevice+DeviceDetection.m */,
+				80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */,
+				80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */,
 				04ADDB2D14ED470200C2087E /* UIKit+SnSExtension.h */,
 				04ADDB2E14ED470200C2087E /* UIKit+SnSExtension.m */,
 				044DB5BC1573D3C6009574EF /* NSArray+SnSExtension.h */,
@@ -653,6 +661,7 @@
 				9CACA03215C96DF3001F331B /* SnSSmartPlayerView.h in Headers */,
 				9CACA03615C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */,
 				04F4BDA815F103E3004D5180 /* NSDictionary+SnSExtension.h in Headers */,
+				80F008CE164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +689,7 @@
 				9CACA03315C96DF3001F331B /* SnSSmartPlayerView.h in Headers */,
 				9CACA03715C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */,
 				04F4BDA915F103E3004D5180 /* NSDictionary+SnSExtension.h in Headers */,
+				80F008CF164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +835,7 @@
 				9CACA03415C96DF3001F331B /* SnSSmartPlayerView.m in Sources */,
 				9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
 				04F4BDAA15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */,
+				80F008D0164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,6 +895,7 @@
 				9CACA03515C96DF3001F331B /* SnSSmartPlayerView.m in Sources */,
 				9CACA03915C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
 				04F4BDAB15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */,
+				80F008D1164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
