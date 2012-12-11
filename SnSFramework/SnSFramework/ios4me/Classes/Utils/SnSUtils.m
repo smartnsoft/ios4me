@@ -359,10 +359,22 @@ const NSString * DEFAULT_EXTENTION = @".png";
 
 + (UIImage *) imageNamed:(NSString *)name withExtention:(NSString *)extention
 {
-	if ([UIDevice isIPhoneOS4]) 
+	if ([UIDevice iOSVersion] >= 4.0)
 	{
-//		SnSLogD(@"iOS Version greater than 4");
-		// iOS works without extention
+		// If Retina screen 4 inch we use naming convention filename-568h@2x
+        if ([UIScreen resolution] == UIScreenResolutioniPhoneRetina4)
+        {
+            NSString * fileName = [NSString stringWithFormat:@"%@-568h@2x%@",name ,(extention != nil) ? extention : DEFAULT_EXTENTION];
+            NSString *pathBaseUrl = [[NSBundle mainBundle] bundlePath];
+            BOOL isDirectory = NO;
+            BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:[pathBaseUrl stringByAppendingPathComponent:fileName] isDirectory:&isDirectory];
+            if(fileExists == YES)
+            {
+                return [UIImage imageNamed:[NSString stringWithFormat:@"%@-568h",name]];
+            }
+        }
+        
+        // iOS works without extention
 		UIImage * result = [UIImage imageNamed:name];
 		// HACK : Only for iPhone application running on iPad
 		

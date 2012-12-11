@@ -4,7 +4,6 @@
 *.xcworkspace*
 *xcuserdatad*
 
-
 # Tarball creation   #
 ######################
 extracts/

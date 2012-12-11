@@ -109,7 +109,11 @@
 	SnSLogD(@"");
 }
 
-
+// Add with iOS 6
+- (BOOL) shouldAutorotate
+{
+    return YES;
+}
 
 
 @end

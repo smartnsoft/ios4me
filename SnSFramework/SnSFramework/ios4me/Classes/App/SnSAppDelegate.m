@@ -140,7 +140,7 @@
 	
 	UIViewController * viewController = [self getStartingViewController];
 	
-	[self.window addSubview:viewController.view];
+	self.window.rootViewController = viewController;
 	
 	[self listenToNotifications];
 	
