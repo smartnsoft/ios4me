@@ -2,7 +2,7 @@
 ######################
 *.xcscheme
 *.xcworkspace*
-
+*xcuserdata*
 
 # Tarball creation   #
 ######################
