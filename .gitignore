@@ -1,7 +1,8 @@
 # Project generated files #
 ######################
-*.xcscheme
+#*.xcscheme
 *.xcworkspace*
+*xcuserdatad*
 
 
 # Tarball creation   #

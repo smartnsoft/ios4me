@@ -11,21 +11,21 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>ios4me (Device).xcscheme</key>
+		<key>ios4me (Device).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>ios4me (Framework).xcscheme</key>
+		<key>ios4me (Framework).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>ios4me (Simulator).xcscheme</key>
+		<key>ios4me (Simulator).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
