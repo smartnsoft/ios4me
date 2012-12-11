@@ -21,5 +21,6 @@
 @interface SnSSingleton : NSObject { }
 
 + (id)instance;
+- (void)setup;
 - (void)reset;
 @end

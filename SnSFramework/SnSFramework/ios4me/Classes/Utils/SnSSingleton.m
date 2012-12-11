@@ -37,10 +37,16 @@ static id gInstances = nil;
         if ( singleton == nil)
 		{
             singleton = [[self alloc] init];
+            [singleton setup];
 			[gInstances setObject:singleton forKey:aKey];
 		}
     }
     return singleton;
+}
+
+- (void)setup
+{
+    // do nothing, let the children singleton process their first init there
 }
 
 - (void)reset
