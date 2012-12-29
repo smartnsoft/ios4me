@@ -28,6 +28,7 @@
     
     IBOutletCollection(UISlider) NSMutableArray *volumeSliders_;
     IBOutletCollection(UISlider) NSMutableArray *scrubberSliders_;
+    IBOutletCollection(UIProgressView) NSMutableArray *bufferProgress_;
     
     IBOutletCollection(id)       NSMutableArray *subAreas_;
     IBOutletCollection(UIView)   NSMutableArray *playerViews_;
@@ -72,6 +73,7 @@
 
 @property (nonatomic, retain, readonly) NSArray *volumeSliders;
 @property (nonatomic, retain, readonly) NSArray *scrubberSliders;
+@property (nonatomic, retain, readonly) NSArray *bufferProgress;
 
 @property (nonatomic, retain, readonly) NSArray *subAreas;
 @property (nonatomic, retain, readonly) NSArray *playerViews;
@@ -152,6 +154,7 @@
 - (void)addPauseButton:(UIButton*)button;
 - (void)addStopButton:(UIButton*)button;
 - (void)addVolumeSlider:(UISlider*)slider;
+- (void)addBufferProgress:(UIProgressView*)progress;
 - (void)addScrubber:(UISlider*)slider;
 - (void)addSubArea:(UILabel*)subArea;
 - (void)addPlayerView:(UIView*)playerView;
