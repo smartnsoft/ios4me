@@ -839,17 +839,16 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     //    });
     // TODO Sync buttons
     
-    NSLog(@"Buffering status: %@", [object loadedTimeRanges]);
-    
+    //NSLog(@"Buffering status: %@", [object loadedTimeRanges]);
     for (NSString * key in [change allKeys])
     {
         id value = [change objectForKey:key];
-        NSLog(@"change key = %@ ; value = %@",key, value);
-        if ([value isKindOfClass:[NSArray class]])
+        //NSLog(@"change key = %@ ; value = %@",key, value);
+        if ([value isKindOfClass:[NSArray class]] && [key isEqualToString:@"new"])
         {
-            id keyValue = [[change objectForKey:@"new"] objectAtIndex:0];
+            id keyValue = [[change objectForKey:key] objectAtIndex:0];
             CMTimeRange timeRangeValue = [((NSValue *)keyValue) CMTimeRangeValue];
-            NSLog(@"new key = %@ ; value = %@",key, keyValue);
+            //NSLog(@"new key = %@ ; value = %@",key, keyValue);
             [self syncBufferProgress:timeRangeValue];
         }
     }
