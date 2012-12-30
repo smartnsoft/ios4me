@@ -916,7 +916,15 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 		
         dispatch_async(dispatch_get_main_queue(), ^{
             if (self.enabled)
+            {
                 ((UISlider*)[scrubberSliders_ firstObject]).value = (maxValue - minValue) * time / duration + minValue;
+            }
+            
+            if (delegate_ !=nil && [delegate_ respondsToSelector:@selector(smartPlayerCurrentTime:)])
+            {
+                [delegate_ smartPlayerCurrentTime:time];
+            }
+            
         });
 	}
 }
@@ -960,7 +968,16 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 	{
 		dispatch_async(dispatch_get_main_queue(), ^{
             if (self.enabled && totalDuration > 0.0)
-                ((UIProgressView*)[bufferProgress_ firstObject]).progress = currentDurationLoaded / totalDuration;
+            {
+                double pourcent = currentDurationLoaded / totalDuration;
+                ((UIProgressView*)[bufferProgress_ firstObject]).progress = pourcent;
+                
+                if (delegate_ && [delegate_ respondsToSelector:@selector(smartPlayerBufferPourcent:)])
+                {
+                    [delegate_ smartPlayerBufferPourcent:pourcent];
+                }
+                
+            }
         });
 	}
 }

@@ -15,6 +15,8 @@
 @optional
 
 - (void) smartPlayerDidReachEnd;
+- (void) smartPlayerBufferPourcent:(double)pourcent;
+- (void) smartPlayerCurrentTime:(double)time;
 
 @end
 
