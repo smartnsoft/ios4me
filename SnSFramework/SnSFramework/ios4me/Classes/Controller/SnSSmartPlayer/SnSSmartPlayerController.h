@@ -41,6 +41,8 @@
     
     BOOL isPreparedToPlay_;
     BOOL enabled_;
+    BOOL autoplay_;
+    BOOL isPlaying_;
     
     NSURL *contentURL_;
     
@@ -85,7 +87,9 @@
 // Utilities
 
 @property (nonatomic, assign, readonly) BOOL isPreparedToPlay;
+@property (nonatomic, assign, readonly) BOOL isPlaying;
 @property (nonatomic,assign) BOOL enabled;
+@property (nonatomic,assign) BOOL autoplay;
 
 @property (nonatomic, assign) NSURL *contentURL;
 

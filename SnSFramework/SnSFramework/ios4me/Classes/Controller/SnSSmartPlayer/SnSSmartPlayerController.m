@@ -107,7 +107,9 @@ static void *SPBufferingObservationContext = &SPBufferingObservationContext;
 @synthesize delegate = delegate_;
 
 @synthesize isPreparedToPlay = isPreparedToPlay_;
+@synthesize isPlaying = isPlaying_;
 @synthesize enabled = enabled_;
+@synthesize autoplay = autoplay_;
 
 @synthesize contentURL = contentURL_;
 
@@ -365,6 +367,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         
         //        [self prepareToPlay];
         self.enabled = NO;
+        self.autoplay = NO;
     }
     return self;
 }
@@ -798,6 +801,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     }
     else if (status == AVPlayerStatusReadyToPlay)
     {
+        self.isPreparedToPlay = YES;
         [self initScrubberTimer]; // initScrubberTimer;
         [self initBufferProgress];
     }
@@ -829,16 +833,25 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 //            ((UIView*)self.playerViews.lastObject).hidden = NO;
 //    });
     // TODO Sync buttons
+    
+    NSLog(@"observeRateofObject : %@ : change : %@", [object description], change);
+    if ([change objectForKey:@"new"]!=nil)
+    {
+        NSDecimalNumber * newRate = [change objectForKey:@"new"];
+        if ([newRate intValue] > 0)
+        {
+            isPlaying_ = YES;
+        }
+        else
+        {
+            isPlaying_ = NO;
+        }
+    }
+    
 }
 
 - (void)observeBufferofObject:(AVPlayerItem*)object change:(NSDictionary*)change
 {
-    //    dispatch_async(dispatch_get_main_queue(), ^{
-    //        if ([self.playerViews count])
-    //            ((UIView*)self.playerViews.lastObject).hidden = NO;
-    //    });
-    // TODO Sync buttons
-    
     //NSLog(@"Buffering status: %@", [object loadedTimeRanges]);
     for (NSString * key in [change allKeys])
     {
@@ -862,7 +875,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         object.contentsGravity = kCAGravityResizeAspectFill;
         // object.hidden = NO;
-        // [self.player play]; // Auto-Play
+        
     }
 }
 
@@ -975,6 +988,15 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                 if (delegate_ && [delegate_ respondsToSelector:@selector(smartPlayerBufferPourcent:)])
                 {
                     [delegate_ smartPlayerBufferPourcent:pourcent];
+                }
+                
+                if (self.autoplay == YES)
+                {
+                    double time = CMTimeGetSeconds(player_.currentTime);
+                    if (time < currentDurationLoaded || pourcent == 100.0)
+                    {
+                        [self play];
+                    }
                 }
                 
             }
