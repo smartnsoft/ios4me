@@ -90,6 +90,24 @@
  */
 - (NSData*)cachedDataForKey:(id)iKey;
 
+#pragma mark Cache Size
+
+/**
+ *  Returns the high capacity of the cache size
+ * This should be overwritten in your children application cache
+ * @return
+ *	The high capacity of the cache size
+ */
+- (NSInteger)highCapacity;
+
+/**
+ * Returns the low capacity of the cache size
+ * This should be overwritten in your children application cache
+ * @return
+ *	The low capacity of the cache size
+ */
+- (NSInteger)lowCapacity;
+
 
 #pragma mark Purge Cache
 

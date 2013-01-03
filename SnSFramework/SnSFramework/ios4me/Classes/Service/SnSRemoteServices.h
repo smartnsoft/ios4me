@@ -10,6 +10,7 @@
 #import "SnSLoadingView.h"
 
 @class ASIHTTPRequest;
+@class SnSMemoryCache;
 
 typedef void (^SnSImageCompletionBlock)(UIImage*);
 typedef void (^SnSImageErrorBlock)(NSError*);
@@ -34,8 +35,10 @@ typedef enum SnSImageRetrievalOption
 {
 	@protected
 	NSMutableDictionary* requests_;		//<! The dictionary holding 'binding' -> 'requests'
+    SnSMemoryCache* cache_;             //<! The memory cache to use if any
 }
 @property (nonatomic, readonly) NSMutableDictionary* requests; //<! The dictionary holding 'url' -> 'requests'
+@property (nonatomic, retain)   SnSMemoryCache* cache; //<! The memory cache to use if any
 
 #pragma mark Preparation
 

@@ -12,6 +12,7 @@
 
 @implementation SnSRemoteServices
 @synthesize requests = requests_;
+@synthesize cache = cache_;
 
 #pragma mark -
 #pragma mark NSObject
@@ -32,6 +33,13 @@
 	[requests_ release];
 	
 	[super dealloc];
+}
+
+#pragma mark SnSSingleton
+
+- (void)reset
+{
+    self.cache = nil;
 }
 
 #pragma mark -
@@ -305,7 +313,7 @@
 				
 				aImageData  = [aRequest responseData];
 				
-				[[SnSMemoryCache instance] storeData:aImageData forKey:[aRequest url]];
+				[cache_ storeData:aImageData forKey:[aRequest url]];
 				
 				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
 				
