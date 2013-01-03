@@ -21,8 +21,6 @@
 
 //#ifdef __OBJC__
 
-    #import <Foundation/Foundation.h>
-
     // We import all the framework header files
     #import "SnSFramework.h"
 
