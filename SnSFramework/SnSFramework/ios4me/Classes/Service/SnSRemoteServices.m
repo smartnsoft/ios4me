@@ -178,7 +178,7 @@
 		else if ([d isPNG])
 			imgRef = CGImageCreateWithPNGDataProvider(imgDataProvider, NULL, true, kCGRenderingIntentDefault);
 
-		UIImage* image = [UIImage imageWithCGImage:imgRef];
+		UIImage* image = d ? [UIImage imageWithCGImage:imgRef] : nil;
 		
 		if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeToBinding))
 			image = [image resizedImageWithContentMode:iBindingView.contentMode
