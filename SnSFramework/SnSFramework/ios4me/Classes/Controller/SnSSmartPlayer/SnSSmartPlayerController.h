@@ -43,6 +43,7 @@
     BOOL enabled_;
     BOOL autoplay_;
     BOOL isPlaying_;
+    BOOL paused_; // something make video paused
     
     NSURL *contentURL_;
     
