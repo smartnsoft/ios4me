@@ -11,9 +11,20 @@
 
 @interface SnSDropListViewCell : UIView
 {
-	UILabel* titleLabel_;	
+	UILabel* titleLabel_;
+    
+    // custon label
+    UIColor* titleLabelDefaultColor_;
+    UIColor* titleLabelSelectedColor_;
+    UIColor* backgroundSelectedColor_;
+    UIFont* titleLabelFont_;
 }
 @property (nonatomic, readonly) UILabel* titleLabel;
+@property (nonatomic, retain) UIColor* titleLabelDefaultColor;
+@property (nonatomic, retain) UIColor* titleLabelSelectedColor;
+@property (nonatomic, retain) UIColor* backgroundSelectedColor;
+@property (nonatomic, retain) UIFont* titleLabelFont;
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 

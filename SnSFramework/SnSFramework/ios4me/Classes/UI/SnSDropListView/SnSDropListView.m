@@ -27,12 +27,19 @@
 @synthesize arrowImage = imgArrow_;
 @synthesize backgroundImage = imgBackground_;
 @synthesize padding = padding_;
+@synthesize mainLabelColor = mainLabelColor_;
+@synthesize scrollViewColorBorder = scrollViewColorBorder_;
+@synthesize labelCellDefaultColor = labelCellDefaultColor_;
+@synthesize labelCellSelectedColor = labelCellSelectedColor_;
+@synthesize labelCellBackgroundSelectedColor = labelCellBackgroundSelectedColor_;
+@synthesize mainLabelFont = mainLabelFont_;
+@synthesize labelCellFont = labelCellFont_;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
 	
-    if (self) 
+    if (self)
 		[self setup];
 	
     return self;
@@ -51,7 +58,7 @@
 - (void)setup
 {
 	// -----------------------------
-	// 
+	//
 	// -----------------------------
 	self.clipsToBounds = NO;
 	self.userInteractionEnabled = YES;
@@ -72,7 +79,7 @@
 	scrollview_ = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, 0)];
 	scrollview_.backgroundColor = [UIColor whiteColor];
 	scrollview_.userInteractionEnabled = YES;
-	
+    
 	imgBackground_ = [[[UIImageView alloc] initWithFrame:(CGRect){0, 0, self.frame.size}] autorelease];
 	imgBackground_.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	
@@ -100,13 +107,20 @@
 	// Default Variables
 	// -----------------------------
 	maxScrollHeight_ = 120.f;
-
+    
 }
 
 - (void)dealloc
 {
 	self.delegate = nil;
 	self.dataSource = nil;
+    self.mainLabelColor = nil;
+    self.scrollViewColorBorder = nil;
+    self.labelCellDefaultColor = nil;
+    self.labelCellSelectedColor = nil;
+    self.labelCellBackgroundSelectedColor = nil;
+    self.mainLabelFont = nil;
+    self.labelCellFont = nil;
 	
 	SnSReleaseAndNil(scrollview_);
 	
@@ -146,8 +160,9 @@
 	}
 	
 	// update main label (default behaviour)
+    mainLabel_.textColor = [UIColor blackColor];
 	mainLabel_.text = selectedCell_.titleLabel.text;
-		
+    
 	// retreive index of selected cell
 	NSInteger idx = [[scrollview_ subviews] indexOfObject:cell];
 	
@@ -159,7 +174,7 @@
     [self closeScrollView];
 	
 	SnSLogD(@"Tapped %d cell", idx);
-
+    
 }
 
 #pragma mark -
@@ -167,7 +182,7 @@
 #pragma mark -
 
 - (void)openScrollView
-{	
+{
 	if (!enabled_)
 		return;
     
@@ -186,24 +201,29 @@
 	scrollview_.layer.shadowOffset = CGSizeMake(1, 50);
 	scrollview_.layer.shadowColor = [UIColor blackColor].CGColor;
 	scrollview_.layer.shadowPath = [UIBezierPath bezierPathWithRect:scrollview_.bounds].CGPath;
-
+    
 	// animate
 	[UIView animateWithDuration:0.3f
 					 animations:^{
 						 scrollview_.frame = CGRectMake(SnSViewX(scrollview_),
-														SnSViewY(scrollview_), 
+														SnSViewY(scrollview_),
 														SnSViewW(scrollview_),
 														expectedHeight_);
 					 }
 					 completion:^(BOOL f){
 						 if (f && [delegate_ respondsToSelector:@selector(dropList:didOpenScrollView:)] )
-							 [delegate_ dropList:self didOpenScrollView:scrollview_];
+                         {
+                             [delegate_ dropList:self didOpenScrollView:scrollview_];
+                         }
+                         
+                         [scrollview_ flashScrollIndicators];
+                         
 					 }];
-		
-//	
-//	// add to parent subview
-//	[[self superview] addSubview:scrollview_];
-
+    
+    //
+    //	// add to parent subview
+    //	[[self superview] addSubview:scrollview_];
+    
 }
 
 - (void)closeScrollView
@@ -228,7 +248,7 @@
 							 [scrollview_ removeFromSuperview];
 						 if (f && [delegate_ respondsToSelector:@selector(dropList:didCloseScrollView:)] )
 							 [delegate_ dropList:self didCloseScrollView:scrollview_];
-
+                         
 					 }];
 }
 
@@ -277,15 +297,15 @@
 	
 	// -----------------------------
 	// Update Scroll View
-	// -----------------------------	
+	// -----------------------------
 	[[scrollview_ subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
-
-	scrollview_.frame = CGRectMake(SnSViewX(scrollview_), 
-								   SnSViewY(scrollview_), 
+    
+	scrollview_.frame = CGRectMake(SnSViewX(scrollview_),
+								   SnSViewY(scrollview_),
 								   SnSViewW(scrollview_),
 								   height > maxScrollHeight_ ? maxScrollHeight_ : height);
 	
-	scrollview_.contentSize = CGSizeMake(SnSViewX(scrollview_), height);	
+	scrollview_.contentSize = CGSizeMake(SnSViewX(scrollview_), height);
 	
 	// Update expectedHeight used for future animation
 	expectedHeight_ = SnSViewH(scrollview_);
@@ -307,28 +327,72 @@
 			height = [delegate_ dropList:self heightForRow:i];
 		else
 			height = kSnSDropListLabelDefaulttHeight;
-				
+        
 		// Update frame
 		cell.userInteractionEnabled = YES;
 		cell.frame = CGRectMake(0, y, SnSViewW(scrollview_), height);
 		
-		// add gesture recognizer
+        //custom cell
+        cell.titleLabelDefaultColor = labelCellDefaultColor_;
+        cell.titleLabelSelectedColor = labelCellSelectedColor_;
+        cell.backgroundSelectedColor = labelCellBackgroundSelectedColor_;
+		cell.titleLabelFont = labelCellFont_;
+        
+        
+        // add gesture recognizer
 		UITapGestureRecognizer* tap = [[[UITapGestureRecognizer alloc] initWithTarget:self
-																			  action:@selector(onTapCellView_:)] autorelease];
+                                                                               action:@selector(onTapCellView_:)] autorelease];
 		tap.numberOfTapsRequired = 1;
 		[cell addGestureRecognizer:tap];
-				
+        
 		// add to subview
 		[scrollview_ addSubview:cell];
 		
 		// update new position
-		y += height;		
+		y += height;
 	}
 	
 	
 }
 
+#pragma mark -
+#pragma mark Custom Color Element
+#pragma mark -
+
+-(void)setMainLabelColor:(UIColor *)mainLabelColor
+{
+    SnSReleaseAndNil(mainLabelColor_);
+    
+    mainLabelColor_ = [mainLabelColor retain];
+    
+    mainLabel_.textColor = mainLabelColor_;
+}
 
 
+-(void)setScrollViewColorBorder:(UIColor *)scrollViewColorBorder
+{
+    SnSReleaseAndNil(scrollViewColorBorder_);
+    
+    scrollViewColorBorder_ = [scrollViewColorBorder retain];
+    
+    // border scrollView
+    [[scrollview_ layer] setBorderWidth:1.0f];
+    [[scrollview_ layer] setBorderColor:scrollViewColorBorder_.CGColor];
+}
+
+-(void)setMainLabelFont:(UIFont *)mainLabelFont
+{
+    SnSReleaseAndNil(mainLabelFont_);
+    
+    mainLabelFont_ = [mainLabelFont retain];
+    
+    mainLabel_.font = mainLabelFont_;
+}
+
+-(void)defaultMainLabel
+{
+    mainLabel_.textColor = mainLabelColor_;
+    mainLabel_.font = mainLabelFont_;
+}
 
 @end
