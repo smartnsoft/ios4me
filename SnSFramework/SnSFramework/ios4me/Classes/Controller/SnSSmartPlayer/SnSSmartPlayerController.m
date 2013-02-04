@@ -515,7 +515,9 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)play
 {
-    // If we are at the end of the movie, we must seek to the beginning first 
+    paused_ = NO;
+    
+    // If we are at the end of the movie, we must seek to the beginning first
     // before starting playback.
 	if (seekToZeroBeforePlay_) 
 	{
@@ -533,6 +535,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)pause
 {
+    paused_ == YES;
+    
     [self.player pause];
 }
 
@@ -995,7 +999,10 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                     double time = CMTimeGetSeconds(player_.currentTime);
                     if (time < currentDurationLoaded || pourcent == 100.0)
                     {
-                        [self play];
+                        if (paused_ == NO)
+                        {
+                            [self play];
+                        }
                     }
                 }
                 
@@ -1047,6 +1054,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 {
     // MonkeyFix! with AVPlayer timeObservers
     self.scrubbersTimeObserver = nil;
+    
+    
 }
 
 - (void)shutdown
