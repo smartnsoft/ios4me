@@ -249,11 +249,15 @@
 						 if (f && [delegate_ respondsToSelector:@selector(dropList:didCloseScrollView:)] )
 							 [delegate_ dropList:self didCloseScrollView:scrollview_];
                          
-					 }];
+					 }]; 
 }
 
 - (NSInteger)selectedRow
-{
+{    
+    // negative value to show no cell was selected
+    if (selectedCell_ == nil)
+        return -1;
+    
 	return [[scrollview_ subviews] indexOfObject:selectedCell_];
 }
 
