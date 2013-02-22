@@ -53,7 +53,7 @@
 	[iRequest setCachePolicy:ASIOnlyLoadIfNotCachedCachePolicy];
 	[iRequest setCacheStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
 	[iRequest setDownloadCache:[ASIDownloadCache sharedCache]];
-
+    
 }
 
 - (NSURL *)urlForResizingServices:(NSURL *)iImageURL binding:(UIImageView *)iBindingView
@@ -83,7 +83,7 @@
 			SnSLogD(@"Cached data found for [u:%@] [s:%d bytes]", iURL, [aImageData length]);
 			return YES;
 		}
-	}	
+	}
 	
 	//------------------------------
 	// Checking ASI Cache
@@ -98,46 +98,46 @@
 
 - (void)retrieveImageURL:(NSURL*)iURL binding:(UIView*)iBindingView indicator:(UIView*)iLoadingView
 {
-	[self retrieveImageURL:iURL 
-				   binding:iBindingView 
-				 indicator:iLoadingView 
+	[self retrieveImageURL:iURL
+				   binding:iBindingView
+				 indicator:iLoadingView
 					option:kSnSImageRetrievalOptionNone
-		   completionBlock:nil 
-				errorBlock:nil];
-}
-
-- (void)retrieveImageURL:(NSURL*)iURL 
-				 binding:(UIView*)iBindingView 
-			   indicator:(UIView*)iLoadingView 
-				  option:(SnSImageRetrievalOption)iOption
-{
-	[self retrieveImageURL:iURL 
-				   binding:iBindingView 
-				 indicator:iLoadingView 
-					option:iOption
-		   completionBlock:nil 
+		   completionBlock:nil
 				errorBlock:nil];
 }
 
 - (void)retrieveImageURL:(NSURL*)iURL
-				 binding:(UIView*)iBindingView 
-			   indicator:(UIView*)iLoadingView 
-		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock 
+				 binding:(UIView*)iBindingView
+			   indicator:(UIView*)iLoadingView
+				  option:(SnSImageRetrievalOption)iOption
+{
+	[self retrieveImageURL:iURL
+				   binding:iBindingView
+				 indicator:iLoadingView
+					option:iOption
+		   completionBlock:nil
+				errorBlock:nil];
+}
+
+- (void)retrieveImageURL:(NSURL*)iURL
+				 binding:(UIView*)iBindingView
+			   indicator:(UIView*)iLoadingView
+		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock
 			  errorBlock:(SnSImageErrorBlock)iErrorBlock
 {
-	[self retrieveImageURL:iURL 
-				   binding:iBindingView 
-				 indicator:iLoadingView 
+	[self retrieveImageURL:iURL
+				   binding:iBindingView
+				 indicator:iLoadingView
 					option:kSnSImageRetrievalOptionNone
-		   completionBlock:iCompletionBlock 
+		   completionBlock:iCompletionBlock
 				errorBlock:iErrorBlock];
 }
 
 - (void)retrieveImageURL:(NSURL*)iURL
-				 binding:(UIView*)iBindingView 
-			   indicator:(UIView*)iLoadingView 
+				 binding:(UIView*)iBindingView
+			   indicator:(UIView*)iLoadingView
 				  option:(SnSImageRetrievalOption)iOption
-		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock 
+		 completionBlock:(SnSImageCompletionBlock)iCompletionBlock
 			  errorBlock:(SnSImageErrorBlock)iErrorBlock
 {
 	//------------------------------
@@ -146,16 +146,16 @@
 	
 	// The image data will be modified in the blocks
 	__block NSData* aImageData	= nil;
-		
+    
 	// this will be used to associate a request to its binding view
 	NSString* bindStr	= iBindingView ? [NSString stringWithFormat:@"%p", iBindingView] : [NSString stringUnique];
 	
 	// check if the binding view is an image view
 	UIImageView* imageView = [iBindingView isKindOfClass:[UIImageView class]] ? (UIImageView*)iBindingView : nil;
-
+    
 	// Create the background queue
 	dispatch_queue_t queue = dispatch_queue_create("Image Retrieval", NULL);
-
+    
 	// Start animating if passed in parameters
 	if ([iLoadingView respondsToSelector:@selector(startAnimating)])
 		[(id)iLoadingView startAnimating];
@@ -167,9 +167,9 @@
 	//------------------------------
 	// Image Construction and Binding
 	//------------------------------
-	UIImage* (^finalization)(NSData*) = ^ (NSData* d) 
+	UIImage* (^finalization)(NSData*) = ^ (NSData* d)
 	{
-				
+        
 		CGDataProviderRef imgDataProvider = CGDataProviderCreateWithCFData((CFDataRef) d);
 		CGImageRef imgRef = nil;
 		
@@ -177,7 +177,7 @@
 			imgRef = CGImageCreateWithJPEGDataProvider(imgDataProvider, NULL, true, kCGRenderingIntentDefault);
 		else if ([d isPNG])
 			imgRef = CGImageCreateWithPNGDataProvider(imgDataProvider, NULL, true, kCGRenderingIntentDefault);
-
+        
 		UIImage* image = d ? [UIImage imageWithCGImage:imgRef] : nil;
 		
 		if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeToBinding))
@@ -207,9 +207,9 @@
 					crossFade.fromValue = (id)imageView.image.CGImage;
 					crossFade.toValue = (id)image.CGImage;
 					[imageView.layer addAnimation:crossFade forKey:@"animateContents"];
-				}		
+				}
 				
-				imageView.image = image;				
+				imageView.image = image;
 				
 				
 				if ([iLoadingView respondsToSelector:@selector(stopAnimating)])
@@ -217,18 +217,18 @@
 				
 				// if completion block has been set call it
 				if (iCompletionBlock)
-					iCompletionBlock(image);					
-
+					iCompletionBlock(image);
+                
 			}
 			
 			else {
 				
 				if (iErrorBlock)
 					iErrorBlock(nil);
-
+                
 			}
 			
-		});	
+		});
 		
 		return image;
 		
@@ -250,14 +250,14 @@
 		if (aOldRequest)
 		{
 			SnSLogD(@"Cancelling Image Retrieval [u:%@] [v:%@]", [aOldRequest url], bindStr);
-
+            
 			// Cancel old request unless specified not to
 			if (!(iOption & kSnSImageRetrievalOptionDoNotCancelRequest))
 				[aOldRequest cancel];
 			
 			@synchronized(requests_)
 			{ [requests_ removeObjectForKey:bindStr];}
-		}	
+		}
 		
 		//------------------------------
 		// Checking memory cache
@@ -274,7 +274,7 @@
 				break;
 			}
 			
-		}		
+		}
 		
 		//------------------------------
 		// Request creation
@@ -288,9 +288,9 @@
 			
 			SnSLogD(@"Retrieving Image [u:%@] [v:%@]", [aRequest url], bindStr);
 			
-			// Lock request and add it to the dictionary 
+			// Lock request and add it to the dictionary
 			@synchronized(requests_)
-				{ [requests_ setObject:aRequest forKey:bindStr]; }
+            { [requests_ setObject:aRequest forKey:bindStr]; }
 			
 			[aRequest setFailedBlock:^{
 				
@@ -300,50 +300,58 @@
 					SnSLogE(@"Error Image Retrieval [u:%@] [v:%@] [e:%@]", [aRequest url], bindStr, [[aRequest error] description]);
 				
 				finalization(nil);
-								
+                
 				if (iErrorBlock)
 				{
 					dispatch_async(dispatch_get_main_queue(), ^{
 						iErrorBlock([aRequest error]);
-					});						
+					});
 				}
-
+                
 			}];
 			[aRequest setCompletionBlock:^{
 				
-				aImageData  = [aRequest responseData];
-				
-				[cache_ storeData:aImageData forKey:[aRequest url]];
-				
-				SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
-				
-				// create queue for processing asynchronously. This is needed because
-				// the ASIHTTPREquest completion is executed on the main thread.
-				dispatch_queue_t processing = dispatch_queue_create("Image Processing", NULL);
-
-				// dispath finalization block on separate thread
-				dispatch_async(processing, ^{ finalization(aImageData); });
-					
-				// won’t actually go away until queue is empty
-				dispatch_release(processing);
-				
-			}];
-			
-			[aRequest startAsynchronous];
-			
-		}
-		else
-		{
-			finalization(aImageData);
-		}
-		
-	});
-	
-	//won’t actually go away until queue is empty 
-	dispatch_release(queue); 	
- 	
-
-	
-}
-
-@end
+                // status code > 400 : Error
+                if([aRequest responseStatusCode] >= 400)
+                {
+                    finalization(nil);
+                    return;
+                }
+                
+                
+                   aImageData  = [aRequest responseData];
+                   
+                   [cache_ storeData:aImageData forKey:[aRequest url]];
+                   
+                   SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
+                   
+                   // create queue for processing asynchronously. This is needed because
+                   // the ASIHTTPREquest completion is executed on the main thread.
+                   dispatch_queue_t processing = dispatch_queue_create("Image Processing", NULL);
+                   
+                   // dispath finalization block on separate thread
+                   dispatch_async(processing, ^{ finalization(aImageData); });
+                   
+                   // won’t actually go away until queue is empty
+                   dispatch_release(processing);
+                   
+                   }];
+                   
+                   [aRequest startAsynchronous];
+                   
+                   }
+                   else
+                   {
+                       finalization(aImageData);
+                   }
+                   
+                   });
+                
+                //won’t actually go away until queue is empty 
+                dispatch_release(queue); 	
+                
+                
+                
+            }
+             
+             @end
