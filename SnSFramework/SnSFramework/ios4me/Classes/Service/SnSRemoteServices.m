@@ -170,7 +170,7 @@
 	UIImage* (^finalization)(NSData*) = ^ (NSData* d)
 	{
         
-		CGDataProviderRef imgDataProvider = CGDataProviderCreateWithCFData((CFDataRef) d);
+ 		CGDataProviderRef imgDataProvider = d ? CGDataProviderCreateWithCFData((CFDataRef) d) : nil;
 		CGImageRef imgRef = nil;
 		
 		if ([d isJPG])
@@ -309,7 +309,8 @@
 				}
                 
 			}];
-			[aRequest setCompletionBlock:^{
+			[aRequest setCompletionBlock:^
+            {
 				
                 // status code > 400 : Error
                 if([aRequest responseStatusCode] >= 400)
@@ -318,40 +319,39 @@
                     return;
                 }
                 
+                aImageData  = [aRequest responseData];
                 
-                   aImageData  = [aRequest responseData];
-                   
-                   [cache_ storeData:aImageData forKey:[aRequest url]];
-                   
-                   SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
-                   
-                   // create queue for processing asynchronously. This is needed because
-                   // the ASIHTTPREquest completion is executed on the main thread.
-                   dispatch_queue_t processing = dispatch_queue_create("Image Processing", NULL);
-                   
-                   // dispath finalization block on separate thread
-                   dispatch_async(processing, ^{ finalization(aImageData); });
-                   
-                   // won’t actually go away until queue is empty
-                   dispatch_release(processing);
-                   
-                   }];
-                   
-                   [aRequest startAsynchronous];
-                   
-                   }
-                   else
-                   {
-                       finalization(aImageData);
-                   }
-                   
-                   });
+                [cache_ storeData:aImageData forKey:[aRequest url]];
                 
-                //won’t actually go away until queue is empty 
-                dispatch_release(queue); 	
+                SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
                 
+                // create queue for processing asynchronously. This is needed because
+                // the ASIHTTPREquest completion is executed on the main thread.
+                dispatch_queue_t processing = dispatch_queue_create("Image Processing", NULL);
                 
+                // dispath finalization block on separate thread
+                dispatch_async(processing, ^{ finalization(aImageData); });
                 
+                // won’t actually go away until queue is empty
+                dispatch_release(processing);
+                
+            }];
+            
+            [aRequest startAsynchronous];
+            
+        }
+        else
+        {
+            finalization(aImageData);
+        }
+        
+    });
+    
+    //won’t actually go away until queue is empty
+    dispatch_release(queue);
+    
+    
+    
             }
-             
+
              @end
