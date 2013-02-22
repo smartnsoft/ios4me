@@ -94,6 +94,7 @@
 #import "SnSRemoteServices.h"
 #import "SnSWebServiceCaller.h"
 #import "SnSStoreManager.h"
+#import "SnSStoreObserver.h"
 
 // Utils
 #import "SnSUtils.h"

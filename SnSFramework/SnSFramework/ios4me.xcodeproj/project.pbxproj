@@ -163,6 +163,9 @@
 		9CACA03715C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02815C96DF3001F331B /* SnSSmartSubtitleView.h */; };
 		9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */; };
 		9CACA03915C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */; };
+		BE2A98DD16D2413C00C63101 /* SnSStoreObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BE2A98DB16D2413C00C63101 /* SnSStoreObserver.h */; };
+		BE2A98DE16D2413C00C63101 /* SnSStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A98DC16D2413C00C63101 /* SnSStoreObserver.m */; };
+		BE2A98E116D2687C00C63101 /* SnSStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A98DC16D2413C00C63101 /* SnSStoreObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -294,6 +297,8 @@
 		9CACA02715C96DF3001F331B /* SnSSmartPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSmartPlayerView.m; sourceTree = "<group>"; };
 		9CACA02815C96DF3001F331B /* SnSSmartSubtitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSSmartSubtitleView.h; sourceTree = "<group>"; };
 		9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSmartSubtitleView.m; sourceTree = "<group>"; };
+		BE2A98DB16D2413C00C63101 /* SnSStoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSStoreObserver.h; sourceTree = "<group>"; };
+		BE2A98DC16D2413C00C63101 /* SnSStoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSStoreObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +482,8 @@
 		04ADDB3214ED470200C2087E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BE2A98DB16D2413C00C63101 /* SnSStoreObserver.h */,
+				BE2A98DC16D2413C00C63101 /* SnSStoreObserver.m */,
 				04ADDB3314ED470200C2087E /* SnSStoreManager.h */,
 				04ADDB3414ED470200C2087E /* SnSStoreManager.m */,
 				04ADDB3514ED470200C2087E /* SnSWebServiceCaller.h */,
@@ -662,6 +669,7 @@
 				9CACA03615C96DF3001F331B /* SnSSmartSubtitleView.h in Headers */,
 				04F4BDA815F103E3004D5180 /* NSDictionary+SnSExtension.h in Headers */,
 				80F008CE164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */,
+				BE2A98DD16D2413C00C63101 /* SnSStoreObserver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +844,7 @@
 				9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
 				04F4BDAA15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */,
 				80F008D0164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */,
+				BE2A98DE16D2413C00C63101 /* SnSStoreObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +905,7 @@
 				9CACA03915C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
 				04F4BDAB15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */,
 				80F008D1164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */,
+				BE2A98E116D2687C00C63101 /* SnSStoreObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
