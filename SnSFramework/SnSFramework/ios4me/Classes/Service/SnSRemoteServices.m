@@ -22,7 +22,7 @@
 {
 	if ((self = [super init]))
 	{
-		requests_ = [[NSMutableDictionary alloc] init];
+//		requests_ = [[NSMutableDictionary alloc] init];
 	}
 	
 	return self;
@@ -30,7 +30,7 @@
 
 - (void)dealloc
 {
-	[requests_ release];
+//	[requests_ release];
 	
 	[super dealloc];
 }
@@ -196,8 +196,8 @@
 				// if the image was correctly built.
 				// Otherwise you could remove it after a cancelation but also right after another
 				// download on the same buiding view has started
-				@synchronized(requests_)
-				{ [requests_  removeObjectForKey:bindStr]; }
+//				@synchronized(requests_)
+//				{ [requests_  removeObjectForKey:bindStr]; }
 				
 				
 				if (iOption & kSnSImageRetrievalOptionImageCrossFade)
@@ -283,14 +283,14 @@
 		// No image found in memory cache ? Fetch it
 		if (aImageData == nil)
 		{
-			__block ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
+			ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
 			[self prepareRequest:aRequest];
 			
 			SnSLogD(@"Retrieving Image [u:%@] [v:%@]", [aRequest url], bindStr);
 			
 			// Lock request and add it to the dictionary
-			@synchronized(requests_)
-            { [requests_ setObject:aRequest forKey:bindStr]; }
+//			@synchronized(requests_)
+//            { [requests_ setObject:aRequest forKey:bindStr]; }
 			
 			[aRequest setFailedBlock:^{
 				
@@ -321,6 +321,8 @@
                 
                 aImageData  = [aRequest responseData];
                 
+                
+                
                 [cache_ storeData:aImageData forKey:[aRequest url]];
                 
                 SnSLogD(@"Retrieved Image [u:%@] [s:%d bytes] [v:%@]", [aRequest url], [aImageData length], bindStr);
@@ -330,7 +332,7 @@
                 dispatch_queue_t processing = dispatch_queue_create("Image Processing", NULL);
                 
                 // dispath finalization block on separate thread
-                dispatch_async(processing, ^{ finalization(aImageData); });
+                dispatch_async(processing, ^{ ASIHTTPRequest* req = [aRequest retain]; finalization(aImageData); });
                 
                 // won’t actually go away until queue is empty
                 dispatch_release(processing);
