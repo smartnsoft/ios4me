@@ -364,13 +364,10 @@ const NSString * DEFAULT_EXTENTION = @".png";
 		// If Retina screen 4 inch we use naming convention filename-568h@2x
         if ([UIScreen resolution] == UIScreenResolutioniPhoneRetina4)
         {
-            NSString * fileName = [NSString stringWithFormat:@"%@-568h@2x%@",name ,(extention != nil) ? extention : DEFAULT_EXTENTION];
-            NSString *pathBaseUrl = [[NSBundle mainBundle] bundlePath];
-            BOOL isDirectory = NO;
-            BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:[pathBaseUrl stringByAppendingPathComponent:fileName] isDirectory:&isDirectory];
-            if(fileExists == YES)
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@-568h@2x",name ] ofType:((extention != nil) ? extention : @"png")];
+            if (filePath != nil)
             {
-                return [UIImage imageNamed:[NSString stringWithFormat:@"%@-568h",name]];
+                return [UIImage imageWithContentsOfFile:filePath];
             }
         }
         
