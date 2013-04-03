@@ -186,15 +186,24 @@
 	if (!enabled_)
 		return;
     
-    // update scrollview position
-    CGPoint p = [self.superview convertPoint:self.frame.origin toView:self.rootview];
-    scrollview_.frame = (CGRect){CGPointMake(p.x+padding_, p.y+SnSViewH(self)),CGSizeMake(SnSViewW(self)-padding_*2, SnSViewH(self))};
-    
-    [self.rootview addSubview:scrollview_];
-	
-	// warn delegate scroll view is about to open
+    // warn delegate scroll view is about to open
 	if ([delegate_ respondsToSelector:@selector(dropList:willOpenScrollView:)])
 		[delegate_ dropList:self willOpenScrollView:scrollview_];
+    
+    // Fix for landscape orientation
+    if (UIDeviceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
+        if ([self.delegate isKindOfClass:[UIViewController class]]) {
+            // update scrollview position
+            CGPoint p = [self.superview convertPoint:self.frame.origin toView:((UIViewController*)delegate_).view];
+            scrollview_.frame = (CGRect){CGPointMake(p.x+padding_, p.y+SnSViewH(self)),CGSizeMake(SnSViewW(self)-padding_*2, SnSViewH(self))};
+            [((UIViewController*)delegate_).view addSubview:scrollview_];
+        }
+    } else {
+        // update scrollview position
+        CGPoint p = [self.superview convertPoint:self.frame.origin toView:self.rootview];
+        scrollview_.frame = (CGRect){CGPointMake(p.x+padding_, p.y+SnSViewH(self)),CGSizeMake(SnSViewW(self)-padding_*2, SnSViewH(self))};
+        [self.rootview addSubview:scrollview_];
+	}
 	
 	scrollview_.layer.shadowRadius = 50;
 	scrollview_.layer.shadowOpacity = 1;

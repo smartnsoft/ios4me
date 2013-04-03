@@ -444,11 +444,12 @@
     // set stack controller
     iController.stackController = self;
     
+    [self removeControllersFromController:iFromController animated:YES];
+    
     // add its view to display
 	[self.view addSubview:iController.view];
     [iController shadowEnabled:YES];
     
-	[self removeControllersFromController:iFromController animated:YES];
 	
 	// Set default location if not provided
 	if (CGRectIsEmpty(iController.stackview.framePortrait) || CGRectIsEmpty(iController.stackview.frameLandscape))
