@@ -283,7 +283,7 @@
 		// No image found in memory cache ? Fetch it
 		if (aImageData == nil)
 		{
-			__block ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
+			ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
 			[self prepareRequest:aRequest];
 			
 			SnSLogD(@"Retrieving Image [u:%@] [v:%@]", [aRequest url], bindStr);
