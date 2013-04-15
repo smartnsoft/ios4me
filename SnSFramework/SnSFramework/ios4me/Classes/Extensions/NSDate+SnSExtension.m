@@ -53,7 +53,7 @@
 		aDate = [NSDate dateWithTimeIntervalSince1970:[aDateStr doubleValue]*aFactor];
 		
 	}
-	else
+	else if ([aDateStr isKindOfClass:[NSString class]] && aDateStr.length)
 	{
 		NSDateFormatter* fullFormat = [[NSDateFormatter alloc] init];
 		[fullFormat setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]];
