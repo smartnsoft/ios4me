@@ -98,6 +98,9 @@
 
 @end
 
+#pragma mark -
+#pragma mark SnSDateUtils
+
 @implementation SnSDateUtils
 
 static NSDateFormatter* sISO8601;
