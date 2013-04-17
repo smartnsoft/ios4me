@@ -14,7 +14,7 @@ if [[ ! -d ${I4M_PATH_GIT}/.git ]]; then
 fi
 
 echo $PROJECT_NAME
-I4M_PRJ_VERSION=`grep "CFBundleVersion" $INFOPLIST_FILE -A 1 | grep -oE "\w+\.\w+"`
+I4M_PRJ_VERSION=`grep "CFBundleVersion" $INFOPLIST_FILE -A 1 | grep -oE "\w+(\.\w+)+"`
 I4M_PRJ_TAG=`echo "${PROJECT_NAME}_${I4M_PRJ_VERSION}" | sed "s/\./-/g" |sed "s/\./-/g"`
 
 echo $I4M_PRJ_TAG
