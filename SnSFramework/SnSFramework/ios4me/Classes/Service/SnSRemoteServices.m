@@ -169,7 +169,7 @@
 	//------------------------------
 	UIImage* (^finalization)(NSData*) = ^ (NSData* d)
 	{
-        
+        // usually crash here //
 		CGDataProviderRef imgDataProvider = CGDataProviderCreateWithCFData((CFDataRef) d);
 		CGImageRef imgRef = nil;
 		
