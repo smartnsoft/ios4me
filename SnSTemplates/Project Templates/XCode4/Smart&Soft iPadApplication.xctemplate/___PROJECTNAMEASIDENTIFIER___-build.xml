@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This Ant buildfile requires that you have included the following Ant library extensions:
+<ul>
+  <li><a href="http://ant-contrib.sourceforge.net/">Ant-Contrib</a></li>
+   <li><a href="http://subclipse.tigris.org/svnant.html">SvnAnt</a></li>
+   <li><a href="http://antelope.tigris.org/">Antelope</a></li>
+   <li><a href="http://ant-doxygen.blogspot.com">Ant Doxygen Task</a></li>
+ </ul>
+ -->
+<project
+  name="___PROJECTNAMEASIDENTIFIER___"
+  default="xcode-clean"
+  basedir="."
+>
+
+  <description>The aim of this Ant buildfile is to propose services for handling the 'DrKnow' iPhone project.</description>
+
+  <loadproperties srcfile="___PROJECTNAMEASIDENTIFIER___-build.properties"/>
+  <taskdef resource="net/sf/antcontrib/antlib.xml"/>
+  <target
+    name="project.init"
+    depends=""
+    description="Default target, which should always be called first be other targets."
+  >
+    <property
+      name="configuration"
+      value="Debug"
+    />
+    <property
+      name="iphoneSDKName"
+      value="iphoneos"
+    />
+    <property
+      name="iphoneSDKVersion"
+      value="4.3"
+    />
+    <property
+      name="iphoneSDK"
+      value="${iphoneSDKName}${iphoneSDKVersion}"
+    />
+    <property
+      name="xcodeBuild.directoryPath"
+      location="build"
+    />
+    <property
+      name="generatedDoxygen.directoryPath"
+      location="doxygen"
+    />
+    <property
+      name="distribution.directoryPath"
+      location="dist"
+    />
+    <property
+      name="zippedInstallationPackage.filePath"
+      location="${distribution.directoryPath}/${projectPrefix}.app.zip"
+    />
+  </target>
+
+  <!--                                              -->
+  <!-- The section specific to the software factory -->
+  <!--                    TeamCity                  -->
+  <target
+    name="sf.init.old"
+    depends=""
+    description="Initializes the software factory properties."
+  >
+    <!-- This propery 'sf.properties.filePath' must be defined during the software factory run. -->
+    <loadproperties srcfile="${sf.properties.filePath}">
+      <filterchain>
+        <linecontains>
+          <contains value="${projectPrefix}"/>
+        </linecontains>
+      </filterchain>
+    </loadproperties>
+    <macrodef name="propertycopyIf">
+      <attribute name="name"/>
+      <attribute name="from"/>
+      <sequential>
+        <if>
+          <isset property="@{from}"/>
+          <then>
+            <propertycopy
+              name="@{name}"
+              from="@{from}"
+            />
+          </then>
+        </if>
+      </sequential>
+    </macrodef>
+    <propertycopyIf
+      name="key.alias.password"
+      from="${projectPrefix}.key.alias.password"
+    />
+    <propertycopyIf
+      name="key.store.password"
+      from="${projectPrefix}.key.store.password"
+    />
+    <propertycopyIf
+      name="ftp.hostName"
+      from="${projectPrefix}.ftp.hostName"
+    />
+    <propertycopyIf
+      name="ftp.directoryName"
+      from="${projectPrefix}.ftp.directoryName"
+    />
+    <propertycopyIf
+      name="ftp.login"
+      from="${projectPrefix}.ftp.login"
+    />
+    <propertycopyIf
+      name="ftp.password"
+      from="${projectPrefix}.ftp.password"
+    />
+  </target>
+  
+  <target
+    name="sf.init"
+    depends=""
+    description="Initializes the software factory properties."
+  >
+    <!-- This propery 'sf.properties.filePath' must be defined during the software factory run. -->    
+    <tstamp>
+        <format property="date.now.0" pattern="MM/dd/yyyy hh:mm aa" locale="fr,FR"/>
+        <format property="date.now.1" pattern="yyyy-MM-dd'T'HH.mm.ss.SSS" locale="fr,FR"/>
+        
+    </tstamp>
+  </target>
+
+  <target name="xcode-clean" depends="sf.init">
+    <echo level="info">Cleaning ...</echo>
+    <exec executable="xcodebuild" dir="." 
+      failonerror="true">
+      <arg line="-project ${xcodeProjectName}.xcodeproj"/>
+      <arg line="-alltargets clean" />
+    </exec>
+  </target>
+  
+  <target name="xcode-compile" depends="xcode-clean"> <!-- depends="xcode-clean" -->
+    <echo level="info">Compiling...</echo>
+    <exec executable="xcodebuild" dir="." 
+      failonerror="true">
+      <arg line="-project ${xcodeProjectName}.xcodeproj"/>
+      <arg line="-alltargets" />
+      <arg line="-configuration Release" />
+    </exec>
+  </target>
+  
+  <target name="xcode-compress" depends="xcode-compile">
+    <echo level="info">Compressing...</echo>
+    <exec executable="zip" dir="./build/Release-iphoneos" 
+      failonerror="true">
+      <arg line="-y -r '${projectNameBuild}.zip' '${projectNameBuild}.app'"/>
+    </exec>
+  </target>
+  
+  <target name="xcode-archive" depends="sf.init,xcode-compile">
+      <echo level="info">Finding applications</echo>
+      <for param="app">
+          <path>
+              <dirset id="apps" dir="./build" casesensitive="yes" includes="**/*.app"/>
+          </path>
+          <sequential>
+              <echo>Archiving @{app}</echo>
+              <exec executable="xcrun" dir="." failonerror="true">
+                    <arg line="-sdk iphoneos PackageApplication"/>
+                    <arg line="-v '@{app}'"/>
+                    <arg line="-o '@{app}.ipa'"/>
+                    <arg line="--sign '${signProfile}'"/>
+                </exec> 
+          </sequential>          
+      </for>
+      <for param="dsym">
+          <path>
+              <dirset id="dsyms" dir="./build" casesensitive="no" includes="**/*.dSYM">
+                 <date datetime="${date.now.0}" when="after" />
+              </dirset>
+          </path>
+          <sequential>
+              <echo>Zipping @{dsym}</echo>      
+              <zip destfile="@{dsym}.zip" basedir="@{dsym}" />
+          </sequential>
+      </for>      
+      <!-- <pathconvert refid="apps" property="app"/> -->
+  </target>
+  
+  <!-- Move all ipa files at destination folder -->
+  <!-- <target name="testflight.prepare" depends="sf.init,xcode-archive">
+      <property name="distribution.path" value="${distribution.folder}/${date.now.1}" />
+      <echo level="info">Uploading ipa and dsym files to destination folder ${distribution.path}</echo>
+      <exec executable="mkdir" failonerror="true">
+            <arg line="-p"/>
+            <arg line="'${distribution.path}'"/>
+        </exec> 
+      <for param="ipa">
+          <path>
+              <fileset id="ipas" dir="./build" casesensitive="no" includes="**/*.ipa">
+                 <date datetime="${date.now.0}" when="after" />
+              </fileset>
+          </path>
+          <sequential>
+              <echo>Moving @{ipa} to ${distribution.path}</echo>      
+              <exec executable="mv" failonerror="true">
+                    <arg line="'@{ipa}'"/>
+                    <arg line="'${distribution.path}'"/>
+                </exec> 
+          </sequential>
+      </for>
+      <for param="dsym">
+          <path>
+              <dirset id="dsyms" dir="./build" casesensitive="no" includes="**/*.dSYM">
+                 <date datetime="${date.now.0}" when="after" />
+              </dirset>
+          </path>
+          <sequential>
+              <echo>Moving @{dsym} to ${distribution.path}</echo>      
+              <exec executable="mv" failonerror="true">
+                    <arg line="'@{dsym}'"/>
+                    <arg line="'${distribution.path}'"/>
+                </exec> 
+          </sequential>
+      </for>      
+  </target> -->
+  
+  <target name="testflight.upload" depends="xcode-archive">
+      <echo level="info">Uploading ipa files to Test Flight</echo>
+      <for param="ipa">
+          <path>
+              <fileset id="ipas" dir="./build" casesensitive="yes" includes="**/*.ipa">
+                 <date datetime="${date.now.0}" when="after" />
+              </fileset>
+          </path>
+          <sequential>
+              <echo>Uploading @{ipa}</echo>      
+              <exec executable="curl" failonerror="true">
+                    <arg line="http://testflightapp.com/api/builds.json"/>
+                    <arg line="-s"/>
+                    <arg line="-F file=@'@{ipa}'" />
+                    <arg line="-F api_token=${testflight.token.api}"  />
+                    <arg line="-F team_token=${testflight.token.team}" />
+                    <arg line="-F notes='This build was uploaded via teamcity'" />
+                    <arg line="-F notify=True" />
+                    <arg line="-F distribution_lists=DK_Users" />
+                </exec> 
+          </sequential>
+      </for>      
+  </target>
+  
+</project>
