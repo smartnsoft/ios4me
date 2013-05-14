@@ -4,3 +4,6 @@
 [submodule "SnSFramework/SnSFramework/ios4me/Dependencies/reachability"]
 	path = SnSFramework/SnSFramework/ios4me/Dependencies/reachability
 	url = https://github.com/CocoaPods/unmaintained-pod-Reachability.git
+[submodule "SnSFramework/SnSFramework/ios4me/Dependencies/afnetworking"]
+	path = SnSFramework/SnSFramework/ios4me/Dependencies/afnetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
