@@ -92,6 +92,12 @@
 @property(nonatomic, readonly) NSTimeInterval timeToLiveSeconds;
 @property(nonatomic, readonly) BOOL diskPersistent;
 
+- (id) initWithMemoryCapacity:(NSUInteger)memoryCapacity
+                 diskCapacity:(NSUInteger)diskCapacity
+                     diskPath:(NSString *)path
+              andTimeValidity:(NSTimeInterval)timeToLive
+               andPersistence:(BOOL)onDisk;
+
 /**
  * Indicates how many cache instances should be created.
  *

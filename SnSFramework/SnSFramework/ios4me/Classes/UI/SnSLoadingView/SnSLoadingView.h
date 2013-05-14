@@ -23,7 +23,7 @@ typedef void (^SnSLoadingAnimationBlock)(void);
 @property (nonatomic, readonly) BOOL isAnimating;
 @property (nonatomic, assign) BOOL hidesWhenStopped;
 @property (nonatomic, retain) NSArray* images;
-@property (nonatomic, retain) SnSLoadingAnimationBlock animationBlock;
+@property (nonatomic, copy) SnSLoadingAnimationBlock animationBlock;
 
 - (void)setup;
 - (void)startAnimating;
