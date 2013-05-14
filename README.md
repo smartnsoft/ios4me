@@ -11,10 +11,16 @@ Its purpose is to speed up the development of iOS applications. We are constantl
 Installation
 ------------
 
+First you need to make sure all submodules have been udpated
+
+	git submodule init
+	git submodule update 
+
 The Smart&Soft framework can simply be installed by going into the SnSTemplates Folder and run the install-templates.sh script as a super user.
 
 	cd SnSTemplates
-	sudo bash ./install-templates.sh -f 
+	sudo bash ./install-templates.sh -f
+	
 
 The reason this script needs to run as a super user is because the framework will be built from the ground up and will eventually be copied into your default framework folders (ex */Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/...*)
 

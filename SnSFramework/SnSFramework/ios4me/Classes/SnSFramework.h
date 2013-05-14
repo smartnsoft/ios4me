@@ -21,6 +21,9 @@
  * The purpose of this framework is to speed-up iPhone applications development...
  */
 
+#if !defined(__SNS_FRAMEWORK__)
+#define __SNS_FRAMEWORK__ 1
+
 #import <Foundation/Foundation.h> 
 
 // We import all the framework header files
@@ -121,3 +124,6 @@
 + (NSString *) version;
 
 @end
+
+#endif
+
