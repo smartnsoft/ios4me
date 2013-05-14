@@ -129,6 +129,10 @@
 		04754A1A17422F860062D5BE /* ASIS3ServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0475495717422F860062D5BE /* ASIS3ServiceRequest.h */; };
 		04754A1B17422F860062D5BE /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475495817422F860062D5BE /* ASIS3ServiceRequest.m */; };
 		04754A1C17422F860062D5BE /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475495817422F860062D5BE /* ASIS3ServiceRequest.m */; };
+		04754AB2174230F60062D5BE /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 04754AAD174230F60062D5BE /* Reachability.h */; };
+		04754AB3174230F60062D5BE /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 04754AAD174230F60062D5BE /* Reachability.h */; };
+		04754AB4174230F60062D5BE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04754AAE174230F60062D5BE /* Reachability.m */; };
+		04754AB5174230F60062D5BE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04754AAE174230F60062D5BE /* Reachability.m */; };
 		04ADDA4B14ED195500C2087E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048411CD13F2B1AD004B17A1 /* StoreKit.framework */; };
 		04ADDA4D14ED195500C2087E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803BC91A12A6BEF100336B25 /* Foundation.framework */; };
 		04ADDA4E14ED195500C2087E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048CDE4E13DEF425006C2E4D /* CFNetwork.framework */; };
@@ -326,6 +330,8 @@
 		0475495617422F860062D5BE /* ASIS3Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3Request.m; sourceTree = "<group>"; };
 		0475495717422F860062D5BE /* ASIS3ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3ServiceRequest.h; sourceTree = "<group>"; };
 		0475495817422F860062D5BE /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
+		04754AAD174230F60062D5BE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		04754AAE174230F60062D5BE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		04756103140B8A3A00C0DF6C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		048411CD13F2B1AD004B17A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		048CDE4E13DEF425006C2E4D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -481,6 +487,7 @@
 		0475491C17422F860062D5BE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				04754AAC174230F60062D5BE /* reachability */,
 				0475491D17422F860062D5BE /* asi-http-request */,
 			);
 			name = Dependencies;
@@ -573,6 +580,15 @@
 				0475495817422F860062D5BE /* ASIS3ServiceRequest.m */,
 			);
 			path = S3;
+			sourceTree = "<group>";
+		};
+		04754AAC174230F60062D5BE /* reachability */ = {
+			isa = PBXGroup;
+			children = (
+				04754AAD174230F60062D5BE /* Reachability.h */,
+				04754AAE174230F60062D5BE /* Reachability.m */,
+			);
+			path = reachability;
 			sourceTree = "<group>";
 		};
 		04ADDAF014ED470200C2087E /* Classes */ = {
@@ -936,6 +952,7 @@
 				04754A1117422F860062D5BE /* ASIS3ObjectRequest.h in Headers */,
 				04754A1517422F860062D5BE /* ASIS3Request.h in Headers */,
 				04754A1917422F860062D5BE /* ASIS3ServiceRequest.h in Headers */,
+				04754AB2174230F60062D5BE /* Reachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1008,7 @@
 				04754A1217422F860062D5BE /* ASIS3ObjectRequest.h in Headers */,
 				04754A1617422F860062D5BE /* ASIS3Request.h in Headers */,
 				04754A1A17422F860062D5BE /* ASIS3ServiceRequest.h in Headers */,
+				04754AB3174230F60062D5BE /* Reachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1160,6 +1178,7 @@
 				04754A1317422F860062D5BE /* ASIS3ObjectRequest.m in Sources */,
 				04754A1717422F860062D5BE /* ASIS3Request.m in Sources */,
 				04754A1B17422F860062D5BE /* ASIS3ServiceRequest.m in Sources */,
+				04754AB4174230F60062D5BE /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,6 +1262,7 @@
 				04754A1417422F860062D5BE /* ASIS3ObjectRequest.m in Sources */,
 				04754A1817422F860062D5BE /* ASIS3Request.m in Sources */,
 				04754A1C17422F860062D5BE /* ASIS3ServiceRequest.m in Sources */,
+				04754AB5174230F60062D5BE /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
