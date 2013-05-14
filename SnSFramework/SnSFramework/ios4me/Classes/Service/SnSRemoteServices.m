@@ -11,6 +11,8 @@
 #import "ASIHTTPRequest.h"
 #import "ASIDownloadCache.h"
 
+#import "UIImageView+AFNetworking.h"
+
 @implementation SnSRemoteServices
 @synthesize requests = requests_;
 @synthesize cache = cache_;
@@ -143,7 +145,33 @@
 {
 	SnSLogD(@"[RemoteServices] - retrieving image %@ for %@", iURL, iBindingView);
     
+    UIImageView* imageview = iBindingView != nil && [iBindingView isKindOfClass:[UIImageView class]] ? iBindingView : [[UIImageView new] autorelease];
+    NSURLRequest* request = [NSURLRequest requestWithURL:iURL];
     
+    [imageview setImageWithURLRequest:request
+                     placeholderImage:nil
+                              success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                  SnSLogD(@"[RemoteServices] - success image retrieval of : %@[%@]", request.URL, NSStringFromCGSize(image.size));
+                                  
+                                  // resize image if needed in a separate thread so that the main thread is not penalized
+                                  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                                      UIImage* resizedImage = [image resizedImage:imageview.bounds.size interpolationQuality:kCGInterpolationMedium];
+                                      
+                                      // update image view on main thread
+                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                          imageview.image = resizedImage;
+                                          
+                                          if (iCompletionBlock)
+                                              iCompletionBlock(resizedImage);
+                                      });
+                                  });
+                              }
+                              failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                  SnSLogE(@"[RemoteServices] - failed image retrieval of : %@ : ", request.URL, error.localizedDescription);
+                                  
+                                  if (iErrorBlock)
+                                      iErrorBlock(error);
+                              }];
 }
 
 @end
