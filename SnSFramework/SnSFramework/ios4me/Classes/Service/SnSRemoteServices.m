@@ -162,7 +162,11 @@
                                   
                                   // resize image if needed in a separate thread so that the main thread is not penalized
                                   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                                      UIImage* resizedImage = [image resizedImage:imageview.bounds.size interpolationQuality:kCGInterpolationMedium];
+                                      UIImage* resizedImage = image;
+                                      
+                                      if ([iBindingView isKindOfClass:[UIImageView class]])
+                                          resizedImage = [image resizedImage:imageview.bounds.size
+                                                        interpolationQuality:kCGInterpolationMedium];
                                       
                                       // update image view on main thread
                                       dispatch_async(dispatch_get_main_queue(), ^{
