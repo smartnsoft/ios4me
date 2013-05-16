@@ -49,13 +49,17 @@
 #pragma mark Preparation
 #pragma mark -
 
-- (void)prepareRequest:(ASIHTTPRequest *)iRequest
+- (void)prepareRequest:(id)iRequest
 {
 	SnSLogW(@"This method will have a default behaviour and should be overwritten in your children class %@", [self class]);
 	
-	[iRequest setCachePolicy:ASIOnlyLoadIfNotCachedCachePolicy];
-	[iRequest setCacheStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
-	[iRequest setDownloadCache:[ASIDownloadCache sharedCache]];
+    if ([iRequest isKindOfClass:[ASIHTTPRequest class]])
+    {
+        [iRequest setCachePolicy:ASIOnlyLoadIfNotCachedCachePolicy];
+        [iRequest setCacheStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
+        [iRequest setDownloadCache:[ASIDownloadCache sharedCache]];
+    }
+	
     
 }
 
@@ -145,8 +149,11 @@
 {
 	SnSLogD(@"[RemoteServices] - retrieving image %@ for %@", iURL, iBindingView);
     
-    UIImageView* imageview = iBindingView != nil && [iBindingView isKindOfClass:[UIImageView class]] ? iBindingView : [[UIImageView new] autorelease];
-    NSURLRequest* request = [NSURLRequest requestWithURL:iURL];
+    UIImageView* imageview = (iBindingView != nil && [iBindingView isKindOfClass:[UIImageView class]] ?
+                              iBindingView : [[UIImageView new] autorelease]);
+    
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:iURL];
+    [self prepareRequest:request];
     
     [imageview setImageWithURLRequest:request
                      placeholderImage:nil
