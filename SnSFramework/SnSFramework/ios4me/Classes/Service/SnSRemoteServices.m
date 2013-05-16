@@ -49,7 +49,7 @@
 #pragma mark Preparation
 #pragma mark -
 
-- (void)prepareRequest:(id)iRequest
+- (void)prepareRequest:(ASIHTTPRequest*)iRequest
 {
 	SnSLogW(@"This method will have a default behaviour and should be overwritten in your children class %@", [self class]);
 	
@@ -60,7 +60,11 @@
         [iRequest setDownloadCache:[ASIDownloadCache sharedCache]];
     }
 	
-    
+}
+
+- (void)prepareImageRequest:(id)iRequest
+{
+    SnSLogW(@"This method will have a default behaviour and should be overwritten in your children class %@", [self class]);
 }
 
 - (NSURL *)urlForResizingServices:(NSURL *)iImageURL binding:(UIImageView *)iBindingView
@@ -69,6 +73,8 @@
 	
 	return iImageURL;
 }
+
+
 
 #pragma mark -
 #pragma mark Image Retrieval
@@ -153,7 +159,7 @@
                               iBindingView : [[UIImageView new] autorelease]);
     
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:iURL];
-    [self prepareRequest:request];
+    [self prepareImageRequest:request];
     
     [imageview setImageWithURLRequest:request
                      placeholderImage:nil
