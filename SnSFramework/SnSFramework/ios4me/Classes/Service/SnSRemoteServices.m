@@ -158,6 +158,10 @@
     UIImageView* imageview = (iBindingView != nil && [iBindingView isKindOfClass:[UIImageView class]] ?
                               iBindingView : [[UIImageView new] autorelease]);
     
+    // Override default url if resize asked
+	if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeURL))
+		iURL = [self urlForResizingServices:iURL binding:(UIImageView*)iBindingView];
+	
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:iURL];
     [self prepareImageRequest:request];
     
