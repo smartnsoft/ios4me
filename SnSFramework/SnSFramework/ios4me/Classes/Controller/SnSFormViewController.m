@@ -21,6 +21,7 @@
 
 #import "SnSLog.h"
 #import "NSObject+SnSExtension.h"
+#import "SnSApplicationController.h"
 
 #pragma mark -
 #pragma mark SnSFormTableViewCell

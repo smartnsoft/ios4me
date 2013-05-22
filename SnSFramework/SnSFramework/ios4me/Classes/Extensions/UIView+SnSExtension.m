@@ -7,6 +7,7 @@
 //
 
 #import "UIView+SnSExtension.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (SnSExtension)
 

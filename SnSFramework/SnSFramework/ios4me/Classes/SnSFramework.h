@@ -23,19 +23,15 @@
 
 #if !defined(__SNS_FRAMEWORK__)
 #define __SNS_FRAMEWORK__ 1
-
-#import <Foundation/Foundation.h> 
-
 // We import all the framework header files
 
 // Constants
 #import "SnSConstants.h"
 
-// Application
-#import "SnSAppWindow.h"
-#import "SnSAppDelegate.h"
-#import "SnSDelegate.h"
-#import "SnSCacheDelegate.h"
+//// Application
+#import "App/SnSAppWindow.h"
+#import "App/SnSAppDelegate.h"
+#import "App/SnSAppDelegate.h"
 
 // Cache
 #import "SnSAbstractCache.h"
@@ -44,6 +40,7 @@
 #import "SnSCacheChecker.h"
 #import "SnSCacheDelegate.h"
 #import "SnSCacheItem.h"
+#import "Cache/SnSCacheDelegate.h"
 
 // Connection
 #import "SnSURLConnection.h"
@@ -56,6 +53,7 @@
 #import "SnSTableViewRefreshController.h"
 #import "SnSFormViewController.h"
 #import "SnSScrollFollower.h"
+#import "SnSTableViewController.m"
 
 // SnSSmartPlayer
 #import "SnSSmartPlayerController.h"

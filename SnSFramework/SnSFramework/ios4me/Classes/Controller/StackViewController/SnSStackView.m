@@ -7,6 +7,7 @@
 //
 
 #import "SnSStackView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation SnSStackView
 

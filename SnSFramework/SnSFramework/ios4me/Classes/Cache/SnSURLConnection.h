@@ -16,6 +16,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "SnSCacheDelegate.h"
 
 @protocol SnSURLConnectionDelegate <NSObject>
 
