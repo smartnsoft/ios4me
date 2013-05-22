@@ -1,9 +1,0 @@
-[submodule "SnSFramework/SnSFramework/ios4me/Dependencies/asi-http-request"]
-	path = SnSFramework/SnSFramework/ios4me/Dependencies/asi-http-request
-	url = https://github.com/pokeb/asi-http-request
-[submodule "SnSFramework/SnSFramework/ios4me/Dependencies/reachability"]
-	path = SnSFramework/SnSFramework/ios4me/Dependencies/reachability
-	url = https://github.com/CocoaPods/unmaintained-pod-Reachability.git
-[submodule "SnSFramework/SnSFramework/ios4me/Dependencies/afnetworking"]
-	path = SnSFramework/SnSFramework/ios4me/Dependencies/afnetworking
-	url = https://github.com/apouche/AFNetworking.git
