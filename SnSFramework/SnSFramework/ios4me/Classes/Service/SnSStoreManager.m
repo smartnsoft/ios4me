@@ -60,19 +60,6 @@
 	[[SKPaymentQueue defaultQueue] addPayment:aPayment];
 }
 
--(void)buyProductIdentifier:(NSString *)iStr
-{
-	[self buyProductIdentifier:iStr quantity:1];
-}
-
-- (void)buyProductIdentifier:(NSString *)iStr quantity:(NSUInteger)iQuantity
-{
-	SKMutablePayment* aPayment = [SKMutablePayment paymentWithProductIdentifier:iStr];
-	[aPayment setQuantity:iQuantity];
-	
-	[[SKPaymentQueue defaultQueue] addPayment:aPayment];
-}
-
 #pragma mark - Transactions
 
 - (void)purchasingTransaction:(SKPaymentTransaction *)iTransaction
