@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "04ADDAD414ED197100C2087E"
-               BuildableName = "ios4me (Framework)"
-               BlueprintName = "ios4me (Framework)"
+               BlueprintIdentifier = "04ADDA2414ED195500C2087E"
+               BuildableName = "libios4meDevice.a"
+               BlueprintName = "ios4me"
                ReferencedContainer = "container:ios4me.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
