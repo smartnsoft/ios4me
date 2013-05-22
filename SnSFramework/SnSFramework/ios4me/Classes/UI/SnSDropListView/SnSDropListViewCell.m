@@ -7,6 +7,8 @@
 //
 
 #import "SnSDropListViewCell.h"
+#import "SnSLog.h"
+#import "SnSConstants.h"
 
 #define kCellBackgroundSelectedColor RGB(2,50,63)
 #define kCellBackgroundDefaultColor [UIColor clearColor]

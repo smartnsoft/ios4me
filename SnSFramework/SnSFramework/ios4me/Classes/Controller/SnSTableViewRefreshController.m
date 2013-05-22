@@ -17,7 +17,7 @@
 //
 
 #import "SnSTableViewRefreshController.h"
-
+#import "NSObject+SnSExtension.h"
 #import <QuartzCore/QuartzCore.h>
 
 #pragma mark -

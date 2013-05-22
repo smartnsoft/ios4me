@@ -8,6 +8,9 @@
 
 #import "SnSCacheChecker.h"
 #import "SnSCacheItem.h"
+#import "SnSConstants.h"
+#import "SnSLog.h"
+#import "SnSAbstractCache.h"
 
 @implementation SnSCacheChecker
 

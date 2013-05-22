@@ -9,6 +9,7 @@
 #import "SnSURLConnection.h"
 //#import "SnSMasterCache.h"
 #import "SnSCacheItem.h"
+#import "SnSLog.h"
 
 @implementation SnSURLConnection
 

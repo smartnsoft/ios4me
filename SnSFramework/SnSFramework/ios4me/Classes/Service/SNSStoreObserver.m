@@ -7,6 +7,7 @@
 //
 
 #import "SNSStoreObserver.h"
+#import "SnSLog.h"
 
 @implementation SnSStoreObserver
 @synthesize delegate = delegate_;

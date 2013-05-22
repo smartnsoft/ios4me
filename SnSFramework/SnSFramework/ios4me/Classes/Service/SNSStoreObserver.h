@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
+#import "SnSSingleton.h"
 
 @protocol SnSPurchaseDelegate <NSObject>
 

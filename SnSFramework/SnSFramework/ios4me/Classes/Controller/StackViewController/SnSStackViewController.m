@@ -6,12 +6,21 @@
 //  Copyright 2012 Smart&Soft. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 // View Controllers
 #import "SnSStackViewController.h"
 #import "SnSStackSubViewController.h"
+#import "SnSStackTableSubViewController.h"
 
 // Views
 #import "SnSStackView.h"
+
+#import "SnSConstants.h"
+#import "SnSLog.h"
+
+#import "UIView+SnSExtension.h"
+#import "NSArray+SnSExtension.h"
 
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)
@@ -419,15 +428,11 @@
         }
 	}
 	
-	
-	
-	NSString* aPanningInfo = [NSString stringWithFormat:@"Panning: view: %@ - location: (%.0f %.0f) - direction:%d - displacement:%d -",
-							  _panningStatus.viewMoving,
-							  _panningStatus.location.x,_panningStatus.location.y,
-							  _panningStatus.direction,
-							  _panningStatus.displacement];
-	
-	SnSLogD(aPanningInfo);
+	SnSLogD(@"%@", [NSString stringWithFormat:@"Panning: view: %@ - location: (%.0f %.0f) - direction:%d - displacement:%d -",
+             _panningStatus.viewMoving,
+             _panningStatus.location.x,_panningStatus.location.y,
+             _panningStatus.direction,
+             _panningStatus.displacement]);
 	
 }
 

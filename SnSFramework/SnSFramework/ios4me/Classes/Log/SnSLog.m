@@ -18,7 +18,7 @@
 //
 
 #import "SnSLog.h"
-
+#import "SnSUtils.h"
 /**
  * Taken from http://www.borkware.com/rants/agentm/mlog .
  *

@@ -16,6 +16,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "SnSViewController.h"
 
 @class SnSStackSubView;
 @class SnSStackViewController;

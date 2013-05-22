@@ -19,6 +19,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "SnSViewController.h"
 
 typedef struct SnSScrollFollowerPanStatus
 {

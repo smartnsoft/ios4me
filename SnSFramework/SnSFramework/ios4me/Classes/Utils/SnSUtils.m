@@ -16,7 +16,8 @@
 //
 
 #import "SnSUtils.h"
-
+#import "UIScreen+Resolutions.h"
+#import "UIDevice+DeviceDetection.h"
 
 #pragma mark -
 #pragma mark SnSUtils

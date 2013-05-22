@@ -11,6 +11,8 @@
 #import "SnSSmartPlayerView.h"
 #import "SnSSmartSubtitleView.h"
 
+#import "NSArray+SnSExtension.h"
+
 // Asset keys
 NSString * const kSPTracksKey       = @"tracks";
 NSString * const kSPPlayableKey     = @"playable";

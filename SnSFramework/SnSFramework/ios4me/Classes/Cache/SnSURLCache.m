@@ -394,7 +394,7 @@ SnSURLCache ** urlCacheInstances = nil;
         [fileManager createDirectoryAtPath:self.cacheDirectoryPath withIntermediateDirectories:YES attributes:nil error:&error];
     }
     
-	indexFilePath = [[NSString pathWithComponents:[NSArray arrayWithObjects:self.cacheDirectoryPath, [NSString stringWithFormat:@"SnsURLCache_%@.plist", SNS_FRAMEWORK_VERSION], nil]] retain];
+	indexFilePath = [[NSString pathWithComponents:[NSArray arrayWithObjects:self.cacheDirectoryPath, [NSString stringWithFormat:@"SnsURLCache_%@.plist", @"1.0"], nil]] retain];
     SnSLogD(@"Storing the cache files under the directory '%@', and the index file at '%@'", self.cacheDirectoryPath, self.indexFilePath);
 	cache = [[NSMutableDictionary dictionaryWithContentsOfFile:self.indexFilePath] retain];
 	if (self.cache == nil)

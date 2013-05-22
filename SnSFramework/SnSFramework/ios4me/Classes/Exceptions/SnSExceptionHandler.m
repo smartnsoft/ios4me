@@ -13,6 +13,8 @@
 //
 
 #import "SnSExceptionHandler.h"
+#import "SnSLog.h"
+
 #include <libkern/OSAtomic.h>
 #include <execinfo.h>
 

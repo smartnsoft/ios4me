@@ -7,6 +7,7 @@
 //
 
 #import "SnSStoreManager.h"
+#import "SnSLog.h"
 
 #define kStoreManagerActivation @"com.smartnsoft.??"
 

@@ -8,6 +8,7 @@
 
 #import "SnSSQLiteAccessor.h"
 #import "SnSUtils.h"
+#import "SnSConstants.h"
 
 @implementation SnSSQLiteAccessor 
 

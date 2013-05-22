@@ -18,7 +18,7 @@
  */
 
 #import "SnSScrollFollowerView.h"
-
+#import "SnSConstants.h"
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)
 #define VIEW_WIDTH(v)		((v).frame.size.width)
