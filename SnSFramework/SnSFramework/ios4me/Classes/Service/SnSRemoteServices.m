@@ -156,7 +156,7 @@
 	SnSLogD(@"[RemoteServices] - retrieving image %@ for %@", iURL, iBindingView);
     
     UIImageView* imageview = (iBindingView != nil && [iBindingView isKindOfClass:[UIImageView class]] ?
-                              iBindingView : [[UIImageView new] autorelease]);
+                              (UIImageView*)iBindingView : [[UIImageView new] autorelease]);
     
     // Override default url if resize asked
 	if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeURL))
