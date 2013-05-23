@@ -16,6 +16,7 @@
 //
 
 #import "SnSApplicationController.h"
+#import "SnSLog.h"
 
 #pragma mark -
 #pragma mark SnSApplicationController

@@ -7,6 +7,7 @@
 //
 
 #import "SnSCacheItem.h"
+#import "SnSLog.h"
 
 @implementation SnSCacheItem
 

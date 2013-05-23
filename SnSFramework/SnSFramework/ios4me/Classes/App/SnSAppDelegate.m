@@ -21,6 +21,7 @@
 
 #import "SnSLog.h"
 #import "SnSUtils.h"
+#import "NSObject+SnSExtension.h"
 
 #pragma mark -
 #pragma mark SnSAppDelegate(Private)

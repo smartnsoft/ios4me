@@ -6,8 +6,12 @@
 //  Copyright (c) 2011 Smart&Soft. All rights reserved.
 //
 
-#import "SnSStackView.h"
 #import <QuartzCore/QuartzCore.h>
+
+#import "SnSStackView.h"
+#import "SnSLog.h"
+
+
 
 @implementation SnSStackView
 

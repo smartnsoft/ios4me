@@ -10,6 +10,7 @@
 #import "SnSCacheChecker.h"
 
 #import "SnSUtils.h"
+#import "SnSLog.h"
 
 @implementation SnSAbstractCache
 

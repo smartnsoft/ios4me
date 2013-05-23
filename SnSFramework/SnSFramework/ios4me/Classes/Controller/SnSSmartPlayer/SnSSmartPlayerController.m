@@ -11,6 +11,7 @@
 #import "SnSSmartPlayerView.h"
 #import "SnSSmartSubtitleView.h"
 
+#import "SnSLog.h"
 #import "NSArray+SnSExtension.h"
 
 // Asset keys

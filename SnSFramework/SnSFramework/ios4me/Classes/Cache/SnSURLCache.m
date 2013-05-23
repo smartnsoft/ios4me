@@ -21,6 +21,7 @@
 
 #import "SnSLog.h"
 #import "SnSDelegate.h"
+#import "UIDevice+DeviceConnectivity.h"
 
 #pragma mark -
 #pragma mark SnSURLCacheData
@@ -217,10 +218,8 @@ SnSURLCache ** urlCacheInstances = nil;
 
 - (NSData *) getFromCache:(NSURLRequest *)urlRequest
 {
-    NSURL * theUrl = [urlRequest URL];
     // There is a warning because of the macro expansion: the url variable is only used inside the macro!
-    NSString * url = [theUrl absoluteString];
-    SnSLogD(@"Analyzing whether the data is in cache regarding the URL '%@'", url);
+    SnSLogD(@"Analyzing whether the data is in cache regarding the URL '%@'", [[urlRequest URL] absoluteString]);
     NSURLCache * urlCache = [NSURLCache sharedURLCache];
     NSCachedURLResponse * cachedUrlResponse =  [urlCache cachedResponseForRequest:urlRequest];
     NSData * data = nil;
@@ -498,12 +497,9 @@ SnSURLCache ** urlCacheInstances = nil;
 			// Check the validity of content
             SnSLogI(@"cacheInfo = %@ ", [cacheInfo description]);
             SnSLogI(@"[cacheInfo valueForKey:@\"timestamp\"] = %@ ", [[cacheInfo valueForKey:@"timestamp"] description]);
-            NSDate * timestamp = [NSDate dateWithTimeIntervalSince1970:[((NSNumber *)[cacheInfo valueForKey:@"timestamp"]) doubleValue]];
-            SnSLogI(@"timestamp = %@ ", [timestamp description]);
-            NSDate * now = [NSDate date];
-            SnSLogI(@"now = %@ ", [now description]);
-            NSString * typeMIME = [cacheInfo valueForKey:@"type"];
-            SnSLogI(@"type = %@ ", [typeMIME description]);
+            SnSLogI(@"timestamp = %@ ", [NSDate dateWithTimeIntervalSince1970:[((NSNumber *)[cacheInfo valueForKey:@"timestamp"]) doubleValue]]);
+            SnSLogI(@"now = %@ ", [[NSDate date]; description]);
+            SnSLogI(@"type = %@ ", [[cacheInfo valueForKey:@"type"] description]);
             
             if ([self dataIsAvailable:cacheInfo withoutNetwork:YES withCachePolicy:[urlRequest cachePolicy]]) 
             {

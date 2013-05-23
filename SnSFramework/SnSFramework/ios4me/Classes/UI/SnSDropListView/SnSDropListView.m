@@ -12,6 +12,8 @@
 #import "SnSConstants.h"
 #import "UIView+SnSExtension.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #define SnSViewX(v)			((v).frame.origin.x)
 #define SnSViewY(v)			((v).frame.origin.y)
 #define SnSViewW(v)			((v).frame.size.width)
