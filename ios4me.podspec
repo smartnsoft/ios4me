@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     :tag => '1.0.0'
   }
   s.ios.source_files  = 'SnSFramework/SnSFramework/ios4me/Classes/**/*.{h,m}'
-  s.ios.frameworks    = 'UIKit', 'QuartzCore', 'Foundation'
+  s.ios.frameworks    = 'UIKit', 'QuartzCore', 'Foundation', 'Security'
   
   s.subspec 'Accessors' do |sub|
     sub.source_files = 'Classes/Accessors/'
