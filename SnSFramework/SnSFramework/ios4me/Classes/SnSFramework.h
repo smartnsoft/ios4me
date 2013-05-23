@@ -29,9 +29,9 @@
 #import "SnSConstants.h"
 
 //// Application
-#import "App/SnSAppWindow.h"
-#import "App/SnSAppDelegate.h"
-#import "App/SnSAppDelegate.h"
+#import "SnSAppWindow.h"
+#import "SnSAppDelegate.h"
+#import "SnSAppDelegate.h"
 
 // Cache
 #import "SnSAbstractCache.h"
@@ -40,7 +40,7 @@
 #import "SnSCacheChecker.h"
 #import "SnSCacheDelegate.h"
 #import "SnSCacheItem.h"
-#import "Cache/SnSCacheDelegate.h"
+#import "SnSCacheDelegate.h"
 
 // Connection
 #import "SnSURLConnection.h"
@@ -53,7 +53,6 @@
 #import "SnSTableViewRefreshController.h"
 #import "SnSFormViewController.h"
 #import "SnSScrollFollower.h"
-#import "SnSTableViewController.m"
 
 // SnSSmartPlayer
 #import "SnSSmartPlayerController.h"
