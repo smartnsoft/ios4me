@@ -12,11 +12,13 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/smartnsoft/ios4me.git',
     :tag => '1.0.0'
   }
-  s.ios.source_files  = 'SnSFramework/SnSFramework/ios4me/Classes/**/*.{h,m}'
-  s.ios.frameworks    = 'UIKit', 'QuartzCore', 'Foundation', 'Security'
+  s.platform              = :ios, '5.0'
+  s.ios.deployment_target = '5.0'
   
-  s.subspec 'Accessors' do |sub|
-    sub.source_files = 'Classes/Accessors/'
-  end
-#  s.dependency     'AF'
+  s.ios.source_files      = 'SnSFramework/SnSFramework/ios4me/Classes/**/*.{h,m}'
+  s.ios.frameworks        = 'UIKit', 'QuartzCore', 'Foundation', 'Security'
+  
+  s.ios.dependency        'ASIHTTPRequest', '~> 1.8.1'
+  s.ios.dependency        'AFNetworking', '~> 1.2.1'
+
 end
