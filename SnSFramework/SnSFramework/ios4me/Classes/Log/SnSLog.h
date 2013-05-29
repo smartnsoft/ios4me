@@ -19,7 +19,7 @@
 
 // for cocoapods, we only know if the DEBUG macro is defined
 #ifdef DEBUG
-#   define SNS_LOG_LEVEL_DEBUG
+#   define SNS_LOG_LEVEL_DEBUG 1
 #endif
 
 #if SNS_LOG_LEVEL_DEBUG != 0
