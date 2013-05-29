@@ -227,20 +227,20 @@ SnSURLCache ** urlCacheInstances = nil;
     {
         if (cachedUrlResponse == nil)
         {
-            SnSLogD(@"The data is not in local cache regarding the URL '%@'", url);
+            SnSLogD(@"The data is not in local cache regarding the URL '%@'", urlRequest);
             NSError * error = nil;
             //data = [NSData dataWithContentsOfURL:theUrl options:NSUncachedRead error:&error];
             NSHTTPURLResponse * urlResponse = nil;
             data = [[NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&urlResponse error:&error] retain];
             if (error != nil)
             {
-                SnSLogD(@"Error while retrieving the data regarding the URL '%@'", url);
+                SnSLogD(@"Error while retrieving the data regarding the URL '%@'", urlRequest);
                 [data release];
                 [SnSURLCacheException raise:error];
             }
             else if ([urlResponse isKindOfClass:[NSHTTPURLResponse class]] && [urlResponse statusCode] != 200)
             {
-                SnSLogD(@"Received a response from server with status code %i corresponding to the URL '%@'", [urlResponse statusCode], url);
+                SnSLogD(@"Received a response from server with status code %i corresponding to the URL '%@'", [urlResponse statusCode], urlRequest);
 //                [data release];
                 NSString * errorName = (data == nil ? @"Bad response from server" : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 				SnSLogE(@"%@ - Status Code %i", errorName, [urlResponse statusCode]);
@@ -250,7 +250,7 @@ SnSURLCache ** urlCacheInstances = nil;
             }
             else if (data == nil)
             {
-                SnSLogD(@"There are no data regarding the URL '%@'", url);
+                SnSLogD(@"There are no data regarding the URL '%@'", urlRequest);
             }
             else
             {
@@ -262,7 +262,7 @@ SnSURLCache ** urlCacheInstances = nil;
         }
         else
         {
-            SnSLogD(@"The data is in local cache regarding the URL '%@'", url);
+            SnSLogD(@"The data is in local cache regarding the URL '%@'", urlRequest);
             // We duplicate the data, in order to make sure that there will be no memory corruption
             data = [[NSData alloc] initWithData:[cachedUrlResponse data]];
         }
@@ -498,7 +498,7 @@ SnSURLCache ** urlCacheInstances = nil;
             SnSLogI(@"cacheInfo = %@ ", [cacheInfo description]);
             SnSLogI(@"[cacheInfo valueForKey:@\"timestamp\"] = %@ ", [[cacheInfo valueForKey:@"timestamp"] description]);
             SnSLogI(@"timestamp = %@ ", [NSDate dateWithTimeIntervalSince1970:[((NSNumber *)[cacheInfo valueForKey:@"timestamp"]) doubleValue]]);
-            SnSLogI(@"now = %@ ", [[NSDate date]; description]);
+            SnSLogI(@"now = %@ ", [NSDate date]);
             SnSLogI(@"type = %@ ", [[cacheInfo valueForKey:@"type"] description]);
             
             if ([self dataIsAvailable:cacheInfo withoutNetwork:YES withCachePolicy:[urlRequest cachePolicy]]) 
