@@ -133,7 +133,13 @@
 
 - (void)onTapMainView_:(id)sender
 {
-	if (!enabled_)
+    BOOL shouldTap = YES;
+    
+    if ([delegate_ respondsToSelector:@selector(dropList:shouldReceiveTap:)]) {
+        shouldTap = [delegate_ dropList:self shouldReceiveTap:[self.gestureRecognizers firstObject]];
+    }
+    
+	if (!enabled_ || !shouldTap)
 		return;
 	
 	if ([delegate_ respondsToSelector:@selector(didTapDropListView:)])
@@ -185,6 +191,8 @@
 {
 	if (!enabled_)
 		return;
+ 
+    [scrollview_.layer removeAllAnimations];
     
     // warn delegate scroll view is about to open
 	if ([delegate_ respondsToSelector:@selector(dropList:willOpenScrollView:)])
@@ -213,6 +221,8 @@
     
 	// animate
 	[UIView animateWithDuration:0.3f
+                          delay:0
+                        options:UIViewAnimationOptionBeginFromCurrentState
 					 animations:^{
 						 scrollview_.frame = CGRectMake(SnSViewX(scrollview_),
 														SnSViewY(scrollview_),
@@ -249,6 +259,8 @@
 	
 	// animate move back and when done, remove from super view
 	[UIView animateWithDuration:0.3f
+                          delay:0
+                        options:UIViewAnimationOptionBeginFromCurrentState
 					 animations:^{
 						 scrollview_.frame = CGRectMake(SnSViewX(scrollview_), SnSViewY(scrollview_), SnSViewW(scrollview_), 0);
 					 }
