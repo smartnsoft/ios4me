@@ -28,6 +28,8 @@
 - (void)dropList:(SnSDropListView*)iDropList willCloseScrollView:(UIScrollView*)iScrollView;
 - (void)dropList:(SnSDropListView*)iDropList didCloseScrollView:(UIScrollView*)iScrollView;
 
+- (BOOL)dropList:(SnSDropListView*)iDropList shouldReceiveTap:(UIGestureRecognizer*)iGesture;
+
 @end
 
 @protocol SnSDropListDataSource <NSObject>

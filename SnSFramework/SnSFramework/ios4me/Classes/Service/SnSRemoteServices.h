@@ -48,6 +48,7 @@ typedef enum SnSImageRetrievalOption
  *	@param	iRequest		The request that need preparation
  */
 - (void)prepareRequest:(ASIHTTPRequest*)iRequest;
+- (void)prepareImageRequest:(NSURLRequest*)iRequest;
 
 /**
  *	Override this default behaviour method to customize string format that is used

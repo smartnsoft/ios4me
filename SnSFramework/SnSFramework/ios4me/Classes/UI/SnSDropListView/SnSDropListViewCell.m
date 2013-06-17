@@ -84,7 +84,7 @@
     titleLabel_.textColor = titleLabelDefaultColor_;
 }
 
--(void)setTitleLabelFont:(UIColor *)titleLabelFont
+-(void)setTitleLabelFont:(UIFont *)titleLabelFont
 {
     SnSReleaseAndNil(titleLabelFont_);
     

@@ -66,21 +66,19 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
 {
 	[self validateAndSaveCriticalApplicationData];
 	
-//	UIAlertView *alert =
-//		[[[UIAlertView alloc] initWithTitle:@"Unhandled exception"
-//									message:[NSString stringWithFormat:@"%@%@",
-//											 @"You can try to continue but the application may be unstable.\n\n",
-//											 @"Debug details will be logged"]
-//								   delegate:self
-//						  cancelButtonTitle:NSLocalizedString(@"Quit", nil)
-//						  otherButtonTitles:NSLocalizedString(@"Continue", nil), nil]
-//		autorelease];
-//	[alert show];
-    
-    BOOL resume = YES;
-    [[SnSApplicationController instance] handleException:self exception:exception resume:&resume];
-    
-	SnSLogE(@"%@", [exception reason]);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unhandled exception"
+                                                        message:[NSString stringWithFormat:@"%@%@",
+                                                                 @"You can try to continue but the application may be unstable.\n\n",
+                                                                 @"Debug details will be logged"]
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Quit", nil)
+                                              otherButtonTitles:NSLocalizedString(@"Continue", nil), nil];
+        [alert show];
+        [alert release];
+    });
+	
+    SnSLogE(@"%@", [exception reason]);
 	SnSLogE(@"%@", [[exception userInfo] objectForKey:UncaughtExceptionHandlerAddressesKey]);
 
 	CFRunLoopRef runLoop = CFRunLoopGetCurrent();

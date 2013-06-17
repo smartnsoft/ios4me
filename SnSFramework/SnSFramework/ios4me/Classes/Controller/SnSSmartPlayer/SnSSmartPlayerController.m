@@ -535,7 +535,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)pause
 {
-    paused_ == YES;
+    paused_ = YES;
     
     [self.player pause];
 }
@@ -1013,37 +1013,44 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)playButtonsEnabled:(BOOL)enabled
 {
-    [playButtons_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in playButtons_)
+        button.enabled = enabled;
 }
 
 - (void)pauseButtonsEnabled:(BOOL)enabled
 {
-    [pauseButtons_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in pauseButtons_)
+        button.enabled = enabled;
 }
 
 - (void)stopButtonsEnabled:(BOOL)enabled
 {
-    [stopButtons_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in stopButtons_)
+        button.enabled = enabled;
 }
 
 - (void)volumeSlidersEnabled:(BOOL)enabled
 {
-    [volumeSliders_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in volumeSliders_)
+        button.enabled = enabled;
 }
 
 - (void)scrubbersSlidersEnabled:(BOOL)enabled
 {
-    [scrubberSliders_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in scrubberSliders_)
+        button.enabled = enabled;
 }
 
 - (void)subAreasEnabled:(BOOL)enabled
 {
-    [subAreas_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in subAreas_)
+        button.enabled = enabled;
 }
 
 - (void)playerViewsEnabled:(BOOL)enabled
 {
-    [playerViews_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in playerViews_)
+        button.enabled = enabled;
 }
 
 # pragma mark -

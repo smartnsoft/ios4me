@@ -135,6 +135,7 @@
 - (IBAction)beginSeekingForward;
 - (void)endSeeking;
 
+- (void)initBufferProgress;
 - (void)initScrubberTimer;
 - (void)syncScrubber;
 - (void)playButtonsEnabled:(BOOL)enabled;
