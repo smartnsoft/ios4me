@@ -74,7 +74,7 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
                                                        delegate:self
                                               cancelButtonTitle:NSLocalizedString(@"Quit", nil)
                                               otherButtonTitles:NSLocalizedString(@"Continue", nil), nil];
-        [alert show];
+       // [alert show]; // Fix for Paruvendu - Hide exception alertView
         [alert release];
     });
 	
