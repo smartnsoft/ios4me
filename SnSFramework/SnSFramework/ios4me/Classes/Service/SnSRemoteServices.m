@@ -169,7 +169,7 @@
     [self prepareImageRequest:request];
     
     [imageview setImageWithURLRequest:request
-                     placeholderImage:nil
+                     placeholderImage:imageview.image
                               success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                   SnSLogD(@"[RemoteServices] - success image retrieval of : %@[%@]", request.URL, NSStringFromCGSize(image.size));
                                   

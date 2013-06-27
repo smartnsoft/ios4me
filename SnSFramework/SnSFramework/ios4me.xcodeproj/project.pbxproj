@@ -207,14 +207,6 @@
 		17D9BC1D5C0E492DB7ADD86A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		803BC91C12A6BEF100336B25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8050503214065564006A9B23 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
-		8050503314065564006A9B23 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
-		8050503414065564006A9B23 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
-		8050503514065564006A9B23 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
-		8050503614065564006A9B23 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
-		8050503714065564006A9B23 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
-		8050503814065564006A9B23 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
-		8050503914065564006A9B23 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Resolutions.h"; sourceTree = "<group>"; };
 		80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Resolutions.m"; sourceTree = "<group>"; };
 		9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+SnSSmartPlayer.h"; sourceTree = "<group>"; };
@@ -503,7 +495,6 @@
 				04ADDAEF14ED46EF00C2087E /* iOSFramework.sh */,
 				04756103140B8A3A00C0DF6C /* Makefile */,
 				04ADDAF014ED470200C2087E /* Classes */,
-				8050501E14064E22006A9B23 /* Resources */,
 				0475491C17422F860062D5BE /* Dependencies */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -535,29 +526,6 @@
 				04ADDAEB14ED46DD00C2087E /* ios4me.plist */,
 			);
 			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		8050501E14064E22006A9B23 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8050503114065564006A9B23 /* Images */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		8050503114065564006A9B23 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				8050503214065564006A9B23 /* blackArrow.png */,
-				8050503314065564006A9B23 /* blackArrow@2x.png */,
-				8050503414065564006A9B23 /* blueArrow.png */,
-				8050503514065564006A9B23 /* blueArrow@2x.png */,
-				8050503614065564006A9B23 /* grayArrow.png */,
-				8050503714065564006A9B23 /* grayArrow@2x.png */,
-				8050503814065564006A9B23 /* whiteArrow.png */,
-				8050503914065564006A9B23 /* whiteArrow@2x.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		9CACA02115C96DF3001F331B /* SnSSmartPlayer */ = {
