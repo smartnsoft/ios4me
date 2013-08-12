@@ -177,7 +177,7 @@
                                   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                                       UIImage* resizedImage = image;
                                       
-                                      if ([iBindingView isKindOfClass:[UIImageView class]])
+                                      if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeToBinding))
                                           resizedImage = [image resizedImage:imageview.bounds.size
                                                         interpolationQuality:kCGInterpolationMedium];
                                       
