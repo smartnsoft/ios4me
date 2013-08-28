@@ -79,7 +79,6 @@
 		04F4BDAA15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4BDA715F103E3004D5180 /* NSDictionary+SnSExtension.m */; };
 		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
-		7C75B00A2D524F51B8C564DA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D9BC1D5C0E492DB7ADD86A /* libPods.a */; };
 		80F008CE164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */; };
 		80F008D0164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */; };
 		9CACA02A15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */; };
@@ -92,6 +91,7 @@
 		9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACA02915C96DF3001F331B /* SnSSmartSubtitleView.m */; };
 		BE2A98DD16D2413C00C63101 /* SnSStoreObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = BE2A98DB16D2413C00C63101 /* SnSStoreObserver.h */; };
 		BE2A98DE16D2413C00C63101 /* SnSStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2A98DC16D2413C00C63101 /* SnSStoreObserver.m */; };
+		CBC02E543D964706ACAA864D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D9BC1D5C0E492DB7ADD86A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,6 +207,7 @@
 		17D9BC1D5C0E492DB7ADD86A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		803BC91C12A6BEF100336B25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		80BD005F17CE969300D53B1D /* ios4me.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = ios4me.podspec; path = ../../ios4me.podspec; sourceTree = "<group>"; };
 		80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Resolutions.h"; sourceTree = "<group>"; };
 		80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Resolutions.m"; sourceTree = "<group>"; };
 		9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+SnSSmartPlayer.h"; sourceTree = "<group>"; };
@@ -234,7 +235,7 @@
 				04ADDA4B14ED195500C2087E /* StoreKit.framework in Frameworks */,
 				04ADDA4D14ED195500C2087E /* Foundation.framework in Frameworks */,
 				04ADDA4E14ED195500C2087E /* CFNetwork.framework in Frameworks */,
-				7C75B00A2D524F51B8C564DA /* libPods.a in Frameworks */,
+				CBC02E543D964706ACAA864D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +493,7 @@
 		0867D691FE84028FC02AAC07 /* SnSFramework */ = {
 			isa = PBXGroup;
 			children = (
+				80BD005F17CE969300D53B1D /* ios4me.podspec */,
 				04ADDAEF14ED46EF00C2087E /* iOSFramework.sh */,
 				04756103140B8A3A00C0DF6C /* Makefile */,
 				04ADDAF014ED470200C2087E /* Classes */,
@@ -656,6 +658,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -739,15 +742,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
-					"${PODS_HEADERS_SEARCH_PATHS}/**",
+				GCC_VERSION = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(PROJECT)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -765,15 +765,12 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
-					"${PODS_HEADERS_SEARCH_PATHS}/**",
+				GCC_VERSION = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(PROJECT)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};
