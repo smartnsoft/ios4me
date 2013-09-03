@@ -146,6 +146,7 @@ typedef struct SnSStackPanningStatus
  * Removes the current controller from the stack and present the previous one
  */
 - (void)popCurrentController;
+- (void)popCurrentControllerAnimated:(BOOL)animated;
 
 /*! 
  * If a user selects pushes a new controller from an existing controller (not the last one)

@@ -537,7 +537,7 @@
             
 			[self shiftView:aController.view
 				 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(aController.view))
-                   animated:YES
+                   animated:iAnimated
 				 completion:^(BOOL completed) {
                      // View hidden, disable shadow
                      [aController shadowEnabled:NO];
@@ -576,11 +576,15 @@
 
 - (void)popCurrentController
 {
+    [self popCurrentControllerAnimated:NO];
+}
+
+- (void)popCurrentControllerAnimated:(BOOL)animated {
     if (_stackControllers.count > 2)
     {
         SnSStackSubViewController* c = [_stackControllers objectAtIndex:_stackControllers.count-2];
         
-        [self removeControllersFromController:c animated:YES];
+        [self removeControllersFromController:c animated:animated];
     }
 }
 
