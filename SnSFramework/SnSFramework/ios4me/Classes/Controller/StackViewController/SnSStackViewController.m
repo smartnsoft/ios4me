@@ -581,7 +581,7 @@
 
 - (void)popCurrentController
 {
-    [self popCurrentControllerAnimated:NO];
+    [self popCurrentControllerAnimated:YES];
 }
 
 - (void)popCurrentControllerAnimated:(BOOL)animated {
