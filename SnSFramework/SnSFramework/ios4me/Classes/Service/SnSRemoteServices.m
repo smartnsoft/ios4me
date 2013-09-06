@@ -12,7 +12,6 @@
 #import "ASIDownloadCache.h"
 #import "SnSAbstractCache.h"
 #import "SnSCacheChecker.h"
-//#import "UIImageView+AFNetworking.h"
 #import "UIImageView+SnSExtension.h"
 #import "SnSLog.h"
 #import "UIImage+SnSExtension.h"
@@ -199,7 +198,7 @@
     ASIHTTPRequest *request	= [ASIHTTPRequest requestWithURL:iURL];
     [self prepareRequest:request];
     
-    [imageview setImageWithURLRequest:request
+    [imageview setImageWithURLHTTPRequest:request
                      placeholderImage:imageview.image
                               success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                   //SnSLogD(@"[RemoteServices] - success image retrieval of : %@[%@]", request.URL, NSStringFromCGSize(image.size));

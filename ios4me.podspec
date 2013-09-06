@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
   
   s.ios.dependency        'ASIHTTPRequest', '~> 1.8.1'
   #s.ios.dependency        'AFNetworking', '~> 1.3.2'
-  s.ios.dependency        'MKNetworkKit', '~> 0.87'
+  #s.ios.dependency        'MKNetworkKit', '~> 0.87'
 
 end
