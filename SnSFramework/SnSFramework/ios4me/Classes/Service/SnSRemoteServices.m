@@ -66,7 +66,7 @@
 	
 }
 
-- (void)prepareImageRequest:(id)iRequest
+- (void)prepareImageRequest:(ASIHTTPRequest*)iRequest
 {
     SnSLogW(@"This method will have a default behaviour and should be overwritten in your children class %@", [self class]);
 }
@@ -163,40 +163,8 @@
 	if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeURL))
 		iURL = [self urlForResizingServices:iURL binding:(UIImageView*)iBindingView];
 	
-//    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:iURL];
-//    [self prepareImageRequest:request];
-//    
-//    [imageview setImageWithURLRequest:request
-//                     placeholderImage:imageview.image
-//                              success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-//                                  SnSLogD(@"[RemoteServices] - success image retrieval of : %@[%@]", request.URL, NSStringFromCGSize(image.size));
-//                                  
-//                                  // resize image if needed in a separate thread so that the main thread is not penalized
-//                                  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//                                      UIImage* resizedImage = image;
-//                                      
-//                                      if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeToBinding))
-//                                          resizedImage = [image resizedImage:imageview.bounds.size
-//                                                        interpolationQuality:kCGInterpolationMedium];
-//                                      
-//                                      // update image view on main thread
-//                                      dispatch_async(dispatch_get_main_queue(), ^{
-//                                          imageview.image = resizedImage;
-//                                          
-//                                          if (iCompletionBlock)
-//                                              iCompletionBlock(resizedImage);
-//                                      });
-//                                  });
-//                              }
-//                              failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-//                                  SnSLogE(@"[RemoteServices] - failed image retrieval of : %@ : ", request.URL, error.localizedDescription);
-//                                  
-//                                  if (iErrorBlock)
-//                                      iErrorBlock(error);
-//                              }];
-
     ASIHTTPRequest *request	= [ASIHTTPRequest requestWithURL:iURL];
-    [self prepareRequest:request];
+    [self prepareImageRequest:request];
     
     [imageview setImageWithURLHTTPRequest:request
                      placeholderImage:imageview.image
@@ -226,8 +194,6 @@
                                   if (iErrorBlock)
                                       iErrorBlock(error);
                               }];
-
-
 
 }
 
