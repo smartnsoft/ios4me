@@ -53,19 +53,6 @@
 #pragma mark Preparation
 #pragma mark -
 
-- (void)prepareRequest:(ASIHTTPRequest*)iRequest
-{
-	SnSLogW(@"This method will have a default behaviour and should be overwritten in your children class %@", [self class]);
-	
-    if ([iRequest isKindOfClass:[ASIHTTPRequest class]])
-    {
-        [iRequest setCachePolicy:ASIOnlyLoadIfNotCachedCachePolicy];
-        [iRequest setCacheStoragePolicy:ASICacheForSessionDurationCacheStoragePolicy];
-        [iRequest setDownloadCache:[ASIDownloadCache sharedCache]];
-    }
-	
-}
-
 - (void)prepareImageRequest:(ASIHTTPRequest*)iRequest
 {
     SnSLogW(@"This method will have a default behaviour and should be overwritten in your children class %@", [self class]);
@@ -106,7 +93,7 @@
 	// Checking ASI Cache
 	//------------------------------
 	ASIHTTPRequest* aRequest = [ASIHTTPRequest requestWithURL:iURL];
-	[self prepareRequest:aRequest];
+	[self prepareImageRequest:aRequest];
 	return [[ASIDownloadCache sharedCache] isCachedDataCurrentForRequest:aRequest];
 }
 

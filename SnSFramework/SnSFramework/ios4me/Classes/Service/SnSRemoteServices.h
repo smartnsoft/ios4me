@@ -47,7 +47,6 @@ typedef enum SnSImageRetrievalOption
  *	or caching properties.
  *	@param	iRequest		The request that need preparation
  */
-- (void)prepareRequest:(ASIHTTPRequest*)iRequest;
 - (void)prepareImageRequest:(ASIHTTPRequest*)iRequest;
 
 /**

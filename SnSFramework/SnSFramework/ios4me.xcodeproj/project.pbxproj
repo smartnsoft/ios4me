@@ -79,6 +79,8 @@
 		04F4BDAA15F103E3004D5180 /* NSDictionary+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4BDA715F103E3004D5180 /* NSDictionary+SnSExtension.m */; };
 		04FB834D14F68150004754E7 /* SnSExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB834B14F68150004754E7 /* SnSExceptionHandler.h */; };
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
+		80C38FDC17F2484100F61D6C /* UIImageView+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C38FDA17F2484100F61D6C /* UIImageView+SnSExtension.h */; };
+		80C38FDD17F2484100F61D6C /* UIImageView+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C38FDB17F2484100F61D6C /* UIImageView+SnSExtension.m */; };
 		80F008CE164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */; };
 		80F008D0164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */; };
 		9CACA02A15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */; };
@@ -208,6 +210,8 @@
 		803BC91A12A6BEF100336B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		803BC91C12A6BEF100336B25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		80BD005F17CE969300D53B1D /* ios4me.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = ios4me.podspec; path = ../../ios4me.podspec; sourceTree = "<group>"; };
+		80C38FDA17F2484100F61D6C /* UIImageView+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SnSExtension.h"; sourceTree = "<group>"; };
+		80C38FDB17F2484100F61D6C /* UIImageView+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SnSExtension.m"; sourceTree = "<group>"; };
 		80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Resolutions.h"; sourceTree = "<group>"; };
 		80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Resolutions.m"; sourceTree = "<group>"; };
 		9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+SnSSmartPlayer.h"; sourceTree = "<group>"; };
@@ -362,6 +366,8 @@
 		04ADDB2414ED470200C2087E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				80C38FDA17F2484100F61D6C /* UIImageView+SnSExtension.h */,
+				80C38FDB17F2484100F61D6C /* UIImageView+SnSExtension.m */,
 				04ADDB2514ED470200C2087E /* NSObject+SnSExtension.h */,
 				04ADDB2614ED470200C2087E /* NSObject+SnSExtension.m */,
 				04ADDB2714ED470200C2087E /* NSString+SnSExtension.h */,
@@ -575,6 +581,7 @@
 				80F008CE164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */,
 				BE2A98DD16D2413C00C63101 /* SnSStoreObserver.h in Headers */,
 				040189EF174CFCB600116001 /* SnSFramework.h in Headers */,
+				80C38FDC17F2484100F61D6C /* UIImageView+SnSExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +728,7 @@
 				80F008D0164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */,
 				BE2A98DE16D2413C00C63101 /* SnSStoreObserver.m in Sources */,
 				040189F0174CFCB600116001 /* SnSFramework.m in Sources */,
+				80C38FDD17F2484100F61D6C /* UIImageView+SnSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
