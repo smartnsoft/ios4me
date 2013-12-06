@@ -388,11 +388,9 @@
 			{
                 CGPoint _point = UIDeviceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ?
                                     viewMoving.framePortrait.origin : viewMoving.frameLandscape.origin;
-//				x = VIEW_X(viewMoving) -_panningStatus.displacement;
 				
 				[self shiftView:viewMoving
                     toPosition:_point
-//					 toPosition:CGPointMake(x, VIEW_Y(_panningStatus.viewMoving))
 					   completion:viewShiftEnded];
 			}
         }
