@@ -89,6 +89,11 @@
 #pragma mark Properties
 #pragma mark -
 
+- (CGFloat)offsetShift
+{
+    return UIDeviceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ? self.offsetShiftPortrait : self.offsetShiftLandscape;
+}
+
 - (SnSStackSubView *)stackview
 {
     UIView* aView = self.view;
@@ -127,13 +132,10 @@
         
         // Shift back frame if already shifted
         if ([_stackController isViewShifted:self.stackview])
-            aFutureFrame = CGRectMake(aFutureFrame.origin.x-_stackController.offsetShift,
-                                      aFutureFrame.origin.y,
-                                      aFutureFrame.size.width,
-                                      aFutureFrame.size.height);
+            aFutureFrame = (CGRect){aFutureFrame.origin.x - self.stackview.offsetShift,
+                                        aFutureFrame.origin.y, aFutureFrame.size};
         
         self.stackview.frame = aFutureFrame;
-        
         [UIView commitAnimations];
     }
 }

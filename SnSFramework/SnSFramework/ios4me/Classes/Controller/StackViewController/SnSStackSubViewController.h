@@ -26,17 +26,21 @@
 	CGRect	_framePortrait;
 	CGRect	_frameLandscape;
 	
-//	SnSStackSubView* _stackSubView;
-	
+    CGFloat _offsetShiftPortrait;
+    CGFloat _offsetShiftLandscape;
+    
 	SnSStackViewController* _stackController;
-	
-	
+		
 	BOOL _isShifted;
 	BOOL _enablePan;
 }
 
+@property (nonatomic, assign) CGFloat offsetShiftPortrait;
+@property (nonatomic, assign) CGFloat offsetShiftLandscape;
+
 @property (nonatomic, assign) CGRect framePortrait;
 @property (nonatomic, assign) CGRect frameLandscape;
+
 @property (nonatomic, assign) SnSStackViewController* stackController;
 @property (nonatomic, assign, getter = isPanEnabled) BOOL enablePan;
  
@@ -45,5 +49,6 @@
 - (SnSStackSubView*)stackview;
 - (void)shadowEnabled:(BOOL)enabled;
 
+- (CGFloat)offsetShift;
 
 @end

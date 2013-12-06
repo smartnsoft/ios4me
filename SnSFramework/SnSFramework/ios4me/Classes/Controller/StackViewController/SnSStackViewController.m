@@ -404,7 +404,7 @@
 				
 				// do not automatically shift back center view if menu cover is activated
 				if (!canCoverMenu_)
-					[self shiftView:_centerView offset:_offsetShift animated:YES];
+					[self shiftView:_centerView offset:_centerView.offsetShift animated:YES];
 				
 				// remove the current outer controller
 				[self removeControllersFromController:controller animated:YES];
@@ -477,16 +477,16 @@
     
 	SnSStackSubView* aOldCenterView = _centerView;
 	SnSStackSubView* aOldOuterView = _outerView;
-	
+    
 	// Update view order
 	[self updateInnerViews];
 	
 	// Only shift once
 	if (![self isViewShifted:aOldCenterView])
-		[self shiftView:aOldCenterView offset:-self.offsetShift animated:YES];
+		[self shiftView:aOldCenterView offset:-aOldCenterView.offsetShift animated:YES];
 	
 	if (![self isViewShifted:aOldOuterView])
-		[self shiftView:aOldOuterView offset:-self.offsetShift animated:YES];
+		[self shiftView:aOldOuterView offset:-aOldOuterView.offsetShift animated:YES];
 	
 	// If animation is wanted, start by putting the controller to the extra edge of the master view
 	if (iAnimated)
@@ -499,7 +499,7 @@
 	// Next move the controller to its origin position
 	[self shiftViewToOrigin:iController.stackview animated:iAnimated completion:^(BOOL ended)
      {
-         if (canCoverMenu_ && VIEW_X(_centerView) < _offsetShift &&
+         if (canCoverMenu_ && VIEW_X(_centerView) < _centerView.offsetShift &&
              iController.stackview != _centerView && ended)
              [iController shadowEnabled:NO];
      }];
@@ -705,7 +705,7 @@
     }
 	
 	// now if we can cover the menu and its already covered shift also from offset
-	if (canCoverMenu_ && VIEW_X(_centerView) < _offsetShift && iView != _centerView)
+	if (canCoverMenu_ && VIEW_X(_centerView) < _centerView.offsetShift && iView != _centerView)
 		[self shiftView:iView toPosition:CGPointMake(0, VIEW_Y(iView)) animated:iAnimated completion:iBlock];
 	
 	// Start by shifting the view to its original position

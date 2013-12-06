@@ -71,8 +71,16 @@
 	{
 		_framePortrait = CGRectZero;
 		_frameLandscape = CGRectZero;
+
+        _offsetShiftLandscape = 185;
+        _offsetShiftPortrait = 185;
     }
     return self;
+}
+
+- (CGFloat)offsetShift
+{
+    return UIDeviceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ? self.offsetShiftPortrait : self.offsetShiftLandscape;
 }
 
 - (NSString *)description
