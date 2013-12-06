@@ -386,10 +386,13 @@
 			// menu is not covered so simply move back the moving view
 			else
 			{
-				x = VIEW_X(viewMoving) -_panningStatus.displacement;
+                CGPoint _point = UIDeviceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ?
+                                    viewMoving.framePortrait.origin : viewMoving.frameLandscape.origin;
+//				x = VIEW_X(viewMoving) -_panningStatus.displacement;
 				
 				[self shiftView:viewMoving
-					 toPosition:CGPointMake(x, VIEW_Y(_panningStatus.viewMoving))
+                    toPosition:_point
+//					 toPosition:CGPointMake(x, VIEW_Y(_panningStatus.viewMoving))
 					   completion:viewShiftEnded];
 			}
         }
