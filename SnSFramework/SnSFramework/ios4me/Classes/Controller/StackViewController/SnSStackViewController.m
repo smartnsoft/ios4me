@@ -365,8 +365,6 @@
         // unless menu cover is allowed
 		if (_panningStatus.direction == kPanningDirectionLeft)
         {
-			CGFloat x = 0;
-			
 			// if can cover the menu we must check if other views
 			// should be moved too
 			if (canCoverMenu_ && VIEW_X(viewMoving) < VIEW_WIDTH(_menuView))
