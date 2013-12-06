@@ -46,9 +46,15 @@
 {
 	[super onRetrieveDisplayObjects:view];
 	
-	// Default to YES
+    self.shadowLayer = [CALayer layer];
+    self.shadowLayer.shadowOpacity = 50.f;
+    self.shadowLayer.shadowRadius = 7.f;
+    self.shadowLayer.shadowOffset = CGSizeMake(0, 1);
+    
 	self.enablePan = YES;
-    [self shadowEnabled:NO];
+    self.defaultShadow = NO;
+    
+    self.enableShadow = self.defaultShadow;
 }
 
 /**
@@ -172,16 +178,22 @@
 #pragma mark Utils
 #pragma mark -
 
-- (void)shadowEnabled:(BOOL)enabled
+- (void)setEnableShadow:(BOOL)enableShadow
 {
-    SnSLogD(@"Shadow %@ on %@.", (enabled ? @"enabled" : @"disabled"), self);
-    self.view.layer.shadowColor = (enabled ? [UIColor blackColor].CGColor : nil);
-    self.view.layer.shadowOpacity = (enabled ? 50.f : 0.f);
-    self.view.layer.shadowRadius = (enabled ? 7.f : 0.f);
-    self.view.layer.shadowOffset = CGSizeMake(0, 1);
-    self.view.layer.shadowPath = (enabled ? [UIBezierPath bezierPathWithRect:self.view.bounds].CGPath : nil);
+    if (enableShadow == _enableShadow)
+        return ;
     
-    self.view.clipsToBounds = NO;
+    self.shadowLayer.delegate = self.view.layer.delegate;
+    self.shadowLayer.backgroundColor = self.view.layer.backgroundColor;
+    self.shadowLayer.frame = (CGRect){CGPointZero, self.view.layer.frame.size};
+    self.shadowLayer.shadowPath = [UIBezierPath bezierPathWithRect:self.shadowLayer.bounds].CGPath;
+    
+    if ((_enableShadow = enableShadow))
+        [self.view.layer insertSublayer:self.shadowLayer atIndex:0];
+    else
+        [self.shadowLayer removeFromSuperlayer];
+    
+    self.view.clipsToBounds = (_enableShadow ? NO : YES);
 }
 
 @end
