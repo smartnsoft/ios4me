@@ -163,8 +163,6 @@
  */
 - (void)loadView
 {
-	SnSLogD(@"");
-	
 	[super loadView];
 	
 	[delegate loadView:self.view];
@@ -172,8 +170,6 @@
 
 - (void)viewDidLoad
 {
-	SnSLogD(@"");
-	
 	[super viewDidLoad];
 	
 	[delegate viewDidLoad];
@@ -181,8 +177,6 @@
 
 - (void)viewDidUnload
 {
-	SnSLogD(@"");
-	
 	[super viewDidUnload];
 	
 	[delegate viewDidUnload];
@@ -191,8 +185,6 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	SnSLogD(@"");
-	
 	[super viewWillAppear:animated];
 	
 	[delegate viewWillAppear:animated];
@@ -200,8 +192,6 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	SnSLogD(@"");
-	
 	[delegate viewDidAppear:animated];
 
 	[super viewDidAppear:animated];
@@ -209,8 +199,6 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-	SnSLogD(@"");
-	
 	[delegate viewWillDisappear:animated];
 	
 	[super viewWillDisappear:animated];
@@ -218,8 +206,6 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-	SnSLogD(@"");
-	
 	[delegate viewDidDisappear:animated];
 	
 	[super viewDidDisappear:animated];
@@ -227,8 +213,6 @@
 
 - (void)didReceiveMemoryWarning
 {
-	SnSLogW(@"");
-	
 	[super didReceiveMemoryWarning];
 }
 

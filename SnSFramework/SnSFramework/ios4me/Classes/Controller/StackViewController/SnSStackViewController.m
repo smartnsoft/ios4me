@@ -426,12 +426,13 @@
                              direction:_panningStatus.direction];
         }
 	}
-	
-	SnSLogD(@"%@", [NSString stringWithFormat:@"Panning: view: %@ - location: (%.0f %.0f) - direction:%d - displacement:%d -",
-             _panningStatus.viewMoving,
-             _panningStatus.location.x,_panningStatus.location.y,
-             _panningStatus.direction,
-             _panningStatus.displacement]);
+
+// LOG Clean
+//	SnSLogD(@"%@", [NSString stringWithFormat:@"Panning: view: %@ - location: (%.0f %.0f) - direction:%d - displacement:%d -",
+//             _panningStatus.viewMoving,
+//             _panningStatus.location.x,_panningStatus.location.y,
+//             _panningStatus.direction,
+//             _panningStatus.displacement]);
 	
 }
 
