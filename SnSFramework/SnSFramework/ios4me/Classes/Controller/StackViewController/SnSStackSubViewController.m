@@ -188,12 +188,23 @@
     self.shadowLayer.frame = (CGRect){CGPointZero, self.view.layer.frame.size};
     self.shadowLayer.shadowPath = [UIBezierPath bezierPathWithRect:self.shadowLayer.bounds].CGPath;
     
-    if ((_enableShadow = enableShadow))
-        [self.view.layer insertSublayer:self.shadowLayer atIndex:0];
-    else
-        [self.shadowLayer removeFromSuperlayer];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ((_enableShadow = enableShadow))
+            [self.view.layer insertSublayer:self.shadowLayer atIndex:0];
+        else
+            [self.shadowLayer removeFromSuperlayer];
+    });
     
     self.view.clipsToBounds = (_enableShadow ? NO : YES);
+}
+
+#pragma mark - Basics -
+
+- (void)dealloc
+{
+    self.shadowLayer = nil;
+    
+    [super dealloc];
 }
 
 @end
