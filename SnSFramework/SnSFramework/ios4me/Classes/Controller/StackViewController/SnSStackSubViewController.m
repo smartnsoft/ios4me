@@ -47,7 +47,7 @@
 	[super onRetrieveDisplayObjects:view];
 	
     self.shadowLayer = [CALayer layer];
-    self.shadowLayer.shadowOpacity = 50.f;
+    self.shadowLayer.shadowOpacity = 0.5f;
     self.shadowLayer.shadowRadius = 7.f;
     self.shadowLayer.shadowOffset = CGSizeMake(0, 1);
     
@@ -183,7 +183,6 @@
     if (enableShadow == _enableShadow)
         return ;
     
-    self.shadowLayer.delegate = self.view.layer.delegate;
     self.shadowLayer.backgroundColor = self.view.layer.backgroundColor;
     self.shadowLayer.frame = (CGRect){CGPointZero, self.view.layer.frame.size};
     self.shadowLayer.shadowPath = [UIBezierPath bezierPathWithRect:self.shadowLayer.bounds].CGPath;
