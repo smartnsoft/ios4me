@@ -129,7 +129,7 @@
 									   8, 
 									   (4 * self.size.width), 
 									   CGColorSpaceCreateDeviceRGB(), 
-									   kCGImageAlphaPremultipliedFirst);
+									   (CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
 	}
     
     // Rotate and/or flip the image if required by its orientation
