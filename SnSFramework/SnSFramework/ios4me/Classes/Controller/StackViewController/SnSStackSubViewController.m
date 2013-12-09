@@ -50,6 +50,7 @@
     self.shadowLayer.shadowOpacity = 0.5f;
     self.shadowLayer.shadowRadius = 7.f;
     self.shadowLayer.shadowOffset = CGSizeMake(0, 1);
+    self.shadowLayer.shadowColor = [UIColor blackColor].CGColor;
     
 	self.enablePan = YES;
     self.defaultShadow = NO;
@@ -194,7 +195,8 @@
             [self.shadowLayer removeFromSuperlayer];
     });
     
-    self.view.clipsToBounds = (_enableShadow ? NO : YES);
+    self.view.clipsToBounds = (enableShadow ? NO : YES);
+    self.view.layer.masksToBounds = (enableShadow ? NO : YES);
 }
 
 #pragma mark - Basics -
