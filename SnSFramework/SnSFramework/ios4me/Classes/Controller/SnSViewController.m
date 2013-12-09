@@ -121,58 +121,60 @@
 #pragma mark UIViewController
 #pragma mark -
 
+// Log clean - polution
+
 - (void) loadView
 {
-	SnSLogD(@"%@", NSStringFromClass([self class]));
+//	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[super loadView];
 	[delegate loadView:self.view];
 }
 
 - (void) viewDidLoad
 {
-	SnSLogD(@"%@", NSStringFromClass([self class]));
+//	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[super viewDidLoad];
 	[delegate viewDidLoad];
 }
 
 - (void) viewDidUnload
 {
-	SnSLogD(@"%@", NSStringFromClass([self class]));
+//	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[delegate viewDidUnload];
 	[super viewDidUnload];
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
-	SnSLogD(@"%@", NSStringFromClass([self class]));
+//	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[super viewWillAppear:animated];
 	[delegate viewWillAppear:animated];
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
-	SnSLogD(@"%@", NSStringFromClass([self class]));
+//	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[super viewDidAppear:animated];
 	[delegate viewDidAppear:animated];
 }
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-	SnSLogD(@"%@", NSStringFromClass([self class]));
+//	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[delegate viewWillDisappear:animated];
 	[super viewWillDisappear:animated];
 }
 
 - (void) viewDidDisappear:(BOOL)animated
 {
-	SnSLogD(@"%@", NSStringFromClass([self class]));
+//	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[delegate viewDidDisappear:animated];
 	[super viewDidDisappear:animated];
 }
 
 - (void) didReceiveMemoryWarning
 {
-	SnSLogW(@"%@", NSStringFromClass([self class]));
+//	SnSLogW(@"%@", NSStringFromClass([self class]));
 	[super didReceiveMemoryWarning];
 }
 
