@@ -1,10 +1,10 @@
-/* 
+/*
  * Copyright (C) 2009 Smart&Soft.
  * All rights reserved.
  *
  * The code hereby is the full property of Smart&Soft, SIREN 517 961 744.
  * http://www.smartnsoft.com - contact@smartnsoft.com
- * 
+ *
  * You are not allowed to use the source code or the resulting binary code, nor to modify the source code, without prior permission of the owner.
  */
 
@@ -73,10 +73,10 @@
 
 - (void) dealloc
 {
-	[responderRedirector release]; 
+	[responderRedirector release];
 	[delegate release];
 	[businessObject release];
-	[context release]; 
+	[context release];
 	
 	[super dealloc];
 }
@@ -121,60 +121,93 @@
 #pragma mark UIViewController
 #pragma mark -
 
-// Log clean - polution
-
 - (void) loadView
 {
-//	SnSLogD(@"%@", NSStringFromClass([self class]));
+	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[super loadView];
 	[delegate loadView:self.view];
 }
 
 - (void) viewDidLoad
 {
-//	SnSLogD(@"%@", NSStringFromClass([self class]));
+	SnSLogD(@"%@", NSStringFromClass([self class]));
+    
+    /*
+     ** Fix bug : patch - when the video is fullscreen, viewWillDisappear is called and the controllers are closing (>iOS6)
+     **
+     ** http://stackoverflow.com/questions/14686701/playing-youtube-video-fullscreen-in-uiwebview-on-ios-6
+     ** http://stackoverflow.com/questions/12660857/uiwebview-movie-player-getting-dismissed-ios-6-bug
+     **
+     */
+    // For FullSCreen Enter
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playVideoFullscreenStarted:) name:@"UIMoviePlayerControllerDidEnterFullscreenNotification" object:nil];
+    // For FullSCreen Exit
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playVideoFullscreenFinished:) name:@"UIMoviePlayerControllerDidExitFullscreenNotification" object:nil];
+    isVideoFullscreen = NO;
+    
 	[super viewDidLoad];
 	[delegate viewDidLoad];
 }
 
 - (void) viewDidUnload
 {
-//	SnSLogD(@"%@", NSStringFromClass([self class]));
+	SnSLogD(@"%@", NSStringFromClass([self class]));
 	[delegate viewDidUnload];
 	[super viewDidUnload];
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
-//	SnSLogD(@"%@", NSStringFromClass([self class]));
-	[super viewWillAppear:animated];
-	[delegate viewWillAppear:animated];
+    //Just Check If Flag is TRUE Then Avoid The Execution of Code which Intrupting the Video Playing.
+    if(!isVideoFullscreen)
+        //here avoid the thing which you want. genrally you were stopping the Video when you will leave the This Video view.
+    {
+        SnSLogD(@"%@", NSStringFromClass([self class]));
+        [super viewWillAppear:animated];
+        [delegate viewWillAppear:animated];
+    }
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
-//	SnSLogD(@"%@", NSStringFromClass([self class]));
-	[super viewDidAppear:animated];
-	[delegate viewDidAppear:animated];
+    //Just Check If Flag is TRUE Then Avoid The Execution of Code which Intrupting the Video Playing.
+    if(!isVideoFullscreen)
+        //here avoid the thing which you want. genrally you were stopping the Video when you will leave the This Video view.
+    {
+        SnSLogD(@"%@", NSStringFromClass([self class]));
+        [super viewDidAppear:animated];
+        [delegate viewDidAppear:animated];
+    }
 }
 
 - (void) viewWillDisappear:(BOOL)animated
 {
-//	SnSLogD(@"%@", NSStringFromClass([self class]));
-	[delegate viewWillDisappear:animated];
-	[super viewWillDisappear:animated];
+    //Just Check If Flag is TRUE Then Avoid The Execution of Code which Intrupting the Video Playing.
+    if(!isVideoFullscreen)
+        //here avoid the thing which you want. genrally you were stopping the Video when you will leave the This Video view.
+    {
+        
+        SnSLogD(@"%@", NSStringFromClass([self class]));
+        [delegate viewWillDisappear:animated];
+        [super viewWillDisappear:animated];
+    }
 }
 
 - (void) viewDidDisappear:(BOOL)animated
 {
-//	SnSLogD(@"%@", NSStringFromClass([self class]));
-	[delegate viewDidDisappear:animated];
-	[super viewDidDisappear:animated];
+    //Just Check If Flag is TRUE Then Avoid The Execution of Code which Intrupting the Video Playing.
+    if(!isVideoFullscreen)
+        //here avoid the thing which you want. genrally you were stopping the Video when you will leave the This Video view.
+    {
+        SnSLogD(@"%@", NSStringFromClass([self class]));
+        [delegate viewDidDisappear:animated];
+        [super viewDidDisappear:animated];
+    }
 }
 
 - (void) didReceiveMemoryWarning
 {
-//	SnSLogW(@"%@", NSStringFromClass([self class]));
+	SnSLogW(@"%@", NSStringFromClass([self class]));
 	[super didReceiveMemoryWarning];
 }
 
@@ -204,5 +237,22 @@
 	
 }
 
+/*
+** Fix bug : patch - when the video is fullscreen, viewWillDisappear is called and the controllers are closing (>iOS6)
+**
+** http://stackoverflow.com/questions/14686701/playing-youtube-video-fullscreen-in-uiwebview-on-ios-6
+** http://stackoverflow.com/questions/12660857/uiwebview-movie-player-getting-dismissed-ios-6-bug
+**
+*/
+
+-(void)playVideoFullscreenStarted:(NSNotification *)notification
+{
+    isVideoFullscreen = YES;
+}
+
+-(void)playVideoFullscreenFinished:(NSNotification *)notification
+{
+    isVideoFullscreen = NO;
+}
 
 @end
