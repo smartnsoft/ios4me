@@ -53,6 +53,11 @@
 	return nil;
 }
 
+- (BOOL) isGlobalExceptionHandlerActivated
+{
+    return YES;
+}
+
 - (id<SnSViewControllerInterceptor>) getInterceptor
 {
 	return nil;
@@ -162,8 +167,11 @@
 	// -----------------------------
 	// Install the Global Exception Handler
 	// -----------------------------
-	InstallUncaughtExceptionHandler();
-	
+	if ([self isGlobalExceptionHandlerActivated] == YES)
+    {
+        InstallUncaughtExceptionHandler();
+	}
+    
 }
 
 - (void) applicationWillTerminate:(UIApplication *) application
