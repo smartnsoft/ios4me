@@ -9,7 +9,7 @@ BASE_TEMPLATE_USER_DIR_XCODE4="$HOME/Library/Developer/Xcode/Templates"
 
 BASE_FRAMEWORK_ROOT_DIR=`find /Applications/Xcode*.app/ -name "*.sdk" -type d -maxdepth 8 |xargs -I {} echo "{}/System/Library/Frameworks"`
 BASE_XCODE_USR_DIRECTORY=`find /Applications/Xcode*.app/ -maxdepth 0|xargs -I {} echo {}/Contents/Developer/usr/local/bin`
-BASE_XCODE_VERSION="3 4"
+BASE_XCODE_VERSION="4" #"3 4"
 
 SCRIPT_PATH="$PWD/`dirname $0`"
 PROJECT_NAME="ios4me"
@@ -161,7 +161,7 @@ print_template_banner()
 
 print_ok()
 {
-	echo  "${fg_gr}---------------------------------------------------------------------------" | tee -a $LOGFILE > /dev/tty
+	echo "${fg_gr}---------------------------------------------------------------------------" | tee -a $LOGFILE > /dev/tty
 	echo "${fg_gr}$1" | tee -a $LOGFILE > /dev/tty
 	echo "${fg_gr}---------------------------------------------------------------------------" | tee -a $LOGFILE > /dev/tty
 	echo "${fg_wh}"
@@ -358,15 +358,15 @@ __main__ ()
 
 	print_template_banner "${PROJECT_NAME} Project Template Installer"
 	
-	copy_scripts
+	#copy_scripts
 
-	copy_frameworks
+	#copy_frameworks
 
 	copy_project_templates
 
 	copy_file_templates
 	
-	build_framework
+	#build_framework
 		
 }
 

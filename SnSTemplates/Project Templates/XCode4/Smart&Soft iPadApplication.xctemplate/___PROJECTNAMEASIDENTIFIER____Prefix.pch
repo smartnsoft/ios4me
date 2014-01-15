@@ -21,12 +21,11 @@
 //
 #ifdef __OBJC__
 
-  #import <Foundation/Foundation.h>
-  #import <ASIHTTPFramework/ASIHTTPFramework.h>
-  #import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>	
+	#import <UIKit/UIKit.h>
 
-  // The SnSFramework
-  #import <ios4me/SnSFramework.h>
-  #import "Constants.h"
+	// The ios4me framework
+	#import <ios4me/SnSFramework.h>
+	#import "Constants.h"
 
 #endif

@@ -17,6 +17,20 @@
 	<!-- ****************************************************** -->
 	<key>Definitions</key>
 	<dict>
+		<key>Resources/Icon.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon.png</string>
+		</dict>
+		<key>Resources/Icon@2x.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon@2x.png</string>
+		</dict>
 		<key>Resources/Icon-72.png</key>
 		<dict>
 			<key>Group</key>
@@ -24,12 +38,12 @@
 			<key>Path</key>
 			<string>Resources/Icon-72.png</string>
 		</dict>
-		<key>Resources/Icon-Small-50.png</key>
+		<key>Resources/Icon-72@2x.png</key>
 		<dict>
 			<key>Group</key>
 			<string>Resources</string>
 			<key>Path</key>
-			<string>Resources/Icon-Small-50.png</string>
+			<string>Resources/Icon-72@2x.png</string>
 		</dict>
 		<key>Resources/Icon-Small.png</key>
 		<dict>
@@ -45,26 +59,12 @@
 			<key>Path</key>
 			<string>Resources/Icon-Small@2x.png</string>
 		</dict>
-		<key>Resources/Icon.png</key>
-		<dict>
-			<key>Group</key>
-			<string>Resources</string>
-			<key>Path</key>
-			<string>Resources/Icon.png</string>
-		</dict>
 		<key>Resources/Icon512.png</key>
 		<dict>
 			<key>Group</key>
 			<string>Resources</string>
 			<key>Path</key>
 			<string>Resources/Icon512.png</string>
-		</dict>
-		<key>Resources/Icon@2x.png</key>
-		<dict>
-			<key>Group</key>
-			<string>Resources</string>
-			<key>Path</key>
-			<string>Resources/Icon@2x.png</string>
 		</dict>
 		<key>Resources/iTunesArtwork</key>
 		<dict>
@@ -81,13 +81,22 @@
 	<!-- ****************************************************** -->
 	<key>Nodes</key>
 	<array>
-		<string>Resources/Icon-72.png</string>
-		<string>Resources/Icon-Small-50.png</string>
-		<string>Resources/Icon-Small.png</string>
-		<string>Resources/Icon-Small@2x.png</string>
 		<string>Resources/Icon.png</string>
 		<string>Resources/Icon@2x.png</string>
+		<string>Resources/Icon-76.png</string>
+		<string>Resources/Icon-76@2x.png</string>
+		<string>Resources/Icon-72@2x.png</string>
+		<string>Resources/Icon-72.png</string>
+		<string>Resources/Icon-60@2x.png</string>
+		<string>Resources/Icon-60.png</string>
+		<string>Resources/Icon-50@2x.png</string>
+		<string>Resources/Icon-50.png</string>
+		<string>Resources/Icon-40@2x.png</string>
+		<string>Resources/Icon-40.png</string>
+		<string>Resources/Icon-Small@2x.png</string>
+		<string>Resources/Icon-Small.png</string>
 		<string>Resources/Icon512.png</string>
+		<string>Resources/Icon512@2x.png</string>
 		<string>Resources/iTunesArtwork</string>
 	</array>
 
@@ -104,17 +113,22 @@
 				<key>OTHER_CFLAGS</key>
 				<string>-DNS_BLOCK_ASSERTIONS=1</string>
 			</dict>
+			<key>AppStore</key>
+			<dict>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+			</dict>
 		</dict>
 		<key>SDK</key>
 		<string>iphoneos</string>
 		<key>SharedSettings</key>
 		<dict>
 			<key>ARCHS</key>
-			<string>$(ARCHS_STANDARD_32_BIT)</string>
+			<string>$(ARCHS_STANDARD)</string>
 			<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
 			<string>iPhone Developer</string>
-			<key>GCC_VERSION</key>
-			<string>com.apple.compilers.llvmgcc42</string>
+			<!-- <key>GCC_VERSION</key>
+			<string>com.apple.compilers.llvmgcc42</string> -->
 			<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 			<string>latest_iphoneos</string>
 		</dict>
@@ -133,6 +147,11 @@
 					<key>VALIDATE_PRODUCT</key>
 					<string>YES</string>
 				</dict>
+				<key>AppStore</key>
+				<dict>
+					<key>VALIDATE_PRODUCT</key>
+					<string>YES</string>
+				</dict>
 			</dict>
 			<key>Frameworks</key>
 			<array>
@@ -147,9 +166,8 @@
 				<string>CoreLocation</string>
 				<string>MobileCoreServices</string>
 				<string>StoreKit</string>
-				<string>ASIHTTPFramework</string>
 			</array>
-			<key>SharedSettings</key>
+			<!-- <key>SharedSettings</key>
 			<dict>
 				<key>GCC_THUMB_SUPPORT[arch=armv6]</key>
 				<string></string>
@@ -157,7 +175,7 @@
 				<string>-lz -lsqlite3.0 -all_load -ObjC -lxml2</string>
 				<key>HEADER_SEARCH_PATHS</key>
 				<string>/usr/include/libxml2</string>
-			</dict>
+			</dict> -->
 		</dict>
 	</array>
 </dict>

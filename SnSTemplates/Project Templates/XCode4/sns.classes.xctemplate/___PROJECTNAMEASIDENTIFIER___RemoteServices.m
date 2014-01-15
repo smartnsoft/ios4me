@@ -8,6 +8,8 @@
 
 #import "___FILEBASENAME___.h"
 
+#import <ASIHTTPRequest/ASIDownloadCache.h>
+
 // Categories
 #import "JSON.h"
 

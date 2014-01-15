@@ -21,7 +21,7 @@
 		<string>com.smartnsoft.iosbase</string>
 		<string>com.smartnsoft.classes</string>
 		<!-- <string>com.smartnsoft.framework</string> -->
-		<string>com.smartnsoft.importedclasses</string>
+		<!-- <string>com.smartnsoft.importedclasses</string> -->
 	</array>
 	
 	<!-- ****************************************************** -->

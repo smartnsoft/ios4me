@@ -70,25 +70,11 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 
 - (void) onApplicationDidFinishLaunchingBegin:(UIApplication *)application
 {
-	// Init Google Analytics tracker 
-//	[[GANTracker sharedTracker] startTrackerWithAccountID:GA_UID
-//										   dispatchPeriod:kGANDispatchPeriodSec
-//												 delegate:nil];
-	
-	//  // Flurry Analytics Init 
-	//  [FlurryAPI startSession:FLURRY_APPLICATION_KEY];
-	
-	// Cache init
-	[SnSURLCache instance];
-	
 	
 }
 
 - (void) onApplicationDidFinishLaunchingEnd:(UIApplication *)application
 {
-	//  // Activate Location by Flurry if no already CLLocationManager
-	//  [FlurryAPI startSessionWithLocationServices:FLURRY_APPLICATION_KEY];
-	
 	SnSLogI(@"Application did finish launching");    
 
 	// Register push notification
@@ -107,7 +93,7 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 	UIAlertView*  alertView = [[UIAlertView alloc] initWithTitle:SnSLocalized(@"ApplicationName") 
 														 message:[exception reason]
 														delegate:self 
-											   cancelButtonTitle:NSLocalizedString(@"alertButton_OK", @"") 
+											   cancelButtonTitle:NSLocalizedString(@"button.ok", @"") 
 											   otherButtonTitles:nil];
 	
 	[alertView show];
@@ -140,7 +126,7 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 	UIAlertView*  alertView = [[UIAlertView alloc] initWithTitle:SnSLocalized(@"ApplicationName") 
 														 message:[exception reason]
 														delegate:self 
-											   cancelButtonTitle:NSLocalizedString(@"alertButton_OK", @"") 
+											   cancelButtonTitle:NSLocalizedString(@"button.ok", @"") 
 											   otherButtonTitles:nil];
 	
 	[alertView show];
@@ -157,8 +143,9 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 	NSString *urlTracker = [NSString stringWithFormat:PREFIX_TRACKING, screenName];
 	
 	if ([viewController respondsToSelector:@selector(trackerInfos)]) 
+	{
 		urlTracker = [NSString stringWithFormat:@"%@%@", urlTracker, [viewController performSelector:@selector(trackerInfos)]];
-	
+	}
 	return urlTracker;
 }
 
@@ -209,10 +196,10 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 {
 	SnSLogD(@"url ouverte : %@", [url description]);
 	
-	UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:SnSLocalized(@"applicationName") 
+	UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:SnSLocalized(@"application.name") 
 														 message:[url description]
 														delegate:self 
-											   cancelButtonTitle:SnSLocalized(@"alertButton_OK") 
+											   cancelButtonTitle:SnSLocalized(@"button.ok") 
 											   otherButtonTitles:nil];
 	[alertView show];
 	[alertView release];
