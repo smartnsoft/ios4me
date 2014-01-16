@@ -32,7 +32,7 @@
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>___PACKAGENAME___/___PROJECTNAMEASIDENTIFIER____Prefix.pch</string>
+				<string>___PACKAGENAME___/___PROJECTNAMEASIDENTIFIER___-Prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
 				<string>___PACKAGENAME___/Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
 			</dict>

@@ -9,6 +9,7 @@
 	
 	<key>Ancestors</key>
 	<array>
+		<!--<string>com.apple.dt.unit.emptyApplication</string> -->
 		<string>com.apple.dt.unit.objectiveCApplication</string>
 		<string>com.apple.dt.unit.prefixable</string>
 		<!-- <string>com.apple.dt.unit.cocoaTouchApplication</string> -->
