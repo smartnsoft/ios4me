@@ -165,7 +165,7 @@
 		<dict>
 			<key>Frameworks</key>
 			<array>
-				<string>Smart&amp;Soft</string>
+				<!--<string>ios4me</string> -->
 			</array>
 			<key>SharedSettings</key>
 			<dict>

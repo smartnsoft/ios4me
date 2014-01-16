@@ -31,12 +31,19 @@
 			<key>Path</key>
 			<string>Resources/Icon@2x.png</string>
 		</dict>
-		<key>Resources/Icon-72.png</key>
+		<key>Resources/Icon-76@2x.png</key>
 		<dict>
 			<key>Group</key>
 			<string>Resources</string>
 			<key>Path</key>
-			<string>Resources/Icon-72.png</string>
+			<string>Resources/Icon-76@2x.png</string>
+		</dict>
+		<key>Resources/Icon-76.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-76.png</string>
 		</dict>
 		<key>Resources/Icon-72@2x.png</key>
 		<dict>
@@ -45,12 +52,54 @@
 			<key>Path</key>
 			<string>Resources/Icon-72@2x.png</string>
 		</dict>
-		<key>Resources/Icon-Small.png</key>
+		<key>Resources/Icon-72.png</key>
 		<dict>
 			<key>Group</key>
 			<string>Resources</string>
 			<key>Path</key>
-			<string>Resources/Icon-Small.png</string>
+			<string>Resources/Icon-72.png</string>
+		</dict>
+		<key>Resources/Icon-60@2x.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-60@2x.png</string>
+		</dict>
+		<key>Resources/Icon-60.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-60.png</string>
+		</dict>
+		<key>Resources/Icon-50@2x.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-50@2x.png</string>
+		</dict>
+		<key>Resources/Icon-50.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-50.png</string>
+		</dict>
+		<key>Resources/Icon-40@2x.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-40@2x.png</string>
+		</dict>
+		<key>Resources/Icon-40.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-40.png</string>
 		</dict>
 		<key>Resources/Icon-Small@2x.png</key>
 		<dict>
@@ -58,6 +107,20 @@
 			<string>Resources</string>
 			<key>Path</key>
 			<string>Resources/Icon-Small@2x.png</string>
+		</dict>
+		<key>Resources/Icon-Small.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon-Small.png</string>
+		</dict>
+		<key>Resources/Icon512@2x.png</key>
+		<dict>
+			<key>Group</key>
+			<string>Resources</string>
+			<key>Path</key>
+			<string>Resources/Icon512@2x.png</string>
 		</dict>
 		<key>Resources/Icon512.png</key>
 		<dict>
@@ -95,8 +158,8 @@
 		<string>Resources/Icon-40.png</string>
 		<string>Resources/Icon-Small@2x.png</string>
 		<string>Resources/Icon-Small.png</string>
-		<string>Resources/Icon512.png</string>
 		<string>Resources/Icon512@2x.png</string>
+		<string>Resources/Icon512.png</string>
 		<string>Resources/iTunesArtwork</string>
 	</array>
 
