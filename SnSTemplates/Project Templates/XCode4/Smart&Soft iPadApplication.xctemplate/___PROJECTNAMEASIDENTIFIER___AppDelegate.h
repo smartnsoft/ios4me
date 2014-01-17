@@ -18,8 +18,16 @@
 
 #import <UIKit/UIKit.h>
 
+// Capptain Tracking
+#import "CPReachDataPushDelegate.h"
+#import "CPPushDelegate.h"
+#import "CPTrackModule.h"
+#import "CPReachModule.h"
+#import "CapptainAgent.h"
+
 #pragma mark -
 #pragma mark ___PROJECTNAMEASIDENTIFIER___AppDelegate
+#pragma mark -
 
 @interface ___PROJECTNAMEASIDENTIFIER___AppDelegate : SnSAppDelegate<SnSExceptionHandler, SnSViewControllerInterceptor, SnSViewDecorator>
 {

@@ -63,6 +63,10 @@
 /********************************** TRACKING ANALYTICS ********************************/
 extern NSString * const PREFIX_TRACKING;
 
+// Capptain Analytics
+#define CAPPTAIN_APPLICATION_ID                     @"XXXXXXXXXXXXXXXX"
+#define CAPPTAIN_SDK_KEY                            @"XXXXXXXXXXXXXXXX"
+
 
 
 extern NSString * const CREDITS_URL_PREFIX;
