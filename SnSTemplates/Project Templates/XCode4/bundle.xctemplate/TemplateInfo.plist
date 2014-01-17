@@ -34,7 +34,7 @@
 				<key>GCC_PREFIX_HEADER</key>
 				<string>___PACKAGENAME___/___PROJECTNAMEASIDENTIFIER___-Prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
-				<string>___PACKAGENAME___/Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
+				<string>___PACKAGENAME___/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
 			</dict>
 		</dict>
 	</array>
