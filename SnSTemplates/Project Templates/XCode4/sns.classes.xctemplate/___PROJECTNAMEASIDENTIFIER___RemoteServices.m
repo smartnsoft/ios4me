@@ -10,9 +10,6 @@
 
 #import <ASIHTTPRequest/ASIDownloadCache.h>
 
-// Categories
-#import "JSON.h"
-
 // Business Objects
 #import "___PROJECTNAMEASIDENTIFIER___AbstractObject.h"
 

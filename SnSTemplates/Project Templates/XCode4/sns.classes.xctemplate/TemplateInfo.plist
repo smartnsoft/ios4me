@@ -164,6 +164,31 @@
 			<string>___PROJECTNAMEASIDENTIFIER___Utils.m</string>
 		</dict>
 		
+		<!-- ************************************************************** -->
+		<!-- 						   	CAPPTAIN 								-->
+		<!-- ************************************************************** -->
+		<key>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Capptain</string>
+			</array>
+			<key>Path</key>
+			<string>Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Capptain</string>
+			</array>
+			<key>Path</key>
+			<string>Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.m</string>
+		</dict>
 	</dict>
 	<key>Nodes</key>
 	<array>
@@ -187,6 +212,10 @@
 		<!-- 							 UTILS 								-->
 		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.h</string>
 		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.m</string>
+		
+		<!-- 							 CAPPTAIN 								-->
+		<string>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.h</string>
+		<string>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.m</string>
 	</array>
 	
 </dict>

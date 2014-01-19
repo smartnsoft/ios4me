@@ -23,7 +23,7 @@
 #import <ios4me-ext-smartcommand/SnSCapptainReachDataPushReceiver.h>
 
 #import "CPPushMessage.h"
-#import "MemoryCPDefaultNotifier.h"
+#import "___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.h"
 
 #pragma mark -
 #pragma mark ___PROJECTNAMEASIDENTIFIER___AppDelegate(Private)
