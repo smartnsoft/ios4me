@@ -1,9 +1,9 @@
 //
-//  MemoryCPDefaultNotifier.h
-//  Memory
+//  ￼___FILENAME___
+//  ___PROJECTNAMEASIDENTIFIER___
 //
-//  Created by Matthias ROUBEROL on 15/07/13.
-//  Copyright (c) 2013 Smart&Soft. All rights reserved.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
