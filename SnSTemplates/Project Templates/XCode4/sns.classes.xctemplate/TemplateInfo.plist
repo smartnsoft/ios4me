@@ -137,6 +137,28 @@
 			<key>Path</key>
 			<string>___PROJECTNAMEASIDENTIFIER___RemoteServices.m</string>
 		</dict>
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Services</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___SettingsManager.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Services</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___SettingsManager.m</string>
+		</dict>
 		
 		<!-- ************************************************************** -->
 		<!-- 						   	UTILS 								-->
@@ -208,6 +230,8 @@
 		<!-- 							SERVICES 							-->
 		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.h</string>
 		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.m</string>
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.h</string>
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.m</string>
 		
 		<!-- 							 UTILS 								-->
 		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.h</string>
