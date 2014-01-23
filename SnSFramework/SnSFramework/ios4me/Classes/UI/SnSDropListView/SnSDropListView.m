@@ -91,6 +91,7 @@
 	imgArrow_ = [[[UIImageView alloc] initWithFrame:CGRectZero] autorelease];
     imgArrow_.contentMode = UIViewContentModeCenter;
 	imgArrow_.frame = CGRectMake(SnSViewW(self) - 30, 0, 30, SnSViewH(self));
+    imgArrow_.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 	
 	[self.backgroundView addSubview:imgBackground_];
 	[self.backgroundView addSubview:imgArrow_];
@@ -112,6 +113,18 @@
 	// Default Variables
 	// -----------------------------
 	maxScrollHeight_ = 120.f;
+    
+}
+
+- (void) setFrame:(CGRect)iFrame
+{
+    [super setFrame:iFrame];
+    
+    mainLabel_.frame        = CGRectMake(10, 0, SnSViewW(self)-10, SnSViewH(self));
+    backgroundView_.frame   = (CGRect){CGPointZero, self.bounds.size};
+    scrollview_.frame       = CGRectMake(0, self.frame.size.height, self.frame.size.width, 0);
+    imgBackground_.frame    = (CGRect){0, 0, self.frame.size};
+    imgArrow_.frame         = CGRectMake(SnSViewW(self) - 30, 0, 30, SnSViewH(self));
     
 }
 
