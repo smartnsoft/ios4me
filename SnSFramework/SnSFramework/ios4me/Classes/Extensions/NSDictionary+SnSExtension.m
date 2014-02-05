@@ -41,4 +41,40 @@
         block(key, [self objectForKey:key]);
 }
 
+#pragma NSDictionary (NSURLQuery)
+
++ (NSDictionary *)dictionaryWithFormEncodedString:(NSString *)encodedString {
+	if (!encodedString) {
+		return nil;
+	}
+	
+	NSMutableDictionary *result = [NSMutableDictionary dictionary];
+	NSArray *pairs = [encodedString componentsSeparatedByString:@"&"];
+	
+	for (NSString *kvp in pairs) {
+		if ([kvp length] == 0) {
+			continue;
+		}
+		
+		NSRange pos = [kvp rangeOfString:@"="];
+		NSString *key;
+		NSString *val;
+		
+		if (pos.location == NSNotFound) {
+			key = [kvp stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+			val = @"";
+		} else {
+			key = [[kvp substringToIndex:pos.location] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+			val = [[kvp substringFromIndex:pos.location + pos.length] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		}
+		
+		if (!key || !val) {
+			continue; // I'm sure this will bite my arse one day
+		}
+		
+		[result setObject:val forKey:key];
+	}
+	return result;
+}
+
 @end
