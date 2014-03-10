@@ -21,18 +21,17 @@
  * The purpose of this framework is to speed-up iPhone applications development...
  */
 
-#import <Foundation/Foundation.h> 
-
+#if !defined(__SNS_FRAMEWORK__)
+#define __SNS_FRAMEWORK__ 1
 // We import all the framework header files
 
 // Constants
 #import "SnSConstants.h"
 
-// Application
+//// Application
 #import "SnSAppWindow.h"
 #import "SnSAppDelegate.h"
-#import "SnSDelegate.h"
-#import "SnSCacheDelegate.h"
+#import "SnSAppDelegate.h"
 
 // Cache
 #import "SnSAbstractCache.h"
@@ -41,6 +40,7 @@
 #import "SnSCacheChecker.h"
 #import "SnSCacheDelegate.h"
 #import "SnSCacheItem.h"
+#import "SnSCacheDelegate.h"
 
 // Connection
 #import "SnSURLConnection.h"
@@ -94,6 +94,8 @@
 #import "SnSRemoteServices.h"
 #import "SnSWebServiceCaller.h"
 #import "SnSStoreManager.h"
+#import "SnSStoreObserver.h"
+#import "SnSSettingsManager.h"
 
 // Utils
 #import "SnSUtils.h"
@@ -120,3 +122,6 @@
 + (NSString *) version;
 
 @end
+
+#endif
+

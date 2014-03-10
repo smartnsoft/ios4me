@@ -28,6 +28,8 @@
 - (void)dropList:(SnSDropListView*)iDropList willCloseScrollView:(UIScrollView*)iScrollView;
 - (void)dropList:(SnSDropListView*)iDropList didCloseScrollView:(UIScrollView*)iScrollView;
 
+- (BOOL)dropList:(SnSDropListView*)iDropList shouldReceiveTap:(UIGestureRecognizer*)iGesture;
+
 @end
 
 @protocol SnSDropListDataSource <NSObject>
@@ -54,6 +56,21 @@
 	CGFloat expectedHeight_;
 	CGFloat padding_;
     
+    // MainLabel
+    UIColor* mainLabelColor_;
+    
+    // ScrollView
+    UIColor* scrollViewColorBorder_;
+
+    //ListViewCell
+    UIColor* labelCellDefaultColor_;
+    UIColor* labelCellSelectedColor_;
+    UIColor* labelCellBackgroundSelectedColor_;
+    
+    // LabelFont
+    UIFont* mainLabelFont_;
+    UIFont* labelCellFont_;
+    
 	BOOL enabled_;
 }
 
@@ -67,6 +84,14 @@
 @property (nonatomic, readonly) UIView* backgroundView;
 @property (nonatomic, readonly) UIImageView* arrowImage;
 @property (nonatomic, readonly) UIImageView* backgroundImage;
+
+@property (nonatomic, retain) UIColor* mainLabelColor;
+@property (nonatomic, retain) UIColor* scrollViewColorBorder;
+@property (nonatomic, retain) UIColor* labelCellDefaultColor;
+@property (nonatomic, retain) UIColor* labelCellSelectedColor;
+@property (nonatomic, retain) UIColor* labelCellBackgroundSelectedColor;
+@property (nonatomic, retain) UIFont* mainLabelFont;
+@property (nonatomic, retain) UIFont* labelCellFont;
 
 #pragma mark Internal Events
 
@@ -84,4 +109,8 @@
 - (void)reloadData;
 - (NSInteger)selectedRow;
 - (void)selectRow:(NSInteger)index;
+
+// default colorMainLabel and default fontMainLabel
+-(void)defaultMainLabel;
+
 @end

@@ -18,7 +18,7 @@
  */
 
 #import "SnSScrollFollowerView.h"
-
+#import "SnSConstants.h"
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)
 #define VIEW_WIDTH(v)		((v).frame.size.width)
@@ -39,8 +39,8 @@
 }
 
 - (void)drawRect:(CGRect)rect
-{	
-	UIColor* bgColor = RGBA(20, 20, 20, 0.8f);
+{
+	UIColor* bgColor = [UIColor colorWithRed:20.f/255.f green:20.f/255.f blue:20.f/255.f alpha:0.8f];
 	
 	UIBezierPath* p = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(self.frame.origin.x, 
 													   self.frame.origin.y,

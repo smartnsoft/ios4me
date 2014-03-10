@@ -137,6 +137,28 @@
 			<key>Path</key>
 			<string>___PROJECTNAMEASIDENTIFIER___RemoteServices.m</string>
 		</dict>
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Services</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___SettingsManager.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Services</string>
+			</array>
+			<key>Path</key>
+			<string>___PROJECTNAMEASIDENTIFIER___SettingsManager.m</string>
+		</dict>
 		
 		<!-- ************************************************************** -->
 		<!-- 						   	UTILS 								-->
@@ -164,6 +186,31 @@
 			<string>___PROJECTNAMEASIDENTIFIER___Utils.m</string>
 		</dict>
 		
+		<!-- ************************************************************** -->
+		<!-- 						   	CAPPTAIN 								-->
+		<!-- ************************************************************** -->
+		<key>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.h</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Capptain</string>
+			</array>
+			<key>Path</key>
+			<string>Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.h</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.m</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Classes</string>
+				<string>Capptain</string>
+			</array>
+			<key>Path</key>
+			<string>Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.m</string>
+		</dict>
 	</dict>
 	<key>Nodes</key>
 	<array>
@@ -183,10 +230,16 @@
 		<!-- 							SERVICES 							-->
 		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.h</string>
 		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___RemoteServices.m</string>
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.h</string>
+		<string>Classes/Services/___PROJECTNAMEASIDENTIFIER___SettingsManager.m</string>
 		
 		<!-- 							 UTILS 								-->
 		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.h</string>
 		<string>Classes/Utils/___PROJECTNAMEASIDENTIFIER___Utils.m</string>
+		
+		<!-- 							 CAPPTAIN 								-->
+		<string>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.h</string>
+		<string>Classes/Capptain/___PROJECTNAMEASIDENTIFIER___CPDefaultNotifier.m</string>
 	</array>
 	
 </dict>

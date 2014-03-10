@@ -7,6 +7,7 @@
 //
 
 #import "UIView+SnSExtension.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (SnSExtension)
 
@@ -153,4 +154,24 @@
                      completion:nil];
 }
 
+- (void)animateWithBounceEffect
+{
+    self.alpha = 0;
+	[UIView animateWithDuration:0.2 animations:^{self.alpha = 1.0;}];
+	
+	self.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0);
+	
+	CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+	bounceAnimation.values = [NSArray arrayWithObjects:
+							  [NSNumber numberWithFloat:0.5],
+							  [NSNumber numberWithFloat:1.1],
+							  [NSNumber numberWithFloat:0.8],
+							  [NSNumber numberWithFloat:1.0], nil];
+	bounceAnimation.duration = 0.4;
+	bounceAnimation.removedOnCompletion = NO;
+	[self.layer addAnimation:bounceAnimation forKey:@"bounce"];
+	
+	self.layer.transform = CATransform3DIdentity;
+
+}
 @end

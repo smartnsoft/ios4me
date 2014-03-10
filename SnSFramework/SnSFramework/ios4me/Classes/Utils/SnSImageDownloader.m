@@ -20,6 +20,8 @@
 #import "SnSImageDownloader.h"
 
 #import "SnSLog.h"
+#import "SnSURLCache.h"
+#import "SnSUtils.h"
 
 #import <UIKit/UIImage.h> 
 

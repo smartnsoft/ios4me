@@ -46,8 +46,6 @@
 
 - (void)buyProduct:(SKProduct*)iProduct;
 - (void)buyProduct:(SKProduct*)iProduct quantity:(NSUInteger)iQuantity;
-- (void)buyProductIdentifier:(NSString*)iStr;
-- (void)buyProductIdentifier:(NSString*)iStr quantity:(NSUInteger)iQuantity;
 - (void)requestProductData:(NSArray*)iProductsList;
 
 #pragma mark Transactions

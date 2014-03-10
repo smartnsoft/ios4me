@@ -11,16 +11,21 @@
 #import "SnSSmartPlayerView.h"
 #import "SnSSmartSubtitleView.h"
 
+#import "SnSLog.h"
+#import "NSArray+SnSExtension.h"
+
 // Asset keys
 NSString * const kSPTracksKey       = @"tracks";
 NSString * const kSPPlayableKey     = @"playable";
 
 // PlayerItem keys
 NSString * const kSPStatusKey       = @"status";
+NSString * const kSPLoadedTimeRangesKey   = @"loadedTimeRanges";
 
 // AVPlayer keys
 NSString * const kSPRateKey			= @"rate";
 NSString * const kSPCurrentItemKey	= @"currentItem";
+
 
 // KVO contexts
 
@@ -30,6 +35,7 @@ static void *SPCurrentItemObservationContext = &SPCurrentItemObservationContext;
 static void *SPStatusObservationContext = &SPStatusObservationContext;
 static void *SPRateObservationContext = &SPRateObservationContext;
 static void *SPLayerReadyForDisplay = &SPLayerReadyForDisplay;
+static void *SPBufferingObservationContext = &SPBufferingObservationContext;
 
 #pragma mark reDefined Property
 
@@ -41,6 +47,7 @@ static void *SPLayerReadyForDisplay = &SPLayerReadyForDisplay;
 
 @property (nonatomic, retain) NSArray *volumeSliders;
 @property (nonatomic, retain) NSArray *scrubberSliders;
+@property (nonatomic, retain) NSArray *bufferProgress;
 
 @property (nonatomic, retain) NSArray *subAreas;
 @property (nonatomic, retain) NSArray *playerViews;
@@ -75,6 +82,7 @@ static void *SPLayerReadyForDisplay = &SPLayerReadyForDisplay;
 
 - (void)initScrubberTimer;
 - (void)syncScrubber;
+- (void) syncBufferProgress:(CMTimeRange)newRange;
 
 - (void)playButtonsEnabled:(BOOL)enabled;
 - (void)pauseButtonsEnabled:(BOOL)enabled;
@@ -94,6 +102,7 @@ static void *SPLayerReadyForDisplay = &SPLayerReadyForDisplay;
 
 @synthesize volumeSliders = volumeSliders_;
 @synthesize scrubberSliders = scrubberSliders_;
+@synthesize bufferProgress = bufferProgress_;
 
 @synthesize subAreas = subAreas_;
 @synthesize playerViews = playerViews_;
@@ -101,7 +110,9 @@ static void *SPLayerReadyForDisplay = &SPLayerReadyForDisplay;
 @synthesize delegate = delegate_;
 
 @synthesize isPreparedToPlay = isPreparedToPlay_;
+@synthesize isPlaying = isPlaying_;
 @synthesize enabled = enabled_;
+@synthesize autoplay = autoplay_;
 
 @synthesize contentURL = contentURL_;
 
@@ -223,6 +234,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         if (currentItem_)
         {
             [currentItem_ removeObserver:self forKeyPath:kSPStatusKey];
+            [currentItem_ removeObserver:self forKeyPath:kSPLoadedTimeRangesKey];
             [[NSNotificationCenter defaultCenter] removeObserver:self
                                                             name:AVPlayerItemDidPlayToEndTimeNotification
                                                           object:currentItem_];
@@ -239,6 +251,12 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                        forKeyPath:kSPStatusKey
                           options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
                           context:SPStatusObservationContext];
+        
+        [currentItem_ addObserver:self
+                         forKeyPath:kSPLoadedTimeRangesKey
+                            options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
+                            context:SPBufferingObservationContext];
+
 //        
         // When the player item has played to its end time we'll toggle
         // the movie controller Pause button to be the Play button.
@@ -345,12 +363,14 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
         
         self.volumeSliders = [NSMutableArray array];
         self.scrubberSliders = [NSMutableArray array];
+        self.bufferProgress = [NSMutableArray array];
         
         self.subAreas = [NSMutableArray array];
         self.playerViews = [NSMutableArray array];
         
         //        [self prepareToPlay];
         self.enabled = NO;
+        self.autoplay = NO;
     }
     return self;
 }
@@ -424,6 +444,17 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     [slider addTarget:self action:@selector(endScrubbing:) forControlEvents:UIControlEventTouchUpOutside];
 }
 
+
+
+- (void)addBufferProgress:(UIProgressView *)progress
+{
+    if (![progress isKindOfClass:[UIProgressView class]])
+        return ;
+    
+    [bufferProgress_ addObject:progress];
+    
+}
+
 # pragma mark Views
 
 // Helper subArea
@@ -487,7 +518,9 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)play
 {
-    // If we are at the end of the movie, we must seek to the beginning first 
+    paused_ = NO;
+    
+    // If we are at the end of the movie, we must seek to the beginning first
     // before starting playback.
 	if (seekToZeroBeforePlay_) 
 	{
@@ -505,6 +538,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 
 - (void)pause
 {
+    paused_ = YES;
+    
     [self.player pause];
 }
 
@@ -706,6 +741,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                                @"observeStatusofObject:change:", [NSValue valueWithPointer:SPStatusObservationContext],
                                @"observeRateofObject:change:", [NSValue valueWithPointer:SPRateObservationContext],
                                @"observeLayerReadyForDisplayofObject:change:", [NSValue valueWithPointer:SPLayerReadyForDisplay],
+                               @"observeBufferofObject:change:", [NSValue valueWithPointer:SPBufferingObservationContext],
                                nil];
 
     stringSelector = [reference objectForKey:[NSValue valueWithPointer:context]];
@@ -767,10 +803,16 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     // TODO sync playPause button on MainThread
     
     if (status == AVPlayerStatusUnknown)
+    {
         self.scrubbersTimeObserver = nil;
+    }
     else if (status == AVPlayerStatusReadyToPlay)
+    {
+        self.isPreparedToPlay = YES;
         [self initScrubberTimer]; // initScrubberTimer;
-        
+        [self initBufferProgress];
+    }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [self syncScrubber];
       
@@ -798,6 +840,39 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 //            ((UIView*)self.playerViews.lastObject).hidden = NO;
 //    });
     // TODO Sync buttons
+    
+    NSLog(@"observeRateofObject : %@ : change : %@", [object description], change);
+    if ([change objectForKey:@"new"]!=nil)
+    {
+        NSDecimalNumber * newRate = [change objectForKey:@"new"];
+        if ([newRate intValue] > 0)
+        {
+            isPlaying_ = YES;
+        }
+        else
+        {
+            isPlaying_ = NO;
+        }
+    }
+    
+}
+
+- (void)observeBufferofObject:(AVPlayerItem*)object change:(NSDictionary*)change
+{
+    //NSLog(@"Buffering status: %@", [object loadedTimeRanges]);
+    for (NSString * key in [change allKeys])
+    {
+        id value = [change objectForKey:key];
+        //NSLog(@"change key = %@ ; value = %@",key, value);
+        if ([value isKindOfClass:[NSArray class]] && [key isEqualToString:@"new"])
+        {
+            id keyValue = [[change objectForKey:key] objectAtIndex:0];
+            CMTimeRange timeRangeValue = [((NSValue *)keyValue) CMTimeRangeValue];
+            //NSLog(@"new key = %@ ; value = %@",key, keyValue);
+            [self syncBufferProgress:timeRangeValue];
+        }
+    }
+
 }
 
 // Observe PlayerViews AVPlayerLayer readyForDisplay = playerView.layer.readyForDisplay
@@ -807,7 +882,7 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     {
         object.contentsGravity = kCAGravityResizeAspectFill;
         // object.hidden = NO;
-        // [self.player play]; // Auto-Play
+        
     }
 }
 
@@ -861,44 +936,124 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 		
         dispatch_async(dispatch_get_main_queue(), ^{
             if (self.enabled)
+            {
                 ((UISlider*)[scrubberSliders_ firstObject]).value = (maxValue - minValue) * time / duration + minValue;
+            }
+            
+            if (delegate_ !=nil && [delegate_ respondsToSelector:@selector(smartPlayerCurrentTime:)])
+            {
+                [delegate_ smartPlayerCurrentTime:time];
+            }
+            
+        });
+	}
+}
+
+// Requests invocation of a given block during media playback to update the movie scrubber control.
+- (void)initBufferProgress
+{
+    if (![bufferProgress_ count])
+        return ;
+    
+	double interval = .1f;
+	
+	if (CMTIME_IS_INVALID(self.itemDuration))
+		return;
+    
+	double duration = CMTimeGetSeconds(self.itemDuration);
+	if (isfinite(duration))
+	{
+		CGFloat width = CGRectGetWidth(((UIProgressView*)bufferProgress_.firstObject).bounds);
+		interval = 0.5f * duration / width;
+        ((UIProgressView*)bufferProgress_.firstObject).progress = 0.0;
+	}
+    
+}
+
+// Set the scrubber based on the player current time.
+- (void)syncBufferProgress:(CMTimeRange)newRange
+{
+    if (![bufferProgress_ count])
+        return ;
+    
+	if (CMTIMERANGE_IS_INVALID(newRange))
+	{
+		((UISlider*)[bufferProgress_ firstObject]).minimumValue = 0.0;
+		return;
+	}
+    
+	double totalDuration = CMTimeGetSeconds(self.itemDuration);
+    double currentDurationLoaded = CMTimeGetSeconds(newRange.duration);
+	if (isfinite(currentDurationLoaded) && isfinite(totalDuration))
+	{
+		dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.enabled && totalDuration > 0.0)
+            {
+                double pourcent = currentDurationLoaded / totalDuration;
+                ((UIProgressView*)[bufferProgress_ firstObject]).progress = pourcent;
+                
+                if (delegate_ && [delegate_ respondsToSelector:@selector(smartPlayerBufferPourcent:)])
+                {
+                    [delegate_ smartPlayerBufferPourcent:pourcent];
+                }
+                
+                if (self.autoplay == YES)
+                {
+                    double time = CMTimeGetSeconds(player_.currentTime);
+                    if (time < currentDurationLoaded || pourcent == 100.0)
+                    {
+                        if (paused_ == NO)
+                        {
+                            [self play];
+                        }
+                    }
+                }
+                
+            }
         });
 	}
 }
 
 - (void)playButtonsEnabled:(BOOL)enabled
 {
-    [playButtons_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in playButtons_)
+        button.enabled = enabled;
 }
 
 - (void)pauseButtonsEnabled:(BOOL)enabled
 {
-    [pauseButtons_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in pauseButtons_)
+        button.enabled = enabled;
 }
 
 - (void)stopButtonsEnabled:(BOOL)enabled
 {
-    [stopButtons_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in stopButtons_)
+        button.enabled = enabled;
 }
 
 - (void)volumeSlidersEnabled:(BOOL)enabled
 {
-    [volumeSliders_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in volumeSliders_)
+        button.enabled = enabled;
 }
 
 - (void)scrubbersSlidersEnabled:(BOOL)enabled
 {
-    [scrubberSliders_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in scrubberSliders_)
+        button.enabled = enabled;
 }
 
 - (void)subAreasEnabled:(BOOL)enabled
 {
-    [subAreas_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in subAreas_)
+        button.enabled = enabled;
 }
 
 - (void)playerViewsEnabled:(BOOL)enabled
 {
-    [playerViews_ makeObjectsPerformSelector:@selector(setEnabled:) withObject:(id)enabled];
+    for (UIButton* button in playerViews_)
+        button.enabled = enabled;
 }
 
 # pragma mark -
@@ -909,6 +1064,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 {
     // MonkeyFix! with AVPlayer timeObservers
     self.scrubbersTimeObserver = nil;
+    
+    
 }
 
 - (void)shutdown
@@ -959,6 +1116,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     
     self.volumeSliders = nil;
     self.scrubberSliders = nil;
+    
+    self.bufferProgress = nil;
     
     for (SnSSmartPlayerView* playerView in playerViews_)
     {

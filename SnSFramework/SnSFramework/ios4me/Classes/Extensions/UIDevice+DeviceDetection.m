@@ -9,6 +9,7 @@
 // DEVICE DETECTION BASE ON http://blog.onstreamtv.de/?p=489
 
 #import "UIDevice+DeviceDetection.h"
+#import "NSString+SnSExtension.h"
 
 #define EXTERNAL_HOST @"google.com"
 

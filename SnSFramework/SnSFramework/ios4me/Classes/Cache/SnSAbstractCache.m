@@ -10,6 +10,7 @@
 #import "SnSCacheChecker.h"
 
 #import "SnSUtils.h"
+#import "SnSLog.h"
 
 @implementation SnSAbstractCache
 
@@ -36,8 +37,8 @@ static NSInteger sCacheIndex = -1;
 
 - (id)init
 {
-	return [self initWithMaxCapacity:kSnSAbstractCacheDefaultHighCapacity 
-						 minCapacity:kSnSAbstractCacheDefaultLowCapacity];
+	return [self initWithMaxCapacity:[self highCapacity]
+						 minCapacity:[self lowCapacity]];
 }
 
 /** 
@@ -90,6 +91,19 @@ static NSInteger sCacheIndex = -1;
 			[items_ count],
 			highCapacity_,
 			lowCapacity_];
+}
+
+#pragma mark Cache Size
+
+
+- (NSInteger)highCapacity
+{
+    return kSnSAbstractCacheDefaultHighCapacity;
+}
+
+- (NSInteger)lowCapacity
+{
+    return kSnSAbstractCacheDefaultLowCapacity;
 }
 
 #pragma mark -

@@ -7,6 +7,7 @@
 //
 
 #import "SnSStoreManager.h"
+#import "SnSLog.h"
 
 #define kStoreManagerActivation @"com.smartnsoft.??"
 
@@ -55,19 +56,6 @@
 - (void)buyProduct:(SKProduct*)iProduct quantity:(NSUInteger)iQuantity
 {
 	SKMutablePayment* aPayment = [SKMutablePayment paymentWithProduct:iProduct];
-	[aPayment setQuantity:iQuantity];
-	
-	[[SKPaymentQueue defaultQueue] addPayment:aPayment];
-}
-
--(void)buyProductIdentifier:(NSString *)iStr
-{
-	[self buyProductIdentifier:iStr quantity:1];
-}
-
-- (void)buyProductIdentifier:(NSString *)iStr quantity:(NSUInteger)iQuantity
-{
-	SKMutablePayment* aPayment = [SKMutablePayment paymentWithProductIdentifier:iStr];
 	[aPayment setQuantity:iQuantity];
 	
 	[[SKPaymentQueue defaultQueue] addPayment:aPayment];

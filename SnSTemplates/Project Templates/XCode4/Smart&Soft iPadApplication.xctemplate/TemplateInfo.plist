@@ -20,7 +20,7 @@
 		<string>com.smartnsoft.bundlebase</string>
 		<string>com.smartnsoft.iosbase</string>
 		<string>com.smartnsoft.classes</string>
-		<string>com.smartnsoft.importedclasses</string>
+		<!-- <string>com.smartnsoft.importedclasses</string> -->
 	</array>
 	
 	<!-- ****************************************************** -->
@@ -28,6 +28,33 @@
 	<!-- ****************************************************** -->
 	<key>Definitions</key>
 	<dict>
+		<key>../Podfile</key>
+		<dict>
+				<key>Group</key>
+				<string>SfFiles</string>
+				<key>Path</key>
+				<string>Podfile</string>
+				<key>TargetIndices</key>
+				<array/>
+		</dict>
+		<key>../___PROJECTNAMEASIDENTIFIER___-build.properties</key>
+		<dict>
+				<key>Group</key>
+				<string>SfFiles</string>
+				<key>Path</key>
+				<string>___PROJECTNAMEASIDENTIFIER___-build.properties</string>
+				<key>TargetIndices</key>
+				<array/>
+		</dict>
+		<key>../___PROJECTNAMEASIDENTIFIER___-build.xml</key>
+		<dict>
+				<key>Group</key>
+				<string>SfFiles</string>
+				<key>Path</key>
+				<string>___PROJECTNAMEASIDENTIFIER___-build.xml</string>
+				<key>TargetIndices</key>
+				<array/>
+		</dict>
 		<key>Classes/___PROJECTNAMEASIDENTIFIER___AppDelegate.h</key>
 		<dict>
 			<key>Group</key>
@@ -67,15 +94,6 @@
 			<key>Path</key>
 			<string>main.m</string>
 		</dict>
-		<key>___PROJECTNAMEASIDENTIFIER____Prefix.pch</key>
-		<dict>
-			<key>Group</key>
-			<string>Supporting Files</string>
-			<key>Path</key>
-			<string>___PROJECTNAMEASIDENTIFIER____Prefix.pch</string>
-			<key>TargetIndices</key>
-			<array/>
-		</dict>
 		<key>Static/about.css</key>
 		<dict>
 			<key>Group</key>
@@ -90,13 +108,6 @@
 			<key>Path</key>
 			<string>Static/about_iphone.html</string>
 		</dict>
-		<key>Static/application_logo.png</key>
-		<dict>
-			<key>Group</key>
-			<string>Static</string>
-			<key>Path</key>
-			<string>Static/application_logo.png</string>
-		</dict>
 		<key>Static/smartnsoft_logo.png</key>
 		<dict>
 			<key>Group</key>
@@ -104,12 +115,21 @@
 			<key>Path</key>
 			<string>Static/smartnsoft_logo.png</string>
 		</dict>
-		<key>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</key>
+		<key>___PROJECTNAMEASIDENTIFIER___-Prefix.pch</key>
+		<dict>
+				<key>Group</key>
+				<string>Supporting Files</string>
+				<key>Path</key>
+				<string>___PROJECTNAMEASIDENTIFIER___-Prefix.pch</string>
+				<key>TargetIndices</key>
+				<array/>
+		</dict>
+		<key>___PROJECTNAMEASIDENTIFIER___-Info.plist</key>
 		<dict>
 			<key>Group</key>
-			<string>Resources</string>
+			<string>Supporting Files</string>
 			<key>Path</key>
-			<string>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
+			<string>___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
 			<key>TargetIndices</key>
 			<array/>
 		</dict>
@@ -120,7 +140,11 @@
 	<!-- ****************************************************** -->
 	<key>Nodes</key>
 	<array>
-		<string>___PROJECTNAMEASIDENTIFIER____Prefix.pch</string>
+		<string>../Podfile</string>
+		<string>../___PROJECTNAMEASIDENTIFIER___-build.properties</string>
+		<string>../___PROJECTNAMEASIDENTIFIER___-build.xml</string>
+		<string>___PROJECTNAMEASIDENTIFIER___-Prefix.pch</string>
+		<string>___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
 		<string>main.m</string>
 		<string>Classes/___PROJECTNAMEASIDENTIFIER___AppDelegate.h</string>
 		<string>Classes/___PROJECTNAMEASIDENTIFIER___AppDelegate.m</string>
@@ -128,9 +152,7 @@
 		<string>Classes/Constants.m</string>
 		<string>Static/about_iphone.html</string>
 		<string>Static/about.css</string>
-		<string>Static/application_logo.png</string>
 		<string>Static/smartnsoft_logo.png</string>
-		<string>Resources/___PROJECTNAMEASIDENTIFIER___-Info.plist</string>
 	</array>
 	
 	<!-- ****************************************************** -->
@@ -165,7 +187,7 @@
 		<dict>
 			<key>Frameworks</key>
 			<array>
-				<string>Smart&amp;Soft</string>
+				<!--<string>ios4me</string> -->
 			</array>
 			<key>SharedSettings</key>
 			<dict>

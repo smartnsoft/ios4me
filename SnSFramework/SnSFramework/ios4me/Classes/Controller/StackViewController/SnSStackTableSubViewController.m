@@ -11,9 +11,11 @@
 // Controllers
 #import "SnSStackTableSubViewController.h"
 #import "SnSStackSubViewController.h"
+#import "SnSStackViewController.h"
 
 // Views
 #import "SnSStackView.h"
+#import "SnSLog.h"
 
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)

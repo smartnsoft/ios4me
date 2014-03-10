@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright (C) 2009 Smart&Soft.
+ *
+ * The code hereby is the private full property of the Smart&Soft company, Paris, France.
+ * 
+ * You have no right to re-use or modify it. There are no open-source, nor free licence
+ * attached to it!
+ -->
+ 
+ <!--
+ This Ant script requires the following libraries:
+ <ul>
+   <li><a href="http://ant-contrib.sourceforge.net">Andt-Contrib</a></li>
+ </ul>
+ -->
+<project
+  name="___PROJECTNAMEASIDENTIFIER___"
+  default="project.clean"
+  basedir="."
+>
+
+  <description>The aim of this Ant buildfile is to propose services for handling the 'DrKnow' iPhone project.</description>
+
+  <loadproperties srcfile="___PROJECTNAMEASIDENTIFIER___-build.properties"/>
+
+  <!-- The AntContrib library extends Ant. -->
+  <taskdef resource="net/sf/antcontrib/antlib.xml"/>
+
+  <target
+    name="project.init"
+    depends=""
+    description="Default target, which should always be called first be other targets."
+  >
+    <property
+      name="configuration"
+      value="Release"
+    />
+    <property
+      name="iphoneSDKName"
+      value="iphoneos"
+    />
+    <property
+      name="xcodeBuild.directoryPath"
+      location="../build"
+    />
+  
+  	<!-- Pod install -->
+    <exec executable="pod" dir="." failonerror="true"> <arg line="install"/> </exec>
+  </target>
+
+  <target
+    name="project.clean"
+    depends="project.init"
+  >
+    <echo level="info">Cleaning ...</echo>
+    <exec executable="xcodebuild" dir="." 
+      failonerror="true">
+      <arg line="-project ${xcodeProjectName}.xcodeproj"/>
+      <arg line="-alltargets clean" />
+    </exec>
+  </target>
+
+  <target
+    name="project.build"
+    depends="project.init, project.clean"
+    description="Compiles the XCode project."
+  >
+    <echo level="info">Compiling...</echo>
+    <exec executable="xcodebuild" dir="." 
+      failonerror="true">
+      <arg line="-workspace ${xcodeProjectName}.xcworkspace"/>
+      <arg line="-scheme ${projectNameBuild}" />
+      <arg line="-configuration ${configuration}"/>
+      <arg line="CONFIGURATION_BUILD_DIR=${user.dir}/build" />
+    </exec>
+    
+  </target>
+
+  <!--                                              -->
+  <!-- The section specific to the software factory -->
+  <!--                    TeamCity                  -->
+  <target
+    name="sf.init"
+    depends=""
+    description="Initializes the software factory properties."
+  >
+    <!-- This propery 'sf.properties.filePath' must be defined during the software factory run. -->
+    <!-- <loadproperties srcfile="${sf.properties.filePath}">
+      <filterchain>
+        <linecontains>
+          <contains value="${projectPrefix}"/>
+        </linecontains>
+      </filterchain>
+    </loadproperties> -->
+    <macrodef name="propertycopyIf">
+      <attribute name="name"/>
+      <attribute name="from"/>
+      <sequential>
+        <if>
+          <isset property="@{from}"/>
+          <then>
+            <propertycopy
+              name="@{name}"
+              from="@{from}"
+            />
+          </then>
+        </if>
+      </sequential>
+    </macrodef>
+    <propertycopyIf
+      name="key.alias.password"
+      from="${projectPrefix}.key.alias.password"
+    />
+    <propertycopyIf
+      name="key.store.password"
+      from="${projectPrefix}.key.store.password"
+    />
+    <propertycopyIf
+      name="ftp.hostName"
+      from="${projectPrefix}.ftp.hostName"
+    />
+    <propertycopyIf
+      name="ftp.directoryName"
+      from="${projectPrefix}.ftp.directoryName"
+    />
+    <propertycopyIf
+      name="ftp.login"
+      from="${projectPrefix}.ftp.login"
+    />
+    <propertycopyIf
+      name="ftp.password"
+      from="${projectPrefix}.ftp.password"
+    />
+  </target>
+
+  <!--                                                      -->
+  <!-- The section specific to the software factory for iOS -->
+  <!--                                                      -->
+
+  <target
+    name="sf.init.ios"
+    depends="sf.init"
+    description="Initializes the software factory properties."
+  >
+    <tstamp>
+      <format property="date.now.0" pattern="MM/dd/yyyy hh:mm aa" locale="fr,FR"/>
+      <format property="date.now.1" pattern="yyyy-MM-dd'T'HH.mm.ss.SSS" locale="fr,FR"/>
+    </tstamp>
+    
+    <!--<loadfile property="file" srcfile="project.tags"/>
+    <for param="line" list="${file}">
+      <sequential>
+        <echo>@{line}</echo>
+        <property environment="env"/>
+        <property name="env.BUILD_VCS_NUMBER" value="@{line}"/>
+      </sequential>
+    </for>
+    <echo>BUILD_VCS_NUMBER: ${env.BUILD_VCS_NUMBER}</echo>-->
+  </target>
+
+  <target name="xcode-archive" depends="sf.init.ios, project.build">
+      <echo level="info">Finding applications</echo>
+      <for param="app">
+          <path>
+              <dirset id="apps" dir="${xcodeBuild.directoryPath}" casesensitive="yes" includes="**/*.app"/>
+          </path>
+          <sequential>
+              <echo>Archiving @{app}</echo>
+              <exec executable="xcrun" dir="." failonerror="true">
+                    <arg line="-sdk ${iphoneSDKName} PackageApplication"/>
+                    <arg line="-v '@{app}'"/>
+                    <arg line="-o '@{app}.ipa'"/>
+                    <arg line="--sign '${signProfile}'"/>
+                </exec> 
+          </sequential>          
+      </for>
+      <for param="dsym">
+          <path>
+              <dirset id="dsyms" dir="${xcodeBuild.directoryPath}" casesensitive="no" includes="**/*.dSYM">
+                 <date datetime="${date.now.0}" when="after" />
+              </dirset>
+          </path>
+          <sequential>
+              <echo>Zipping @{dsym}</echo>      
+              <zip destfile="@{dsym}.zip" basedir="@{dsym}" />
+          </sequential>
+      </for>      
+      <!-- <pathconvert refid="apps" property="app"/> -->
+  </target>
+
+  <target
+    name="sf.deploy"
+    depends="sf.init.ios, xcode-archive"
+    description="Uploads the ipa on TestFlight."
+  >
+      <echo level="info">Uploading ipa files to Test Flight</echo>
+      <for param="ipa">
+          <path>
+              <fileset id="ipas" dir="${xcodeBuild.directoryPath}" casesensitive="yes" includes="**/*.ipa">
+                 <date datetime="${date.now.0}" when="after" />
+              </fileset>
+          </path>
+          <sequential>
+              <echo>Uploading @{ipa}</echo>      
+              <exec executable="curl" failonerror="true">
+                    <arg line="http://testflightapp.com/api/builds.json"/>
+                    <arg line="-s"/>
+                    <arg line="-F file=@'@{ipa}'" />
+                    <arg line="-F api_token=${testflight.token.api}"  />
+                    <arg line="-F team_token=${testflight.token.team}" />
+                    <arg line="-F notes='This build was uploaded via teamcity'" />
+                    <arg line="-F notify=True" />
+                    <arg line="-F distribution_lists=Cobalink_Users" />
+                </exec> 
+          </sequential>
+      </for>
+  </target>
+
+</project>

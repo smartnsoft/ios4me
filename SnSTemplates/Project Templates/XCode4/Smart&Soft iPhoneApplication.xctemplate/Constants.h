@@ -21,6 +21,9 @@
 
 #import "___PROJECTNAMEASIDENTIFIER___AppDelegate.h"
 
+#define ValueDeviceDepend(ipad,iphone) (([UIDevice isIPad]==YES)?ipad:iphone)
+#define ValueiPhoneRetina4Depend(retina4,retina3) (([UIScreen resolution] == UIScreenResolutioniPhoneRetina4)?retina4:retina3)
+
 /** Fixed size **/
 #define standardScreenWidth 320
 #define standardScreenHeight 480
@@ -34,11 +37,7 @@
 
 #define APP_DELEGATE ((___PROJECTNAMEASIDENTIFIER___AppDelegate *) [[UIApplication sharedApplication] delegate])
 
-#ifdef __IPHONE_3_2
 #define IS_RUNNING_ON_IPAD UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
-#else
-#define IS_RUNNING_ON_IPAD NO
-#endif
 
 #define COLOR_FFFFFF COLOR_HEXA(@"#FFFFFF")
 #define COLOR_333333 COLOR_HEXA(@"#333333")
@@ -47,10 +46,10 @@
 #define COLOR_999999 COLOR_HEXA(@"#999999")
 #define COLOR_000000 COLOR_HEXA(@"#000000")
 
-#define VIEW_X(v)			((v).frame.origin.x)
-#define VIEW_Y(v)			((v).frame.origin.y)
-#define VIEW_WIDTH(v)		((v).frame.size.width)
-#define VIEW_HEIGHT(v)		((v).frame.size.height)
+#define SnSViewX(v)			((v).frame.origin.x)
+#define SnSViewY(v)			((v).frame.origin.y)
+#define SnSViewW(v)			((v).frame.size.width)
+#define SnSViewH(v)			((v).frame.size.height)
 
 #define kSnSScreenWidth			[[UIScreen mainScreen] applicationFrame].size.width
 #define kSnSScreenHeight		[[UIScreen mainScreen] applicationFrame].size.height
@@ -58,26 +57,17 @@
 
 #define SnSLocalized(s) NSLocalizedString(s,@"")
 
-#define DeviceOrientationSupported(orientation) UIDeviceOrientationIsPortrait(orientation) 
-#define NavigationBarTintColor RGB(182, 16, 127)
+#define DeviceOrientationSupported(orientation) 	UIDeviceOrientationIsPortrait(orientation) 
+#define NavigationBarTintColor 						RGB(182, 16, 127)
 
 /********************************** TRACKING ANALYTICS ********************************/
-// Google Analytics
-extern NSString * const GA_UID;
 extern NSString * const PREFIX_TRACKING;
 
-// Flurry Analytics
-/*
- Application name: ___PROJECTNAMEASIDENTIFIER___
- Unique application Key: ???????
- AppStoreId: com.smartnsoft.standard
- */
-extern NSString * const FLURRY_APPLICATION_KEY;
+// Capptain Analytics
+#define CAPPTAIN_APPLICATION_ID                     @"XXXXXXXXXXXXXXXX"
+#define CAPPTAIN_SDK_KEY                            @"XXXXXXXXXXXXXXXX"
 
 
-/*
- extern NSString * const WEB_SERVICE_URL_PREFIX;
- */
 
 extern NSString * const CREDITS_URL_PREFIX;
 

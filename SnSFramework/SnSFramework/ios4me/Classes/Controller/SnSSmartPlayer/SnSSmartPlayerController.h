@@ -15,6 +15,8 @@
 @optional
 
 - (void) smartPlayerDidReachEnd;
+- (void) smartPlayerBufferPourcent:(double)pourcent;
+- (void) smartPlayerCurrentTime:(double)time;
 
 @end
 
@@ -28,6 +30,7 @@
     
     IBOutletCollection(UISlider) NSMutableArray *volumeSliders_;
     IBOutletCollection(UISlider) NSMutableArray *scrubberSliders_;
+    IBOutletCollection(UIProgressView) NSMutableArray *bufferProgress_;
     
     IBOutletCollection(id)       NSMutableArray *subAreas_;
     IBOutletCollection(UIView)   NSMutableArray *playerViews_;
@@ -38,6 +41,9 @@
     
     BOOL isPreparedToPlay_;
     BOOL enabled_;
+    BOOL autoplay_;
+    BOOL isPlaying_;
+    BOOL paused_; // something make video paused
     
     NSURL *contentURL_;
     
@@ -72,6 +78,7 @@
 
 @property (nonatomic, retain, readonly) NSArray *volumeSliders;
 @property (nonatomic, retain, readonly) NSArray *scrubberSliders;
+@property (nonatomic, retain, readonly) NSArray *bufferProgress;
 
 @property (nonatomic, retain, readonly) NSArray *subAreas;
 @property (nonatomic, retain, readonly) NSArray *playerViews;
@@ -81,7 +88,9 @@
 // Utilities
 
 @property (nonatomic, assign, readonly) BOOL isPreparedToPlay;
+@property (nonatomic, assign, readonly) BOOL isPlaying;
 @property (nonatomic,assign) BOOL enabled;
+@property (nonatomic,assign) BOOL autoplay;
 
 @property (nonatomic, assign) NSURL *contentURL;
 
@@ -126,6 +135,7 @@
 - (IBAction)beginSeekingForward;
 - (void)endSeeking;
 
+- (void)initBufferProgress;
 - (void)initScrubberTimer;
 - (void)syncScrubber;
 - (void)playButtonsEnabled:(BOOL)enabled;
@@ -152,6 +162,7 @@
 - (void)addPauseButton:(UIButton*)button;
 - (void)addStopButton:(UIButton*)button;
 - (void)addVolumeSlider:(UISlider*)slider;
+- (void)addBufferProgress:(UIProgressView*)progress;
 - (void)addScrubber:(UISlider*)slider;
 - (void)addSubArea:(UILabel*)subArea;
 - (void)addPlayerView:(UIView*)playerView;

@@ -20,6 +20,7 @@
 #import "SnSLog.h"
 #import "SnSDelegate.h"
 #import "NSObject+SnSExtension.h"
+#import "SnSApplicationController.h"
 
 #pragma mark -
 #pragma mark SnSTableViewController(Private)

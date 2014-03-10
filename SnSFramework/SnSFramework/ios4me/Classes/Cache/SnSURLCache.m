@@ -21,6 +21,7 @@
 
 #import "SnSLog.h"
 #import "SnSDelegate.h"
+#import "UIDevice+DeviceConnectivity.h"
 
 #pragma mark -
 #pragma mark SnSURLCacheData
@@ -217,10 +218,8 @@ SnSURLCache ** urlCacheInstances = nil;
 
 - (NSData *) getFromCache:(NSURLRequest *)urlRequest
 {
-    NSURL * theUrl = [urlRequest URL];
     // There is a warning because of the macro expansion: the url variable is only used inside the macro!
-    NSString * url = [theUrl absoluteString];
-    SnSLogD(@"Analyzing whether the data is in cache regarding the URL '%@'", url);
+    SnSLogD(@"Analyzing whether the data is in cache regarding the URL '%@'", [[urlRequest URL] absoluteString]);
     NSURLCache * urlCache = [NSURLCache sharedURLCache];
     NSCachedURLResponse * cachedUrlResponse =  [urlCache cachedResponseForRequest:urlRequest];
     NSData * data = nil;
@@ -228,20 +227,20 @@ SnSURLCache ** urlCacheInstances = nil;
     {
         if (cachedUrlResponse == nil)
         {
-            SnSLogD(@"The data is not in local cache regarding the URL '%@'", url);
+            SnSLogD(@"The data is not in local cache regarding the URL '%@'", urlRequest);
             NSError * error = nil;
             //data = [NSData dataWithContentsOfURL:theUrl options:NSUncachedRead error:&error];
             NSHTTPURLResponse * urlResponse = nil;
             data = [[NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&urlResponse error:&error] retain];
             if (error != nil)
             {
-                SnSLogD(@"Error while retrieving the data regarding the URL '%@'", url);
+                SnSLogD(@"Error while retrieving the data regarding the URL '%@'", urlRequest);
                 [data release];
                 [SnSURLCacheException raise:error];
             }
             else if ([urlResponse isKindOfClass:[NSHTTPURLResponse class]] && [urlResponse statusCode] != 200)
             {
-                SnSLogD(@"Received a response from server with status code %i corresponding to the URL '%@'", [urlResponse statusCode], url);
+                SnSLogD(@"Received a response from server with status code %i corresponding to the URL '%@'", [urlResponse statusCode], urlRequest);
 //                [data release];
                 NSString * errorName = (data == nil ? @"Bad response from server" : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 				SnSLogE(@"%@ - Status Code %i", errorName, [urlResponse statusCode]);
@@ -251,7 +250,7 @@ SnSURLCache ** urlCacheInstances = nil;
             }
             else if (data == nil)
             {
-                SnSLogD(@"There are no data regarding the URL '%@'", url);
+                SnSLogD(@"There are no data regarding the URL '%@'", urlRequest);
             }
             else
             {
@@ -263,7 +262,7 @@ SnSURLCache ** urlCacheInstances = nil;
         }
         else
         {
-            SnSLogD(@"The data is in local cache regarding the URL '%@'", url);
+            SnSLogD(@"The data is in local cache regarding the URL '%@'", urlRequest);
             // We duplicate the data, in order to make sure that there will be no memory corruption
             data = [[NSData alloc] initWithData:[cachedUrlResponse data]];
         }
@@ -394,7 +393,7 @@ SnSURLCache ** urlCacheInstances = nil;
         [fileManager createDirectoryAtPath:self.cacheDirectoryPath withIntermediateDirectories:YES attributes:nil error:&error];
     }
     
-	indexFilePath = [[NSString pathWithComponents:[NSArray arrayWithObjects:self.cacheDirectoryPath, [NSString stringWithFormat:@"SnsURLCache_%@.plist", SNS_FRAMEWORK_VERSION], nil]] retain];
+	indexFilePath = [[NSString pathWithComponents:[NSArray arrayWithObjects:self.cacheDirectoryPath, [NSString stringWithFormat:@"SnsURLCache_%@.plist", @"1.0"], nil]] retain];
     SnSLogD(@"Storing the cache files under the directory '%@', and the index file at '%@'", self.cacheDirectoryPath, self.indexFilePath);
 	cache = [[NSMutableDictionary dictionaryWithContentsOfFile:self.indexFilePath] retain];
 	if (self.cache == nil)
@@ -498,12 +497,9 @@ SnSURLCache ** urlCacheInstances = nil;
 			// Check the validity of content
             SnSLogI(@"cacheInfo = %@ ", [cacheInfo description]);
             SnSLogI(@"[cacheInfo valueForKey:@\"timestamp\"] = %@ ", [[cacheInfo valueForKey:@"timestamp"] description]);
-            NSDate * timestamp = [NSDate dateWithTimeIntervalSince1970:[((NSNumber *)[cacheInfo valueForKey:@"timestamp"]) doubleValue]];
-            SnSLogI(@"timestamp = %@ ", [timestamp description]);
-            NSDate * now = [NSDate date];
-            SnSLogI(@"now = %@ ", [now description]);
-            NSString * typeMIME = [cacheInfo valueForKey:@"type"];
-            SnSLogI(@"type = %@ ", [typeMIME description]);
+            SnSLogI(@"timestamp = %@ ", [NSDate dateWithTimeIntervalSince1970:[((NSNumber *)[cacheInfo valueForKey:@"timestamp"]) doubleValue]]);
+            SnSLogI(@"now = %@ ", [NSDate date]);
+            SnSLogI(@"type = %@ ", [[cacheInfo valueForKey:@"type"] description]);
             
             if ([self dataIsAvailable:cacheInfo withoutNetwork:YES withCachePolicy:[urlRequest cachePolicy]]) 
             {

@@ -6,12 +6,21 @@
 //  Copyright 2012 Smart&Soft. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 // View Controllers
 #import "SnSStackViewController.h"
 #import "SnSStackSubViewController.h"
+#import "SnSStackTableSubViewController.h"
 
 // Views
 #import "SnSStackView.h"
+
+#import "SnSConstants.h"
+#import "SnSLog.h"
+
+#import "UIView+SnSExtension.h"
+#import "NSArray+SnSExtension.h"
 
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)
@@ -419,15 +428,11 @@
         }
 	}
 	
-	
-	
-	NSString* aPanningInfo = [NSString stringWithFormat:@"Panning: view: %@ - location: (%.0f %.0f) - direction:%d - displacement:%d -",
-							  _panningStatus.viewMoving,
-							  _panningStatus.location.x,_panningStatus.location.y,
-							  _panningStatus.direction,
-							  _panningStatus.displacement];
-	
-	SnSLogD(aPanningInfo);
+	SnSLogD(@"%@", [NSString stringWithFormat:@"Panning: view: %@ - location: (%.0f %.0f) - direction:%d - displacement:%d -",
+             _panningStatus.viewMoving,
+             _panningStatus.location.x,_panningStatus.location.y,
+             _panningStatus.direction,
+             _panningStatus.displacement]);
 	
 }
 
@@ -444,11 +449,14 @@
     // set stack controller
     iController.stackController = self;
     
+    [self removeControllersFromController:iFromController animated:YES];
+    
+    // Setup is done, retain the controller in the stack
+	[_stackControllers addObject:iController];
+    
     // add its view to display
 	[self.view addSubview:iController.view];
     [iController shadowEnabled:YES];
-    
-	[self removeControllersFromController:iFromController animated:YES];
 	
 	// Set default location if not provided
 	if (CGRectIsEmpty(iController.stackview.framePortrait) || CGRectIsEmpty(iController.stackview.frameLandscape))
@@ -465,10 +473,6 @@
 		iController.stackview.frameLandscape	= iController.stackview.frame;
 	}
 	
-	
-	// Setup is done, retain the controller in the stack
-	[_stackControllers addObject:iController];
-    
 	SnSStackSubView* aOldCenterView = _centerView;
 	SnSStackSubView* aOldOuterView = _outerView;
 	
@@ -536,7 +540,7 @@
             
 			[self shiftView:aController.view
 				 toPosition:CGPointMake(VIEW_WIDTH(self.view), VIEW_Y(aController.view))
-                   animated:YES
+                   animated:iAnimated
 				 completion:^(BOOL completed) {
                      // View hidden, disable shadow
                      [aController shadowEnabled:NO];
@@ -575,11 +579,15 @@
 
 - (void)popCurrentController
 {
+    [self popCurrentControllerAnimated:YES];
+}
+
+- (void)popCurrentControllerAnimated:(BOOL)animated {
     if (_stackControllers.count > 2)
     {
         SnSStackSubViewController* c = [_stackControllers objectAtIndex:_stackControllers.count-2];
         
-        [self removeControllersFromController:c animated:YES];
+        [self removeControllersFromController:c animated:animated];
     }
 }
 

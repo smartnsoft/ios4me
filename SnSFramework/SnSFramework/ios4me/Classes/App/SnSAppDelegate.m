@@ -21,6 +21,7 @@
 
 #import "SnSLog.h"
 #import "SnSUtils.h"
+#import "NSObject+SnSExtension.h"
 
 #pragma mark -
 #pragma mark SnSAppDelegate(Private)
@@ -50,6 +51,11 @@
 - (id<SnSExceptionHandler>) getExceptionHandler
 {
 	return nil;
+}
+
+- (BOOL) isGlobalExceptionHandlerActivated
+{
+    return YES;
 }
 
 - (id<SnSViewControllerInterceptor>) getInterceptor
@@ -161,8 +167,11 @@
 	// -----------------------------
 	// Install the Global Exception Handler
 	// -----------------------------
-	InstallUncaughtExceptionHandler();
-	
+	if ([self isGlobalExceptionHandlerActivated] == YES)
+    {
+        InstallUncaughtExceptionHandler();
+	}
+    
 }
 
 - (void) applicationWillTerminate:(UIApplication *) application

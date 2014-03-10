@@ -8,6 +8,11 @@
 
 #import "SnSStackSubViewController.h"
 #import "SnSStackView.h"
+#import "SnSLog.h"
+#import "SnSConstants.h"
+#import "SnSStackViewController.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 #define VIEW_X(v)			((v).frame.origin.x)
 #define VIEW_Y(v)			((v).frame.origin.y)

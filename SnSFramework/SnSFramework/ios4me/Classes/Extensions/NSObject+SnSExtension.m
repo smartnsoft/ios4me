@@ -18,6 +18,8 @@
 //
 
 #import "NSObject+SnSExtension.h"
+#import "SnSDelegate.h"
+#import "SnSLog.h"
 
 #pragma mark -
 #pragma mark NSObject(SnSExtensionPrivate)

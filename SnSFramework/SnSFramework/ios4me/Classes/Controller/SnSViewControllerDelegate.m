@@ -10,6 +10,10 @@
 //
 
 #import "SnSViewControllerDelegate.h"
+#import "SnSApplicationController.h"
+#import "SnSLog.h"
+#import "SnSConstants.h"
+#import "NSObject+SnSExtension.h"
 
 @interface SnSViewControllerDelegate (Private)
 

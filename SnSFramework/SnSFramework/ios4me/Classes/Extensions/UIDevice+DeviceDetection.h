@@ -16,7 +16,7 @@
  */
 
 #import <SystemConfiguration/SCNetworkReachability.h>
-
+#import <UIKit/UIKit.h>
 
 @interface UIDevice (DeviceDetection)
 
