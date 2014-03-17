@@ -441,8 +441,7 @@
 	@synchronized (self)
 	{
 		if (self.container == nil)
-			self.container = [[NSMutableDictionary alloc] init];
-		
+			self.container = [NSMutableDictionary dictionary];
 		else if ([_container isKindOfClass:[NSDictionary class]] == NO)
 			[SnSLifeCycleException raise:BAD_USAGE_SNSCODE format:@"Cannot turn the object into a dictionary"];
 		

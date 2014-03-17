@@ -49,7 +49,7 @@
  */
 @interface SnSURLCacheException : NSException
 {
-  id cause;
+  id _cause;
 }
 
 /**

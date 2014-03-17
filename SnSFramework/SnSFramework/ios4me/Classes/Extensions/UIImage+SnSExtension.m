@@ -113,6 +113,7 @@
     CGImageRef imageRef = self.CGImage;
     
     // Build a context that's the same dimensions as the new size
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef bitmap = CGBitmapContextCreate(NULL,
                                                 newRect.size.width,
                                                 newRect.size.height,
@@ -123,12 +124,12 @@
 	// second attempt
 	if (bitmap == NULL)
 	{
-		bitmap = CGBitmapContextCreate(NULL, 
+		bitmap = CGBitmapContextCreate(NULL,
 									   newRect.size.width, 
 									   newRect.size.height, 
 									   8, 
 									   (4 * self.size.width), 
-									   CGColorSpaceCreateDeviceRGB(), 
+									   colorSpace,
 									   kCGImageAlphaPremultipliedFirst);
 	}
     
@@ -147,6 +148,7 @@
     
     // Clean up
     CGContextRelease(bitmap);
+    CGColorSpaceRelease(colorSpace);
     CGImageRelease(newImageRef);
     
     return newImage;

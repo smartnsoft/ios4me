@@ -19,6 +19,7 @@
 
 #import "SnSURLCache.h"
 
+#import "SnSConstants.h"
 #import "SnSLog.h"
 #import "SnSDelegate.h"
 #import "UIDevice+DeviceConnectivity.h"
@@ -29,6 +30,8 @@
 NSString * const TYPE_MIME_OCTET_STREAM = @"application/octet-stream";
 NSString * const TYPE_MIME_JSON = @"application/json";
 NSString * const TYPE_MIME_IMAGE = @"image";
+
+// TODO: NEED CRITICAL Rewrite / Refacto.
 
 @interface SnSURLCacheData(Private)
 
@@ -43,17 +46,17 @@ NSString * const TYPE_MIME_IMAGE = @"image";
 
 + (id) cacheDataWith:(NSData *)theData andObject:(id)theObject
 {
-    return [[SnSURLCacheData alloc] initWith:theData andObject:theObject];
+    return [[[SnSURLCacheData alloc] initWith:theData andObject:theObject] autorelease];
 }
 
 - (id) initWith:(NSData *)theData andObject:(id)theObject
 {
-    if (![super init])
+    if ((self = [super init]))
     {
-        return nil;
+        self.data = theData;
+        self.object = theObject;
     }
-    self.data = theData;
-    self.object = theObject;
+    
     return self;
 }
 
@@ -72,11 +75,12 @@ NSString * const TYPE_MIME_IMAGE = @"image";
 
 @interface SnSDownloadOperation : NSOperation
 {
-@private NSString * _url;
-@private NSTimeInterval _timeoutInterval;
-@private id _delegate;
-@private SEL _selector;
-@private id _object;
+  @private
+    NSString *_url;
+    NSTimeInterval _timeoutInterval;
+    id _delegate;
+    SEL _selector;
+    id _object;
 }
 
 - (id) initWith:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval andDelegate:(SnSDelegateWithObject *)delegate;
@@ -93,15 +97,16 @@ NSString * const TYPE_MIME_IMAGE = @"image";
 
 - (id) initWith:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval andDelegate:(id)delegate andSelector:(SEL)selector andObject:(id)object
 {
-    if (![super init])
+    if ((self = [super init]))
     {
-        return nil;
+        _selector = selector;
+        _timeoutInterval = timeoutInterval;
+        
+        _url = [url retain];
+        _object = [object retain];
+        _delegate = [delegate retain];
     }
-    _url = [url retain];
-    _timeoutInterval = timeoutInterval;
-    _delegate = [delegate retain];
-    _selector = selector;
-    _object = [object retain];
+    
     return self;
 }
 
@@ -130,7 +135,7 @@ NSString * const TYPE_MIME_IMAGE = @"image";
 
 @implementation SnSURLCacheException
 
-@synthesize cause;
+@synthesize cause = _cause;
 
 + (void) raise:(NSError *)error
 {
@@ -139,12 +144,16 @@ NSString * const TYPE_MIME_IMAGE = @"image";
 
 - (id) initWithError:(NSError *)error
 {
-    if (![super initWithName:[error domain] reason:[[error userInfo] objectForKey:@"NSLocalizedDescription"] userInfo:[error userInfo]])
-    {
-        return nil;
-    }
-    cause = [error retain];
+    if ((self = [super initWithName:[error domain] reason:[[error userInfo] objectForKey:@"NSLocalizedDescription"]
+                           userInfo:[error userInfo]]))
+        _cause = [error retain];
     return self;
+}
+
+- (void)dealloc
+{
+    SnSReleaseAndNil(_cause);
+    [super dealloc];
 }
 
 @end
@@ -377,39 +386,38 @@ SnSURLCache ** urlCacheInstances = nil;
               andTimeValidity:(NSTimeInterval)timeToLive andPersistence:(BOOL)onDisk
 {
     SnSLogD(@"Initializing the cache with a persistence set at '%@'", path);
-    if (![super initWithMemoryCapacity:memoryCapacity diskCapacity:diskCapacity diskPath:path])
+    if ((self = [super initWithMemoryCapacity:memoryCapacity diskCapacity:diskCapacity diskPath:path]))
     {
-        return nil;
+        cacheDirectoryPath = [path retain];
+    
+        NSFileManager * fileManager = [NSFileManager defaultManager];
+        BOOL isDirectory;
+        if ([fileManager fileExistsAtPath:self.cacheDirectoryPath isDirectory:&isDirectory] == NO || isDirectory == FALSE)
+        {
+            //[fileManager createDirectoryAtPath:self.cacheDirectoryPath attributes:nil];
+            NSError * error;
+            [fileManager createDirectoryAtPath:self.cacheDirectoryPath withIntermediateDirectories:YES attributes:nil error:&error];
+        }
+    
+        indexFilePath = [[NSString pathWithComponents:[NSArray arrayWithObjects:self.cacheDirectoryPath,
+                                                       [NSString stringWithFormat:@"SnsURLCache_%@.plist", @"1.0"], nil]] retain];
+        SnSLogD(@"Storing the cache files under the directory '%@', and the index file at '%@'", self.cacheDirectoryPath, self.indexFilePath);
+        cache = [[NSMutableDictionary dictionaryWithContentsOfFile:self.indexFilePath] retain];
+        if (self.cache == nil)
+        {
+            SnSLogD(@"The cache is empty: creating a new one");
+            cache = [[NSMutableDictionary dictionary] retain];
+        }
+    
+        // We set a default URL request catcher
+        [self setURLRequestMatcher:[[SnSDelegate alloc] initWith:self andSelector:@selector(getURLMatchFor:result:)]];
+    
+        // set time data to be alive
+        timeToLiveSeconds = timeToLive;
+    
+        diskPersistent = onDisk;
     }
-    
-    cacheDirectoryPath = [path retain];
-    
-    NSFileManager * fileManager = [NSFileManager defaultManager];
-    BOOL isDirectory;
-    if ([fileManager fileExistsAtPath:self.cacheDirectoryPath isDirectory:&isDirectory] == NO || isDirectory == FALSE) 
-    {
-        //[fileManager createDirectoryAtPath:self.cacheDirectoryPath attributes:nil];
-        NSError * error;
-        [fileManager createDirectoryAtPath:self.cacheDirectoryPath withIntermediateDirectories:YES attributes:nil error:&error];
-    }
-    
-	indexFilePath = [[NSString pathWithComponents:[NSArray arrayWithObjects:self.cacheDirectoryPath, [NSString stringWithFormat:@"SnsURLCache_%@.plist", @"1.0"], nil]] retain];
-    SnSLogD(@"Storing the cache files under the directory '%@', and the index file at '%@'", self.cacheDirectoryPath, self.indexFilePath);
-	cache = [[NSMutableDictionary dictionaryWithContentsOfFile:self.indexFilePath] retain];
-	if (self.cache == nil)
-    {
-		SnSLogD(@"The cache is empty: creating a new one");
-		cache = [[NSMutableDictionary dictionary] retain];
-	}
-    
-    // We set a default URL request catcher
-    [self setURLRequestMatcher:[[SnSDelegate alloc] initWith:self andSelector:@selector(getURLMatchFor:result:)]];
-    
-    // set time data to be alive
-    timeToLiveSeconds = timeToLive;
-    
-    diskPersistent = onDisk;
-    
+
 	return self;
 }
 
@@ -508,7 +516,7 @@ SnSURLCache ** urlCacheInstances = nil;
                 NSString * fileName = [cacheInfo valueForKey:@"name"];
                 NSString * filePath = [self computeCacheFilePath:[[urlRequest URL] absoluteString] andFileName:fileName];
                 NSData * data = [[NSData alloc] initWithContentsOfFile:filePath];
-                cachedUrlResponse = [[NSCachedURLResponse alloc] initWithResponse:urlResponse data:data];
+                cachedUrlResponse = [[[NSCachedURLResponse alloc] initWithResponse:urlResponse data:data] autorelease];
                 [data release];
                 [urlResponse release];
                 return cachedUrlResponse;
@@ -630,15 +638,16 @@ SnSURLCache ** urlCacheInstances = nil;
 - (NSString *) computeURLMatch:(NSURLRequest *)urlRequest
 {
     NSString * result;
+    
     if (self.urlRequestMatcher.delegate == self)
-    {
-        // The default URL request matcher is used: for optimization, we call it directly
+    {   // The default URL request matcher is used: for optimization, we call it directly
         [self getURLMatchFor:urlRequest result:&result];
-        return result;
     }
-    // We increase the URL request matcher delegate, because the "perform" will release it
-    [self.urlRequestMatcher retain];
-    [self.urlRequestMatcher perform:urlRequest andObject:(id)&result];
+    else
+    {   // We increase the URL request matcher delegate, because the "perform" will release it
+        [self.urlRequestMatcher perform:urlRequest andObject:(id)&result];
+    }
+    
     return result;
 }
 
@@ -662,9 +671,7 @@ SnSURLCache ** urlCacheInstances = nil;
         return result;
     }
     // We increase the local URI matcher delegate, because the "perform" will release it
-    [self.localUriMatcher retain];
-    NSString ** resultPointer = &result;
-    [self.localUriMatcher perform:url andObject:(id)fileName andObject:(id)resultPointer];
+    [self.localUriMatcher perform:url andObject:(id)fileName andObject:(id)&result];
     
     // We now append the file directory path
     return [NSString pathWithComponents:[NSArray arrayWithObjects:self.cacheDirectoryPath, result, nil]];

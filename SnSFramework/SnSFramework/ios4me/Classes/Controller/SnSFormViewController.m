@@ -23,6 +23,8 @@
 #import "NSObject+SnSExtension.h"
 #import "SnSApplicationController.h"
 
+// TODO: There is BIG refactorisation and property fix to do, self->title and self.title are not the same thing here.
+
 #pragma mark -
 #pragma mark SnSFormTableViewCell
 
@@ -54,13 +56,13 @@
   if (formField.title != nil)
   {
     CGFloat halfWidth = [UIScreen mainScreen].bounds.size.width / 2;
-    self.title = [[UILabel alloc] initWithFrame:CGRectMake(0, 12, halfWidth, 15)];
+    self.title = [[[UILabel alloc] initWithFrame:CGRectMake(0, 12, halfWidth, 15)] autorelease];
     [self.contentView addSubview:title];
-    self.text = [[UITextField alloc] initWithFrame:CGRectMake(halfWidth + 5, 7, halfWidth - 3, 25)];
+    self.text = [[[UITextField alloc] initWithFrame:CGRectMake(halfWidth + 5, 7, halfWidth - 3, 25)] autorelease];
   }
   else
   {
-    self.text = [[UITextField alloc] initWithFrame:CGRectMake(5, 7, [UIScreen mainScreen].bounds.size.width - 30, 25)];
+    self.text = [[[UITextField alloc] initWithFrame:CGRectMake(5, 7, [UIScreen mainScreen].bounds.size.width - 30, 25)] autorelease];
   }
   self.text.delegate = delegate;
   if (formField.title != nil)
@@ -77,10 +79,13 @@
 
 - (void) dealloc
 {
-	[title release];
-	[text release];
-	
-  [super dealloc];
+    [title release];
+    [text release];
+    
+    self.title = nil;
+    self.text = nil;
+    
+    [super dealloc];
 }
 
 @end
@@ -139,10 +144,10 @@
   {
     return nil;
   }
-  self.sectionTitles = [[NSMutableDictionary alloc] init];
-  self.indexedDictionary = [[NSMutableDictionary alloc] init];
-  self.namedDictionary = [[NSMutableDictionary alloc] init];
-  self.rowsInSection = [[NSMutableDictionary alloc] init];
+  self.sectionTitles = [NSMutableDictionary dictionary];
+  self.indexedDictionary = [NSMutableDictionary dictionary];
+  self.namedDictionary = [NSMutableDictionary dictionary];
+  self.rowsInSection = [NSMutableDictionary dictionary];
   return self;
 }
 
@@ -216,12 +221,17 @@
 
 - (void) dealloc
 {
-  [sectionTitles release];
-  [indexedDictionary release];
-  [namedDictionary release];
-  [rowsInSection release];
-  
-  [super dealloc];
+    [sectionTitles release];
+    [indexedDictionary release];
+    [namedDictionary release];
+    [rowsInSection release];
+    
+    self.sectionTitles = nil;
+    self.indexedDictionary = nil;
+    self.namedDictionary = nil;
+    self.rowsInSection = nil;
+    
+    [super dealloc];
 }
 
 @end
