@@ -379,8 +379,8 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 - (id)initWithContentURL:(NSURL *)url
 {
     if ((self = [self initWithContentURL:url nibName:nil]) && url)
-        return self;
-    return nil;
+    { }
+    return self;
 }
 
 # pragma mark -
@@ -699,8 +699,11 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     AVMutableAudioMix *audioMix = [AVMutableAudioMix audioMix];
     NSMutableArray *inputParameters = [NSMutableArray array]; 
     
-    [params setVolume:sender.value atTime:kCMTimeZero];
-    [inputParameters addObject:params];
+    if (params)
+    {
+        [params setVolume:sender.value atTime:kCMTimeZero];
+        [inputParameters addObject:params];
+    }
     
     [audioMix setInputParameters:inputParameters];
     player_.currentItem.audioMix = audioMix;
@@ -745,16 +748,13 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
                                nil];
 
     stringSelector = [reference objectForKey:[NSValue valueWithPointer:context]];
-    if ((stringSelector = [reference objectForKey:[NSValue valueWithPointer:context]]) &&
-        NSSelectorFromString(stringSelector) && 
-        [self respondsToSelector:NSSelectorFromString(stringSelector)])
+    if (stringSelector && NSSelectorFromString(stringSelector) && [self respondsToSelector:NSSelectorFromString(stringSelector)])
         [self performSelector:NSSelectorFromString(stringSelector) withObject:object withObject:change];
 
     if (stringSelector)
         return ;
     
-    [super observeValueForKeyPath:keyPath ofObject:object
-                           change:change context:context];
+    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
 - (void)observeCurrentItemofObject:(AVPlayer*)object change:(NSDictionary *)change
@@ -955,7 +955,6 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
     if (![bufferProgress_ count])
         return ;
     
-	double interval = .1f;
 	
 	if (CMTIME_IS_INVALID(self.itemDuration))
 		return;
@@ -963,8 +962,9 @@ CGFloat keyframeTimeForTimeString(NSString* timeString, CMTime duration)
 	double duration = CMTimeGetSeconds(self.itemDuration);
 	if (isfinite(duration))
 	{
-		CGFloat width = CGRectGetWidth(((UIProgressView*)bufferProgress_.firstObject).bounds);
-		interval = 0.5f * duration / width;
+        //	double interval = .1f;
+        //  CGFloat width = CGRectGetWidth(((UIProgressView*)bufferProgress_.firstObject).bounds);
+        //	interval = 0.5f * duration / width;
         ((UIProgressView*)bufferProgress_.firstObject).progress = 0.0;
 	}
     
