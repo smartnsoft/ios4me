@@ -22,26 +22,16 @@
 
 @implementation SnSSingleton
 
-static id gInstances = nil; 
-
-+ (id) instance
++ (instancetype)instance
 {
-	id singleton = nil;
-    @synchronized (gInstances)
-    {
-		if (gInstances == nil)
-			gInstances = [[NSMutableDictionary alloc] init];
-		
-		NSString* aKey = [NSString stringWithFormat:@"%@",[self class]];
-		singleton = [gInstances objectForKey:aKey];
-        if ( singleton == nil)
-		{
-            singleton = [[self alloc] init];
-            [singleton setup];
-			[gInstances setObject:singleton forKey:aKey];
-		}
-    }
-    return singleton;
+    static id _sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc] init];
+        [_sharedInstance setup];
+    });
+    
+    return _sharedInstance;
 }
 
 - (void)setup
@@ -51,15 +41,7 @@ static id gInstances = nil;
 
 - (void)reset
 {
-	NSString* aKey = [NSString stringWithFormat:@"%@",[self class]];
-	
-	@synchronized (gInstances)
-	{
-		id singleton = [gInstances objectForKey:aKey];
-		[singleton release];
-		singleton = nil;
-		[gInstances removeObjectForKey:aKey];
-	}
+    return ; // Kept for legacy, i don't see a point in singleton reset.
 }
 
 @end
