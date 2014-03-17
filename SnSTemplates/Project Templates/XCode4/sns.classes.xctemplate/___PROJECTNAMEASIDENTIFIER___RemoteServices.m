@@ -8,8 +8,7 @@
 
 #import "___FILEBASENAME___.h"
 
-// Categories
-#import "JSON.h"
+#import <ASIHTTPRequest/ASIDownloadCache.h>
 
 // Business Objects
 #import "___PROJECTNAMEASIDENTIFIER___AbstractObject.h"

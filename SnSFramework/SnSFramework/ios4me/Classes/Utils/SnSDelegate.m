@@ -15,6 +15,7 @@
 //  Created by Édouard Mercier on 18/12/2009.
 //
 
+#import "SnSConstants.h"
 #import "SnSDelegate.h"
 
 #pragma mark -
@@ -22,8 +23,8 @@
 
 @implementation SnSDelegate
 
-@synthesize delegate;
-@synthesize selector;
+@synthesize delegate = _delegate;
+@synthesize selector = _selector;
 
 + (id) delegateWith:(id)theDelegate andSelector:(SEL)theSelector
 {
@@ -33,21 +34,23 @@
 #pragma mark -
 #pragma mark NSObject
 
-- (id) initWith:(id)theDelegate andSelector:(SEL)theSelector
+- (id)initWith:(id)theDelegate andSelector:(SEL)theSelector
 {
-  if (![super init])
+  if ((self = [super init]))
   {
-    return nil;
-  }    
-  delegate = theDelegate;
-  selector = theSelector;
+      _delegate = theDelegate;
+      _selector = theSelector;
+  }
+    
   return self;
 }
 
 - (void) dealloc
 {
-//  [delegate release];
-  [super dealloc];
+    _delegate = nil;
+    _selector = nil;
+    
+    [super dealloc];
 }
 
 #pragma mark -
@@ -55,28 +58,26 @@
 
 - (void) perform
 {
-  //SnSLogD(@"Running the delegate in the calling thread");
   [self.delegate performSelector:self.selector];
-  //[self release];
 }
 
 - (void) perform:(id)object
 {
-  //SnSLogD(@"Running the delegate in the calling thread");
   [self.delegate performSelector:self.selector withObject:object];
-  //[self release];
 }
 
 - (void) perform:(id)object andObject:(id)otherObject
 {
-  //SnSLogD(@"Running the delegate in the calling thread");
   [self.delegate performSelector:self.selector withObject:object withObject:otherObject];
-  //[self release];
+}
+
+- (void) performOnMainThread:(id)object
+{
+    [self.delegate performSelectorOnMainThread:self.selector withObject:object waitUntilDone:YES];
 }
 
 - (void) perform:(id)object andObject:(id)otherObject1 andObject:(id)otherObject2
 {
-  //SnSLogD(@"Running the delegate in the calling thread");
   NSMethodSignature * methodSignature = [self.delegate methodSignatureForSelector:self.selector];
   NSInvocation * invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
   invocation.selector = self.selector;
@@ -85,14 +86,6 @@
   [invocation setArgument:&otherObject1 atIndex:3];
   [invocation setArgument:&otherObject2 atIndex:4];
   [invocation invoke];
-  //[self release];
-}
-
-- (void) performOnMainThread:(id)object
-{
-  //SnSLogD(@"Running the delegate in the main thread");
-  [self.delegate performSelectorOnMainThread:self.selector withObject:object waitUntilDone:YES];
-  //[self release];
 }
 
 @end
@@ -102,7 +95,7 @@
 
 @implementation SnSDelegateWithObject
 
-@synthesize object;
+@synthesize object = _object;
 
 + (id) delegateWith:(id)theDelegate andSelector:(SEL)theSelector andObject:(id)theObject
 {
@@ -111,17 +104,22 @@
 
 - (id) initWith:(id)theDelegate andSelector:(SEL)theSelector andObject:(id)theObject
 {
-  if (![super initWith:theDelegate andSelector:theSelector])
-  {
-    return nil;
-  }    
-  object = [theObject retain];
+  if ((self = [super initWith:theDelegate andSelector:theSelector]))
+      _object = [theObject retain];
+
   return self;
 }
 
 - (void) perform
 {
-  [super perform:object];
+  [super perform:_object];
+}
+
+- (void)dealloc
+{
+    SnSReleaseAndNil(_object);
+    
+    [super dealloc];
 }
 
 @end

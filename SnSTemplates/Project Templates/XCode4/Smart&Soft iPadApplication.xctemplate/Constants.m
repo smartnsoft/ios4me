@@ -20,19 +20,9 @@
 #import "Constants.h"
 
 /********************************** TRACKING ANALYTICS ********************************/
-// Google Analytics
-NSString * const GA_UID = @"UA-XXXXXXX-Y";
 NSString * const PREFIX_TRACKING = @"/iphone/%@";
-// Flurry
-NSString * const FLURRY_APPLICATION_KEY = @"????????????????";
 
-
-/*
-NSString * const WEB_SERVICE_URL_PREFIX = @"http://snsservices.smartnsoft.com/rest/___PROJECTNAMEASIDENTIFIER___";
-*/
 
 NSString * const CREDITS_URL_PREFIX = @"http://api.smartnsoft.com/___PROJECTNAMEASIDENTIFIER___/";
 
 const NSTimeInterval DOWNLOAD_TIMEOUT_IN_SECOND = 60.0;
-
-

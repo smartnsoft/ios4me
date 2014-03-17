@@ -9,6 +9,7 @@
 	
 	<key>Ancestors</key>
 	<array>
+		<!--<string>com.apple.dt.unit.emptyApplication</string> -->
 		<string>com.apple.dt.unit.objectiveCApplication</string>
 		<string>com.apple.dt.unit.prefixable</string>
 		<!-- <string>com.apple.dt.unit.cocoaTouchApplication</string> -->
@@ -37,9 +38,16 @@
 				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
 				<string>SNS_LOG_LEVEL_ERROR</string>
 			</dict>
+			<key>AppStore</key>
+			<dict>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<string>SNS_LOG_LEVEL_ERROR</string>
+			</dict>
 		</dict>
 		<key>SharedSettings</key>
 		<dict>
+			<key>CLANG_ENABLE_OBJC_ARC</key>
+			<string>NO</string>
 			<key>GCC_C_LANGUAGE_STANDARD</key>
 			<string>gnu99</string>
 			<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
@@ -67,6 +75,11 @@
 					<string>NO</string>
 				</dict>
 				<key>Release</key>
+				<dict>
+					<key>COPY_PHASE_STRIP</key>
+					<string>YES</string>
+				</dict>
+				<key>AppStore</key>
 				<dict>
 					<key>COPY_PHASE_STRIP</key>
 					<string>YES</string>

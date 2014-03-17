@@ -19,6 +19,7 @@
 
 #import "SnSImageDownloader.h"
 
+#import "SnSConstants.h"
 #import "SnSLog.h"
 #import "SnSURLCache.h"
 #import "SnSUtils.h"
@@ -61,26 +62,26 @@
  */
 @implementation SnSDownloadImageOperation
 
-- (id) initWith:(BOOL)useCache andUrl:(NSString *)url// andDelegate:(DownloadImageDelegate *) theCallback
+- (id) initWith:(BOOL)useCache andUrl:(NSString *)url
 {
-    if (([super init]))
+    if ((self = [super init]))
     {
 		_useCache	= useCache;
 		_url		= [url retain];
 		imageUrl	= [[NSURL URLWithString:_url] retain];
 		urlRequest	= [[NSURLRequest alloc] initWithURL:imageUrl cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60.0];
-		//callback = theCallback;
-
+        callback    = nil;
     }
-       return self;
+    
+    return self;
 }
 
 - (void) dealloc
 {
-    [imageUrl release];
-    [_url release];
-    [urlRequest release];
-    [callback release];
+    SnSReleaseAndNil(imageUrl);
+    SnSReleaseAndNil(_url);
+    SnSReleaseAndNil(urlRequest);
+    SnSReleaseAndNil(callback);
 	
     [super dealloc];
 }
@@ -169,7 +170,7 @@
 
 - (id) initWith:(BOOL)useCache andTarget:(UIImageView *)target andUrl:(NSString *)url andTemporaryImage:(NSString *)imageResourceName
 {
-    if (([super initWith:useCache andUrl:url]))
+    if ((self = [super initWith:useCache andUrl:url]))
     {
 		imageView = [target retain];
 		
@@ -180,33 +181,26 @@
 		activity.center = CGPointMake(imageView.frame.size.width/2, imageView.frame.size.height/2);
 		[activity startAnimating];
 
-		[imageView addSubview:activity];
-
+        [imageView addSubview:activity];
     }
-        return self;
+    
+    return self;
 }
 
 - (id) initAndEnqueueWith:(BOOL)useCache andTarget:(UIImageView *)target andUrl:(NSString *)url andTemporaryImage:(NSString *)imageResourceName
 {
-    if ([self initWith:useCache andTarget:target andUrl:url andTemporaryImage:imageResourceName])
-	{
-		// Only if the image URL is not null
-		if (url != nil && [url length] > 0)
-		{
-			// Only if the image URL is not null
-			[self enqueue:self];
-		}
+    if ((self = [self initWith:useCache andTarget:target andUrl:url andTemporaryImage:imageResourceName]))
+        if (url != nil && [url length] > 0)
+            [self enqueue:self];
 
-	}
-	
-        return self;
+    return self;
 }
 
 
 - (void)dealloc
 {
-	[imageView release];
-	[activity release];
+    SnSReleaseAndNil(imageView);
+    SnSReleaseAndNil(activity);
 	
 	[super dealloc];
 }
@@ -236,49 +230,42 @@
 
 - (id) initWith:(BOOL)useCache andTarget:(UITableViewCell *)target andUrl:(NSString *)url andTemporaryImage:(NSString *)imageResourceName
 {
-    if (![super initWith:useCache andUrl:url])
+    if ((self = [super initWith:useCache andUrl:url]))
     {
-        return nil;
-    }
-    tableViewCell = target;
-    if (tableViewCell != nil && imageResourceName != nil)
-    {
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < 30000
-        tableViewCell.image = [SnSImageUtils imageNamed:imageResourceName];
-#else
-        tableViewCell.imageView.image =  [SnSImageUtils imageNamed:imageResourceName];
-#endif
+        tableViewCell = target;
+        if (tableViewCell != nil && imageResourceName != nil)
+        {
+            #if __IPHONE_OS_VERSION_MIN_REQUIRED < 30000
+              tableViewCell.image = [SnSImageUtils imageNamed:imageResourceName];
+            #else
+              tableViewCell.imageView.image =  [SnSImageUtils imageNamed:imageResourceName];
+            #endif
+        }
     }
     return self;
 }
 
 - (id) initAndEnqueueWith:(BOOL)useCache andTarget:(UITableViewCell *)target andUrl:(NSString *)url andTemporaryImage:(NSString *)imageResourceName
 {
-    if (![super init])
-    {
-        return nil;
-    }
-    [self initWith:useCache andTarget:target andUrl:url andTemporaryImage:imageResourceName];
-    if (url != nil && [url length] > 0)
-    {
-        // Only if the image URL is not null
-        [self enqueue:self];
-    }
+    if ((self = [self initWith:useCache andTarget:target andUrl:url andTemporaryImage:imageResourceName]))
+        if (url != nil && [url length] > 0)
+            [self enqueue:self];
+    
     return self;
 }
 
 - (void) onDataDownloaded:(NSData *)data
 {
-    UIImage * image = [[UIImage alloc] initWithData:data];
+    UIImage *image = [[[UIImage alloc] initWithData:data] autorelease];
+    
     if (tableViewCell != nil)
     {
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < 30000
-        tableViewCell.image = image;
-#else
-        tableViewCell.imageView.image = image;
-#endif
+        #if __IPHONE_OS_VERSION_MIN_REQUIRED < 30000
+          tableViewCell.image = image;
+        #else
+          tableViewCell.imageView.image = image;
+        #endif
     }
-    //[((UITableView *) [tableViewCell superview]) reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone ];
 }
 
 @end

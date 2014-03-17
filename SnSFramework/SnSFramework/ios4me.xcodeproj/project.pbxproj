@@ -81,6 +81,8 @@
 		04FB834F14F68150004754E7 /* SnSExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB834C14F68150004754E7 /* SnSExceptionHandler.m */; };
 		80C38FDC17F2484100F61D6C /* UIImageView+SnSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C38FDA17F2484100F61D6C /* UIImageView+SnSExtension.h */; };
 		80C38FDD17F2484100F61D6C /* UIImageView+SnSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C38FDB17F2484100F61D6C /* UIImageView+SnSExtension.m */; };
+		80CBC471188BD03B00EB374C /* SnSSettingsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 80CBC46F188BD03B00EB374C /* SnSSettingsManager.h */; };
+		80CBC472188BD03B00EB374C /* SnSSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CBC470188BD03B00EB374C /* SnSSettingsManager.m */; };
 		80F008CE164BA33D005CB486 /* UIScreen+Resolutions.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */; };
 		80F008D0164BA33D005CB486 /* UIScreen+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */; };
 		9CACA02A15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */; };
@@ -212,6 +214,8 @@
 		80BD005F17CE969300D53B1D /* ios4me.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = ios4me.podspec; path = ../../ios4me.podspec; sourceTree = "<group>"; };
 		80C38FDA17F2484100F61D6C /* UIImageView+SnSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SnSExtension.h"; sourceTree = "<group>"; };
 		80C38FDB17F2484100F61D6C /* UIImageView+SnSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SnSExtension.m"; sourceTree = "<group>"; };
+		80CBC46F188BD03B00EB374C /* SnSSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSSettingsManager.h; sourceTree = "<group>"; };
+		80CBC470188BD03B00EB374C /* SnSSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSSettingsManager.m; sourceTree = "<group>"; };
 		80F008CC164BA33D005CB486 /* UIScreen+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Resolutions.h"; sourceTree = "<group>"; };
 		80F008CD164BA33D005CB486 /* UIScreen+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Resolutions.m"; sourceTree = "<group>"; };
 		9CACA02215C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+SnSSmartPlayer.h"; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 		B239CAE3EE0346C0BA35E640 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BE2A98DB16D2413C00C63101 /* SnSStoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnSStoreObserver.h; sourceTree = "<group>"; };
 		BE2A98DC16D2413C00C63101 /* SnSStoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnSStoreObserver.m; sourceTree = "<group>"; };
+		D033BDED18D736FB00F08B99 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +415,8 @@
 		04ADDB3214ED470200C2087E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				80CBC46F188BD03B00EB374C /* SnSSettingsManager.h */,
+				80CBC470188BD03B00EB374C /* SnSSettingsManager.m */,
 				BE2A98DB16D2413C00C63101 /* SnSStoreObserver.h */,
 				BE2A98DC16D2413C00C63101 /* SnSStoreObserver.m */,
 				04ADDB3314ED470200C2087E /* SnSStoreManager.h */,
@@ -499,6 +506,7 @@
 		0867D691FE84028FC02AAC07 /* SnSFramework */ = {
 			isa = PBXGroup;
 			children = (
+				D033BDED18D736FB00F08B99 /* Podfile */,
 				80BD005F17CE969300D53B1D /* ios4me.podspec */,
 				04ADDAEF14ED46EF00C2087E /* iOSFramework.sh */,
 				04756103140B8A3A00C0DF6C /* Makefile */,
@@ -569,6 +577,7 @@
 				044DB5F415751672009574EF /* UIView+SnSExtension.h in Headers */,
 				04EB258F157767EB009E43F6 /* UILabel+SnSExtension.h in Headers */,
 				04AE69EC158774EB00FEAEF8 /* SnSLoadingView.h in Headers */,
+				80CBC471188BD03B00EB374C /* SnSSettingsManager.h in Headers */,
 				04AE69F21587750800FEAEF8 /* SnSDropListView.h in Headers */,
 				040C74761588F30400C7D546 /* SnSDropListViewCell.h in Headers */,
 				044F1CF2159B0D7200021BE8 /* NSData+SnSExtension.h in Headers */,
@@ -613,7 +622,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Smart&Soft";
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ios4me" */;
@@ -721,6 +730,7 @@
 				044F1CF4159B0D7200021BE8 /* NSData+SnSExtension.m in Sources */,
 				04EC134D15B0792F002AD6A9 /* UIImage+SnSExtension.m in Sources */,
 				9CACA02C15C96DF3001F331B /* AVPlayerItem+SnSSmartPlayer.m in Sources */,
+				80CBC472188BD03B00EB374C /* SnSSettingsManager.m in Sources */,
 				9CACA03015C96DF3001F331B /* SnSSmartPlayerController.m in Sources */,
 				9CACA03415C96DF3001F331B /* SnSSmartPlayerView.m in Sources */,
 				9CACA03815C96DF3001F331B /* SnSSmartSubtitleView.m in Sources */,
@@ -740,12 +750,7 @@
 			baseConfigurationReference = B239CAE3EE0346C0BA35E640 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/SnSFramework__Device_.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode_4.6.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks\"",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -764,12 +769,7 @@
 			baseConfigurationReference = B239CAE3EE0346C0BA35E640 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/SnSFramework__Device_.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode_4.6.2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks\"",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_THUMB_SUPPORT = NO;
@@ -785,7 +785,6 @@
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DYLIB_CURRENT_VERSION = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -799,6 +798,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
@@ -808,7 +808,6 @@
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DYLIB_CURRENT_VERSION = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREFIX_HEADER = "$(PROJECT)/$(PROJECT)_Prefix.pch";

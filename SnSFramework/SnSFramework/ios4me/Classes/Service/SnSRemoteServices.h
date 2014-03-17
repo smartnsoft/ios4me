@@ -9,6 +9,8 @@
 #import "SnSSingleton.h"
 #import "SnSLoadingView.h"
 
+#import "SnSWebServiceCaller.h"
+
 @class ASIHTTPRequest;
 @class SnSMemoryCache;
 
@@ -31,7 +33,7 @@ typedef enum SnSImageRetrievalOption
  * to have prebuilt behaviour pre loaded such as asynchronous image downloading.
  */
 
-@interface SnSRemoteServices : SnSSingleton
+@interface SnSRemoteServices : SnSWebServiceCaller
 {
 	@protected
 	NSMutableDictionary* requests_;		//<! The dictionary holding 'binding' -> 'requests'

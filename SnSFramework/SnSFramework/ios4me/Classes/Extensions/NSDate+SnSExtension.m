@@ -94,19 +94,18 @@
 
 - (id)initWithDictionary:(NSDictionary *)iDic key:(NSString *)iKey format:(NSString *)iFormat
 {
-	NSString* dateStr = [iDic objectForKey:iKey];
-	NSDate*	 date = nil;
+    NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+	NSString *dateStr = [iDic objectForKey:iKey];
+	NSDate *date = nil;
 	
 	if ([dateStr isKindOfClass:[NSString class]])
 	{
-		NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
 		[formatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] autorelease]];
 		[formatter setDateFormat:iFormat];
-		
 		date = [formatter dateFromString:dateStr];
 	}
+    
 	return [date copy];
-
 }
 
 

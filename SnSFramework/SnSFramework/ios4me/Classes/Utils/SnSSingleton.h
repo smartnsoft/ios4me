@@ -17,10 +17,13 @@
 
 #import <Foundation/Foundation.h>
 
+@interface SnSSingleton : NSObject
 
-@interface SnSSingleton : NSObject { }
+#pragma mark - Class Messages
++ (instancetype)instance;
 
-+ (id)instance;
+#pragma mark - Helper Messages
 - (void)setup;
 - (void)reset;
+
 @end

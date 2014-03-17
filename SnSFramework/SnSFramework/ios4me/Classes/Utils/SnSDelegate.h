@@ -25,8 +25,8 @@
  */
 @interface SnSDelegate : NSObject
 {
-  id delegate;
-  SEL selector;
+  id _delegate;
+  SEL _selector;
 }
 
 @property(nonatomic, assign, readonly) id delegate; // do not retain the delegate or it won't be released
@@ -91,7 +91,7 @@
  */
 @interface SnSDelegateWithObject : SnSDelegate
 {
-  id object;
+  id _object;
 }
 
 @property(nonatomic, retain, readonly) id object;

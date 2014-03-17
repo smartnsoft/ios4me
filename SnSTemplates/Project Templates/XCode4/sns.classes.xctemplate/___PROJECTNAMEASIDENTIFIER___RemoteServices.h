@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import <ASIHTTPRequest/ASIHTTPRequest.h>
+
+
 @class ___PROJECTNAMEASIDENTIFIER___AbstractObject;
 
 typedef void (^___PROJECTNAMEASIDENTIFIER___ServicesBlock)(id);

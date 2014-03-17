@@ -67,18 +67,19 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
 - (void)handleException:(NSException *)exception
 {
 	[self validateAndSaveCriticalApplicationData];
-	
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unhandled exception"
-                                                        message:[NSString stringWithFormat:@"%@%@",
-                                                                 @"You can try to continue but the application may be unstable.\n\n",
-                                                                 @"Debug details will be logged"]
-                                                       delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Quit", nil)
-                                              otherButtonTitles:NSLocalizedString(@"Continue", nil), nil];
-        [alert show];
-        [alert release];
-    });
+
+	// TODO : MRO ajouter un paramètre général pour indiquer si cette popup doit s'afficher (un mode debug par exemple)
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unhandled exception"
+//                                                        message:[NSString stringWithFormat:@"%@%@",
+//                                                                 @"You can try to continue but the application may be unstable.\n\n",
+//                                                                 @"Debug details will be logged"]
+//                                                       delegate:self
+//                                              cancelButtonTitle:NSLocalizedString(@"Quit", nil)
+//                                              otherButtonTitles:NSLocalizedString(@"Continue", nil), nil];
+//        [alert show];
+//        [alert release];
+//    });
 	
 		
 	SnSLogE(@"%@", [exception reason]);

@@ -13,4 +13,6 @@
 - (NSString*)serializeForURL:(NSString *)baseUrl;
 - (void)makeObjectsPerformBlock:(void (^)(id,id))block;
 
++ (NSDictionary *)dictionaryWithFormEncodedString:(NSString *)encodedString;
+
 @end

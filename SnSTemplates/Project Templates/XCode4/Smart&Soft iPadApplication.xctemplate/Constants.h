@@ -62,22 +62,9 @@
 #define NavigationBarTintColor RGB(182, 16, 127)
 
 /********************************** TRACKING ANALYTICS ********************************/
-// Google Analytics
-extern NSString * const GA_UID;
 extern NSString * const PREFIX_TRACKING;
 
-// Flurry Analytics
-/*
- Application name: ___PROJECTNAMEASIDENTIFIER___
- Unique application Key: ???????
- AppStoreId: com.smartnsoft.standard
- */
-extern NSString * const FLURRY_APPLICATION_KEY;
 
-
-/*
-extern NSString * const WEB_SERVICE_URL_PREFIX;
-*/
 
 extern NSString * const CREDITS_URL_PREFIX;
 

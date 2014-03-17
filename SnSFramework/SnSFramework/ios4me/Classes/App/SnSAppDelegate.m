@@ -53,6 +53,11 @@
 	return nil;
 }
 
+- (BOOL) isGlobalExceptionHandlerActivated
+{
+    return YES;
+}
+
 - (id<SnSViewControllerInterceptor>) getInterceptor
 {
 	return nil;
@@ -162,14 +167,17 @@
 	// -----------------------------
 	// Install the Global Exception Handler
 	// -----------------------------
-	InstallUncaughtExceptionHandler();
-	
+	if ([self isGlobalExceptionHandlerActivated] == YES)
+    {
+        InstallUncaughtExceptionHandler();
+	}
+    
 }
 
 - (void) applicationWillTerminate:(UIApplication *) application
 { 
 	SnSLogI(@"Application stopping");
-	[self.loadingView release];
+    self.loadingView = nil;
 }
 
 - (void) applicationDidReceiveMemoryWarning:(UIApplication *)application
@@ -182,9 +190,11 @@
 
 - (void) dealloc
 {
-	[[SnSApplicationController instance] release];
-	[self.window release];
-	[super dealloc];
+    // !!!: [[SnSApplicationController instance] release];
+    
+    self.window = nil;
+    self.loadingView = nil;
+    [super dealloc];
 }
 
 #pragma mark -
@@ -262,7 +272,7 @@ NSString * LOADING_ACTION_MESSAGE = @"message";
 			}
 			else 
 			{
-				self.loadingView = [[UIView alloc] initWithFrame:[self.window frame]];
+				self.loadingView = [[[UIView alloc] initWithFrame:[self.window frame]] autorelease];
 				self.loadingView.hidden = YES;
 				UIView * darkLayer = [[UIView alloc] initWithFrame:[self.window frame]];
 				darkLayer.backgroundColor = [UIColor blackColor];

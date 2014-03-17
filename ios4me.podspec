@@ -17,9 +17,8 @@ Pod::Spec.new do |s|
   
   s.ios.source_files      = 'SnSFramework/SnSFramework/ios4me/Classes/**/*.{h,m}'
   s.ios.frameworks        = 'UIKit', 'QuartzCore', 'Foundation', 'Security'
+  s.ios.libraries 		  = 'sqlite3.0', 'xml2', 'z'
   
   s.ios.dependency        'ASIHTTPRequest', '~> 1.8.1'
-  #s.ios.dependency        'AFNetworking', '~> 1.3.2'
-  #s.ios.dependency        'MKNetworkKit', '~> 0.87'
 
 end
