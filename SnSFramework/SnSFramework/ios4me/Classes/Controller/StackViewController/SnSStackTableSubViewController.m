@@ -178,10 +178,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	// Call designated initalizer
-	SnSStackTableSubViewController* aController = [[SnSStackTableSubViewController alloc] initWithNibName:nil bundle:nil];
-//	aController.stackview.frame = CGRectMake(0, 0, 400, VIEW_HEIGHT(self.view));
-//	aController.stackview.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//	aController.stackview.layer.borderWidth = 1.f;
+	SnSStackTableSubViewController* aController = [[[SnSStackTableSubViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+    //aController.stackview.frame = CGRectMake(0, 0, 400, VIEW_HEIGHT(self.view));
+    //aController.stackview.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    //aController.stackview.layer.borderWidth = 1.f;
 	
 	aController.stackController				= _stackController;
 	
