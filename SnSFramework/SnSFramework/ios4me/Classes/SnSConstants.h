@@ -86,3 +86,13 @@
 #pragma mark -
 
 #define SnSSQLiteAccessorFolderName @"SnSSQLite"
+
+#pragma mark - Back Compatibility -
+
+#ifdef __IPHONE_6_0 // iOS6 and later
+#   define UITextAlignmentCenter    NSTextAlignmentCenter
+#   define UITextAlignmentLeft      NSTextAlignmentLeft
+#   define UITextAlignmentRight     NSTextAlignmentRight
+#   define UILineBreakModeTailTruncation     NSLineBreakByTruncatingTail
+#   define UILineBreakModeMiddleTruncation   NSLineBreakByTruncatingMiddle
+#endif

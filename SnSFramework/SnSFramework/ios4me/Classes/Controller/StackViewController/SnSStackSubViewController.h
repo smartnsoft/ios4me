@@ -26,24 +26,33 @@
 	CGRect	_framePortrait;
 	CGRect	_frameLandscape;
 	
-//	SnSStackSubView* _stackSubView;
-	
+    CGFloat _offsetShiftPortrait;
+    CGFloat _offsetShiftLandscape;
+    
 	SnSStackViewController* _stackController;
-	
-	
+		
 	BOOL _isShifted;
+    
 	BOOL _enablePan;
+    BOOL _enableShadow;
 }
+
+@property (nonatomic, assign) BOOL defaultShadow;
+@property (nonatomic, retain) CALayer *shadowLayer;
+
+@property (nonatomic, assign) CGFloat offsetShiftPortrait;
+@property (nonatomic, assign) CGFloat offsetShiftLandscape;
 
 @property (nonatomic, assign) CGRect framePortrait;
 @property (nonatomic, assign) CGRect frameLandscape;
+
 @property (nonatomic, assign) SnSStackViewController* stackController;
 @property (nonatomic, assign, getter = isPanEnabled) BOOL enablePan;
- 
+@property (nonatomic, assign) BOOL enableShadow;
+
 #pragma mark UIView
 
 - (SnSStackSubView*)stackview;
-- (void)shadowEnabled:(BOOL)enabled;
-
+- (CGFloat)offsetShift;
 
 @end

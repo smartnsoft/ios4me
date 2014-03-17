@@ -26,10 +26,18 @@
 {
 	CGRect	_framePortrait;
 	CGRect	_frameLandscape;
+    
+    CGFloat _offsetShiftPortrait;
+    CGFloat _offsetShiftLandscape;
 }
+
+@property (nonatomic, assign) CGFloat offsetShiftPortrait;
+@property (nonatomic, assign) CGFloat offsetShiftLandscape;
 
 @property (nonatomic, assign) CGRect framePortrait;
 @property (nonatomic, assign) CGRect frameLandscape;
+
+- (CGFloat)offsetShift;
 
 @end
 

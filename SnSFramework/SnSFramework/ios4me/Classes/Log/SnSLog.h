@@ -17,11 +17,6 @@
 
 #import <Foundation/Foundation.h>
 
-// for cocoapods, we only know if the DEBUG macro is defined
-#ifdef DEBUG
-#   define SNS_LOG_LEVEL_DEBUG 1
-#endif
-
 #if SNS_LOG_LEVEL_DEBUG != 0
 #	define SNS_LOG_LEVEL 5
 #endif
@@ -40,6 +35,11 @@
 
 #if SNS_LOG_LEVEL_FATAL != 0
 #	define SNS_LOG_LEVEL 1
+#endif
+
+// for cocoapods, we only know if the DEBUG macro is defined
+#if defined(DEBUG) && !defined(SNS_LOG_LEVEL)
+#	define SNS_LOG_LEVEL 5
 #endif
 
 // SnS starting logo

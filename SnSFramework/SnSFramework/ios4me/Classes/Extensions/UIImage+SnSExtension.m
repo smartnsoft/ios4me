@@ -128,9 +128,9 @@
 									   newRect.size.width, 
 									   newRect.size.height, 
 									   8, 
-									   (4 * self.size.width), 
+									   (4 * self.size.width),
 									   colorSpace,
-									   kCGImageAlphaPremultipliedFirst);
+									   (CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
 	}
     
     // Rotate and/or flip the image if required by its orientation

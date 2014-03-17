@@ -33,6 +33,7 @@
   @private SnSWorkItem * businessObject;
   @private SnSWorkItem * context;
   @private SnSResponserRedirector * responderRedirector;
+  @protected BOOL  isVideoFullscreen;
 }
 
 @property(nonatomic, retain, readonly) SnSWorkItem * businessObject;

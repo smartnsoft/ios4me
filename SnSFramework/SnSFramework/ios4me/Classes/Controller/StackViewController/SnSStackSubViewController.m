@@ -46,9 +46,16 @@
 {
 	[super onRetrieveDisplayObjects:view];
 	
-	// Default to YES
+    self.shadowLayer = [CALayer layer];
+    self.shadowLayer.shadowOpacity = 0.5f;
+    self.shadowLayer.shadowRadius = 7.f;
+    self.shadowLayer.shadowOffset = CGSizeMake(0, 1);
+    self.shadowLayer.shadowColor = [UIColor blackColor].CGColor;
+    
 	self.enablePan = YES;
-    [self shadowEnabled:NO];
+    self.defaultShadow = NO;
+    
+    self.enableShadow = self.defaultShadow;
 }
 
 /**
@@ -89,6 +96,11 @@
 #pragma mark Properties
 #pragma mark -
 
+- (CGFloat)offsetShift
+{
+    return UIDeviceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ? self.offsetShiftPortrait : self.offsetShiftLandscape;
+}
+
 - (SnSStackSubView *)stackview
 {
     UIView* aView = self.view;
@@ -127,13 +139,10 @@
         
         // Shift back frame if already shifted
         if ([_stackController isViewShifted:self.stackview])
-            aFutureFrame = CGRectMake(aFutureFrame.origin.x-_stackController.offsetShift,
-                                      aFutureFrame.origin.y,
-                                      aFutureFrame.size.width,
-                                      aFutureFrame.size.height);
+            aFutureFrame = (CGRect){aFutureFrame.origin.x - self.stackview.offsetShift,
+                                        aFutureFrame.origin.y, aFutureFrame.size};
         
         self.stackview.frame = aFutureFrame;
-        
         [UIView commitAnimations];
     }
 }
@@ -170,16 +179,33 @@
 #pragma mark Utils
 #pragma mark -
 
-- (void)shadowEnabled:(BOOL)enabled
+- (void)setEnableShadow:(BOOL)enableShadow
 {
-    SnSLogD(@"Shadow %@ on %@.", (enabled ? @"enabled" : @"disabled"), self);
-    self.view.layer.shadowColor = (enabled ? [UIColor blackColor].CGColor : nil);
-    self.view.layer.shadowOpacity = (enabled ? 50.f : 0.f);
-    self.view.layer.shadowRadius = (enabled ? 7.f : 0.f);
-    self.view.layer.shadowOffset = CGSizeMake(0, 1);
-    self.view.layer.shadowPath = (enabled ? [UIBezierPath bezierPathWithRect:self.view.bounds].CGPath : nil);
+    if (enableShadow == _enableShadow)
+        return ;
     
-    self.view.clipsToBounds = NO;
+    self.shadowLayer.backgroundColor = self.view.layer.backgroundColor;
+    self.shadowLayer.frame = (CGRect){CGPointZero, self.view.layer.frame.size};
+    self.shadowLayer.shadowPath = [UIBezierPath bezierPathWithRect:self.shadowLayer.bounds].CGPath;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ((_enableShadow = enableShadow))
+            [self.view.layer insertSublayer:self.shadowLayer atIndex:0];
+        else
+            [self.shadowLayer removeFromSuperlayer];
+    });
+    
+    self.view.clipsToBounds = (enableShadow ? NO : YES);
+    self.view.layer.masksToBounds = (enableShadow ? NO : YES);
+}
+
+#pragma mark - Basics -
+
+- (void)dealloc
+{
+    self.shadowLayer = nil;
+    
+    [super dealloc];
 }
 
 @end
