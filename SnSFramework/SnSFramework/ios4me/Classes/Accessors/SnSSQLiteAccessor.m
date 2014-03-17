@@ -634,8 +634,9 @@
     if ([iFKeys count] > 0)
     {        
         // Make sure the order remains the same !
-        NSMutableArray* aFKeys      = [[NSMutableArray alloc] initWithCapacity:[iFKeys count]];
-        NSMutableArray* aFValues    = [[NSMutableArray alloc] initWithCapacity:[iFKeys count]];
+        NSMutableArray* aFKeys      = [NSMutableArray array];
+        NSMutableArray* aFValues    = [NSMutableArray array];
+
         for (NSString* aFKey in iFKeys)
         {
             [aFValues addObject:[iFKeys objectForKey:aFKey]];
