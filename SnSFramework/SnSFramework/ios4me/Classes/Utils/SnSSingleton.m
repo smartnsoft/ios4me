@@ -24,12 +24,23 @@
 
 + (instancetype)instance
 {
-    static id _sharedInstance = nil;
+    id _sharedInstance = nil;
+    static id _sharedInstances = nil;
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[self alloc] init];
-        [_sharedInstance setup];
+        _sharedInstances = [[NSMutableDictionary alloc] init];
     });
+    
+    @synchronized(self)
+    {
+        if ((_sharedInstance = [_sharedInstances objectForKey:NSStringFromClass([self class])]) == nil)
+        {
+            _sharedInstance = [[self alloc] init];
+            [_sharedInstances setObject:_sharedInstance forKey:NSStringFromClass([self class])];
+            [_sharedInstance setup];
+        }
+    }
     
     return _sharedInstance;
 }
