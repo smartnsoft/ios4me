@@ -35,3 +35,10 @@ Here you can choose to create either an iPad or iPhone Application the choice is
 
 Should you have any questions feel free to contact us via [twitter](https://twitter.com/#!/i0s4me) or [mail](mailto:sebastien@smartnsoft.com)
 
+
+Fix bug
+-------------------
+
+#### version 1.1.1
+
+bug fixed : if the resized image is nil, the error block is called. 
