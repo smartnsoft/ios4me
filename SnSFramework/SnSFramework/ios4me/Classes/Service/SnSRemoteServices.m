@@ -154,34 +154,47 @@
     [self prepareImageRequest:request];
     
     [imageview setImageWithURLHTTPRequest:request
-                     placeholderImage:imageview.image
-                              success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                  //SnSLogD(@"[RemoteServices] - success image retrieval of : %@[%@]", request.URL, NSStringFromCGSize(image.size));
-                                  
-                                  // resize image if needed in a separate thread so that the main thread is not penalized
-                                  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                                      UIImage* resizedImage = image;
-                                      
-                                      if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeToBinding))
-                                          resizedImage = [image resizedImage:imageview.bounds.size
-                                                        interpolationQuality:kCGInterpolationMedium];
-                                      
-                                      // update image view on main thread
-                                      dispatch_async(dispatch_get_main_queue(), ^{
-                                          imageview.image = resizedImage;
-                                          
-                                          if (iCompletionBlock)
-                                              iCompletionBlock(resizedImage);
-                                      });
-                                  });
-                              }
-                              failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-                                  //SnSLogE(@"[RemoteServices] - failed image retrieval of : %@ : ", request.URL, error.localizedDescription);
-                                  
-                                  if (iErrorBlock)
-                                      iErrorBlock(error);
-                              }];
-
+                         placeholderImage:imageview.image
+                                  success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image)
+     {
+         //SnSLogD(@"[RemoteServices] - success image retrieval of : %@[%@]", request.URL, NSStringFromCGSize(image.size));
+         
+         if (image == nil)
+         {
+             NSError *error = [NSError errorWithDomain:@"An error is occured, the received image is nil" code:-1 userInfo:nil];
+             
+             if (iErrorBlock)
+                 iErrorBlock(error);
+         }
+         else
+         {
+             
+             // resize image if needed in a separate thread so that the main thread is not penalized
+             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                 UIImage* resizedImage = image;
+                 
+                 if ([iBindingView isKindOfClass:[UIImageView class]] && (iOption & kSnSImageRetrievalOptionResizeToBinding))
+                     resizedImage = [image resizedImage:imageview.bounds.size
+                                   interpolationQuality:kCGInterpolationMedium];
+                 
+                 // update image view on main thread
+                 dispatch_async(dispatch_get_main_queue(), ^
+                                {
+                                    imageview.image = resizedImage;
+                                    
+                                    if (iCompletionBlock)
+                                        iCompletionBlock(resizedImage);
+                                });
+             });
+         }
+     }
+                                  failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error)
+     {
+         //SnSLogE(@"[RemoteServices] - failed image retrieval of : %@ : ", request.URL, error.localizedDescription);
+         if (iErrorBlock)
+             iErrorBlock(error);
+     }];
+    
 }
 
 @end
