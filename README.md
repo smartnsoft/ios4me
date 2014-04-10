@@ -33,5 +33,5 @@ In XCode when you create a new project and after you have installed the framewor
 
 Here you can choose to create either an iPad or iPhone Application the choice is yours. 
 
-Should you have any questions feel free to contact us via [twitter](https://twitter.com/#!/i0s4me) or [mail](mailto:johan@smartnsoft.com)
+Should you have any questions feel free to contact us via [twitter](https://twitter.com/#!/i0s4me) or [mail](mailto:sebastien@smartnsoft.com)
 
