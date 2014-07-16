@@ -251,7 +251,7 @@ SnSURLCache ** urlCacheInstances = nil;
             {
                 SnSLogD(@"Received a response from server with status code %i corresponding to the URL '%@'", [urlResponse statusCode], urlRequest);
 //                [data release];
-                NSString * errorName = (data == nil ? @"Bad response from server" : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                __unused NSString *errorName = (data == nil ? @"Bad response from server" : [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 				SnSLogE(@"%@ - Status Code %i", errorName, [urlResponse statusCode]);
 //                @throw [[SnSURLCacheException alloc] initWithName:errorName
 //														   reason:[NSString stringWithFormat:@"Status code: %i", [urlResponse statusCode]]
@@ -545,7 +545,7 @@ SnSURLCache ** urlCacheInstances = nil;
      }*/
     
     NSURLResponse * response = [cachedResponse response];
-    NSString * url = [[response URL] absoluteString];
+    __unused NSString *url = [[response URL] absoluteString];
     if (cachedResponse.storagePolicy != NSURLCacheStorageAllowed)// || [urlRequest cachePolicy] != NSURLRequestReturnCacheDataElseLoad)
     {
         SnSLogD(@"Letting the parent cache storing the data related to the URL '%@'", url);

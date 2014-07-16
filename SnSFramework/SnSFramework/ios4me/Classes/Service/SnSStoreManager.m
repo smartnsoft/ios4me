@@ -107,10 +107,8 @@
 {
 	SnSLogD(@"%@::productsRequest:didReceiveResponse", self.class);
 	
-	for (NSString* aInvalidProduct in [response invalidProductIdentifiers])
-	{
+	for (__unused NSString *aInvalidProduct in [response invalidProductIdentifiers])
 		SnSLogE(@"Unkown Product Identifier: %@", aInvalidProduct);
-	}
 	
 	_products = [[NSArray alloc] initWithArray:[response products]];
 	

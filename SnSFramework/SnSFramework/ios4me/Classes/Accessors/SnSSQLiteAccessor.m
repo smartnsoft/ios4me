@@ -244,20 +244,14 @@
 	NSString* aErrorString			= [NSString stringWithFormat:@"\n%@\n\tError %@ \n\tFailed to execute: \n\t%@\n%@", aLogString, aErrorInfo, iQuery, aLogString];
 	NSDictionary* aErrorDictionary	= [NSDictionary dictionaryWithObjectsAndKeys:aErrorString, NSLocalizedDescriptionKey, nil];
 	
-	NSError* aError = [NSError errorWithDomain:@"WeekMateDomain"
-										  code:0 
-									  userInfo:aErrorDictionary];
-	
-	
+	__unused NSError *aError = [NSError errorWithDomain:@"WeekMateDomain" code:0 userInfo:aErrorDictionary];
 	SnSLogE([aError localizedDescription]);
 }
 
 - (void)didSucceedToExecute:(NSString*)iQuery parameter:(id)iParameter
 {
-	
 	NSString* aInfo = @"";
-	
-	// Number ? -> Number of Rows Fetched
+
 	if ([iParameter isKindOfClass:[NSNumber class]])
     {
         NSInteger aRowsInvolved = [iParameter intValue]; 
@@ -278,10 +272,8 @@
     if (_lastInsertedRowID != 0)
         aInfo = [aInfo stringByAppendingFormat:@" [Last ID Insterted: %zd] ", _lastInsertedRowID];
 	
-	NSString* aLogString	= @"--------------------------------------------------------------";
-	
-	// Log Query
-	SnSLogD(@"\n---- SQL Query Executed Succesfully %@:\n%@\n%@\n%@",aInfo,aLogString,iQuery,aLogString);
+	__unused NSString *aLogString = @"--------------------------------------------------------------";
+	SnSLogD(@"\n---- SQL Query Executed Succesfully %@:\n%@\n%@\n%@", aInfo, aLogString, iQuery, aLogString);
 }
 
 - (NSString*) sqlInformatiomFromCode:(NSInteger)iErrorCode
