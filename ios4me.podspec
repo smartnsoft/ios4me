@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ios4me'
-  s.version      = '1.1.2'
+  s.version      = '1.1.3'
   s.homepage     = 'http://www.smartnsoft.com'
   s.license      = 'LGPL'
   s.summary      = 'An iOS framework built by Smart&Soft, cutting edge mobile agency in France.'
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Smart&Soft' => 'contact@smartnsoft.com' }
   s.source       = {
     :git => 'https://github.com/smartnsoft/ios4me.git',
-    :tag => '1.1.2'
+    :tag => '1.1.3'
   }
 
   s.platform              = :ios, '5.0'
