@@ -90,7 +90,7 @@
 	NSUInteger blue = 0;
 	UIColor *result = nil;
 	
-	if (sscanf([color UTF8String], "#%2x%2x%2x", &red, &green, &blue) == 3) {
+	if (sscanf([color UTF8String], "#%2tx%2tx%2tx", &red, &green, &blue) == 3) {
 		result = [UIColor colorWithRed:(red / 255.0) green:(green / 255.0) blue:(blue / 255.0) alpha:1.0];
 	}
 	

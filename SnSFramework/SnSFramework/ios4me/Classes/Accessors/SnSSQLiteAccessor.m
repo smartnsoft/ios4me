@@ -266,17 +266,17 @@
         NSRange aRangeDelete = [iQuery rangeOfString:@"DELETE"];
         
         if (aRangeSelect.location != NSNotFound)
-            aInfo = [NSString stringWithFormat:@" [%u Row%@ Selected] ", aRowsInvolved, aRowsInvolved > 1 ? @"s" : @""];
+            aInfo = [NSString stringWithFormat:@" [%zd Row%@ Selected] ", aRowsInvolved, aRowsInvolved > 1 ? @"s" : @""];
         
         if (aRangeInsert.location != NSNotFound)
-            aInfo = [NSString stringWithFormat:@" [%u Row%@ Inserted] ", aRowsInvolved, aRowsInvolved > 1 ? @"s" : @""];
+            aInfo = [NSString stringWithFormat:@" [%zd Row%@ Inserted] ", aRowsInvolved, aRowsInvolved > 1 ? @"s" : @""];
         
         if (aRangeDelete.location != NSNotFound)
-            aInfo = [NSString stringWithFormat:@" [%u Row%@ Deleted] ", aRowsInvolved, aRowsInvolved > 1 ? @"s" : @""];
+            aInfo = [NSString stringWithFormat:@" [%zd Row%@ Deleted] ", aRowsInvolved, aRowsInvolved > 1 ? @"s" : @""];
     }
     
     if (_lastInsertedRowID != 0)
-        aInfo = [aInfo stringByAppendingFormat:@" [Last ID Insterted: %u] ", _lastInsertedRowID];
+        aInfo = [aInfo stringByAppendingFormat:@" [Last ID Insterted: %zd] ", _lastInsertedRowID];
 	
 	NSString* aLogString	= @"--------------------------------------------------------------";
 	
@@ -492,10 +492,10 @@
 				++aNbFetchedObject;
 			}
 			
-			[self didSucceedToExecute:iQuery parameter:[NSNumber numberWithInt:aNbFetchedObject]];
+			[self didSucceedToExecute:iQuery parameter:[NSNumber numberWithInteger:aNbFetchedObject]];
 		}
 		else
-			[self didFailToExecute:iQuery parameter:[NSNumber numberWithInt:aResult]];
+			[self didFailToExecute:iQuery parameter:[NSNumber numberWithInteger:aResult]];
 		
 		// "Finalize" the statement - releases the resources associated with the statement.
 		sqlite3_finalize(statement);
@@ -558,9 +558,9 @@
 	
 	// Log Error if ret is not ok
 	if (ret != SQLITE_OK && ret != SQLITE_DONE &&  ret != SQLITE_ROW)
-		[self didFailToExecute:iQuery parameter:[NSNumber numberWithInt:ret]];
+		[self didFailToExecute:iQuery parameter:[NSNumber numberWithInteger:ret]];
 	else
-		[self didSucceedToExecute:iQuery parameter:[NSNumber numberWithInt:changes]];
+		[self didSucceedToExecute:iQuery parameter:[NSNumber numberWithInteger:changes]];
 	
 	return (ret == SQLITE_OK || ret == SQLITE_DONE || ret == SQLITE_ROW);
 	

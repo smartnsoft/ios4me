@@ -38,7 +38,9 @@
         {
             _sharedInstance = [[self alloc] init];
             [_sharedInstances setObject:_sharedInstance forKey:NSStringFromClass([self class])];
+            
             [_sharedInstance setup];
+            [_sharedInstance release]; // already retained by _sharedInstances
         }
     }
     

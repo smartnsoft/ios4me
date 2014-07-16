@@ -31,8 +31,8 @@
 + (NSInteger)integerFromStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn
 {
     NSInteger aRes = NSIntegerMin;
-	if (sqlite3_column_type(iStatement, iColumn) == SQLITE_INTEGER)
-		aRes = (NSInteger)sqlite3_column_int(iStatement, iColumn);
+	if (sqlite3_column_type(iStatement, (int)iColumn) == SQLITE_INTEGER)
+		aRes = (NSInteger)sqlite3_column_int(iStatement, (int)iColumn);
 	return aRes;
 }
 
@@ -64,7 +64,7 @@
 {
 	const char *cStr = [self UTF8String];
 	unsigned char digest[16];
-	CC_MD5( cStr, strlen(cStr), digest ); // This is the md5 call
+	CC_MD5( cStr, (CC_LONG)strlen(cStr), digest ); // This is the md5 call
 	
 	NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
 	
@@ -81,7 +81,7 @@
 	
 	uint8_t digest[CC_SHA1_DIGEST_LENGTH];
 	
-	CC_SHA1(data.bytes, data.length, digest);
+	CC_SHA1(data.bytes, (CC_LONG)data.length, digest);
 	
 	NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
 	
@@ -99,11 +99,11 @@
 
 - (id)initWithSQLiteStatement:(sqlite3_stmt*)iStatement column:(NSInteger)iColumn
 {
-    const unsigned char* t = sqlite3_column_text(iStatement, iColumn);
+    const unsigned char* t = sqlite3_column_text(iStatement, (int)iColumn);
 	
 	self = nil;
 	if (t)
-		self =  [[NSString alloc] initWithCString:(const char*)sqlite3_column_text(iStatement, iColumn)
+		self =  [[NSString alloc] initWithCString:(const char*)sqlite3_column_text(iStatement, (int)iColumn)
 										 encoding:NSUTF8StringEncoding];
 	return self;
 }

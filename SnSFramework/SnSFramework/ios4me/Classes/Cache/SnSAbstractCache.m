@@ -80,17 +80,12 @@ static NSInteger sCacheIndex = -1;
 	dispatch_release(queue_);
 	
     [super dealloc];
-    
 }
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"id: %u - size: %d - items [%d] - high: %d - low: %d", 
-			cacheIndex_, 
-			cacheSize_,
-			[items_ count],
-			highCapacity_,
-			lowCapacity_];
+	return [NSString stringWithFormat:@"id: %zd - size: %zd - items [%zd] - high: %zd - low: %zd",
+			cacheIndex_, cacheSize_, [items_ count], highCapacity_, lowCapacity_];
 }
 
 #pragma mark Cache Size

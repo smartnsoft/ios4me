@@ -87,7 +87,8 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"key: %@ - accessed: %@ - hits: %d - data: %db", _key, _lastAccessedDate, _hits, [_data length]];
+	return [NSString stringWithFormat:@"key: %@ - accessed: %@ - hits: %zd - data: %zdb",
+            _key, _lastAccessedDate, _hits, [_data length]];
 }
 
 - (BOOL)isEqualToCacheItem:(SnSCacheItem*)iItem
