@@ -453,6 +453,8 @@ const NSString * DEFAULT_EXTENTION = @".png";
 #pragma mark -
 #pragma mark SnSFileUtils
 
+#include <sys/xattr.h>
+
 @implementation SnSFileUtils : NSObject
 
 /**
@@ -466,7 +468,6 @@ const NSString * DEFAULT_EXTENTION = @".png";
  To set the "do not back up" attribute, add the following method to a class in your application. 
  Whenever you create a file that should not be backed up to iCloud, write the data to the file and then call this method, passing in a URL that points to the file.
  **/
-#include <sys/xattr.h>
 + (void) AddSkipBackupAttributeToFile: (NSURL*) url
 {
     u_int8_t b = 1;
