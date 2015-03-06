@@ -14,154 +14,158 @@
 
 @implementation SnSStoreManager
 
-@synthesize products = _products;
-@synthesize delegate = _delegate;
-
 #pragma mark - Init Methods
 
 - (void)dealloc
 {
-	[_products release];
-	
-	[super dealloc];
+    self.delegate = nil;
+}
+
+- (void)setup
+{
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    _products = [[NSMutableDictionary alloc] init];
 }
 
 - (id)init
 {
-	if ((self = [super init]))
-	{
-		[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-	}
-	return self;
+    if ((self = [super init]))
+    {
+        [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    }
+    
+    return self;
 }
 
 #pragma mark - Products
 
-- (void)requestProductData:(NSArray*)iProductsList
+- (void)requestProductData:(NSArray *)iProductsList
 {
-	@synchronized(_request)
-	{
-		_request= [[SKProductsRequest alloc] initWithProductIdentifiers: [NSSet setWithArray:iProductsList]];
-		_request.delegate = self;
-		[_request start];
-	}
+    @synchronized(_request)
+    {
+        _request= [[SKProductsRequest alloc] initWithProductIdentifiers: [NSSet setWithArray:iProductsList]];
+        _request.delegate = self;
+        [_request start];
+    }
 }
 
-- (void)buyProduct:(SKProduct*)iProduct
+- (void)buyProduct:(SKProduct *)iProduct
 {
-	// By default only one quantity
-	[self buyProduct:iProduct quantity:1];
+    // By default only one quantity
+    [self buyProduct:iProduct quantity:1];
 }
 
-- (void)buyProduct:(SKProduct*)iProduct quantity:(NSUInteger)iQuantity
+- (void)buyProduct:(SKProduct *)iProduct quantity:(NSUInteger)iQuantity
 {
-	SKMutablePayment* aPayment = [SKMutablePayment paymentWithProduct:iProduct];
-	[aPayment setQuantity:iQuantity];
-	
-	[[SKPaymentQueue defaultQueue] addPayment:aPayment];
+    SKMutablePayment* aPayment = [SKMutablePayment paymentWithProduct:iProduct];
+    [aPayment setQuantity:iQuantity];
+    
+    [[SKPaymentQueue defaultQueue] addPayment:aPayment];
+}
+
+- (SKProduct *)retrieveProductsWithProductIdentifier:(NSString *)identifier
+{
+    return _products[identifier];
 }
 
 #pragma mark - Transactions
 
 - (void)purchasingTransaction:(SKPaymentTransaction *)iTransaction
-{	
-	SnSLogD(@"%@::purchasingTransaction", self.class);
-	
-}
-- (void)completedTransaction:(SKPaymentTransaction *)transaction 
 {
-	SnSLogD(@"%@::completeTransaction", self.class);
+    SnSLogD(@"%@::purchasingTransaction", self.class);
+    
+}
+- (void)completedTransaction:(SKPaymentTransaction *)transaction
+{
+    SnSLogD(@"%@::completeTransaction", self.class);
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-	if ([self.delegate respondsToSelector:@selector(storeManager:didFinishTransaction:)])
-		[self.delegate storeManager:self didFinishTransaction:transaction];
+    if ([self.delegate respondsToSelector:@selector(storeManager:didFinishTransaction:)])
+        [self.delegate storeManager:self didFinishTransaction:transaction];
 }
 
 
-- (void)failedTransaction:(SKPaymentTransaction *)transaction 
+- (void)failedTransaction:(SKPaymentTransaction *)transaction
 {
-	SnSLogD(@"%@::failedTransaction Reason: %@", self.class, [transaction.error localizedDescription]);
-
+    SnSLogD(@"%@::failedTransaction Reason: %@", self.class, [transaction.error localizedDescription]);
+    
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-	if ([self.delegate respondsToSelector:@selector(storeManager:didFailedTransaction:)])
-		[self.delegate storeManager:self didFailedTransaction:transaction];
+    if ([self.delegate respondsToSelector:@selector(storeManager:didFailedTransaction:)])
+        [self.delegate storeManager:self didFailedTransaction:transaction];
 }
 
 
-- (void)restoredTransaction:(SKPaymentTransaction *)transaction 
+- (void)restoredTransaction:(SKPaymentTransaction *)transaction
 {
-	SnSLogD(@"%@::restoredTransaction", self.class);
-
-	[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+    SnSLogD(@"%@::restoredTransaction", self.class);
+    
+    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
 
 - (void)restoreTranscation
 {
-	[[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 }
-
 
 #pragma mark - SKProductsRequestDelegate
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
 {
-	SnSLogD(@"%@::productsRequest:didReceiveResponse", self.class);
-	
-	for (__unused NSString *aInvalidProduct in [response invalidProductIdentifiers])
-		SnSLogE(@"Unkown Product Identifier: %@", aInvalidProduct);
-	
-	_products = [[NSArray alloc] initWithArray:[response products]];
-	
-	// Signal Delegate the products have been received
-	if ([_delegate respondsToSelector:@selector(storeManager:didReceiveProductsData:)])
-		[_delegate storeManager:self didReceiveProductsData:_products];
-	
-	
-	// Now release the request object
-	@synchronized(_request)
-		{ [_request release]; }
+    SnSLogD(@"%@::productsRequest:didReceiveResponse", self.class);
+    
+    for (__unused NSString *aInvalidProduct in [response invalidProductIdentifiers])
+        SnSLogE(@"Unkown Product Identifier: %@", aInvalidProduct);
+    
+    for (SKProduct *product in [response products])
+    {
+        [_products setValue:product forKey:product.productIdentifier];
+    }
+
+    // Signal Delegate the products have been received
+    if ([_delegate respondsToSelector:@selector(storeManager:didReceiveProductsData:)])
+        [_delegate storeManager:self didReceiveProductsData:_products];
 }
 
 #pragma mark -
 #pragma mark SKPaymentTransactionObserver methods
 
-- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions 
+- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions
 {
     for (SKPaymentTransaction *transaction in transactions)
-	{
-        switch (transaction.transactionState) 
-		{
-			case SKPaymentTransactionStatePurchasing:
-				[self purchasingTransaction:transaction];
+    {
+        switch (transaction.transactionState)
+        {
+            case SKPaymentTransactionStatePurchasing:
+                [self purchasingTransaction:transaction];
                 break;
             case SKPaymentTransactionStatePurchased:
                 [self completedTransaction:transaction];
                 break;
-			case SKPaymentTransactionStateFailed:
-				[self failedTransaction:transaction];
-				break;
-			case SKPaymentTransactionStateRestored:
-				[self restoredTransaction:transaction];
-				break;
+            case SKPaymentTransactionStateFailed:
+                [self failedTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateRestored:
+                [self restoredTransaction:transaction];
+                break;
             default:
                 break;
         }
     }
 }
 
-- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error 
+- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
 {
-	SnSLogE(@"paymentQueue:restoreCompletedTransactionsFailedWithError:%@", [error localizedDescription]);
-	if ([self.delegate respondsToSelector:@selector(storeManager:didFailedRestoreTransactions:)])
-		[self.delegate storeManager:self didFailedRestoreTransactions:queue];
+    SnSLogE(@"paymentQueue:restoreCompletedTransactionsFailedWithError:%@", [error localizedDescription]);
+    if ([self.delegate respondsToSelector:@selector(storeManager:didFailedRestoreTransactions:)])
+        [self.delegate storeManager:self didFailedRestoreTransactions:queue];
 }
 
-- (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue 
+- (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
-	SnSLogD(@"%@::paymentQueueRestoreCompletedTransactionsFinished:", self.class);
-
-	if ([self.delegate respondsToSelector:@selector(storeManager:didRestoreTransactions:)])
-		[self.delegate storeManager:self didRestoreTransactions:queue];
+    SnSLogD(@"%@::paymentQueueRestoreCompletedTransactionsFinished:", self.class);
+    
+    if ([self.delegate respondsToSelector:@selector(storeManager:didRestoreTransactions:)])
+        [self.delegate storeManager:self didRestoreTransactions:queue];
 }
 
 

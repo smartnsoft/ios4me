@@ -26,27 +26,26 @@
 @protocol SnSStoreManagerDelegate <NSObject>
 
 @optional
-- (void)storeManager:(SnSStoreManager*)storeManager didReceiveProductsData:(NSArray*)products;
-- (void)storeManager:(SnSStoreManager*)storeManager didFinishTransaction:(SKPaymentTransaction*)transaction;
-- (void)storeManager:(SnSStoreManager*)storeManager didFailedTransaction:(SKPaymentTransaction*)transaction;
-- (void)storeManager:(SnSStoreManager*)storeManager didFailedRestoreTransactions:(SKPaymentQueue*)transaction;
-- (void)storeManager:(SnSStoreManager*)storeManager didRestoreTransactions:(SKPaymentQueue*)transaction;
+- (void)storeManager:(SnSStoreManager*)storeManager didReceiveProductsData:(NSDictionary *)products;
+- (void)storeManager:(SnSStoreManager*)storeManager didFinishTransaction:(SKPaymentTransaction *)transaction;
+- (void)storeManager:(SnSStoreManager*)storeManager didFailedTransaction:(SKPaymentTransaction *)transaction;
+- (void)storeManager:(SnSStoreManager*)storeManager didFailedRestoreTransactions:(SKPaymentQueue *)transaction;
+- (void)storeManager:(SnSStoreManager*)storeManager didRestoreTransactions:(SKPaymentQueue *)transaction;
 @end
 
 
 @interface SnSStoreManager : SnSSingleton <SKProductsRequestDelegate,SKPaymentTransactionObserver>
 {
 	SKRequest* _request;
-	NSArray* _products;
-	id<SnSStoreManagerDelegate> _delegate;
 }
 
-@property (nonatomic, readonly) NSArray* products;
+@property (nonatomic, readonly) NSMutableDictionary* products;
 @property (nonatomic, retain) id<SnSStoreManagerDelegate> delegate;
 
-- (void)buyProduct:(SKProduct*)iProduct;
-- (void)buyProduct:(SKProduct*)iProduct quantity:(NSUInteger)iQuantity;
-- (void)requestProductData:(NSArray*)iProductsList;
+- (void)buyProduct:(SKProduct *)iProduct;
+- (void)buyProduct:(SKProduct *)iProduct quantity:(NSUInteger)iQuantity;
+- (void)requestProductData:(NSArray *)iProductsList;
+- (SKProduct *)retrieveProductsWithProductIdentifier:(NSString *)identifier;
 
 #pragma mark Transactions
 
