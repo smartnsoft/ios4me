@@ -41,29 +41,28 @@
 
 - (void)requestProductData:(NSArray *)iProductsList
 {
-    @synchronized(_request)
-    {
-        _request= [[SKProductsRequest alloc] initWithProductIdentifiers: [NSSet setWithArray:iProductsList]];
-        _request.delegate = self;
-        [_request start];
-    }
+    SKRequest* request = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithArray:iProductsList]];
+    request.delegate = self;
+    [request start];
 }
 
-- (void)buyProduct:(SKProduct *)iProduct
+- (void)buyProduct:(NSString *)productIdentifier
 {
     // By default only one quantity
-    [self buyProduct:iProduct quantity:1];
+    [self buyProduct:productIdentifier quantity:1];
 }
 
-- (void)buyProduct:(SKProduct *)iProduct quantity:(NSUInteger)iQuantity
+- (void)buyProduct:(NSString *)productIdentifier quantity:(NSUInteger)iQuantity
 {
-    SKMutablePayment* aPayment = [SKMutablePayment paymentWithProduct:iProduct];
+    SKProduct *product = _products[productIdentifier];
+    
+    SKMutablePayment* aPayment = [SKMutablePayment paymentWithProduct:product];
     [aPayment setQuantity:iQuantity];
     
     [[SKPaymentQueue defaultQueue] addPayment:aPayment];
 }
 
-- (SKProduct *)retrieveProductsWithProductIdentifier:(NSString *)identifier
+- (SKProduct *)retrieveProductWithProductIdentifier:(NSString *)identifier
 {
     return _products[identifier];
 }
@@ -75,6 +74,7 @@
     SnSLogD(@"%@::purchasingTransaction", self.class);
     
 }
+
 - (void)completedTransaction:(SKPaymentTransaction *)transaction
 {
     SnSLogD(@"%@::completeTransaction", self.class);
@@ -82,7 +82,6 @@
     if ([self.delegate respondsToSelector:@selector(storeManager:didFinishTransaction:)])
         [self.delegate storeManager:self didFinishTransaction:transaction];
 }
-
 
 - (void)failedTransaction:(SKPaymentTransaction *)transaction
 {
@@ -93,14 +92,12 @@
         [self.delegate storeManager:self didFailedTransaction:transaction];
 }
 
-
 - (void)restoredTransaction:(SKPaymentTransaction *)transaction
 {
     SnSLogD(@"%@::restoredTransaction", self.class);
     
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
-
 
 - (void)restoreTranscation
 {
@@ -120,7 +117,7 @@
     {
         [_products setValue:product forKey:product.productIdentifier];
     }
-
+    
     // Signal Delegate the products have been received
     if ([_delegate respondsToSelector:@selector(storeManager:didReceiveProductsData:)])
         [_delegate storeManager:self didReceiveProductsData:_products];
@@ -167,6 +164,5 @@
     if ([self.delegate respondsToSelector:@selector(storeManager:didRestoreTransactions:)])
         [self.delegate storeManager:self didRestoreTransactions:queue];
 }
-
 
 @end

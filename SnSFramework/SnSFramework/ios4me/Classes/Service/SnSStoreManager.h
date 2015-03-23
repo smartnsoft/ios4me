@@ -36,16 +36,15 @@
 
 @interface SnSStoreManager : SnSSingleton <SKProductsRequestDelegate,SKPaymentTransactionObserver>
 {
-	SKRequest* _request;
 }
 
-@property (nonatomic, readonly) NSMutableDictionary* products;
-@property (nonatomic, retain) id<SnSStoreManagerDelegate> delegate;
+@property (nonatomic, strong, readonly) NSMutableDictionary *products;
+@property (nonatomic, assign) id<SnSStoreManagerDelegate> delegate;
 
-- (void)buyProduct:(SKProduct *)iProduct;
-- (void)buyProduct:(SKProduct *)iProduct quantity:(NSUInteger)iQuantity;
+- (void)buyProduct:(NSString *)productIdentifier;
+- (void)buyProduct:(NSString *)productIdentifier quantity:(NSUInteger)iQuantity;
 - (void)requestProductData:(NSArray *)iProductsList;
-- (SKProduct *)retrieveProductsWithProductIdentifier:(NSString *)identifier;
+- (SKProduct *)retrieveProductWithProductIdentifier:(NSString *)identifier;
 
 #pragma mark Transactions
 
