@@ -1,3 +1,10 @@
+#Deprecation
+
+We are currently in the process of refactoring all of iOS4Me into flexible and focused components. So please note that iOS4Me is deprecated.
+
+We will open our components shortly.
+
+=========================
 ios4me LGPL v3 Sources
 =========================
 
