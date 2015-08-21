@@ -18,6 +18,8 @@
 
 - (void)dealloc
 {
+    [super dealloc];
+    
     self.delegate = nil;
 }
 
@@ -79,8 +81,10 @@
 {
     SnSLogD(@"%@::completeTransaction", self.class);
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    if ([self.delegate respondsToSelector:@selector(storeManager:didFinishTransaction:)])
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFinishTransaction:)])
+    {
         [self.delegate storeManager:self didFinishTransaction:transaction];
+    }
 }
 
 - (void)failedTransaction:(SKPaymentTransaction *)transaction
@@ -88,8 +92,10 @@
     SnSLogD(@"%@::failedTransaction Reason: %@", self.class, [transaction.error localizedDescription]);
     
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    if ([self.delegate respondsToSelector:@selector(storeManager:didFailedTransaction:)])
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFailedTransaction:)])
+    {
         [self.delegate storeManager:self didFailedTransaction:transaction];
+    }
 }
 
 - (void)restoredTransaction:(SKPaymentTransaction *)transaction
@@ -119,8 +125,10 @@
     }
     
     // Signal Delegate the products have been received
-    if ([_delegate respondsToSelector:@selector(storeManager:didReceiveProductsData:)])
+    if (self.delegate != nil && [_delegate respondsToSelector:@selector(storeManager:didReceiveProductsData:)])
+    {
         [_delegate storeManager:self didReceiveProductsData:_products];
+    }
 }
 
 #pragma mark -
@@ -153,16 +161,20 @@
 - (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
 {
     SnSLogE(@"paymentQueue:restoreCompletedTransactionsFailedWithError:%@", [error localizedDescription]);
-    if ([self.delegate respondsToSelector:@selector(storeManager:didFailedRestoreTransactions:)])
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFailedRestoreTransactions:)])
+    {
         [self.delegate storeManager:self didFailedRestoreTransactions:queue];
+    }
 }
 
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
     SnSLogD(@"%@::paymentQueueRestoreCompletedTransactionsFinished:", self.class);
     
-    if ([self.delegate respondsToSelector:@selector(storeManager:didRestoreTransactions:)])
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didRestoreTransactions:)])
+    {
         [self.delegate storeManager:self didRestoreTransactions:queue];
+    }
 }
 
 @end
