@@ -41,9 +41,9 @@
 
 - (void)requestProductData:(NSArray *)iProductsList
 {
-    SKRequest* request = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithArray:iProductsList]];
-    request.delegate = self;
-    [request start];
+    self.currentRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithArray:iProductsList]];
+    self.currentRequest.delegate = self;
+    [self.currentRequest start];
 }
 
 - (void)buyProduct:(NSString *)productIdentifier
@@ -67,6 +67,14 @@
     return _products[identifier];
 }
 
+- (void)cancelCurrentRequest
+{
+    if (self.currentRequest != nil && self.currentRequest )
+    {
+        [self.currentRequest cancel];
+    }
+}
+
 #pragma mark - Transactions
 
 - (void)purchasingTransaction:(SKPaymentTransaction *)iTransaction
@@ -77,22 +85,28 @@
 
 - (void)completedTransaction:(SKPaymentTransaction *)transaction
 {
-    SnSLogD(@"%@::completeTransaction", self.class);
-    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFinishTransaction:)])
+    if (self != nil)
     {
-        [self.delegate storeManager:self didFinishTransaction:transaction];
+        SnSLogD(@"%@::completeTransaction", self.class);
+        [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+        if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFinishTransaction:)])
+        {
+            [self.delegate storeManager:self didFinishTransaction:transaction];
+        }
     }
 }
 
 - (void)failedTransaction:(SKPaymentTransaction *)transaction
 {
-    SnSLogD(@"%@::failedTransaction Reason: %@", self.class, [transaction.error localizedDescription]);
-    
-    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFailedTransaction:)])
+    if (self != nil)
     {
-        [self.delegate storeManager:self didFailedTransaction:transaction];
+        SnSLogD(@"%@::failedTransaction Reason: %@", self.class, [transaction.error localizedDescription]);
+        
+        [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+        if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFailedTransaction:)])
+        {
+            [self.delegate storeManager:self didFailedTransaction:transaction];
+        }
     }
 }
 
@@ -112,20 +126,23 @@
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
 {
-    SnSLogD(@"%@::productsRequest:didReceiveResponse", self.class);
-    
-    for (__unused NSString *aInvalidProduct in [response invalidProductIdentifiers])
-        SnSLogE(@"Unkown Product Identifier: %@", aInvalidProduct);
-    
-    for (SKProduct *product in [response products])
+    if (self != nil)
     {
-        [_products setValue:product forKey:product.productIdentifier];
-    }
-    
-    // Signal Delegate the products have been received
-    if (self.delegate != nil && [_delegate respondsToSelector:@selector(storeManager:didReceiveProductsData:)])
-    {
-        [_delegate storeManager:self didReceiveProductsData:_products];
+        SnSLogD(@"%@::productsRequest:didReceiveResponse", self.class);
+        
+        for (__unused NSString *aInvalidProduct in [response invalidProductIdentifiers])
+            SnSLogE(@"Unkown Product Identifier: %@", aInvalidProduct);
+        
+        for (SKProduct *product in [response products])
+        {
+            [_products setValue:product forKey:product.productIdentifier];
+        }
+        
+        // Signal Delegate the products have been received
+        if (self.delegate != nil && [_delegate respondsToSelector:@selector(storeManager:didReceiveProductsData:)])
+        {
+            [_delegate storeManager:self didReceiveProductsData:_products];
+        }
     }
 }
 
@@ -159,7 +176,7 @@
 - (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
 {
     SnSLogE(@"paymentQueue:restoreCompletedTransactionsFailedWithError:%@", [error localizedDescription]);
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFailedRestoreTransactions:)])
+    if (self != nil && self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didFailedRestoreTransactions:)])
     {
         [self.delegate storeManager:self didFailedRestoreTransactions:queue];
     }
@@ -169,7 +186,7 @@
 {
     SnSLogD(@"%@::paymentQueueRestoreCompletedTransactionsFinished:", self.class);
     
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didRestoreTransactions:)])
+    if (self != nil && self.delegate != nil && [self.delegate respondsToSelector:@selector(storeManager:didRestoreTransactions:)])
     {
         [self.delegate storeManager:self didRestoreTransactions:queue];
     }

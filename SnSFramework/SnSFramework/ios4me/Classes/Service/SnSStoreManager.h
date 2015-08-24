@@ -40,6 +40,7 @@
 
 @property (nonatomic, strong, readonly) NSMutableDictionary *products;
 @property (nonatomic, assign) id<SnSStoreManagerDelegate> delegate;
+@property (nonatomic, strong) SKRequest *currentRequest;
 
 - (void)buyProduct:(NSString *)productIdentifier;
 - (void)buyProduct:(NSString *)productIdentifier quantity:(NSUInteger)iQuantity;
