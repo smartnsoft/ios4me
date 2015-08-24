@@ -69,7 +69,7 @@
 
 - (void)cancelCurrentRequest
 {
-    if (self.currentRequest != nil && self.currentRequest )
+    if (self.currentRequest != nil)
     {
         [self.currentRequest cancel];
     }
@@ -143,6 +143,8 @@
         {
             [_delegate storeManager:self didReceiveProductsData:_products];
         }
+        
+        self.currentRequest = nil;
     }
 }
 

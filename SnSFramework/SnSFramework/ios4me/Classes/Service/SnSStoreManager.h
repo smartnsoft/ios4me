@@ -45,6 +45,7 @@
 - (void)buyProduct:(NSString *)productIdentifier;
 - (void)buyProduct:(NSString *)productIdentifier quantity:(NSUInteger)iQuantity;
 - (void)requestProductData:(NSArray *)iProductsList;
+- (void)cancelCurrentRequest;
 - (SKProduct *)retrieveProductWithProductIdentifier:(NSString *)identifier;
 
 #pragma mark Transactions
