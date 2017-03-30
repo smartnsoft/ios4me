@@ -108,7 +108,7 @@
  * @param count the number of instances to create
  */
 + (void) setInstances:(NSUInteger)count andMemoryCapacities:(NSUInteger [])memoryCapacities 
-    andDiskCapacities:(NSUInteger [])diskCapacities andDiskPaths:(NSString * [])diskPaths 
+    andDiskCapacities:(NSUInteger [])diskCapacities andDiskPaths:(NSString* __autoreleasing [])diskPaths
       andTimeValidity:(NSTimeInterval)timeToLive andPersistence:(BOOL)diskPersistence;
 
 /**
