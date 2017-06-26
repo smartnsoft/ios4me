@@ -117,7 +117,7 @@
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
-- (void)restoreTranscation
+- (void)restoreTranscations
 {
     [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 }

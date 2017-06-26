@@ -53,6 +53,7 @@
 - (void)purchasingTransaction:(SKPaymentTransaction *)iTransaction;
 - (void)completedTransaction:(SKPaymentTransaction *)iTransaction;
 - (void)failedTransaction:(SKPaymentTransaction *)iTransaction;
+- (void)restoreTranscations;
 
 @end
 
